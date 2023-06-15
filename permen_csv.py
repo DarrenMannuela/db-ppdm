@@ -3,7 +3,7 @@ import os
 import re
 
 # Specify the path to your CSV file
-folder = '/Users/darrenmp/Documents/vscode/db-ppdm/permen_csv'
+folder = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_csv'
 data_types = []
 
 # Loop through files in the folder and get file names
@@ -24,7 +24,7 @@ for filename in os.listdir(folder):
 data_types.remove(".DS_Store")
 
 for file in data_types:
-    cur_file = f"/Users/darrenmp/Documents/vscode/db-ppdm/permen_csv/{file}"
+    cur_file = f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_csv/{file}"
     # Read the CSV file
     df = pd.read_csv(cur_file)
 
@@ -46,6 +46,7 @@ for file in data_types:
             pass
         else:
             field = value.split('_')
+
             go_field = ""
 
             for i in range(len(field)):
@@ -102,12 +103,49 @@ for file in data_types:
 
     print(f"\n{file.split('.')[0]}\nThe 1st column contains: {len(cur_fields)}\nThe 2nd column contains: {len(field_types)}\nThe amount of data types found column contains: {data_type_check}\n")
 
-    table_name  = f"\n{file.split('.')[0]}"
-    with open("field.txt", 'a') as file:
-        file.write(table_name)
-        file.write(str(cur_fields))
+    # table_name  = f"\n{file.split('.')[0]}"
+    # with open("field.txt", 'a') as file:
+    #     file.write(table_name)
+    #     file.write(str(cur_fields))
+
+    get_struct_name = file.split('.')[0]
+    get_struct_name = get_struct_name.split("_")
+
+    struct_name = ""
+
+    for word in range(len(get_struct_name)):
+        if len(get_struct_name) == 1:
+            struct_name += get_struct_name[word].title()
+        elif len(get_struct_name) > 1:
+            if word == 0:
+              struct_name += get_struct_name[word].title()+"_"
+            elif word == len(get_struct_name)-1:
+                struct_name += get_struct_name[word].lower()
+            else:
+                struct_name += get_struct_name[word].lower()+"_"
 
 
+
+    print(struct_name)
+
+    opener = "package dto\n\n"+"type "+struct_name+" struct{\n\n"
+
+
+    content = ""
+
+    for field in range(len(cur_fields)):
+        if cur_fields[field] not in content:
+            content += f'{cur_fields[field].replace(" ", "")}       {field_types[field]}   `json:"{cur_fields[field].replace(" ", "").lower()}" default:""`\n'
+
+    closer = "}"
+
+
+    with open(f"permen_dto/{struct_name.lower()}.go", 'w') as file:
+        file.write(opener+content+closer)
+
+
+
+print(opener+content+closer)
 
 
 
