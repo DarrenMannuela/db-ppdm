@@ -1,0 +1,241 @@
+/well-test-recorder:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_recorder
+    responses:
+      '200':
+        description: get well_test_recorder data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              recorder_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_capacity_pressure: 0.1
+              max_capacity_pressure_ouom: Lorem Ipsum
+              max_capacity_temp: 0.1
+              max_capacity_temp_ouom: Lorem Ipsum
+              performance_quality: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              recorder_depth: 0.1
+              recorder_depth_ouom: Lorem Ipsum
+              recorder_inside_ind: y
+              recorder_max_temp: 0.1
+              recorder_max_temp_ouom: Lorem Ipsum
+              recorder_min_temp: 0.1
+              recorder_min_temp_ouom: Lorem Ipsum
+              recorder_position: Lorem Ipsum
+              recorder_resolution: 0.1
+              recorder_resolution_ouom: Lorem Ipsum
+              recorder_type: Lorem Ipsum
+              recorder_used_ind: y
+              remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_recorder
+    description: Create a new well_test_recorder data
+    requestBody:
+      required: true
+      description: Request body to create well_test_recorder data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_recorder'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_capacity_pressure: 0.1
+            max_capacity_pressure_ouom: Lorem Ipsum
+            max_capacity_temp: 0.1
+            max_capacity_temp_ouom: Lorem Ipsum
+            performance_quality: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorder_depth: 0.1
+            recorder_depth_ouom: Lorem Ipsum
+            recorder_inside_ind: y
+            recorder_max_temp: 0.1
+            recorder_max_temp_ouom: Lorem Ipsum
+            recorder_min_temp: 0.1
+            recorder_min_temp_ouom: Lorem Ipsum
+            recorder_position: Lorem Ipsum
+            recorder_resolution: 0.1
+            recorder_resolution_ouom: Lorem Ipsum
+            recorder_type: Lorem Ipsum
+            recorder_used_ind: y
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_recorder data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_recorder data was successfully added
+/well-test-recorder/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_recorder data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_recorder data
+    description: Update a new well_test_recorder data
+    requestBody:
+      required: true
+      description: Request body to update well_test_recorder data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_recorder'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_capacity_pressure: 0.1
+            max_capacity_pressure_ouom: Lorem Ipsum
+            max_capacity_temp: 0.1
+            max_capacity_temp_ouom: Lorem Ipsum
+            performance_quality: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorder_depth: 0.1
+            recorder_depth_ouom: Lorem Ipsum
+            recorder_inside_ind: y
+            recorder_max_temp: 0.1
+            recorder_max_temp_ouom: Lorem Ipsum
+            recorder_min_temp: 0.1
+            recorder_min_temp_ouom: Lorem Ipsum
+            recorder_position: Lorem Ipsum
+            recorder_resolution: 0.1
+            recorder_resolution_ouom: Lorem Ipsum
+            recorder_type: Lorem Ipsum
+            recorder_used_ind: y
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_recorder data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_recorder data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_recorder data
+    description: Update a new well_test_recorder data
+    requestBody:
+      required: true
+      description: Request body to update well_test_recorder data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_recorder'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_capacity_pressure: 0.1
+            max_capacity_pressure_ouom: Lorem Ipsum
+            max_capacity_temp: 0.1
+            max_capacity_temp_ouom: Lorem Ipsum
+            performance_quality: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorder_depth: 0.1
+            recorder_depth_ouom: Lorem Ipsum
+            recorder_inside_ind: y
+            recorder_max_temp: 0.1
+            recorder_max_temp_ouom: Lorem Ipsum
+            recorder_min_temp: 0.1
+            recorder_min_temp_ouom: Lorem Ipsum
+            recorder_position: Lorem Ipsum
+            recorder_resolution: 0.1
+            recorder_resolution_ouom: Lorem Ipsum
+            recorder_type: Lorem Ipsum
+            recorder_used_ind: y
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_recorder data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_recorder data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_recorder data
+    description: Delete well_test_recorder data
+    responses:
+      '200':
+        description: well_test_recorder data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_recorder data was successfully deleted

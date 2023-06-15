@@ -1,0 +1,44 @@
+package dto
+
+type Seis_record struct {
+	Seis_set_subtype       string   `json:"seis_set_subtype" default:"source"`
+	Seis_set_id            string   `json:"seis_set_id" default:"source"`
+	Record_id              string   `json:"record_id" default:"source"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Actual_acqtn_design_id *string  `json:"actual_acqtn_design_id" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Field_file_number      *string  `json:"field_file_number" default:""`
+	Information_item_id    *string  `json:"information_item_id" default:""`
+	Info_item_subtype      *string  `json:"info_item_subtype" default:""`
+	Logical_record_number  *string  `json:"logical_record_number" default:""`
+	Patch_id               *string  `json:"patch_id" default:""`
+	Patch_used_ind         *string  `json:"patch_used_ind" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Rcrd_channel_count     *int     `json:"rcrd_channel_count" default:""`
+	Recording_remark       *string  `json:"recording_remark" default:""`
+	Record_number          *string  `json:"record_number" default:""`
+	Record_quality         *string  `json:"record_quality" default:""`
+	Record_type            *string  `json:"record_type" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Seis_shot_point_id     *string  `json:"seis_shot_point_id" default:""`
+	Source                 *string  `json:"source" default:""`
+	Tape_number            *string  `json:"tape_number" default:""`
+	Time_delay             *float64 `json:"time_delay" default:""`
+	Time_delay_ouom        *string  `json:"time_delay_ouom" default:""`
+	Uphole_time            *float64 `json:"uphole_time" default:""`
+	Uphole_time_ouom       *string  `json:"uphole_time_ouom" default:""`
+	Vessel_config_obs_no   *int     `json:"vessel_config_obs_no" default:""`
+	Vessel_id              *string  `json:"vessel_id" default:""`
+	Vessel_sf_subtype      *string  `json:"vessel_sf_subtype" default:""`
+	X_offset               *float64 `json:"x_offset" default:""`
+	Y_offset               *float64 `json:"y_offset" default:""`
+	Z_offset               *float64 `json:"z_offset" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

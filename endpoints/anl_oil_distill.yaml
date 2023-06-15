@@ -1,0 +1,253 @@
+/anl-oil-distill:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_oil_distill
+    responses:
+      '200':
+        description: get anl_oil_distill data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              atmosp_dstl_press: 0.1
+              atmosp_dstl_press_ouom: Lorem Ipsum
+              atmosp_dstl_temp: 0.1
+              atmosp_dstl_temp_ouom: Lorem Ipsum
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              final_boil_pt_temp: 0.1
+              final_boil_pt_temp_ouom: Lorem Ipsum
+              measurement_temp: 0.1
+              measurement_temp_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              start_boil_pt_temp: 0.1
+              start_boil_pt_temp_ouom: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              volume_fraction_type: Lorem Ipsum
+              vol_fraction_temp: 0.1
+              vol_fraction_temp_ouom: Lorem Ipsum
+              vol_fraction_value: 0.1
+              vol_fraction_value_ouom: Lorem Ipsum
+              weight_cut: 0.1
+              weight_cut_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_oil_distill
+    description: Create a new anl_oil_distill data
+    requestBody:
+      required: true
+      description: Request body to create anl_oil_distill data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_distill'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            atmosp_dstl_press: 0.1
+            atmosp_dstl_press_ouom: Lorem Ipsum
+            atmosp_dstl_temp: 0.1
+            atmosp_dstl_temp_ouom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_boil_pt_temp: 0.1
+            final_boil_pt_temp_ouom: Lorem Ipsum
+            measurement_temp: 0.1
+            measurement_temp_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            start_boil_pt_temp: 0.1
+            start_boil_pt_temp_ouom: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            volume_fraction_type: Lorem Ipsum
+            vol_fraction_temp: 0.1
+            vol_fraction_temp_ouom: Lorem Ipsum
+            vol_fraction_value: 0.1
+            vol_fraction_value_ouom: Lorem Ipsum
+            weight_cut: 0.1
+            weight_cut_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_oil_distill data is added
+        content:
+          application/json:
+            example:
+              message: The anl_oil_distill data was successfully added
+/anl-oil-distill/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_oil_distill data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_oil_distill data
+    description: Update a new anl_oil_distill data
+    requestBody:
+      required: true
+      description: Request body to update anl_oil_distill data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_distill'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            atmosp_dstl_press: 0.1
+            atmosp_dstl_press_ouom: Lorem Ipsum
+            atmosp_dstl_temp: 0.1
+            atmosp_dstl_temp_ouom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_boil_pt_temp: 0.1
+            final_boil_pt_temp_ouom: Lorem Ipsum
+            measurement_temp: 0.1
+            measurement_temp_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            start_boil_pt_temp: 0.1
+            start_boil_pt_temp_ouom: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            volume_fraction_type: Lorem Ipsum
+            vol_fraction_temp: 0.1
+            vol_fraction_temp_ouom: Lorem Ipsum
+            vol_fraction_value: 0.1
+            vol_fraction_value_ouom: Lorem Ipsum
+            weight_cut: 0.1
+            weight_cut_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_oil_distill data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_oil_distill data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_oil_distill data
+    description: Update a new anl_oil_distill data
+    requestBody:
+      required: true
+      description: Request body to update anl_oil_distill data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_distill'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            atmosp_dstl_press: 0.1
+            atmosp_dstl_press_ouom: Lorem Ipsum
+            atmosp_dstl_temp: 0.1
+            atmosp_dstl_temp_ouom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_boil_pt_temp: 0.1
+            final_boil_pt_temp_ouom: Lorem Ipsum
+            measurement_temp: 0.1
+            measurement_temp_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            start_boil_pt_temp: 0.1
+            start_boil_pt_temp_ouom: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            volume_fraction_type: Lorem Ipsum
+            vol_fraction_temp: 0.1
+            vol_fraction_temp_ouom: Lorem Ipsum
+            vol_fraction_value: 0.1
+            vol_fraction_value_ouom: Lorem Ipsum
+            weight_cut: 0.1
+            weight_cut_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_oil_distill data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_oil_distill data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_oil_distill data
+    description: Delete anl_oil_distill data
+    responses:
+      '200':
+        description: anl_oil_distill data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_oil_distill data was successfully deleted

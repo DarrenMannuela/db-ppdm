@@ -1,0 +1,189 @@
+/strat-field-station:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get strat_field_station
+    responses:
+      '200':
+        description: get strat_field_station data to be returned
+        content:
+          application/json:
+            example:
+            - field_station_id: Lorem Ipsum
+              active_ind: y
+              air_photo_num: Lorem Ipsum
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              complete_date: 12/12/2023
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_station_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              start_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new strat_field_station
+    description: Create a new strat_field_station data
+    requestBody:
+      required: true
+      description: Request body to create strat_field_station data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_field_station'
+          example:
+            field_station_id: Lorem Ipsum
+            active_ind: y
+            air_photo_num: Lorem Ipsum
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            complete_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_station_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_field_station data is added
+        content:
+          application/json:
+            example:
+              message: The strat_field_station data was successfully added
+/strat-field-station/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of strat_field_station data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new strat_field_station data
+    description: Update a new strat_field_station data
+    requestBody:
+      required: true
+      description: Request body to update strat_field_station data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_field_station'
+          example:
+            field_station_id: Lorem Ipsum
+            active_ind: y
+            air_photo_num: Lorem Ipsum
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            complete_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_station_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_field_station data is completely updated
+        content:
+          application/json:
+            example:
+              message: The strat_field_station data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new strat_field_station data
+    description: Update a new strat_field_station data
+    requestBody:
+      required: true
+      description: Request body to update strat_field_station data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_field_station'
+          example:
+            field_station_id: Lorem Ipsum
+            active_ind: y
+            air_photo_num: Lorem Ipsum
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            complete_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_station_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in strat_field_station data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in strat_field_station data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete strat_field_station data
+    description: Delete strat_field_station data
+    responses:
+      '200':
+        description: strat_field_station data is deleted
+        content:
+          application/json:
+            example:
+              message: The strat_field_station data was successfully deleted

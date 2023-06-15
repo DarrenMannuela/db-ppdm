@@ -1,0 +1,229 @@
+/rm-image-sect:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_image_sect
+    responses:
+      '200':
+        description: get rm_image_sect data to be returned
+        content:
+          application/json:
+            example:
+            - physical_item_id: Lorem Ipsum
+              image_section_id: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              calibrated_by_ba_id: Lorem Ipsum
+              calibrate_application: Lorem Ipsum
+              calibrate_method: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              image_section_type: Lorem Ipsum
+              index_type: Lorem Ipsum
+              log_matrix_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              scale_depth_interval: 0.1
+              scale_length: 0.1
+              scale_length_ouom: Lorem Ipsum
+              scale_length_uom: Lorem Ipsum
+              scale_ratio: Lorem Ipsum
+              section_desc: Lorem Ipsum
+              source: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              well_log_class_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_image_sect
+    description: Create a new rm_image_sect data
+    requestBody:
+      required: true
+      description: Request body to create rm_image_sect data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_image_sect'
+          example:
+            physical_item_id: Lorem Ipsum
+            image_section_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            calibrated_by_ba_id: Lorem Ipsum
+            calibrate_application: Lorem Ipsum
+            calibrate_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            image_section_type: Lorem Ipsum
+            index_type: Lorem Ipsum
+            log_matrix_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            scale_depth_interval: 0.1
+            scale_length: 0.1
+            scale_length_ouom: Lorem Ipsum
+            scale_length_uom: Lorem Ipsum
+            scale_ratio: Lorem Ipsum
+            section_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            well_log_class_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_image_sect data is added
+        content:
+          application/json:
+            example:
+              message: The rm_image_sect data was successfully added
+/rm-image-sect/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_image_sect data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_image_sect data
+    description: Update a new rm_image_sect data
+    requestBody:
+      required: true
+      description: Request body to update rm_image_sect data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_image_sect'
+          example:
+            physical_item_id: Lorem Ipsum
+            image_section_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            calibrated_by_ba_id: Lorem Ipsum
+            calibrate_application: Lorem Ipsum
+            calibrate_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            image_section_type: Lorem Ipsum
+            index_type: Lorem Ipsum
+            log_matrix_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            scale_depth_interval: 0.1
+            scale_length: 0.1
+            scale_length_ouom: Lorem Ipsum
+            scale_length_uom: Lorem Ipsum
+            scale_ratio: Lorem Ipsum
+            section_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            well_log_class_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_image_sect data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_image_sect data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_image_sect data
+    description: Update a new rm_image_sect data
+    requestBody:
+      required: true
+      description: Request body to update rm_image_sect data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_image_sect'
+          example:
+            physical_item_id: Lorem Ipsum
+            image_section_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            calibrated_by_ba_id: Lorem Ipsum
+            calibrate_application: Lorem Ipsum
+            calibrate_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            image_section_type: Lorem Ipsum
+            index_type: Lorem Ipsum
+            log_matrix_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            scale_depth_interval: 0.1
+            scale_length: 0.1
+            scale_length_ouom: Lorem Ipsum
+            scale_length_uom: Lorem Ipsum
+            scale_ratio: Lorem Ipsum
+            section_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            well_log_class_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_image_sect data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_image_sect data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_image_sect data
+    description: Delete rm_image_sect data
+    responses:
+      '200':
+        description: rm_image_sect data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_image_sect data was successfully deleted

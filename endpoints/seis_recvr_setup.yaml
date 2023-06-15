@@ -1,0 +1,241 @@
+/seis-recvr-setup:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_recvr_setup
+    responses:
+      '200':
+        description: get seis_recvr_setup data to be returned
+        content:
+          application/json:
+            example:
+            - acqtn_design_id: Lorem Ipsum
+              rcvr_setup_id: Lorem Ipsum
+              active_ind: y
+              avg_feathering_angle: 0.1
+              avg_streamer_depth: 0.1
+              avg_streamer_depth_ouom: Lorem Ipsum
+              base_freq: 0.1
+              depth_controller: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fixed_ind: y
+              group_spacing: 0.1
+              group_spacing_ouom: Lorem Ipsum
+              inline_offset: 0.1
+              inline_offset_direction: Lorem Ipsum
+              offline_offset: 0.1
+              offline_offset_direction: Lorem Ipsum
+              offset_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              rcvr_array_type: Lorem Ipsum
+              rcvr_make: Lorem Ipsum
+              rcvr_spacing: 0.1
+              rcvr_spacing_ouom: Lorem Ipsum
+              rcvr_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              spread_description: Lorem Ipsum
+              spread_description_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_recvr_setup
+    description: Create a new seis_recvr_setup data
+    requestBody:
+      required: true
+      description: Request body to create seis_recvr_setup data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_recvr_setup'
+          example:
+            acqtn_design_id: Lorem Ipsum
+            rcvr_setup_id: Lorem Ipsum
+            active_ind: y
+            avg_feathering_angle: 0.1
+            avg_streamer_depth: 0.1
+            avg_streamer_depth_ouom: Lorem Ipsum
+            base_freq: 0.1
+            depth_controller: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fixed_ind: y
+            group_spacing: 0.1
+            group_spacing_ouom: Lorem Ipsum
+            inline_offset: 0.1
+            inline_offset_direction: Lorem Ipsum
+            offline_offset: 0.1
+            offline_offset_direction: Lorem Ipsum
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rcvr_array_type: Lorem Ipsum
+            rcvr_make: Lorem Ipsum
+            rcvr_spacing: 0.1
+            rcvr_spacing_ouom: Lorem Ipsum
+            rcvr_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spread_description: Lorem Ipsum
+            spread_description_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_recvr_setup data is added
+        content:
+          application/json:
+            example:
+              message: The seis_recvr_setup data was successfully added
+/seis-recvr-setup/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_recvr_setup data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_recvr_setup data
+    description: Update a new seis_recvr_setup data
+    requestBody:
+      required: true
+      description: Request body to update seis_recvr_setup data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_recvr_setup'
+          example:
+            acqtn_design_id: Lorem Ipsum
+            rcvr_setup_id: Lorem Ipsum
+            active_ind: y
+            avg_feathering_angle: 0.1
+            avg_streamer_depth: 0.1
+            avg_streamer_depth_ouom: Lorem Ipsum
+            base_freq: 0.1
+            depth_controller: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fixed_ind: y
+            group_spacing: 0.1
+            group_spacing_ouom: Lorem Ipsum
+            inline_offset: 0.1
+            inline_offset_direction: Lorem Ipsum
+            offline_offset: 0.1
+            offline_offset_direction: Lorem Ipsum
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rcvr_array_type: Lorem Ipsum
+            rcvr_make: Lorem Ipsum
+            rcvr_spacing: 0.1
+            rcvr_spacing_ouom: Lorem Ipsum
+            rcvr_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spread_description: Lorem Ipsum
+            spread_description_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_recvr_setup data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_recvr_setup data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_recvr_setup data
+    description: Update a new seis_recvr_setup data
+    requestBody:
+      required: true
+      description: Request body to update seis_recvr_setup data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_recvr_setup'
+          example:
+            acqtn_design_id: Lorem Ipsum
+            rcvr_setup_id: Lorem Ipsum
+            active_ind: y
+            avg_feathering_angle: 0.1
+            avg_streamer_depth: 0.1
+            avg_streamer_depth_ouom: Lorem Ipsum
+            base_freq: 0.1
+            depth_controller: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fixed_ind: y
+            group_spacing: 0.1
+            group_spacing_ouom: Lorem Ipsum
+            inline_offset: 0.1
+            inline_offset_direction: Lorem Ipsum
+            offline_offset: 0.1
+            offline_offset_direction: Lorem Ipsum
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rcvr_array_type: Lorem Ipsum
+            rcvr_make: Lorem Ipsum
+            rcvr_spacing: 0.1
+            rcvr_spacing_ouom: Lorem Ipsum
+            rcvr_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spread_description: Lorem Ipsum
+            spread_description_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_recvr_setup data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_recvr_setup data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_recvr_setup data
+    description: Delete seis_recvr_setup data
+    responses:
+      '200':
+        description: seis_recvr_setup data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_recvr_setup data was successfully deleted

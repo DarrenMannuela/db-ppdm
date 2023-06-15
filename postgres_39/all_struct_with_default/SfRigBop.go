@@ -1,0 +1,39 @@
+package dto
+
+type Sf_rig_bop struct {
+	Sf_subtype               string   `json:"sf_subtype" default:"source"`
+	Rig_id                   string   `json:"rig_id" default:"source"`
+	Bop_id                   string   `json:"bop_id" default:"source"`
+	Active_ind               *string  `json:"active_ind" default:""`
+	Annular_count            *int     `json:"annular_count" default:""`
+	Bop_count                *int     `json:"bop_count" default:""`
+	Bop_diameter             *float64 `json:"bop_diameter" default:""`
+	Bop_diameter_ouom        *string  `json:"bop_diameter_ouom" default:""`
+	Bop_nace_certified_ind   *string  `json:"bop_nace_certified_ind" default:""`
+	Bop_position_desc        *string  `json:"bop_position_desc" default:""`
+	Bop_pressure_rating      *float64 `json:"bop_pressure_rating" default:""`
+	Bop_pressure_rating_ouom *string  `json:"bop_pressure_rating_ouom" default:""`
+	Bop_type                 *string  `json:"bop_type" default:""`
+	Capacity                 *float64 `json:"capacity" default:""`
+	Capacity_ouom            *string  `json:"capacity_ouom" default:""`
+	Catalogue_equip_id       *string  `json:"catalogue_equip_id" default:""`
+	Double_count             *int     `json:"double_count" default:""`
+	Effective_date           *string  `json:"effective_date" default:""`
+	Equipment_id             *string  `json:"equipment_id" default:""`
+	Expiry_date              *string  `json:"expiry_date" default:""`
+	Input_type               *string  `json:"input_type" default:""`
+	Install_date             *string  `json:"install_date" default:""`
+	Ppdm_guid                *string  `json:"ppdm_guid" default:""`
+	Reference_num            *string  `json:"reference_num" default:""`
+	Remark                   *string  `json:"remark" default:""`
+	Remove_date              *string  `json:"remove_date" default:""`
+	Single_count             *int     `json:"single_count" default:""`
+	Source                   *string  `json:"source" default:""`
+	Row_changed_by           *string  `json:"row_changed_by" default:""`
+	Row_changed_date         *string  `json:"row_changed_date" default:""`
+	Row_created_by           *string  `json:"row_created_by" default:""`
+	Row_created_date         *string  `json:"row_created_date" default:""`
+	Row_effective_date       *string  `json:"row_effective_date" default:""`
+	Row_expiry_date          *string  `json:"row_expiry_date" default:""`
+	Row_quality              *string  `json:"row_quality" default:""`
+}

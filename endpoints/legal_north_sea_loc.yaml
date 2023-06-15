@@ -1,0 +1,201 @@
+/legal-north-sea-loc:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get legal_north_sea_loc
+    responses:
+      '200':
+        description: get legal_north_sea_loc data to be returned
+        content:
+          application/json:
+            example:
+            - legal_north_sea_loc_id: Lorem Ipsum
+              location_type: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              block_suffix: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              land_well_ind: y
+              ppdm_guid: Lorem Ipsum
+              principal_meridian: Lorem Ipsum
+              quadrant: 1.0
+              quadrant_prefix: Lorem Ipsum
+              remark: Lorem Ipsum
+              uwi: Lorem Ipsum
+              well_node_id: Lorem Ipsum
+              well_no_prefix: Lorem Ipsum
+              well_no_suffix: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new legal_north_sea_loc
+    description: Create a new legal_north_sea_loc data
+    requestBody:
+      required: true
+      description: Request body to create legal_north_sea_loc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/legal_north_sea_loc'
+          example:
+            legal_north_sea_loc_id: Lorem Ipsum
+            location_type: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            block_suffix: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            land_well_ind: y
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            quadrant: 1.0
+            quadrant_prefix: Lorem Ipsum
+            remark: Lorem Ipsum
+            uwi: Lorem Ipsum
+            well_node_id: Lorem Ipsum
+            well_no_prefix: Lorem Ipsum
+            well_no_suffix: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: legal_north_sea_loc data is added
+        content:
+          application/json:
+            example:
+              message: The legal_north_sea_loc data was successfully added
+/legal-north-sea-loc/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of legal_north_sea_loc data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new legal_north_sea_loc data
+    description: Update a new legal_north_sea_loc data
+    requestBody:
+      required: true
+      description: Request body to update legal_north_sea_loc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/legal_north_sea_loc'
+          example:
+            legal_north_sea_loc_id: Lorem Ipsum
+            location_type: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            block_suffix: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            land_well_ind: y
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            quadrant: 1.0
+            quadrant_prefix: Lorem Ipsum
+            remark: Lorem Ipsum
+            uwi: Lorem Ipsum
+            well_node_id: Lorem Ipsum
+            well_no_prefix: Lorem Ipsum
+            well_no_suffix: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: legal_north_sea_loc data is completely updated
+        content:
+          application/json:
+            example:
+              message: The legal_north_sea_loc data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new legal_north_sea_loc data
+    description: Update a new legal_north_sea_loc data
+    requestBody:
+      required: true
+      description: Request body to update legal_north_sea_loc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/legal_north_sea_loc'
+          example:
+            legal_north_sea_loc_id: Lorem Ipsum
+            location_type: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            block_suffix: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            land_well_ind: y
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            quadrant: 1.0
+            quadrant_prefix: Lorem Ipsum
+            remark: Lorem Ipsum
+            uwi: Lorem Ipsum
+            well_node_id: Lorem Ipsum
+            well_no_prefix: Lorem Ipsum
+            well_no_suffix: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in legal_north_sea_loc data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in legal_north_sea_loc data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete legal_north_sea_loc data
+    description: Delete legal_north_sea_loc data
+    responses:
+      '200':
+        description: legal_north_sea_loc data is deleted
+        content:
+          application/json:
+            example:
+              message: The legal_north_sea_loc data was successfully deleted

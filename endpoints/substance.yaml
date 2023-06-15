@@ -1,0 +1,237 @@
+/substance:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get substance
+    responses:
+      '200':
+        description: get substance data to be returned
+        content:
+          application/json:
+            example:
+            - substance_id: Lorem Ipsum
+              active_ind: y
+              api_gravity_max: 0.1
+              api_gravity_min: 0.1
+              atomic_mass: 0.1
+              atomic_mass_number: Lorem Ipsum
+              atomic_weight: 0.1
+              composition_formula: Lorem Ipsum
+              conversion_quantity: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ionic_charge: 0.1
+              molecular_mass: 0.1
+              m_z_ion: Lorem Ipsum
+              phase_type: Lorem Ipsum
+              ph_value: 0.1
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              preferred_long_name: Lorem Ipsum
+              preferred_short_name: Lorem Ipsum
+              preferred_uom_id: Lorem Ipsum
+              property_set_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              substance_definition: Lorem Ipsum
+              valence_value: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new substance
+    description: Create a new substance data
+    requestBody:
+      required: true
+      description: Request body to create substance data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance'
+          example:
+            substance_id: Lorem Ipsum
+            active_ind: y
+            api_gravity_max: 0.1
+            api_gravity_min: 0.1
+            atomic_mass: 0.1
+            atomic_mass_number: Lorem Ipsum
+            atomic_weight: 0.1
+            composition_formula: Lorem Ipsum
+            conversion_quantity: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ionic_charge: 0.1
+            molecular_mass: 0.1
+            m_z_ion: Lorem Ipsum
+            phase_type: Lorem Ipsum
+            ph_value: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            preferred_long_name: Lorem Ipsum
+            preferred_short_name: Lorem Ipsum
+            preferred_uom_id: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            substance_definition: Lorem Ipsum
+            valence_value: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance data is added
+        content:
+          application/json:
+            example:
+              message: The substance data was successfully added
+/substance/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of substance data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new substance data
+    description: Update a new substance data
+    requestBody:
+      required: true
+      description: Request body to update substance data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance'
+          example:
+            substance_id: Lorem Ipsum
+            active_ind: y
+            api_gravity_max: 0.1
+            api_gravity_min: 0.1
+            atomic_mass: 0.1
+            atomic_mass_number: Lorem Ipsum
+            atomic_weight: 0.1
+            composition_formula: Lorem Ipsum
+            conversion_quantity: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ionic_charge: 0.1
+            molecular_mass: 0.1
+            m_z_ion: Lorem Ipsum
+            phase_type: Lorem Ipsum
+            ph_value: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            preferred_long_name: Lorem Ipsum
+            preferred_short_name: Lorem Ipsum
+            preferred_uom_id: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            substance_definition: Lorem Ipsum
+            valence_value: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance data is completely updated
+        content:
+          application/json:
+            example:
+              message: The substance data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new substance data
+    description: Update a new substance data
+    requestBody:
+      required: true
+      description: Request body to update substance data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance'
+          example:
+            substance_id: Lorem Ipsum
+            active_ind: y
+            api_gravity_max: 0.1
+            api_gravity_min: 0.1
+            atomic_mass: 0.1
+            atomic_mass_number: Lorem Ipsum
+            atomic_weight: 0.1
+            composition_formula: Lorem Ipsum
+            conversion_quantity: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ionic_charge: 0.1
+            molecular_mass: 0.1
+            m_z_ion: Lorem Ipsum
+            phase_type: Lorem Ipsum
+            ph_value: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            preferred_long_name: Lorem Ipsum
+            preferred_short_name: Lorem Ipsum
+            preferred_uom_id: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            substance_definition: Lorem Ipsum
+            valence_value: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in substance data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in substance data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete substance data
+    description: Delete substance data
+    responses:
+      '200':
+        description: substance data is deleted
+        content:
+          application/json:
+            example:
+              message: The substance data was successfully deleted

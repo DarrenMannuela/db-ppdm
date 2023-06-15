@@ -1,0 +1,221 @@
+/well-test-flow-meas:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_flow_meas
+    responses:
+      '200':
+        description: get well_test_flow_meas data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              flow_duration: 0.1
+              flow_duration_ouom: Lorem Ipsum
+              fluid_type: Lorem Ipsum
+              measurement_pressure: 0.1
+              measurement_pressure_ouom: Lorem Ipsum
+              measurement_time_elapsed: 0.1
+              measurement_time_elapsed_ouom: Lorem Ipsum
+              measurement_volume: 0.1
+              measurement_volume_ouom: Lorem Ipsum
+              measurement_volume_uom: Lorem Ipsum
+              period_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              surface_choke_diameter: 0.1
+              surface_choke_diameter_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_flow_meas
+    description: Create a new well_test_flow_meas data
+    requestBody:
+      required: true
+      description: Request body to create well_test_flow_meas data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_flow_meas'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_duration: 0.1
+            flow_duration_ouom: Lorem Ipsum
+            fluid_type: Lorem Ipsum
+            measurement_pressure: 0.1
+            measurement_pressure_ouom: Lorem Ipsum
+            measurement_time_elapsed: 0.1
+            measurement_time_elapsed_ouom: Lorem Ipsum
+            measurement_volume: 0.1
+            measurement_volume_ouom: Lorem Ipsum
+            measurement_volume_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            surface_choke_diameter: 0.1
+            surface_choke_diameter_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_flow_meas data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_flow_meas data was successfully added
+/well-test-flow-meas/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_flow_meas data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_flow_meas data
+    description: Update a new well_test_flow_meas data
+    requestBody:
+      required: true
+      description: Request body to update well_test_flow_meas data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_flow_meas'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_duration: 0.1
+            flow_duration_ouom: Lorem Ipsum
+            fluid_type: Lorem Ipsum
+            measurement_pressure: 0.1
+            measurement_pressure_ouom: Lorem Ipsum
+            measurement_time_elapsed: 0.1
+            measurement_time_elapsed_ouom: Lorem Ipsum
+            measurement_volume: 0.1
+            measurement_volume_ouom: Lorem Ipsum
+            measurement_volume_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            surface_choke_diameter: 0.1
+            surface_choke_diameter_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_flow_meas data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_flow_meas data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_flow_meas data
+    description: Update a new well_test_flow_meas data
+    requestBody:
+      required: true
+      description: Request body to update well_test_flow_meas data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_flow_meas'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_duration: 0.1
+            flow_duration_ouom: Lorem Ipsum
+            fluid_type: Lorem Ipsum
+            measurement_pressure: 0.1
+            measurement_pressure_ouom: Lorem Ipsum
+            measurement_time_elapsed: 0.1
+            measurement_time_elapsed_ouom: Lorem Ipsum
+            measurement_volume: 0.1
+            measurement_volume_ouom: Lorem Ipsum
+            measurement_volume_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            surface_choke_diameter: 0.1
+            surface_choke_diameter_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_flow_meas data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_flow_meas data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_flow_meas data
+    description: Delete well_test_flow_meas data
+    responses:
+      '200':
+        description: well_test_flow_meas data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_flow_meas data was successfully deleted

@@ -1,0 +1,365 @@
+/well-activity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_activity
+    responses:
+      '200':
+        description: get well_activity data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              activity_duration: 0.1
+              activity_duration_ouom: Lorem Ipsum
+              activity_product: Lorem Ipsum
+              activity_set_id: Lorem Ipsum
+              activity_type_id: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              blowout_fluid: Lorem Ipsum
+              control_date: 12/12/2023
+              control_depth: 0.1
+              control_depth_ouom: Lorem Ipsum
+              downtime_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              end_time: 12/12/2023
+              end_timezone: Lorem Ipsum
+              event_date: 12/12/2023
+              event_depth: 0.1
+              event_depth_ouom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              final_mud_density: 0.1
+              final_mud_density_ouom: Lorem Ipsum
+              final_mud_viscosity: 0.1
+              final_mud_viscosity_ouom: Lorem Ipsum
+              lithology: Lorem Ipsum
+              lost_circ_severity: Lorem Ipsum
+              lost_material_amount: 0.1
+              lost_material_amount_ouom: Lorem Ipsum
+              lost_material_type: Lorem Ipsum
+              lost_volume: 0.1
+              lost_volume_ouom: Lorem Ipsum
+              lost_volume_product: Lorem Ipsum
+              lost_volume_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              prod_string_id: Lorem Ipsum
+              prod_string_source: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_code: Lorem Ipsum
+              reported_time_elapsed: 0.1
+              reported_time_elapsed_ouom: Lorem Ipsum
+              reported_tvd: 0.1
+              reported_tvd_ouom: Lorem Ipsum
+              start_date: 12/12/2023
+              start_mud_density: 0.1
+              start_mud_density_ouom: Lorem Ipsum
+              start_mud_viscosity: 0.1
+              start_mud_viscosity_ouom: Lorem Ipsum
+              start_time: 12/12/2023
+              start_timezone: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              total_time_elapsed: 0.1
+              total_time_elapsed_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_activity
+    description: Create a new well_activity data
+    requestBody:
+      required: true
+      description: Request body to create well_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_activity'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            activity_duration: 0.1
+            activity_duration_ouom: Lorem Ipsum
+            activity_product: Lorem Ipsum
+            activity_set_id: Lorem Ipsum
+            activity_type_id: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            blowout_fluid: Lorem Ipsum
+            control_date: 12/12/2023
+            control_depth: 0.1
+            control_depth_ouom: Lorem Ipsum
+            downtime_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            end_timezone: Lorem Ipsum
+            event_date: 12/12/2023
+            event_depth: 0.1
+            event_depth_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            final_mud_density: 0.1
+            final_mud_density_ouom: Lorem Ipsum
+            final_mud_viscosity: 0.1
+            final_mud_viscosity_ouom: Lorem Ipsum
+            lithology: Lorem Ipsum
+            lost_circ_severity: Lorem Ipsum
+            lost_material_amount: 0.1
+            lost_material_amount_ouom: Lorem Ipsum
+            lost_material_type: Lorem Ipsum
+            lost_volume: 0.1
+            lost_volume_ouom: Lorem Ipsum
+            lost_volume_product: Lorem Ipsum
+            lost_volume_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_code: Lorem Ipsum
+            reported_time_elapsed: 0.1
+            reported_time_elapsed_ouom: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            start_date: 12/12/2023
+            start_mud_density: 0.1
+            start_mud_density_ouom: Lorem Ipsum
+            start_mud_viscosity: 0.1
+            start_mud_viscosity_ouom: Lorem Ipsum
+            start_time: 12/12/2023
+            start_timezone: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            total_time_elapsed: 0.1
+            total_time_elapsed_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_activity data is added
+        content:
+          application/json:
+            example:
+              message: The well_activity data was successfully added
+/well-activity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_activity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_activity data
+    description: Update a new well_activity data
+    requestBody:
+      required: true
+      description: Request body to update well_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_activity'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            activity_duration: 0.1
+            activity_duration_ouom: Lorem Ipsum
+            activity_product: Lorem Ipsum
+            activity_set_id: Lorem Ipsum
+            activity_type_id: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            blowout_fluid: Lorem Ipsum
+            control_date: 12/12/2023
+            control_depth: 0.1
+            control_depth_ouom: Lorem Ipsum
+            downtime_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            end_timezone: Lorem Ipsum
+            event_date: 12/12/2023
+            event_depth: 0.1
+            event_depth_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            final_mud_density: 0.1
+            final_mud_density_ouom: Lorem Ipsum
+            final_mud_viscosity: 0.1
+            final_mud_viscosity_ouom: Lorem Ipsum
+            lithology: Lorem Ipsum
+            lost_circ_severity: Lorem Ipsum
+            lost_material_amount: 0.1
+            lost_material_amount_ouom: Lorem Ipsum
+            lost_material_type: Lorem Ipsum
+            lost_volume: 0.1
+            lost_volume_ouom: Lorem Ipsum
+            lost_volume_product: Lorem Ipsum
+            lost_volume_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_code: Lorem Ipsum
+            reported_time_elapsed: 0.1
+            reported_time_elapsed_ouom: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            start_date: 12/12/2023
+            start_mud_density: 0.1
+            start_mud_density_ouom: Lorem Ipsum
+            start_mud_viscosity: 0.1
+            start_mud_viscosity_ouom: Lorem Ipsum
+            start_time: 12/12/2023
+            start_timezone: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            total_time_elapsed: 0.1
+            total_time_elapsed_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_activity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_activity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_activity data
+    description: Update a new well_activity data
+    requestBody:
+      required: true
+      description: Request body to update well_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_activity'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            activity_duration: 0.1
+            activity_duration_ouom: Lorem Ipsum
+            activity_product: Lorem Ipsum
+            activity_set_id: Lorem Ipsum
+            activity_type_id: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            blowout_fluid: Lorem Ipsum
+            control_date: 12/12/2023
+            control_depth: 0.1
+            control_depth_ouom: Lorem Ipsum
+            downtime_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            end_timezone: Lorem Ipsum
+            event_date: 12/12/2023
+            event_depth: 0.1
+            event_depth_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            final_mud_density: 0.1
+            final_mud_density_ouom: Lorem Ipsum
+            final_mud_viscosity: 0.1
+            final_mud_viscosity_ouom: Lorem Ipsum
+            lithology: Lorem Ipsum
+            lost_circ_severity: Lorem Ipsum
+            lost_material_amount: 0.1
+            lost_material_amount_ouom: Lorem Ipsum
+            lost_material_type: Lorem Ipsum
+            lost_volume: 0.1
+            lost_volume_ouom: Lorem Ipsum
+            lost_volume_product: Lorem Ipsum
+            lost_volume_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_code: Lorem Ipsum
+            reported_time_elapsed: 0.1
+            reported_time_elapsed_ouom: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            start_date: 12/12/2023
+            start_mud_density: 0.1
+            start_mud_density_ouom: Lorem Ipsum
+            start_mud_viscosity: 0.1
+            start_mud_viscosity_ouom: Lorem Ipsum
+            start_time: 12/12/2023
+            start_timezone: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            total_time_elapsed: 0.1
+            total_time_elapsed_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_activity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_activity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_activity data
+    description: Delete well_activity data
+    responses:
+      '200':
+        description: well_activity data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_activity data was successfully deleted

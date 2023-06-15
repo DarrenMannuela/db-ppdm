@@ -1,0 +1,841 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="67A01961-8B6F-2DB8-80F3-F5D136865CE9" schemaObject="72C650FC-3A89-9403-9A4A-6789A7C97319" name="CS_COORDINATE_SYSTEM">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>CS_COORDINATE_SYSTEM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[COORDINATE SYSTEM: a supertype representing all the types of coordinate sytems allowed in PPDM. Included Vertical, Geographic, Geocentric, Map Grid, Local Spatial and other coordinate systems. Tables are projected at the super type level. Details about the possilbe types of coordinate systems follow. GEOCENTRIC COORDINATE SYSTEM: Coordinate system based on the center of the earth where X, Y and Z are based on positions on the ellipsoid. GEOGRAPHIC COORDINATE SYSTEM: Latitude, longitude based horizontal coordinate system. LOCAL SPATIAL COORDINATE SYSTEM: Locally defined horizontal coordinate system, such as ATS 2.1. MAP GRID SYSTEM: Definition of a planar grid coordinate system for X,Y or Northing-Easting coordinate pairs. Also includes the projection type and the projection parameters used to project from the associated geodetic datum used to this g rid projection. OTHER COORDINATE SYSTEM: May include other non-spatial coordinate systems. VERTICAL DATUM: A reference surface used as the basis of elevation and depth measurements.]]></commentInRDBMS>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>9D12FE07-6972-1BD7-7537-73B8D6740E36</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COORD_SYSTEM_ID" id="855ADBE2-8D74-E72A-4149-526BBC9263AC">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>COORD_SYSTEM_ID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>3069BC3F-9A75-154D-4416-F3D1CB9CA8F5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVE_IND" id="3E8F3071-D6A3-1B0C-49DA-CD43F14036F2">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ACTIVE_IND</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2D577C74-5037-14CA-747A-BDDC980D8017</importedID>
+<constraintName>CS_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COORDINATE_SYSTEM_TYPE" id="69EEB14C-D383-1C51-6BC3-625BF6EAD9F0">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>COORDINATE_SYSTEM_TYPE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>754C0889-064C-6A63-260F-A7223F858947</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3852FD9-1580-BEBD-C2B5-48226AB215A2" referredColumn="4B7E99A5-F796-DC2D-EB92-80B0E4A9C9B8"/>
+</associations>
+</Column>
+<Column name="COORD_SYSTEM_ABBREVIATION" id="6C4477DF-0222-5054-0302-A9E2B83AD6F3">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>COORD_SYSTEM_ABBREVIATION</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>99409A61-5CEA-B0C2-1BBD-E5DFB8FCFCB1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 BYTE</dataTypeSize>
+<ownDataTypeParameters>12 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COORD_SYSTEM_AREA" id="C584947D-EB15-7796-7C9E-6FFC3F376FC5">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>COORD_SYSTEM_AREA</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>E03F0DE4-EAE2-6637-4FDB-82A9161CB568</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COORD_SYSTEM_LONG_NAME" id="0CCCB89F-DAF7-791C-127D-74107802E537">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>COORD_SYSTEM_LONG_NAME</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>55362C1B-D38B-A382-962C-461B0BD8F655</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COORD_SYSTEM_SHORT_NAME" id="C89B7ECD-BC99-C043-7512-EF76ADDE1B48">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>COORD_SYSTEM_SHORT_NAME</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>849F23FA-8DFE-6BE9-F087-7FD7CE77BA36</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COORD_SYSTEM_UOM" id="04605E7D-C734-54F9-53F2-F7D0D28D8CF1">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>COORD_SYSTEM_UOM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>AC88DCFA-4B7A-F013-ED83-C5D4D4594D24</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="702B0710-9AE6-4F63-A4CA-BA3AB962E39B" referredColumn="43AB878E-FA28-14CE-70E0-C4E3F3F7563C"/>
+</associations>
+</Column>
+<Column name="DATUM_OUOM" id="F7E7B5C5-D3A4-0026-070E-2EFA9C5188EB">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>DATUM_OUOM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>FAAD83C9-2A55-81CD-6CB2-4C4251EA401F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3467050F-2E4C-A930-5920-237415FFEA43" referredColumn="43AB878E-FA28-14CE-70E0-C4E3F3F7563C"/>
+</associations>
+</Column>
+<Column name="EFFECTIVE_DATE" id="132F170A-F3CF-6440-7094-65394A1D8954">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>EFFECTIVE_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>966F4DA2-15F8-4126-E568-2762F843CBC3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPIRY_DATE" id="A4506FB3-DF3D-573B-CA11-4C712D62E689">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>EXPIRY_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A640B0E4-BB98-0CE6-CA82-1B9F43F41B85</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GEODETIC_DATUM" id="65CAA73B-781D-26EC-72E5-360696257880">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>GEODETIC_DATUM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>4A852043-8D74-79E0-D99A-00F9E8CC9BF9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="902A151F-7910-D31D-724F-D2CEE74823D0" referredColumn="186BCC15-ADBE-97D5-32D1-FB475CC15B34"/>
+</associations>
+</Column>
+<Column name="N_VALUE" id="2530CB18-BB42-AFFE-FDBA-A6F343AB3E97">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>N_VALUE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>DFD3836F-3030-E4C3-928F-128D6352EB21</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="N_VALUE_OUOM" id="E929FC4D-2C09-3C41-0F12-3ACBB271173A">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>N_VALUE_OUOM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>26BE8CFC-16DC-01A5-AFA4-8FA5788B6FDC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="908D527D-73F6-E97A-6BD2-37D85EABACFE" referredColumn="43AB878E-FA28-14CE-70E0-C4E3F3F7563C"/>
+</associations>
+</Column>
+<Column name="OWNER_BA_ID" id="75674275-46B7-B7FE-2063-1942DFECB18D">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>OWNER_BA_ID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>BB246A39-A3C7-2059-772C-15864CA411E4</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9906EA21-A4B1-6925-7192-1B3258A7C30F" referredColumn="E8B3DC78-BB87-CF95-BEDE-6DA23CFF5A6B"/>
+</associations>
+</Column>
+<Column name="PARENT_COORD_SYSTEM_ID" id="453763FB-9A6F-178F-1449-EC02AB7C189C">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>PARENT_COORD_SYSTEM_ID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2D51BFB3-D50E-EF13-1CD0-0938F817B548</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A8F03A2A-C299-1044-295D-C0DF923F52A7" referredColumn="855ADBE2-8D74-E72A-4149-526BBC9263AC"/>
+</associations>
+</Column>
+<Column name="PERSPECTIVE_HEIGHT" id="79A18E9C-2728-6EF2-F292-6B5E4ED4C020">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>PERSPECTIVE_HEIGHT</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>9A4F8068-DA7F-A01D-5F64-E3358A0DC7B5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,10,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PPDM_GUID" id="253FA742-3E79-57FB-3238-E2AD8A2083BF">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>PPDM_GUID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>5439676D-1CA9-9F9C-E7FF-EB90FBC8815C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>38 BYTE</dataTypeSize>
+<ownDataTypeParameters>38 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIME_MERIDIAN" id="CC5867D9-D41E-E5C8-CB38-2FBA8F1277B6">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>PRIME_MERIDIAN</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A6B675C7-90B4-E447-94A8-AF3BF0B4360D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F44D815-CBA5-DBE2-AA7D-6C5BCD6BBE72" referredColumn="25CE77D2-009D-C5A5-3CD4-2FB923C0B580"/>
+</associations>
+</Column>
+<Column name="PRINCIPAL_MERIDIAN" id="3B2824C5-D862-DFB6-53CA-0F477A752C30">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>PRINCIPAL_MERIDIAN</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>F2D6CB16-D5B9-2C6F-5ADD-73A772B3F6C8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6D99E3FB-DC2C-7393-732B-B6F4BC656897" referredColumn="47CA2556-C08C-1998-2A27-2CC78F41BA91"/>
+</associations>
+</Column>
+<Column name="PROJECTION_TYPE" id="37789474-098A-92CE-80A1-119AA0DA4CEF">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>PROJECTION_TYPE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>75865F9E-025B-9EF6-14AD-8214B4E41C8A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0904DFE9-79D2-3197-942F-8D925B54355E" referredColumn="ABD73ED6-D0ED-8C24-F5AA-5D5F893DB670"/>
+</associations>
+</Column>
+<Column name="REFERENCE_ELEV" id="5D29DA9D-9AB3-CB33-1985-0AD143584799">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>REFERENCE_ELEV</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>493F714E-28A4-9255-3FF2-62747B14A8F6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,10,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REFERENCE_ELEV_OUOM" id="7FA347C6-BCD8-2F9F-F336-4F5ACA5A93EC">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>REFERENCE_ELEV_OUOM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>BB3085A0-CDC4-866C-F6FB-A2816AAD3ADF</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E9473E9C-CF8D-79C5-EF7A-28EBDA29F76F" referredColumn="43AB878E-FA28-14CE-70E0-C4E3F3F7563C"/>
+</associations>
+</Column>
+<Column name="REMARK" id="00013E36-3B91-6ED9-C476-98EA52FC5FA8">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>REMARK</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>452D4C3B-9716-2834-1B54-DB114D2A36D1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 BYTE</dataTypeSize>
+<ownDataTypeParameters>2000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROTATION_IND" id="4D97EAA6-03D0-6232-FF76-C9D7B595591E">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROTATION_IND</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>549B79CD-E440-5385-C6D8-BE0737B9251C</importedID>
+<constraintName>CS_CK1</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOURCE" id="EF76F492-A1DE-0D2F-0491-FB52B663A49D">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>SOURCE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6C2268B4-3257-FC7E-D320-F98BAE326884</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA9A0D57-9E0B-A256-A62C-221077D9FDC7" referredColumn="03F3B56A-8DB2-6565-2D09-9AD82417D0F7"/>
+</associations>
+</Column>
+<Column name="SOURCE_DOCUMENT_ID" id="925C86B2-B44F-69DE-0EBD-5C92BFD28992">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>SOURCE_DOCUMENT_ID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>02633918-DDB2-D917-4807-1F61269A6D6F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE182135-FC1F-70AC-E6D7-182590B114ED" referredColumn="C2298C37-2DAA-1CF6-1521-52DCB5D669DC"/>
+</associations>
+</Column>
+<Column name="VERTICAL_DATUM_TYPE" id="B0EAC5CB-5CC7-E689-F401-804275784635">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>VERTICAL_DATUM_TYPE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>B442FE59-98CC-B093-0671-17B45B9FF4DC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1160D73-ED13-E421-BE76-538F75EBFC56" referredColumn="D31AD7F1-C935-0F30-2827-99AC73151807"/>
+</associations>
+</Column>
+<Column name="ROW_CHANGED_BY" id="C1035BF9-98B5-AB1A-6847-C755BCA958E8">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROW_CHANGED_BY</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>E82C169B-39C7-E3E1-D25B-BC450C23B266</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_CHANGED_DATE" id="DD239681-0F6C-D3A3-64B6-DD4BA66C2433">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROW_CHANGED_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>0A444790-6492-767E-A6E5-BE64715B920C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_CREATED_BY" id="5A211C2B-AF08-4476-6A4C-145C72585946">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROW_CREATED_BY</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>BAA17A60-313E-A443-6D7F-3A097443E91E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_CREATED_DATE" id="78C68EBB-651B-326D-6EFE-EEA030E8ED82">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROW_CREATED_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>3F9535A7-FB27-5823-E70C-E11B161C6B3D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_EFFECTIVE_DATE" id="648DD38D-8746-4643-B8A2-10EF0A783B2C">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROW_EFFECTIVE_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>04B18147-E841-C5FF-EF30-22E997DE2E37</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_EXPIRY_DATE" id="13AD0917-A025-1F8B-FD99-704E4938A027">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROW_EXPIRY_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D2BAD531-6A0D-B11D-6A91-EB4B376ECE45</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_QUALITY" id="7D275445-7909-1C4A-1F27-40C6991ED3CD">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>CS_COORDINATE_SYSTEM</sourceObjSchema>
+<sourceObjName>ROW_QUALITY</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>64E173B7-A9F0-3879-268D-2F9EA449D4CB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4EE920F5-02C8-F112-004E-A3097E39A913" referredColumn="80B19180-2575-20DA-F158-9FCDD4DEBAB5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CFB5ECF7-F1F3-19BC-8CFF-9DBAE6803953" name="CS_PK">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>CS_PK</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2BFB58B2-C015-18B1-7A43-8774400D19E1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="855ADBE2-8D74-E72A-4149-526BBC9263AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A7FC6046-B1E6-08AC-DD39-9BCCF5A1AD21" name="CS_GUID">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>CS_GUID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>E8B87CFF-C492-07A4-6C60-98A24A56B16D</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="253FA742-3E79-57FB-3238-E2AD8A2083BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CC4CC28-36CA-5142-E9DC-B2181BE16AC3" schemaObject="72C650FC-3A89-9403-9A4A-6789A7C97319" name="CS_GUID">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>CS_GUID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8381C607-0A32-4544-B209-84B3DA0F725B</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="253FA742-3E79-57FB-3238-E2AD8A2083BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B191288-4088-998E-8C5F-386BDBDBF2FA" schemaObject="72C650FC-3A89-9403-9A4A-6789A7C97319" name="CS_PK">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>CS_PK</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:45 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>548E4F7D-438B-56A5-3309-60347AEC5E07</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="855ADBE2-8D74-E72A-4149-526BBC9263AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB4E69BD-2606-6BC6-B843-DC6C2AD973F4" name="CS_BA_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75674275-46B7-B7FE-2063-1942DFECB18D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C19DEA72-C75B-02D1-A278-C59544C61426" name="CS_CSGD_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65CAA73B-781D-26EC-72E5-360696257880"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="647FA79E-10CE-CDF1-BC65-B0BB1D0754EE" name="CS_CSPME_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B2824C5-D862-DFB6-53CA-0F477A752C30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB08AA35-DB59-0643-1B88-A48D6C3F41C0" name="CS_CSPM_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC5867D9-D41E-E5C8-CB38-2FBA8F1277B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02C4B847-910A-C05D-BAEF-2A38A583F8BD" name="CS_CS_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="453763FB-9A6F-178F-1449-EC02AB7C189C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DBAEBAB9-B35C-ACDC-D877-621B3DCF69C9" name="CS_PUOM_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7E7B5C5-D3A4-0026-070E-2EFA9C5188EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="497F6A2A-FF60-CE91-222C-794574A520EB" name="CS_PUOM_FK2">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04605E7D-C734-54F9-53F2-F7D0D28D8CF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BE3D894-23CD-D870-932B-409D469F6491" name="CS_PUOM_FK3">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FA347C6-BCD8-2F9F-F336-4F5ACA5A93EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33044716-E7F1-E0B8-210F-590EC20F18DF" name="CS_PUOM_FK4">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E929FC4D-2C09-3C41-0F12-3ACBB271173A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7C321925-201F-C277-F2CA-32E3536144DF" name="CS_R_CST1_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69EEB14C-D383-1C51-6BC3-625BF6EAD9F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E3BBBAD-A0DF-04BA-7248-4B204BF7B792" name="CS_R_PRQ_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D275445-7909-1C4A-1F27-40C6991ED3CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B17E3AE-1928-A824-AE09-9ACB7C4979C6" name="CS_R_PT10_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37789474-098A-92CE-80A1-119AA0DA4CEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1893A4D6-4635-8906-EA93-3FDAD913AE7D" name="CS_R_S_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF76F492-A1DE-0D2F-0491-FB52B663A49D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41D06178-AE2D-7420-106F-F66429274247" name="CS_R_VDT_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0EAC5CB-5CC7-E689-F401-804275784635"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24BB306C-F503-E550-8456-AC8FC9DB6EB9" name="CS_SRCD_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-21 03:16:46 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="925C86B2-B44F-69DE-0EBD-5C92BFD28992"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

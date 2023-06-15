@@ -1,0 +1,161 @@
+/rest-class:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rest_class
+    responses:
+      '200':
+        description: get rest_class data to be returned
+        content:
+          application/json:
+            example:
+            - restriction_class_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              rest_class_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rest_class
+    description: Create a new rest_class data
+    requestBody:
+      required: true
+      description: Request body to create rest_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_class'
+          example:
+            restriction_class_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rest_class_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rest_class data is added
+        content:
+          application/json:
+            example:
+              message: The rest_class data was successfully added
+/rest-class/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rest_class data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rest_class data
+    description: Update a new rest_class data
+    requestBody:
+      required: true
+      description: Request body to update rest_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_class'
+          example:
+            restriction_class_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rest_class_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rest_class data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rest_class data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rest_class data
+    description: Update a new rest_class data
+    requestBody:
+      required: true
+      description: Request body to update rest_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_class'
+          example:
+            restriction_class_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rest_class_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rest_class data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rest_class data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rest_class data
+    description: Delete rest_class data
+    responses:
+      '200':
+        description: rest_class data is deleted
+        content:
+          application/json:
+            example:
+              message: The rest_class data was successfully deleted

@@ -1,0 +1,201 @@
+/land-sale-work-bid:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get land_sale_work_bid
+    responses:
+      '200':
+        description: get land_sale_work_bid data to be returned
+        content:
+          application/json:
+            example:
+            - jurisdiction: Lorem Ipsum
+              land_sale_number: Lorem Ipsum
+              land_sale_offering_id: Lorem Ipsum
+              land_offering_bid_id: Lorem Ipsum
+              work_bid_id: Lorem Ipsum
+              active_ind: y
+              critical_date: 12/12/2023
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              work_bid_count_uom: Lorem Ipsum
+              work_bid_type: Lorem Ipsum
+              work_bid_value: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new land_sale_work_bid
+    description: Create a new land_sale_work_bid data
+    requestBody:
+      required: true
+      description: Request body to create land_sale_work_bid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale_work_bid'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            land_sale_offering_id: Lorem Ipsum
+            land_offering_bid_id: Lorem Ipsum
+            work_bid_id: Lorem Ipsum
+            active_ind: y
+            critical_date: 12/12/2023
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            work_bid_count_uom: Lorem Ipsum
+            work_bid_type: Lorem Ipsum
+            work_bid_value: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_sale_work_bid data is added
+        content:
+          application/json:
+            example:
+              message: The land_sale_work_bid data was successfully added
+/land-sale-work-bid/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of land_sale_work_bid data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new land_sale_work_bid data
+    description: Update a new land_sale_work_bid data
+    requestBody:
+      required: true
+      description: Request body to update land_sale_work_bid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale_work_bid'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            land_sale_offering_id: Lorem Ipsum
+            land_offering_bid_id: Lorem Ipsum
+            work_bid_id: Lorem Ipsum
+            active_ind: y
+            critical_date: 12/12/2023
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            work_bid_count_uom: Lorem Ipsum
+            work_bid_type: Lorem Ipsum
+            work_bid_value: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_sale_work_bid data is completely updated
+        content:
+          application/json:
+            example:
+              message: The land_sale_work_bid data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new land_sale_work_bid data
+    description: Update a new land_sale_work_bid data
+    requestBody:
+      required: true
+      description: Request body to update land_sale_work_bid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale_work_bid'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            land_sale_offering_id: Lorem Ipsum
+            land_offering_bid_id: Lorem Ipsum
+            work_bid_id: Lorem Ipsum
+            active_ind: y
+            critical_date: 12/12/2023
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            work_bid_count_uom: Lorem Ipsum
+            work_bid_type: Lorem Ipsum
+            work_bid_value: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in land_sale_work_bid data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in land_sale_work_bid data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete land_sale_work_bid data
+    description: Delete land_sale_work_bid data
+    responses:
+      '200':
+        description: land_sale_work_bid data is deleted
+        content:
+          application/json:
+            example:
+              message: The land_sale_work_bid data was successfully deleted

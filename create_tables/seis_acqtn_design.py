@@ -1,0 +1,120 @@
+import oracledb
+import sys
+import lib_platform as platform
+
+if platform.system == "darwin":
+    sys.path.insert(0, "database")
+elif platform.system == "windows":
+    sys.path.insert(0, "../database")
+
+from conn import connection
+
+# pw = getpass.getpass("Enter password: ")
+
+# connection = oracledb.connect(
+#     user="admin",
+#     password="ppdm-3.9",
+#     dsn="/kei-oracle-test.chkxr21l2l5s.ap-southeast-3.rds.amazonaws.com:1521/ORCL")
+
+# print("Successfully connected to Oracle Database")
+
+cursor = connection.cursor()
+
+
+cursor.execute("""
+    begin
+        execute immediate 'drop table seis_acqtn_design';
+        exception when others then if sqlcode <> -942 then raise; end if;
+    end;""")
+
+cursor.execute(
+    """create table seis_acqtn_design(
+        ACQTN_DESIGN_ID VARCHAR(40) NOT NULL,
+        ACQTN_COMPLETED_DATE TIMESTAMP(0),
+        ACQTN_COMPLETED_DATE_DESC VARCHAR(8),
+        ACQTN_DIMENSION VARCHAR(40),
+        ACQTN_DIRECTION VARCHAR(40),
+        ACQTN_INLINE_BIN_SIZE DOUBLE PRECISION,
+        ACQTN_INLINE_BIN_SIZE_OUOM VARCHAR(40),
+        ACQTN_REMARK VARCHAR(2000),
+        ACQTN_SHOTPT_INTERVAL DECIMAL(10,5),
+        ACQTN_SHOTPT_INTERVAL_OUOM VARCHAR(40),
+        ACQTN_SHOT_LINE_SPACING DECIMAL(10,3),
+        ACQTN_SHOT_LINE_SPACING_OUOM VARCHAR(40),
+        ACQTN_SHOT_TIME_INTVL DECIMAL(10,5),
+        ACQTN_SHOT_TIME_INTVL_OUOM VARCHAR(40),
+        ACQTN_START_DATE TIMESTAMP(0),
+        ACQTN_START_DATE_DESC VARCHAR(8),
+        ACQTN_XLINE_BIN_SIZE DOUBLE PRECISION,
+        ACQTN_XLINE_BIN_SIZE_OUOM VARCHAR(40),
+        ACTIVE_IND VARCHAR(1),
+        ACTUAL_IND VARCHAR(1),
+        CDP_COVERAGE DOUBLE PRECISION,
+        EFFECTIVE_DATE TIMESTAMP(0),
+        ENERGY_CHARGE_SIZE DOUBLE PRECISION,
+        ENERGY_CHARGE_SIZE_OUOM VARCHAR(40),
+        ENERGY_OPRG_PSR DECIMAL(6,2),
+        ENERGY_OPRG_PSR_OUOM VARCHAR(40),
+        ENERGY_OPRG_VOLUME DECIMAL(14,4),
+        ENERGY_OPRG_VOLUME_OUOM VARCHAR(40),
+        ENERGY_SHOT_DEPTH DECIMAL(15,5),
+        ENERGY_SHOT_DEPTH_OUOM VARCHAR(40),
+        ENERGY_SRC_ARRAY_SPC DECIMAL(4,1),
+        ENERGY_SRC_ARRAY_SPC_OUOM VARCHAR(40),
+        ENERGY_SRC_ARRAY_TYPE VARCHAR(40),
+        ENERGY_SRC_MAKE VARCHAR(40),
+        ENERGY_SRC_PER_SHOT DECIMAL(10,5),
+        ENERGY_SWEEP_DURATION DECIMAL(10,5),
+        ENERGY_SWEEP_DURATION_OUOM VARCHAR(40),
+        ENERGY_SWEEP_END_FREQ DECIMAL(10,5),
+        ENERGY_SWEEP_FREQ_OUOM VARCHAR(40),
+        ENERGY_SWEEP_MVUP_DIST DECIMAL(10,3),
+        ENERGY_SWEEP_MVUP_DIST_OUOM VARCHAR(40),
+        ENERGY_SWEEP_NO INT,
+        ENERGY_SWEEP_ST_FREQ DECIMAL(10,5),
+        ENERGY_SWEEP_TAPER DECIMAL(4,1),
+        ENERGY_SWEEP_TAPER_OUOM VARCHAR(40),
+        ENERGY_SWEEP_TYPE VARCHAR(40),
+        ENERGY_TYPE VARCHAR(40),
+        ENVIRONMENT VARCHAR(40),
+        EXPIRY_DATE TIMESTAMP(0),
+        MONITOR_DEPTH DECIMAL(15,5),
+        MONITOR_DEPTH_OUOM VARCHAR(40),
+        NOMINAL_IND VARCHAR(1),
+        PPDM_GUID VARCHAR(38),
+        RCRD_CHANNEL_COUNT INT,
+        RCRD_FORMAT_TYPE VARCHAR(40),
+        RCRD_GAIN_MODE VARCHAR(40),
+        RCRD_HF_FREQ DECIMAL(10,5),
+        RCRD_HF_SLOPE DECIMAL(10,5),
+        RCRD_LF_FREQ DECIMAL(10,5),
+        RCRD_LF_SLOPE DECIMAL(10,5),
+        RCRD_MAKE VARCHAR(40),
+        RCRD_NEAR_SURF_CORR VARCHAR(240),
+        RCRD_NEAR_SURF_CORR_OUOM VARCHAR(40),
+        RCRD_NF_FREQ DECIMAL(10,5),
+        RCRD_NF_IND VARCHAR(1),
+        RCRD_POLARITY VARCHAR(40),
+        RCRD_REC_LENGTH DECIMAL(10,5),
+        RCRD_REC_LENGTH_OUOM VARCHAR(40),
+        RCRD_SAMPLE_RATE DECIMAL(15,5),
+        RCRD_SAMPLE_RATE_OUOM VARCHAR(40),
+        RCVR_LINE_SPACING DECIMAL(10,3),
+        RCVR_LINE_SPACING_OUOM VARCHAR(40),
+        REMARK VARCHAR(2000),
+        REP_WATER_ACOUSTIC_VEL DECIMAL(10,5),
+        REP_WATER_ACOUSTIC_VEL_OUOM VARCHAR(40),
+        SHOT_BY VARCHAR(40),
+        SHOT_FOR VARCHAR(40),
+        SOURCE VARCHAR(40),
+        WELL_SRC_AZIMUTH DECIMAL(10,5),
+        WELL_SRC_AZIMUTH_NORTH VARCHAR(40),
+        WELL_SRC_OFFSET DECIMAL(10,5),
+        WELL_SRC_OFFSET_OUOM VARCHAR(40),
+        ROW_CHANGED_BY VARCHAR(30),
+        ROW_CHANGED_DATE TIMESTAMP(0),
+        ROW_CREATED_BY VARCHAR(30),
+        ROW_CREATED_DATE TIMESTAMP(0),
+        ROW_EFFECTIVE_DATE TIMESTAMP(0),
+        ROW_EXPIRY_DATE TIMESTAMP(0),
+        ROW_QUALITY VARCHAR(40))""")

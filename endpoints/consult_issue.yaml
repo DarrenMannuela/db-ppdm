@@ -1,0 +1,181 @@
+/consult-issue:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get consult_issue
+    responses:
+      '200':
+        description: get consult_issue data to be returned
+        content:
+          application/json:
+            example:
+            - consult_id: Lorem Ipsum
+              detail_id: Lorem Ipsum
+              active_ind: y
+              detail_desc: Lorem Ipsum
+              discussion_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              issue_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              remark_type: Lorem Ipsum
+              resolution: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new consult_issue
+    description: Create a new consult_issue data
+    requestBody:
+      required: true
+      description: Request body to create consult_issue data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/consult_issue'
+          example:
+            consult_id: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            detail_desc: Lorem Ipsum
+            discussion_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            issue_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_type: Lorem Ipsum
+            resolution: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: consult_issue data is added
+        content:
+          application/json:
+            example:
+              message: The consult_issue data was successfully added
+/consult-issue/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of consult_issue data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new consult_issue data
+    description: Update a new consult_issue data
+    requestBody:
+      required: true
+      description: Request body to update consult_issue data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/consult_issue'
+          example:
+            consult_id: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            detail_desc: Lorem Ipsum
+            discussion_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            issue_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_type: Lorem Ipsum
+            resolution: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: consult_issue data is completely updated
+        content:
+          application/json:
+            example:
+              message: The consult_issue data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new consult_issue data
+    description: Update a new consult_issue data
+    requestBody:
+      required: true
+      description: Request body to update consult_issue data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/consult_issue'
+          example:
+            consult_id: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            detail_desc: Lorem Ipsum
+            discussion_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            issue_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_type: Lorem Ipsum
+            resolution: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in consult_issue data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in consult_issue data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete consult_issue data
+    description: Delete consult_issue data
+    responses:
+      '200':
+        description: consult_issue data is deleted
+        content:
+          application/json:
+            example:
+              message: The consult_issue data was successfully deleted

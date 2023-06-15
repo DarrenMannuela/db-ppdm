@@ -1,0 +1,173 @@
+/reserve-class-formula:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get reserve_class_formula
+    responses:
+      '200':
+        description: get reserve_class_formula data to be returned
+        content:
+          application/json:
+            example:
+            - reserve_class_id: Lorem Ipsum
+              formula_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              formula: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              use_rule: Lorem Ipsum
+              use_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new reserve_class_formula
+    description: Create a new reserve_class_formula data
+    requestBody:
+      required: true
+      description: Request body to create reserve_class_formula data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/reserve_class_formula'
+          example:
+            reserve_class_id: Lorem Ipsum
+            formula_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            formula: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            use_rule: Lorem Ipsum
+            use_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: reserve_class_formula data is added
+        content:
+          application/json:
+            example:
+              message: The reserve_class_formula data was successfully added
+/reserve-class-formula/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of reserve_class_formula data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new reserve_class_formula data
+    description: Update a new reserve_class_formula data
+    requestBody:
+      required: true
+      description: Request body to update reserve_class_formula data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/reserve_class_formula'
+          example:
+            reserve_class_id: Lorem Ipsum
+            formula_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            formula: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            use_rule: Lorem Ipsum
+            use_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: reserve_class_formula data is completely updated
+        content:
+          application/json:
+            example:
+              message: The reserve_class_formula data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new reserve_class_formula data
+    description: Update a new reserve_class_formula data
+    requestBody:
+      required: true
+      description: Request body to update reserve_class_formula data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/reserve_class_formula'
+          example:
+            reserve_class_id: Lorem Ipsum
+            formula_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            formula: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            use_rule: Lorem Ipsum
+            use_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in reserve_class_formula data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in reserve_class_formula data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete reserve_class_formula data
+    description: Delete reserve_class_formula data
+    responses:
+      '200':
+        description: reserve_class_formula data is deleted
+        content:
+          application/json:
+            example:
+              message: The reserve_class_formula data was successfully deleted

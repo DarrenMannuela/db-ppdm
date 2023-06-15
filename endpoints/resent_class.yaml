@@ -1,0 +1,169 @@
+/resent-class:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get resent_class
+    responses:
+      '200':
+        description: get resent_class data to be returned
+        content:
+          application/json:
+            example:
+            - resent_id: Lorem Ipsum
+              reserve_class_id: Lorem Ipsum
+              active_ind: y
+              confidence_factor: 0.1
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              report_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new resent_class
+    description: Create a new resent_class data
+    requestBody:
+      required: true
+      description: Request body to create resent_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_class'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            active_ind: y
+            confidence_factor: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_class data is added
+        content:
+          application/json:
+            example:
+              message: The resent_class data was successfully added
+/resent-class/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of resent_class data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new resent_class data
+    description: Update a new resent_class data
+    requestBody:
+      required: true
+      description: Request body to update resent_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_class'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            active_ind: y
+            confidence_factor: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_class data is completely updated
+        content:
+          application/json:
+            example:
+              message: The resent_class data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new resent_class data
+    description: Update a new resent_class data
+    requestBody:
+      required: true
+      description: Request body to update resent_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_class'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            active_ind: y
+            confidence_factor: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in resent_class data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in resent_class data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete resent_class data
+    description: Delete resent_class data
+    responses:
+      '200':
+        description: resent_class data is deleted
+        content:
+          application/json:
+            example:
+              message: The resent_class data was successfully deleted

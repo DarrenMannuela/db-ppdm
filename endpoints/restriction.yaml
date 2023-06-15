@@ -1,0 +1,201 @@
+/restriction:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get restriction
+    responses:
+      '200':
+        description: get restriction data to be returned
+        content:
+          application/json:
+            example:
+            - restriction_id: Lorem Ipsum
+              active_ind: y
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              end_date_event: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              regulatory_act: Lorem Ipsum
+              remark: Lorem Ipsum
+              restriction_class: Lorem Ipsum
+              restriction_name: Lorem Ipsum
+              restriction_type: Lorem Ipsum
+              rest_duration_type: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              start_date: 12/12/2023
+              start_date_event: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new restriction
+    description: Create a new restriction data
+    requestBody:
+      required: true
+      description: Request body to create restriction data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restriction'
+          example:
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_date_event: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            regulatory_act: Lorem Ipsum
+            remark: Lorem Ipsum
+            restriction_class: Lorem Ipsum
+            restriction_name: Lorem Ipsum
+            restriction_type: Lorem Ipsum
+            rest_duration_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            start_date: 12/12/2023
+            start_date_event: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: restriction data is added
+        content:
+          application/json:
+            example:
+              message: The restriction data was successfully added
+/restriction/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of restriction data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new restriction data
+    description: Update a new restriction data
+    requestBody:
+      required: true
+      description: Request body to update restriction data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restriction'
+          example:
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_date_event: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            regulatory_act: Lorem Ipsum
+            remark: Lorem Ipsum
+            restriction_class: Lorem Ipsum
+            restriction_name: Lorem Ipsum
+            restriction_type: Lorem Ipsum
+            rest_duration_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            start_date: 12/12/2023
+            start_date_event: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: restriction data is completely updated
+        content:
+          application/json:
+            example:
+              message: The restriction data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new restriction data
+    description: Update a new restriction data
+    requestBody:
+      required: true
+      description: Request body to update restriction data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/restriction'
+          example:
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_date_event: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            regulatory_act: Lorem Ipsum
+            remark: Lorem Ipsum
+            restriction_class: Lorem Ipsum
+            restriction_name: Lorem Ipsum
+            restriction_type: Lorem Ipsum
+            rest_duration_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            start_date: 12/12/2023
+            start_date_event: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in restriction data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in restriction data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete restriction data
+    description: Delete restriction data
+    responses:
+      '200':
+        description: restriction data is deleted
+        content:
+          application/json:
+            example:
+              message: The restriction data was successfully deleted

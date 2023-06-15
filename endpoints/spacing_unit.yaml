@@ -1,0 +1,177 @@
+/spacing-unit:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get spacing_unit
+    responses:
+      '200':
+        description: get spacing_unit data to be returned
+        content:
+          application/json:
+            example:
+            - spacing_unit_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              gross_size: 0.1
+              gross_size_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              spacing_unit_desc: Lorem Ipsum
+              spacing_unit_name: Lorem Ipsum
+              spacing_unit_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new spacing_unit
+    description: Create a new spacing_unit data
+    requestBody:
+      required: true
+      description: Request body to create spacing_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/spacing_unit'
+          example:
+            spacing_unit_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_size: 0.1
+            gross_size_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spacing_unit_desc: Lorem Ipsum
+            spacing_unit_name: Lorem Ipsum
+            spacing_unit_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: spacing_unit data is added
+        content:
+          application/json:
+            example:
+              message: The spacing_unit data was successfully added
+/spacing-unit/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of spacing_unit data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new spacing_unit data
+    description: Update a new spacing_unit data
+    requestBody:
+      required: true
+      description: Request body to update spacing_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/spacing_unit'
+          example:
+            spacing_unit_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_size: 0.1
+            gross_size_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spacing_unit_desc: Lorem Ipsum
+            spacing_unit_name: Lorem Ipsum
+            spacing_unit_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: spacing_unit data is completely updated
+        content:
+          application/json:
+            example:
+              message: The spacing_unit data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new spacing_unit data
+    description: Update a new spacing_unit data
+    requestBody:
+      required: true
+      description: Request body to update spacing_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/spacing_unit'
+          example:
+            spacing_unit_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_size: 0.1
+            gross_size_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spacing_unit_desc: Lorem Ipsum
+            spacing_unit_name: Lorem Ipsum
+            spacing_unit_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in spacing_unit data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in spacing_unit data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete spacing_unit data
+    description: Delete spacing_unit data
+    responses:
+      '200':
+        description: spacing_unit data is deleted
+        content:
+          application/json:
+            example:
+              message: The spacing_unit data was successfully deleted

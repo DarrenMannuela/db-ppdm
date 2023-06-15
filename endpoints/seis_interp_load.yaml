@@ -1,0 +1,181 @@
+/seis-interp-load:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_interp_load
+    responses:
+      '200':
+        description: get seis_interp_load data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              process_step_id: Lorem Ipsum
+              active_ind: y
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              process_status: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              step_name: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_interp_load
+    description: Create a new seis_interp_load data
+    requestBody:
+      required: true
+      description: Request body to create seis_interp_load data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_interp_load'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            process_step_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            process_status: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            step_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_interp_load data is added
+        content:
+          application/json:
+            example:
+              message: The seis_interp_load data was successfully added
+/seis-interp-load/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_interp_load data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_interp_load data
+    description: Update a new seis_interp_load data
+    requestBody:
+      required: true
+      description: Request body to update seis_interp_load data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_interp_load'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            process_step_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            process_status: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            step_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_interp_load data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_interp_load data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_interp_load data
+    description: Update a new seis_interp_load data
+    requestBody:
+      required: true
+      description: Request body to update seis_interp_load data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_interp_load'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            process_step_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            process_status: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            step_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_interp_load data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_interp_load data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_interp_load data
+    description: Delete seis_interp_load data
+    responses:
+      '200':
+        description: seis_interp_load data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_interp_load data was successfully deleted

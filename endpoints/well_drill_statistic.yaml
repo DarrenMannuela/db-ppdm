@@ -1,0 +1,225 @@
+/well-drill-statistic:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_statistic
+    responses:
+      '200':
+        description: get well_drill_statistic data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              statistic_type: Lorem Ipsum
+              active_ind: y
+              currency_conversion: 0.1
+              date_format_desc: 12/12/2023
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              statistic_code: Lorem Ipsum
+              statistic_date: 12/12/2023
+              statistic_time: 12/12/2023
+              statistic_timezone: Lorem Ipsum
+              statistic_value: 1.0
+              statistic_value_ouom: Lorem Ipsum
+              statistic_value_uom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_statistic
+    description: Create a new well_drill_statistic data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_statistic data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_statistic'
+          example:
+            uwi: Lorem Ipsum
+            statistic_type: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            statistic_code: Lorem Ipsum
+            statistic_date: 12/12/2023
+            statistic_time: 12/12/2023
+            statistic_timezone: Lorem Ipsum
+            statistic_value: 1.0
+            statistic_value_ouom: Lorem Ipsum
+            statistic_value_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_statistic data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_statistic data was successfully added
+/well-drill-statistic/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_statistic data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_statistic data
+    description: Update a new well_drill_statistic data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_statistic data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_statistic'
+          example:
+            uwi: Lorem Ipsum
+            statistic_type: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            statistic_code: Lorem Ipsum
+            statistic_date: 12/12/2023
+            statistic_time: 12/12/2023
+            statistic_timezone: Lorem Ipsum
+            statistic_value: 1.0
+            statistic_value_ouom: Lorem Ipsum
+            statistic_value_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_statistic data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_statistic data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_statistic data
+    description: Update a new well_drill_statistic data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_statistic data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_statistic'
+          example:
+            uwi: Lorem Ipsum
+            statistic_type: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            statistic_code: Lorem Ipsum
+            statistic_date: 12/12/2023
+            statistic_time: 12/12/2023
+            statistic_timezone: Lorem Ipsum
+            statistic_value: 1.0
+            statistic_value_ouom: Lorem Ipsum
+            statistic_value_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_statistic data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_statistic data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_statistic data
+    description: Delete well_drill_statistic data
+    responses:
+      '200':
+        description: well_drill_statistic data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_statistic data was successfully deleted

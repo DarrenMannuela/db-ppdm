@@ -1,0 +1,261 @@
+/paleo-interp:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get paleo_interp
+    responses:
+      '200':
+        description: get paleo_interp data to be returned
+        content:
+          application/json:
+            example:
+            - paleo_summary_id: Lorem Ipsum
+              detail_id: Lorem Ipsum
+              active_ind: y
+              analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              base_md: 0.1
+              base_md_ouom: Lorem Ipsum
+              climate_id: Lorem Ipsum
+              description: Lorem Ipsum
+              ecozone_confidence_id: Lorem Ipsum
+              ecozone_id: Lorem Ipsum
+              ecozone_qualifier_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              from_rel_strat_name_set_id: Lorem Ipsum
+              from_rel_strat_unit_id: Lorem Ipsum
+              from_strat_name_set_id: Lorem Ipsum
+              from_strat_unit_id: Lorem Ipsum
+              lithology_type: Lorem Ipsum
+              lith_structure_id: Lorem Ipsum
+              paleo_confidence_id: Lorem Ipsum
+              paleo_qualifier_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              tai_color: Lorem Ipsum
+              top_md: 0.1
+              top_md_ouom: Lorem Ipsum
+              to_rel_strat_name_set_id: Lorem Ipsum
+              to_rel_strat_unit_id: Lorem Ipsum
+              to_strat_name_set_id: Lorem Ipsum
+              to_strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new paleo_interp
+    description: Create a new paleo_interp data
+    requestBody:
+      required: true
+      description: Request body to create paleo_interp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_interp'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            base_md: 0.1
+            base_md_ouom: Lorem Ipsum
+            climate_id: Lorem Ipsum
+            description: Lorem Ipsum
+            ecozone_confidence_id: Lorem Ipsum
+            ecozone_id: Lorem Ipsum
+            ecozone_qualifier_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            from_rel_strat_name_set_id: Lorem Ipsum
+            from_rel_strat_unit_id: Lorem Ipsum
+            from_strat_name_set_id: Lorem Ipsum
+            from_strat_unit_id: Lorem Ipsum
+            lithology_type: Lorem Ipsum
+            lith_structure_id: Lorem Ipsum
+            paleo_confidence_id: Lorem Ipsum
+            paleo_qualifier_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tai_color: Lorem Ipsum
+            top_md: 0.1
+            top_md_ouom: Lorem Ipsum
+            to_rel_strat_name_set_id: Lorem Ipsum
+            to_rel_strat_unit_id: Lorem Ipsum
+            to_strat_name_set_id: Lorem Ipsum
+            to_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_interp data is added
+        content:
+          application/json:
+            example:
+              message: The paleo_interp data was successfully added
+/paleo-interp/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of paleo_interp data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new paleo_interp data
+    description: Update a new paleo_interp data
+    requestBody:
+      required: true
+      description: Request body to update paleo_interp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_interp'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            base_md: 0.1
+            base_md_ouom: Lorem Ipsum
+            climate_id: Lorem Ipsum
+            description: Lorem Ipsum
+            ecozone_confidence_id: Lorem Ipsum
+            ecozone_id: Lorem Ipsum
+            ecozone_qualifier_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            from_rel_strat_name_set_id: Lorem Ipsum
+            from_rel_strat_unit_id: Lorem Ipsum
+            from_strat_name_set_id: Lorem Ipsum
+            from_strat_unit_id: Lorem Ipsum
+            lithology_type: Lorem Ipsum
+            lith_structure_id: Lorem Ipsum
+            paleo_confidence_id: Lorem Ipsum
+            paleo_qualifier_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tai_color: Lorem Ipsum
+            top_md: 0.1
+            top_md_ouom: Lorem Ipsum
+            to_rel_strat_name_set_id: Lorem Ipsum
+            to_rel_strat_unit_id: Lorem Ipsum
+            to_strat_name_set_id: Lorem Ipsum
+            to_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_interp data is completely updated
+        content:
+          application/json:
+            example:
+              message: The paleo_interp data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new paleo_interp data
+    description: Update a new paleo_interp data
+    requestBody:
+      required: true
+      description: Request body to update paleo_interp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_interp'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            base_md: 0.1
+            base_md_ouom: Lorem Ipsum
+            climate_id: Lorem Ipsum
+            description: Lorem Ipsum
+            ecozone_confidence_id: Lorem Ipsum
+            ecozone_id: Lorem Ipsum
+            ecozone_qualifier_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            from_rel_strat_name_set_id: Lorem Ipsum
+            from_rel_strat_unit_id: Lorem Ipsum
+            from_strat_name_set_id: Lorem Ipsum
+            from_strat_unit_id: Lorem Ipsum
+            lithology_type: Lorem Ipsum
+            lith_structure_id: Lorem Ipsum
+            paleo_confidence_id: Lorem Ipsum
+            paleo_qualifier_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tai_color: Lorem Ipsum
+            top_md: 0.1
+            top_md_ouom: Lorem Ipsum
+            to_rel_strat_name_set_id: Lorem Ipsum
+            to_rel_strat_unit_id: Lorem Ipsum
+            to_strat_name_set_id: Lorem Ipsum
+            to_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in paleo_interp data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in paleo_interp data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete paleo_interp data
+    description: Delete paleo_interp data
+    responses:
+      '200':
+        description: paleo_interp data is deleted
+        content:
+          application/json:
+            example:
+              message: The paleo_interp data was successfully deleted

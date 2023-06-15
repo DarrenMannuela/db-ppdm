@@ -1,0 +1,317 @@
+/rm-physical-item:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_physical_item
+    responses:
+      '200':
+        description: get rm_physical_item data to be returned
+        content:
+          application/json:
+            example:
+            - physical_item_id: Lorem Ipsum
+              active_ind: y
+              bar_code: Lorem Ipsum
+              catalogue_by_name: Lorem Ipsum
+              catalogue_date: 12/12/2023
+              certified_true_copy_ind: y
+              circulation_allowed_ind: y
+              circulation_out_ind: y
+              color_format: Lorem Ipsum
+              create_date: 12/12/2023
+              digital_format: Lorem Ipsum
+              digital_size: 1.0
+              digital_size_uom: Lorem Ipsum
+              dim_height: 0.1
+              dim_height_uom: Lorem Ipsum
+              dim_length: 0.1
+              dim_length_uom: Lorem Ipsum
+              dim_weight: 0.1
+              dim_weight_uom: Lorem Ipsum
+              dim_width: 0.1
+              dim_width_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              group_ind: y
+              image_resolution_uom: Lorem Ipsum
+              image_x_resolution: 0.1
+              image_y_resolution: 0.1
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              label: Lorem Ipsum
+              language: Lorem Ipsum
+              last_condition: Lorem Ipsum
+              location_reference: Lorem Ipsum
+              media_type: Lorem Ipsum
+              original_file_name: Lorem Ipsum
+              original_ind: y
+              output_file_name: Lorem Ipsum
+              page_count: 0.1
+              physical_item_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              qc_by_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              sale_allowed_ind: y
+              source: Lorem Ipsum
+              store_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_physical_item
+    description: Create a new rm_physical_item data
+    requestBody:
+      required: true
+      description: Request body to create rm_physical_item data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_physical_item'
+          example:
+            physical_item_id: Lorem Ipsum
+            active_ind: y
+            bar_code: Lorem Ipsum
+            catalogue_by_name: Lorem Ipsum
+            catalogue_date: 12/12/2023
+            certified_true_copy_ind: y
+            circulation_allowed_ind: y
+            circulation_out_ind: y
+            color_format: Lorem Ipsum
+            create_date: 12/12/2023
+            digital_format: Lorem Ipsum
+            digital_size: 1.0
+            digital_size_uom: Lorem Ipsum
+            dim_height: 0.1
+            dim_height_uom: Lorem Ipsum
+            dim_length: 0.1
+            dim_length_uom: Lorem Ipsum
+            dim_weight: 0.1
+            dim_weight_uom: Lorem Ipsum
+            dim_width: 0.1
+            dim_width_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_ind: y
+            image_resolution_uom: Lorem Ipsum
+            image_x_resolution: 0.1
+            image_y_resolution: 0.1
+            item_category: Lorem Ipsum
+            item_sub_category: Lorem Ipsum
+            label: Lorem Ipsum
+            language: Lorem Ipsum
+            last_condition: Lorem Ipsum
+            location_reference: Lorem Ipsum
+            media_type: Lorem Ipsum
+            original_file_name: Lorem Ipsum
+            original_ind: y
+            output_file_name: Lorem Ipsum
+            page_count: 0.1
+            physical_item_status: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            qc_by_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            sale_allowed_ind: y
+            source: Lorem Ipsum
+            store_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_physical_item data is added
+        content:
+          application/json:
+            example:
+              message: The rm_physical_item data was successfully added
+/rm-physical-item/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_physical_item data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_physical_item data
+    description: Update a new rm_physical_item data
+    requestBody:
+      required: true
+      description: Request body to update rm_physical_item data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_physical_item'
+          example:
+            physical_item_id: Lorem Ipsum
+            active_ind: y
+            bar_code: Lorem Ipsum
+            catalogue_by_name: Lorem Ipsum
+            catalogue_date: 12/12/2023
+            certified_true_copy_ind: y
+            circulation_allowed_ind: y
+            circulation_out_ind: y
+            color_format: Lorem Ipsum
+            create_date: 12/12/2023
+            digital_format: Lorem Ipsum
+            digital_size: 1.0
+            digital_size_uom: Lorem Ipsum
+            dim_height: 0.1
+            dim_height_uom: Lorem Ipsum
+            dim_length: 0.1
+            dim_length_uom: Lorem Ipsum
+            dim_weight: 0.1
+            dim_weight_uom: Lorem Ipsum
+            dim_width: 0.1
+            dim_width_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_ind: y
+            image_resolution_uom: Lorem Ipsum
+            image_x_resolution: 0.1
+            image_y_resolution: 0.1
+            item_category: Lorem Ipsum
+            item_sub_category: Lorem Ipsum
+            label: Lorem Ipsum
+            language: Lorem Ipsum
+            last_condition: Lorem Ipsum
+            location_reference: Lorem Ipsum
+            media_type: Lorem Ipsum
+            original_file_name: Lorem Ipsum
+            original_ind: y
+            output_file_name: Lorem Ipsum
+            page_count: 0.1
+            physical_item_status: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            qc_by_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            sale_allowed_ind: y
+            source: Lorem Ipsum
+            store_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_physical_item data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_physical_item data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_physical_item data
+    description: Update a new rm_physical_item data
+    requestBody:
+      required: true
+      description: Request body to update rm_physical_item data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_physical_item'
+          example:
+            physical_item_id: Lorem Ipsum
+            active_ind: y
+            bar_code: Lorem Ipsum
+            catalogue_by_name: Lorem Ipsum
+            catalogue_date: 12/12/2023
+            certified_true_copy_ind: y
+            circulation_allowed_ind: y
+            circulation_out_ind: y
+            color_format: Lorem Ipsum
+            create_date: 12/12/2023
+            digital_format: Lorem Ipsum
+            digital_size: 1.0
+            digital_size_uom: Lorem Ipsum
+            dim_height: 0.1
+            dim_height_uom: Lorem Ipsum
+            dim_length: 0.1
+            dim_length_uom: Lorem Ipsum
+            dim_weight: 0.1
+            dim_weight_uom: Lorem Ipsum
+            dim_width: 0.1
+            dim_width_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_ind: y
+            image_resolution_uom: Lorem Ipsum
+            image_x_resolution: 0.1
+            image_y_resolution: 0.1
+            item_category: Lorem Ipsum
+            item_sub_category: Lorem Ipsum
+            label: Lorem Ipsum
+            language: Lorem Ipsum
+            last_condition: Lorem Ipsum
+            location_reference: Lorem Ipsum
+            media_type: Lorem Ipsum
+            original_file_name: Lorem Ipsum
+            original_ind: y
+            output_file_name: Lorem Ipsum
+            page_count: 0.1
+            physical_item_status: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            qc_by_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            sale_allowed_ind: y
+            source: Lorem Ipsum
+            store_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_physical_item data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_physical_item data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_physical_item data
+    description: Delete rm_physical_item data
+    responses:
+      '200':
+        description: rm_physical_item data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_physical_item data was successfully deleted

@@ -1,0 +1,48 @@
+package dto
+
+type Rm_information_item struct {
+	Info_item_subtype     string   `json:"info_item_subtype" default:"source"`
+	Information_item_id   string   `json:"information_item_id" default:"source"`
+	Abstract              *string  `json:"abstract" default:""`
+	Accepted_date         *string  `json:"accepted_date" default:""`
+	Access_condition      *string  `json:"access_condition" default:""`
+	Active_ind            *string  `json:"active_ind" default:""`
+	Available_date        *string  `json:"available_date" default:""`
+	Coord_acquisition_id  *string  `json:"coord_acquisition_id" default:""`
+	Copyright_date        *string  `json:"copyright_date" default:""`
+	Effective_date        *string  `json:"effective_date" default:""`
+	Expiry_date           *string  `json:"expiry_date" default:""`
+	Geog_coord_system_id  *string  `json:"geog_coord_system_id" default:""`
+	Group_ind             *string  `json:"group_ind" default:""`
+	Issue_date            *string  `json:"issue_date" default:""`
+	Item_category         *string  `json:"item_category" default:""`
+	Item_sub_category     *string  `json:"item_sub_category" default:""`
+	Local_coord_system_id *string  `json:"local_coord_system_id" default:""`
+	Map_coord_system_id   *string  `json:"map_coord_system_id" default:""`
+	Max_latitude          *float64 `json:"max_latitude" default:""`
+	Max_longitude         *float64 `json:"max_longitude" default:""`
+	Min_latitude          *float64 `json:"min_latitude" default:""`
+	Min_longitude         *float64 `json:"min_longitude" default:""`
+	Modified_date         *string  `json:"modified_date" default:""`
+	Origin_date           *string  `json:"origin_date" default:""`
+	Ppdm_guid             *string  `json:"ppdm_guid" default:""`
+	Publish_date          *string  `json:"publish_date" default:""`
+	Purpose               *string  `json:"purpose" default:""`
+	Reference_num         *string  `json:"reference_num" default:""`
+	Remark                *string  `json:"remark" default:""`
+	Security_desc         *string  `json:"security_desc" default:""`
+	Source                *string  `json:"source" default:""`
+	Source_document_id    *string  `json:"source_document_id" default:""`
+	Submit_date           *string  `json:"submit_date" default:""`
+	Time_period_desc      *string  `json:"time_period_desc" default:""`
+	Title                 *string  `json:"title" default:""`
+	Use_condition         *string  `json:"use_condition" default:""`
+	Version_num           *string  `json:"version_num" default:""`
+	Row_changed_by        *string  `json:"row_changed_by" default:""`
+	Row_changed_date      *string  `json:"row_changed_date" default:""`
+	Row_created_by        *string  `json:"row_created_by" default:""`
+	Row_created_date      *string  `json:"row_created_date" default:""`
+	Row_effective_date    *string  `json:"row_effective_date" default:""`
+	Row_expiry_date       *string  `json:"row_expiry_date" default:""`
+	Row_quality           *string  `json:"row_quality" default:""`
+}

@@ -1,0 +1,253 @@
+/ppdm-audit-history:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_audit_history
+    responses:
+      '200':
+        description: get ppdm_audit_history data to be returned
+        content:
+          application/json:
+            example:
+            - system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              column_name: Lorem Ipsum
+              audit_row_guid: Lorem Ipsum
+              active_ind: y
+              audit_authorized_by_ba_id: Lorem Ipsum
+              audit_created_by_ba_id: Lorem Ipsum
+              audit_datetime: 12/12/2023
+              audit_desc: Lorem Ipsum
+              audit_reason: Lorem Ipsum
+              audit_source: Lorem Ipsum
+              audit_type: Lorem Ipsum
+              audit_verified_by_ba_id: Lorem Ipsum
+              data_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              new_date_value: 12/12/2023
+              new_numeric_value: 1.0
+              new_numeric_value_ouom: Lorem Ipsum
+              new_numeric_value_uom: Lorem Ipsum
+              new_text_value: Lorem Ipsum
+              null_description: Lorem Ipsum
+              original_date_value: 12/12/2023
+              original_numeric_value: 1.0
+              original_numeric_value_ouom: Lorem Ipsum
+              original_numeric_value_uom: Lorem Ipsum
+              original_text_value: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_audit_history
+    description: Create a new ppdm_audit_history data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_audit_history data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_audit_history'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            column_name: Lorem Ipsum
+            audit_row_guid: Lorem Ipsum
+            active_ind: y
+            audit_authorized_by_ba_id: Lorem Ipsum
+            audit_created_by_ba_id: Lorem Ipsum
+            audit_datetime: 12/12/2023
+            audit_desc: Lorem Ipsum
+            audit_reason: Lorem Ipsum
+            audit_source: Lorem Ipsum
+            audit_type: Lorem Ipsum
+            audit_verified_by_ba_id: Lorem Ipsum
+            data_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            new_date_value: 12/12/2023
+            new_numeric_value: 1.0
+            new_numeric_value_ouom: Lorem Ipsum
+            new_numeric_value_uom: Lorem Ipsum
+            new_text_value: Lorem Ipsum
+            null_description: Lorem Ipsum
+            original_date_value: 12/12/2023
+            original_numeric_value: 1.0
+            original_numeric_value_ouom: Lorem Ipsum
+            original_numeric_value_uom: Lorem Ipsum
+            original_text_value: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_audit_history data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_audit_history data was successfully added
+/ppdm-audit-history/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_audit_history data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_audit_history data
+    description: Update a new ppdm_audit_history data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_audit_history data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_audit_history'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            column_name: Lorem Ipsum
+            audit_row_guid: Lorem Ipsum
+            active_ind: y
+            audit_authorized_by_ba_id: Lorem Ipsum
+            audit_created_by_ba_id: Lorem Ipsum
+            audit_datetime: 12/12/2023
+            audit_desc: Lorem Ipsum
+            audit_reason: Lorem Ipsum
+            audit_source: Lorem Ipsum
+            audit_type: Lorem Ipsum
+            audit_verified_by_ba_id: Lorem Ipsum
+            data_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            new_date_value: 12/12/2023
+            new_numeric_value: 1.0
+            new_numeric_value_ouom: Lorem Ipsum
+            new_numeric_value_uom: Lorem Ipsum
+            new_text_value: Lorem Ipsum
+            null_description: Lorem Ipsum
+            original_date_value: 12/12/2023
+            original_numeric_value: 1.0
+            original_numeric_value_ouom: Lorem Ipsum
+            original_numeric_value_uom: Lorem Ipsum
+            original_text_value: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_audit_history data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_audit_history data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_audit_history data
+    description: Update a new ppdm_audit_history data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_audit_history data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_audit_history'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            column_name: Lorem Ipsum
+            audit_row_guid: Lorem Ipsum
+            active_ind: y
+            audit_authorized_by_ba_id: Lorem Ipsum
+            audit_created_by_ba_id: Lorem Ipsum
+            audit_datetime: 12/12/2023
+            audit_desc: Lorem Ipsum
+            audit_reason: Lorem Ipsum
+            audit_source: Lorem Ipsum
+            audit_type: Lorem Ipsum
+            audit_verified_by_ba_id: Lorem Ipsum
+            data_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            new_date_value: 12/12/2023
+            new_numeric_value: 1.0
+            new_numeric_value_ouom: Lorem Ipsum
+            new_numeric_value_uom: Lorem Ipsum
+            new_text_value: Lorem Ipsum
+            null_description: Lorem Ipsum
+            original_date_value: 12/12/2023
+            original_numeric_value: 1.0
+            original_numeric_value_ouom: Lorem Ipsum
+            original_numeric_value_uom: Lorem Ipsum
+            original_text_value: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_audit_history data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_audit_history data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_audit_history data
+    description: Delete ppdm_audit_history data
+    responses:
+      '200':
+        description: ppdm_audit_history data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_audit_history data was successfully deleted

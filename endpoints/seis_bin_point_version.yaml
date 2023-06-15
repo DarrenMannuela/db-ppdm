@@ -1,0 +1,277 @@
+/seis-bin-point-version:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_bin_point_version
+    responses:
+      '200':
+        description: get seis_bin_point_version data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              bin_grid_id: Lorem Ipsum
+              bin_grid_source: Lorem Ipsum
+              acquisition_id: Lorem Ipsum
+              active_ind: y
+              easting: 0.1
+              easting_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              elev: 0.1
+              elev_ouom: Lorem Ipsum
+              ew_direction: Lorem Ipsum
+              ew_distance: 0.1
+              ew_start_line: Lorem Ipsum
+              expiry_date: 12/12/2023
+              geog_coord_system_id: Lorem Ipsum
+              local_coord_system_id: Lorem Ipsum
+              map_coord_system_id: Lorem Ipsum
+              northing: 0.1
+              northing_ouom: Lorem Ipsum
+              north_type: Lorem Ipsum
+              ns_direction: Lorem Ipsum
+              ns_distance: 0.1
+              ns_start_line: Lorem Ipsum
+              polar_azimuth: 0.1
+              polar_offset: 0.1
+              polar_offset_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              reference_loc: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_point_lat: 0.1
+              seis_point_long: 0.1
+              uwi: Lorem Ipsum
+              version_type: Lorem Ipsum
+              x_coordinate: 0.1
+              y_coordinate: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_bin_point_version
+    description: Create a new seis_bin_point_version data
+    requestBody:
+      required: true
+      description: Request body to create seis_bin_point_version data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_point_version'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            acquisition_id: Lorem Ipsum
+            active_ind: y
+            easting: 0.1
+            easting_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev: 0.1
+            elev_ouom: Lorem Ipsum
+            ew_direction: Lorem Ipsum
+            ew_distance: 0.1
+            ew_start_line: Lorem Ipsum
+            expiry_date: 12/12/2023
+            geog_coord_system_id: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            map_coord_system_id: Lorem Ipsum
+            northing: 0.1
+            northing_ouom: Lorem Ipsum
+            north_type: Lorem Ipsum
+            ns_direction: Lorem Ipsum
+            ns_distance: 0.1
+            ns_start_line: Lorem Ipsum
+            polar_azimuth: 0.1
+            polar_offset: 0.1
+            polar_offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            reference_loc: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_point_lat: 0.1
+            seis_point_long: 0.1
+            uwi: Lorem Ipsum
+            version_type: Lorem Ipsum
+            x_coordinate: 0.1
+            y_coordinate: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_bin_point_version data is added
+        content:
+          application/json:
+            example:
+              message: The seis_bin_point_version data was successfully added
+/seis-bin-point-version/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_bin_point_version data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_bin_point_version data
+    description: Update a new seis_bin_point_version data
+    requestBody:
+      required: true
+      description: Request body to update seis_bin_point_version data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_point_version'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            acquisition_id: Lorem Ipsum
+            active_ind: y
+            easting: 0.1
+            easting_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev: 0.1
+            elev_ouom: Lorem Ipsum
+            ew_direction: Lorem Ipsum
+            ew_distance: 0.1
+            ew_start_line: Lorem Ipsum
+            expiry_date: 12/12/2023
+            geog_coord_system_id: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            map_coord_system_id: Lorem Ipsum
+            northing: 0.1
+            northing_ouom: Lorem Ipsum
+            north_type: Lorem Ipsum
+            ns_direction: Lorem Ipsum
+            ns_distance: 0.1
+            ns_start_line: Lorem Ipsum
+            polar_azimuth: 0.1
+            polar_offset: 0.1
+            polar_offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            reference_loc: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_point_lat: 0.1
+            seis_point_long: 0.1
+            uwi: Lorem Ipsum
+            version_type: Lorem Ipsum
+            x_coordinate: 0.1
+            y_coordinate: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_bin_point_version data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_bin_point_version data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_bin_point_version data
+    description: Update a new seis_bin_point_version data
+    requestBody:
+      required: true
+      description: Request body to update seis_bin_point_version data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_point_version'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            acquisition_id: Lorem Ipsum
+            active_ind: y
+            easting: 0.1
+            easting_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev: 0.1
+            elev_ouom: Lorem Ipsum
+            ew_direction: Lorem Ipsum
+            ew_distance: 0.1
+            ew_start_line: Lorem Ipsum
+            expiry_date: 12/12/2023
+            geog_coord_system_id: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            map_coord_system_id: Lorem Ipsum
+            northing: 0.1
+            northing_ouom: Lorem Ipsum
+            north_type: Lorem Ipsum
+            ns_direction: Lorem Ipsum
+            ns_distance: 0.1
+            ns_start_line: Lorem Ipsum
+            polar_azimuth: 0.1
+            polar_offset: 0.1
+            polar_offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            reference_loc: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_point_lat: 0.1
+            seis_point_long: 0.1
+            uwi: Lorem Ipsum
+            version_type: Lorem Ipsum
+            x_coordinate: 0.1
+            y_coordinate: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_bin_point_version data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_bin_point_version data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_bin_point_version data
+    description: Delete seis_bin_point_version data
+    responses:
+      '200':
+        description: seis_bin_point_version data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_bin_point_version data was successfully deleted

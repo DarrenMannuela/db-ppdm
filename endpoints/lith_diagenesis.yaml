@@ -1,0 +1,173 @@
+/lith-diagenesis:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_diagenesis
+    responses:
+      '200':
+        description: get lith_diagenesis data to be returned
+        content:
+          application/json:
+            example:
+            - lithology_log_id: Lorem Ipsum
+              lith_log_source: Lorem Ipsum
+              rock_type: Lorem Ipsum
+              diagenesis_type: Lorem Ipsum
+              active_ind: y
+              diagenesis_percent: 0.1
+              diagenesis_rel_abundance: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_diagenesis
+    description: Create a new lith_diagenesis data
+    requestBody:
+      required: true
+      description: Request body to create lith_diagenesis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_diagenesis'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            diagenesis_type: Lorem Ipsum
+            active_ind: y
+            diagenesis_percent: 0.1
+            diagenesis_rel_abundance: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_diagenesis data is added
+        content:
+          application/json:
+            example:
+              message: The lith_diagenesis data was successfully added
+/lith-diagenesis/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_diagenesis data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_diagenesis data
+    description: Update a new lith_diagenesis data
+    requestBody:
+      required: true
+      description: Request body to update lith_diagenesis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_diagenesis'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            diagenesis_type: Lorem Ipsum
+            active_ind: y
+            diagenesis_percent: 0.1
+            diagenesis_rel_abundance: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_diagenesis data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_diagenesis data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_diagenesis data
+    description: Update a new lith_diagenesis data
+    requestBody:
+      required: true
+      description: Request body to update lith_diagenesis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_diagenesis'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            diagenesis_type: Lorem Ipsum
+            active_ind: y
+            diagenesis_percent: 0.1
+            diagenesis_rel_abundance: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_diagenesis data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_diagenesis data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_diagenesis data
+    description: Delete lith_diagenesis data
+    responses:
+      '200':
+        description: lith_diagenesis data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_diagenesis data was successfully deleted

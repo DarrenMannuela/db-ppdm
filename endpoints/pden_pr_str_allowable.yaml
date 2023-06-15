@@ -1,0 +1,205 @@
+/pden-pr-str-allowable:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get pden_pr_str_allowable
+    responses:
+      '200':
+        description: get pden_pr_str_allowable data to be returned
+        content:
+          application/json:
+            example:
+            - pden_subtype: Lorem Ipsum
+              pden_id: Lorem Ipsum
+              pden_source: Lorem Ipsum
+              uwi: Lorem Ipsum
+              string_source: Lorem Ipsum
+              string_id: Lorem Ipsum
+              active_ind: y
+              allowable: 0.1
+              allowable_date: 12/12/2023
+              allowable_date_desc: Lorem Ipsum
+              allowable_ouom: Lorem Ipsum
+              allowable_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              period_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              product_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new pden_pr_str_allowable
+    description: Create a new pden_pr_str_allowable data
+    requestBody:
+      required: true
+      description: Request body to create pden_pr_str_allowable data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_pr_str_allowable'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            allowable: 0.1
+            allowable_date: 12/12/2023
+            allowable_date_desc: Lorem Ipsum
+            allowable_ouom: Lorem Ipsum
+            allowable_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_pr_str_allowable data is added
+        content:
+          application/json:
+            example:
+              message: The pden_pr_str_allowable data was successfully added
+/pden-pr-str-allowable/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of pden_pr_str_allowable data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new pden_pr_str_allowable data
+    description: Update a new pden_pr_str_allowable data
+    requestBody:
+      required: true
+      description: Request body to update pden_pr_str_allowable data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_pr_str_allowable'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            allowable: 0.1
+            allowable_date: 12/12/2023
+            allowable_date_desc: Lorem Ipsum
+            allowable_ouom: Lorem Ipsum
+            allowable_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_pr_str_allowable data is completely updated
+        content:
+          application/json:
+            example:
+              message: The pden_pr_str_allowable data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new pden_pr_str_allowable data
+    description: Update a new pden_pr_str_allowable data
+    requestBody:
+      required: true
+      description: Request body to update pden_pr_str_allowable data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_pr_str_allowable'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            allowable: 0.1
+            allowable_date: 12/12/2023
+            allowable_date_desc: Lorem Ipsum
+            allowable_ouom: Lorem Ipsum
+            allowable_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in pden_pr_str_allowable data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in pden_pr_str_allowable data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete pden_pr_str_allowable data
+    description: Delete pden_pr_str_allowable data
+    responses:
+      '200':
+        description: pden_pr_str_allowable data is deleted
+        content:
+          application/json:
+            example:
+              message: The pden_pr_str_allowable data was successfully deleted

@@ -1,0 +1,41 @@
+package dto
+
+type Seis_recvr_setup struct {
+	Acqtn_design_id          string   `json:"acqtn_design_id" default:"source"`
+	Rcvr_setup_id            string   `json:"rcvr_setup_id" default:"source"`
+	Active_ind               *string  `json:"active_ind" default:""`
+	Avg_feathering_angle     *float64 `json:"avg_feathering_angle" default:""`
+	Avg_streamer_depth       *float64 `json:"avg_streamer_depth" default:""`
+	Avg_streamer_depth_ouom  *string  `json:"avg_streamer_depth_ouom" default:""`
+	Base_freq                *float64 `json:"base_freq" default:""`
+	Depth_controller         *string  `json:"depth_controller" default:""`
+	Effective_date           *string  `json:"effective_date" default:""`
+	Expiry_date              *string  `json:"expiry_date" default:""`
+	Fixed_ind                *string  `json:"fixed_ind" default:""`
+	Group_spacing            *float64 `json:"group_spacing" default:""`
+	Group_spacing_ouom       *string  `json:"group_spacing_ouom" default:""`
+	Inline_offset            *float64 `json:"inline_offset" default:""`
+	Inline_offset_direction  *string  `json:"inline_offset_direction" default:""`
+	Offline_offset           *float64 `json:"offline_offset" default:""`
+	Offline_offset_direction *string  `json:"offline_offset_direction" default:""`
+	Offset_ouom              *string  `json:"offset_ouom" default:""`
+	Ppdm_guid                *string  `json:"ppdm_guid" default:""`
+	Rcvr_array_type          *string  `json:"rcvr_array_type" default:""`
+	Rcvr_make                *string  `json:"rcvr_make" default:""`
+	Rcvr_phone_count         *int     `json:"rcvr_phone_count" default:""`
+	Rcvr_spacing             *float64 `json:"rcvr_spacing" default:""`
+	Rcvr_spacing_ouom        *string  `json:"rcvr_spacing_ouom" default:""`
+	Rcvr_type                *string  `json:"rcvr_type" default:""`
+	Remark                   *string  `json:"remark" default:""`
+	Source                   *string  `json:"source" default:""`
+	Spread_description       *string  `json:"spread_description" default:""`
+	Spread_description_ouom  *string  `json:"spread_description_ouom" default:""`
+	Streamer_count           *int     `json:"streamer_count" default:""`
+	Row_changed_by           *string  `json:"row_changed_by" default:""`
+	Row_changed_date         *string  `json:"row_changed_date" default:""`
+	Row_created_by           *string  `json:"row_created_by" default:""`
+	Row_created_date         *string  `json:"row_created_date" default:""`
+	Row_effective_date       *string  `json:"row_effective_date" default:""`
+	Row_expiry_date          *string  `json:"row_expiry_date" default:""`
+	Row_quality              *string  `json:"row_quality" default:""`
+}

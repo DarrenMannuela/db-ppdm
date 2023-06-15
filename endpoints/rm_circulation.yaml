@@ -1,0 +1,225 @@
+/rm-circulation:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_circulation
+    responses:
+      '200':
+        description: get rm_circulation data to be returned
+        content:
+          application/json:
+            example:
+            - circ_id: Lorem Ipsum
+              active_ind: y
+              authorized_by: Lorem Ipsum
+              checked_out_by: Lorem Ipsum
+              circ_due_date: 12/12/2023
+              circ_in_date: 12/12/2023
+              circ_out_date: 12/12/2023
+              condition_in: Lorem Ipsum
+              condition_out: Lorem Ipsum
+              data_circ_status: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              information_item_id: Lorem Ipsum
+              info_item_subtype: Lorem Ipsum
+              physical_item_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              project_id: Lorem Ipsum
+              project_step_id: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              reserved_by: Lorem Ipsum
+              reserved_ind: y
+              source: Lorem Ipsum
+              status_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_circulation
+    description: Create a new rm_circulation data
+    requestBody:
+      required: true
+      description: Request body to create rm_circulation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_circulation'
+          example:
+            circ_id: Lorem Ipsum
+            active_ind: y
+            authorized_by: Lorem Ipsum
+            checked_out_by: Lorem Ipsum
+            circ_due_date: 12/12/2023
+            circ_in_date: 12/12/2023
+            circ_out_date: 12/12/2023
+            condition_in: Lorem Ipsum
+            condition_out: Lorem Ipsum
+            data_circ_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            project_step_id: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            reserved_by: Lorem Ipsum
+            reserved_ind: y
+            source: Lorem Ipsum
+            status_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_circulation data is added
+        content:
+          application/json:
+            example:
+              message: The rm_circulation data was successfully added
+/rm-circulation/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_circulation data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_circulation data
+    description: Update a new rm_circulation data
+    requestBody:
+      required: true
+      description: Request body to update rm_circulation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_circulation'
+          example:
+            circ_id: Lorem Ipsum
+            active_ind: y
+            authorized_by: Lorem Ipsum
+            checked_out_by: Lorem Ipsum
+            circ_due_date: 12/12/2023
+            circ_in_date: 12/12/2023
+            circ_out_date: 12/12/2023
+            condition_in: Lorem Ipsum
+            condition_out: Lorem Ipsum
+            data_circ_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            project_step_id: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            reserved_by: Lorem Ipsum
+            reserved_ind: y
+            source: Lorem Ipsum
+            status_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_circulation data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_circulation data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_circulation data
+    description: Update a new rm_circulation data
+    requestBody:
+      required: true
+      description: Request body to update rm_circulation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_circulation'
+          example:
+            circ_id: Lorem Ipsum
+            active_ind: y
+            authorized_by: Lorem Ipsum
+            checked_out_by: Lorem Ipsum
+            circ_due_date: 12/12/2023
+            circ_in_date: 12/12/2023
+            circ_out_date: 12/12/2023
+            condition_in: Lorem Ipsum
+            condition_out: Lorem Ipsum
+            data_circ_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            project_step_id: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            reserved_by: Lorem Ipsum
+            reserved_ind: y
+            source: Lorem Ipsum
+            status_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_circulation data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_circulation data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_circulation data
+    description: Delete rm_circulation data
+    responses:
+      '200':
+        description: rm_circulation data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_circulation data was successfully deleted

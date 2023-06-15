@@ -1,0 +1,237 @@
+/ppdm-map-rule:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_map_rule
+    responses:
+      '200':
+        description: get ppdm_map_rule data to be returned
+        content:
+          application/json:
+            example:
+            - map_id: Lorem Ipsum
+              active_ind: y
+              create_method: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              dep_column_name: Lorem Ipsum
+              dep_schema_entity_id: Lorem Ipsum
+              dep_system_id: Lorem Ipsum
+              dep_table_name: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              map_rule_type: Lorem Ipsum
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              procedure_id: Lorem Ipsum
+              procedure_system_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              rule_desc: Lorem Ipsum
+              rule_owner_ba_id: Lorem Ipsum
+              rule_version_num: Lorem Ipsum
+              source: Lorem Ipsum
+              sw_application_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_map_rule
+    description: Create a new ppdm_map_rule data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_map_rule data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_rule'
+          example:
+            map_id: Lorem Ipsum
+            active_ind: y
+            create_method: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            dep_column_name: Lorem Ipsum
+            dep_schema_entity_id: Lorem Ipsum
+            dep_system_id: Lorem Ipsum
+            dep_table_name: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            map_rule_type: Lorem Ipsum
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            procedure_id: Lorem Ipsum
+            procedure_system_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rule_desc: Lorem Ipsum
+            rule_owner_ba_id: Lorem Ipsum
+            rule_version_num: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_rule data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_rule data was successfully added
+/ppdm-map-rule/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_map_rule data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_map_rule data
+    description: Update a new ppdm_map_rule data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_rule data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_rule'
+          example:
+            map_id: Lorem Ipsum
+            active_ind: y
+            create_method: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            dep_column_name: Lorem Ipsum
+            dep_schema_entity_id: Lorem Ipsum
+            dep_system_id: Lorem Ipsum
+            dep_table_name: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            map_rule_type: Lorem Ipsum
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            procedure_id: Lorem Ipsum
+            procedure_system_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rule_desc: Lorem Ipsum
+            rule_owner_ba_id: Lorem Ipsum
+            rule_version_num: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_rule data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_rule data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_map_rule data
+    description: Update a new ppdm_map_rule data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_rule data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_rule'
+          example:
+            map_id: Lorem Ipsum
+            active_ind: y
+            create_method: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            dep_column_name: Lorem Ipsum
+            dep_schema_entity_id: Lorem Ipsum
+            dep_system_id: Lorem Ipsum
+            dep_table_name: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            map_rule_type: Lorem Ipsum
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            procedure_id: Lorem Ipsum
+            procedure_system_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rule_desc: Lorem Ipsum
+            rule_owner_ba_id: Lorem Ipsum
+            rule_version_num: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_map_rule data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_map_rule data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_map_rule data
+    description: Delete ppdm_map_rule data
+    responses:
+      '200':
+        description: ppdm_map_rule data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_rule data was successfully deleted

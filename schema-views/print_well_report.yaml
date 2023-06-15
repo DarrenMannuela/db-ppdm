@@ -1,0 +1,4959 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Print_Well_Report
+  version: 1.0.0
+  title: Print_Well_Report
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Print_Well_Report
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/print_well_report/1.0.0
+tags:
+- name: Query
+  description: All endpoints related to get Print_Well_Report
+- name: Create
+  description: All endpoints related to creating Print_Well_Report
+- name: Put
+  description: All endpoints related to updating Print_Well_Report
+- name: Patch
+  description: All endpoints related to patching Print_Well_Report
+- name: Delete
+  description: All endpoints related to delete Print_Well_Report
+paths:
+  /business-associate:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get business_associate
+      responses:
+        '200':
+          description: get business_associate data to be returned
+          content:
+            application/json:
+              example:
+              - business_associate_id: Lorem Ipsum
+                active_ind: y
+                ba_abbreviation: Lorem Ipsum
+                ba_category: Lorem Ipsum
+                ba_code: Lorem Ipsum
+                ba_long_name: Lorem Ipsum
+                ba_short_name: Lorem Ipsum
+                ba_type: Lorem Ipsum
+                credit_check_date: 12/12/2023
+                credit_check_ind: y
+                credit_check_source: Lorem Ipsum
+                credit_rating: Lorem Ipsum
+                credit_rating_source: Lorem Ipsum
+                current_status: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                first_name: Lorem Ipsum
+                last_name: Lorem Ipsum
+                middle_initial: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                service_period: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new business_associate
+      description: Create a new business_associate data
+      requestBody:
+        required: true
+        description: Request body to create business_associate data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/business_associate'
+            example:
+              business_associate_id: Lorem Ipsum
+              active_ind: y
+              ba_abbreviation: Lorem Ipsum
+              ba_category: Lorem Ipsum
+              ba_code: Lorem Ipsum
+              ba_long_name: Lorem Ipsum
+              ba_short_name: Lorem Ipsum
+              ba_type: Lorem Ipsum
+              credit_check_date: 12/12/2023
+              credit_check_ind: y
+              credit_check_source: Lorem Ipsum
+              credit_rating: Lorem Ipsum
+              credit_rating_source: Lorem Ipsum
+              current_status: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              first_name: Lorem Ipsum
+              last_name: Lorem Ipsum
+              middle_initial: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              service_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: business_associate data is added
+          content:
+            application/json:
+              example:
+                message: The business_associate data was successfully added
+  /business-associate/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of business_associate data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new business_associate data
+      description: Update a new business_associate data
+      requestBody:
+        required: true
+        description: Request body to update business_associate data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/business_associate'
+            example:
+              business_associate_id: Lorem Ipsum
+              active_ind: y
+              ba_abbreviation: Lorem Ipsum
+              ba_category: Lorem Ipsum
+              ba_code: Lorem Ipsum
+              ba_long_name: Lorem Ipsum
+              ba_short_name: Lorem Ipsum
+              ba_type: Lorem Ipsum
+              credit_check_date: 12/12/2023
+              credit_check_ind: y
+              credit_check_source: Lorem Ipsum
+              credit_rating: Lorem Ipsum
+              credit_rating_source: Lorem Ipsum
+              current_status: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              first_name: Lorem Ipsum
+              last_name: Lorem Ipsum
+              middle_initial: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              service_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: business_associate data is completely updated
+          content:
+            application/json:
+              example:
+                message: The business_associate data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new business_associate data
+      description: Update a new business_associate data
+      requestBody:
+        required: true
+        description: Request body to update business_associate data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/business_associate'
+            example:
+              business_associate_id: Lorem Ipsum
+              active_ind: y
+              ba_abbreviation: Lorem Ipsum
+              ba_category: Lorem Ipsum
+              ba_code: Lorem Ipsum
+              ba_long_name: Lorem Ipsum
+              ba_short_name: Lorem Ipsum
+              ba_type: Lorem Ipsum
+              credit_check_date: 12/12/2023
+              credit_check_ind: y
+              credit_check_source: Lorem Ipsum
+              credit_rating: Lorem Ipsum
+              credit_rating_source: Lorem Ipsum
+              current_status: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              first_name: Lorem Ipsum
+              last_name: Lorem Ipsum
+              middle_initial: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              service_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in business_associate data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in business_associate data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete business_associate data
+      description: Delete business_associate data
+      responses:
+        '200':
+          description: business_associate data is deleted
+          content:
+            application/json:
+              example:
+                message: The business_associate data was successfully deleted
+  /area:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get area
+      responses:
+        '200':
+          description: get area data to be returned
+          content:
+            application/json:
+              example:
+              - area_id: Lorem Ipsum
+                area_type: Lorem Ipsum
+                active_ind: y
+                area_max_latitude: 0.1
+                area_max_longitude: 0.1
+                area_min_latitude: 0.1
+                area_min_longitude: 0.1
+                coord_acquisition_id: Lorem Ipsum
+                coord_system_id: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                local_coord_system_id: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                preferred_name: Lorem Ipsum
+                remark: Lorem Ipsum
+                source: Lorem Ipsum
+                source_document_id: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new area
+      description: Create a new area data
+      requestBody:
+        required: true
+        description: Request body to create area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/area'
+            example:
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              active_ind: y
+              area_max_latitude: 0.1
+              area_max_longitude: 0.1
+              area_min_latitude: 0.1
+              area_min_longitude: 0.1
+              coord_acquisition_id: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              local_coord_system_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: area data is added
+          content:
+            application/json:
+              example:
+                message: The area data was successfully added
+  /area/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of area data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new area data
+      description: Update a new area data
+      requestBody:
+        required: true
+        description: Request body to update area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/area'
+            example:
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              active_ind: y
+              area_max_latitude: 0.1
+              area_max_longitude: 0.1
+              area_min_latitude: 0.1
+              area_min_longitude: 0.1
+              coord_acquisition_id: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              local_coord_system_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: area data is completely updated
+          content:
+            application/json:
+              example:
+                message: The area data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new area data
+      description: Update a new area data
+      requestBody:
+        required: true
+        description: Request body to update area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/area'
+            example:
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              active_ind: y
+              area_max_latitude: 0.1
+              area_max_longitude: 0.1
+              area_min_latitude: 0.1
+              area_min_longitude: 0.1
+              coord_acquisition_id: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              local_coord_system_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in area data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in area data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete area data
+      description: Delete area data
+      responses:
+        '200':
+          description: area data is deleted
+          content:
+            application/json:
+              example:
+                message: The area data was successfully deleted
+  /field:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get field
+      responses:
+        '200':
+          description: get field data to be returned
+          content:
+            application/json:
+              example:
+              - field_id: Lorem Ipsum
+                active_ind: y
+                area_id: Lorem Ipsum
+                area_type: Lorem Ipsum
+                discovery_date: 12/12/2023
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                field_abbreviation: Lorem Ipsum
+                field_name: Lorem Ipsum
+                field_type: Lorem Ipsum
+                group_field_id: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new field
+      description: Create a new field data
+      requestBody:
+        required: true
+        description: Request body to create field data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/field'
+            example:
+              field_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              discovery_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_abbreviation: Lorem Ipsum
+              field_name: Lorem Ipsum
+              field_type: Lorem Ipsum
+              group_field_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: field data is added
+          content:
+            application/json:
+              example:
+                message: The field data was successfully added
+  /field/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of field data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new field data
+      description: Update a new field data
+      requestBody:
+        required: true
+        description: Request body to update field data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/field'
+            example:
+              field_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              discovery_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_abbreviation: Lorem Ipsum
+              field_name: Lorem Ipsum
+              field_type: Lorem Ipsum
+              group_field_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: field data is completely updated
+          content:
+            application/json:
+              example:
+                message: The field data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new field data
+      description: Update a new field data
+      requestBody:
+        required: true
+        description: Request body to update field data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/field'
+            example:
+              field_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              discovery_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_abbreviation: Lorem Ipsum
+              field_name: Lorem Ipsum
+              field_type: Lorem Ipsum
+              group_field_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in field data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in field data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete field data
+      description: Delete field data
+      responses:
+        '200':
+          description: field data is deleted
+          content:
+            application/json:
+              example:
+                message: The field data was successfully deleted
+  /well:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get well
+      responses:
+        '200':
+          description: get well data to be returned
+          content:
+            application/json:
+              example:
+              - uwi: Lorem Ipsum
+                abandonment_date: 12/12/2023
+                active_ind: y
+                area_id: Lorem Ipsum
+                area_type: Lorem Ipsum
+                assigned_field: Lorem Ipsum
+                base_depth: 0.1
+                base_depth_ouom: Lorem Ipsum
+                base_node_id: Lorem Ipsum
+                base_strat_name_set_id: Lorem Ipsum
+                base_strat_unit_id: Lorem Ipsum
+                bottom_hole_latitude: 0.1
+                bottom_hole_longitude: 0.1
+                casing_flange_elev: 0.1
+                casing_flange_elev_ouom: Lorem Ipsum
+                completion_date: 12/12/2023
+                confidential_date: 12/12/2023
+                confidential_depth: 0.1
+                confidential_depth_ouom: Lorem Ipsum
+                confidential_type: Lorem Ipsum
+                confid_strat_name_set_id: Lorem Ipsum
+                confid_strat_unit_id: Lorem Ipsum
+                current_class: Lorem Ipsum
+                current_status: Lorem Ipsum
+                current_status_date: 12/12/2023
+                deepest_depth: 0.1
+                deepest_depth_ouom: Lorem Ipsum
+                depth_datum: Lorem Ipsum
+                depth_datum_elev: 0.1
+                depth_datum_elev_ouom: Lorem Ipsum
+                derrick_floor_elev: 0.1
+                derrick_floor_elev_ouom: Lorem Ipsum
+                difference_lat_msl: 0.1
+                discovery_ind: y
+                drill_td: 0.1
+                drill_td_ouom: Lorem Ipsum
+                effective_date: 12/12/2023
+                elev_ref_datum: Lorem Ipsum
+                environment_type: Lorem Ipsum
+                expiry_date: 12/12/2023
+                faulted_ind: y
+                final_drill_date: 12/12/2023
+                final_td: 0.1
+                final_td_ouom: Lorem Ipsum
+                ground_elev: 0.1
+                ground_elev_ouom: Lorem Ipsum
+                ground_elev_type: Lorem Ipsum
+                initial_class: Lorem Ipsum
+                kb_elev: 0.1
+                kb_elev_ouom: Lorem Ipsum
+                lease_name: Lorem Ipsum
+                lease_num: Lorem Ipsum
+                legal_survey_type: Lorem Ipsum
+                location_type: Lorem Ipsum
+                log_td: 0.1
+                log_td_ouom: Lorem Ipsum
+                max_tvd: 0.1
+                max_tvd_ouom: Lorem Ipsum
+                net_pay: 0.1
+                net_pay_ouom: Lorem Ipsum
+                oldest_strat_age: Lorem Ipsum
+                oldest_strat_name_set_age: Lorem Ipsum
+                oldest_strat_name_set_id: Lorem Ipsum
+                oldest_strat_unit_id: Lorem Ipsum
+                operator: Lorem Ipsum
+                platform_id: Lorem Ipsum
+                platform_sf_subtype: Lorem Ipsum
+                plot_name: Lorem Ipsum
+                plot_symbol: Lorem Ipsum
+                plugback_depth: 0.1
+                plugback_depth_ouom: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                primary_source: Lorem Ipsum
+                profile_type: Lorem Ipsum
+                regulatory_agency: Lorem Ipsum
+                remark: Lorem Ipsum
+                rig_on_site_date: 12/12/2023
+                rig_release_date: 12/12/2023
+                rotary_table_elev: 0.1
+                rotary_table_elev_ouom: Lorem Ipsum
+                source_document_id: Lorem Ipsum
+                spud_date: 12/12/2023
+                status_type: Lorem Ipsum
+                subsea_elev_ref_type: Lorem Ipsum
+                surface_latitude: 0.1
+                surface_longitude: 0.1
+                surface_node_id: Lorem Ipsum
+                tax_credit_code: Lorem Ipsum
+                td_strat_age: Lorem Ipsum
+                td_strat_name_set_age: Lorem Ipsum
+                td_strat_name_set_id: Lorem Ipsum
+                td_strat_unit_id: Lorem Ipsum
+                top_depth: 0.1
+                top_depth_ouom: Lorem Ipsum
+                top_strat_name_set_id: Lorem Ipsum
+                top_strat_unit_id: Lorem Ipsum
+                water_acoustic_vel: 0.1
+                water_acoustic_vel_ouom: Lorem Ipsum
+                water_depth: 0.1
+                water_depth_datum: Lorem Ipsum
+                water_depth_ouom: Lorem Ipsum
+                well_event_num: Lorem Ipsum
+                well_government_id: Lorem Ipsum
+                well_intersect_md: 0.1
+                well_level_type: Lorem Ipsum
+                well_name: Lorem Ipsum
+                well_num: Lorem Ipsum
+                whipstock_depth: 0.1
+                whipstock_depth_ouom: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new well
+      description: Create a new well data
+      requestBody:
+        required: true
+        description: Request body to create well data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/well'
+            example:
+              uwi: Lorem Ipsum
+              abandonment_date: 12/12/2023
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              assigned_field: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_node_id: Lorem Ipsum
+              base_strat_name_set_id: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              bottom_hole_latitude: 0.1
+              bottom_hole_longitude: 0.1
+              casing_flange_elev: 0.1
+              casing_flange_elev_ouom: Lorem Ipsum
+              completion_date: 12/12/2023
+              confidential_date: 12/12/2023
+              confidential_depth: 0.1
+              confidential_depth_ouom: Lorem Ipsum
+              confidential_type: Lorem Ipsum
+              confid_strat_name_set_id: Lorem Ipsum
+              confid_strat_unit_id: Lorem Ipsum
+              current_class: Lorem Ipsum
+              current_status: Lorem Ipsum
+              current_status_date: 12/12/2023
+              deepest_depth: 0.1
+              deepest_depth_ouom: Lorem Ipsum
+              depth_datum: Lorem Ipsum
+              depth_datum_elev: 0.1
+              depth_datum_elev_ouom: Lorem Ipsum
+              derrick_floor_elev: 0.1
+              derrick_floor_elev_ouom: Lorem Ipsum
+              difference_lat_msl: 0.1
+              discovery_ind: y
+              drill_td: 0.1
+              drill_td_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              elev_ref_datum: Lorem Ipsum
+              environment_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              faulted_ind: y
+              final_drill_date: 12/12/2023
+              final_td: 0.1
+              final_td_ouom: Lorem Ipsum
+              ground_elev: 0.1
+              ground_elev_ouom: Lorem Ipsum
+              ground_elev_type: Lorem Ipsum
+              initial_class: Lorem Ipsum
+              kb_elev: 0.1
+              kb_elev_ouom: Lorem Ipsum
+              lease_name: Lorem Ipsum
+              lease_num: Lorem Ipsum
+              legal_survey_type: Lorem Ipsum
+              location_type: Lorem Ipsum
+              log_td: 0.1
+              log_td_ouom: Lorem Ipsum
+              max_tvd: 0.1
+              max_tvd_ouom: Lorem Ipsum
+              net_pay: 0.1
+              net_pay_ouom: Lorem Ipsum
+              oldest_strat_age: Lorem Ipsum
+              oldest_strat_name_set_age: Lorem Ipsum
+              oldest_strat_name_set_id: Lorem Ipsum
+              oldest_strat_unit_id: Lorem Ipsum
+              operator: Lorem Ipsum
+              platform_id: Lorem Ipsum
+              platform_sf_subtype: Lorem Ipsum
+              plot_name: Lorem Ipsum
+              plot_symbol: Lorem Ipsum
+              plugback_depth: 0.1
+              plugback_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              primary_source: Lorem Ipsum
+              profile_type: Lorem Ipsum
+              regulatory_agency: Lorem Ipsum
+              remark: Lorem Ipsum
+              rig_on_site_date: 12/12/2023
+              rig_release_date: 12/12/2023
+              rotary_table_elev: 0.1
+              rotary_table_elev_ouom: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              spud_date: 12/12/2023
+              status_type: Lorem Ipsum
+              subsea_elev_ref_type: Lorem Ipsum
+              surface_latitude: 0.1
+              surface_longitude: 0.1
+              surface_node_id: Lorem Ipsum
+              tax_credit_code: Lorem Ipsum
+              td_strat_age: Lorem Ipsum
+              td_strat_name_set_age: Lorem Ipsum
+              td_strat_name_set_id: Lorem Ipsum
+              td_strat_unit_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_name_set_id: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              water_acoustic_vel: 0.1
+              water_acoustic_vel_ouom: Lorem Ipsum
+              water_depth: 0.1
+              water_depth_datum: Lorem Ipsum
+              water_depth_ouom: Lorem Ipsum
+              well_event_num: Lorem Ipsum
+              well_government_id: Lorem Ipsum
+              well_intersect_md: 0.1
+              well_level_type: Lorem Ipsum
+              well_name: Lorem Ipsum
+              well_num: Lorem Ipsum
+              whipstock_depth: 0.1
+              whipstock_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: well data is added
+          content:
+            application/json:
+              example:
+                message: The well data was successfully added
+  /well/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of well data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new well data
+      description: Update a new well data
+      requestBody:
+        required: true
+        description: Request body to update well data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/well'
+            example:
+              uwi: Lorem Ipsum
+              abandonment_date: 12/12/2023
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              assigned_field: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_node_id: Lorem Ipsum
+              base_strat_name_set_id: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              bottom_hole_latitude: 0.1
+              bottom_hole_longitude: 0.1
+              casing_flange_elev: 0.1
+              casing_flange_elev_ouom: Lorem Ipsum
+              completion_date: 12/12/2023
+              confidential_date: 12/12/2023
+              confidential_depth: 0.1
+              confidential_depth_ouom: Lorem Ipsum
+              confidential_type: Lorem Ipsum
+              confid_strat_name_set_id: Lorem Ipsum
+              confid_strat_unit_id: Lorem Ipsum
+              current_class: Lorem Ipsum
+              current_status: Lorem Ipsum
+              current_status_date: 12/12/2023
+              deepest_depth: 0.1
+              deepest_depth_ouom: Lorem Ipsum
+              depth_datum: Lorem Ipsum
+              depth_datum_elev: 0.1
+              depth_datum_elev_ouom: Lorem Ipsum
+              derrick_floor_elev: 0.1
+              derrick_floor_elev_ouom: Lorem Ipsum
+              difference_lat_msl: 0.1
+              discovery_ind: y
+              drill_td: 0.1
+              drill_td_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              elev_ref_datum: Lorem Ipsum
+              environment_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              faulted_ind: y
+              final_drill_date: 12/12/2023
+              final_td: 0.1
+              final_td_ouom: Lorem Ipsum
+              ground_elev: 0.1
+              ground_elev_ouom: Lorem Ipsum
+              ground_elev_type: Lorem Ipsum
+              initial_class: Lorem Ipsum
+              kb_elev: 0.1
+              kb_elev_ouom: Lorem Ipsum
+              lease_name: Lorem Ipsum
+              lease_num: Lorem Ipsum
+              legal_survey_type: Lorem Ipsum
+              location_type: Lorem Ipsum
+              log_td: 0.1
+              log_td_ouom: Lorem Ipsum
+              max_tvd: 0.1
+              max_tvd_ouom: Lorem Ipsum
+              net_pay: 0.1
+              net_pay_ouom: Lorem Ipsum
+              oldest_strat_age: Lorem Ipsum
+              oldest_strat_name_set_age: Lorem Ipsum
+              oldest_strat_name_set_id: Lorem Ipsum
+              oldest_strat_unit_id: Lorem Ipsum
+              operator: Lorem Ipsum
+              platform_id: Lorem Ipsum
+              platform_sf_subtype: Lorem Ipsum
+              plot_name: Lorem Ipsum
+              plot_symbol: Lorem Ipsum
+              plugback_depth: 0.1
+              plugback_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              primary_source: Lorem Ipsum
+              profile_type: Lorem Ipsum
+              regulatory_agency: Lorem Ipsum
+              remark: Lorem Ipsum
+              rig_on_site_date: 12/12/2023
+              rig_release_date: 12/12/2023
+              rotary_table_elev: 0.1
+              rotary_table_elev_ouom: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              spud_date: 12/12/2023
+              status_type: Lorem Ipsum
+              subsea_elev_ref_type: Lorem Ipsum
+              surface_latitude: 0.1
+              surface_longitude: 0.1
+              surface_node_id: Lorem Ipsum
+              tax_credit_code: Lorem Ipsum
+              td_strat_age: Lorem Ipsum
+              td_strat_name_set_age: Lorem Ipsum
+              td_strat_name_set_id: Lorem Ipsum
+              td_strat_unit_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_name_set_id: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              water_acoustic_vel: 0.1
+              water_acoustic_vel_ouom: Lorem Ipsum
+              water_depth: 0.1
+              water_depth_datum: Lorem Ipsum
+              water_depth_ouom: Lorem Ipsum
+              well_event_num: Lorem Ipsum
+              well_government_id: Lorem Ipsum
+              well_intersect_md: 0.1
+              well_level_type: Lorem Ipsum
+              well_name: Lorem Ipsum
+              well_num: Lorem Ipsum
+              whipstock_depth: 0.1
+              whipstock_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: well data is completely updated
+          content:
+            application/json:
+              example:
+                message: The well data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new well data
+      description: Update a new well data
+      requestBody:
+        required: true
+        description: Request body to update well data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/well'
+            example:
+              uwi: Lorem Ipsum
+              abandonment_date: 12/12/2023
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              assigned_field: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_node_id: Lorem Ipsum
+              base_strat_name_set_id: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              bottom_hole_latitude: 0.1
+              bottom_hole_longitude: 0.1
+              casing_flange_elev: 0.1
+              casing_flange_elev_ouom: Lorem Ipsum
+              completion_date: 12/12/2023
+              confidential_date: 12/12/2023
+              confidential_depth: 0.1
+              confidential_depth_ouom: Lorem Ipsum
+              confidential_type: Lorem Ipsum
+              confid_strat_name_set_id: Lorem Ipsum
+              confid_strat_unit_id: Lorem Ipsum
+              current_class: Lorem Ipsum
+              current_status: Lorem Ipsum
+              current_status_date: 12/12/2023
+              deepest_depth: 0.1
+              deepest_depth_ouom: Lorem Ipsum
+              depth_datum: Lorem Ipsum
+              depth_datum_elev: 0.1
+              depth_datum_elev_ouom: Lorem Ipsum
+              derrick_floor_elev: 0.1
+              derrick_floor_elev_ouom: Lorem Ipsum
+              difference_lat_msl: 0.1
+              discovery_ind: y
+              drill_td: 0.1
+              drill_td_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              elev_ref_datum: Lorem Ipsum
+              environment_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              faulted_ind: y
+              final_drill_date: 12/12/2023
+              final_td: 0.1
+              final_td_ouom: Lorem Ipsum
+              ground_elev: 0.1
+              ground_elev_ouom: Lorem Ipsum
+              ground_elev_type: Lorem Ipsum
+              initial_class: Lorem Ipsum
+              kb_elev: 0.1
+              kb_elev_ouom: Lorem Ipsum
+              lease_name: Lorem Ipsum
+              lease_num: Lorem Ipsum
+              legal_survey_type: Lorem Ipsum
+              location_type: Lorem Ipsum
+              log_td: 0.1
+              log_td_ouom: Lorem Ipsum
+              max_tvd: 0.1
+              max_tvd_ouom: Lorem Ipsum
+              net_pay: 0.1
+              net_pay_ouom: Lorem Ipsum
+              oldest_strat_age: Lorem Ipsum
+              oldest_strat_name_set_age: Lorem Ipsum
+              oldest_strat_name_set_id: Lorem Ipsum
+              oldest_strat_unit_id: Lorem Ipsum
+              operator: Lorem Ipsum
+              platform_id: Lorem Ipsum
+              platform_sf_subtype: Lorem Ipsum
+              plot_name: Lorem Ipsum
+              plot_symbol: Lorem Ipsum
+              plugback_depth: 0.1
+              plugback_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              primary_source: Lorem Ipsum
+              profile_type: Lorem Ipsum
+              regulatory_agency: Lorem Ipsum
+              remark: Lorem Ipsum
+              rig_on_site_date: 12/12/2023
+              rig_release_date: 12/12/2023
+              rotary_table_elev: 0.1
+              rotary_table_elev_ouom: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              spud_date: 12/12/2023
+              status_type: Lorem Ipsum
+              subsea_elev_ref_type: Lorem Ipsum
+              surface_latitude: 0.1
+              surface_longitude: 0.1
+              surface_node_id: Lorem Ipsum
+              tax_credit_code: Lorem Ipsum
+              td_strat_age: Lorem Ipsum
+              td_strat_name_set_age: Lorem Ipsum
+              td_strat_name_set_id: Lorem Ipsum
+              td_strat_unit_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_name_set_id: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              water_acoustic_vel: 0.1
+              water_acoustic_vel_ouom: Lorem Ipsum
+              water_depth: 0.1
+              water_depth_datum: Lorem Ipsum
+              water_depth_ouom: Lorem Ipsum
+              well_event_num: Lorem Ipsum
+              well_government_id: Lorem Ipsum
+              well_intersect_md: 0.1
+              well_level_type: Lorem Ipsum
+              well_name: Lorem Ipsum
+              well_num: Lorem Ipsum
+              whipstock_depth: 0.1
+              whipstock_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in well data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in well data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete well data
+      description: Delete well data
+      responses:
+        '200':
+          description: well data is deleted
+          content:
+            application/json:
+              example:
+                message: The well data was successfully deleted
+  /rm-information-item:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get rm_information_item
+      responses:
+        '200':
+          description: get rm_information_item data to be returned
+          content:
+            application/json:
+              example:
+              - info_item_subtype: Lorem Ipsum
+                information_item_id: Lorem Ipsum
+                abstract: Lorem Ipsum
+                accepted_date: 12/12/2023
+                access_condition: Lorem Ipsum
+                active_ind: y
+                available_date: 12/12/2023
+                coord_acquisition_id: Lorem Ipsum
+                copyright_date: 12/12/2023
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                geog_coord_system_id: Lorem Ipsum
+                group_ind: y
+                issue_date: 12/12/2023
+                item_category: Lorem Ipsum
+                item_sub_category: Lorem Ipsum
+                local_coord_system_id: Lorem Ipsum
+                map_coord_system_id: Lorem Ipsum
+                max_latitude: 0.1
+                max_longitude: 0.1
+                min_latitude: 0.1
+                min_longitude: 0.1
+                modified_date: 12/12/2023
+                origin_date: 12/12/2023
+                ppdm_guid: Lorem Ipsum
+                publish_date: 12/12/2023
+                purpose: Lorem Ipsum
+                reference_num: Lorem Ipsum
+                remark: Lorem Ipsum
+                security_desc: Lorem Ipsum
+                source: Lorem Ipsum
+                source_document_id: Lorem Ipsum
+                submit_date: 12/12/2023
+                time_period_desc: Lorem Ipsum
+                title: Lorem Ipsum
+                use_condition: Lorem Ipsum
+                version_num: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new rm_information_item
+      description: Create a new rm_information_item data
+      requestBody:
+        required: true
+        description: Request body to create rm_information_item data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_information_item'
+            example:
+              info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              abstract: Lorem Ipsum
+              accepted_date: 12/12/2023
+              access_condition: Lorem Ipsum
+              active_ind: y
+              available_date: 12/12/2023
+              coord_acquisition_id: Lorem Ipsum
+              copyright_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              geog_coord_system_id: Lorem Ipsum
+              group_ind: y
+              issue_date: 12/12/2023
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              local_coord_system_id: Lorem Ipsum
+              map_coord_system_id: Lorem Ipsum
+              max_latitude: 0.1
+              max_longitude: 0.1
+              min_latitude: 0.1
+              min_longitude: 0.1
+              modified_date: 12/12/2023
+              origin_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              publish_date: 12/12/2023
+              purpose: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              security_desc: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              submit_date: 12/12/2023
+              time_period_desc: Lorem Ipsum
+              title: Lorem Ipsum
+              use_condition: Lorem Ipsum
+              version_num: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_information_item data is added
+          content:
+            application/json:
+              example:
+                message: The rm_information_item data was successfully added
+  /rm-information-item/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of rm_information_item data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new rm_information_item data
+      description: Update a new rm_information_item data
+      requestBody:
+        required: true
+        description: Request body to update rm_information_item data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_information_item'
+            example:
+              info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              abstract: Lorem Ipsum
+              accepted_date: 12/12/2023
+              access_condition: Lorem Ipsum
+              active_ind: y
+              available_date: 12/12/2023
+              coord_acquisition_id: Lorem Ipsum
+              copyright_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              geog_coord_system_id: Lorem Ipsum
+              group_ind: y
+              issue_date: 12/12/2023
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              local_coord_system_id: Lorem Ipsum
+              map_coord_system_id: Lorem Ipsum
+              max_latitude: 0.1
+              max_longitude: 0.1
+              min_latitude: 0.1
+              min_longitude: 0.1
+              modified_date: 12/12/2023
+              origin_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              publish_date: 12/12/2023
+              purpose: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              security_desc: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              submit_date: 12/12/2023
+              time_period_desc: Lorem Ipsum
+              title: Lorem Ipsum
+              use_condition: Lorem Ipsum
+              version_num: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_information_item data is completely updated
+          content:
+            application/json:
+              example:
+                message: The rm_information_item data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new rm_information_item data
+      description: Update a new rm_information_item data
+      requestBody:
+        required: true
+        description: Request body to update rm_information_item data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_information_item'
+            example:
+              info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              abstract: Lorem Ipsum
+              accepted_date: 12/12/2023
+              access_condition: Lorem Ipsum
+              active_ind: y
+              available_date: 12/12/2023
+              coord_acquisition_id: Lorem Ipsum
+              copyright_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              geog_coord_system_id: Lorem Ipsum
+              group_ind: y
+              issue_date: 12/12/2023
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              local_coord_system_id: Lorem Ipsum
+              map_coord_system_id: Lorem Ipsum
+              max_latitude: 0.1
+              max_longitude: 0.1
+              min_latitude: 0.1
+              min_longitude: 0.1
+              modified_date: 12/12/2023
+              origin_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              publish_date: 12/12/2023
+              purpose: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              security_desc: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              submit_date: 12/12/2023
+              time_period_desc: Lorem Ipsum
+              title: Lorem Ipsum
+              use_condition: Lorem Ipsum
+              version_num: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in rm_information_item data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in rm_information_item data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete rm_information_item data
+      description: Delete rm_information_item data
+      responses:
+        '200':
+          description: rm_information_item data is deleted
+          content:
+            application/json:
+              example:
+                message: The rm_information_item data was successfully deleted
+  /rm-creator:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get rm_creator
+      responses:
+        '200':
+          description: get rm_creator data to be returned
+          content:
+            application/json:
+              example:
+              - info_item_subtype: Lorem Ipsum
+                information_item_id: Lorem Ipsum
+                creator_id: Lorem Ipsum
+                active_ind: y
+                creator_ba_id: Lorem Ipsum
+                creator_ba_type: Lorem Ipsum
+                creator_name: Lorem Ipsum
+                creator_type: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                first_name: Lorem Ipsum
+                last_name: Lorem Ipsum
+                middle_name: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new rm_creator
+      description: Create a new rm_creator data
+      requestBody:
+        required: true
+        description: Request body to create rm_creator data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_creator'
+            example:
+              info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              creator_id: Lorem Ipsum
+              active_ind: y
+              creator_ba_id: Lorem Ipsum
+              creator_ba_type: Lorem Ipsum
+              creator_name: Lorem Ipsum
+              creator_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              first_name: Lorem Ipsum
+              last_name: Lorem Ipsum
+              middle_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_creator data is added
+          content:
+            application/json:
+              example:
+                message: The rm_creator data was successfully added
+  /rm-creator/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of rm_creator data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new rm_creator data
+      description: Update a new rm_creator data
+      requestBody:
+        required: true
+        description: Request body to update rm_creator data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_creator'
+            example:
+              info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              creator_id: Lorem Ipsum
+              active_ind: y
+              creator_ba_id: Lorem Ipsum
+              creator_ba_type: Lorem Ipsum
+              creator_name: Lorem Ipsum
+              creator_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              first_name: Lorem Ipsum
+              last_name: Lorem Ipsum
+              middle_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_creator data is completely updated
+          content:
+            application/json:
+              example:
+                message: The rm_creator data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new rm_creator data
+      description: Update a new rm_creator data
+      requestBody:
+        required: true
+        description: Request body to update rm_creator data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_creator'
+            example:
+              info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              creator_id: Lorem Ipsum
+              active_ind: y
+              creator_ba_id: Lorem Ipsum
+              creator_ba_type: Lorem Ipsum
+              creator_name: Lorem Ipsum
+              creator_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              first_name: Lorem Ipsum
+              last_name: Lorem Ipsum
+              middle_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in rm_creator data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in rm_creator data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete rm_creator data
+      description: Delete rm_creator data
+      responses:
+        '200':
+          description: rm_creator data is deleted
+          content:
+            application/json:
+              example:
+                message: The rm_creator data was successfully deleted
+  /r-media-type:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get r_media_type
+      responses:
+        '200':
+          description: get r_media_type data to be returned
+          content:
+            application/json:
+              example:
+              - media_type: Lorem Ipsum
+                abbreviation: Lorem Ipsum
+                active_ind: y
+                digital_capacity: 0.1
+                digital_capacity_uom: Lorem Ipsum
+                digital_density: 0.1
+                digital_density_uom: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                long_name: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                short_name: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new r_media_type
+      description: Create a new r_media_type data
+      requestBody:
+        required: true
+        description: Request body to create r_media_type data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_media_type'
+            example:
+              media_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              digital_capacity: 0.1
+              digital_capacity_uom: Lorem Ipsum
+              digital_density: 0.1
+              digital_density_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_media_type data is added
+          content:
+            application/json:
+              example:
+                message: The r_media_type data was successfully added
+  /r-media-type/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of r_media_type data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new r_media_type data
+      description: Update a new r_media_type data
+      requestBody:
+        required: true
+        description: Request body to update r_media_type data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_media_type'
+            example:
+              media_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              digital_capacity: 0.1
+              digital_capacity_uom: Lorem Ipsum
+              digital_density: 0.1
+              digital_density_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_media_type data is completely updated
+          content:
+            application/json:
+              example:
+                message: The r_media_type data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new r_media_type data
+      description: Update a new r_media_type data
+      requestBody:
+        required: true
+        description: Request body to update r_media_type data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_media_type'
+            example:
+              media_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              digital_capacity: 0.1
+              digital_capacity_uom: Lorem Ipsum
+              digital_density: 0.1
+              digital_density_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in r_media_type data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in r_media_type data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete r_media_type data
+      description: Delete r_media_type data
+      responses:
+        '200':
+          description: r_media_type data is deleted
+          content:
+            application/json:
+              example:
+                message: The r_media_type data was successfully deleted
+  /r-document-type:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get r_document_type
+      responses:
+        '200':
+          description: get r_document_type data to be returned
+          content:
+            application/json:
+              example:
+              - document_type: Lorem Ipsum
+                abbreviation: Lorem Ipsum
+                active_ind: y
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                long_name: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                short_name: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new r_document_type
+      description: Create a new r_document_type data
+      requestBody:
+        required: true
+        description: Request body to create r_document_type data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_document_type'
+            example:
+              document_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_document_type data is added
+          content:
+            application/json:
+              example:
+                message: The r_document_type data was successfully added
+  /r-document-type/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of r_document_type data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new r_document_type data
+      description: Update a new r_document_type data
+      requestBody:
+        required: true
+        description: Request body to update r_document_type data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_document_type'
+            example:
+              document_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_document_type data is completely updated
+          content:
+            application/json:
+              example:
+                message: The r_document_type data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new r_document_type data
+      description: Update a new r_document_type data
+      requestBody:
+        required: true
+        description: Request body to update r_document_type data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_document_type'
+            example:
+              document_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in r_document_type data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in r_document_type data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete r_document_type data
+      description: Delete r_document_type data
+      responses:
+        '200':
+          description: r_document_type data is deleted
+          content:
+            application/json:
+              example:
+                message: The r_document_type data was successfully deleted
+  /r-item-category:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get r_item_category
+      responses:
+        '200':
+          description: get r_item_category data to be returned
+          content:
+            application/json:
+              example:
+              - item_category: Lorem Ipsum
+                abbreviation: Lorem Ipsum
+                active_ind: y
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                long_name: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                retention_period: Lorem Ipsum
+                short_name: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new r_item_category
+      description: Create a new r_item_category data
+      requestBody:
+        required: true
+        description: Request body to create r_item_category data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_item_category'
+            example:
+              item_category: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_item_category data is added
+          content:
+            application/json:
+              example:
+                message: The r_item_category data was successfully added
+  /r-item-category/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of r_item_category data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new r_item_category data
+      description: Update a new r_item_category data
+      requestBody:
+        required: true
+        description: Request body to update r_item_category data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_item_category'
+            example:
+              item_category: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_item_category data is completely updated
+          content:
+            application/json:
+              example:
+                message: The r_item_category data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new r_item_category data
+      description: Update a new r_item_category data
+      requestBody:
+        required: true
+        description: Request body to update r_item_category data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_item_category'
+            example:
+              item_category: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in r_item_category data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in r_item_category data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete r_item_category data
+      description: Delete r_item_category data
+      responses:
+        '200':
+          description: r_item_category data is deleted
+          content:
+            application/json:
+              example:
+                message: The r_item_category data was successfully deleted
+  /r-item-sub-category:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get r_item_sub_category
+      responses:
+        '200':
+          description: get r_item_sub_category data to be returned
+          content:
+            application/json:
+              example:
+              - item_category: Lorem Ipsum
+                item_sub_category: Lorem Ipsum
+                abbreviation: Lorem Ipsum
+                active_ind: y
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                long_name: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                retention_period: Lorem Ipsum
+                short_name: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new r_item_sub_category
+      description: Create a new r_item_sub_category data
+      requestBody:
+        required: true
+        description: Request body to create r_item_sub_category data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_item_sub_category'
+            example:
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_item_sub_category data is added
+          content:
+            application/json:
+              example:
+                message: The r_item_sub_category data was successfully added
+  /r-item-sub-category/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of r_item_sub_category data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new r_item_sub_category data
+      description: Update a new r_item_sub_category data
+      requestBody:
+        required: true
+        description: Request body to update r_item_sub_category data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_item_sub_category'
+            example:
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_item_sub_category data is completely updated
+          content:
+            application/json:
+              example:
+                message: The r_item_sub_category data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new r_item_sub_category data
+      description: Update a new r_item_sub_category data
+      requestBody:
+        required: true
+        description: Request body to update r_item_sub_category data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_item_sub_category'
+            example:
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in r_item_sub_category data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in r_item_sub_category data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete r_item_sub_category data
+      description: Delete r_item_sub_category data
+      responses:
+        '200':
+          description: r_item_sub_category data is deleted
+          content:
+            application/json:
+              example:
+                message: The r_item_sub_category data was successfully deleted
+  /rm-physical-item:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get rm_physical_item
+      responses:
+        '200':
+          description: get rm_physical_item data to be returned
+          content:
+            application/json:
+              example:
+              - physical_item_id: Lorem Ipsum
+                active_ind: y
+                bar_code: Lorem Ipsum
+                catalogue_by_name: Lorem Ipsum
+                catalogue_date: 12/12/2023
+                certified_true_copy_ind: y
+                circulation_allowed_ind: y
+                circulation_out_ind: y
+                color_format: Lorem Ipsum
+                create_date: 12/12/2023
+                digital_format: Lorem Ipsum
+                digital_size: 1.0
+                digital_size_uom: Lorem Ipsum
+                dim_height: 0.1
+                dim_height_uom: Lorem Ipsum
+                dim_length: 0.1
+                dim_length_uom: Lorem Ipsum
+                dim_weight: 0.1
+                dim_weight_uom: Lorem Ipsum
+                dim_width: 0.1
+                dim_width_uom: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                group_ind: y
+                image_resolution_uom: Lorem Ipsum
+                image_x_resolution: 0.1
+                image_y_resolution: 0.1
+                item_category: Lorem Ipsum
+                item_sub_category: Lorem Ipsum
+                label: Lorem Ipsum
+                language: Lorem Ipsum
+                last_condition: Lorem Ipsum
+                location_reference: Lorem Ipsum
+                media_type: Lorem Ipsum
+                original_file_name: Lorem Ipsum
+                original_ind: y
+                output_file_name: Lorem Ipsum
+                page_count: 0.1
+                physical_item_status: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                preferred_ind: y
+                qc_by_name: Lorem Ipsum
+                remark: Lorem Ipsum
+                retention_period: Lorem Ipsum
+                sale_allowed_ind: y
+                source: Lorem Ipsum
+                store_id: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new rm_physical_item
+      description: Create a new rm_physical_item data
+      requestBody:
+        required: true
+        description: Request body to create rm_physical_item data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_physical_item'
+            example:
+              physical_item_id: Lorem Ipsum
+              active_ind: y
+              bar_code: Lorem Ipsum
+              catalogue_by_name: Lorem Ipsum
+              catalogue_date: 12/12/2023
+              certified_true_copy_ind: y
+              circulation_allowed_ind: y
+              circulation_out_ind: y
+              color_format: Lorem Ipsum
+              create_date: 12/12/2023
+              digital_format: Lorem Ipsum
+              digital_size: 1.0
+              digital_size_uom: Lorem Ipsum
+              dim_height: 0.1
+              dim_height_uom: Lorem Ipsum
+              dim_length: 0.1
+              dim_length_uom: Lorem Ipsum
+              dim_weight: 0.1
+              dim_weight_uom: Lorem Ipsum
+              dim_width: 0.1
+              dim_width_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              group_ind: y
+              image_resolution_uom: Lorem Ipsum
+              image_x_resolution: 0.1
+              image_y_resolution: 0.1
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              label: Lorem Ipsum
+              language: Lorem Ipsum
+              last_condition: Lorem Ipsum
+              location_reference: Lorem Ipsum
+              media_type: Lorem Ipsum
+              original_file_name: Lorem Ipsum
+              original_ind: y
+              output_file_name: Lorem Ipsum
+              page_count: 0.1
+              physical_item_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              qc_by_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              sale_allowed_ind: y
+              source: Lorem Ipsum
+              store_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_physical_item data is added
+          content:
+            application/json:
+              example:
+                message: The rm_physical_item data was successfully added
+  /rm-physical-item/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of rm_physical_item data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new rm_physical_item data
+      description: Update a new rm_physical_item data
+      requestBody:
+        required: true
+        description: Request body to update rm_physical_item data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_physical_item'
+            example:
+              physical_item_id: Lorem Ipsum
+              active_ind: y
+              bar_code: Lorem Ipsum
+              catalogue_by_name: Lorem Ipsum
+              catalogue_date: 12/12/2023
+              certified_true_copy_ind: y
+              circulation_allowed_ind: y
+              circulation_out_ind: y
+              color_format: Lorem Ipsum
+              create_date: 12/12/2023
+              digital_format: Lorem Ipsum
+              digital_size: 1.0
+              digital_size_uom: Lorem Ipsum
+              dim_height: 0.1
+              dim_height_uom: Lorem Ipsum
+              dim_length: 0.1
+              dim_length_uom: Lorem Ipsum
+              dim_weight: 0.1
+              dim_weight_uom: Lorem Ipsum
+              dim_width: 0.1
+              dim_width_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              group_ind: y
+              image_resolution_uom: Lorem Ipsum
+              image_x_resolution: 0.1
+              image_y_resolution: 0.1
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              label: Lorem Ipsum
+              language: Lorem Ipsum
+              last_condition: Lorem Ipsum
+              location_reference: Lorem Ipsum
+              media_type: Lorem Ipsum
+              original_file_name: Lorem Ipsum
+              original_ind: y
+              output_file_name: Lorem Ipsum
+              page_count: 0.1
+              physical_item_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              qc_by_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              sale_allowed_ind: y
+              source: Lorem Ipsum
+              store_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_physical_item data is completely updated
+          content:
+            application/json:
+              example:
+                message: The rm_physical_item data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new rm_physical_item data
+      description: Update a new rm_physical_item data
+      requestBody:
+        required: true
+        description: Request body to update rm_physical_item data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_physical_item'
+            example:
+              physical_item_id: Lorem Ipsum
+              active_ind: y
+              bar_code: Lorem Ipsum
+              catalogue_by_name: Lorem Ipsum
+              catalogue_date: 12/12/2023
+              certified_true_copy_ind: y
+              circulation_allowed_ind: y
+              circulation_out_ind: y
+              color_format: Lorem Ipsum
+              create_date: 12/12/2023
+              digital_format: Lorem Ipsum
+              digital_size: 1.0
+              digital_size_uom: Lorem Ipsum
+              dim_height: 0.1
+              dim_height_uom: Lorem Ipsum
+              dim_length: 0.1
+              dim_length_uom: Lorem Ipsum
+              dim_weight: 0.1
+              dim_weight_uom: Lorem Ipsum
+              dim_width: 0.1
+              dim_width_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              group_ind: y
+              image_resolution_uom: Lorem Ipsum
+              image_x_resolution: 0.1
+              image_y_resolution: 0.1
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              label: Lorem Ipsum
+              language: Lorem Ipsum
+              last_condition: Lorem Ipsum
+              location_reference: Lorem Ipsum
+              media_type: Lorem Ipsum
+              original_file_name: Lorem Ipsum
+              original_ind: y
+              output_file_name: Lorem Ipsum
+              page_count: 0.1
+              physical_item_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              qc_by_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              sale_allowed_ind: y
+              source: Lorem Ipsum
+              store_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in rm_physical_item data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in rm_physical_item data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete rm_physical_item data
+      description: Delete rm_physical_item data
+      responses:
+        '200':
+          description: rm_physical_item data is deleted
+          content:
+            application/json:
+              example:
+                message: The rm_physical_item data was successfully deleted
+  /anl-accuracy:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get anl_accuracy
+      responses:
+        '200':
+          description: get anl_accuracy data to be returned
+          content:
+            application/json:
+              example:
+              - analysis_id: Lorem Ipsum
+                anl_source: Lorem Ipsum
+                accuracy_desc: Lorem Ipsum
+                accuracy_type: Lorem Ipsum
+                active_ind: y
+                calculated_ind: y
+                calculate_method_id: Lorem Ipsum
+                confidence_type: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                measured_value_ind: y
+                ppdm_guid: Lorem Ipsum
+                raw_value_ind: y
+                referenced_column_name: Lorem Ipsum
+                referenced_ppdm_guid: Lorem Ipsum
+                referenced_system_id: Lorem Ipsum
+                referenced_table_name: Lorem Ipsum
+                remark: Lorem Ipsum
+                repeatability_type: Lorem Ipsum
+                reported_ind: y
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new anl_accuracy
+      description: Create a new anl_accuracy data
+      requestBody:
+        required: true
+        description: Request body to create anl_accuracy data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/anl_accuracy'
+            example:
+              analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              accuracy_desc: Lorem Ipsum
+              accuracy_type: Lorem Ipsum
+              active_ind: y
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              confidence_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              measured_value_ind: y
+              ppdm_guid: Lorem Ipsum
+              raw_value_ind: y
+              referenced_column_name: Lorem Ipsum
+              referenced_ppdm_guid: Lorem Ipsum
+              referenced_system_id: Lorem Ipsum
+              referenced_table_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              repeatability_type: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: anl_accuracy data is added
+          content:
+            application/json:
+              example:
+                message: The anl_accuracy data was successfully added
+  /anl-accuracy/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of anl_accuracy data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new anl_accuracy data
+      description: Update a new anl_accuracy data
+      requestBody:
+        required: true
+        description: Request body to update anl_accuracy data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/anl_accuracy'
+            example:
+              analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              accuracy_desc: Lorem Ipsum
+              accuracy_type: Lorem Ipsum
+              active_ind: y
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              confidence_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              measured_value_ind: y
+              ppdm_guid: Lorem Ipsum
+              raw_value_ind: y
+              referenced_column_name: Lorem Ipsum
+              referenced_ppdm_guid: Lorem Ipsum
+              referenced_system_id: Lorem Ipsum
+              referenced_table_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              repeatability_type: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: anl_accuracy data is completely updated
+          content:
+            application/json:
+              example:
+                message: The anl_accuracy data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new anl_accuracy data
+      description: Update a new anl_accuracy data
+      requestBody:
+        required: true
+        description: Request body to update anl_accuracy data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/anl_accuracy'
+            example:
+              analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              accuracy_desc: Lorem Ipsum
+              accuracy_type: Lorem Ipsum
+              active_ind: y
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              confidence_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              measured_value_ind: y
+              ppdm_guid: Lorem Ipsum
+              raw_value_ind: y
+              referenced_column_name: Lorem Ipsum
+              referenced_ppdm_guid: Lorem Ipsum
+              referenced_system_id: Lorem Ipsum
+              referenced_table_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              repeatability_type: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in anl_accuracy data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in anl_accuracy data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete anl_accuracy data
+      description: Delete anl_accuracy data
+      responses:
+        '200':
+          description: anl_accuracy data is deleted
+          content:
+            application/json:
+              example:
+                message: The anl_accuracy data was successfully deleted
+  /rm-data-store:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get rm_data_store
+      responses:
+        '200':
+          description: get rm_data_store data to be returned
+          content:
+            application/json:
+              example:
+              - store_id: Lorem Ipsum
+                active_ind: y
+                address_source: Lorem Ipsum
+                business_associate_id: Lorem Ipsum
+                contained_by_store_id: Lorem Ipsum
+                data_store_hier_id: Lorem Ipsum
+                data_store_name: Lorem Ipsum
+                data_store_type: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                hier_level_id: Lorem Ipsum
+                location_id: Lorem Ipsum
+                long_location: Lorem Ipsum
+                physical_store_status: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                short_location: Lorem Ipsum
+                source: Lorem Ipsum
+                used_capacity_date: 12/12/2023
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new rm_data_store
+      description: Create a new rm_data_store data
+      requestBody:
+        required: true
+        description: Request body to create rm_data_store data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_data_store'
+            example:
+              store_id: Lorem Ipsum
+              active_ind: y
+              address_source: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              contained_by_store_id: Lorem Ipsum
+              data_store_hier_id: Lorem Ipsum
+              data_store_name: Lorem Ipsum
+              data_store_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              hier_level_id: Lorem Ipsum
+              location_id: Lorem Ipsum
+              long_location: Lorem Ipsum
+              physical_store_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_location: Lorem Ipsum
+              source: Lorem Ipsum
+              used_capacity_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_data_store data is added
+          content:
+            application/json:
+              example:
+                message: The rm_data_store data was successfully added
+  /rm-data-store/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of rm_data_store data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new rm_data_store data
+      description: Update a new rm_data_store data
+      requestBody:
+        required: true
+        description: Request body to update rm_data_store data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_data_store'
+            example:
+              store_id: Lorem Ipsum
+              active_ind: y
+              address_source: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              contained_by_store_id: Lorem Ipsum
+              data_store_hier_id: Lorem Ipsum
+              data_store_name: Lorem Ipsum
+              data_store_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              hier_level_id: Lorem Ipsum
+              location_id: Lorem Ipsum
+              long_location: Lorem Ipsum
+              physical_store_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_location: Lorem Ipsum
+              source: Lorem Ipsum
+              used_capacity_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: rm_data_store data is completely updated
+          content:
+            application/json:
+              example:
+                message: The rm_data_store data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new rm_data_store data
+      description: Update a new rm_data_store data
+      requestBody:
+        required: true
+        description: Request body to update rm_data_store data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rm_data_store'
+            example:
+              store_id: Lorem Ipsum
+              active_ind: y
+              address_source: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              contained_by_store_id: Lorem Ipsum
+              data_store_hier_id: Lorem Ipsum
+              data_store_name: Lorem Ipsum
+              data_store_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              hier_level_id: Lorem Ipsum
+              location_id: Lorem Ipsum
+              long_location: Lorem Ipsum
+              physical_store_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_location: Lorem Ipsum
+              source: Lorem Ipsum
+              used_capacity_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in rm_data_store data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in rm_data_store data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete rm_data_store data
+      description: Delete rm_data_store data
+      responses:
+        '200':
+          description: rm_data_store data is deleted
+          content:
+            application/json:
+              example:
+                message: The rm_data_store data was successfully deleted
+  /r-source:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get r_source
+      responses:
+        '200':
+          description: get r_source data to be returned
+          content:
+            application/json:
+              example:
+              - source: Lorem Ipsum
+                abbreviation: Lorem Ipsum
+                active_ind: y
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                long_name: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                remark: Lorem Ipsum
+                row_source: Lorem Ipsum
+                short_name: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new r_source
+      description: Create a new r_source data
+      requestBody:
+        required: true
+        description: Request body to create r_source data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_source'
+            example:
+              source: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_source: Lorem Ipsum
+              short_name: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_source data is added
+          content:
+            application/json:
+              example:
+                message: The r_source data was successfully added
+  /r-source/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of r_source data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new r_source data
+      description: Update a new r_source data
+      requestBody:
+        required: true
+        description: Request body to update r_source data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_source'
+            example:
+              source: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_source: Lorem Ipsum
+              short_name: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: r_source data is completely updated
+          content:
+            application/json:
+              example:
+                message: The r_source data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new r_source data
+      description: Update a new r_source data
+      requestBody:
+        required: true
+        description: Request body to update r_source data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/r_source'
+            example:
+              source: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_source: Lorem Ipsum
+              short_name: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in r_source data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in r_source data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete r_source data
+      description: Delete r_source data
+      responses:
+        '200':
+          description: r_source data is deleted
+          content:
+            application/json:
+              example:
+                message: The r_source data was successfully deleted
+  /ppdm-quality-control:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Query
+      summary: Get ppdm_quality_control
+      responses:
+        '200':
+          description: get ppdm_quality_control data to be returned
+          content:
+            application/json:
+              example:
+              - system_id: Lorem Ipsum
+                table_name: Lorem Ipsum
+                active_ind: y
+                checked_by_ba_id: Lorem Ipsum
+                column_name: Lorem Ipsum
+                current_date_value: 12/12/2023
+                current_numeric_value: 1.0
+                current_numeric_value_ouom: Lorem Ipsum
+                current_numeric_value_uom: Lorem Ipsum
+                current_row_guid: Lorem Ipsum
+                current_text_value: Lorem Ipsum
+                data_type: Lorem Ipsum
+                done_by_ba_id: Lorem Ipsum
+                effective_date: 12/12/2023
+                expiry_date: 12/12/2023
+                null_description: Lorem Ipsum
+                ppdm_guid: Lorem Ipsum
+                qc_datetime: 12/12/2023
+                qc_desc: Lorem Ipsum
+                qc_status: Lorem Ipsum
+                qc_type: Lorem Ipsum
+                quality_type: Lorem Ipsum
+                remark: Lorem Ipsum
+                retention_period: Lorem Ipsum
+                source: Lorem Ipsum
+                row_changed_by: Lorem Ipsum
+                row_changed_date: 12/12/2023
+                row_created_by: Lorem Ipsum
+                row_created_date: 12/12/2023
+                row_effective_date: 12/12/2023
+                row_expiry_date: 12/12/2023
+                row_quality: Lorem Ipsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Create
+      summary: Post a new ppdm_quality_control
+      description: Create a new ppdm_quality_control data
+      requestBody:
+        required: true
+        description: Request body to create ppdm_quality_control data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ppdm_quality_control'
+            example:
+              system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              active_ind: y
+              checked_by_ba_id: Lorem Ipsum
+              column_name: Lorem Ipsum
+              current_date_value: 12/12/2023
+              current_numeric_value: 1.0
+              current_numeric_value_ouom: Lorem Ipsum
+              current_numeric_value_uom: Lorem Ipsum
+              current_row_guid: Lorem Ipsum
+              current_text_value: Lorem Ipsum
+              data_type: Lorem Ipsum
+              done_by_ba_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              null_description: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              qc_datetime: 12/12/2023
+              qc_desc: Lorem Ipsum
+              qc_status: Lorem Ipsum
+              qc_type: Lorem Ipsum
+              quality_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: ppdm_quality_control data is added
+          content:
+            application/json:
+              example:
+                message: The ppdm_quality_control data was successfully added
+  /ppdm-quality-control/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of ppdm_quality_control data to fetch
+      schema:
+        type: string
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Put
+      summary: Update a new ppdm_quality_control data
+      description: Update a new ppdm_quality_control data
+      requestBody:
+        required: true
+        description: Request body to update ppdm_quality_control data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ppdm_quality_control'
+            example:
+              system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              active_ind: y
+              checked_by_ba_id: Lorem Ipsum
+              column_name: Lorem Ipsum
+              current_date_value: 12/12/2023
+              current_numeric_value: 1.0
+              current_numeric_value_ouom: Lorem Ipsum
+              current_numeric_value_uom: Lorem Ipsum
+              current_row_guid: Lorem Ipsum
+              current_text_value: Lorem Ipsum
+              data_type: Lorem Ipsum
+              done_by_ba_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              null_description: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              qc_datetime: 12/12/2023
+              qc_desc: Lorem Ipsum
+              qc_status: Lorem Ipsum
+              qc_type: Lorem Ipsum
+              quality_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: ppdm_quality_control data is completely updated
+          content:
+            application/json:
+              example:
+                message: The ppdm_quality_control data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Patch
+      summary: Update a new ppdm_quality_control data
+      description: Update a new ppdm_quality_control data
+      requestBody:
+        required: true
+        description: Request body to update ppdm_quality_control data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ppdm_quality_control'
+            example:
+              system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              active_ind: y
+              checked_by_ba_id: Lorem Ipsum
+              column_name: Lorem Ipsum
+              current_date_value: 12/12/2023
+              current_numeric_value: 1.0
+              current_numeric_value_ouom: Lorem Ipsum
+              current_numeric_value_uom: Lorem Ipsum
+              current_row_guid: Lorem Ipsum
+              current_text_value: Lorem Ipsum
+              data_type: Lorem Ipsum
+              done_by_ba_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              null_description: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              qc_datetime: 12/12/2023
+              qc_desc: Lorem Ipsum
+              qc_status: Lorem Ipsum
+              qc_type: Lorem Ipsum
+              quality_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+      responses:
+        '200':
+          description: one row in ppdm_quality_control data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in ppdm_quality_control data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Delete
+      summary: Delete ppdm_quality_control data
+      description: Delete ppdm_quality_control data
+      responses:
+        '200':
+          description: ppdm_quality_control data is deleted
+          content:
+            application/json:
+              example:
+                message: The ppdm_quality_control data was successfully deleted
+components:
+  schemas:
+    business_associate:
+      type: array
+      items:
+        type: object
+        properties:
+          business_associate_id:
+            type: string
+            maxLength: 40
+          active_ind:
+            type: string
+            maxLength: 1
+          ba_abbreviation:
+            type: string
+            maxLength: 12
+          ba_category:
+            type: string
+            maxLength: 40
+          ba_code:
+            type: string
+            maxLength: 40
+          ba_long_name:
+            type: string
+            maxLength: 255
+          ba_short_name:
+            type: string
+            maxLength: 30
+          ba_type:
+            type: string
+            maxLength: 40
+          credit_check_date:
+            type: string
+          credit_check_ind:
+            type: string
+            maxLength: 1
+          credit_check_source:
+            type: string
+            maxLength: 40
+          credit_rating:
+            type: string
+            maxLength: 40
+          credit_rating_source:
+            type: string
+            maxLength: 40
+          current_status:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          first_name:
+            type: string
+            maxLength: 255
+          last_name:
+            type: string
+            maxLength: 255
+          middle_initial:
+            type: string
+            maxLength: 30
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          service_period:
+            type: string
+            maxLength: 240
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    area:
+      type: array
+      items:
+        type: object
+        properties:
+          area_id:
+            type: string
+            maxLength: 40
+          area_type:
+            type: string
+            maxLength: 40
+          active_ind:
+            type: string
+            maxLength: 1
+          area_max_latitude:
+            type: number
+            format: decimal
+          area_max_longitude:
+            type: number
+            format: decimal
+          area_min_latitude:
+            type: number
+            format: decimal
+          area_min_longitude:
+            type: number
+            format: decimal
+          coord_acquisition_id:
+            type: string
+            maxLength: 40
+          coord_system_id:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          local_coord_system_id:
+            type: string
+            maxLength: 40
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          preferred_name:
+            type: string
+            maxLength: 255
+          remark:
+            type: string
+            maxLength: 240
+          source:
+            type: string
+            maxLength: 40
+          source_document_id:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    field:
+      type: array
+      items:
+        type: object
+        properties:
+          field_id:
+            type: string
+            maxLength: 40
+          active_ind:
+            type: string
+            maxLength: 1
+          area_id:
+            type: string
+            maxLength: 40
+          area_type:
+            type: string
+            maxLength: 40
+          discovery_date:
+            type: string
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          field_abbreviation:
+            type: string
+            maxLength: 12
+          field_area_obs_no:
+            type: integer
+          field_name:
+            type: string
+            maxLength: 255
+          field_type:
+            type: string
+            maxLength: 40
+          group_field_id:
+            type: string
+            maxLength: 40
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    well:
+      type: array
+      items:
+        type: object
+        properties:
+          uwi:
+            type: string
+            maxLength: 40
+          abandonment_date:
+            type: string
+          active_ind:
+            type: string
+            maxLength: 1
+          area_id:
+            type: string
+            maxLength: 40
+          area_type:
+            type: string
+            maxLength: 40
+          assigned_field:
+            type: string
+            maxLength: 40
+          base_depth:
+            type: number
+            format: decimal
+          base_depth_ouom:
+            type: string
+            maxLength: 40
+          base_node_id:
+            type: string
+            maxLength: 40
+          base_strat_name_set_id:
+            type: string
+            maxLength: 40
+          base_strat_unit_id:
+            type: string
+            maxLength: 40
+          bottom_hole_latitude:
+            type: number
+            format: decimal
+          bottom_hole_longitude:
+            type: number
+            format: decimal
+          casing_flange_elev:
+            type: number
+            format: decimal
+          casing_flange_elev_ouom:
+            type: string
+            maxLength: 40
+          completion_date:
+            type: string
+          confidential_date:
+            type: string
+          confidential_depth:
+            type: number
+            format: decimal
+          confidential_depth_ouom:
+            type: string
+            maxLength: 40
+          confidential_type:
+            type: string
+            maxLength: 40
+          confid_strat_name_set_id:
+            type: string
+            maxLength: 40
+          confid_strat_unit_id:
+            type: string
+            maxLength: 40
+          current_class:
+            type: string
+            maxLength: 40
+          current_status:
+            type: string
+            maxLength: 40
+          current_status_date:
+            type: string
+          deepest_depth:
+            type: number
+            format: decimal
+          deepest_depth_ouom:
+            type: string
+            maxLength: 40
+          depth_datum:
+            type: string
+            maxLength: 40
+          depth_datum_elev:
+            type: number
+            format: decimal
+          depth_datum_elev_ouom:
+            type: string
+            maxLength: 40
+          derrick_floor_elev:
+            type: number
+            format: decimal
+          derrick_floor_elev_ouom:
+            type: string
+            maxLength: 40
+          difference_lat_msl:
+            type: number
+            format: decimal
+          discovery_ind:
+            type: string
+            maxLength: 1
+          drill_td:
+            type: number
+            format: decimal
+          drill_td_ouom:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          elev_ref_datum:
+            type: string
+            maxLength: 40
+          environment_type:
+            type: string
+            maxLength: 40
+          expiry_date:
+            type: string
+          faulted_ind:
+            type: string
+            maxLength: 1
+          final_drill_date:
+            type: string
+          final_td:
+            type: number
+            format: decimal
+          final_td_ouom:
+            type: string
+            maxLength: 40
+          ground_elev:
+            type: number
+            format: decimal
+          ground_elev_ouom:
+            type: string
+            maxLength: 40
+          ground_elev_type:
+            type: string
+            maxLength: 40
+          initial_class:
+            type: string
+            maxLength: 40
+          kb_elev:
+            type: number
+            format: decimal
+          kb_elev_ouom:
+            type: string
+            maxLength: 40
+          lease_name:
+            type: string
+            maxLength: 255
+          lease_num:
+            type: string
+            maxLength: 20
+          legal_survey_type:
+            type: string
+            maxLength: 40
+          location_type:
+            type: string
+            maxLength: 40
+          log_td:
+            type: number
+            format: decimal
+          log_td_ouom:
+            type: string
+            maxLength: 40
+          max_tvd:
+            type: number
+            format: decimal
+          max_tvd_ouom:
+            type: string
+            maxLength: 40
+          net_pay:
+            type: number
+            format: decimal
+          net_pay_ouom:
+            type: string
+            maxLength: 40
+          oldest_strat_age:
+            type: string
+            maxLength: 40
+          oldest_strat_name_set_age:
+            type: string
+            maxLength: 40
+          oldest_strat_name_set_id:
+            type: string
+            maxLength: 40
+          oldest_strat_unit_id:
+            type: string
+            maxLength: 40
+          operator:
+            type: string
+            maxLength: 40
+          platform_id:
+            type: string
+            maxLength: 40
+          platform_sf_subtype:
+            type: string
+            maxLength: 30
+          plot_name:
+            type: string
+            maxLength: 255
+          plot_symbol:
+            type: string
+            maxLength: 40
+          plugback_depth:
+            type: number
+            format: decimal
+          plugback_depth_ouom:
+            type: string
+            maxLength: 40
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          primary_source:
+            type: string
+            maxLength: 40
+          profile_type:
+            type: string
+            maxLength: 40
+          regulatory_agency:
+            type: string
+            maxLength: 40
+          remark:
+            type: string
+            maxLength: 2000
+          rig_on_site_date:
+            type: string
+          rig_release_date:
+            type: string
+          rotary_table_elev:
+            type: number
+            format: decimal
+          rotary_table_elev_ouom:
+            type: string
+            maxLength: 40
+          source_document_id:
+            type: string
+            maxLength: 40
+          spud_date:
+            type: string
+          status_type:
+            type: string
+            maxLength: 40
+          subsea_elev_ref_type:
+            type: string
+            maxLength: 40
+          surface_latitude:
+            type: number
+            format: decimal
+          surface_longitude:
+            type: number
+            format: decimal
+          surface_node_id:
+            type: string
+            maxLength: 40
+          tax_credit_code:
+            type: string
+            maxLength: 40
+          td_strat_age:
+            type: string
+            maxLength: 40
+          td_strat_name_set_age:
+            type: string
+            maxLength: 40
+          td_strat_name_set_id:
+            type: string
+            maxLength: 40
+          td_strat_unit_id:
+            type: string
+            maxLength: 40
+          top_depth:
+            type: number
+            format: decimal
+          top_depth_ouom:
+            type: string
+            maxLength: 40
+          top_strat_name_set_id:
+            type: string
+            maxLength: 40
+          top_strat_unit_id:
+            type: string
+            maxLength: 40
+          water_acoustic_vel:
+            type: number
+            format: decimal
+          water_acoustic_vel_ouom:
+            type: string
+            maxLength: 40
+          water_depth:
+            type: number
+            format: decimal
+          water_depth_datum:
+            type: string
+            maxLength: 40
+          water_depth_ouom:
+            type: string
+            maxLength: 40
+          well_event_num:
+            type: string
+            maxLength: 4
+          well_government_id:
+            type: string
+            maxLength: 40
+          well_intersect_md:
+            type: number
+            format: decimal
+          well_level_type:
+            type: string
+            maxLength: 40
+          well_name:
+            type: string
+            maxLength: 255
+          well_num:
+            type: string
+            maxLength: 20
+          whipstock_depth:
+            type: number
+            format: decimal
+          whipstock_depth_ouom:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    rm_information_item:
+      type: array
+      items:
+        type: object
+        properties:
+          info_item_subtype:
+            type: string
+            maxLength: 30
+          information_item_id:
+            type: string
+            maxLength: 40
+          abstract:
+            type: string
+            maxLength: 2000
+          accepted_date:
+            type: string
+          access_condition:
+            type: string
+            maxLength: 2000
+          active_ind:
+            type: string
+            maxLength: 1
+          available_date:
+            type: string
+          coord_acquisition_id:
+            type: string
+            maxLength: 40
+          copyright_date:
+            type: string
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          geog_coord_system_id:
+            type: string
+            maxLength: 40
+          group_ind:
+            type: string
+            maxLength: 1
+          issue_date:
+            type: string
+          item_category:
+            type: string
+            maxLength: 40
+          item_sub_category:
+            type: string
+            maxLength: 40
+          local_coord_system_id:
+            type: string
+            maxLength: 40
+          map_coord_system_id:
+            type: string
+            maxLength: 40
+          max_latitude:
+            type: number
+            format: decimal
+          max_longitude:
+            type: number
+            format: decimal
+          min_latitude:
+            type: number
+            format: decimal
+          min_longitude:
+            type: number
+            format: decimal
+          modified_date:
+            type: string
+          origin_date:
+            type: string
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          publish_date:
+            type: string
+          purpose:
+            type: string
+            maxLength: 2000
+          reference_num:
+            type: string
+            maxLength: 240
+          remark:
+            type: string
+            maxLength: 2000
+          security_desc:
+            type: string
+            maxLength: 240
+          source:
+            type: string
+            maxLength: 40
+          source_document_id:
+            type: string
+            maxLength: 40
+          submit_date:
+            type: string
+          time_period_desc:
+            type: string
+            maxLength: 240
+          title:
+            type: string
+            maxLength: 240
+          use_condition:
+            type: string
+            maxLength: 2000
+          version_num:
+            type: string
+            maxLength: 30
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    rm_creator:
+      type: array
+      items:
+        type: object
+        properties:
+          info_item_subtype:
+            type: string
+            maxLength: 30
+          information_item_id:
+            type: string
+            maxLength: 40
+          creator_id:
+            type: string
+            maxLength: 40
+          active_ind:
+            type: string
+            maxLength: 1
+          creator_ba_id:
+            type: string
+            maxLength: 40
+          creator_ba_type:
+            type: string
+            maxLength: 40
+          creator_name:
+            type: string
+            maxLength: 255
+          creator_type:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          first_name:
+            type: string
+            maxLength: 255
+          last_name:
+            type: string
+            maxLength: 255
+          middle_name:
+            type: string
+            maxLength: 255
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    r_media_type:
+      type: array
+      items:
+        type: object
+        properties:
+          media_type:
+            type: string
+            maxLength: 40
+          abbreviation:
+            type: string
+            maxLength: 12
+          active_ind:
+            type: string
+            maxLength: 1
+          digital_capacity:
+            type: number
+            format: decimal
+          digital_capacity_uom:
+            type: string
+            maxLength: 40
+          digital_density:
+            type: number
+            format: decimal
+          digital_density_uom:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          long_name:
+            type: string
+            maxLength: 255
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          short_name:
+            type: string
+            maxLength: 30
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    r_document_type:
+      type: array
+      items:
+        type: object
+        properties:
+          document_type:
+            type: string
+            maxLength: 40
+          abbreviation:
+            type: string
+            maxLength: 12
+          active_ind:
+            type: string
+            maxLength: 1
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          long_name:
+            type: string
+            maxLength: 255
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          short_name:
+            type: string
+            maxLength: 30
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    r_item_category:
+      type: array
+      items:
+        type: object
+        properties:
+          item_category:
+            type: string
+            maxLength: 40
+          abbreviation:
+            type: string
+            maxLength: 12
+          active_ind:
+            type: string
+            maxLength: 1
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          long_name:
+            type: string
+            maxLength: 255
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          retention_period:
+            type: string
+            maxLength: 40
+          short_name:
+            type: string
+            maxLength: 30
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    r_item_sub_category:
+      type: array
+      items:
+        type: object
+        properties:
+          item_category:
+            type: string
+            maxLength: 40
+          item_sub_category:
+            type: string
+            maxLength: 40
+          abbreviation:
+            type: string
+            maxLength: 12
+          active_ind:
+            type: string
+            maxLength: 1
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          long_name:
+            type: string
+            maxLength: 255
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          retention_period:
+            type: string
+            maxLength: 40
+          short_name:
+            type: string
+            maxLength: 30
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    rm_physical_item:
+      type: array
+      items:
+        type: object
+        properties:
+          physical_item_id:
+            type: string
+            maxLength: 40
+          active_ind:
+            type: string
+            maxLength: 1
+          bar_code:
+            type: string
+            maxLength: 240
+          catalogue_by_name:
+            type: string
+            maxLength: 255
+          catalogue_date:
+            type: string
+          certified_true_copy_ind:
+            type: string
+            maxLength: 1
+          circulation_allowed_ind:
+            type: string
+            maxLength: 1
+          circulation_out_ind:
+            type: string
+            maxLength: 1
+          color_format:
+            type: string
+            maxLength: 40
+          create_date:
+            type: string
+          digital_format:
+            type: string
+            maxLength: 40
+          digital_size:
+            type: number
+            format: double
+          digital_size_uom:
+            type: string
+            maxLength: 40
+          dim_height:
+            type: number
+            format: decimal
+          dim_height_uom:
+            type: string
+            maxLength: 40
+          dim_length:
+            type: number
+            format: decimal
+          dim_length_uom:
+            type: string
+            maxLength: 40
+          dim_weight:
+            type: number
+            format: decimal
+          dim_weight_uom:
+            type: string
+            maxLength: 40
+          dim_width:
+            type: number
+            format: decimal
+          dim_width_uom:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          file_count:
+            type: integer
+          group_ind:
+            type: string
+            maxLength: 1
+          image_resolution_uom:
+            type: string
+            maxLength: 40
+          image_x_resolution:
+            type: number
+            format: decimal
+          image_y_resolution:
+            type: number
+            format: decimal
+          item_category:
+            type: string
+            maxLength: 40
+          item_sub_category:
+            type: string
+            maxLength: 40
+          label:
+            type: string
+            maxLength: 30
+          language:
+            type: string
+            maxLength: 40
+          last_condition:
+            type: string
+            maxLength: 40
+          location_reference:
+            type: string
+            maxLength: 240
+          media_type:
+            type: string
+            maxLength: 40
+          original_file_name:
+            type: string
+            maxLength: 255
+          original_ind:
+            type: string
+            maxLength: 1
+          output_file_name:
+            type: string
+            maxLength: 255
+          page_count:
+            type: number
+            format: decimal
+          physical_item_status:
+            type: string
+            maxLength: 40
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          preferred_ind:
+            type: string
+            maxLength: 1
+          qc_by_name:
+            type: string
+            maxLength: 255
+          remark:
+            type: string
+            maxLength: 2000
+          retention_period:
+            type: string
+            maxLength: 40
+          sale_allowed_ind:
+            type: string
+            maxLength: 1
+          source:
+            type: string
+            maxLength: 40
+          store_id:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    anl_accuracy:
+      type: array
+      items:
+        type: object
+        properties:
+          analysis_id:
+            type: string
+            maxLength: 40
+          anl_source:
+            type: string
+            maxLength: 40
+          accuracy_obs_no:
+            type: integer
+          accuracy_desc:
+            type: string
+            maxLength: 240
+          accuracy_type:
+            type: string
+            maxLength: 40
+          active_ind:
+            type: string
+            maxLength: 1
+          calculated_ind:
+            type: string
+            maxLength: 1
+          calculate_method_id:
+            type: string
+            maxLength: 40
+          confidence_type:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          measured_value_ind:
+            type: string
+            maxLength: 1
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          raw_value_ind:
+            type: string
+            maxLength: 1
+          referenced_column_name:
+            type: string
+            maxLength: 30
+          referenced_ppdm_guid:
+            type: string
+            maxLength: 38
+          referenced_system_id:
+            type: string
+            maxLength: 40
+          referenced_table_name:
+            type: string
+            maxLength: 30
+          remark:
+            type: string
+            maxLength: 2000
+          repeatability_type:
+            type: string
+            maxLength: 40
+          reported_ind:
+            type: string
+            maxLength: 1
+          source:
+            type: string
+            maxLength: 40
+          step_seq_no:
+            type: integer
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    rm_data_store:
+      type: array
+      items:
+        type: object
+        properties:
+          store_id:
+            type: string
+            maxLength: 40
+          active_ind:
+            type: string
+            maxLength: 1
+          address_obs_no:
+            type: integer
+          address_source:
+            type: string
+            maxLength: 40
+          business_associate_id:
+            type: string
+            maxLength: 40
+          contained_by_store_id:
+            type: string
+            maxLength: 40
+          data_store_hier_id:
+            type: string
+            maxLength: 40
+          data_store_name:
+            type: string
+            maxLength: 255
+          data_store_type:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          hier_level_id:
+            type: string
+            maxLength: 40
+          location_id:
+            type: string
+            maxLength: 40
+          long_location:
+            type: string
+            maxLength: 40
+          physical_store_status:
+            type: string
+            maxLength: 40
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          short_location:
+            type: string
+            maxLength: 40
+          source:
+            type: string
+            maxLength: 40
+          total_capacity:
+            type: integer
+          used_capacity:
+            type: integer
+          used_capacity_date:
+            type: string
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    r_source:
+      type: array
+      items:
+        type: object
+        properties:
+          source:
+            type: string
+            maxLength: 40
+          abbreviation:
+            type: string
+            maxLength: 12
+          active_ind:
+            type: string
+            maxLength: 1
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          long_name:
+            type: string
+            maxLength: 255
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          remark:
+            type: string
+            maxLength: 2000
+          row_source:
+            type: string
+            maxLength: 40
+          short_name:
+            type: string
+            maxLength: 30
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+    ppdm_quality_control:
+      type: array
+      items:
+        type: object
+        properties:
+          system_id:
+            type: string
+            maxLength: 40
+          table_name:
+            type: string
+            maxLength: 30
+          qc_seq_no:
+            type: integer
+          active_ind:
+            type: string
+            maxLength: 1
+          checked_by_ba_id:
+            type: string
+            maxLength: 40
+          column_name:
+            type: string
+            maxLength: 30
+          current_date_value:
+            type: string
+          current_numeric_value:
+            type: number
+            format: double
+          current_numeric_value_ouom:
+            type: string
+            maxLength: 40
+          current_numeric_value_uom:
+            type: string
+            maxLength: 40
+          current_row_guid:
+            type: string
+            maxLength: 38
+          current_text_value:
+            type: string
+            maxLength: 2000
+          data_type:
+            type: string
+            maxLength: 40
+          done_by_ba_id:
+            type: string
+            maxLength: 40
+          effective_date:
+            type: string
+          expiry_date:
+            type: string
+          null_description:
+            type: string
+            maxLength: 1024
+          ppdm_guid:
+            type: string
+            maxLength: 38
+          qc_datetime:
+            type: string
+          qc_desc:
+            type: string
+            maxLength: 1024
+          qc_status:
+            type: string
+            maxLength: 40
+          qc_type:
+            type: string
+            maxLength: 40
+          quality_type:
+            type: string
+            maxLength: 40
+          remark:
+            type: string
+            maxLength: 2000
+          retention_period:
+            type: string
+            maxLength: 40
+          source:
+            type: string
+            maxLength: 40
+          row_changed_by:
+            type: string
+            maxLength: 30
+          row_changed_date:
+            type: string
+          row_created_by:
+            type: string
+            maxLength: 30
+          row_created_date:
+            type: string
+          row_effective_date:
+            type: string
+          row_expiry_date:
+            type: string
+          row_quality:
+            type: string
+            maxLength: 40
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

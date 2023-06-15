@@ -1,0 +1,345 @@
+/well-tubular:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_tubular
+    responses:
+      '200':
+        description: get well_tubular data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              tubing_type: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              cat_equip_id: Lorem Ipsum
+              collar_type: Lorem Ipsum
+              coupling_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              equipment_id: Lorem Ipsum
+              expiry_date: 12/12/2023
+              hole_size: 1.0
+              hole_size_ouom: Lorem Ipsum
+              hung_top_depth: 0.1
+              hung_top_depth_ouom: Lorem Ipsum
+              inside_diameter: 0.1
+              inside_diameter_ouom: Lorem Ipsum
+              left_in_hole_length: 0.1
+              left_in_hole_length_ouom: Lorem Ipsum
+              liner_type: Lorem Ipsum
+              manufacturer_ba_id: Lorem Ipsum
+              mixed_string_ind: y
+              observation_date: 12/12/2023
+              outside_diameter: 0.1
+              outside_diameter_desc: Lorem Ipsum
+              outside_diameter_ouom: Lorem Ipsum
+              packer_set_depth: 0.1
+              packer_set_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              pulled_length: 0.1
+              pulled_length_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_base_tvd: 0.1
+              reported_base_tvd_ouom: Lorem Ipsum
+              reported_top_tvd: 0.1
+              reported_top_tvd_ouom: Lorem Ipsum
+              sea_floor_penetration: 0.1
+              sea_floor_penetration_ouom: Lorem Ipsum
+              shoe_depth: 0.1
+              shoe_depth_ouom: Lorem Ipsum
+              steel_spec: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              torque: 0.1
+              torque_ouom: Lorem Ipsum
+              tubing_density: 0.1
+              tubing_density_ouom: Lorem Ipsum
+              tubing_grade: Lorem Ipsum
+              tubing_strength: 0.1
+              tubing_strength_ouom: Lorem Ipsum
+              tubing_weight: 0.1
+              tubing_weight_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_tubular
+    description: Create a new well_tubular data
+    requestBody:
+      required: true
+      description: Request body to create well_tubular data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_tubular'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            tubing_type: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            cat_equip_id: Lorem Ipsum
+            collar_type: Lorem Ipsum
+            coupling_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            hole_size: 1.0
+            hole_size_ouom: Lorem Ipsum
+            hung_top_depth: 0.1
+            hung_top_depth_ouom: Lorem Ipsum
+            inside_diameter: 0.1
+            inside_diameter_ouom: Lorem Ipsum
+            left_in_hole_length: 0.1
+            left_in_hole_length_ouom: Lorem Ipsum
+            liner_type: Lorem Ipsum
+            manufacturer_ba_id: Lorem Ipsum
+            mixed_string_ind: y
+            observation_date: 12/12/2023
+            outside_diameter: 0.1
+            outside_diameter_desc: Lorem Ipsum
+            outside_diameter_ouom: Lorem Ipsum
+            packer_set_depth: 0.1
+            packer_set_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pulled_length: 0.1
+            pulled_length_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_base_tvd: 0.1
+            reported_base_tvd_ouom: Lorem Ipsum
+            reported_top_tvd: 0.1
+            reported_top_tvd_ouom: Lorem Ipsum
+            sea_floor_penetration: 0.1
+            sea_floor_penetration_ouom: Lorem Ipsum
+            shoe_depth: 0.1
+            shoe_depth_ouom: Lorem Ipsum
+            steel_spec: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            tubing_density: 0.1
+            tubing_density_ouom: Lorem Ipsum
+            tubing_grade: Lorem Ipsum
+            tubing_strength: 0.1
+            tubing_strength_ouom: Lorem Ipsum
+            tubing_weight: 0.1
+            tubing_weight_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_tubular data is added
+        content:
+          application/json:
+            example:
+              message: The well_tubular data was successfully added
+/well-tubular/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_tubular data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_tubular data
+    description: Update a new well_tubular data
+    requestBody:
+      required: true
+      description: Request body to update well_tubular data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_tubular'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            tubing_type: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            cat_equip_id: Lorem Ipsum
+            collar_type: Lorem Ipsum
+            coupling_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            hole_size: 1.0
+            hole_size_ouom: Lorem Ipsum
+            hung_top_depth: 0.1
+            hung_top_depth_ouom: Lorem Ipsum
+            inside_diameter: 0.1
+            inside_diameter_ouom: Lorem Ipsum
+            left_in_hole_length: 0.1
+            left_in_hole_length_ouom: Lorem Ipsum
+            liner_type: Lorem Ipsum
+            manufacturer_ba_id: Lorem Ipsum
+            mixed_string_ind: y
+            observation_date: 12/12/2023
+            outside_diameter: 0.1
+            outside_diameter_desc: Lorem Ipsum
+            outside_diameter_ouom: Lorem Ipsum
+            packer_set_depth: 0.1
+            packer_set_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pulled_length: 0.1
+            pulled_length_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_base_tvd: 0.1
+            reported_base_tvd_ouom: Lorem Ipsum
+            reported_top_tvd: 0.1
+            reported_top_tvd_ouom: Lorem Ipsum
+            sea_floor_penetration: 0.1
+            sea_floor_penetration_ouom: Lorem Ipsum
+            shoe_depth: 0.1
+            shoe_depth_ouom: Lorem Ipsum
+            steel_spec: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            tubing_density: 0.1
+            tubing_density_ouom: Lorem Ipsum
+            tubing_grade: Lorem Ipsum
+            tubing_strength: 0.1
+            tubing_strength_ouom: Lorem Ipsum
+            tubing_weight: 0.1
+            tubing_weight_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_tubular data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_tubular data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_tubular data
+    description: Update a new well_tubular data
+    requestBody:
+      required: true
+      description: Request body to update well_tubular data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_tubular'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            tubing_type: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            cat_equip_id: Lorem Ipsum
+            collar_type: Lorem Ipsum
+            coupling_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            hole_size: 1.0
+            hole_size_ouom: Lorem Ipsum
+            hung_top_depth: 0.1
+            hung_top_depth_ouom: Lorem Ipsum
+            inside_diameter: 0.1
+            inside_diameter_ouom: Lorem Ipsum
+            left_in_hole_length: 0.1
+            left_in_hole_length_ouom: Lorem Ipsum
+            liner_type: Lorem Ipsum
+            manufacturer_ba_id: Lorem Ipsum
+            mixed_string_ind: y
+            observation_date: 12/12/2023
+            outside_diameter: 0.1
+            outside_diameter_desc: Lorem Ipsum
+            outside_diameter_ouom: Lorem Ipsum
+            packer_set_depth: 0.1
+            packer_set_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pulled_length: 0.1
+            pulled_length_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_base_tvd: 0.1
+            reported_base_tvd_ouom: Lorem Ipsum
+            reported_top_tvd: 0.1
+            reported_top_tvd_ouom: Lorem Ipsum
+            sea_floor_penetration: 0.1
+            sea_floor_penetration_ouom: Lorem Ipsum
+            shoe_depth: 0.1
+            shoe_depth_ouom: Lorem Ipsum
+            steel_spec: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            tubing_density: 0.1
+            tubing_density_ouom: Lorem Ipsum
+            tubing_grade: Lorem Ipsum
+            tubing_strength: 0.1
+            tubing_strength_ouom: Lorem Ipsum
+            tubing_weight: 0.1
+            tubing_weight_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_tubular data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_tubular data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_tubular data
+    description: Delete well_tubular data
+    responses:
+      '200':
+        description: well_tubular data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_tubular data was successfully deleted

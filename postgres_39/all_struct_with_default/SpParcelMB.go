@@ -1,0 +1,51 @@
+package dto
+
+type Sp_parcel_m_b struct {
+	Spatial_description_id string   `json:"spatial_description_id" default:"source"`
+	Spatial_obs_no         int      `json:"spatial_obs_no" default:"1"`
+	M_b_id                 string   `json:"m_b_id" default:"source"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Description            *string  `json:"description" default:""`
+	Dls_road_allowance_id  *string  `json:"dls_road_allowance_id" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Ew_direction           *string  `json:"ew_direction" default:""`
+	Ew_distance            *float64 `json:"ew_distance" default:""`
+	Ew_distance_ouom       *string  `json:"ew_distance_ouom" default:""`
+	Ew_start_line          *string  `json:"ew_start_line" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Inactivation_date      *string  `json:"inactivation_date" default:""`
+	Local_coord_system_id  *string  `json:"local_coord_system_id" default:""`
+	Location_type          *string  `json:"location_type" default:""`
+	Ns_direction           *string  `json:"ns_direction" default:""`
+	Ns_distance            *float64 `json:"ns_distance" default:""`
+	Ns_distance_ouom       *string  `json:"ns_distance_ouom" default:""`
+	Ns_start_line          *string  `json:"ns_start_line" default:""`
+	Orientation            *string  `json:"orientation" default:""`
+	Parcel_carter_id       *string  `json:"parcel_carter_id" default:""`
+	Parcel_congress_id     *string  `json:"parcel_congress_id" default:""`
+	Parcel_dls_id          *string  `json:"parcel_dls_id" default:""`
+	Parcel_fps_id          *string  `json:"parcel_fps_id" default:""`
+	Parcel_libya_id        *string  `json:"parcel_libya_id" default:""`
+	Parcel_lot_id          *string  `json:"parcel_lot_id" default:""`
+	Parcel_lot_num         *string  `json:"parcel_lot_num" default:""`
+	Parcel_lot_type        *string  `json:"parcel_lot_type" default:""`
+	Parcel_ne_loc_id       *string  `json:"parcel_ne_loc_id" default:""`
+	Parcel_north_sea_id    *string  `json:"parcel_north_sea_id" default:""`
+	Parcel_nts_id          *string  `json:"parcel_nts_id" default:""`
+	Parcel_offshore_id     *string  `json:"parcel_offshore_id" default:""`
+	Parcel_ohio_id         *string  `json:"parcel_ohio_id" default:""`
+	Parcel_pbl_id          *string  `json:"parcel_pbl_id" default:""`
+	Parcel_texas_id        *string  `json:"parcel_texas_id" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Reference_loc          *string  `json:"reference_loc" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Source                 *string  `json:"source" default:""`
+	Surface_loc            *string  `json:"surface_loc" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

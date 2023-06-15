@@ -1,0 +1,221 @@
+/seis-well:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_well
+    responses:
+      '200':
+        description: get seis_well data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              active_ind: y
+              checkshot_survey_type: Lorem Ipsum
+              checkshot_velocity: 0.1
+              checkshot_velocity_ouom: Lorem Ipsum
+              depth_datum: Lorem Ipsum
+              depth_datum_elev: 0.1
+              depth_datum_elev_ouom: Lorem Ipsum
+              dir_survey_id: Lorem Ipsum
+              dir_survey_source: Lorem Ipsum
+              dir_survey_uwi: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              receiver_uwi: Lorem Ipsum
+              remark: Lorem Ipsum
+              seismic_path: Lorem Ipsum
+              source: Lorem Ipsum
+              source_uwi: Lorem Ipsum
+              survey_id: Lorem Ipsum
+              survey_run_num: Lorem Ipsum
+              vsp_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_well
+    description: Create a new seis_well data
+    requestBody:
+      required: true
+      description: Request body to create seis_well data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_well'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            checkshot_survey_type: Lorem Ipsum
+            checkshot_velocity: 0.1
+            checkshot_velocity_ouom: Lorem Ipsum
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            dir_survey_id: Lorem Ipsum
+            dir_survey_source: Lorem Ipsum
+            dir_survey_uwi: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            receiver_uwi: Lorem Ipsum
+            remark: Lorem Ipsum
+            seismic_path: Lorem Ipsum
+            source: Lorem Ipsum
+            source_uwi: Lorem Ipsum
+            survey_id: Lorem Ipsum
+            survey_run_num: Lorem Ipsum
+            vsp_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_well data is added
+        content:
+          application/json:
+            example:
+              message: The seis_well data was successfully added
+/seis-well/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_well data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_well data
+    description: Update a new seis_well data
+    requestBody:
+      required: true
+      description: Request body to update seis_well data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_well'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            checkshot_survey_type: Lorem Ipsum
+            checkshot_velocity: 0.1
+            checkshot_velocity_ouom: Lorem Ipsum
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            dir_survey_id: Lorem Ipsum
+            dir_survey_source: Lorem Ipsum
+            dir_survey_uwi: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            receiver_uwi: Lorem Ipsum
+            remark: Lorem Ipsum
+            seismic_path: Lorem Ipsum
+            source: Lorem Ipsum
+            source_uwi: Lorem Ipsum
+            survey_id: Lorem Ipsum
+            survey_run_num: Lorem Ipsum
+            vsp_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_well data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_well data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_well data
+    description: Update a new seis_well data
+    requestBody:
+      required: true
+      description: Request body to update seis_well data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_well'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            checkshot_survey_type: Lorem Ipsum
+            checkshot_velocity: 0.1
+            checkshot_velocity_ouom: Lorem Ipsum
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            dir_survey_id: Lorem Ipsum
+            dir_survey_source: Lorem Ipsum
+            dir_survey_uwi: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            receiver_uwi: Lorem Ipsum
+            remark: Lorem Ipsum
+            seismic_path: Lorem Ipsum
+            source: Lorem Ipsum
+            source_uwi: Lorem Ipsum
+            survey_id: Lorem Ipsum
+            survey_run_num: Lorem Ipsum
+            vsp_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_well data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_well data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_well data
+    description: Delete seis_well data
+    responses:
+      '200':
+        description: seis_well data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_well data was successfully deleted

@@ -1,0 +1,265 @@
+/anl-analysis-step:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_analysis_step
+    responses:
+      '200':
+        description: get anl_analysis_step data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              analysis_phase: Lorem Ipsum
+              anl_date: 12/12/2023
+              complete_date: 12/12/2023
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              final_volume: 0.1
+              final_volume_ouom: Lorem Ipsum
+              final_volume_percent: 0.1
+              final_weight: 0.1
+              final_weight_ouom: Lorem Ipsum
+              method_id: Lorem Ipsum
+              method_set_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              problem_ind: y
+              received_date: 12/12/2023
+              recovered_percent: 0.1
+              remark: Lorem Ipsum
+              reported_date: 12/12/2023
+              results_received_date: 12/12/2023
+              results_received_ind: y
+              sample_fraction_type: Lorem Ipsum
+              sample_quality: Lorem Ipsum
+              sample_quality_desc: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              step_completed_ind: y
+              step_desc: Lorem Ipsum
+              step_quality_desc: Lorem Ipsum
+              step_quality_type: Lorem Ipsum
+              step_requested_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_analysis_step
+    description: Create a new anl_analysis_step data
+    requestBody:
+      required: true
+      description: Request body to create anl_analysis_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_step'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_phase: Lorem Ipsum
+            anl_date: 12/12/2023
+            complete_date: 12/12/2023
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_volume: 0.1
+            final_volume_ouom: Lorem Ipsum
+            final_volume_percent: 0.1
+            final_weight: 0.1
+            final_weight_ouom: Lorem Ipsum
+            method_id: Lorem Ipsum
+            method_set_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            received_date: 12/12/2023
+            recovered_percent: 0.1
+            remark: Lorem Ipsum
+            reported_date: 12/12/2023
+            results_received_date: 12/12/2023
+            results_received_ind: y
+            sample_fraction_type: Lorem Ipsum
+            sample_quality: Lorem Ipsum
+            sample_quality_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            step_completed_ind: y
+            step_desc: Lorem Ipsum
+            step_quality_desc: Lorem Ipsum
+            step_quality_type: Lorem Ipsum
+            step_requested_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_analysis_step data is added
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_step data was successfully added
+/anl-analysis-step/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_analysis_step data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_analysis_step data
+    description: Update a new anl_analysis_step data
+    requestBody:
+      required: true
+      description: Request body to update anl_analysis_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_step'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_phase: Lorem Ipsum
+            anl_date: 12/12/2023
+            complete_date: 12/12/2023
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_volume: 0.1
+            final_volume_ouom: Lorem Ipsum
+            final_volume_percent: 0.1
+            final_weight: 0.1
+            final_weight_ouom: Lorem Ipsum
+            method_id: Lorem Ipsum
+            method_set_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            received_date: 12/12/2023
+            recovered_percent: 0.1
+            remark: Lorem Ipsum
+            reported_date: 12/12/2023
+            results_received_date: 12/12/2023
+            results_received_ind: y
+            sample_fraction_type: Lorem Ipsum
+            sample_quality: Lorem Ipsum
+            sample_quality_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            step_completed_ind: y
+            step_desc: Lorem Ipsum
+            step_quality_desc: Lorem Ipsum
+            step_quality_type: Lorem Ipsum
+            step_requested_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_analysis_step data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_step data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_analysis_step data
+    description: Update a new anl_analysis_step data
+    requestBody:
+      required: true
+      description: Request body to update anl_analysis_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_step'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_phase: Lorem Ipsum
+            anl_date: 12/12/2023
+            complete_date: 12/12/2023
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_volume: 0.1
+            final_volume_ouom: Lorem Ipsum
+            final_volume_percent: 0.1
+            final_weight: 0.1
+            final_weight_ouom: Lorem Ipsum
+            method_id: Lorem Ipsum
+            method_set_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            received_date: 12/12/2023
+            recovered_percent: 0.1
+            remark: Lorem Ipsum
+            reported_date: 12/12/2023
+            results_received_date: 12/12/2023
+            results_received_ind: y
+            sample_fraction_type: Lorem Ipsum
+            sample_quality: Lorem Ipsum
+            sample_quality_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            step_completed_ind: y
+            step_desc: Lorem Ipsum
+            step_quality_desc: Lorem Ipsum
+            step_quality_type: Lorem Ipsum
+            step_requested_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_analysis_step data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_analysis_step data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_analysis_step data
+    description: Delete anl_analysis_step data
+    responses:
+      '200':
+        description: anl_analysis_step data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_step data was successfully deleted

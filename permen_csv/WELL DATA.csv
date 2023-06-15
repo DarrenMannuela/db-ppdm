@@ -1,0 +1,188 @@
+ELEMEN INFORMASI YANG DISERAHKAN DALAM WELL DATA,
+BA_LONG_NAME,The legal name of a business associate. (that which has been registered with a corporate registry).
+,Nama Badan Hukum Pemilik Sumur seperti yang tercatat di badan resmi pencatatan badan hukum.
+,Contoh: PT PERTAMINA EP
+BA_TYPE,"The type of business associate. Usual reference values include COMPANY, PERSON, REGULATORY, SOCIETY, ASSOCIATION. Use the BA CATEGORY to further categorize this information."
+,"Type dari entitas bisnis: BADAN USAHA, BENTUK USAHA TETAP, UNIVERSITAS, UNIT PELAKSANA."
+,Contoh: BADAN USAHA
+AREA_ID,"Identifier for any named area such as a country, province, project area, area of interest, offshore area, district etc."
+,Nama wilayah kerja sesuai dengan kontrak kerjasama antara KKKS dengan SKK Migas. 
+,Contoh: PERTAMINA EP
+AREA_TYPE,"Unique identifier for the type of area, such as country, state, AOI etc."
+,Identifikasi unik untuk wilayah kerja: WILAYAH KERJA.
+,Contoh: WILAYAH KERJA
+FIELD_NAME,Legal or common given name of the field
+,Nama lapangan yang diberikan sesuai dokumen POD pertama yang disahkan oleh menteri ESDM yang diterbitkan oleh SKK Migas (diisi jika sudah ada POD).
+,Contoh: BUNYU
+WELL_NAME,Name assigned to the well. This may be the legal or registered name as it appears on permit or a given name assigned by the operator.
+,Nama yang ditetapkan untuk Sumur. Nama Sumur  ini adalah nama yang terdaftar secara legal.
+,Contoh: BN-17
+ALIAS_LONG_NAME,"Full alias name or code assigned to a well by a partner, agency or application."
+,Nama alias dari Well.
+,Contoh: BUNYU_NIBUNG-017
+UWI,"A unique name, code or number designated as the primary key for this row"
+,Kode unik formal dari Sumur yang diberikan oleh SKK Migas.
+,Contoh: -
+STATUS_TYPE,The type of status reported for the well. These should include the facet values from Well Status https://ppdm.org/ppdm/PPDM/Standards/Well_Status_Classification/PPDM/Well_Status_Classification
+,Status terakhir dari Sumur.
+,Contoh: GAS
+CURRENT_CLASS,"A reference table identifying the classification of a well commonly based on the Lahee system. For example New Field Wildcat, Deeper Pool Test, Outpost or Development."
+,"Daftar dari type well: NEW FIELD WILDCAT, DEEPER POOL TEST, OUTPOST ATAU DEVELOPMENT (DAN LAIN-LAIN)."
+,Contoh: DEVELOPMENT
+WELL_LEVEL_TYPE,"WELL LEVEL TYPE: Indicates which well component this row describes, as outlined in www.WhatIsAWell.org. Values may include WELL, WELL ORIGIN, WELLBORE, WELLBORE SEGMENT, WELLBORE COMPLETION or WELLBORE CONTACT INTERVAL. UNKNOWN may be used if the type of component is not known. Well Sets should be loaded into WELL_SET. WELLHEAD STREAM is mapped into FACILITY. "
+,"Type dari konfigurasi well :ORIGINAL HOLE, WELLBORE (SIDETRACKED atau DEEPENING)."
+,Contoh : WELL 
+PROFILE_TYPE,"A reference table describing a type of wellbore shape. For example vertical, horizontal, directional or s-shaped."
+,"Type dari Wellbore: VERTICAL, HORIZONTAL, DIRECTIONAL ATAU S-SHAPED."
+,Contoh: VERTICAL
+PROJECTED_STRAT_UNIT_ID,Unique identifier for the stratigraphic unit that is proposed for completion and production (or injection). 
+,Nama Unit Stratigraphic yang menjadi objective sumur seperti yang tertulis dalam dokumen resmi yang diajukan ke SKK Migas (bisa diisi dengan Primer dan sekunder objective).
+,Contoh: LAPISAN R-50 & U-80 (DUMMY)
+SURFACE_LONGITUDE,"Angular distance in decimal degrees, east or west of the prime meridian of the geodetic datum. A negative value represents a west longitude. (denormalized from the well node table)"
+,"Derajat desimal bujur dari Well surface: OPTIONAL (dengan format penulisan presisi 6 angka dibelakang koma, nilai positif/+ menunjukan Bujur Timur, nilai negative/- menunjukan Bujur Barat)."
+,"Contoh: +117,850080 "
+SURFACE_LATITUDE,"Angular distance in decimal degrees, north or south of the equator. A positive value represents a north latitude. (denormalized from the well node table)"
+,"Derajat desimal lintang dari Well surface: OPTIONAL (dengan format penulisan presisi 6 angka dibelakang koma, nilai positif/+ menunjukan Lintang Utara, nilai negative/- menunjukan Lintang Selatan). "
+,"Contoh: +3,487219"
+EASTING,The X coordinates for the node with respect to the point of origin of the specified map projection.
+,Koordinate X dari Sumur (dituliskan dengan akurasi 3 digit dibelakang koma).
+,"Contoh: 11976,324"
+EASTING_OUOM,Original unit of measure for the Easting value.
+,Unit dari Easting. 
+,Contoh: m
+NORTHING,The Y coordinates for the node location with respect to the point of origin of the specified map projection.
+,Koordinate Y dari Sumur (dituliskan dengan akurasi 3 digit dibelakang koma).
+,"Contoh: 5299,819"
+NORTHING_OUOM,Original unit of measure for the Northing value.
+,Unit dari Northing. 
+,Contoh: m
+UTM_QUADRANT,"Number identifying the alpha UTM quadrant, UTM zone number, and UTM numeric quadrant (e.g., NG15-2)."
+,UTM Zone dimana posisi Sumur berada.
+,Contoh: 50N
+PROJECTION_TYPE,"A reference table identifying valid classifications of projections used by individual map projections. For example, Mercator, Lambert, Polyconic,"
+,Nama dari system proyeksi: UTM.
+,Contoh: UTM
+GEODETIC_DATUM_NAME,Common name given to the geodetic datum.
+,Nama dari datum. 
+,Contoh: WGS-84
+ENVIRONMENT_TYPE,"The type of environment that the well is in, such as land, marine, transition zone etc."
+,"Tempat Sumur berada: LAND, MARINE, TRANSITION."
+,Contoh: LAND
+LINE_NAME,Authorized or preferred version of the line name to be used for reporting and mapping
+,"Nama Lintasan seismik yang dijadikan referensi pengeboran sesuai dengan dokumen resmi yang diajukan ke SKK Migas, dengan format: YYYY (Tahun akuisisi) XXXX … (Area)-123 (Nomor lintasan)."
+,Contoh: 2005BUNYU-002
+SEIS_POINT_ID,Unique identifier for each seismic point.
+,Nomor titik tembak lintasan seismik terdekat terhadap sumur.
+,"Contoh: 1255,50 (DUMMY)"
+SPUD_DATE,Date the drilling operations commenced on the well. The first day hole is made.
+,Tanggal dimulainya pengeboran dalam dokumen resmi yang dilaporkan ke SKK Migas.
+,Contoh: 14/12/2006
+FINAL_DRILL_DATE,Date the drilling operations for the well were finalized.
+,Tanggal dimana pemboran mencapai kedalaman akhir dalam dokumen resmi yang dilaporkan ke SKK Migas.
+,Contoh: 23/02/2007
+COMPLETION_DATE,"Date on the official filing or completion report indicating the well is established as ready to produce, inject or abandon."
+,Tanggal akhir penyelesaian pengeboran seperti dilaporkan dalam completion report yang dilaporkan ke SKK Migas.
+,Contoh: 17/03/2007
+ROTARY_TABLE_ELEV,The elevation of the rotary table.
+,Ketinggian Rotary Table. 
+,"Contoh: 46,51"
+ROTARY_TABLE_ELEV_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+KB_ELEV,The elevation of the kelly bushing (generally measured from sea level)
+,Ketinggian Kelly Bushing dari DPL (di Atas Permukaan Air Laut).
+,"Contoh: 47,51"
+KB_ELEV_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+DERRICK_FLOOR_ELEV,Elevations that are reported from the Derrick floor.
+,Ketinggian dari Derrick Floor.
+,"Contoh: 47,21"
+DERRICK_FLOOR_ELEV_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+WATER_DEPTH,Depth of the water at a well (measured from the water level to the mud line).
+,Kedalaman air laut dari dasar sampai permukaan (DPL) untuk sumur Offshore.
+,Contoh: -
+WATER_DEPTH_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+GROUND_ELEV,The elevation of the ground at the well site.
+,Tinggi permukaan tanah terhadap DPL untuk sumur Onshore
+,"Contoh: 38,73"
+GROUND_ELEV_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+DEPTH_DATUM_ELEV,"The point from which all depths are measured. For example: kelly bushing, ground level, barge floor"
+,"Titik Referensi elevasi pengukuran kedalaman sumur: KELLY BUSHING, GROUND LEVEL, BARGE FLOOR."
+,Contoh: KELLY BUSHING
+DRILL_TD,Total or maximum depth of the well as reported by the operator/ driller.
+,Panjang jalur pengeboran termasuk jalur horizontal dan sidetrack yang dilaporkan pada Laporan Pengeboran.
+,Contoh: 3225
+DRILL_TD_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+LOG_TD,Total or maximum depth of the well as measured by the logging tool and reported by the logger/logging service.
+,Kedalaman maksimal pengukuran logging dalam satu sumur.
+,Contoh: 3218
+LOG_TD_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+MAX_TVD,"The maximum true vertical depth from the surface datum reference to the final total depth or deepest point, measured on a straight line."
+,Kedalaman maksimal pengeboran yang diproyeksikan secara vertikal.
+,Contoh: 3225
+MAX_TVD_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+PROJECTED_DEPTH,Projected depth at which the drilling of the wellbore will be terminated.
+,Rencana kedalaman pengeboran seperti tercantum pada proposal drilling.
+,Contoh: 3220
+PROJECTED_DEPTH_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+FINAL_TD,The actual measurement along the well path from the reference datum to the bottom of the well.
+,Kedalaman aktual pengeboran yang diukur dari permukaan referensi datum sampai dasar sumur.
+,Contoh: 3225
+FINAL_TD_OUOM,Original unit of measure
+,Unit pengukuran dalam Meter: m.
+,Contoh: m
+OPERATOR_BA_ID,Unique identifier for the business associate who operates the rig.
+,Nama Badan Hukum yang mengoperasikan Rig seperti yang tercatat di badan resmi pencatatan badan hukum.
+,Contoh: PT MITRAMANDALA NUSABHAKTI
+RIG_NAME,Full name of the rig.
+,Nama Rig seperti yang dilaporkan dalam dokumen resmi ke SKK Migas.
+,Contoh: PRA-01 N1320N 2000HP
+RIG_TYPE,"A reference table describing the type of rig installation. For example land, barge, submersible, platform, jackup, drillship, semisub or artificial island. "
+,"Type dari Rig: LAND, BARGE, SUBMERSIBLE, PLATFORM, JACKUP, DRILLSHIP, SEMISUBMERSIBLE OR ARTIFICIAL GRAVEL ISLAND."
+,Contoh: LAND
+TEST_RESULT_CODE,"Identifies describes, in general terms, the final result of a well test. For example successful, misrun, pipe failure, packer failure or tester plugged."
+,"Hasil dari Test Sumur: SUCCESSFUL, MISRUN, PIPE FAILURE, PACKER FAILURE atau TESTER PLUGGED (DAN LAIN-LAIN)."
+,Contoh: SUCCESSFUL
+REMARK,Narrative remarks about this row of data
+,Keterangan yang ingin ditambahkan tentang sumur. 
+,Contoh: GAS WELL
+SOURCE,"The individual, company, state, or government agency designated as the source of information for this row."
+,Nama Badan Hukum seperti yang tercatat di badan resmi pencatatan badan hukum yang menjadi sumber dari data.
+,Contoh: PT PERTAMINA EP
+QC_STATUS,"A valid type of quality control or validation status, such as batch loaded, visual inspection, verified by data analyst, verified by business analyst etc"
+,Status Validasi: TERVERIFIKASI OLEH SKK MIGAS atau TERVERIFIKASI OLEH DITJEN MIGAS.
+,Contoh: TERVERIFIKASI OLEH SKK MIGAS
+CHECKED_BY_BA_ID,"Unique identifier for the business associate who checked the work done by the data analyst to verify that the quality control has been done correctly. In some cases, this will be a business expert who is reviewing the final contents of a data structure."
+,NIK dari orang yang melakukan verifikasi.
+,Contoh:31XXXXXXXXXXXXXX
+Tabel Isian Parameter Casing Sumur (Well Casing) Yang Digunakan ,
+TUBING_OBS_NO,"Number identifying, in sequence, each change in pipe size"
+,Nomor casing yang berurutan karena perubahan diameter mulai dari paling atas sumur ke bawah. 
+,Contoh: 1
+OUTSIDE_DIAMETER,Measurement of the outside diameter size of the tubular bore/pipe. tubular bore/pipe.
+,Ukuran Diameter dari casing mulai dari casing no 1 sampai ke Nomor terakhir.
+,"Contoh: 76,20"
+OUTSIDE_DIAMETER_OUOM,Outside diameter original unit of measure. 
+,Satuan Diameter luar dari casing dalam Centimeter: cm.
+,Contoh: cm
+BASE_DEPTH,Measured depth from the surface to the base of the drilling pipe
+,Kedalaman paling bawah setiap casing dari permukaan.
+,Contoh: 30
+BASE_DEPTH_OUOM,Base measured depth original unit of measure 
+,Unit pengukuran dalam Meter: m.
+,Contoh: m

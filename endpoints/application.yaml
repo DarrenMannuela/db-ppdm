@@ -1,0 +1,237 @@
+/application:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get application
+    responses:
+      '200':
+        description: get application data to be returned
+        content:
+          application/json:
+            example:
+            - application_id: Lorem Ipsum
+              active_ind: y
+              application_type: Lorem Ipsum
+              contract_id: Lorem Ipsum
+              current_status: Lorem Ipsum
+              decision: Lorem Ipsum
+              decision_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              extension_id: Lorem Ipsum
+              fees_desc: Lorem Ipsum
+              fees_paid_ind: y
+              ppdm_guid: Lorem Ipsum
+              previous_application_id: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              received_date: 12/12/2023
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              resubmission_ind: y
+              section_of_act: Lorem Ipsum
+              section_of_act_date: 12/12/2023
+              source: Lorem Ipsum
+              submission_complete_ind: y
+              submission_desc: Lorem Ipsum
+              submitted_by: Lorem Ipsum
+              submitted_date: 12/12/2023
+              submitted_to: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new application
+    description: Create a new application data
+    requestBody:
+      required: true
+      description: Request body to create application data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/application'
+          example:
+            application_id: Lorem Ipsum
+            active_ind: y
+            application_type: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            current_status: Lorem Ipsum
+            decision: Lorem Ipsum
+            decision_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_id: Lorem Ipsum
+            fees_desc: Lorem Ipsum
+            fees_paid_ind: y
+            ppdm_guid: Lorem Ipsum
+            previous_application_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            received_date: 12/12/2023
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            resubmission_ind: y
+            section_of_act: Lorem Ipsum
+            section_of_act_date: 12/12/2023
+            source: Lorem Ipsum
+            submission_complete_ind: y
+            submission_desc: Lorem Ipsum
+            submitted_by: Lorem Ipsum
+            submitted_date: 12/12/2023
+            submitted_to: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: application data is added
+        content:
+          application/json:
+            example:
+              message: The application data was successfully added
+/application/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of application data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new application data
+    description: Update a new application data
+    requestBody:
+      required: true
+      description: Request body to update application data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/application'
+          example:
+            application_id: Lorem Ipsum
+            active_ind: y
+            application_type: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            current_status: Lorem Ipsum
+            decision: Lorem Ipsum
+            decision_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_id: Lorem Ipsum
+            fees_desc: Lorem Ipsum
+            fees_paid_ind: y
+            ppdm_guid: Lorem Ipsum
+            previous_application_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            received_date: 12/12/2023
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            resubmission_ind: y
+            section_of_act: Lorem Ipsum
+            section_of_act_date: 12/12/2023
+            source: Lorem Ipsum
+            submission_complete_ind: y
+            submission_desc: Lorem Ipsum
+            submitted_by: Lorem Ipsum
+            submitted_date: 12/12/2023
+            submitted_to: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: application data is completely updated
+        content:
+          application/json:
+            example:
+              message: The application data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new application data
+    description: Update a new application data
+    requestBody:
+      required: true
+      description: Request body to update application data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/application'
+          example:
+            application_id: Lorem Ipsum
+            active_ind: y
+            application_type: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            current_status: Lorem Ipsum
+            decision: Lorem Ipsum
+            decision_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_id: Lorem Ipsum
+            fees_desc: Lorem Ipsum
+            fees_paid_ind: y
+            ppdm_guid: Lorem Ipsum
+            previous_application_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            received_date: 12/12/2023
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            resubmission_ind: y
+            section_of_act: Lorem Ipsum
+            section_of_act_date: 12/12/2023
+            source: Lorem Ipsum
+            submission_complete_ind: y
+            submission_desc: Lorem Ipsum
+            submitted_by: Lorem Ipsum
+            submitted_date: 12/12/2023
+            submitted_to: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in application data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in application data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete application data
+    description: Delete application data
+    responses:
+      '200':
+        description: application data is deleted
+        content:
+          application/json:
+            example:
+              message: The application data was successfully deleted

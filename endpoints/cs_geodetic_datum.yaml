@@ -1,0 +1,197 @@
+/cs-geodetic-datum:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cs_geodetic_datum
+    responses:
+      '200':
+        description: get cs_geodetic_datum data to be returned
+        content:
+          application/json:
+            example:
+            - geodetic_datum: Lorem Ipsum
+              active_ind: y
+              datum_origin: Lorem Ipsum
+              effective_date: 12/12/2023
+              ellipsoid_id: Lorem Ipsum
+              expiry_date: 12/12/2023
+              geodetic_datum_area_id: Lorem Ipsum
+              geodetic_datum_area_type: Lorem Ipsum
+              geodetic_datum_name: Lorem Ipsum
+              origin_angular_ouom: Lorem Ipsum
+              origin_latitude: 0.1
+              origin_longitude: 0.1
+              origin_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cs_geodetic_datum
+    description: Create a new cs_geodetic_datum data
+    requestBody:
+      required: true
+      description: Request body to create cs_geodetic_datum data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_geodetic_datum'
+          example:
+            geodetic_datum: Lorem Ipsum
+            active_ind: y
+            datum_origin: Lorem Ipsum
+            effective_date: 12/12/2023
+            ellipsoid_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            geodetic_datum_area_id: Lorem Ipsum
+            geodetic_datum_area_type: Lorem Ipsum
+            geodetic_datum_name: Lorem Ipsum
+            origin_angular_ouom: Lorem Ipsum
+            origin_latitude: 0.1
+            origin_longitude: 0.1
+            origin_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_geodetic_datum data is added
+        content:
+          application/json:
+            example:
+              message: The cs_geodetic_datum data was successfully added
+/cs-geodetic-datum/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cs_geodetic_datum data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cs_geodetic_datum data
+    description: Update a new cs_geodetic_datum data
+    requestBody:
+      required: true
+      description: Request body to update cs_geodetic_datum data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_geodetic_datum'
+          example:
+            geodetic_datum: Lorem Ipsum
+            active_ind: y
+            datum_origin: Lorem Ipsum
+            effective_date: 12/12/2023
+            ellipsoid_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            geodetic_datum_area_id: Lorem Ipsum
+            geodetic_datum_area_type: Lorem Ipsum
+            geodetic_datum_name: Lorem Ipsum
+            origin_angular_ouom: Lorem Ipsum
+            origin_latitude: 0.1
+            origin_longitude: 0.1
+            origin_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_geodetic_datum data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cs_geodetic_datum data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cs_geodetic_datum data
+    description: Update a new cs_geodetic_datum data
+    requestBody:
+      required: true
+      description: Request body to update cs_geodetic_datum data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_geodetic_datum'
+          example:
+            geodetic_datum: Lorem Ipsum
+            active_ind: y
+            datum_origin: Lorem Ipsum
+            effective_date: 12/12/2023
+            ellipsoid_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            geodetic_datum_area_id: Lorem Ipsum
+            geodetic_datum_area_type: Lorem Ipsum
+            geodetic_datum_name: Lorem Ipsum
+            origin_angular_ouom: Lorem Ipsum
+            origin_latitude: 0.1
+            origin_longitude: 0.1
+            origin_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cs_geodetic_datum data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cs_geodetic_datum data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cs_geodetic_datum data
+    description: Delete cs_geodetic_datum data
+    responses:
+      '200':
+        description: cs_geodetic_datum data is deleted
+        content:
+          application/json:
+            example:
+              message: The cs_geodetic_datum data was successfully deleted

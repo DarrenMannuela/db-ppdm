@@ -1,0 +1,181 @@
+/ba-preference:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ba_preference
+    responses:
+      '200':
+        description: get ba_preference data to be returned
+        content:
+          application/json:
+            example:
+            - business_associate_id: Lorem Ipsum
+              preference_type: Lorem Ipsum
+              active_ind: y
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              language: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              sw_application_id: Lorem Ipsum
+              wl_curve_class_id: Lorem Ipsum
+              wl_parameter_class_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ba_preference
+    description: Create a new ba_preference data
+    requestBody:
+      required: true
+      description: Request body to create ba_preference data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ba_preference'
+          example:
+            business_associate_id: Lorem Ipsum
+            preference_type: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            language: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            wl_curve_class_id: Lorem Ipsum
+            wl_parameter_class_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ba_preference data is added
+        content:
+          application/json:
+            example:
+              message: The ba_preference data was successfully added
+/ba-preference/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ba_preference data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ba_preference data
+    description: Update a new ba_preference data
+    requestBody:
+      required: true
+      description: Request body to update ba_preference data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ba_preference'
+          example:
+            business_associate_id: Lorem Ipsum
+            preference_type: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            language: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            wl_curve_class_id: Lorem Ipsum
+            wl_parameter_class_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ba_preference data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ba_preference data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ba_preference data
+    description: Update a new ba_preference data
+    requestBody:
+      required: true
+      description: Request body to update ba_preference data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ba_preference'
+          example:
+            business_associate_id: Lorem Ipsum
+            preference_type: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            language: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            wl_curve_class_id: Lorem Ipsum
+            wl_parameter_class_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ba_preference data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ba_preference data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ba_preference data
+    description: Delete ba_preference data
+    responses:
+      '200':
+        description: ba_preference data is deleted
+        content:
+          application/json:
+            example:
+              message: The ba_preference data was successfully deleted

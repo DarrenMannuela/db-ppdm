@@ -1,0 +1,369 @@
+/pden-material-bal:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get pden_material_bal
+    responses:
+      '200':
+        description: get pden_material_bal data to be returned
+        content:
+          application/json:
+            example:
+            - pden_subtype: Lorem Ipsum
+              pden_id: Lorem Ipsum
+              pden_source: Lorem Ipsum
+              product_type: Lorem Ipsum
+              case_id: Lorem Ipsum
+              active_ind: y
+              case_name: Lorem Ipsum
+              close_month: Lorem Ipsum
+              co2_percent: 0.1
+              critical_press: 0.1
+              critical_press_ouom: Lorem Ipsum
+              critical_temp: 0.1
+              critical_temp_ouom: Lorem Ipsum
+              cum_volume: 0.1
+              cum_volume_date: 12/12/2023
+              cum_volume_date_desc: Lorem Ipsum
+              cum_volume_ouom: Lorem Ipsum
+              cum_volume_uom: Lorem Ipsum
+              curve_fit_error: 0.1
+              curve_fit_type: Lorem Ipsum
+              curve_intercept: 0.1
+              curve_name: Lorem Ipsum
+              curve_slope: 0.1
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              final_cum_volume: 0.1
+              final_cum_volume_ouom: Lorem Ipsum
+              final_cum_volume_uom: Lorem Ipsum
+              final_press: 0.1
+              final_press_ouom: Lorem Ipsum
+              gas_abandon_press: 0.1
+              gas_abandon_press_ouom: Lorem Ipsum
+              gas_abandon_recover: 0.1
+              h2s_percent: 0.1
+              initial_cum_volume: 0.1
+              initial_cum_volume_ouom: Lorem Ipsum
+              initial_cum_volume_uom: Lorem Ipsum
+              initial_press: 0.1
+              initial_press_ouom: Lorem Ipsum
+              initial_temp: 0.1
+              initial_temp_ouom: Lorem Ipsum
+              measured_press_ind: y
+              n2_percent: 0.1
+              orig_gas_in_place: 0.1
+              pool_datum_depth: 0.1
+              pool_datum_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              project_id: Lorem Ipsum
+              recov_gas_in_place: 0.1
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              specific_gravity: 0.1
+              start_date: 12/12/2023
+              surface_loss_percent: 0.1
+              volume: 0.1
+              volume_ouom: Lorem Ipsum
+              volume_uom: Lorem Ipsum
+              zero_press_ind: y
+              z_factor_method: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new pden_material_bal
+    description: Create a new pden_material_bal data
+    requestBody:
+      required: true
+      description: Request body to create pden_material_bal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_material_bal'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            product_type: Lorem Ipsum
+            case_id: Lorem Ipsum
+            active_ind: y
+            case_name: Lorem Ipsum
+            close_month: Lorem Ipsum
+            co2_percent: 0.1
+            critical_press: 0.1
+            critical_press_ouom: Lorem Ipsum
+            critical_temp: 0.1
+            critical_temp_ouom: Lorem Ipsum
+            cum_volume: 0.1
+            cum_volume_date: 12/12/2023
+            cum_volume_date_desc: Lorem Ipsum
+            cum_volume_ouom: Lorem Ipsum
+            cum_volume_uom: Lorem Ipsum
+            curve_fit_error: 0.1
+            curve_fit_type: Lorem Ipsum
+            curve_intercept: 0.1
+            curve_name: Lorem Ipsum
+            curve_slope: 0.1
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_cum_volume: 0.1
+            final_cum_volume_ouom: Lorem Ipsum
+            final_cum_volume_uom: Lorem Ipsum
+            final_press: 0.1
+            final_press_ouom: Lorem Ipsum
+            gas_abandon_press: 0.1
+            gas_abandon_press_ouom: Lorem Ipsum
+            gas_abandon_recover: 0.1
+            h2s_percent: 0.1
+            initial_cum_volume: 0.1
+            initial_cum_volume_ouom: Lorem Ipsum
+            initial_cum_volume_uom: Lorem Ipsum
+            initial_press: 0.1
+            initial_press_ouom: Lorem Ipsum
+            initial_temp: 0.1
+            initial_temp_ouom: Lorem Ipsum
+            measured_press_ind: y
+            n2_percent: 0.1
+            orig_gas_in_place: 0.1
+            pool_datum_depth: 0.1
+            pool_datum_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            recov_gas_in_place: 0.1
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            specific_gravity: 0.1
+            start_date: 12/12/2023
+            surface_loss_percent: 0.1
+            volume: 0.1
+            volume_ouom: Lorem Ipsum
+            volume_uom: Lorem Ipsum
+            zero_press_ind: y
+            z_factor_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_material_bal data is added
+        content:
+          application/json:
+            example:
+              message: The pden_material_bal data was successfully added
+/pden-material-bal/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of pden_material_bal data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new pden_material_bal data
+    description: Update a new pden_material_bal data
+    requestBody:
+      required: true
+      description: Request body to update pden_material_bal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_material_bal'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            product_type: Lorem Ipsum
+            case_id: Lorem Ipsum
+            active_ind: y
+            case_name: Lorem Ipsum
+            close_month: Lorem Ipsum
+            co2_percent: 0.1
+            critical_press: 0.1
+            critical_press_ouom: Lorem Ipsum
+            critical_temp: 0.1
+            critical_temp_ouom: Lorem Ipsum
+            cum_volume: 0.1
+            cum_volume_date: 12/12/2023
+            cum_volume_date_desc: Lorem Ipsum
+            cum_volume_ouom: Lorem Ipsum
+            cum_volume_uom: Lorem Ipsum
+            curve_fit_error: 0.1
+            curve_fit_type: Lorem Ipsum
+            curve_intercept: 0.1
+            curve_name: Lorem Ipsum
+            curve_slope: 0.1
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_cum_volume: 0.1
+            final_cum_volume_ouom: Lorem Ipsum
+            final_cum_volume_uom: Lorem Ipsum
+            final_press: 0.1
+            final_press_ouom: Lorem Ipsum
+            gas_abandon_press: 0.1
+            gas_abandon_press_ouom: Lorem Ipsum
+            gas_abandon_recover: 0.1
+            h2s_percent: 0.1
+            initial_cum_volume: 0.1
+            initial_cum_volume_ouom: Lorem Ipsum
+            initial_cum_volume_uom: Lorem Ipsum
+            initial_press: 0.1
+            initial_press_ouom: Lorem Ipsum
+            initial_temp: 0.1
+            initial_temp_ouom: Lorem Ipsum
+            measured_press_ind: y
+            n2_percent: 0.1
+            orig_gas_in_place: 0.1
+            pool_datum_depth: 0.1
+            pool_datum_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            recov_gas_in_place: 0.1
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            specific_gravity: 0.1
+            start_date: 12/12/2023
+            surface_loss_percent: 0.1
+            volume: 0.1
+            volume_ouom: Lorem Ipsum
+            volume_uom: Lorem Ipsum
+            zero_press_ind: y
+            z_factor_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_material_bal data is completely updated
+        content:
+          application/json:
+            example:
+              message: The pden_material_bal data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new pden_material_bal data
+    description: Update a new pden_material_bal data
+    requestBody:
+      required: true
+      description: Request body to update pden_material_bal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_material_bal'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            product_type: Lorem Ipsum
+            case_id: Lorem Ipsum
+            active_ind: y
+            case_name: Lorem Ipsum
+            close_month: Lorem Ipsum
+            co2_percent: 0.1
+            critical_press: 0.1
+            critical_press_ouom: Lorem Ipsum
+            critical_temp: 0.1
+            critical_temp_ouom: Lorem Ipsum
+            cum_volume: 0.1
+            cum_volume_date: 12/12/2023
+            cum_volume_date_desc: Lorem Ipsum
+            cum_volume_ouom: Lorem Ipsum
+            cum_volume_uom: Lorem Ipsum
+            curve_fit_error: 0.1
+            curve_fit_type: Lorem Ipsum
+            curve_intercept: 0.1
+            curve_name: Lorem Ipsum
+            curve_slope: 0.1
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            final_cum_volume: 0.1
+            final_cum_volume_ouom: Lorem Ipsum
+            final_cum_volume_uom: Lorem Ipsum
+            final_press: 0.1
+            final_press_ouom: Lorem Ipsum
+            gas_abandon_press: 0.1
+            gas_abandon_press_ouom: Lorem Ipsum
+            gas_abandon_recover: 0.1
+            h2s_percent: 0.1
+            initial_cum_volume: 0.1
+            initial_cum_volume_ouom: Lorem Ipsum
+            initial_cum_volume_uom: Lorem Ipsum
+            initial_press: 0.1
+            initial_press_ouom: Lorem Ipsum
+            initial_temp: 0.1
+            initial_temp_ouom: Lorem Ipsum
+            measured_press_ind: y
+            n2_percent: 0.1
+            orig_gas_in_place: 0.1
+            pool_datum_depth: 0.1
+            pool_datum_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            recov_gas_in_place: 0.1
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            specific_gravity: 0.1
+            start_date: 12/12/2023
+            surface_loss_percent: 0.1
+            volume: 0.1
+            volume_ouom: Lorem Ipsum
+            volume_uom: Lorem Ipsum
+            zero_press_ind: y
+            z_factor_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in pden_material_bal data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in pden_material_bal data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete pden_material_bal data
+    description: Delete pden_material_bal data
+    responses:
+      '200':
+        description: pden_material_bal data is deleted
+        content:
+          application/json:
+            example:
+              message: The pden_material_bal data was successfully deleted

@@ -1,0 +1,169 @@
+/resent-product:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get resent_product
+    responses:
+      '200':
+        description: get resent_product data to be returned
+        content:
+          application/json:
+            example:
+            - resent_id: Lorem Ipsum
+              reserve_class_id: Lorem Ipsum
+              product_type: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              report_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new resent_product
+    description: Create a new resent_product data
+    requestBody:
+      required: true
+      description: Request body to create resent_product data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_product'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            product_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_product data is added
+        content:
+          application/json:
+            example:
+              message: The resent_product data was successfully added
+/resent-product/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of resent_product data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new resent_product data
+    description: Update a new resent_product data
+    requestBody:
+      required: true
+      description: Request body to update resent_product data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_product'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            product_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_product data is completely updated
+        content:
+          application/json:
+            example:
+              message: The resent_product data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new resent_product data
+    description: Update a new resent_product data
+    requestBody:
+      required: true
+      description: Request body to update resent_product data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_product'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            product_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in resent_product data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in resent_product data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete resent_product data
+    description: Delete resent_product data
+    responses:
+      '200':
+        description: resent_product data is deleted
+        content:
+          application/json:
+            example:
+              message: The resent_product data was successfully deleted

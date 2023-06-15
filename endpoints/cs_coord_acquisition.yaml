@@ -1,0 +1,193 @@
+/cs-coord-acquisition:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cs_coord_acquisition
+    responses:
+      '200':
+        description: get cs_coord_acquisition data to be returned
+        content:
+          application/json:
+            example:
+            - acquisition_id: Lorem Ipsum
+              acquired_by_ba_id: Lorem Ipsum
+              active_ind: y
+              capture_method: Lorem Ipsum
+              compute_method: Lorem Ipsum
+              coordinate_quality: Lorem Ipsum
+              data_create_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              horizontal_accuracy_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              transform_id: Lorem Ipsum
+              vertical_accuracy: 0.1
+              vertical_accuracy_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cs_coord_acquisition
+    description: Create a new cs_coord_acquisition data
+    requestBody:
+      required: true
+      description: Request body to create cs_coord_acquisition data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coord_acquisition'
+          example:
+            acquisition_id: Lorem Ipsum
+            acquired_by_ba_id: Lorem Ipsum
+            active_ind: y
+            capture_method: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            coordinate_quality: Lorem Ipsum
+            data_create_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horizontal_accuracy_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            transform_id: Lorem Ipsum
+            vertical_accuracy: 0.1
+            vertical_accuracy_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_coord_acquisition data is added
+        content:
+          application/json:
+            example:
+              message: The cs_coord_acquisition data was successfully added
+/cs-coord-acquisition/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cs_coord_acquisition data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cs_coord_acquisition data
+    description: Update a new cs_coord_acquisition data
+    requestBody:
+      required: true
+      description: Request body to update cs_coord_acquisition data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coord_acquisition'
+          example:
+            acquisition_id: Lorem Ipsum
+            acquired_by_ba_id: Lorem Ipsum
+            active_ind: y
+            capture_method: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            coordinate_quality: Lorem Ipsum
+            data_create_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horizontal_accuracy_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            transform_id: Lorem Ipsum
+            vertical_accuracy: 0.1
+            vertical_accuracy_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_coord_acquisition data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cs_coord_acquisition data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cs_coord_acquisition data
+    description: Update a new cs_coord_acquisition data
+    requestBody:
+      required: true
+      description: Request body to update cs_coord_acquisition data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coord_acquisition'
+          example:
+            acquisition_id: Lorem Ipsum
+            acquired_by_ba_id: Lorem Ipsum
+            active_ind: y
+            capture_method: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            coordinate_quality: Lorem Ipsum
+            data_create_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horizontal_accuracy_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            transform_id: Lorem Ipsum
+            vertical_accuracy: 0.1
+            vertical_accuracy_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cs_coord_acquisition data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cs_coord_acquisition data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cs_coord_acquisition data
+    description: Delete cs_coord_acquisition data
+    responses:
+      '200':
+        description: cs_coord_acquisition data is deleted
+        content:
+          application/json:
+            example:
+              message: The cs_coord_acquisition data was successfully deleted

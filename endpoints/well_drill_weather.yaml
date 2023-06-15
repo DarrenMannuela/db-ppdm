@@ -1,0 +1,213 @@
+/well-drill-weather:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_weather
+    responses:
+      '200':
+        description: get well_drill_weather data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              heave: 0.1
+              pitch: 0.1
+              ppdm_guid: Lorem Ipsum
+              recorded_time: 12/12/2023
+              recorded_timezone: Lorem Ipsum
+              remark: Lorem Ipsum
+              road_condition: Lorem Ipsum
+              roll: 0.1
+              source: Lorem Ipsum
+              swell_height: 0.1
+              temperature: 0.1
+              temperature_ouom: Lorem Ipsum
+              water_condition: Lorem Ipsum
+              wave_height: 0.1
+              weather_condition: Lorem Ipsum
+              wind_direction: Lorem Ipsum
+              wind_strength: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_weather
+    description: Create a new well_drill_weather data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_weather data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_weather'
+          example:
+            uwi: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            heave: 0.1
+            pitch: 0.1
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_condition: Lorem Ipsum
+            roll: 0.1
+            source: Lorem Ipsum
+            swell_height: 0.1
+            temperature: 0.1
+            temperature_ouom: Lorem Ipsum
+            water_condition: Lorem Ipsum
+            wave_height: 0.1
+            weather_condition: Lorem Ipsum
+            wind_direction: Lorem Ipsum
+            wind_strength: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_weather data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_weather data was successfully added
+/well-drill-weather/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_weather data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_weather data
+    description: Update a new well_drill_weather data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_weather data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_weather'
+          example:
+            uwi: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            heave: 0.1
+            pitch: 0.1
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_condition: Lorem Ipsum
+            roll: 0.1
+            source: Lorem Ipsum
+            swell_height: 0.1
+            temperature: 0.1
+            temperature_ouom: Lorem Ipsum
+            water_condition: Lorem Ipsum
+            wave_height: 0.1
+            weather_condition: Lorem Ipsum
+            wind_direction: Lorem Ipsum
+            wind_strength: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_weather data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_weather data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_weather data
+    description: Update a new well_drill_weather data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_weather data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_weather'
+          example:
+            uwi: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            heave: 0.1
+            pitch: 0.1
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_condition: Lorem Ipsum
+            roll: 0.1
+            source: Lorem Ipsum
+            swell_height: 0.1
+            temperature: 0.1
+            temperature_ouom: Lorem Ipsum
+            water_condition: Lorem Ipsum
+            wave_height: 0.1
+            weather_condition: Lorem Ipsum
+            wind_direction: Lorem Ipsum
+            wind_strength: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_weather data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_weather data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_weather data
+    description: Delete well_drill_weather data
+    responses:
+      '200':
+        description: well_drill_weather data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_weather data was successfully deleted

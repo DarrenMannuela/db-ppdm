@@ -1,0 +1,221 @@
+/substance-behavior:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get substance_behavior
+    responses:
+      '200':
+        description: get substance_behavior data to be returned
+        content:
+          application/json:
+            example:
+            - substance_id: Lorem Ipsum
+              active_ind: y
+              composite_ind: y
+              drilling_mud_ind: y
+              effective_date: 12/12/2023
+              element_ind: y
+              expiry_date: 12/12/2023
+              hydrocarbon_ind: y
+              ion_ind: y
+              isomer_ind: y
+              isotope_ind: y
+              mineral_ind: y
+              organic_matter_ind: y
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              preferred_long_name: Lorem Ipsum
+              preferred_short_name: Lorem Ipsum
+              production_stuff_ind: y
+              property_set_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              solvent_ind: y
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new substance_behavior
+    description: Create a new substance_behavior data
+    requestBody:
+      required: true
+      description: Request body to create substance_behavior data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_behavior'
+          example:
+            substance_id: Lorem Ipsum
+            active_ind: y
+            composite_ind: y
+            drilling_mud_ind: y
+            effective_date: 12/12/2023
+            element_ind: y
+            expiry_date: 12/12/2023
+            hydrocarbon_ind: y
+            ion_ind: y
+            isomer_ind: y
+            isotope_ind: y
+            mineral_ind: y
+            organic_matter_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            preferred_long_name: Lorem Ipsum
+            preferred_short_name: Lorem Ipsum
+            production_stuff_ind: y
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            solvent_ind: y
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance_behavior data is added
+        content:
+          application/json:
+            example:
+              message: The substance_behavior data was successfully added
+/substance-behavior/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of substance_behavior data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new substance_behavior data
+    description: Update a new substance_behavior data
+    requestBody:
+      required: true
+      description: Request body to update substance_behavior data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_behavior'
+          example:
+            substance_id: Lorem Ipsum
+            active_ind: y
+            composite_ind: y
+            drilling_mud_ind: y
+            effective_date: 12/12/2023
+            element_ind: y
+            expiry_date: 12/12/2023
+            hydrocarbon_ind: y
+            ion_ind: y
+            isomer_ind: y
+            isotope_ind: y
+            mineral_ind: y
+            organic_matter_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            preferred_long_name: Lorem Ipsum
+            preferred_short_name: Lorem Ipsum
+            production_stuff_ind: y
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            solvent_ind: y
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance_behavior data is completely updated
+        content:
+          application/json:
+            example:
+              message: The substance_behavior data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new substance_behavior data
+    description: Update a new substance_behavior data
+    requestBody:
+      required: true
+      description: Request body to update substance_behavior data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_behavior'
+          example:
+            substance_id: Lorem Ipsum
+            active_ind: y
+            composite_ind: y
+            drilling_mud_ind: y
+            effective_date: 12/12/2023
+            element_ind: y
+            expiry_date: 12/12/2023
+            hydrocarbon_ind: y
+            ion_ind: y
+            isomer_ind: y
+            isotope_ind: y
+            mineral_ind: y
+            organic_matter_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            preferred_long_name: Lorem Ipsum
+            preferred_short_name: Lorem Ipsum
+            production_stuff_ind: y
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            solvent_ind: y
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in substance_behavior data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in substance_behavior data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete substance_behavior data
+    description: Delete substance_behavior data
+    responses:
+      '200':
+        description: substance_behavior data is deleted
+        content:
+          application/json:
+            example:
+              message: The substance_behavior data was successfully deleted

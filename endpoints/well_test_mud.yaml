@@ -1,0 +1,257 @@
+/well-test-mud:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_mud
+    responses:
+      '200':
+        description: get well_test_mud data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              mud_type: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              filtrate_resistivity: 0.1
+              filtrate_resistivity_ouom: Lorem Ipsum
+              filtrate_salinity: 1.0
+              filtrate_salinity_ouom: Lorem Ipsum
+              filtrate_salinity_uom: Lorem Ipsum
+              filtrate_temperature: 0.1
+              filtrate_temperature_ouom: Lorem Ipsum
+              mud_ph: 0.1
+              mud_resistivity: 0.1
+              mud_resistivity_ouom: Lorem Ipsum
+              mud_salinity: 1.0
+              mud_salinity_ouom: Lorem Ipsum
+              mud_salinity_uom: Lorem Ipsum
+              mud_sample_type: Lorem Ipsum
+              mud_temperature: 0.1
+              mud_temperature_ouom: Lorem Ipsum
+              mud_viscosity: 0.1
+              mud_viscosity_ouom: Lorem Ipsum
+              mud_weight: 0.1
+              mud_weight_ouom: Lorem Ipsum
+              mud_weight_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_mud
+    description: Create a new well_test_mud data
+    requestBody:
+      required: true
+      description: Request body to create well_test_mud data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_mud'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            mud_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            filtrate_resistivity: 0.1
+            filtrate_resistivity_ouom: Lorem Ipsum
+            filtrate_salinity: 1.0
+            filtrate_salinity_ouom: Lorem Ipsum
+            filtrate_salinity_uom: Lorem Ipsum
+            filtrate_temperature: 0.1
+            filtrate_temperature_ouom: Lorem Ipsum
+            mud_ph: 0.1
+            mud_resistivity: 0.1
+            mud_resistivity_ouom: Lorem Ipsum
+            mud_salinity: 1.0
+            mud_salinity_ouom: Lorem Ipsum
+            mud_salinity_uom: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_temperature: 0.1
+            mud_temperature_ouom: Lorem Ipsum
+            mud_viscosity: 0.1
+            mud_viscosity_ouom: Lorem Ipsum
+            mud_weight: 0.1
+            mud_weight_ouom: Lorem Ipsum
+            mud_weight_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_mud data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_mud data was successfully added
+/well-test-mud/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_mud data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_mud data
+    description: Update a new well_test_mud data
+    requestBody:
+      required: true
+      description: Request body to update well_test_mud data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_mud'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            mud_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            filtrate_resistivity: 0.1
+            filtrate_resistivity_ouom: Lorem Ipsum
+            filtrate_salinity: 1.0
+            filtrate_salinity_ouom: Lorem Ipsum
+            filtrate_salinity_uom: Lorem Ipsum
+            filtrate_temperature: 0.1
+            filtrate_temperature_ouom: Lorem Ipsum
+            mud_ph: 0.1
+            mud_resistivity: 0.1
+            mud_resistivity_ouom: Lorem Ipsum
+            mud_salinity: 1.0
+            mud_salinity_ouom: Lorem Ipsum
+            mud_salinity_uom: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_temperature: 0.1
+            mud_temperature_ouom: Lorem Ipsum
+            mud_viscosity: 0.1
+            mud_viscosity_ouom: Lorem Ipsum
+            mud_weight: 0.1
+            mud_weight_ouom: Lorem Ipsum
+            mud_weight_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_mud data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_mud data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_mud data
+    description: Update a new well_test_mud data
+    requestBody:
+      required: true
+      description: Request body to update well_test_mud data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_mud'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            mud_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            filtrate_resistivity: 0.1
+            filtrate_resistivity_ouom: Lorem Ipsum
+            filtrate_salinity: 1.0
+            filtrate_salinity_ouom: Lorem Ipsum
+            filtrate_salinity_uom: Lorem Ipsum
+            filtrate_temperature: 0.1
+            filtrate_temperature_ouom: Lorem Ipsum
+            mud_ph: 0.1
+            mud_resistivity: 0.1
+            mud_resistivity_ouom: Lorem Ipsum
+            mud_salinity: 1.0
+            mud_salinity_ouom: Lorem Ipsum
+            mud_salinity_uom: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_temperature: 0.1
+            mud_temperature_ouom: Lorem Ipsum
+            mud_viscosity: 0.1
+            mud_viscosity_ouom: Lorem Ipsum
+            mud_weight: 0.1
+            mud_weight_ouom: Lorem Ipsum
+            mud_weight_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_mud data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_mud data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_mud data
+    description: Delete well_test_mud data
+    responses:
+      '200':
+        description: well_test_mud data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_mud data was successfully deleted

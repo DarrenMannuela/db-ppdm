@@ -1,0 +1,297 @@
+/well-treatment:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_treatment
+    responses:
+      '200':
+        description: get well_treatment data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              treatment_type: Lorem Ipsum
+              active_ind: y
+              additive_type: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              completion_source: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              form_break_pressure: 0.1
+              form_break_pressure_ouom: Lorem Ipsum
+              injection_rate: 0.1
+              injection_rate_ouom: Lorem Ipsum
+              instant_si_pressure: 0.1
+              instant_si_pressure_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              proppant_agent_amount: 0.1
+              proppant_agent_amount_ouom: Lorem Ipsum
+              proppant_agent_amount_uom: Lorem Ipsum
+              proppant_agent_mesh_size: Lorem Ipsum
+              proppant_agent_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              run_num: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              test_num: Lorem Ipsum
+              test_type: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              treatment_amount: 0.1
+              treatment_amount_ouom: Lorem Ipsum
+              treatment_amount_uom: Lorem Ipsum
+              treatment_ba_id: Lorem Ipsum
+              treatment_date: 12/12/2023
+              treatment_fluid_type: Lorem Ipsum
+              treatment_pressure: 0.1
+              treatment_pressure_ouom: Lorem Ipsum
+              treatment_status: Lorem Ipsum
+              treatment_status_type: Lorem Ipsum
+              well_test_source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_treatment
+    description: Create a new well_treatment data
+    requestBody:
+      required: true
+      description: Request body to create well_treatment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_treatment'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            treatment_type: Lorem Ipsum
+            active_ind: y
+            additive_type: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            completion_source: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            form_break_pressure: 0.1
+            form_break_pressure_ouom: Lorem Ipsum
+            injection_rate: 0.1
+            injection_rate_ouom: Lorem Ipsum
+            instant_si_pressure: 0.1
+            instant_si_pressure_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            proppant_agent_amount: 0.1
+            proppant_agent_amount_ouom: Lorem Ipsum
+            proppant_agent_amount_uom: Lorem Ipsum
+            proppant_agent_mesh_size: Lorem Ipsum
+            proppant_agent_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            run_num: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            test_num: Lorem Ipsum
+            test_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            treatment_amount: 0.1
+            treatment_amount_ouom: Lorem Ipsum
+            treatment_amount_uom: Lorem Ipsum
+            treatment_ba_id: Lorem Ipsum
+            treatment_date: 12/12/2023
+            treatment_fluid_type: Lorem Ipsum
+            treatment_pressure: 0.1
+            treatment_pressure_ouom: Lorem Ipsum
+            treatment_status: Lorem Ipsum
+            treatment_status_type: Lorem Ipsum
+            well_test_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_treatment data is added
+        content:
+          application/json:
+            example:
+              message: The well_treatment data was successfully added
+/well-treatment/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_treatment data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_treatment data
+    description: Update a new well_treatment data
+    requestBody:
+      required: true
+      description: Request body to update well_treatment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_treatment'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            treatment_type: Lorem Ipsum
+            active_ind: y
+            additive_type: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            completion_source: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            form_break_pressure: 0.1
+            form_break_pressure_ouom: Lorem Ipsum
+            injection_rate: 0.1
+            injection_rate_ouom: Lorem Ipsum
+            instant_si_pressure: 0.1
+            instant_si_pressure_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            proppant_agent_amount: 0.1
+            proppant_agent_amount_ouom: Lorem Ipsum
+            proppant_agent_amount_uom: Lorem Ipsum
+            proppant_agent_mesh_size: Lorem Ipsum
+            proppant_agent_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            run_num: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            test_num: Lorem Ipsum
+            test_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            treatment_amount: 0.1
+            treatment_amount_ouom: Lorem Ipsum
+            treatment_amount_uom: Lorem Ipsum
+            treatment_ba_id: Lorem Ipsum
+            treatment_date: 12/12/2023
+            treatment_fluid_type: Lorem Ipsum
+            treatment_pressure: 0.1
+            treatment_pressure_ouom: Lorem Ipsum
+            treatment_status: Lorem Ipsum
+            treatment_status_type: Lorem Ipsum
+            well_test_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_treatment data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_treatment data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_treatment data
+    description: Update a new well_treatment data
+    requestBody:
+      required: true
+      description: Request body to update well_treatment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_treatment'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            treatment_type: Lorem Ipsum
+            active_ind: y
+            additive_type: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            completion_source: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            form_break_pressure: 0.1
+            form_break_pressure_ouom: Lorem Ipsum
+            injection_rate: 0.1
+            injection_rate_ouom: Lorem Ipsum
+            instant_si_pressure: 0.1
+            instant_si_pressure_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            proppant_agent_amount: 0.1
+            proppant_agent_amount_ouom: Lorem Ipsum
+            proppant_agent_amount_uom: Lorem Ipsum
+            proppant_agent_mesh_size: Lorem Ipsum
+            proppant_agent_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            run_num: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            test_num: Lorem Ipsum
+            test_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            treatment_amount: 0.1
+            treatment_amount_ouom: Lorem Ipsum
+            treatment_amount_uom: Lorem Ipsum
+            treatment_ba_id: Lorem Ipsum
+            treatment_date: 12/12/2023
+            treatment_fluid_type: Lorem Ipsum
+            treatment_pressure: 0.1
+            treatment_pressure_ouom: Lorem Ipsum
+            treatment_status: Lorem Ipsum
+            treatment_status_type: Lorem Ipsum
+            well_test_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_treatment data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_treatment data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_treatment data
+    description: Delete well_treatment data
+    responses:
+      '200':
+        description: well_treatment data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_treatment data was successfully deleted

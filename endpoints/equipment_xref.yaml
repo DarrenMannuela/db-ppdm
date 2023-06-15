@@ -1,0 +1,177 @@
+/equipment-xref:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get equipment_xref
+    responses:
+      '200':
+        description: get equipment_xref data to be returned
+        content:
+          application/json:
+            example:
+            - equipment_id: Lorem Ipsum
+              equipment_part_id: Lorem Ipsum
+              active_ind: y
+              commission_date: 12/12/2023
+              decommission_date: 12/12/2023
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              equip_xref_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new equipment_xref
+    description: Create a new equipment_xref data
+    requestBody:
+      required: true
+      description: Request body to create equipment_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_xref'
+          example:
+            equipment_id: Lorem Ipsum
+            equipment_part_id: Lorem Ipsum
+            active_ind: y
+            commission_date: 12/12/2023
+            decommission_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_xref_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_xref data is added
+        content:
+          application/json:
+            example:
+              message: The equipment_xref data was successfully added
+/equipment-xref/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of equipment_xref data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new equipment_xref data
+    description: Update a new equipment_xref data
+    requestBody:
+      required: true
+      description: Request body to update equipment_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_xref'
+          example:
+            equipment_id: Lorem Ipsum
+            equipment_part_id: Lorem Ipsum
+            active_ind: y
+            commission_date: 12/12/2023
+            decommission_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_xref_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_xref data is completely updated
+        content:
+          application/json:
+            example:
+              message: The equipment_xref data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new equipment_xref data
+    description: Update a new equipment_xref data
+    requestBody:
+      required: true
+      description: Request body to update equipment_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_xref'
+          example:
+            equipment_id: Lorem Ipsum
+            equipment_part_id: Lorem Ipsum
+            active_ind: y
+            commission_date: 12/12/2023
+            decommission_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_xref_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in equipment_xref data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in equipment_xref data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete equipment_xref data
+    description: Delete equipment_xref data
+    responses:
+      '200':
+        description: equipment_xref data is deleted
+        content:
+          application/json:
+            example:
+              message: The equipment_xref data was successfully deleted

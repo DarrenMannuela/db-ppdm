@@ -1,0 +1,51 @@
+package dto
+
+type Pden_flow_measurement struct {
+	Pden_id                string   `json:"pden_id" default:"source"`
+	Pden_subtype           string   `json:"pden_subtype" default:"source"`
+	Pden_source            string   `json:"pden_source" default:"source"`
+	Product_type           string   `json:"product_type" default:"source"`
+	Amendment_seq_no       int      `json:"amendment_seq_no" default:"1"`
+	Period_type            string   `json:"period_type" default:"source"`
+	Measurement_obs_no     int      `json:"measurement_obs_no" default:"1"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Amend_reason           *string  `json:"amend_reason" default:""`
+	Casing_pressure        *float64 `json:"casing_pressure" default:""`
+	Casing_pressure_ouom   *string  `json:"casing_pressure_ouom" default:""`
+	Choke_position         *float64 `json:"choke_position" default:""`
+	Choke_size             *float64 `json:"choke_size" default:""`
+	Choke_size_ouom        *string  `json:"choke_size_ouom" default:""`
+	Differential_pressure  *float64 `json:"differential_pressure" default:""`
+	Diff_pressure_ouom     *string  `json:"diff_pressure_ouom" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Flow_rate              *float64 `json:"flow_rate" default:""`
+	Flow_rate_ouom         *string  `json:"flow_rate_ouom" default:""`
+	Measurement_date       *string  `json:"measurement_date" default:""`
+	Measurement_date_desc  *string  `json:"measurement_date_desc" default:""`
+	Measurement_time       *float64 `json:"measurement_time" default:""`
+	Measurement_timezone   *string  `json:"measurement_timezone" default:""`
+	Measurement_type       *string  `json:"measurement_type" default:""`
+	Meas_temperature       *float64 `json:"meas_temperature" default:""`
+	Meas_temperature_ouom  *string  `json:"meas_temperature_ouom" default:""`
+	Posted_date            *string  `json:"posted_date" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Production_volume      *float64 `json:"production_volume" default:""`
+	Production_volume_ouom *string  `json:"production_volume_ouom" default:""`
+	Production_volume_uom  *string  `json:"production_volume_uom" default:""`
+	Prod_time_elapsed      *float64 `json:"prod_time_elapsed" default:""`
+	Prod_time_elapsed_ouom *string  `json:"prod_time_elapsed_ouom" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Source                 *string  `json:"source" default:""`
+	Static_pressure        *float64 `json:"static_pressure" default:""`
+	Static_pressure_ouom   *string  `json:"static_pressure_ouom" default:""`
+	Tubing_pressure        *float64 `json:"tubing_pressure" default:""`
+	Tubing_pressure_ouom   *string  `json:"tubing_pressure_ouom" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

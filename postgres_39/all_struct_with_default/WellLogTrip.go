@@ -1,0 +1,52 @@
+package dto
+
+type Well_log_trip struct {
+	Uwi                         string   `json:"uwi" default:"source"`
+	Source                      string   `json:"source" default:"source"`
+	Job_id                      string   `json:"job_id" default:"source"`
+	Trip_obs_no                 int      `json:"trip_obs_no" default:"1"`
+	Active_ind                  *string  `json:"active_ind" default:""`
+	Base_depth                  *float64 `json:"base_depth" default:""`
+	Base_depth_ouom             *string  `json:"base_depth_ouom" default:""`
+	Base_strat_unit_id          *string  `json:"base_strat_unit_id" default:""`
+	Effective_date              *string  `json:"effective_date" default:""`
+	Expiry_date                 *string  `json:"expiry_date" default:""`
+	Logging_service_type        *string  `json:"logging_service_type" default:""`
+	Max_depth                   *float64 `json:"max_depth" default:""`
+	Max_depth_ouom              *string  `json:"max_depth_ouom" default:""`
+	Max_temperature             *float64 `json:"max_temperature" default:""`
+	Max_temperature_ouom        *string  `json:"max_temperature_ouom" default:""`
+	Mud_sample_id               *string  `json:"mud_sample_id" default:""`
+	Mud_sample_type             *string  `json:"mud_sample_type" default:""`
+	Mud_source                  *string  `json:"mud_source" default:""`
+	Observer                    *string  `json:"observer" default:""`
+	On_bottom_date              *string  `json:"on_bottom_date" default:""`
+	On_bottom_time              *string  `json:"on_bottom_time" default:""`
+	On_bottom_timezone          *string  `json:"on_bottom_timezone" default:""`
+	Ppdm_guid                   *string  `json:"ppdm_guid" default:""`
+	Remark                      *string  `json:"remark" default:""`
+	Reported_tvd                *float64 `json:"reported_tvd" default:""`
+	Reported_tvd_ouom           *string  `json:"reported_tvd_ouom" default:""`
+	Report_apd                  *float64 `json:"report_apd" default:""`
+	Report_log_datum            *string  `json:"report_log_datum" default:""`
+	Report_log_datum_elev       *float64 `json:"report_log_datum_elev" default:""`
+	Report_log_datum_elev_ouom  *string  `json:"report_log_datum_elev_ouom" default:""`
+	Report_log_run              *string  `json:"report_log_run" default:""`
+	Report_perm_datum           *string  `json:"report_perm_datum" default:""`
+	Report_perm_datum_elev      *float64 `json:"report_perm_datum_elev" default:""`
+	Report_perm_datum_elev_ouom *string  `json:"report_perm_datum_elev_ouom" default:""`
+	Strat_name_set_id           *string  `json:"strat_name_set_id" default:""`
+	Top_depth                   *float64 `json:"top_depth" default:""`
+	Top_depth_ouom              *string  `json:"top_depth_ouom" default:""`
+	Top_strat_unit_id           *string  `json:"top_strat_unit_id" default:""`
+	Trip_date                   *string  `json:"trip_date" default:""`
+	Tubing_bottom_depth         *float64 `json:"tubing_bottom_depth" default:""`
+	Tubing_bottom_depth_ouom    *string  `json:"tubing_bottom_depth_ouom" default:""`
+	Row_changed_by              *string  `json:"row_changed_by" default:""`
+	Row_changed_date            *string  `json:"row_changed_date" default:""`
+	Row_created_by              *string  `json:"row_created_by" default:""`
+	Row_created_date            *string  `json:"row_created_date" default:""`
+	Row_effective_date          *string  `json:"row_effective_date" default:""`
+	Row_expiry_date             *string  `json:"row_expiry_date" default:""`
+	Row_quality                 *string  `json:"row_quality" default:""`
+}

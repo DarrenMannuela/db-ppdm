@@ -1,0 +1,201 @@
+/lith-log:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_log
+    responses:
+      '200':
+        description: get lith_log data to be returned
+        content:
+          application/json:
+            example:
+            - lithology_log_id: Lorem Ipsum
+              lith_log_source: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              geologist: Lorem Ipsum
+              lith_log_class: Lorem Ipsum
+              lith_log_type: Lorem Ipsum
+              logged_date: 12/12/2023
+              meas_section_id: Lorem Ipsum
+              meas_section_source: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              uwi: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_log
+    description: Create a new lith_log data
+    requestBody:
+      required: true
+      description: Request body to create lith_log data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_log'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geologist: Lorem Ipsum
+            lith_log_class: Lorem Ipsum
+            lith_log_type: Lorem Ipsum
+            logged_date: 12/12/2023
+            meas_section_id: Lorem Ipsum
+            meas_section_source: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_log data is added
+        content:
+          application/json:
+            example:
+              message: The lith_log data was successfully added
+/lith-log/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_log data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_log data
+    description: Update a new lith_log data
+    requestBody:
+      required: true
+      description: Request body to update lith_log data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_log'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geologist: Lorem Ipsum
+            lith_log_class: Lorem Ipsum
+            lith_log_type: Lorem Ipsum
+            logged_date: 12/12/2023
+            meas_section_id: Lorem Ipsum
+            meas_section_source: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_log data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_log data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_log data
+    description: Update a new lith_log data
+    requestBody:
+      required: true
+      description: Request body to update lith_log data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_log'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geologist: Lorem Ipsum
+            lith_log_class: Lorem Ipsum
+            lith_log_type: Lorem Ipsum
+            logged_date: 12/12/2023
+            meas_section_id: Lorem Ipsum
+            meas_section_source: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_log data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_log data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_log data
+    description: Delete lith_log data
+    responses:
+      '200':
+        description: lith_log data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_log data was successfully deleted

@@ -1,0 +1,229 @@
+/sp-parcel-dls:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sp_parcel_dls
+    responses:
+      '200':
+        description: get sp_parcel_dls data to be returned
+        content:
+          application/json:
+            example:
+            - parcel_dls_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              description: Lorem Ipsum
+              dls_legal_subdivision: 1.0
+              dls_meridian: 1.0
+              dls_meridian_direction: y
+              dls_quarter_section: Lorem Ipsum
+              dls_quarter_section_quarter: Lorem Ipsum
+              dls_range: 1.0
+              dls_range_modifier: y
+              dls_section: 1.0
+              dls_township: 1.0
+              dls_township_modifier: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              local_coord_system_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              principal_meridian: Lorem Ipsum
+              reference_plan_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              spatial_description_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sp_parcel_dls
+    description: Create a new sp_parcel_dls data
+    requestBody:
+      required: true
+      description: Request body to create sp_parcel_dls data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_dls'
+          example:
+            parcel_dls_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            dls_legal_subdivision: 1.0
+            dls_meridian: 1.0
+            dls_meridian_direction: y
+            dls_quarter_section: Lorem Ipsum
+            dls_quarter_section_quarter: Lorem Ipsum
+            dls_range: 1.0
+            dls_range_modifier: y
+            dls_section: 1.0
+            dls_township: 1.0
+            dls_township_modifier: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            local_coord_system_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_dls data is added
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_dls data was successfully added
+/sp-parcel-dls/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sp_parcel_dls data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sp_parcel_dls data
+    description: Update a new sp_parcel_dls data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_dls data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_dls'
+          example:
+            parcel_dls_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            dls_legal_subdivision: 1.0
+            dls_meridian: 1.0
+            dls_meridian_direction: y
+            dls_quarter_section: Lorem Ipsum
+            dls_quarter_section_quarter: Lorem Ipsum
+            dls_range: 1.0
+            dls_range_modifier: y
+            dls_section: 1.0
+            dls_township: 1.0
+            dls_township_modifier: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            local_coord_system_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_dls data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_dls data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sp_parcel_dls data
+    description: Update a new sp_parcel_dls data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_dls data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_dls'
+          example:
+            parcel_dls_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            dls_legal_subdivision: 1.0
+            dls_meridian: 1.0
+            dls_meridian_direction: y
+            dls_quarter_section: Lorem Ipsum
+            dls_quarter_section_quarter: Lorem Ipsum
+            dls_range: 1.0
+            dls_range_modifier: y
+            dls_section: 1.0
+            dls_township: 1.0
+            dls_township_modifier: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            local_coord_system_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sp_parcel_dls data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sp_parcel_dls data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sp_parcel_dls data
+    description: Delete sp_parcel_dls data
+    responses:
+      '200':
+        description: sp_parcel_dls data is deleted
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_dls data was successfully deleted

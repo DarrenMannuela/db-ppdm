@@ -1,0 +1,209 @@
+/paleo-summary:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get paleo_summary
+    responses:
+      '200':
+        description: get paleo_summary data to be returned
+        content:
+          application/json:
+            example:
+            - paleo_summary_id: Lorem Ipsum
+              access_condition: Lorem Ipsum
+              active_ind: y
+              analysis_end_date: 12/12/2023
+              analysis_start_date: 12/12/2023
+              confidential_ind: y
+              confidential_reason: Lorem Ipsum
+              confidential_release_date: 12/12/2023
+              confidential_term: Lorem Ipsum
+              confidential_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              preservation_quality: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              report_date: 12/12/2023
+              report_title: Lorem Ipsum
+              source: Lorem Ipsum
+              total_sample_interval: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new paleo_summary
+    description: Create a new paleo_summary data
+    requestBody:
+      required: true
+      description: Request body to create paleo_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_summary'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            access_condition: Lorem Ipsum
+            active_ind: y
+            analysis_end_date: 12/12/2023
+            analysis_start_date: 12/12/2023
+            confidential_ind: y
+            confidential_reason: Lorem Ipsum
+            confidential_release_date: 12/12/2023
+            confidential_term: Lorem Ipsum
+            confidential_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            preservation_quality: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_date: 12/12/2023
+            report_title: Lorem Ipsum
+            source: Lorem Ipsum
+            total_sample_interval: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_summary data is added
+        content:
+          application/json:
+            example:
+              message: The paleo_summary data was successfully added
+/paleo-summary/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of paleo_summary data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new paleo_summary data
+    description: Update a new paleo_summary data
+    requestBody:
+      required: true
+      description: Request body to update paleo_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_summary'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            access_condition: Lorem Ipsum
+            active_ind: y
+            analysis_end_date: 12/12/2023
+            analysis_start_date: 12/12/2023
+            confidential_ind: y
+            confidential_reason: Lorem Ipsum
+            confidential_release_date: 12/12/2023
+            confidential_term: Lorem Ipsum
+            confidential_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            preservation_quality: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_date: 12/12/2023
+            report_title: Lorem Ipsum
+            source: Lorem Ipsum
+            total_sample_interval: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_summary data is completely updated
+        content:
+          application/json:
+            example:
+              message: The paleo_summary data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new paleo_summary data
+    description: Update a new paleo_summary data
+    requestBody:
+      required: true
+      description: Request body to update paleo_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_summary'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            access_condition: Lorem Ipsum
+            active_ind: y
+            analysis_end_date: 12/12/2023
+            analysis_start_date: 12/12/2023
+            confidential_ind: y
+            confidential_reason: Lorem Ipsum
+            confidential_release_date: 12/12/2023
+            confidential_term: Lorem Ipsum
+            confidential_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            preservation_quality: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_date: 12/12/2023
+            report_title: Lorem Ipsum
+            source: Lorem Ipsum
+            total_sample_interval: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in paleo_summary data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in paleo_summary data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete paleo_summary data
+    description: Delete paleo_summary data
+    responses:
+      '200':
+        description: paleo_summary data is deleted
+        content:
+          application/json:
+            example:
+              message: The paleo_summary data was successfully deleted

@@ -1,0 +1,205 @@
+/rm-data-store:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_data_store
+    responses:
+      '200':
+        description: get rm_data_store data to be returned
+        content:
+          application/json:
+            example:
+            - store_id: Lorem Ipsum
+              active_ind: y
+              address_source: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              contained_by_store_id: Lorem Ipsum
+              data_store_hier_id: Lorem Ipsum
+              data_store_name: Lorem Ipsum
+              data_store_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              hier_level_id: Lorem Ipsum
+              location_id: Lorem Ipsum
+              long_location: Lorem Ipsum
+              physical_store_status: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_location: Lorem Ipsum
+              source: Lorem Ipsum
+              used_capacity_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_data_store
+    description: Create a new rm_data_store data
+    requestBody:
+      required: true
+      description: Request body to create rm_data_store data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_data_store'
+          example:
+            store_id: Lorem Ipsum
+            active_ind: y
+            address_source: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            contained_by_store_id: Lorem Ipsum
+            data_store_hier_id: Lorem Ipsum
+            data_store_name: Lorem Ipsum
+            data_store_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            hier_level_id: Lorem Ipsum
+            location_id: Lorem Ipsum
+            long_location: Lorem Ipsum
+            physical_store_status: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_location: Lorem Ipsum
+            source: Lorem Ipsum
+            used_capacity_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_data_store data is added
+        content:
+          application/json:
+            example:
+              message: The rm_data_store data was successfully added
+/rm-data-store/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_data_store data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_data_store data
+    description: Update a new rm_data_store data
+    requestBody:
+      required: true
+      description: Request body to update rm_data_store data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_data_store'
+          example:
+            store_id: Lorem Ipsum
+            active_ind: y
+            address_source: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            contained_by_store_id: Lorem Ipsum
+            data_store_hier_id: Lorem Ipsum
+            data_store_name: Lorem Ipsum
+            data_store_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            hier_level_id: Lorem Ipsum
+            location_id: Lorem Ipsum
+            long_location: Lorem Ipsum
+            physical_store_status: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_location: Lorem Ipsum
+            source: Lorem Ipsum
+            used_capacity_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_data_store data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_data_store data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_data_store data
+    description: Update a new rm_data_store data
+    requestBody:
+      required: true
+      description: Request body to update rm_data_store data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_data_store'
+          example:
+            store_id: Lorem Ipsum
+            active_ind: y
+            address_source: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            contained_by_store_id: Lorem Ipsum
+            data_store_hier_id: Lorem Ipsum
+            data_store_name: Lorem Ipsum
+            data_store_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            hier_level_id: Lorem Ipsum
+            location_id: Lorem Ipsum
+            long_location: Lorem Ipsum
+            physical_store_status: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_location: Lorem Ipsum
+            source: Lorem Ipsum
+            used_capacity_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_data_store data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_data_store data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_data_store data
+    description: Delete rm_data_store data
+    responses:
+      '200':
+        description: rm_data_store data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_data_store data was successfully deleted

@@ -1,0 +1,49 @@
+package dto
+
+type Anl_water_detail struct {
+	Analysis_id          string   `json:"analysis_id" default:"source"`
+	Anl_source           string   `json:"anl_source" default:"source"`
+	Detail_obs_no        int      `json:"detail_obs_no" default:"1"`
+	Active_ind           *string  `json:"active_ind" default:""`
+	Analysis_press       *float64 `json:"analysis_press" default:""`
+	Analysis_press_ouom  *string  `json:"analysis_press_ouom" default:""`
+	Analysis_press_uom   *string  `json:"analysis_press_uom" default:""`
+	Analysis_temp        *float64 `json:"analysis_temp" default:""`
+	Analysis_temp_ouom   *string  `json:"analysis_temp_ouom" default:""`
+	Analysis_temp_uom    *string  `json:"analysis_temp_uom" default:""`
+	Analysis_value       *float64 `json:"analysis_value" default:""`
+	Analysis_value_ouom  *string  `json:"analysis_value_ouom" default:""`
+	Analysis_value_type  *string  `json:"analysis_value_type" default:""`
+	Analysis_value_uom   *string  `json:"analysis_value_uom" default:""`
+	Anl_value_remark     *string  `json:"anl_value_remark" default:""`
+	Calculated_value_ind *string  `json:"calculated_value_ind" default:""`
+	Calculate_method_id  *string  `json:"calculate_method_id" default:""`
+	Date_format_desc     *string  `json:"date_format_desc" default:""`
+	Effective_date       *string  `json:"effective_date" default:""`
+	Expiry_date          *string  `json:"expiry_date" default:""`
+	Max_value            *float64 `json:"max_value" default:""`
+	Max_value_ouom       *string  `json:"max_value_ouom" default:""`
+	Max_value_uom        *string  `json:"max_value_uom" default:""`
+	Measured_value_ind   *string  `json:"measured_value_ind" default:""`
+	Measurement_type     *string  `json:"measurement_type" default:""`
+	Min_value            *float64 `json:"min_value" default:""`
+	Min_value_ouom       *string  `json:"min_value_ouom" default:""`
+	Min_value_uom        *string  `json:"min_value_uom" default:""`
+	Ppdm_guid            *string  `json:"ppdm_guid" default:""`
+	Preferred_ind        *string  `json:"preferred_ind" default:""`
+	Problem_ind          *string  `json:"problem_ind" default:""`
+	Remark               *string  `json:"remark" default:""`
+	Reported_value_ind   *string  `json:"reported_value_ind" default:""`
+	Source               *string  `json:"source" default:""`
+	Step_seq_no          *int     `json:"step_seq_no" default:""`
+	Substance_id         *string  `json:"substance_id" default:""`
+	Water_property       *string  `json:"water_property" default:""`
+	Water_property_code  *string  `json:"water_property_code" default:""`
+	Row_changed_by       *string  `json:"row_changed_by" default:""`
+	Row_changed_date     *string  `json:"row_changed_date" default:""`
+	Row_created_by       *string  `json:"row_created_by" default:""`
+	Row_created_date     *string  `json:"row_created_date" default:""`
+	Row_effective_date   *string  `json:"row_effective_date" default:""`
+	Row_expiry_date      *string  `json:"row_expiry_date" default:""`
+	Row_quality          *string  `json:"row_quality" default:""`
+}

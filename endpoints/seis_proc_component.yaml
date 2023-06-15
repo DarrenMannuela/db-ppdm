@@ -1,0 +1,217 @@
+/seis-proc-component:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_proc_component
+    responses:
+      '200':
+        description: get seis_proc_component data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_proc_set_id: Lorem Ipsum
+              component_id: Lorem Ipsum
+              active_ind: y
+              bin_grid_id: Lorem Ipsum
+              bin_grid_source: Lorem Ipsum
+              comp_seis_set_id: Lorem Ipsum
+              comp_seis_set_subtype: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              information_item_id: Lorem Ipsum
+              info_item_subtype: Lorem Ipsum
+              input_ind: y
+              output_ind: y
+              ppdm_guid: Lorem Ipsum
+              processing_component_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_proc_plan_id: Lorem Ipsum
+              source: Lorem Ipsum
+              uwi: Lorem Ipsum
+              velocity_volume_id: Lorem Ipsum
+              well_log_curve_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_proc_component
+    description: Create a new seis_proc_component data
+    requestBody:
+      required: true
+      description: Request body to create seis_proc_component data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_proc_component'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_proc_set_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            comp_seis_set_id: Lorem Ipsum
+            comp_seis_set_subtype: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            input_ind: y
+            output_ind: y
+            ppdm_guid: Lorem Ipsum
+            processing_component_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_proc_plan_id: Lorem Ipsum
+            source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            velocity_volume_id: Lorem Ipsum
+            well_log_curve_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_proc_component data is added
+        content:
+          application/json:
+            example:
+              message: The seis_proc_component data was successfully added
+/seis-proc-component/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_proc_component data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_proc_component data
+    description: Update a new seis_proc_component data
+    requestBody:
+      required: true
+      description: Request body to update seis_proc_component data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_proc_component'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_proc_set_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            comp_seis_set_id: Lorem Ipsum
+            comp_seis_set_subtype: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            input_ind: y
+            output_ind: y
+            ppdm_guid: Lorem Ipsum
+            processing_component_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_proc_plan_id: Lorem Ipsum
+            source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            velocity_volume_id: Lorem Ipsum
+            well_log_curve_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_proc_component data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_proc_component data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_proc_component data
+    description: Update a new seis_proc_component data
+    requestBody:
+      required: true
+      description: Request body to update seis_proc_component data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_proc_component'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_proc_set_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            comp_seis_set_id: Lorem Ipsum
+            comp_seis_set_subtype: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            input_ind: y
+            output_ind: y
+            ppdm_guid: Lorem Ipsum
+            processing_component_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_proc_plan_id: Lorem Ipsum
+            source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            velocity_volume_id: Lorem Ipsum
+            well_log_curve_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_proc_component data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_proc_component data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_proc_component data
+    description: Delete seis_proc_component data
+    responses:
+      '200':
+        description: seis_proc_component data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_proc_component data was successfully deleted

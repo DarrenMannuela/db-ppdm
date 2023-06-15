@@ -1,0 +1,169 @@
+/r-seis-rcrd-make:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get r_seis_rcrd_make
+    responses:
+      '200':
+        description: get r_seis_rcrd_make data to be returned
+        content:
+          application/json:
+            example:
+            - seis_rcrd_make: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new r_seis_rcrd_make
+    description: Create a new r_seis_rcrd_make data
+    requestBody:
+      required: true
+      description: Request body to create r_seis_rcrd_make data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_seis_rcrd_make'
+          example:
+            seis_rcrd_make: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_seis_rcrd_make data is added
+        content:
+          application/json:
+            example:
+              message: The r_seis_rcrd_make data was successfully added
+/r-seis-rcrd-make/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of r_seis_rcrd_make data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new r_seis_rcrd_make data
+    description: Update a new r_seis_rcrd_make data
+    requestBody:
+      required: true
+      description: Request body to update r_seis_rcrd_make data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_seis_rcrd_make'
+          example:
+            seis_rcrd_make: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_seis_rcrd_make data is completely updated
+        content:
+          application/json:
+            example:
+              message: The r_seis_rcrd_make data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new r_seis_rcrd_make data
+    description: Update a new r_seis_rcrd_make data
+    requestBody:
+      required: true
+      description: Request body to update r_seis_rcrd_make data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_seis_rcrd_make'
+          example:
+            seis_rcrd_make: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in r_seis_rcrd_make data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in r_seis_rcrd_make data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete r_seis_rcrd_make data
+    description: Delete r_seis_rcrd_make data
+    responses:
+      '200':
+        description: r_seis_rcrd_make data is deleted
+        content:
+          application/json:
+            example:
+              message: The r_seis_rcrd_make data was successfully deleted

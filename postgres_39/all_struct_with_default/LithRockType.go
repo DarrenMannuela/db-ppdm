@@ -1,0 +1,46 @@
+package dto
+
+type Lith_rock_type struct {
+	Lithology_log_id          string   `json:"lithology_log_id" default:"source"`
+	Lith_log_source           string   `json:"lith_log_source" default:"source"`
+	Depth_obs_no              int      `json:"depth_obs_no" default:"1"`
+	Rock_type                 string   `json:"rock_type" default:"source"`
+	Rock_type_obs_no          int      `json:"rock_type_obs_no" default:"1"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Class                     *string  `json:"class" default:""`
+	Class_modifier            *string  `json:"class_modifier" default:""`
+	Consolidation             *string  `json:"consolidation" default:""`
+	Cut_color                 *string  `json:"cut_color" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Fluorescence_color        *string  `json:"fluorescence_color" default:""`
+	Fluorescence_distribution *string  `json:"fluorescence_distribution" default:""`
+	Fluorescence_rate         *string  `json:"fluorescence_rate" default:""`
+	Framework_percent         *float64 `json:"framework_percent" default:""`
+	Matrix_percent            *float64 `json:"matrix_percent" default:""`
+	Oil_stain                 *string  `json:"oil_stain" default:""`
+	Permeability_quality      *string  `json:"permeability_quality" default:""`
+	Porosity_grade_percent    *float64 `json:"porosity_grade_percent" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Prim_porosity_type        *string  `json:"prim_porosity_type" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Residue_color             *string  `json:"residue_color" default:""`
+	Residue_percent           *float64 `json:"residue_percent" default:""`
+	Rock_class_scheme         *string  `json:"rock_class_scheme" default:""`
+	Rock_matrix               *string  `json:"rock_matrix" default:""`
+	Rock_profile              *string  `json:"rock_profile" default:""`
+	Rock_rel_abundance        *string  `json:"rock_rel_abundance" default:""`
+	Rock_type_percent         *float64 `json:"rock_type_percent" default:""`
+	Rounding                  *string  `json:"rounding" default:""`
+	Sec_porosity_type         *string  `json:"sec_porosity_type" default:""`
+	Solid_hcarbon_percent     *float64 `json:"solid_hcarbon_percent" default:""`
+	Solid_hcarbon_type        *string  `json:"solid_hcarbon_type" default:""`
+	Sorting                   *string  `json:"sorting" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

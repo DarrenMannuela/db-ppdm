@@ -1,0 +1,177 @@
+/hse-incident-equiv:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get hse_incident_equiv
+    responses:
+      '200':
+        description: get hse_incident_equiv data to be returned
+        content:
+          application/json:
+            example:
+            - incident_set_id: Lorem Ipsum
+              incident_type_id: Lorem Ipsum
+              incident_set_id2: Lorem Ipsum
+              incident_type_id2: Lorem Ipsum
+              active_ind: y
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new hse_incident_equiv
+    description: Create a new hse_incident_equiv data
+    requestBody:
+      required: true
+      description: Request body to create hse_incident_equiv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident_equiv'
+          example:
+            incident_set_id: Lorem Ipsum
+            incident_type_id: Lorem Ipsum
+            incident_set_id2: Lorem Ipsum
+            incident_type_id2: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: hse_incident_equiv data is added
+        content:
+          application/json:
+            example:
+              message: The hse_incident_equiv data was successfully added
+/hse-incident-equiv/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of hse_incident_equiv data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new hse_incident_equiv data
+    description: Update a new hse_incident_equiv data
+    requestBody:
+      required: true
+      description: Request body to update hse_incident_equiv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident_equiv'
+          example:
+            incident_set_id: Lorem Ipsum
+            incident_type_id: Lorem Ipsum
+            incident_set_id2: Lorem Ipsum
+            incident_type_id2: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: hse_incident_equiv data is completely updated
+        content:
+          application/json:
+            example:
+              message: The hse_incident_equiv data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new hse_incident_equiv data
+    description: Update a new hse_incident_equiv data
+    requestBody:
+      required: true
+      description: Request body to update hse_incident_equiv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident_equiv'
+          example:
+            incident_set_id: Lorem Ipsum
+            incident_type_id: Lorem Ipsum
+            incident_set_id2: Lorem Ipsum
+            incident_type_id2: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in hse_incident_equiv data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in hse_incident_equiv data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete hse_incident_equiv data
+    description: Delete hse_incident_equiv data
+    responses:
+      '200':
+        description: hse_incident_equiv data is deleted
+        content:
+          application/json:
+            example:
+              message: The hse_incident_equiv data was successfully deleted

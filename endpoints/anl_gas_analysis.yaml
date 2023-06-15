@@ -1,0 +1,197 @@
+/anl-gas-analysis:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_gas_analysis
+    responses:
+      '200':
+        description: get anl_gas_analysis data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fluid_type: Lorem Ipsum
+              gas_gravity: 0.1
+              gas_gravity_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              pseudo_critical_press: 0.1
+              pseudo_critical_press_ouom: Lorem Ipsum
+              pseudo_critical_temp: 0.1
+              pseudo_critical_temp_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_gas_analysis
+    description: Create a new anl_gas_analysis data
+    requestBody:
+      required: true
+      description: Request body to create anl_gas_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_type: Lorem Ipsum
+            gas_gravity: 0.1
+            gas_gravity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            pseudo_critical_press: 0.1
+            pseudo_critical_press_ouom: Lorem Ipsum
+            pseudo_critical_temp: 0.1
+            pseudo_critical_temp_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_gas_analysis data is added
+        content:
+          application/json:
+            example:
+              message: The anl_gas_analysis data was successfully added
+/anl-gas-analysis/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_gas_analysis data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_gas_analysis data
+    description: Update a new anl_gas_analysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_gas_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_type: Lorem Ipsum
+            gas_gravity: 0.1
+            gas_gravity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            pseudo_critical_press: 0.1
+            pseudo_critical_press_ouom: Lorem Ipsum
+            pseudo_critical_temp: 0.1
+            pseudo_critical_temp_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_gas_analysis data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_gas_analysis data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_gas_analysis data
+    description: Update a new anl_gas_analysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_gas_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_type: Lorem Ipsum
+            gas_gravity: 0.1
+            gas_gravity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            pseudo_critical_press: 0.1
+            pseudo_critical_press_ouom: Lorem Ipsum
+            pseudo_critical_temp: 0.1
+            pseudo_critical_temp_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_gas_analysis data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_gas_analysis data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_gas_analysis data
+    description: Delete anl_gas_analysis data
+    responses:
+      '200':
+        description: anl_gas_analysis data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_gas_analysis data was successfully deleted

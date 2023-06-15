@@ -1,0 +1,341 @@
+/well-log-curve:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_log_curve
+    responses:
+      '200':
+        description: get well_log_curve data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              curve_id: Lorem Ipsum
+              acquired_for_ba_id: Lorem Ipsum
+              active_ind: y
+              api_code_system: Lorem Ipsum
+              api_curve_class: Lorem Ipsum
+              api_curve_modifier: 1.0
+              base_curve_ind: y
+              bypass_ind: y
+              cased_hole_ind: y
+              composite_ind: y
+              curve_ouom: Lorem Ipsum
+              curve_output_type: Lorem Ipsum
+              curve_quality: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              dictionary_id: Lorem Ipsum
+              dict_curve_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              explicit_index_ind: y
+              first_good_value: 1.0
+              first_good_value_index: 1.0
+              frame_id: Lorem Ipsum
+              good_value_type: Lorem Ipsum
+              index_curve_id: Lorem Ipsum
+              index_ouom: Lorem Ipsum
+              index_uom: Lorem Ipsum
+              job_id: Lorem Ipsum
+              last_good_value: 1.0
+              last_good_value_index: 1.0
+              log_tool_type: Lorem Ipsum
+              max_index: 1.0
+              max_value: 1.0
+              max_value_index: 1.0
+              mean_value: 1.0
+              mean_value_std_dev: 1.0
+              min_index: 1.0
+              min_value: 1.0
+              min_value_index: 1.0
+              multiple_index_ind: y
+              mwd_ind: y
+              null_representation: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              primary_index_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_desc: Lorem Ipsum
+              reported_mnemonic: Lorem Ipsum
+              reported_unit_mnemonic: Lorem Ipsum
+              source: Lorem Ipsum
+              well_log_id: Lorem Ipsum
+              well_log_job_source: Lorem Ipsum
+              well_log_source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_log_curve
+    description: Create a new well_log_curve data
+    requestBody:
+      required: true
+      description: Request body to create well_log_curve data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve'
+          example:
+            uwi: Lorem Ipsum
+            curve_id: Lorem Ipsum
+            acquired_for_ba_id: Lorem Ipsum
+            active_ind: y
+            api_code_system: Lorem Ipsum
+            api_curve_class: Lorem Ipsum
+            api_curve_modifier: 1.0
+            base_curve_ind: y
+            bypass_ind: y
+            cased_hole_ind: y
+            composite_ind: y
+            curve_ouom: Lorem Ipsum
+            curve_output_type: Lorem Ipsum
+            curve_quality: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            dictionary_id: Lorem Ipsum
+            dict_curve_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            explicit_index_ind: y
+            first_good_value: 1.0
+            first_good_value_index: 1.0
+            frame_id: Lorem Ipsum
+            good_value_type: Lorem Ipsum
+            index_curve_id: Lorem Ipsum
+            index_ouom: Lorem Ipsum
+            index_uom: Lorem Ipsum
+            job_id: Lorem Ipsum
+            last_good_value: 1.0
+            last_good_value_index: 1.0
+            log_tool_type: Lorem Ipsum
+            max_index: 1.0
+            max_value: 1.0
+            max_value_index: 1.0
+            mean_value: 1.0
+            mean_value_std_dev: 1.0
+            min_index: 1.0
+            min_value: 1.0
+            min_value_index: 1.0
+            multiple_index_ind: y
+            mwd_ind: y
+            null_representation: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            primary_index_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_desc: Lorem Ipsum
+            reported_mnemonic: Lorem Ipsum
+            reported_unit_mnemonic: Lorem Ipsum
+            source: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            well_log_job_source: Lorem Ipsum
+            well_log_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_curve data is added
+        content:
+          application/json:
+            example:
+              message: The well_log_curve data was successfully added
+/well-log-curve/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_log_curve data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_log_curve data
+    description: Update a new well_log_curve data
+    requestBody:
+      required: true
+      description: Request body to update well_log_curve data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve'
+          example:
+            uwi: Lorem Ipsum
+            curve_id: Lorem Ipsum
+            acquired_for_ba_id: Lorem Ipsum
+            active_ind: y
+            api_code_system: Lorem Ipsum
+            api_curve_class: Lorem Ipsum
+            api_curve_modifier: 1.0
+            base_curve_ind: y
+            bypass_ind: y
+            cased_hole_ind: y
+            composite_ind: y
+            curve_ouom: Lorem Ipsum
+            curve_output_type: Lorem Ipsum
+            curve_quality: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            dictionary_id: Lorem Ipsum
+            dict_curve_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            explicit_index_ind: y
+            first_good_value: 1.0
+            first_good_value_index: 1.0
+            frame_id: Lorem Ipsum
+            good_value_type: Lorem Ipsum
+            index_curve_id: Lorem Ipsum
+            index_ouom: Lorem Ipsum
+            index_uom: Lorem Ipsum
+            job_id: Lorem Ipsum
+            last_good_value: 1.0
+            last_good_value_index: 1.0
+            log_tool_type: Lorem Ipsum
+            max_index: 1.0
+            max_value: 1.0
+            max_value_index: 1.0
+            mean_value: 1.0
+            mean_value_std_dev: 1.0
+            min_index: 1.0
+            min_value: 1.0
+            min_value_index: 1.0
+            multiple_index_ind: y
+            mwd_ind: y
+            null_representation: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            primary_index_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_desc: Lorem Ipsum
+            reported_mnemonic: Lorem Ipsum
+            reported_unit_mnemonic: Lorem Ipsum
+            source: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            well_log_job_source: Lorem Ipsum
+            well_log_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_curve data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_log_curve data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_log_curve data
+    description: Update a new well_log_curve data
+    requestBody:
+      required: true
+      description: Request body to update well_log_curve data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve'
+          example:
+            uwi: Lorem Ipsum
+            curve_id: Lorem Ipsum
+            acquired_for_ba_id: Lorem Ipsum
+            active_ind: y
+            api_code_system: Lorem Ipsum
+            api_curve_class: Lorem Ipsum
+            api_curve_modifier: 1.0
+            base_curve_ind: y
+            bypass_ind: y
+            cased_hole_ind: y
+            composite_ind: y
+            curve_ouom: Lorem Ipsum
+            curve_output_type: Lorem Ipsum
+            curve_quality: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            dictionary_id: Lorem Ipsum
+            dict_curve_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            explicit_index_ind: y
+            first_good_value: 1.0
+            first_good_value_index: 1.0
+            frame_id: Lorem Ipsum
+            good_value_type: Lorem Ipsum
+            index_curve_id: Lorem Ipsum
+            index_ouom: Lorem Ipsum
+            index_uom: Lorem Ipsum
+            job_id: Lorem Ipsum
+            last_good_value: 1.0
+            last_good_value_index: 1.0
+            log_tool_type: Lorem Ipsum
+            max_index: 1.0
+            max_value: 1.0
+            max_value_index: 1.0
+            mean_value: 1.0
+            mean_value_std_dev: 1.0
+            min_index: 1.0
+            min_value: 1.0
+            min_value_index: 1.0
+            multiple_index_ind: y
+            mwd_ind: y
+            null_representation: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            primary_index_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_desc: Lorem Ipsum
+            reported_mnemonic: Lorem Ipsum
+            reported_unit_mnemonic: Lorem Ipsum
+            source: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            well_log_job_source: Lorem Ipsum
+            well_log_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_log_curve data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_log_curve data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_log_curve data
+    description: Delete well_log_curve data
+    responses:
+      '200':
+        description: well_log_curve data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_log_curve data was successfully deleted

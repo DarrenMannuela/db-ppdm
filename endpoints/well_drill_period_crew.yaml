@@ -1,0 +1,233 @@
+/well-drill-period-crew:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_period_crew
+    responses:
+      '200':
+        description: get well_drill_period_crew data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              crew_company_ba_id: Lorem Ipsum
+              active_ind: y
+              booked_time_elapsed: 0.1
+              booked_time_elapsed_uom: Lorem Ipsum
+              crew_member_ba_id: Lorem Ipsum
+              crew_member_name: Lorem Ipsum
+              crew_member_num: Lorem Ipsum
+              crew_member_record_ind: y
+              crew_position: Lorem Ipsum
+              crew_record_ind: y
+              crew_reference_num: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              injury_ind: y
+              injury_initial_ind: y
+              no_injury_ind: y
+              overhead_cost: 0.1
+              overhead_cost_uom: Lorem Ipsum
+              overhead_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              sf_subtype: Lorem Ipsum
+              source: Lorem Ipsum
+              subsistance_ind: y
+              support_facility_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_period_crew
+    description: Create a new well_drill_period_crew data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_period_crew data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_crew'
+          example:
+            uwi: Lorem Ipsum
+            crew_company_ba_id: Lorem Ipsum
+            active_ind: y
+            booked_time_elapsed: 0.1
+            booked_time_elapsed_uom: Lorem Ipsum
+            crew_member_ba_id: Lorem Ipsum
+            crew_member_name: Lorem Ipsum
+            crew_member_num: Lorem Ipsum
+            crew_member_record_ind: y
+            crew_position: Lorem Ipsum
+            crew_record_ind: y
+            crew_reference_num: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            injury_ind: y
+            injury_initial_ind: y
+            no_injury_ind: y
+            overhead_cost: 0.1
+            overhead_cost_uom: Lorem Ipsum
+            overhead_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            subsistance_ind: y
+            support_facility_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_period_crew data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_crew data was successfully added
+/well-drill-period-crew/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_period_crew data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_period_crew data
+    description: Update a new well_drill_period_crew data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_period_crew data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_crew'
+          example:
+            uwi: Lorem Ipsum
+            crew_company_ba_id: Lorem Ipsum
+            active_ind: y
+            booked_time_elapsed: 0.1
+            booked_time_elapsed_uom: Lorem Ipsum
+            crew_member_ba_id: Lorem Ipsum
+            crew_member_name: Lorem Ipsum
+            crew_member_num: Lorem Ipsum
+            crew_member_record_ind: y
+            crew_position: Lorem Ipsum
+            crew_record_ind: y
+            crew_reference_num: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            injury_ind: y
+            injury_initial_ind: y
+            no_injury_ind: y
+            overhead_cost: 0.1
+            overhead_cost_uom: Lorem Ipsum
+            overhead_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            subsistance_ind: y
+            support_facility_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_period_crew data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_crew data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_period_crew data
+    description: Update a new well_drill_period_crew data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_period_crew data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_crew'
+          example:
+            uwi: Lorem Ipsum
+            crew_company_ba_id: Lorem Ipsum
+            active_ind: y
+            booked_time_elapsed: 0.1
+            booked_time_elapsed_uom: Lorem Ipsum
+            crew_member_ba_id: Lorem Ipsum
+            crew_member_name: Lorem Ipsum
+            crew_member_num: Lorem Ipsum
+            crew_member_record_ind: y
+            crew_position: Lorem Ipsum
+            crew_record_ind: y
+            crew_reference_num: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            injury_ind: y
+            injury_initial_ind: y
+            no_injury_ind: y
+            overhead_cost: 0.1
+            overhead_cost_uom: Lorem Ipsum
+            overhead_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            subsistance_ind: y
+            support_facility_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_period_crew data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_period_crew data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_period_crew data
+    description: Delete well_drill_period_crew data
+    responses:
+      '200':
+        description: well_drill_period_crew data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_crew data was successfully deleted

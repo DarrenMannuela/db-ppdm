@@ -1,0 +1,177 @@
+/cs-prime-meridian:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cs_prime_meridian
+    responses:
+      '200':
+        description: get cs_prime_meridian data to be returned
+        content:
+          application/json:
+            example:
+            - prime_meridian_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              greenwich_longitude: 0.1
+              longitude_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              prime_meridian_abbreviation: Lorem Ipsum
+              prime_meridian_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cs_prime_meridian
+    description: Create a new cs_prime_meridian data
+    requestBody:
+      required: true
+      description: Request body to create cs_prime_meridian data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_prime_meridian'
+          example:
+            prime_meridian_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            greenwich_longitude: 0.1
+            longitude_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prime_meridian_abbreviation: Lorem Ipsum
+            prime_meridian_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_prime_meridian data is added
+        content:
+          application/json:
+            example:
+              message: The cs_prime_meridian data was successfully added
+/cs-prime-meridian/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cs_prime_meridian data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cs_prime_meridian data
+    description: Update a new cs_prime_meridian data
+    requestBody:
+      required: true
+      description: Request body to update cs_prime_meridian data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_prime_meridian'
+          example:
+            prime_meridian_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            greenwich_longitude: 0.1
+            longitude_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prime_meridian_abbreviation: Lorem Ipsum
+            prime_meridian_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_prime_meridian data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cs_prime_meridian data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cs_prime_meridian data
+    description: Update a new cs_prime_meridian data
+    requestBody:
+      required: true
+      description: Request body to update cs_prime_meridian data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_prime_meridian'
+          example:
+            prime_meridian_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            greenwich_longitude: 0.1
+            longitude_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prime_meridian_abbreviation: Lorem Ipsum
+            prime_meridian_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cs_prime_meridian data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cs_prime_meridian data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cs_prime_meridian data
+    description: Delete cs_prime_meridian data
+    responses:
+      '200':
+        description: cs_prime_meridian data is deleted
+        content:
+          application/json:
+            example:
+              message: The cs_prime_meridian data was successfully deleted

@@ -1,0 +1,52 @@
+package dto
+
+type Well_pressure struct {
+	Uwi                         string   `json:"uwi" default:"source"`
+	Source                      string   `json:"source" default:"source"`
+	Pressure_obs_no             int      `json:"pressure_obs_no" default:"1"`
+	Active_ind                  *string  `json:"active_ind" default:""`
+	Assigned_field              *string  `json:"assigned_field" default:""`
+	Base_depth                  *float64 `json:"base_depth" default:""`
+	Base_depth_ouom             *string  `json:"base_depth_ouom" default:""`
+	Base_strat_unit_id          *string  `json:"base_strat_unit_id" default:""`
+	Effective_date              *string  `json:"effective_date" default:""`
+	Event_obs_no                *int     `json:"event_obs_no" default:""`
+	Event_source                *string  `json:"event_source" default:""`
+	Expiry_date                 *string  `json:"expiry_date" default:""`
+	Flow_casing_pressure        *float64 `json:"flow_casing_pressure" default:""`
+	Flow_casing_pressure_ouom   *string  `json:"flow_casing_pressure_ouom" default:""`
+	Flow_tubing_pressure        *float64 `json:"flow_tubing_pressure" default:""`
+	Flow_tubing_pressure_ouom   *string  `json:"flow_tubing_pressure_ouom" default:""`
+	Init_reservoir_pressure     *float64 `json:"init_reservoir_pressure" default:""`
+	Init_reservoir_press_ouom   *string  `json:"init_reservoir_press_ouom" default:""`
+	Pool_datum                  *string  `json:"pool_datum" default:""`
+	Pool_datum_depth            *float64 `json:"pool_datum_depth" default:""`
+	Pool_datum_depth_ouom       *string  `json:"pool_datum_depth_ouom" default:""`
+	Pool_id                     *string  `json:"pool_id" default:""`
+	Ppdm_guid                   *string  `json:"ppdm_guid" default:""`
+	Prod_string_id              *string  `json:"prod_string_id" default:""`
+	Prod_string_source          *string  `json:"prod_string_source" default:""`
+	Pr_str_form_obs_no          *int     `json:"pr_str_form_obs_no" default:""`
+	Remark                      *string  `json:"remark" default:""`
+	Shutin_casing_pressure      *float64 `json:"shutin_casing_pressure" default:""`
+	Shutin_casing_pressure_ouom *string  `json:"shutin_casing_pressure_ouom" default:""`
+	Shutin_tubing_pressure      *float64 `json:"shutin_tubing_pressure" default:""`
+	Shutin_tubing_pressure_ouom *string  `json:"shutin_tubing_pressure_ouom" default:""`
+	Strat_name_set_id           *string  `json:"strat_name_set_id" default:""`
+	Top_depth                   *float64 `json:"top_depth" default:""`
+	Top_depth_ouom              *string  `json:"top_depth_ouom" default:""`
+	Top_strat_unit_id           *string  `json:"top_strat_unit_id" default:""`
+	Well_datum_depth            *float64 `json:"well_datum_depth" default:""`
+	Well_datum_ouom             *string  `json:"well_datum_ouom" default:""`
+	Well_test_num               *string  `json:"well_test_num" default:""`
+	Well_test_run_num           *string  `json:"well_test_run_num" default:""`
+	Well_test_source            *string  `json:"well_test_source" default:""`
+	Well_test_type              *string  `json:"well_test_type" default:""`
+	Row_changed_by              *string  `json:"row_changed_by" default:""`
+	Row_changed_date            *string  `json:"row_changed_date" default:""`
+	Row_created_by              *string  `json:"row_created_by" default:""`
+	Row_created_date            *string  `json:"row_created_date" default:""`
+	Row_effective_date          *string  `json:"row_effective_date" default:""`
+	Row_expiry_date             *string  `json:"row_expiry_date" default:""`
+	Row_quality                 *string  `json:"row_quality" default:""`
+}

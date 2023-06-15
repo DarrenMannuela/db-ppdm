@@ -1,0 +1,41 @@
+package dto
+
+type Ppdm_map_rule struct {
+	Map_id               string   `json:"map_id" default:"source"`
+	Map_detail_obs_no    int      `json:"map_detail_obs_no" default:"1"`
+	Rule_seq_no          int      `json:"rule_seq_no" default:"1"`
+	Active_ind           *string  `json:"active_ind" default:""`
+	Create_method        *string  `json:"create_method" default:""`
+	Date_format_desc     *string  `json:"date_format_desc" default:""`
+	Dep_column_name      *string  `json:"dep_column_name" default:""`
+	Dep_schema_entity_id *string  `json:"dep_schema_entity_id" default:""`
+	Dep_system_id        *string  `json:"dep_system_id" default:""`
+	Dep_table_name       *string  `json:"dep_table_name" default:""`
+	Effective_date       *string  `json:"effective_date" default:""`
+	Expiry_date          *string  `json:"expiry_date" default:""`
+	Map_rule_type        *string  `json:"map_rule_type" default:""`
+	Max_value            *float64 `json:"max_value" default:""`
+	Max_value_ouom       *string  `json:"max_value_ouom" default:""`
+	Max_value_uom        *string  `json:"max_value_uom" default:""`
+	Min_value            *float64 `json:"min_value" default:""`
+	Min_value_ouom       *string  `json:"min_value_ouom" default:""`
+	Min_value_uom        *string  `json:"min_value_uom" default:""`
+	Ppdm_guid            *string  `json:"ppdm_guid" default:""`
+	Preferred_ind        *string  `json:"preferred_ind" default:""`
+	Procedure_id         *string  `json:"procedure_id" default:""`
+	Procedure_system_id  *string  `json:"procedure_system_id" default:""`
+	Remark               *string  `json:"remark" default:""`
+	Ring_seq_no          *int     `json:"ring_seq_no" default:""`
+	Rule_desc            *string  `json:"rule_desc" default:""`
+	Rule_owner_ba_id     *string  `json:"rule_owner_ba_id" default:""`
+	Rule_version_num     *string  `json:"rule_version_num" default:""`
+	Source               *string  `json:"source" default:""`
+	Sw_application_id    *string  `json:"sw_application_id" default:""`
+	Row_changed_by       *string  `json:"row_changed_by" default:""`
+	Row_changed_date     *string  `json:"row_changed_date" default:""`
+	Row_created_by       *string  `json:"row_created_by" default:""`
+	Row_created_date     *string  `json:"row_created_date" default:""`
+	Row_effective_date   *string  `json:"row_effective_date" default:""`
+	Row_expiry_date      *string  `json:"row_expiry_date" default:""`
+	Row_quality          *string  `json:"row_quality" default:""`
+}

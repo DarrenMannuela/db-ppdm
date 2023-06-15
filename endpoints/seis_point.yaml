@@ -1,0 +1,229 @@
+/seis-point:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_point
+    responses:
+      '200':
+        description: get seis_point data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              active_ind: y
+              bend_ind: y
+              datum_elev: 0.1
+              datum_elev_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              elev: 0.1
+              elev_ouom: Lorem Ipsum
+              end_ind: y
+              exception_ind: y
+              expiry_date: 12/12/2023
+              flowing_hole_ind: y
+              mapping_code: Lorem Ipsum
+              measured_depth: 0.1
+              measured_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              reference_datum: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_point_lat: 0.1
+              seis_point_long: 0.1
+              seis_station_type: Lorem Ipsum
+              source: Lorem Ipsum
+              x_coordinate: 0.1
+              y_coordinate: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_point
+    description: Create a new seis_point data
+    requestBody:
+      required: true
+      description: Request body to create seis_point data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_point'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            bend_ind: y
+            datum_elev: 0.1
+            datum_elev_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev: 0.1
+            elev_ouom: Lorem Ipsum
+            end_ind: y
+            exception_ind: y
+            expiry_date: 12/12/2023
+            flowing_hole_ind: y
+            mapping_code: Lorem Ipsum
+            measured_depth: 0.1
+            measured_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_datum: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_point_lat: 0.1
+            seis_point_long: 0.1
+            seis_station_type: Lorem Ipsum
+            source: Lorem Ipsum
+            x_coordinate: 0.1
+            y_coordinate: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_point data is added
+        content:
+          application/json:
+            example:
+              message: The seis_point data was successfully added
+/seis-point/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_point data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_point data
+    description: Update a new seis_point data
+    requestBody:
+      required: true
+      description: Request body to update seis_point data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_point'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            bend_ind: y
+            datum_elev: 0.1
+            datum_elev_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev: 0.1
+            elev_ouom: Lorem Ipsum
+            end_ind: y
+            exception_ind: y
+            expiry_date: 12/12/2023
+            flowing_hole_ind: y
+            mapping_code: Lorem Ipsum
+            measured_depth: 0.1
+            measured_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_datum: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_point_lat: 0.1
+            seis_point_long: 0.1
+            seis_station_type: Lorem Ipsum
+            source: Lorem Ipsum
+            x_coordinate: 0.1
+            y_coordinate: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_point data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_point data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_point data
+    description: Update a new seis_point data
+    requestBody:
+      required: true
+      description: Request body to update seis_point data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_point'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            bend_ind: y
+            datum_elev: 0.1
+            datum_elev_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev: 0.1
+            elev_ouom: Lorem Ipsum
+            end_ind: y
+            exception_ind: y
+            expiry_date: 12/12/2023
+            flowing_hole_ind: y
+            mapping_code: Lorem Ipsum
+            measured_depth: 0.1
+            measured_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_datum: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_point_lat: 0.1
+            seis_point_long: 0.1
+            seis_station_type: Lorem Ipsum
+            source: Lorem Ipsum
+            x_coordinate: 0.1
+            y_coordinate: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_point data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_point data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_point data
+    description: Delete seis_point data
+    responses:
+      '200':
+        description: seis_point data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_point data was successfully deleted

@@ -1,0 +1,48 @@
+package dto
+
+type Pden struct {
+	Pden_subtype            string  `json:"pden_subtype" default:"source"`
+	Pden_id                 string  `json:"pden_id" default:"source"`
+	Source                  string  `json:"source" default:"source"`
+	Active_ind              *string `json:"active_ind" default:""`
+	Area_id                 *string `json:"area_id" default:""`
+	Area_type               *string `json:"area_type" default:""`
+	Current_operator        *string `json:"current_operator" default:""`
+	Current_prod_str_name   *string `json:"current_prod_str_name" default:""`
+	Current_status_date     *string `json:"current_status_date" default:""`
+	Current_well_str_number *string `json:"current_well_str_number" default:""`
+	Effective_date          *string `json:"effective_date" default:""`
+	Enhanced_recovery_type  *string `json:"enhanced_recovery_type" default:""`
+	Expiry_date             *string `json:"expiry_date" default:""`
+	Field_id                *string `json:"field_id" default:""`
+	Last_injection_date     *string `json:"last_injection_date" default:""`
+	Last_production_date    *string `json:"last_production_date" default:""`
+	Last_reported_date      *string `json:"last_reported_date" default:""`
+	Location_desc           *string `json:"location_desc" default:""`
+	Location_desc_type      *string `json:"location_desc_type" default:""`
+	On_injection_date       *string `json:"on_injection_date" default:""`
+	On_production_date      *string `json:"on_production_date" default:""`
+	Pden_long_name          *string `json:"pden_long_name" default:""`
+	Pden_short_name         *string `json:"pden_short_name" default:""`
+	Pden_status             *string `json:"pden_status" default:""`
+	Pden_status_type        *string `json:"pden_status_type" default:""`
+	Plot_name               *string `json:"plot_name" default:""`
+	Plot_symbol             *string `json:"plot_symbol" default:""`
+	Pool_id                 *string `json:"pool_id" default:""`
+	Ppdm_guid               *string `json:"ppdm_guid" default:""`
+	Primary_product         *string `json:"primary_product" default:""`
+	Production_method       *string `json:"production_method" default:""`
+	Proprietary_ind         *string `json:"proprietary_ind" default:""`
+	Remark                  *string `json:"remark" default:""`
+	State_or_federal_waters *string `json:"state_or_federal_waters" default:""`
+	Strat_name_set_id       *string `json:"strat_name_set_id" default:""`
+	Strat_unit_id           *string `json:"strat_unit_id" default:""`
+	String_serial_number    *string `json:"string_serial_number" default:""`
+	Row_changed_by          *string `json:"row_changed_by" default:""`
+	Row_changed_date        *string `json:"row_changed_date" default:""`
+	Row_created_by          *string `json:"row_created_by" default:""`
+	Row_created_date        *string `json:"row_created_date" default:""`
+	Row_effective_date      *string `json:"row_effective_date" default:""`
+	Row_expiry_date         *string `json:"row_expiry_date" default:""`
+	Row_quality             *string `json:"row_quality" default:""`
+}

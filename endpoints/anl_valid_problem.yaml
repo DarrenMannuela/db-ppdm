@@ -1,0 +1,193 @@
+/anl-valid-problem:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_valid_problem
+    responses:
+      '200':
+        description: get anl_valid_problem data to be returned
+        content:
+          application/json:
+            example:
+            - method_set_id: Lorem Ipsum
+              method_id: Lorem Ipsum
+              accuracy_type: Lorem Ipsum
+              active_ind: y
+              confidence_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              problem_desc: Lorem Ipsum
+              problem_result: Lorem Ipsum
+              problem_severity: Lorem Ipsum
+              problem_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              resolution_method: Lorem Ipsum
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_valid_problem
+    description: Create a new anl_valid_problem data
+    requestBody:
+      required: true
+      description: Request body to create anl_valid_problem data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_valid_problem'
+          example:
+            method_set_id: Lorem Ipsum
+            method_id: Lorem Ipsum
+            accuracy_type: Lorem Ipsum
+            active_ind: y
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            problem_desc: Lorem Ipsum
+            problem_result: Lorem Ipsum
+            problem_severity: Lorem Ipsum
+            problem_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_method: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_valid_problem data is added
+        content:
+          application/json:
+            example:
+              message: The anl_valid_problem data was successfully added
+/anl-valid-problem/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_valid_problem data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_valid_problem data
+    description: Update a new anl_valid_problem data
+    requestBody:
+      required: true
+      description: Request body to update anl_valid_problem data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_valid_problem'
+          example:
+            method_set_id: Lorem Ipsum
+            method_id: Lorem Ipsum
+            accuracy_type: Lorem Ipsum
+            active_ind: y
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            problem_desc: Lorem Ipsum
+            problem_result: Lorem Ipsum
+            problem_severity: Lorem Ipsum
+            problem_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_method: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_valid_problem data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_valid_problem data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_valid_problem data
+    description: Update a new anl_valid_problem data
+    requestBody:
+      required: true
+      description: Request body to update anl_valid_problem data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_valid_problem'
+          example:
+            method_set_id: Lorem Ipsum
+            method_id: Lorem Ipsum
+            accuracy_type: Lorem Ipsum
+            active_ind: y
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            problem_desc: Lorem Ipsum
+            problem_result: Lorem Ipsum
+            problem_severity: Lorem Ipsum
+            problem_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_method: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_valid_problem data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_valid_problem data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_valid_problem data
+    description: Delete anl_valid_problem data
+    responses:
+      '200':
+        description: anl_valid_problem data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_valid_problem data was successfully deleted

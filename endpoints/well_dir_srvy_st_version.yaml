@@ -1,0 +1,309 @@
+/well-dir-srvy-st-version:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_dir_srvy_st_version
+    responses:
+      '200':
+        description: get well_dir_srvy_st_version data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              survey_id: Lorem Ipsum
+              source: Lorem Ipsum
+              accuracy_problem_ind: y
+              accuracy_problem_reason: Lorem Ipsum
+              active_ind: y
+              azimuth: 0.1
+              azimuth_ouom: Lorem Ipsum
+              closure_dist: 0.1
+              closure_dist_dir: 0.1
+              closure_dist_dir_ouom: Lorem Ipsum
+              closure_dist_ouom: Lorem Ipsum
+              delta_lat: 0.1
+              delta_long: 0.1
+              dog_leg_severity: 0.1
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              inclination: 0.1
+              inclination_ouom: Lorem Ipsum
+              latitude: 0.1
+              longitude: 0.1
+              ppdm_guid: Lorem Ipsum
+              rad_uncert_dist: 0.1
+              rad_uncert_dist_ouom: Lorem Ipsum
+              rad_uncert_dist_reason: Lorem Ipsum
+              remark: Lorem Ipsum
+              rpt_azimuth: 0.1
+              rpt_azimuth_ouom: Lorem Ipsum
+              station_id: Lorem Ipsum
+              station_md: 0.1
+              station_md_ouom: Lorem Ipsum
+              station_tvd: 0.1
+              station_tvdss: 0.1
+              station_tvdss_ouom: Lorem Ipsum
+              station_tvd_ouom: Lorem Ipsum
+              survey_run_num: Lorem Ipsum
+              survey_type: Lorem Ipsum
+              vertical_section: 0.1
+              vertical_section_ouom: Lorem Ipsum
+              x_offset: 0.1
+              x_offset_ew_direction: Lorem Ipsum
+              x_offset_ouom: Lorem Ipsum
+              y_offset: 0.1
+              y_offset_ns_direction: Lorem Ipsum
+              y_offset_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_dir_srvy_st_version
+    description: Create a new well_dir_srvy_st_version data
+    requestBody:
+      required: true
+      description: Request body to create well_dir_srvy_st_version data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_dir_srvy_st_version'
+          example:
+            uwi: Lorem Ipsum
+            survey_id: Lorem Ipsum
+            source: Lorem Ipsum
+            accuracy_problem_ind: y
+            accuracy_problem_reason: Lorem Ipsum
+            active_ind: y
+            azimuth: 0.1
+            azimuth_ouom: Lorem Ipsum
+            closure_dist: 0.1
+            closure_dist_dir: 0.1
+            closure_dist_dir_ouom: Lorem Ipsum
+            closure_dist_ouom: Lorem Ipsum
+            delta_lat: 0.1
+            delta_long: 0.1
+            dog_leg_severity: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inclination: 0.1
+            inclination_ouom: Lorem Ipsum
+            latitude: 0.1
+            longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            rad_uncert_dist: 0.1
+            rad_uncert_dist_ouom: Lorem Ipsum
+            rad_uncert_dist_reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            rpt_azimuth: 0.1
+            rpt_azimuth_ouom: Lorem Ipsum
+            station_id: Lorem Ipsum
+            station_md: 0.1
+            station_md_ouom: Lorem Ipsum
+            station_tvd: 0.1
+            station_tvdss: 0.1
+            station_tvdss_ouom: Lorem Ipsum
+            station_tvd_ouom: Lorem Ipsum
+            survey_run_num: Lorem Ipsum
+            survey_type: Lorem Ipsum
+            vertical_section: 0.1
+            vertical_section_ouom: Lorem Ipsum
+            x_offset: 0.1
+            x_offset_ew_direction: Lorem Ipsum
+            x_offset_ouom: Lorem Ipsum
+            y_offset: 0.1
+            y_offset_ns_direction: Lorem Ipsum
+            y_offset_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_dir_srvy_st_version data is added
+        content:
+          application/json:
+            example:
+              message: The well_dir_srvy_st_version data was successfully added
+/well-dir-srvy-st-version/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_dir_srvy_st_version data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_dir_srvy_st_version data
+    description: Update a new well_dir_srvy_st_version data
+    requestBody:
+      required: true
+      description: Request body to update well_dir_srvy_st_version data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_dir_srvy_st_version'
+          example:
+            uwi: Lorem Ipsum
+            survey_id: Lorem Ipsum
+            source: Lorem Ipsum
+            accuracy_problem_ind: y
+            accuracy_problem_reason: Lorem Ipsum
+            active_ind: y
+            azimuth: 0.1
+            azimuth_ouom: Lorem Ipsum
+            closure_dist: 0.1
+            closure_dist_dir: 0.1
+            closure_dist_dir_ouom: Lorem Ipsum
+            closure_dist_ouom: Lorem Ipsum
+            delta_lat: 0.1
+            delta_long: 0.1
+            dog_leg_severity: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inclination: 0.1
+            inclination_ouom: Lorem Ipsum
+            latitude: 0.1
+            longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            rad_uncert_dist: 0.1
+            rad_uncert_dist_ouom: Lorem Ipsum
+            rad_uncert_dist_reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            rpt_azimuth: 0.1
+            rpt_azimuth_ouom: Lorem Ipsum
+            station_id: Lorem Ipsum
+            station_md: 0.1
+            station_md_ouom: Lorem Ipsum
+            station_tvd: 0.1
+            station_tvdss: 0.1
+            station_tvdss_ouom: Lorem Ipsum
+            station_tvd_ouom: Lorem Ipsum
+            survey_run_num: Lorem Ipsum
+            survey_type: Lorem Ipsum
+            vertical_section: 0.1
+            vertical_section_ouom: Lorem Ipsum
+            x_offset: 0.1
+            x_offset_ew_direction: Lorem Ipsum
+            x_offset_ouom: Lorem Ipsum
+            y_offset: 0.1
+            y_offset_ns_direction: Lorem Ipsum
+            y_offset_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_dir_srvy_st_version data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_dir_srvy_st_version data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_dir_srvy_st_version data
+    description: Update a new well_dir_srvy_st_version data
+    requestBody:
+      required: true
+      description: Request body to update well_dir_srvy_st_version data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_dir_srvy_st_version'
+          example:
+            uwi: Lorem Ipsum
+            survey_id: Lorem Ipsum
+            source: Lorem Ipsum
+            accuracy_problem_ind: y
+            accuracy_problem_reason: Lorem Ipsum
+            active_ind: y
+            azimuth: 0.1
+            azimuth_ouom: Lorem Ipsum
+            closure_dist: 0.1
+            closure_dist_dir: 0.1
+            closure_dist_dir_ouom: Lorem Ipsum
+            closure_dist_ouom: Lorem Ipsum
+            delta_lat: 0.1
+            delta_long: 0.1
+            dog_leg_severity: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inclination: 0.1
+            inclination_ouom: Lorem Ipsum
+            latitude: 0.1
+            longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            rad_uncert_dist: 0.1
+            rad_uncert_dist_ouom: Lorem Ipsum
+            rad_uncert_dist_reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            rpt_azimuth: 0.1
+            rpt_azimuth_ouom: Lorem Ipsum
+            station_id: Lorem Ipsum
+            station_md: 0.1
+            station_md_ouom: Lorem Ipsum
+            station_tvd: 0.1
+            station_tvdss: 0.1
+            station_tvdss_ouom: Lorem Ipsum
+            station_tvd_ouom: Lorem Ipsum
+            survey_run_num: Lorem Ipsum
+            survey_type: Lorem Ipsum
+            vertical_section: 0.1
+            vertical_section_ouom: Lorem Ipsum
+            x_offset: 0.1
+            x_offset_ew_direction: Lorem Ipsum
+            x_offset_ouom: Lorem Ipsum
+            y_offset: 0.1
+            y_offset_ns_direction: Lorem Ipsum
+            y_offset_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_dir_srvy_st_version data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_dir_srvy_st_version data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_dir_srvy_st_version data
+    description: Delete well_dir_srvy_st_version data
+    responses:
+      '200':
+        description: well_dir_srvy_st_version data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_dir_srvy_st_version data was successfully deleted

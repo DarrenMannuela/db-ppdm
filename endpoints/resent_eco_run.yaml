@@ -1,0 +1,209 @@
+/resent-eco-run:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get resent_eco_run
+    responses:
+      '200':
+        description: get resent_eco_run data to be returned
+        content:
+          application/json:
+            example:
+            - resent_id: Lorem Ipsum
+              reserve_class_id: Lorem Ipsum
+              economics_run_id: Lorem Ipsum
+              active_ind: y
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              currency_uom: Lorem Ipsum
+              economic_forecast: 0.1
+              economic_scenario: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              gross_ind: y
+              net_ind: y
+              net_present_value: 0.1
+              partner_ba_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              reserve_life_index: 0.1
+              source: Lorem Ipsum
+              tech_forecast: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new resent_eco_run
+    description: Create a new resent_eco_run data
+    requestBody:
+      required: true
+      description: Request body to create resent_eco_run data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_eco_run'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            economics_run_id: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            economic_forecast: 0.1
+            economic_scenario: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_ind: y
+            net_ind: y
+            net_present_value: 0.1
+            partner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reserve_life_index: 0.1
+            source: Lorem Ipsum
+            tech_forecast: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_eco_run data is added
+        content:
+          application/json:
+            example:
+              message: The resent_eco_run data was successfully added
+/resent-eco-run/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of resent_eco_run data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new resent_eco_run data
+    description: Update a new resent_eco_run data
+    requestBody:
+      required: true
+      description: Request body to update resent_eco_run data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_eco_run'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            economics_run_id: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            economic_forecast: 0.1
+            economic_scenario: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_ind: y
+            net_ind: y
+            net_present_value: 0.1
+            partner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reserve_life_index: 0.1
+            source: Lorem Ipsum
+            tech_forecast: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_eco_run data is completely updated
+        content:
+          application/json:
+            example:
+              message: The resent_eco_run data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new resent_eco_run data
+    description: Update a new resent_eco_run data
+    requestBody:
+      required: true
+      description: Request body to update resent_eco_run data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_eco_run'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            economics_run_id: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            economic_forecast: 0.1
+            economic_scenario: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_ind: y
+            net_ind: y
+            net_present_value: 0.1
+            partner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reserve_life_index: 0.1
+            source: Lorem Ipsum
+            tech_forecast: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in resent_eco_run data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in resent_eco_run data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete resent_eco_run data
+    description: Delete resent_eco_run data
+    responses:
+      '200':
+        description: resent_eco_run data is deleted
+        content:
+          application/json:
+            example:
+              message: The resent_eco_run data was successfully deleted

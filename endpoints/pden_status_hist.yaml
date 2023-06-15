@@ -1,0 +1,197 @@
+/pden-status-hist:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get pden_status_hist
+    responses:
+      '200':
+        description: get pden_status_hist data to be returned
+        content:
+          application/json:
+            example:
+            - pden_subtype: Lorem Ipsum
+              pden_id: Lorem Ipsum
+              pden_source: Lorem Ipsum
+              status_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              end_time: 12/12/2023
+              expiry_date: 12/12/2023
+              percent_capability: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_time: 12/12/2023
+              status: Lorem Ipsum
+              status_date: 12/12/2023
+              status_type: Lorem Ipsum
+              timezone: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new pden_status_hist
+    description: Create a new pden_status_hist data
+    requestBody:
+      required: true
+      description: Request body to create pden_status_hist data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_status_hist'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            status: Lorem Ipsum
+            status_date: 12/12/2023
+            status_type: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_status_hist data is added
+        content:
+          application/json:
+            example:
+              message: The pden_status_hist data was successfully added
+/pden-status-hist/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of pden_status_hist data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new pden_status_hist data
+    description: Update a new pden_status_hist data
+    requestBody:
+      required: true
+      description: Request body to update pden_status_hist data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_status_hist'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            status: Lorem Ipsum
+            status_date: 12/12/2023
+            status_type: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_status_hist data is completely updated
+        content:
+          application/json:
+            example:
+              message: The pden_status_hist data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new pden_status_hist data
+    description: Update a new pden_status_hist data
+    requestBody:
+      required: true
+      description: Request body to update pden_status_hist data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_status_hist'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            status: Lorem Ipsum
+            status_date: 12/12/2023
+            status_type: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in pden_status_hist data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in pden_status_hist data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete pden_status_hist data
+    description: Delete pden_status_hist data
+    responses:
+      '200':
+        description: pden_status_hist data is deleted
+        content:
+          application/json:
+            example:
+              message: The pden_status_hist data was successfully deleted

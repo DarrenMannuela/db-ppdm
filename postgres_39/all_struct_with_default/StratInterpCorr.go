@@ -1,0 +1,44 @@
+package dto
+
+type Strat_interp_corr struct {
+	Correlation_id             string  `json:"correlation_id" default:"source"`
+	Active_ind                 *string `json:"active_ind" default:""`
+	Area_id                    *string `json:"area_id" default:""`
+	Area_type                  *string `json:"area_type" default:""`
+	Business_associate_id      *string `json:"business_associate_id" default:""`
+	Correlation_date           *string `json:"correlation_date" default:""`
+	Effective_date             *string `json:"effective_date" default:""`
+	Expiry_date                *string `json:"expiry_date" default:""`
+	Field_interp_id_1          *string `json:"field_interp_id_1" default:""`
+	Field_interp_id_2          *string `json:"field_interp_id_2" default:""`
+	Field_station_id_1         *string `json:"field_station_id_1" default:""`
+	Field_station_id_2         *string `json:"field_station_id_2" default:""`
+	Field_strat_name_set_1     *string `json:"field_strat_name_set_1" default:""`
+	Field_strat_name_set_2     *string `json:"field_strat_name_set_2" default:""`
+	Field_strat_unit_id_1      *string `json:"field_strat_unit_id_1" default:""`
+	Field_strat_unit_id_2      *string `json:"field_strat_unit_id_2" default:""`
+	Ppdm_guid                  *string `json:"ppdm_guid" default:""`
+	Project_id                 *string `json:"project_id" default:""`
+	Remark                     *string `json:"remark" default:""`
+	Source                     *string `json:"source" default:""`
+	Source_document_id         *string `json:"source_document_id" default:""`
+	Strat_correlation_criteria *string `json:"strat_correlation_criteria" default:""`
+	Strat_correlation_quality  *string `json:"strat_correlation_quality" default:""`
+	Strat_correlation_type     *string `json:"strat_correlation_type" default:""`
+	Strat_interpret_method     *string `json:"strat_interpret_method" default:""`
+	Uwi_1                      *string `json:"uwi_1" default:""`
+	Uwi_2                      *string `json:"uwi_2" default:""`
+	Uwi_interp_id_1            *string `json:"uwi_interp_id_1" default:""`
+	Uwi_interp_id_2            *string `json:"uwi_interp_id_2" default:""`
+	Uwi_strat_name_set_1       *string `json:"uwi_strat_name_set_1" default:""`
+	Uwi_strat_name_set_2       *string `json:"uwi_strat_name_set_2" default:""`
+	Uwi_strat_unit_id_1        *string `json:"uwi_strat_unit_id_1" default:""`
+	Uwi_strat_unit_id_2        *string `json:"uwi_strat_unit_id_2" default:""`
+	Row_changed_by             *string `json:"row_changed_by" default:""`
+	Row_changed_date           *string `json:"row_changed_date" default:""`
+	Row_created_by             *string `json:"row_created_by" default:""`
+	Row_created_date           *string `json:"row_created_date" default:""`
+	Row_effective_date         *string `json:"row_effective_date" default:""`
+	Row_expiry_date            *string `json:"row_expiry_date" default:""`
+	Row_quality                *string `json:"row_quality" default:""`
+}

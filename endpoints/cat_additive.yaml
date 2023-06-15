@@ -1,0 +1,193 @@
+/cat-additive:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cat_additive
+    responses:
+      '200':
+        description: get cat_additive data to be returned
+        content:
+          application/json:
+            example:
+            - catalogue_additive_id: Lorem Ipsum
+              active_ind: y
+              additive_group: Lorem Ipsum
+              additive_name: Lorem Ipsum
+              additive_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              manufacturer: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              purchase_quantity: 1.0
+              purchase_quantity_type: Lorem Ipsum
+              purchase_quantity_uom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              supplier: Lorem Ipsum
+              upc_code: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cat_additive
+    description: Create a new cat_additive data
+    requestBody:
+      required: true
+      description: Request body to create cat_additive data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive'
+          example:
+            catalogue_additive_id: Lorem Ipsum
+            active_ind: y
+            additive_group: Lorem Ipsum
+            additive_name: Lorem Ipsum
+            additive_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            manufacturer: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            purchase_quantity: 1.0
+            purchase_quantity_type: Lorem Ipsum
+            purchase_quantity_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            supplier: Lorem Ipsum
+            upc_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cat_additive data is added
+        content:
+          application/json:
+            example:
+              message: The cat_additive data was successfully added
+/cat-additive/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cat_additive data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cat_additive data
+    description: Update a new cat_additive data
+    requestBody:
+      required: true
+      description: Request body to update cat_additive data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive'
+          example:
+            catalogue_additive_id: Lorem Ipsum
+            active_ind: y
+            additive_group: Lorem Ipsum
+            additive_name: Lorem Ipsum
+            additive_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            manufacturer: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            purchase_quantity: 1.0
+            purchase_quantity_type: Lorem Ipsum
+            purchase_quantity_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            supplier: Lorem Ipsum
+            upc_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cat_additive data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cat_additive data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cat_additive data
+    description: Update a new cat_additive data
+    requestBody:
+      required: true
+      description: Request body to update cat_additive data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive'
+          example:
+            catalogue_additive_id: Lorem Ipsum
+            active_ind: y
+            additive_group: Lorem Ipsum
+            additive_name: Lorem Ipsum
+            additive_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            manufacturer: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            purchase_quantity: 1.0
+            purchase_quantity_type: Lorem Ipsum
+            purchase_quantity_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            supplier: Lorem Ipsum
+            upc_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cat_additive data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cat_additive data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cat_additive data
+    description: Delete cat_additive data
+    responses:
+      '200':
+        description: cat_additive data is deleted
+        content:
+          application/json:
+            example:
+              message: The cat_additive data was successfully deleted

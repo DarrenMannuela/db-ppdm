@@ -1,0 +1,241 @@
+/land-sale-bid:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get land_sale_bid
+    responses:
+      '200':
+        description: get land_sale_bid data to be returned
+        content:
+          application/json:
+            example:
+            - jurisdiction: Lorem Ipsum
+              land_sale_number: Lorem Ipsum
+              land_sale_offering_id: Lorem Ipsum
+              land_offering_bid_id: Lorem Ipsum
+              active_ind: y
+              address_for_service: Lorem Ipsum
+              address_source: Lorem Ipsum
+              bidder: Lorem Ipsum
+              bidder_type: Lorem Ipsum
+              bid_status: Lorem Ipsum
+              bid_status_date: 12/12/2023
+              bid_submit_date: 12/12/2023
+              bid_type: Lorem Ipsum
+              cash_bid_type: Lorem Ipsum
+              confidential_ind: y
+              contingency_desc: Lorem Ipsum
+              contingency_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              payment_instruction_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              response: Lorem Ipsum
+              response_date: 12/12/2023
+              source: Lorem Ipsum
+              successful_ind: y
+              work_bid_ind: y
+              work_bid_remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new land_sale_bid
+    description: Create a new land_sale_bid data
+    requestBody:
+      required: true
+      description: Request body to create land_sale_bid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale_bid'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            land_sale_offering_id: Lorem Ipsum
+            land_offering_bid_id: Lorem Ipsum
+            active_ind: y
+            address_for_service: Lorem Ipsum
+            address_source: Lorem Ipsum
+            bidder: Lorem Ipsum
+            bidder_type: Lorem Ipsum
+            bid_status: Lorem Ipsum
+            bid_status_date: 12/12/2023
+            bid_submit_date: 12/12/2023
+            bid_type: Lorem Ipsum
+            cash_bid_type: Lorem Ipsum
+            confidential_ind: y
+            contingency_desc: Lorem Ipsum
+            contingency_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_instruction_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            response: Lorem Ipsum
+            response_date: 12/12/2023
+            source: Lorem Ipsum
+            successful_ind: y
+            work_bid_ind: y
+            work_bid_remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_sale_bid data is added
+        content:
+          application/json:
+            example:
+              message: The land_sale_bid data was successfully added
+/land-sale-bid/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of land_sale_bid data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new land_sale_bid data
+    description: Update a new land_sale_bid data
+    requestBody:
+      required: true
+      description: Request body to update land_sale_bid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale_bid'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            land_sale_offering_id: Lorem Ipsum
+            land_offering_bid_id: Lorem Ipsum
+            active_ind: y
+            address_for_service: Lorem Ipsum
+            address_source: Lorem Ipsum
+            bidder: Lorem Ipsum
+            bidder_type: Lorem Ipsum
+            bid_status: Lorem Ipsum
+            bid_status_date: 12/12/2023
+            bid_submit_date: 12/12/2023
+            bid_type: Lorem Ipsum
+            cash_bid_type: Lorem Ipsum
+            confidential_ind: y
+            contingency_desc: Lorem Ipsum
+            contingency_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_instruction_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            response: Lorem Ipsum
+            response_date: 12/12/2023
+            source: Lorem Ipsum
+            successful_ind: y
+            work_bid_ind: y
+            work_bid_remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_sale_bid data is completely updated
+        content:
+          application/json:
+            example:
+              message: The land_sale_bid data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new land_sale_bid data
+    description: Update a new land_sale_bid data
+    requestBody:
+      required: true
+      description: Request body to update land_sale_bid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale_bid'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            land_sale_offering_id: Lorem Ipsum
+            land_offering_bid_id: Lorem Ipsum
+            active_ind: y
+            address_for_service: Lorem Ipsum
+            address_source: Lorem Ipsum
+            bidder: Lorem Ipsum
+            bidder_type: Lorem Ipsum
+            bid_status: Lorem Ipsum
+            bid_status_date: 12/12/2023
+            bid_submit_date: 12/12/2023
+            bid_type: Lorem Ipsum
+            cash_bid_type: Lorem Ipsum
+            confidential_ind: y
+            contingency_desc: Lorem Ipsum
+            contingency_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_instruction_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            response: Lorem Ipsum
+            response_date: 12/12/2023
+            source: Lorem Ipsum
+            successful_ind: y
+            work_bid_ind: y
+            work_bid_remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in land_sale_bid data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in land_sale_bid data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete land_sale_bid data
+    description: Delete land_sale_bid data
+    responses:
+      '200':
+        description: land_sale_bid data is deleted
+        content:
+          application/json:
+            example:
+              message: The land_sale_bid data was successfully deleted

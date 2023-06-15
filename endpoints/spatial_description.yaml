@@ -1,0 +1,281 @@
+/spatial-description:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get spatial_description
+    responses:
+      '200':
+        description: get spatial_description data to be returned
+        content:
+          application/json:
+            example:
+            - spatial_description_id: Lorem Ipsum
+              active_ind: y
+              carter_ind: y
+              congress_ind: y
+              coord_acquisition_id: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              dls_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fps_ind: y
+              geodetic_ind: y
+              gross_size: 0.1
+              gross_size_ouom: Lorem Ipsum
+              inactivation_date: 12/12/2023
+              libya_ind: y
+              line_ind: y
+              line_version_ind: y
+              local_coord_system_id: Lorem Ipsum
+              max_latitude: 0.1
+              max_longitude: 0.1
+              mineral_zone_ind: y
+              min_latitude: 0.1
+              min_longitude: 0.1
+              ne_loc_ind: y
+              north_sea_ind: y
+              nts_ind: y
+              offshore_ind: y
+              ohio_ind: y
+              pbl_ind: y
+              polygon_ind: y
+              polygon_version_ind: y
+              ppdm_guid: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              spatial_desc_text_ind: y
+              spatial_desc_type: Lorem Ipsum
+              texas_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new spatial_description
+    description: Create a new spatial_description data
+    requestBody:
+      required: true
+      description: Request body to create spatial_description data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/spatial_description'
+          example:
+            spatial_description_id: Lorem Ipsum
+            active_ind: y
+            carter_ind: y
+            congress_ind: y
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            dls_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fps_ind: y
+            geodetic_ind: y
+            gross_size: 0.1
+            gross_size_ouom: Lorem Ipsum
+            inactivation_date: 12/12/2023
+            libya_ind: y
+            line_ind: y
+            line_version_ind: y
+            local_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            mineral_zone_ind: y
+            min_latitude: 0.1
+            min_longitude: 0.1
+            ne_loc_ind: y
+            north_sea_ind: y
+            nts_ind: y
+            offshore_ind: y
+            ohio_ind: y
+            pbl_ind: y
+            polygon_ind: y
+            polygon_version_ind: y
+            ppdm_guid: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_desc_text_ind: y
+            spatial_desc_type: Lorem Ipsum
+            texas_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: spatial_description data is added
+        content:
+          application/json:
+            example:
+              message: The spatial_description data was successfully added
+/spatial-description/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of spatial_description data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new spatial_description data
+    description: Update a new spatial_description data
+    requestBody:
+      required: true
+      description: Request body to update spatial_description data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/spatial_description'
+          example:
+            spatial_description_id: Lorem Ipsum
+            active_ind: y
+            carter_ind: y
+            congress_ind: y
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            dls_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fps_ind: y
+            geodetic_ind: y
+            gross_size: 0.1
+            gross_size_ouom: Lorem Ipsum
+            inactivation_date: 12/12/2023
+            libya_ind: y
+            line_ind: y
+            line_version_ind: y
+            local_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            mineral_zone_ind: y
+            min_latitude: 0.1
+            min_longitude: 0.1
+            ne_loc_ind: y
+            north_sea_ind: y
+            nts_ind: y
+            offshore_ind: y
+            ohio_ind: y
+            pbl_ind: y
+            polygon_ind: y
+            polygon_version_ind: y
+            ppdm_guid: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_desc_text_ind: y
+            spatial_desc_type: Lorem Ipsum
+            texas_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: spatial_description data is completely updated
+        content:
+          application/json:
+            example:
+              message: The spatial_description data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new spatial_description data
+    description: Update a new spatial_description data
+    requestBody:
+      required: true
+      description: Request body to update spatial_description data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/spatial_description'
+          example:
+            spatial_description_id: Lorem Ipsum
+            active_ind: y
+            carter_ind: y
+            congress_ind: y
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            dls_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fps_ind: y
+            geodetic_ind: y
+            gross_size: 0.1
+            gross_size_ouom: Lorem Ipsum
+            inactivation_date: 12/12/2023
+            libya_ind: y
+            line_ind: y
+            line_version_ind: y
+            local_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            mineral_zone_ind: y
+            min_latitude: 0.1
+            min_longitude: 0.1
+            ne_loc_ind: y
+            north_sea_ind: y
+            nts_ind: y
+            offshore_ind: y
+            ohio_ind: y
+            pbl_ind: y
+            polygon_ind: y
+            polygon_version_ind: y
+            ppdm_guid: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_desc_text_ind: y
+            spatial_desc_type: Lorem Ipsum
+            texas_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in spatial_description data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in spatial_description data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete spatial_description data
+    description: Delete spatial_description data
+    responses:
+      '200':
+        description: spatial_description data is deleted
+        content:
+          application/json:
+            example:
+              message: The spatial_description data was successfully deleted

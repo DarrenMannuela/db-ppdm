@@ -1,0 +1,253 @@
+/ppdm-metric-value:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_metric_value
+    responses:
+      '200':
+        description: get ppdm_metric_value data to be returned
+        content:
+          application/json:
+            example:
+            - metric_id: Lorem Ipsum
+              active_ind: y
+              average_value: 1.0
+              average_value_ouom: Lorem Ipsum
+              average_value_uom: Lorem Ipsum
+              cost: 0.1
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              currency_uom: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              metric_code: Lorem Ipsum
+              metric_desc: Lorem Ipsum
+              metric_ind: y
+              metric_type: Lorem Ipsum
+              min_date: 12/12/2023
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              reference_value: 1.0
+              reference_value_ouom: Lorem Ipsum
+              reference_value_type: Lorem Ipsum
+              reference_value_uom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_metric_value
+    description: Create a new ppdm_metric_value data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_metric_value data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_metric_value'
+          example:
+            metric_id: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            metric_code: Lorem Ipsum
+            metric_desc: Lorem Ipsum
+            metric_ind: y
+            metric_type: Lorem Ipsum
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_value: 1.0
+            reference_value_ouom: Lorem Ipsum
+            reference_value_type: Lorem Ipsum
+            reference_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_metric_value data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_metric_value data was successfully added
+/ppdm-metric-value/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_metric_value data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_metric_value data
+    description: Update a new ppdm_metric_value data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_metric_value data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_metric_value'
+          example:
+            metric_id: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            metric_code: Lorem Ipsum
+            metric_desc: Lorem Ipsum
+            metric_ind: y
+            metric_type: Lorem Ipsum
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_value: 1.0
+            reference_value_ouom: Lorem Ipsum
+            reference_value_type: Lorem Ipsum
+            reference_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_metric_value data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_metric_value data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_metric_value data
+    description: Update a new ppdm_metric_value data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_metric_value data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_metric_value'
+          example:
+            metric_id: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            metric_code: Lorem Ipsum
+            metric_desc: Lorem Ipsum
+            metric_ind: y
+            metric_type: Lorem Ipsum
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_value: 1.0
+            reference_value_ouom: Lorem Ipsum
+            reference_value_type: Lorem Ipsum
+            reference_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_metric_value data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_metric_value data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_metric_value data
+    description: Delete ppdm_metric_value data
+    responses:
+      '200':
+        description: ppdm_metric_value data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_metric_value data was successfully deleted

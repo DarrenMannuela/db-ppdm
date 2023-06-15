@@ -1,0 +1,245 @@
+/ppdm-column:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_column
+    responses:
+      '200':
+        description: get ppdm_column data to be returned
+        content:
+          application/json:
+            example:
+            - system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              column_name: Lorem Ipsum
+              active_ind: y
+              column_comment: Lorem Ipsum
+              column_key_method: Lorem Ipsum
+              column_precision: 1.0
+              column_scale: 1.0
+              column_size: 1.0
+              control_column_ind: y
+              control_column_name: Lorem Ipsum
+              data_type: Lorem Ipsum
+              default_ind_value: y
+              default_uom_id: Lorem Ipsum
+              default_value_method: Lorem Ipsum
+              distinct_value_count: 1.0
+              distinct_value_count_date: 12/12/2023
+              domain: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              extension_ind: y
+              last_system_key: Lorem Ipsum
+              nullable_ind: y
+              ouom_column_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              surrogate_ind: y
+              uom_column_name: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_column
+    description: Create a new ppdm_column data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_column data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_column'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            column_name: Lorem Ipsum
+            active_ind: y
+            column_comment: Lorem Ipsum
+            column_key_method: Lorem Ipsum
+            column_precision: 1.0
+            column_scale: 1.0
+            column_size: 1.0
+            control_column_ind: y
+            control_column_name: Lorem Ipsum
+            data_type: Lorem Ipsum
+            default_ind_value: y
+            default_uom_id: Lorem Ipsum
+            default_value_method: Lorem Ipsum
+            distinct_value_count: 1.0
+            distinct_value_count_date: 12/12/2023
+            domain: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            last_system_key: Lorem Ipsum
+            nullable_ind: y
+            ouom_column_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            uom_column_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_column data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_column data was successfully added
+/ppdm-column/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_column data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_column data
+    description: Update a new ppdm_column data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_column data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_column'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            column_name: Lorem Ipsum
+            active_ind: y
+            column_comment: Lorem Ipsum
+            column_key_method: Lorem Ipsum
+            column_precision: 1.0
+            column_scale: 1.0
+            column_size: 1.0
+            control_column_ind: y
+            control_column_name: Lorem Ipsum
+            data_type: Lorem Ipsum
+            default_ind_value: y
+            default_uom_id: Lorem Ipsum
+            default_value_method: Lorem Ipsum
+            distinct_value_count: 1.0
+            distinct_value_count_date: 12/12/2023
+            domain: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            last_system_key: Lorem Ipsum
+            nullable_ind: y
+            ouom_column_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            uom_column_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_column data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_column data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_column data
+    description: Update a new ppdm_column data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_column data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_column'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            column_name: Lorem Ipsum
+            active_ind: y
+            column_comment: Lorem Ipsum
+            column_key_method: Lorem Ipsum
+            column_precision: 1.0
+            column_scale: 1.0
+            column_size: 1.0
+            control_column_ind: y
+            control_column_name: Lorem Ipsum
+            data_type: Lorem Ipsum
+            default_ind_value: y
+            default_uom_id: Lorem Ipsum
+            default_value_method: Lorem Ipsum
+            distinct_value_count: 1.0
+            distinct_value_count_date: 12/12/2023
+            domain: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            last_system_key: Lorem Ipsum
+            nullable_ind: y
+            ouom_column_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            uom_column_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_column data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_column data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_column data
+    description: Delete ppdm_column data
+    responses:
+      '200':
+        description: ppdm_column data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_column data was successfully deleted

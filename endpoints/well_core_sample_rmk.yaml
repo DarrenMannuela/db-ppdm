@@ -1,0 +1,169 @@
+/well-core-sample-rmk:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_core_sample_rmk
+    responses:
+      '200':
+        description: get well_core_sample_rmk data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              core_id: Lorem Ipsum
+              sample_num: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              remark_source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_core_sample_rmk
+    description: Create a new well_core_sample_rmk data
+    requestBody:
+      required: true
+      description: Request body to create well_core_sample_rmk data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_rmk'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_core_sample_rmk data is added
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_rmk data was successfully added
+/well-core-sample-rmk/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_core_sample_rmk data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_core_sample_rmk data
+    description: Update a new well_core_sample_rmk data
+    requestBody:
+      required: true
+      description: Request body to update well_core_sample_rmk data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_rmk'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_core_sample_rmk data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_rmk data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_core_sample_rmk data
+    description: Update a new well_core_sample_rmk data
+    requestBody:
+      required: true
+      description: Request body to update well_core_sample_rmk data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_rmk'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_core_sample_rmk data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_core_sample_rmk data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_core_sample_rmk data
+    description: Delete well_core_sample_rmk data
+    responses:
+      '200':
+        description: well_core_sample_rmk data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_rmk data was successfully deleted

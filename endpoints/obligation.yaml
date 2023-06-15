@@ -1,0 +1,293 @@
+/obligation:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get obligation
+    responses:
+      '200':
+        description: get obligation data to be returned
+        content:
+          application/json:
+            example:
+            - obligation_id: Lorem Ipsum
+              active_ind: y
+              calculation_method: Lorem Ipsum
+              convertible_ind: y
+              critical_date: 12/12/2023
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fulfilled_date: 12/12/2023
+              fulfilled_ind: y
+              gross_obligation_cost: 0.1
+              instrument_id: Lorem Ipsum
+              liability_release_date: 12/12/2023
+              net_obligation_cost: 0.1
+              notice_period_length: 0.1
+              notice_period_ouom: Lorem Ipsum
+              obligation_category: Lorem Ipsum
+              obligation_duration: 0.1
+              obligation_duration_ouom: Lorem Ipsum
+              obligation_frequency: Lorem Ipsum
+              obligation_type: Lorem Ipsum
+              payment_ind: y
+              payment_responsibility: Lorem Ipsum
+              percentage: 0.1
+              potential_obligation_desc: Lorem Ipsum
+              potential_obligation_ind: y
+              ppdm_guid: Lorem Ipsum
+              prepaid_ind: y
+              remark: Lorem Ipsum
+              resp_party_ba_id: Lorem Ipsum
+              review_frequency: Lorem Ipsum
+              royalty_owner_ba_id: Lorem Ipsum
+              royalty_payor_ba_id: Lorem Ipsum
+              royalty_type: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              substance_id: Lorem Ipsum
+              trigger_method: Lorem Ipsum
+              work_obligation_desc: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new obligation
+    description: Create a new obligation data
+    requestBody:
+      required: true
+      description: Request body to create obligation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/obligation'
+          example:
+            obligation_id: Lorem Ipsum
+            active_ind: y
+            calculation_method: Lorem Ipsum
+            convertible_ind: y
+            critical_date: 12/12/2023
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fulfilled_date: 12/12/2023
+            fulfilled_ind: y
+            gross_obligation_cost: 0.1
+            instrument_id: Lorem Ipsum
+            liability_release_date: 12/12/2023
+            net_obligation_cost: 0.1
+            notice_period_length: 0.1
+            notice_period_ouom: Lorem Ipsum
+            obligation_category: Lorem Ipsum
+            obligation_duration: 0.1
+            obligation_duration_ouom: Lorem Ipsum
+            obligation_frequency: Lorem Ipsum
+            obligation_type: Lorem Ipsum
+            payment_ind: y
+            payment_responsibility: Lorem Ipsum
+            percentage: 0.1
+            potential_obligation_desc: Lorem Ipsum
+            potential_obligation_ind: y
+            ppdm_guid: Lorem Ipsum
+            prepaid_ind: y
+            remark: Lorem Ipsum
+            resp_party_ba_id: Lorem Ipsum
+            review_frequency: Lorem Ipsum
+            royalty_owner_ba_id: Lorem Ipsum
+            royalty_payor_ba_id: Lorem Ipsum
+            royalty_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            substance_id: Lorem Ipsum
+            trigger_method: Lorem Ipsum
+            work_obligation_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: obligation data is added
+        content:
+          application/json:
+            example:
+              message: The obligation data was successfully added
+/obligation/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of obligation data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new obligation data
+    description: Update a new obligation data
+    requestBody:
+      required: true
+      description: Request body to update obligation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/obligation'
+          example:
+            obligation_id: Lorem Ipsum
+            active_ind: y
+            calculation_method: Lorem Ipsum
+            convertible_ind: y
+            critical_date: 12/12/2023
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fulfilled_date: 12/12/2023
+            fulfilled_ind: y
+            gross_obligation_cost: 0.1
+            instrument_id: Lorem Ipsum
+            liability_release_date: 12/12/2023
+            net_obligation_cost: 0.1
+            notice_period_length: 0.1
+            notice_period_ouom: Lorem Ipsum
+            obligation_category: Lorem Ipsum
+            obligation_duration: 0.1
+            obligation_duration_ouom: Lorem Ipsum
+            obligation_frequency: Lorem Ipsum
+            obligation_type: Lorem Ipsum
+            payment_ind: y
+            payment_responsibility: Lorem Ipsum
+            percentage: 0.1
+            potential_obligation_desc: Lorem Ipsum
+            potential_obligation_ind: y
+            ppdm_guid: Lorem Ipsum
+            prepaid_ind: y
+            remark: Lorem Ipsum
+            resp_party_ba_id: Lorem Ipsum
+            review_frequency: Lorem Ipsum
+            royalty_owner_ba_id: Lorem Ipsum
+            royalty_payor_ba_id: Lorem Ipsum
+            royalty_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            substance_id: Lorem Ipsum
+            trigger_method: Lorem Ipsum
+            work_obligation_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: obligation data is completely updated
+        content:
+          application/json:
+            example:
+              message: The obligation data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new obligation data
+    description: Update a new obligation data
+    requestBody:
+      required: true
+      description: Request body to update obligation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/obligation'
+          example:
+            obligation_id: Lorem Ipsum
+            active_ind: y
+            calculation_method: Lorem Ipsum
+            convertible_ind: y
+            critical_date: 12/12/2023
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fulfilled_date: 12/12/2023
+            fulfilled_ind: y
+            gross_obligation_cost: 0.1
+            instrument_id: Lorem Ipsum
+            liability_release_date: 12/12/2023
+            net_obligation_cost: 0.1
+            notice_period_length: 0.1
+            notice_period_ouom: Lorem Ipsum
+            obligation_category: Lorem Ipsum
+            obligation_duration: 0.1
+            obligation_duration_ouom: Lorem Ipsum
+            obligation_frequency: Lorem Ipsum
+            obligation_type: Lorem Ipsum
+            payment_ind: y
+            payment_responsibility: Lorem Ipsum
+            percentage: 0.1
+            potential_obligation_desc: Lorem Ipsum
+            potential_obligation_ind: y
+            ppdm_guid: Lorem Ipsum
+            prepaid_ind: y
+            remark: Lorem Ipsum
+            resp_party_ba_id: Lorem Ipsum
+            review_frequency: Lorem Ipsum
+            royalty_owner_ba_id: Lorem Ipsum
+            royalty_payor_ba_id: Lorem Ipsum
+            royalty_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            substance_id: Lorem Ipsum
+            trigger_method: Lorem Ipsum
+            work_obligation_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in obligation data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in obligation data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete obligation data
+    description: Delete obligation data
+    responses:
+      '200':
+        description: obligation data is deleted
+        content:
+          application/json:
+            example:
+              message: The obligation data was successfully deleted

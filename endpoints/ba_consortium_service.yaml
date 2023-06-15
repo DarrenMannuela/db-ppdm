@@ -1,0 +1,201 @@
+/ba-consortium-service:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ba_consortium_service
+    responses:
+      '200':
+        description: get ba_consortium_service data to be returned
+        content:
+          application/json:
+            example:
+            - consortium_ba_id: Lorem Ipsum
+              provided_by: Lorem Ipsum
+              active_ind: y
+              contact_ba_id: Lorem Ipsum
+              contract_id: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              provision_id: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              represented_ba_id: Lorem Ipsum
+              service_quality: Lorem Ipsum
+              service_type: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ba_consortium_service
+    description: Create a new ba_consortium_service data
+    requestBody:
+      required: true
+      description: Request body to create ba_consortium_service data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ba_consortium_service'
+          example:
+            consortium_ba_id: Lorem Ipsum
+            provided_by: Lorem Ipsum
+            active_ind: y
+            contact_ba_id: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            represented_ba_id: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            service_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ba_consortium_service data is added
+        content:
+          application/json:
+            example:
+              message: The ba_consortium_service data was successfully added
+/ba-consortium-service/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ba_consortium_service data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ba_consortium_service data
+    description: Update a new ba_consortium_service data
+    requestBody:
+      required: true
+      description: Request body to update ba_consortium_service data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ba_consortium_service'
+          example:
+            consortium_ba_id: Lorem Ipsum
+            provided_by: Lorem Ipsum
+            active_ind: y
+            contact_ba_id: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            represented_ba_id: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            service_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ba_consortium_service data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ba_consortium_service data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ba_consortium_service data
+    description: Update a new ba_consortium_service data
+    requestBody:
+      required: true
+      description: Request body to update ba_consortium_service data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ba_consortium_service'
+          example:
+            consortium_ba_id: Lorem Ipsum
+            provided_by: Lorem Ipsum
+            active_ind: y
+            contact_ba_id: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            represented_ba_id: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            service_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ba_consortium_service data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ba_consortium_service data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ba_consortium_service data
+    description: Delete ba_consortium_service data
+    responses:
+      '200':
+        description: ba_consortium_service data is deleted
+        content:
+          application/json:
+            example:
+              message: The ba_consortium_service data was successfully deleted

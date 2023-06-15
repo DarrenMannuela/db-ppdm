@@ -1,0 +1,417 @@
+/anl-oil-analysis:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_oil_analysis
+    responses:
+      '200':
+        description: get anl_oil_analysis data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              absolute_gravity: 0.1
+              absolute_gravity_ouom: Lorem Ipsum
+              active_ind: y
+              asphaltene_content: 0.1
+              asphaltene_content_ouom: Lorem Ipsum
+              asph_content_preferred_ind: y
+              asph_content_problem_ind: y
+              characterize_factor: Lorem Ipsum
+              characterize_factor_ouom: Lorem Ipsum
+              cloud_point_temp: 0.1
+              dew_point_temp: 0.1
+              distillation_base_type: Lorem Ipsum
+              distillation_preferred_ind: y
+              distillation_problem_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              flash_point_temp: 0.1
+              gor: 0.1
+              gor_ouom: Lorem Ipsum
+              measured_pressure: 0.1
+              measured_pressure_ouom: Lorem Ipsum
+              measured_volume: 0.1
+              measured_volume_ouom: Lorem Ipsum
+              method_type: Lorem Ipsum
+              oil_analysis_temp: 0.1
+              oil_analysis_temp_ouom: Lorem Ipsum
+              oil_color: Lorem Ipsum
+              oil_color_preferred_ind: y
+              oil_color_problem_ind: y
+              oil_density: 0.1
+              oil_density_ouom: Lorem Ipsum
+              oil_density_preferred_ind: y
+              oil_density_problem_ind: y
+              oil_gravity: 0.1
+              oil_gravity_ouom: Lorem Ipsum
+              oil_gravity_preferred_ind: y
+              oil_gravity_temp: 0.1
+              oil_gravity_temp_ouom: Lorem Ipsum
+              oil_gravity_temp_prefer_ind: y
+              oil_gravity_temp_prob_ind: y
+              oil_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              relative_density: 0.1
+              relative_density_ouom: Lorem Ipsum
+              relative_std_density: 0.1
+              relative_std_density_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              reservoir_press: 0.1
+              reservoir_press_ouom: Lorem Ipsum
+              reservoir_temp: 0.1
+              reservoir_temp_ouom: Lorem Ipsum
+              sediment_content: 0.1
+              sediment_content_ouom: Lorem Ipsum
+              sediment_preferred_ind: y
+              sediment_problem_ind: y
+              shrinkage_factor: 0.1
+              shrink_factor_preferred_ind: y
+              shrink_factor_problem_ind: y
+              source: Lorem Ipsum
+              sulphur_content: 0.1
+              vapour_press: 0.1
+              vapour_press_ouom: Lorem Ipsum
+              vapour_press_temp: 0.1
+              vapour_press_temp_ouom: Lorem Ipsum
+              water_content: 0.1
+              water_content_ouom: Lorem Ipsum
+              wax_content: 0.1
+              wax_content_ouom: Lorem Ipsum
+              wax_content_preferred_ind: y
+              wax_content_problem_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_oil_analysis
+    description: Create a new anl_oil_analysis data
+    requestBody:
+      required: true
+      description: Request body to create anl_oil_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            absolute_gravity: 0.1
+            absolute_gravity_ouom: Lorem Ipsum
+            active_ind: y
+            asphaltene_content: 0.1
+            asphaltene_content_ouom: Lorem Ipsum
+            asph_content_preferred_ind: y
+            asph_content_problem_ind: y
+            characterize_factor: Lorem Ipsum
+            characterize_factor_ouom: Lorem Ipsum
+            cloud_point_temp: 0.1
+            dew_point_temp: 0.1
+            distillation_base_type: Lorem Ipsum
+            distillation_preferred_ind: y
+            distillation_problem_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flash_point_temp: 0.1
+            gor: 0.1
+            gor_ouom: Lorem Ipsum
+            measured_pressure: 0.1
+            measured_pressure_ouom: Lorem Ipsum
+            measured_volume: 0.1
+            measured_volume_ouom: Lorem Ipsum
+            method_type: Lorem Ipsum
+            oil_analysis_temp: 0.1
+            oil_analysis_temp_ouom: Lorem Ipsum
+            oil_color: Lorem Ipsum
+            oil_color_preferred_ind: y
+            oil_color_problem_ind: y
+            oil_density: 0.1
+            oil_density_ouom: Lorem Ipsum
+            oil_density_preferred_ind: y
+            oil_density_problem_ind: y
+            oil_gravity: 0.1
+            oil_gravity_ouom: Lorem Ipsum
+            oil_gravity_preferred_ind: y
+            oil_gravity_temp: 0.1
+            oil_gravity_temp_ouom: Lorem Ipsum
+            oil_gravity_temp_prefer_ind: y
+            oil_gravity_temp_prob_ind: y
+            oil_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            relative_density: 0.1
+            relative_density_ouom: Lorem Ipsum
+            relative_std_density: 0.1
+            relative_std_density_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir_press: 0.1
+            reservoir_press_ouom: Lorem Ipsum
+            reservoir_temp: 0.1
+            reservoir_temp_ouom: Lorem Ipsum
+            sediment_content: 0.1
+            sediment_content_ouom: Lorem Ipsum
+            sediment_preferred_ind: y
+            sediment_problem_ind: y
+            shrinkage_factor: 0.1
+            shrink_factor_preferred_ind: y
+            shrink_factor_problem_ind: y
+            source: Lorem Ipsum
+            sulphur_content: 0.1
+            vapour_press: 0.1
+            vapour_press_ouom: Lorem Ipsum
+            vapour_press_temp: 0.1
+            vapour_press_temp_ouom: Lorem Ipsum
+            water_content: 0.1
+            water_content_ouom: Lorem Ipsum
+            wax_content: 0.1
+            wax_content_ouom: Lorem Ipsum
+            wax_content_preferred_ind: y
+            wax_content_problem_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_oil_analysis data is added
+        content:
+          application/json:
+            example:
+              message: The anl_oil_analysis data was successfully added
+/anl-oil-analysis/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_oil_analysis data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_oil_analysis data
+    description: Update a new anl_oil_analysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_oil_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            absolute_gravity: 0.1
+            absolute_gravity_ouom: Lorem Ipsum
+            active_ind: y
+            asphaltene_content: 0.1
+            asphaltene_content_ouom: Lorem Ipsum
+            asph_content_preferred_ind: y
+            asph_content_problem_ind: y
+            characterize_factor: Lorem Ipsum
+            characterize_factor_ouom: Lorem Ipsum
+            cloud_point_temp: 0.1
+            dew_point_temp: 0.1
+            distillation_base_type: Lorem Ipsum
+            distillation_preferred_ind: y
+            distillation_problem_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flash_point_temp: 0.1
+            gor: 0.1
+            gor_ouom: Lorem Ipsum
+            measured_pressure: 0.1
+            measured_pressure_ouom: Lorem Ipsum
+            measured_volume: 0.1
+            measured_volume_ouom: Lorem Ipsum
+            method_type: Lorem Ipsum
+            oil_analysis_temp: 0.1
+            oil_analysis_temp_ouom: Lorem Ipsum
+            oil_color: Lorem Ipsum
+            oil_color_preferred_ind: y
+            oil_color_problem_ind: y
+            oil_density: 0.1
+            oil_density_ouom: Lorem Ipsum
+            oil_density_preferred_ind: y
+            oil_density_problem_ind: y
+            oil_gravity: 0.1
+            oil_gravity_ouom: Lorem Ipsum
+            oil_gravity_preferred_ind: y
+            oil_gravity_temp: 0.1
+            oil_gravity_temp_ouom: Lorem Ipsum
+            oil_gravity_temp_prefer_ind: y
+            oil_gravity_temp_prob_ind: y
+            oil_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            relative_density: 0.1
+            relative_density_ouom: Lorem Ipsum
+            relative_std_density: 0.1
+            relative_std_density_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir_press: 0.1
+            reservoir_press_ouom: Lorem Ipsum
+            reservoir_temp: 0.1
+            reservoir_temp_ouom: Lorem Ipsum
+            sediment_content: 0.1
+            sediment_content_ouom: Lorem Ipsum
+            sediment_preferred_ind: y
+            sediment_problem_ind: y
+            shrinkage_factor: 0.1
+            shrink_factor_preferred_ind: y
+            shrink_factor_problem_ind: y
+            source: Lorem Ipsum
+            sulphur_content: 0.1
+            vapour_press: 0.1
+            vapour_press_ouom: Lorem Ipsum
+            vapour_press_temp: 0.1
+            vapour_press_temp_ouom: Lorem Ipsum
+            water_content: 0.1
+            water_content_ouom: Lorem Ipsum
+            wax_content: 0.1
+            wax_content_ouom: Lorem Ipsum
+            wax_content_preferred_ind: y
+            wax_content_problem_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_oil_analysis data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_oil_analysis data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_oil_analysis data
+    description: Update a new anl_oil_analysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_oil_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            absolute_gravity: 0.1
+            absolute_gravity_ouom: Lorem Ipsum
+            active_ind: y
+            asphaltene_content: 0.1
+            asphaltene_content_ouom: Lorem Ipsum
+            asph_content_preferred_ind: y
+            asph_content_problem_ind: y
+            characterize_factor: Lorem Ipsum
+            characterize_factor_ouom: Lorem Ipsum
+            cloud_point_temp: 0.1
+            dew_point_temp: 0.1
+            distillation_base_type: Lorem Ipsum
+            distillation_preferred_ind: y
+            distillation_problem_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flash_point_temp: 0.1
+            gor: 0.1
+            gor_ouom: Lorem Ipsum
+            measured_pressure: 0.1
+            measured_pressure_ouom: Lorem Ipsum
+            measured_volume: 0.1
+            measured_volume_ouom: Lorem Ipsum
+            method_type: Lorem Ipsum
+            oil_analysis_temp: 0.1
+            oil_analysis_temp_ouom: Lorem Ipsum
+            oil_color: Lorem Ipsum
+            oil_color_preferred_ind: y
+            oil_color_problem_ind: y
+            oil_density: 0.1
+            oil_density_ouom: Lorem Ipsum
+            oil_density_preferred_ind: y
+            oil_density_problem_ind: y
+            oil_gravity: 0.1
+            oil_gravity_ouom: Lorem Ipsum
+            oil_gravity_preferred_ind: y
+            oil_gravity_temp: 0.1
+            oil_gravity_temp_ouom: Lorem Ipsum
+            oil_gravity_temp_prefer_ind: y
+            oil_gravity_temp_prob_ind: y
+            oil_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            relative_density: 0.1
+            relative_density_ouom: Lorem Ipsum
+            relative_std_density: 0.1
+            relative_std_density_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir_press: 0.1
+            reservoir_press_ouom: Lorem Ipsum
+            reservoir_temp: 0.1
+            reservoir_temp_ouom: Lorem Ipsum
+            sediment_content: 0.1
+            sediment_content_ouom: Lorem Ipsum
+            sediment_preferred_ind: y
+            sediment_problem_ind: y
+            shrinkage_factor: 0.1
+            shrink_factor_preferred_ind: y
+            shrink_factor_problem_ind: y
+            source: Lorem Ipsum
+            sulphur_content: 0.1
+            vapour_press: 0.1
+            vapour_press_ouom: Lorem Ipsum
+            vapour_press_temp: 0.1
+            vapour_press_temp_ouom: Lorem Ipsum
+            water_content: 0.1
+            water_content_ouom: Lorem Ipsum
+            wax_content: 0.1
+            wax_content_ouom: Lorem Ipsum
+            wax_content_preferred_ind: y
+            wax_content_problem_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_oil_analysis data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_oil_analysis data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_oil_analysis data
+    description: Delete anl_oil_analysis data
+    responses:
+      '200':
+        description: anl_oil_analysis data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_oil_analysis data was successfully deleted

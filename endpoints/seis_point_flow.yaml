@@ -1,0 +1,205 @@
+/seis-point-flow:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_point_flow
+    responses:
+      '200':
+        description: get seis_point_flow data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              flow_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              flow_depth: 0.1
+              flow_depth_ouom: Lorem Ipsum
+              flow_duration: 0.1
+              flow_duration_uom: Lorem Ipsum
+              flow_volume: 0.1
+              flow_volume_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              remedial_ba_id: Lorem Ipsum
+              remedial_date: 12/12/2023
+              remedial_ind: y
+              report_date: 12/12/2023
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_point_flow
+    description: Create a new seis_point_flow data
+    requestBody:
+      required: true
+      description: Request body to create seis_point_flow data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_point_flow'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            flow_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_depth: 0.1
+            flow_depth_ouom: Lorem Ipsum
+            flow_duration: 0.1
+            flow_duration_uom: Lorem Ipsum
+            flow_volume: 0.1
+            flow_volume_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remedial_ba_id: Lorem Ipsum
+            remedial_date: 12/12/2023
+            remedial_ind: y
+            report_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_point_flow data is added
+        content:
+          application/json:
+            example:
+              message: The seis_point_flow data was successfully added
+/seis-point-flow/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_point_flow data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_point_flow data
+    description: Update a new seis_point_flow data
+    requestBody:
+      required: true
+      description: Request body to update seis_point_flow data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_point_flow'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            flow_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_depth: 0.1
+            flow_depth_ouom: Lorem Ipsum
+            flow_duration: 0.1
+            flow_duration_uom: Lorem Ipsum
+            flow_volume: 0.1
+            flow_volume_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remedial_ba_id: Lorem Ipsum
+            remedial_date: 12/12/2023
+            remedial_ind: y
+            report_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_point_flow data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_point_flow data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_point_flow data
+    description: Update a new seis_point_flow data
+    requestBody:
+      required: true
+      description: Request body to update seis_point_flow data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_point_flow'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            flow_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_depth: 0.1
+            flow_depth_ouom: Lorem Ipsum
+            flow_duration: 0.1
+            flow_duration_uom: Lorem Ipsum
+            flow_volume: 0.1
+            flow_volume_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remedial_ba_id: Lorem Ipsum
+            remedial_date: 12/12/2023
+            remedial_ind: y
+            report_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_point_flow data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_point_flow data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_point_flow data
+    description: Delete seis_point_flow data
+    responses:
+      '200':
+        description: seis_point_flow data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_point_flow data was successfully deleted

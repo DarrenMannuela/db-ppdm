@@ -1,0 +1,169 @@
+/r-aof-analysis-type:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get r_aof_analysis_type
+    responses:
+      '200':
+        description: get r_aof_analysis_type data to be returned
+        content:
+          application/json:
+            example:
+            - aof_analysis_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new r_aof_analysis_type
+    description: Create a new r_aof_analysis_type data
+    requestBody:
+      required: true
+      description: Request body to create r_aof_analysis_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_aof_analysis_type'
+          example:
+            aof_analysis_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_aof_analysis_type data is added
+        content:
+          application/json:
+            example:
+              message: The r_aof_analysis_type data was successfully added
+/r-aof-analysis-type/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of r_aof_analysis_type data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new r_aof_analysis_type data
+    description: Update a new r_aof_analysis_type data
+    requestBody:
+      required: true
+      description: Request body to update r_aof_analysis_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_aof_analysis_type'
+          example:
+            aof_analysis_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_aof_analysis_type data is completely updated
+        content:
+          application/json:
+            example:
+              message: The r_aof_analysis_type data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new r_aof_analysis_type data
+    description: Update a new r_aof_analysis_type data
+    requestBody:
+      required: true
+      description: Request body to update r_aof_analysis_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_aof_analysis_type'
+          example:
+            aof_analysis_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in r_aof_analysis_type data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in r_aof_analysis_type data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete r_aof_analysis_type data
+    description: Delete r_aof_analysis_type data
+    responses:
+      '200':
+        description: r_aof_analysis_type data is deleted
+        content:
+          application/json:
+            example:
+              message: The r_aof_analysis_type data was successfully deleted

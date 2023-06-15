@@ -1,0 +1,565 @@
+/well:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well
+    responses:
+      '200':
+        description: get well data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              abandonment_date: 12/12/2023
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              assigned_field: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_node_id: Lorem Ipsum
+              base_strat_name_set_id: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              bottom_hole_latitude: 0.1
+              bottom_hole_longitude: 0.1
+              casing_flange_elev: 0.1
+              casing_flange_elev_ouom: Lorem Ipsum
+              completion_date: 12/12/2023
+              confidential_date: 12/12/2023
+              confidential_depth: 0.1
+              confidential_depth_ouom: Lorem Ipsum
+              confidential_type: Lorem Ipsum
+              confid_strat_name_set_id: Lorem Ipsum
+              confid_strat_unit_id: Lorem Ipsum
+              current_class: Lorem Ipsum
+              current_status: Lorem Ipsum
+              current_status_date: 12/12/2023
+              deepest_depth: 0.1
+              deepest_depth_ouom: Lorem Ipsum
+              depth_datum: Lorem Ipsum
+              depth_datum_elev: 0.1
+              depth_datum_elev_ouom: Lorem Ipsum
+              derrick_floor_elev: 0.1
+              derrick_floor_elev_ouom: Lorem Ipsum
+              difference_lat_msl: 0.1
+              discovery_ind: y
+              drill_td: 0.1
+              drill_td_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              elev_ref_datum: Lorem Ipsum
+              environment_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              faulted_ind: y
+              final_drill_date: 12/12/2023
+              final_td: 0.1
+              final_td_ouom: Lorem Ipsum
+              ground_elev: 0.1
+              ground_elev_ouom: Lorem Ipsum
+              ground_elev_type: Lorem Ipsum
+              initial_class: Lorem Ipsum
+              kb_elev: 0.1
+              kb_elev_ouom: Lorem Ipsum
+              lease_name: Lorem Ipsum
+              lease_num: Lorem Ipsum
+              legal_survey_type: Lorem Ipsum
+              location_type: Lorem Ipsum
+              log_td: 0.1
+              log_td_ouom: Lorem Ipsum
+              max_tvd: 0.1
+              max_tvd_ouom: Lorem Ipsum
+              net_pay: 0.1
+              net_pay_ouom: Lorem Ipsum
+              oldest_strat_age: Lorem Ipsum
+              oldest_strat_name_set_age: Lorem Ipsum
+              oldest_strat_name_set_id: Lorem Ipsum
+              oldest_strat_unit_id: Lorem Ipsum
+              operator: Lorem Ipsum
+              platform_id: Lorem Ipsum
+              platform_sf_subtype: Lorem Ipsum
+              plot_name: Lorem Ipsum
+              plot_symbol: Lorem Ipsum
+              plugback_depth: 0.1
+              plugback_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              primary_source: Lorem Ipsum
+              profile_type: Lorem Ipsum
+              regulatory_agency: Lorem Ipsum
+              remark: Lorem Ipsum
+              rig_on_site_date: 12/12/2023
+              rig_release_date: 12/12/2023
+              rotary_table_elev: 0.1
+              rotary_table_elev_ouom: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              spud_date: 12/12/2023
+              status_type: Lorem Ipsum
+              subsea_elev_ref_type: Lorem Ipsum
+              surface_latitude: 0.1
+              surface_longitude: 0.1
+              surface_node_id: Lorem Ipsum
+              tax_credit_code: Lorem Ipsum
+              td_strat_age: Lorem Ipsum
+              td_strat_name_set_age: Lorem Ipsum
+              td_strat_name_set_id: Lorem Ipsum
+              td_strat_unit_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_name_set_id: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              water_acoustic_vel: 0.1
+              water_acoustic_vel_ouom: Lorem Ipsum
+              water_depth: 0.1
+              water_depth_datum: Lorem Ipsum
+              water_depth_ouom: Lorem Ipsum
+              well_event_num: Lorem Ipsum
+              well_government_id: Lorem Ipsum
+              well_intersect_md: 0.1
+              well_level_type: Lorem Ipsum
+              well_name: Lorem Ipsum
+              well_num: Lorem Ipsum
+              whipstock_depth: 0.1
+              whipstock_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well
+    description: Create a new well data
+    requestBody:
+      required: true
+      description: Request body to create well data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well'
+          example:
+            uwi: Lorem Ipsum
+            abandonment_date: 12/12/2023
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            assigned_field: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_node_id: Lorem Ipsum
+            base_strat_name_set_id: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            bottom_hole_latitude: 0.1
+            bottom_hole_longitude: 0.1
+            casing_flange_elev: 0.1
+            casing_flange_elev_ouom: Lorem Ipsum
+            completion_date: 12/12/2023
+            confidential_date: 12/12/2023
+            confidential_depth: 0.1
+            confidential_depth_ouom: Lorem Ipsum
+            confidential_type: Lorem Ipsum
+            confid_strat_name_set_id: Lorem Ipsum
+            confid_strat_unit_id: Lorem Ipsum
+            current_class: Lorem Ipsum
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            deepest_depth: 0.1
+            deepest_depth_ouom: Lorem Ipsum
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            derrick_floor_elev: 0.1
+            derrick_floor_elev_ouom: Lorem Ipsum
+            difference_lat_msl: 0.1
+            discovery_ind: y
+            drill_td: 0.1
+            drill_td_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev_ref_datum: Lorem Ipsum
+            environment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            faulted_ind: y
+            final_drill_date: 12/12/2023
+            final_td: 0.1
+            final_td_ouom: Lorem Ipsum
+            ground_elev: 0.1
+            ground_elev_ouom: Lorem Ipsum
+            ground_elev_type: Lorem Ipsum
+            initial_class: Lorem Ipsum
+            kb_elev: 0.1
+            kb_elev_ouom: Lorem Ipsum
+            lease_name: Lorem Ipsum
+            lease_num: Lorem Ipsum
+            legal_survey_type: Lorem Ipsum
+            location_type: Lorem Ipsum
+            log_td: 0.1
+            log_td_ouom: Lorem Ipsum
+            max_tvd: 0.1
+            max_tvd_ouom: Lorem Ipsum
+            net_pay: 0.1
+            net_pay_ouom: Lorem Ipsum
+            oldest_strat_age: Lorem Ipsum
+            oldest_strat_name_set_age: Lorem Ipsum
+            oldest_strat_name_set_id: Lorem Ipsum
+            oldest_strat_unit_id: Lorem Ipsum
+            operator: Lorem Ipsum
+            platform_id: Lorem Ipsum
+            platform_sf_subtype: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            plugback_depth: 0.1
+            plugback_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_source: Lorem Ipsum
+            profile_type: Lorem Ipsum
+            regulatory_agency: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_on_site_date: 12/12/2023
+            rig_release_date: 12/12/2023
+            rotary_table_elev: 0.1
+            rotary_table_elev_ouom: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            spud_date: 12/12/2023
+            status_type: Lorem Ipsum
+            subsea_elev_ref_type: Lorem Ipsum
+            surface_latitude: 0.1
+            surface_longitude: 0.1
+            surface_node_id: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            td_strat_age: Lorem Ipsum
+            td_strat_name_set_age: Lorem Ipsum
+            td_strat_name_set_id: Lorem Ipsum
+            td_strat_unit_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_name_set_id: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            water_acoustic_vel: 0.1
+            water_acoustic_vel_ouom: Lorem Ipsum
+            water_depth: 0.1
+            water_depth_datum: Lorem Ipsum
+            water_depth_ouom: Lorem Ipsum
+            well_event_num: Lorem Ipsum
+            well_government_id: Lorem Ipsum
+            well_intersect_md: 0.1
+            well_level_type: Lorem Ipsum
+            well_name: Lorem Ipsum
+            well_num: Lorem Ipsum
+            whipstock_depth: 0.1
+            whipstock_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well data is added
+        content:
+          application/json:
+            example:
+              message: The well data was successfully added
+/well/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well data
+    description: Update a new well data
+    requestBody:
+      required: true
+      description: Request body to update well data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well'
+          example:
+            uwi: Lorem Ipsum
+            abandonment_date: 12/12/2023
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            assigned_field: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_node_id: Lorem Ipsum
+            base_strat_name_set_id: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            bottom_hole_latitude: 0.1
+            bottom_hole_longitude: 0.1
+            casing_flange_elev: 0.1
+            casing_flange_elev_ouom: Lorem Ipsum
+            completion_date: 12/12/2023
+            confidential_date: 12/12/2023
+            confidential_depth: 0.1
+            confidential_depth_ouom: Lorem Ipsum
+            confidential_type: Lorem Ipsum
+            confid_strat_name_set_id: Lorem Ipsum
+            confid_strat_unit_id: Lorem Ipsum
+            current_class: Lorem Ipsum
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            deepest_depth: 0.1
+            deepest_depth_ouom: Lorem Ipsum
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            derrick_floor_elev: 0.1
+            derrick_floor_elev_ouom: Lorem Ipsum
+            difference_lat_msl: 0.1
+            discovery_ind: y
+            drill_td: 0.1
+            drill_td_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev_ref_datum: Lorem Ipsum
+            environment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            faulted_ind: y
+            final_drill_date: 12/12/2023
+            final_td: 0.1
+            final_td_ouom: Lorem Ipsum
+            ground_elev: 0.1
+            ground_elev_ouom: Lorem Ipsum
+            ground_elev_type: Lorem Ipsum
+            initial_class: Lorem Ipsum
+            kb_elev: 0.1
+            kb_elev_ouom: Lorem Ipsum
+            lease_name: Lorem Ipsum
+            lease_num: Lorem Ipsum
+            legal_survey_type: Lorem Ipsum
+            location_type: Lorem Ipsum
+            log_td: 0.1
+            log_td_ouom: Lorem Ipsum
+            max_tvd: 0.1
+            max_tvd_ouom: Lorem Ipsum
+            net_pay: 0.1
+            net_pay_ouom: Lorem Ipsum
+            oldest_strat_age: Lorem Ipsum
+            oldest_strat_name_set_age: Lorem Ipsum
+            oldest_strat_name_set_id: Lorem Ipsum
+            oldest_strat_unit_id: Lorem Ipsum
+            operator: Lorem Ipsum
+            platform_id: Lorem Ipsum
+            platform_sf_subtype: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            plugback_depth: 0.1
+            plugback_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_source: Lorem Ipsum
+            profile_type: Lorem Ipsum
+            regulatory_agency: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_on_site_date: 12/12/2023
+            rig_release_date: 12/12/2023
+            rotary_table_elev: 0.1
+            rotary_table_elev_ouom: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            spud_date: 12/12/2023
+            status_type: Lorem Ipsum
+            subsea_elev_ref_type: Lorem Ipsum
+            surface_latitude: 0.1
+            surface_longitude: 0.1
+            surface_node_id: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            td_strat_age: Lorem Ipsum
+            td_strat_name_set_age: Lorem Ipsum
+            td_strat_name_set_id: Lorem Ipsum
+            td_strat_unit_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_name_set_id: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            water_acoustic_vel: 0.1
+            water_acoustic_vel_ouom: Lorem Ipsum
+            water_depth: 0.1
+            water_depth_datum: Lorem Ipsum
+            water_depth_ouom: Lorem Ipsum
+            well_event_num: Lorem Ipsum
+            well_government_id: Lorem Ipsum
+            well_intersect_md: 0.1
+            well_level_type: Lorem Ipsum
+            well_name: Lorem Ipsum
+            well_num: Lorem Ipsum
+            whipstock_depth: 0.1
+            whipstock_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well data
+    description: Update a new well data
+    requestBody:
+      required: true
+      description: Request body to update well data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well'
+          example:
+            uwi: Lorem Ipsum
+            abandonment_date: 12/12/2023
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            assigned_field: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_node_id: Lorem Ipsum
+            base_strat_name_set_id: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            bottom_hole_latitude: 0.1
+            bottom_hole_longitude: 0.1
+            casing_flange_elev: 0.1
+            casing_flange_elev_ouom: Lorem Ipsum
+            completion_date: 12/12/2023
+            confidential_date: 12/12/2023
+            confidential_depth: 0.1
+            confidential_depth_ouom: Lorem Ipsum
+            confidential_type: Lorem Ipsum
+            confid_strat_name_set_id: Lorem Ipsum
+            confid_strat_unit_id: Lorem Ipsum
+            current_class: Lorem Ipsum
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            deepest_depth: 0.1
+            deepest_depth_ouom: Lorem Ipsum
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            derrick_floor_elev: 0.1
+            derrick_floor_elev_ouom: Lorem Ipsum
+            difference_lat_msl: 0.1
+            discovery_ind: y
+            drill_td: 0.1
+            drill_td_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev_ref_datum: Lorem Ipsum
+            environment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            faulted_ind: y
+            final_drill_date: 12/12/2023
+            final_td: 0.1
+            final_td_ouom: Lorem Ipsum
+            ground_elev: 0.1
+            ground_elev_ouom: Lorem Ipsum
+            ground_elev_type: Lorem Ipsum
+            initial_class: Lorem Ipsum
+            kb_elev: 0.1
+            kb_elev_ouom: Lorem Ipsum
+            lease_name: Lorem Ipsum
+            lease_num: Lorem Ipsum
+            legal_survey_type: Lorem Ipsum
+            location_type: Lorem Ipsum
+            log_td: 0.1
+            log_td_ouom: Lorem Ipsum
+            max_tvd: 0.1
+            max_tvd_ouom: Lorem Ipsum
+            net_pay: 0.1
+            net_pay_ouom: Lorem Ipsum
+            oldest_strat_age: Lorem Ipsum
+            oldest_strat_name_set_age: Lorem Ipsum
+            oldest_strat_name_set_id: Lorem Ipsum
+            oldest_strat_unit_id: Lorem Ipsum
+            operator: Lorem Ipsum
+            platform_id: Lorem Ipsum
+            platform_sf_subtype: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            plugback_depth: 0.1
+            plugback_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_source: Lorem Ipsum
+            profile_type: Lorem Ipsum
+            regulatory_agency: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_on_site_date: 12/12/2023
+            rig_release_date: 12/12/2023
+            rotary_table_elev: 0.1
+            rotary_table_elev_ouom: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            spud_date: 12/12/2023
+            status_type: Lorem Ipsum
+            subsea_elev_ref_type: Lorem Ipsum
+            surface_latitude: 0.1
+            surface_longitude: 0.1
+            surface_node_id: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            td_strat_age: Lorem Ipsum
+            td_strat_name_set_age: Lorem Ipsum
+            td_strat_name_set_id: Lorem Ipsum
+            td_strat_unit_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_name_set_id: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            water_acoustic_vel: 0.1
+            water_acoustic_vel_ouom: Lorem Ipsum
+            water_depth: 0.1
+            water_depth_datum: Lorem Ipsum
+            water_depth_ouom: Lorem Ipsum
+            well_event_num: Lorem Ipsum
+            well_government_id: Lorem Ipsum
+            well_intersect_md: 0.1
+            well_level_type: Lorem Ipsum
+            well_name: Lorem Ipsum
+            well_num: Lorem Ipsum
+            whipstock_depth: 0.1
+            whipstock_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well data
+    description: Delete well data
+    responses:
+      '200':
+        description: well data is deleted
+        content:
+          application/json:
+            example:
+              message: The well data was successfully deleted

@@ -1,0 +1,45 @@
+package dto
+
+type Instrument struct {
+	Instrument_id           string  `json:"instrument_id" default:"source"`
+	Active_ind              *string `json:"active_ind" default:""`
+	Add_for_service_ba_id   *string `json:"add_for_service_ba_id" default:""`
+	Area_id                 *string `json:"area_id" default:""`
+	Area_type               *string `json:"area_type" default:""`
+	Book_name               *string `json:"book_name" default:""`
+	Book_number             *string `json:"book_number" default:""`
+	Caveator_ba_id          *string `json:"caveator_ba_id" default:""`
+	Completion_report_ind   *string `json:"completion_report_ind" default:""`
+	Description             *string `json:"description" default:""`
+	Discharge_date          *string `json:"discharge_date" default:""`
+	Discharge_ind           *string `json:"discharge_ind" default:""`
+	Discharge_num           *string `json:"discharge_num" default:""`
+	Document_num            *string `json:"document_num" default:""`
+	Drilling_intent_ind     *string `json:"drilling_intent_ind" default:""`
+	Effective_date          *string `json:"effective_date" default:""`
+	Expiry_date             *string `json:"expiry_date" default:""`
+	Instrument_type         *string `json:"instrument_type" default:""`
+	Jurisdiction            *string `json:"jurisdiction" default:""`
+	Jurisdiction_add_obs_no *int    `json:"jurisdiction_add_obs_no" default:""`
+	Jurisdiction_add_source *string `json:"jurisdiction_add_source" default:""`
+	Line_number             *string `json:"line_number" default:""`
+	Page_number             *string `json:"page_number" default:""`
+	Plug_and_abandon_ind    *string `json:"plug_and_abandon_ind" default:""`
+	Ppdm_guid               *string `json:"ppdm_guid" default:""`
+	Production_lease_ind    *string `json:"production_lease_ind" default:""`
+	Received_date           *string `json:"received_date" default:""`
+	Recorded_date           *string `json:"recorded_date" default:""`
+	Registered_by_ba_id     *string `json:"registered_by_ba_id" default:""`
+	Registration_date       *string `json:"registration_date" default:""`
+	Registration_num        *string `json:"registration_num" default:""`
+	Remark                  *string `json:"remark" default:""`
+	Source                  *string `json:"source" default:""`
+	Valid_lease_ind         *string `json:"valid_lease_ind" default:""`
+	Row_changed_by          *string `json:"row_changed_by" default:""`
+	Row_changed_date        *string `json:"row_changed_date" default:""`
+	Row_created_by          *string `json:"row_created_by" default:""`
+	Row_created_date        *string `json:"row_created_date" default:""`
+	Row_effective_date      *string `json:"row_effective_date" default:""`
+	Row_expiry_date         *string `json:"row_expiry_date" default:""`
+	Row_quality             *string `json:"row_quality" default:""`
+}

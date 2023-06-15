@@ -1,0 +1,249 @@
+/report-hier-level:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get report_hier_level
+    responses:
+      '200':
+        description: get report_hier_level data to be returned
+        content:
+          application/json:
+            example:
+            - report_hierarchy_id: Lorem Ipsum
+              component_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              ba_organization_id: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              component_type: Lorem Ipsum
+              contract_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              equipment_id: Lorem Ipsum
+              expiry_date: 12/12/2023
+              facility_id: Lorem Ipsum
+              facility_type: Lorem Ipsum
+              field_id: Lorem Ipsum
+              finance_id: Lorem Ipsum
+              hierarchy_type_id: Lorem Ipsum
+              land_right_id: Lorem Ipsum
+              land_right_subtype: Lorem Ipsum
+              parent_component_id: Lorem Ipsum
+              pool_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              project_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              sf_subtype: Lorem Ipsum
+              source: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              support_facility_id: Lorem Ipsum
+              uwi: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new report_hier_level
+    description: Create a new report_hier_level data
+    requestBody:
+      required: true
+      description: Request body to create report_hier_level data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/report_hier_level'
+          example:
+            report_hierarchy_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            ba_organization_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            component_type: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            hierarchy_type_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            parent_component_id: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: report_hier_level data is added
+        content:
+          application/json:
+            example:
+              message: The report_hier_level data was successfully added
+/report-hier-level/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of report_hier_level data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new report_hier_level data
+    description: Update a new report_hier_level data
+    requestBody:
+      required: true
+      description: Request body to update report_hier_level data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/report_hier_level'
+          example:
+            report_hierarchy_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            ba_organization_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            component_type: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            hierarchy_type_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            parent_component_id: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: report_hier_level data is completely updated
+        content:
+          application/json:
+            example:
+              message: The report_hier_level data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new report_hier_level data
+    description: Update a new report_hier_level data
+    requestBody:
+      required: true
+      description: Request body to update report_hier_level data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/report_hier_level'
+          example:
+            report_hierarchy_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            ba_organization_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            component_type: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            hierarchy_type_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            parent_component_id: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in report_hier_level data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in report_hier_level data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete report_hier_level data
+    description: Delete report_hier_level data
+    responses:
+      '200':
+        description: report_hier_level data is deleted
+        content:
+          application/json:
+            example:
+              message: The report_hier_level data was successfully deleted

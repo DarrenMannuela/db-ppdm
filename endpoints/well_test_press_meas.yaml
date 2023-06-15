@@ -1,0 +1,201 @@
+/well-test-press-meas:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_press_meas
+    responses:
+      '200':
+        description: get well_test_press_meas data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              measurement_pressure: 0.1
+              measurement_pressure_ouom: Lorem Ipsum
+              measurement_temperature: 0.1
+              measurement_temp_ouom: Lorem Ipsum
+              measurement_time_elapsed: 0.1
+              measurement_time_elapsed_ouom: Lorem Ipsum
+              period_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              recorder_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_press_meas
+    description: Create a new well_test_press_meas data
+    requestBody:
+      required: true
+      description: Request body to create well_test_press_meas data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_press_meas'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            measurement_pressure: 0.1
+            measurement_pressure_ouom: Lorem Ipsum
+            measurement_temperature: 0.1
+            measurement_temp_ouom: Lorem Ipsum
+            measurement_time_elapsed: 0.1
+            measurement_time_elapsed_ouom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_press_meas data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_press_meas data was successfully added
+/well-test-press-meas/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_press_meas data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_press_meas data
+    description: Update a new well_test_press_meas data
+    requestBody:
+      required: true
+      description: Request body to update well_test_press_meas data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_press_meas'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            measurement_pressure: 0.1
+            measurement_pressure_ouom: Lorem Ipsum
+            measurement_temperature: 0.1
+            measurement_temp_ouom: Lorem Ipsum
+            measurement_time_elapsed: 0.1
+            measurement_time_elapsed_ouom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_press_meas data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_press_meas data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_press_meas data
+    description: Update a new well_test_press_meas data
+    requestBody:
+      required: true
+      description: Request body to update well_test_press_meas data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_press_meas'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            measurement_pressure: 0.1
+            measurement_pressure_ouom: Lorem Ipsum
+            measurement_temperature: 0.1
+            measurement_temp_ouom: Lorem Ipsum
+            measurement_time_elapsed: 0.1
+            measurement_time_elapsed_ouom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_press_meas data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_press_meas data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_press_meas data
+    description: Delete well_test_press_meas data
+    responses:
+      '200':
+        description: well_test_press_meas data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_press_meas data was successfully deleted

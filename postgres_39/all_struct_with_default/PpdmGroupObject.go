@@ -1,0 +1,46 @@
+package dto
+
+type Ppdm_group_object struct {
+	Group_id                 string   `json:"group_id" default:"source"`
+	Object_obs_no            int      `json:"object_obs_no" default:"1"`
+	Active_ind               *string  `json:"active_ind" default:""`
+	Code_version_obs_no      *int     `json:"code_version_obs_no" default:""`
+	Code_version_source      *string  `json:"code_version_source" default:""`
+	Column_alias_id          *string  `json:"column_alias_id" default:""`
+	Column_name              *string  `json:"column_name" default:""`
+	Constraint_name          *string  `json:"constraint_name" default:""`
+	Effective_date           *string  `json:"effective_date" default:""`
+	Expiry_date              *string  `json:"expiry_date" default:""`
+	Group_use                *string  `json:"group_use" default:""`
+	Index_id                 *string  `json:"index_id" default:""`
+	Object_type              *string  `json:"object_type" default:""`
+	Output_font              *string  `json:"output_font" default:""`
+	Output_font_backgr_color *string  `json:"output_font_backgr_color" default:""`
+	Output_font_color        *string  `json:"output_font_color" default:""`
+	Output_font_effect       *string  `json:"output_font_effect" default:""`
+	Output_font_size         *float64 `json:"output_font_size" default:""`
+	Output_font_size_uom     *string  `json:"output_font_size_uom" default:""`
+	Output_heading           *string  `json:"output_heading" default:""`
+	Output_length            *int     `json:"output_length" default:""`
+	Output_length_uom        *string  `json:"output_length_uom" default:""`
+	Output_precision         *float64 `json:"output_precision" default:""`
+	Ppdm_guid                *string  `json:"ppdm_guid" default:""`
+	Preferred_uom            *string  `json:"preferred_uom" default:""`
+	Procedure_id             *string  `json:"procedure_id" default:""`
+	Property_set_id          *string  `json:"property_set_id" default:""`
+	Remark                   *string  `json:"remark" default:""`
+	Rule_id                  *string  `json:"rule_id" default:""`
+	Source                   *string  `json:"source" default:""`
+	Sw_application_id        *string  `json:"sw_application_id" default:""`
+	System_id                *string  `json:"system_id" default:""`
+	Table_alias              *string  `json:"table_alias" default:""`
+	Table_name               *string  `json:"table_name" default:""`
+	Use_rule_description     *string  `json:"use_rule_description" default:""`
+	Row_changed_by           *string  `json:"row_changed_by" default:""`
+	Row_changed_date         *string  `json:"row_changed_date" default:""`
+	Row_created_by           *string  `json:"row_created_by" default:""`
+	Row_created_date         *string  `json:"row_created_date" default:""`
+	Row_effective_date       *string  `json:"row_effective_date" default:""`
+	Row_expiry_date          *string  `json:"row_expiry_date" default:""`
+	Row_quality              *string  `json:"row_quality" default:""`
+}

@@ -1,0 +1,229 @@
+/ppdm-quality-control:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_quality_control
+    responses:
+      '200':
+        description: get ppdm_quality_control data to be returned
+        content:
+          application/json:
+            example:
+            - system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              active_ind: y
+              checked_by_ba_id: Lorem Ipsum
+              column_name: Lorem Ipsum
+              current_date_value: 12/12/2023
+              current_numeric_value: 1.0
+              current_numeric_value_ouom: Lorem Ipsum
+              current_numeric_value_uom: Lorem Ipsum
+              current_row_guid: Lorem Ipsum
+              current_text_value: Lorem Ipsum
+              data_type: Lorem Ipsum
+              done_by_ba_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              null_description: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              qc_datetime: 12/12/2023
+              qc_desc: Lorem Ipsum
+              qc_status: Lorem Ipsum
+              qc_type: Lorem Ipsum
+              quality_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              retention_period: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_quality_control
+    description: Create a new ppdm_quality_control data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_quality_control data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_quality_control'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            active_ind: y
+            checked_by_ba_id: Lorem Ipsum
+            column_name: Lorem Ipsum
+            current_date_value: 12/12/2023
+            current_numeric_value: 1.0
+            current_numeric_value_ouom: Lorem Ipsum
+            current_numeric_value_uom: Lorem Ipsum
+            current_row_guid: Lorem Ipsum
+            current_text_value: Lorem Ipsum
+            data_type: Lorem Ipsum
+            done_by_ba_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            null_description: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            qc_datetime: 12/12/2023
+            qc_desc: Lorem Ipsum
+            qc_status: Lorem Ipsum
+            qc_type: Lorem Ipsum
+            quality_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_quality_control data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_quality_control data was successfully added
+/ppdm-quality-control/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_quality_control data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_quality_control data
+    description: Update a new ppdm_quality_control data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_quality_control data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_quality_control'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            active_ind: y
+            checked_by_ba_id: Lorem Ipsum
+            column_name: Lorem Ipsum
+            current_date_value: 12/12/2023
+            current_numeric_value: 1.0
+            current_numeric_value_ouom: Lorem Ipsum
+            current_numeric_value_uom: Lorem Ipsum
+            current_row_guid: Lorem Ipsum
+            current_text_value: Lorem Ipsum
+            data_type: Lorem Ipsum
+            done_by_ba_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            null_description: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            qc_datetime: 12/12/2023
+            qc_desc: Lorem Ipsum
+            qc_status: Lorem Ipsum
+            qc_type: Lorem Ipsum
+            quality_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_quality_control data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_quality_control data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_quality_control data
+    description: Update a new ppdm_quality_control data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_quality_control data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_quality_control'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            active_ind: y
+            checked_by_ba_id: Lorem Ipsum
+            column_name: Lorem Ipsum
+            current_date_value: 12/12/2023
+            current_numeric_value: 1.0
+            current_numeric_value_ouom: Lorem Ipsum
+            current_numeric_value_uom: Lorem Ipsum
+            current_row_guid: Lorem Ipsum
+            current_text_value: Lorem Ipsum
+            data_type: Lorem Ipsum
+            done_by_ba_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            null_description: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            qc_datetime: 12/12/2023
+            qc_desc: Lorem Ipsum
+            qc_status: Lorem Ipsum
+            qc_type: Lorem Ipsum
+            quality_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            retention_period: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_quality_control data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_quality_control data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_quality_control data
+    description: Delete ppdm_quality_control data
+    responses:
+      '200':
+        description: ppdm_quality_control data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_quality_control data was successfully deleted

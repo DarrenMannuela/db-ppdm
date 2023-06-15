@@ -1,0 +1,281 @@
+/well-drill-bit-period:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_bit_period
+    responses:
+      '200':
+        description: get well_drill_bit_period data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              bit_source: Lorem Ipsum
+              active_ind: y
+              avg_force_on_bit: 0.1
+              avg_force_on_bit_ouom: Lorem Ipsum
+              avg_penetration_rate: 0.1
+              avg_penetration_rate_ouom: Lorem Ipsum
+              avg_rotary_rpm: 0.1
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              bit_operating_time: 0.1
+              bit_operating_time_ouom: Lorem Ipsum
+              drill_op_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              flow_rate: 0.1
+              flow_rate_ouom: Lorem Ipsum
+              max_force_on_bit: 0.1
+              max_force_on_bit_ouom: Lorem Ipsum
+              max_penetration_rate: 0.1
+              max_penetration_rate_ouom: Lorem Ipsum
+              max_rotary_rpm: 0.1
+              min_force_on_bit: 0.1
+              min_force_on_bit_ouom: Lorem Ipsum
+              min_penetration_rate: 0.1
+              min_penetration_rate_ouom: Lorem Ipsum
+              min_rotary_rpm: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              torque: 0.1
+              torque_ouom: Lorem Ipsum
+              total_drilled_dist: 0.1
+              total_drilled_dist_ouom: Lorem Ipsum
+              total_period_run: 0.1
+              total_period_run_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_bit_period
+    description: Create a new well_drill_bit_period data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_bit_period data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_bit_period'
+          example:
+            uwi: Lorem Ipsum
+            bit_source: Lorem Ipsum
+            active_ind: y
+            avg_force_on_bit: 0.1
+            avg_force_on_bit_ouom: Lorem Ipsum
+            avg_penetration_rate: 0.1
+            avg_penetration_rate_ouom: Lorem Ipsum
+            avg_rotary_rpm: 0.1
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            bit_operating_time: 0.1
+            bit_operating_time_ouom: Lorem Ipsum
+            drill_op_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            max_force_on_bit: 0.1
+            max_force_on_bit_ouom: Lorem Ipsum
+            max_penetration_rate: 0.1
+            max_penetration_rate_ouom: Lorem Ipsum
+            max_rotary_rpm: 0.1
+            min_force_on_bit: 0.1
+            min_force_on_bit_ouom: Lorem Ipsum
+            min_penetration_rate: 0.1
+            min_penetration_rate_ouom: Lorem Ipsum
+            min_rotary_rpm: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            total_drilled_dist: 0.1
+            total_drilled_dist_ouom: Lorem Ipsum
+            total_period_run: 0.1
+            total_period_run_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_bit_period data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_bit_period data was successfully added
+/well-drill-bit-period/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_bit_period data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_bit_period data
+    description: Update a new well_drill_bit_period data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_bit_period data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_bit_period'
+          example:
+            uwi: Lorem Ipsum
+            bit_source: Lorem Ipsum
+            active_ind: y
+            avg_force_on_bit: 0.1
+            avg_force_on_bit_ouom: Lorem Ipsum
+            avg_penetration_rate: 0.1
+            avg_penetration_rate_ouom: Lorem Ipsum
+            avg_rotary_rpm: 0.1
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            bit_operating_time: 0.1
+            bit_operating_time_ouom: Lorem Ipsum
+            drill_op_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            max_force_on_bit: 0.1
+            max_force_on_bit_ouom: Lorem Ipsum
+            max_penetration_rate: 0.1
+            max_penetration_rate_ouom: Lorem Ipsum
+            max_rotary_rpm: 0.1
+            min_force_on_bit: 0.1
+            min_force_on_bit_ouom: Lorem Ipsum
+            min_penetration_rate: 0.1
+            min_penetration_rate_ouom: Lorem Ipsum
+            min_rotary_rpm: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            total_drilled_dist: 0.1
+            total_drilled_dist_ouom: Lorem Ipsum
+            total_period_run: 0.1
+            total_period_run_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_bit_period data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_bit_period data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_bit_period data
+    description: Update a new well_drill_bit_period data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_bit_period data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_bit_period'
+          example:
+            uwi: Lorem Ipsum
+            bit_source: Lorem Ipsum
+            active_ind: y
+            avg_force_on_bit: 0.1
+            avg_force_on_bit_ouom: Lorem Ipsum
+            avg_penetration_rate: 0.1
+            avg_penetration_rate_ouom: Lorem Ipsum
+            avg_rotary_rpm: 0.1
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            bit_operating_time: 0.1
+            bit_operating_time_ouom: Lorem Ipsum
+            drill_op_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            max_force_on_bit: 0.1
+            max_force_on_bit_ouom: Lorem Ipsum
+            max_penetration_rate: 0.1
+            max_penetration_rate_ouom: Lorem Ipsum
+            max_rotary_rpm: 0.1
+            min_force_on_bit: 0.1
+            min_force_on_bit_ouom: Lorem Ipsum
+            min_penetration_rate: 0.1
+            min_penetration_rate_ouom: Lorem Ipsum
+            min_rotary_rpm: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            total_drilled_dist: 0.1
+            total_drilled_dist_ouom: Lorem Ipsum
+            total_period_run: 0.1
+            total_period_run_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_bit_period data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_bit_period data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_bit_period data
+    description: Delete well_drill_bit_period data
+    responses:
+      '200':
+        description: well_drill_bit_period data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_bit_period data was successfully deleted

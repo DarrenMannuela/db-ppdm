@@ -1,0 +1,221 @@
+/well-log:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_log
+    responses:
+      '200':
+        description: get well_log data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              well_log_id: Lorem Ipsum
+              source: Lorem Ipsum
+              acquired_for_ba_id: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              bypass_ind: y
+              cased_hole_ind: y
+              composite_ind: y
+              depth_type: Lorem Ipsum
+              dictionary_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              log_job_id: Lorem Ipsum
+              log_job_source: Lorem Ipsum
+              log_ref_num: Lorem Ipsum
+              log_title: Lorem Ipsum
+              mwd_ind: y
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_log
+    description: Create a new well_log data
+    requestBody:
+      required: true
+      description: Request body to create well_log data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log'
+          example:
+            uwi: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            source: Lorem Ipsum
+            acquired_for_ba_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            bypass_ind: y
+            cased_hole_ind: y
+            composite_ind: y
+            depth_type: Lorem Ipsum
+            dictionary_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            log_job_id: Lorem Ipsum
+            log_job_source: Lorem Ipsum
+            log_ref_num: Lorem Ipsum
+            log_title: Lorem Ipsum
+            mwd_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log data is added
+        content:
+          application/json:
+            example:
+              message: The well_log data was successfully added
+/well-log/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_log data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_log data
+    description: Update a new well_log data
+    requestBody:
+      required: true
+      description: Request body to update well_log data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log'
+          example:
+            uwi: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            source: Lorem Ipsum
+            acquired_for_ba_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            bypass_ind: y
+            cased_hole_ind: y
+            composite_ind: y
+            depth_type: Lorem Ipsum
+            dictionary_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            log_job_id: Lorem Ipsum
+            log_job_source: Lorem Ipsum
+            log_ref_num: Lorem Ipsum
+            log_title: Lorem Ipsum
+            mwd_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_log data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_log data
+    description: Update a new well_log data
+    requestBody:
+      required: true
+      description: Request body to update well_log data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log'
+          example:
+            uwi: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            source: Lorem Ipsum
+            acquired_for_ba_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            bypass_ind: y
+            cased_hole_ind: y
+            composite_ind: y
+            depth_type: Lorem Ipsum
+            dictionary_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            log_job_id: Lorem Ipsum
+            log_job_source: Lorem Ipsum
+            log_ref_num: Lorem Ipsum
+            log_title: Lorem Ipsum
+            mwd_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_log data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_log data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_log data
+    description: Delete well_log data
+    responses:
+      '200':
+        description: well_log data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_log data was successfully deleted

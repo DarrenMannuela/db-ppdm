@@ -1,0 +1,181 @@
+/well-mud-resistivity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_mud_resistivity
+    responses:
+      '200':
+        description: get well_mud_resistivity data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              sample_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              mud_resistivity: 0.1
+              mud_resistivity_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              resistivity_temperature: 0.1
+              resistivity_temperature_ouom: Lorem Ipsum
+              sample_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_mud_resistivity
+    description: Create a new well_mud_resistivity data
+    requestBody:
+      required: true
+      description: Request body to create well_mud_resistivity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_resistivity'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            sample_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            mud_resistivity: 0.1
+            mud_resistivity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resistivity_temperature: 0.1
+            resistivity_temperature_ouom: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_mud_resistivity data is added
+        content:
+          application/json:
+            example:
+              message: The well_mud_resistivity data was successfully added
+/well-mud-resistivity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_mud_resistivity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_mud_resistivity data
+    description: Update a new well_mud_resistivity data
+    requestBody:
+      required: true
+      description: Request body to update well_mud_resistivity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_resistivity'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            sample_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            mud_resistivity: 0.1
+            mud_resistivity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resistivity_temperature: 0.1
+            resistivity_temperature_ouom: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_mud_resistivity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_mud_resistivity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_mud_resistivity data
+    description: Update a new well_mud_resistivity data
+    requestBody:
+      required: true
+      description: Request body to update well_mud_resistivity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_resistivity'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            sample_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            mud_resistivity: 0.1
+            mud_resistivity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resistivity_temperature: 0.1
+            resistivity_temperature_ouom: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_mud_resistivity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_mud_resistivity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_mud_resistivity data
+    description: Delete well_mud_resistivity data
+    responses:
+      '200':
+        description: well_mud_resistivity data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_mud_resistivity data was successfully deleted

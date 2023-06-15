@@ -1,0 +1,41 @@
+package dto
+
+type Land_sale_bid struct {
+	Jurisdiction           string  `json:"jurisdiction" default:"source"`
+	Land_sale_number       string  `json:"land_sale_number" default:"source"`
+	Land_sale_offering_id  string  `json:"land_sale_offering_id" default:"source"`
+	Land_offering_bid_id   string  `json:"land_offering_bid_id" default:"source"`
+	Active_ind             *string `json:"active_ind" default:""`
+	Address_for_service    *string `json:"address_for_service" default:""`
+	Address_obs_no         *int    `json:"address_obs_no" default:""`
+	Address_source         *string `json:"address_source" default:""`
+	Bidder                 *string `json:"bidder" default:""`
+	Bidder_type            *string `json:"bidder_type" default:""`
+	Bid_status             *string `json:"bid_status" default:""`
+	Bid_status_date        *string `json:"bid_status_date" default:""`
+	Bid_submit_date        *string `json:"bid_submit_date" default:""`
+	Bid_type               *string `json:"bid_type" default:""`
+	Cash_bid_type          *string `json:"cash_bid_type" default:""`
+	Confidential_ind       *string `json:"confidential_ind" default:""`
+	Contingency_desc       *string `json:"contingency_desc" default:""`
+	Contingency_ind        *string `json:"contingency_ind" default:""`
+	Effective_date         *string `json:"effective_date" default:""`
+	Expiry_date            *string `json:"expiry_date" default:""`
+	Payment_instruction_id *string `json:"payment_instruction_id" default:""`
+	Ppdm_guid              *string `json:"ppdm_guid" default:""`
+	Priority_order         *int    `json:"priority_order" default:""`
+	Remark                 *string `json:"remark" default:""`
+	Response               *string `json:"response" default:""`
+	Response_date          *string `json:"response_date" default:""`
+	Source                 *string `json:"source" default:""`
+	Successful_ind         *string `json:"successful_ind" default:""`
+	Work_bid_ind           *string `json:"work_bid_ind" default:""`
+	Work_bid_remark        *string `json:"work_bid_remark" default:""`
+	Row_changed_by         *string `json:"row_changed_by" default:""`
+	Row_changed_date       *string `json:"row_changed_date" default:""`
+	Row_created_by         *string `json:"row_created_by" default:""`
+	Row_created_date       *string `json:"row_created_date" default:""`
+	Row_effective_date     *string `json:"row_effective_date" default:""`
+	Row_expiry_date        *string `json:"row_expiry_date" default:""`
+	Row_quality            *string `json:"row_quality" default:""`
+}

@@ -1,0 +1,52 @@
+package dto
+
+type Strat_unit_age struct {
+	Strat_name_set_id          string   `json:"strat_name_set_id" default:"source"`
+	Strat_unit_id              string   `json:"strat_unit_id" default:"source"`
+	Age_seq_no                 int      `json:"age_seq_no" default:"1"`
+	Active_ind                 *string  `json:"active_ind" default:""`
+	Average_age                *float64 `json:"average_age" default:""`
+	Average_age_error_minus    *float64 `json:"average_age_error_minus" default:""`
+	Average_age_error_plus     *float64 `json:"average_age_error_plus" default:""`
+	Average_rel_strat_name_set *string  `json:"average_rel_strat_name_set" default:""`
+	Average_rel_strat_unit_id  *string  `json:"average_rel_strat_unit_id" default:""`
+	Effective_date             *string  `json:"effective_date" default:""`
+	Expiry_date                *string  `json:"expiry_date" default:""`
+	Lower_max_age              *float64 `json:"lower_max_age" default:""`
+	Lower_max_age_error_minus  *float64 `json:"lower_max_age_error_minus" default:""`
+	Lower_max_age_error_plus   *float64 `json:"lower_max_age_error_plus" default:""`
+	Lower_min_age              *float64 `json:"lower_min_age" default:""`
+	Lower_min_age_error_minus  *float64 `json:"lower_min_age_error_minus" default:""`
+	Lower_min_age_error_plus   *float64 `json:"lower_min_age_error_plus" default:""`
+	Lower_rel_strat_name_set   *string  `json:"lower_rel_strat_name_set" default:""`
+	Lower_rel_strat_unit_id    *string  `json:"lower_rel_strat_unit_id" default:""`
+	Max_age                    *float64 `json:"max_age" default:""`
+	Max_age_error_minus        *float64 `json:"max_age_error_minus" default:""`
+	Max_age_error_plus         *float64 `json:"max_age_error_plus" default:""`
+	Min_age                    *float64 `json:"min_age" default:""`
+	Min_age_error_minus        *float64 `json:"min_age_error_minus" default:""`
+	Min_age_error_plus         *float64 `json:"min_age_error_plus" default:""`
+	Post_qualifier             *string  `json:"post_qualifier" default:""`
+	Ppdm_guid                  *string  `json:"ppdm_guid" default:""`
+	Preferred_ind              *string  `json:"preferred_ind" default:""`
+	Pre_qualifier              *string  `json:"pre_qualifier" default:""`
+	Remark                     *string  `json:"remark" default:""`
+	Source                     *string  `json:"source" default:""`
+	Source_document_id         *string  `json:"source_document_id" default:""`
+	Strat_age_method           *string  `json:"strat_age_method" default:""`
+	Upper_max_age              *float64 `json:"upper_max_age" default:""`
+	Upper_max_age_error_minus  *float64 `json:"upper_max_age_error_minus" default:""`
+	Upper_max_age_error_plus   *float64 `json:"upper_max_age_error_plus" default:""`
+	Upper_min_age              *float64 `json:"upper_min_age" default:""`
+	Upper_min_age_error_minus  *float64 `json:"upper_min_age_error_minus" default:""`
+	Upper_min_age_error_plus   *float64 `json:"upper_min_age_error_plus" default:""`
+	Upper_rel_strat_name_set   *string  `json:"upper_rel_strat_name_set" default:""`
+	Upper_rel_strat_unit_id    *string  `json:"upper_rel_strat_unit_id" default:""`
+	Row_changed_by             *string  `json:"row_changed_by" default:""`
+	Row_changed_date           *string  `json:"row_changed_date" default:""`
+	Row_created_by             *string  `json:"row_created_by" default:""`
+	Row_created_date           *string  `json:"row_created_date" default:""`
+	Row_effective_date         *string  `json:"row_effective_date" default:""`
+	Row_expiry_date            *string  `json:"row_expiry_date" default:""`
+	Row_quality                *string  `json:"row_quality" default:""`
+}

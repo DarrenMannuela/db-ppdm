@@ -1,0 +1,213 @@
+/seis-group-comp:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_group_comp
+    responses:
+      '200':
+        description: get seis_group_comp data to be returned
+        content:
+          application/json:
+            example:
+            - seis_group_set_subtype: Lorem Ipsum
+              seis_group_id: Lorem Ipsum
+              input_seis_set_subtype: Lorem Ipsum
+              input_seis_set_id: Lorem Ipsum
+              component_id: Lorem Ipsum
+              active_ind: y
+              corner1_lat: 0.1
+              corner1_long: 0.1
+              corner2_lat: 0.1
+              corner2_long: 0.1
+              corner3_lat: 0.1
+              corner3_long: 0.1
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              exclusion_ind: y
+              expiry_date: 12/12/2023
+              inclusion_ind: y
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_group_type: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_group_comp
+    description: Create a new seis_group_comp data
+    requestBody:
+      required: true
+      description: Request body to create seis_group_comp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_group_comp'
+          example:
+            seis_group_set_subtype: Lorem Ipsum
+            seis_group_id: Lorem Ipsum
+            input_seis_set_subtype: Lorem Ipsum
+            input_seis_set_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            corner1_lat: 0.1
+            corner1_long: 0.1
+            corner2_lat: 0.1
+            corner2_long: 0.1
+            corner3_lat: 0.1
+            corner3_long: 0.1
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            exclusion_ind: y
+            expiry_date: 12/12/2023
+            inclusion_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_group_type: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_group_comp data is added
+        content:
+          application/json:
+            example:
+              message: The seis_group_comp data was successfully added
+/seis-group-comp/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_group_comp data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_group_comp data
+    description: Update a new seis_group_comp data
+    requestBody:
+      required: true
+      description: Request body to update seis_group_comp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_group_comp'
+          example:
+            seis_group_set_subtype: Lorem Ipsum
+            seis_group_id: Lorem Ipsum
+            input_seis_set_subtype: Lorem Ipsum
+            input_seis_set_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            corner1_lat: 0.1
+            corner1_long: 0.1
+            corner2_lat: 0.1
+            corner2_long: 0.1
+            corner3_lat: 0.1
+            corner3_long: 0.1
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            exclusion_ind: y
+            expiry_date: 12/12/2023
+            inclusion_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_group_type: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_group_comp data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_group_comp data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_group_comp data
+    description: Update a new seis_group_comp data
+    requestBody:
+      required: true
+      description: Request body to update seis_group_comp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_group_comp'
+          example:
+            seis_group_set_subtype: Lorem Ipsum
+            seis_group_id: Lorem Ipsum
+            input_seis_set_subtype: Lorem Ipsum
+            input_seis_set_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            corner1_lat: 0.1
+            corner1_long: 0.1
+            corner2_lat: 0.1
+            corner2_long: 0.1
+            corner3_lat: 0.1
+            corner3_long: 0.1
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            exclusion_ind: y
+            expiry_date: 12/12/2023
+            inclusion_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_group_type: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_group_comp data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_group_comp data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_group_comp data
+    description: Delete seis_group_comp data
+    responses:
+      '200':
+        description: seis_group_comp data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_group_comp data was successfully deleted

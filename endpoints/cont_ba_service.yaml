@@ -1,0 +1,201 @@
+/cont-ba-service:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cont_ba_service
+    responses:
+      '200':
+        description: get cont_ba_service data to be returned
+        content:
+          application/json:
+            example:
+            - contract_id: Lorem Ipsum
+              provided_by: Lorem Ipsum
+              active_ind: y
+              ba_service_type: Lorem Ipsum
+              contact_ba_id: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              original_party_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              provision_id: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              represented_ba_id: Lorem Ipsum
+              service_quality: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cont_ba_service
+    description: Create a new cont_ba_service data
+    requestBody:
+      required: true
+      description: Request body to create cont_ba_service data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cont_ba_service'
+          example:
+            contract_id: Lorem Ipsum
+            provided_by: Lorem Ipsum
+            active_ind: y
+            ba_service_type: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            original_party_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            represented_ba_id: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cont_ba_service data is added
+        content:
+          application/json:
+            example:
+              message: The cont_ba_service data was successfully added
+/cont-ba-service/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cont_ba_service data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cont_ba_service data
+    description: Update a new cont_ba_service data
+    requestBody:
+      required: true
+      description: Request body to update cont_ba_service data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cont_ba_service'
+          example:
+            contract_id: Lorem Ipsum
+            provided_by: Lorem Ipsum
+            active_ind: y
+            ba_service_type: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            original_party_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            represented_ba_id: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cont_ba_service data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cont_ba_service data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cont_ba_service data
+    description: Update a new cont_ba_service data
+    requestBody:
+      required: true
+      description: Request body to update cont_ba_service data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cont_ba_service'
+          example:
+            contract_id: Lorem Ipsum
+            provided_by: Lorem Ipsum
+            active_ind: y
+            ba_service_type: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            original_party_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            represented_ba_id: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cont_ba_service data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cont_ba_service data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cont_ba_service data
+    description: Delete cont_ba_service data
+    responses:
+      '200':
+        description: cont_ba_service data is deleted
+        content:
+          application/json:
+            example:
+              message: The cont_ba_service data was successfully deleted

@@ -1,0 +1,201 @@
+/anl-isotope:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_isotope
+    responses:
+      '200':
+        description: get anl_isotope data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              calculate_method_id: Lorem Ipsum
+              delta_notation_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              isotope_value: 0.1
+              isotope_value_ouom: Lorem Ipsum
+              isotope_value_uom: Lorem Ipsum
+              measurement_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              standard_id: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_isotope
+    description: Create a new anl_isotope data
+    requestBody:
+      required: true
+      description: Request body to create anl_isotope data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_isotope'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculate_method_id: Lorem Ipsum
+            delta_notation_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            isotope_value: 0.1
+            isotope_value_ouom: Lorem Ipsum
+            isotope_value_uom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            standard_id: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_isotope data is added
+        content:
+          application/json:
+            example:
+              message: The anl_isotope data was successfully added
+/anl-isotope/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_isotope data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_isotope data
+    description: Update a new anl_isotope data
+    requestBody:
+      required: true
+      description: Request body to update anl_isotope data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_isotope'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculate_method_id: Lorem Ipsum
+            delta_notation_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            isotope_value: 0.1
+            isotope_value_ouom: Lorem Ipsum
+            isotope_value_uom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            standard_id: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_isotope data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_isotope data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_isotope data
+    description: Update a new anl_isotope data
+    requestBody:
+      required: true
+      description: Request body to update anl_isotope data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_isotope'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculate_method_id: Lorem Ipsum
+            delta_notation_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            isotope_value: 0.1
+            isotope_value_ouom: Lorem Ipsum
+            isotope_value_uom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            standard_id: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_isotope data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_isotope data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_isotope data
+    description: Delete anl_isotope data
+    responses:
+      '200':
+        description: anl_isotope data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_isotope data was successfully deleted

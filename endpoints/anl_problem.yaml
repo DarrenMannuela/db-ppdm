@@ -1,0 +1,249 @@
+/anl-problem:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_problem
+    responses:
+      '200':
+        description: get anl_problem data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              activity_set_id: Lorem Ipsum
+              anl_problem_ind: y
+              ba_problem_ind: y
+              confidence_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              equip_problem_ind: y
+              expiry_date: 12/12/2023
+              method_id: Lorem Ipsum
+              method_problem_ind: y
+              percent_of_sample: 0.1
+              ppdm_guid: Lorem Ipsum
+              problem_desc: Lorem Ipsum
+              problem_result: Lorem Ipsum
+              problem_result_desc: Lorem Ipsum
+              problem_severity: Lorem Ipsum
+              problem_severity_desc: Lorem Ipsum
+              problem_type: Lorem Ipsum
+              referenced_column_name: Lorem Ipsum
+              referenced_ppdm_guid: Lorem Ipsum
+              referenced_system_id: Lorem Ipsum
+              referenced_table_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              resolution_method: Lorem Ipsum
+              resolution_method_desc: Lorem Ipsum
+              resolved_by_ba_id: Lorem Ipsum
+              sample_problem_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_problem
+    description: Create a new anl_problem data
+    requestBody:
+      required: true
+      description: Request body to create anl_problem data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_problem'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            activity_set_id: Lorem Ipsum
+            anl_problem_ind: y
+            ba_problem_ind: y
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_problem_ind: y
+            expiry_date: 12/12/2023
+            method_id: Lorem Ipsum
+            method_problem_ind: y
+            percent_of_sample: 0.1
+            ppdm_guid: Lorem Ipsum
+            problem_desc: Lorem Ipsum
+            problem_result: Lorem Ipsum
+            problem_result_desc: Lorem Ipsum
+            problem_severity: Lorem Ipsum
+            problem_severity_desc: Lorem Ipsum
+            problem_type: Lorem Ipsum
+            referenced_column_name: Lorem Ipsum
+            referenced_ppdm_guid: Lorem Ipsum
+            referenced_system_id: Lorem Ipsum
+            referenced_table_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_method: Lorem Ipsum
+            resolution_method_desc: Lorem Ipsum
+            resolved_by_ba_id: Lorem Ipsum
+            sample_problem_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_problem data is added
+        content:
+          application/json:
+            example:
+              message: The anl_problem data was successfully added
+/anl-problem/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_problem data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_problem data
+    description: Update a new anl_problem data
+    requestBody:
+      required: true
+      description: Request body to update anl_problem data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_problem'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            activity_set_id: Lorem Ipsum
+            anl_problem_ind: y
+            ba_problem_ind: y
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_problem_ind: y
+            expiry_date: 12/12/2023
+            method_id: Lorem Ipsum
+            method_problem_ind: y
+            percent_of_sample: 0.1
+            ppdm_guid: Lorem Ipsum
+            problem_desc: Lorem Ipsum
+            problem_result: Lorem Ipsum
+            problem_result_desc: Lorem Ipsum
+            problem_severity: Lorem Ipsum
+            problem_severity_desc: Lorem Ipsum
+            problem_type: Lorem Ipsum
+            referenced_column_name: Lorem Ipsum
+            referenced_ppdm_guid: Lorem Ipsum
+            referenced_system_id: Lorem Ipsum
+            referenced_table_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_method: Lorem Ipsum
+            resolution_method_desc: Lorem Ipsum
+            resolved_by_ba_id: Lorem Ipsum
+            sample_problem_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_problem data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_problem data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_problem data
+    description: Update a new anl_problem data
+    requestBody:
+      required: true
+      description: Request body to update anl_problem data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_problem'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            activity_set_id: Lorem Ipsum
+            anl_problem_ind: y
+            ba_problem_ind: y
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_problem_ind: y
+            expiry_date: 12/12/2023
+            method_id: Lorem Ipsum
+            method_problem_ind: y
+            percent_of_sample: 0.1
+            ppdm_guid: Lorem Ipsum
+            problem_desc: Lorem Ipsum
+            problem_result: Lorem Ipsum
+            problem_result_desc: Lorem Ipsum
+            problem_severity: Lorem Ipsum
+            problem_severity_desc: Lorem Ipsum
+            problem_type: Lorem Ipsum
+            referenced_column_name: Lorem Ipsum
+            referenced_ppdm_guid: Lorem Ipsum
+            referenced_system_id: Lorem Ipsum
+            referenced_table_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_method: Lorem Ipsum
+            resolution_method_desc: Lorem Ipsum
+            resolved_by_ba_id: Lorem Ipsum
+            sample_problem_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_problem data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_problem data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_problem data
+    description: Delete anl_problem data
+    responses:
+      '200':
+        description: anl_problem data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_problem data was successfully deleted

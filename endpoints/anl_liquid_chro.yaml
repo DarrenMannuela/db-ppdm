@@ -1,0 +1,297 @@
+/anl-liquid-chro:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_liquid_chro
+    responses:
+      '200':
+        description: get anl_liquid_chro data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              aged_oil_used: 0.1
+              aged_oil_used_uom: Lorem Ipsum
+              aged_weight_of_oil: 0.1
+              aged_weight_of_oil_uom: Lorem Ipsum
+              aromatic_hc_value: 0.1
+              aromatic_hc_value_uom: Lorem Ipsum
+              asphaltene_free_value: 0.1
+              asphaltene_free_value_uom: Lorem Ipsum
+              asphaltene_value: 0.1
+              asphaltene_value_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              eom_used: 0.1
+              eom_used_uom: Lorem Ipsum
+              eom_value: 0.1
+              eom_value_uom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              loss_on_column: 0.1
+              loss_on_column_uom: Lorem Ipsum
+              measurement_type: Lorem Ipsum
+              naphthene_value: 0.1
+              naphthene_value_uom: Lorem Ipsum
+              nso_value: 0.1
+              nso_value_uom: Lorem Ipsum
+              n_alkane_fraction: 0.1
+              n_alkane_fraction_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              refraction_factor: 0.1
+              remark: Lorem Ipsum
+              reported_hc_fraction: 0.1
+              reported_hc_fraction_uom: Lorem Ipsum
+              reported_hc_in_toc: 0.1
+              reported_hc_in_toc_uom: Lorem Ipsum
+              saturated_hc_value: 0.1
+              saturated_hc_value_uom: Lorem Ipsum
+              source: Lorem Ipsum
+              total_soluble_extract: 0.1
+              total_soluble_extract_uom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_liquid_chro
+    description: Create a new anl_liquid_chro data
+    requestBody:
+      required: true
+      description: Request body to create anl_liquid_chro data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_liquid_chro'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            aged_oil_used: 0.1
+            aged_oil_used_uom: Lorem Ipsum
+            aged_weight_of_oil: 0.1
+            aged_weight_of_oil_uom: Lorem Ipsum
+            aromatic_hc_value: 0.1
+            aromatic_hc_value_uom: Lorem Ipsum
+            asphaltene_free_value: 0.1
+            asphaltene_free_value_uom: Lorem Ipsum
+            asphaltene_value: 0.1
+            asphaltene_value_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            eom_used: 0.1
+            eom_used_uom: Lorem Ipsum
+            eom_value: 0.1
+            eom_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            loss_on_column: 0.1
+            loss_on_column_uom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            naphthene_value: 0.1
+            naphthene_value_uom: Lorem Ipsum
+            nso_value: 0.1
+            nso_value_uom: Lorem Ipsum
+            n_alkane_fraction: 0.1
+            n_alkane_fraction_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            refraction_factor: 0.1
+            remark: Lorem Ipsum
+            reported_hc_fraction: 0.1
+            reported_hc_fraction_uom: Lorem Ipsum
+            reported_hc_in_toc: 0.1
+            reported_hc_in_toc_uom: Lorem Ipsum
+            saturated_hc_value: 0.1
+            saturated_hc_value_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            total_soluble_extract: 0.1
+            total_soluble_extract_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_liquid_chro data is added
+        content:
+          application/json:
+            example:
+              message: The anl_liquid_chro data was successfully added
+/anl-liquid-chro/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_liquid_chro data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_liquid_chro data
+    description: Update a new anl_liquid_chro data
+    requestBody:
+      required: true
+      description: Request body to update anl_liquid_chro data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_liquid_chro'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            aged_oil_used: 0.1
+            aged_oil_used_uom: Lorem Ipsum
+            aged_weight_of_oil: 0.1
+            aged_weight_of_oil_uom: Lorem Ipsum
+            aromatic_hc_value: 0.1
+            aromatic_hc_value_uom: Lorem Ipsum
+            asphaltene_free_value: 0.1
+            asphaltene_free_value_uom: Lorem Ipsum
+            asphaltene_value: 0.1
+            asphaltene_value_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            eom_used: 0.1
+            eom_used_uom: Lorem Ipsum
+            eom_value: 0.1
+            eom_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            loss_on_column: 0.1
+            loss_on_column_uom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            naphthene_value: 0.1
+            naphthene_value_uom: Lorem Ipsum
+            nso_value: 0.1
+            nso_value_uom: Lorem Ipsum
+            n_alkane_fraction: 0.1
+            n_alkane_fraction_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            refraction_factor: 0.1
+            remark: Lorem Ipsum
+            reported_hc_fraction: 0.1
+            reported_hc_fraction_uom: Lorem Ipsum
+            reported_hc_in_toc: 0.1
+            reported_hc_in_toc_uom: Lorem Ipsum
+            saturated_hc_value: 0.1
+            saturated_hc_value_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            total_soluble_extract: 0.1
+            total_soluble_extract_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_liquid_chro data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_liquid_chro data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_liquid_chro data
+    description: Update a new anl_liquid_chro data
+    requestBody:
+      required: true
+      description: Request body to update anl_liquid_chro data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_liquid_chro'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            aged_oil_used: 0.1
+            aged_oil_used_uom: Lorem Ipsum
+            aged_weight_of_oil: 0.1
+            aged_weight_of_oil_uom: Lorem Ipsum
+            aromatic_hc_value: 0.1
+            aromatic_hc_value_uom: Lorem Ipsum
+            asphaltene_free_value: 0.1
+            asphaltene_free_value_uom: Lorem Ipsum
+            asphaltene_value: 0.1
+            asphaltene_value_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            eom_used: 0.1
+            eom_used_uom: Lorem Ipsum
+            eom_value: 0.1
+            eom_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            loss_on_column: 0.1
+            loss_on_column_uom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            naphthene_value: 0.1
+            naphthene_value_uom: Lorem Ipsum
+            nso_value: 0.1
+            nso_value_uom: Lorem Ipsum
+            n_alkane_fraction: 0.1
+            n_alkane_fraction_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            refraction_factor: 0.1
+            remark: Lorem Ipsum
+            reported_hc_fraction: 0.1
+            reported_hc_fraction_uom: Lorem Ipsum
+            reported_hc_in_toc: 0.1
+            reported_hc_in_toc_uom: Lorem Ipsum
+            saturated_hc_value: 0.1
+            saturated_hc_value_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            total_soluble_extract: 0.1
+            total_soluble_extract_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_liquid_chro data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_liquid_chro data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_liquid_chro data
+    description: Delete anl_liquid_chro data
+    responses:
+      '200':
+        description: anl_liquid_chro data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_liquid_chro data was successfully deleted

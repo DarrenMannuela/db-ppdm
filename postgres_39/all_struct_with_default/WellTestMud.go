@@ -1,0 +1,43 @@
+package dto
+
+type Well_test_mud struct {
+	Uwi                       string   `json:"uwi" default:"source"`
+	Source                    string   `json:"source" default:"source"`
+	Test_type                 string   `json:"test_type" default:"source"`
+	Run_num                   string   `json:"run_num" default:"source"`
+	Test_num                  string   `json:"test_num" default:"source"`
+	Mud_type                  string   `json:"mud_type" default:"source"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Filtrate_resistivity      *float64 `json:"filtrate_resistivity" default:""`
+	Filtrate_resistivity_ouom *string  `json:"filtrate_resistivity_ouom" default:""`
+	Filtrate_salinity         *float64 `json:"filtrate_salinity" default:""`
+	Filtrate_salinity_ouom    *string  `json:"filtrate_salinity_ouom" default:""`
+	Filtrate_salinity_uom     *string  `json:"filtrate_salinity_uom" default:""`
+	Filtrate_temperature      *float64 `json:"filtrate_temperature" default:""`
+	Filtrate_temperature_ouom *string  `json:"filtrate_temperature_ouom" default:""`
+	Mud_ph                    *float64 `json:"mud_ph" default:""`
+	Mud_resistivity           *float64 `json:"mud_resistivity" default:""`
+	Mud_resistivity_ouom      *string  `json:"mud_resistivity_ouom" default:""`
+	Mud_salinity              *float64 `json:"mud_salinity" default:""`
+	Mud_salinity_ouom         *string  `json:"mud_salinity_ouom" default:""`
+	Mud_salinity_uom          *string  `json:"mud_salinity_uom" default:""`
+	Mud_sample_type           *string  `json:"mud_sample_type" default:""`
+	Mud_temperature           *float64 `json:"mud_temperature" default:""`
+	Mud_temperature_ouom      *string  `json:"mud_temperature_ouom" default:""`
+	Mud_viscosity             *float64 `json:"mud_viscosity" default:""`
+	Mud_viscosity_ouom        *string  `json:"mud_viscosity_ouom" default:""`
+	Mud_weight                *float64 `json:"mud_weight" default:""`
+	Mud_weight_ouom           *string  `json:"mud_weight_ouom" default:""`
+	Mud_weight_uom            *string  `json:"mud_weight_uom" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

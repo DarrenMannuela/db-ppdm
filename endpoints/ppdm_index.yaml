@@ -1,0 +1,181 @@
+/ppdm-index:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_index
+    responses:
+      '200':
+        description: get ppdm_index data to be returned
+        content:
+          application/json:
+            example:
+            - system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              index_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              extension_ind: y
+              index_category: Lorem Ipsum
+              index_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              unique_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_index
+    description: Create a new ppdm_index data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_index data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_index'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            index_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            index_category: Lorem Ipsum
+            index_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            unique_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_index data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_index data was successfully added
+/ppdm-index/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_index data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_index data
+    description: Update a new ppdm_index data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_index data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_index'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            index_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            index_category: Lorem Ipsum
+            index_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            unique_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_index data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_index data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_index data
+    description: Update a new ppdm_index data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_index data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_index'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            index_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            index_category: Lorem Ipsum
+            index_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            unique_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_index data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_index data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_index data
+    description: Delete ppdm_index data
+    responses:
+      '200':
+        description: ppdm_index data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_index data was successfully deleted

@@ -1,0 +1,56 @@
+package dto
+
+type Well_test_analysis struct {
+	Uwi                         string   `json:"uwi" default:"source"`
+	Source                      string   `json:"source" default:"source"`
+	Test_type                   string   `json:"test_type" default:"source"`
+	Run_num                     string   `json:"run_num" default:"source"`
+	Test_num                    string   `json:"test_num" default:"source"`
+	Period_type                 string   `json:"period_type" default:"source"`
+	Period_obs_no               int      `json:"period_obs_no" default:"1"`
+	Analysis_obs_no             int      `json:"analysis_obs_no" default:"1"`
+	Active_ind                  *string  `json:"active_ind" default:""`
+	Bsw                         *float64 `json:"bsw" default:""`
+	Completion_obs_no           *int     `json:"completion_obs_no" default:""`
+	Condensate_gravity          *float64 `json:"condensate_gravity" default:""`
+	Condensate_ratio            *float64 `json:"condensate_ratio" default:""`
+	Condensate_ratio_ouom       *string  `json:"condensate_ratio_ouom" default:""`
+	Condensate_temperature      *float64 `json:"condensate_temperature" default:""`
+	Condensate_temperature_ouom *string  `json:"condensate_temperature_ouom" default:""`
+	Effective_date              *string  `json:"effective_date" default:""`
+	Expiry_date                 *string  `json:"expiry_date" default:""`
+	Fluid_type                  *string  `json:"fluid_type" default:""`
+	Gas_content                 *string  `json:"gas_content" default:""`
+	Gas_gravity                 *float64 `json:"gas_gravity" default:""`
+	Gor                         *float64 `json:"gor" default:""`
+	Gor_ouom                    *string  `json:"gor_ouom" default:""`
+	Gwr                         *float64 `json:"gwr" default:""`
+	Gwr_ouom                    *string  `json:"gwr_ouom" default:""`
+	H2s_percent                 *float64 `json:"h_2_s_percent" default:""`
+	Lgr                         *float64 `json:"lgr" default:""`
+	Lgr_ouom                    *string  `json:"lgr_ouom" default:""`
+	Oil_density                 *float64 `json:"oil_density" default:""`
+	Oil_density_ouom            *string  `json:"oil_density_ouom" default:""`
+	Oil_gravity                 *float64 `json:"oil_gravity" default:""`
+	Oil_temperature             *float64 `json:"oil_temperature" default:""`
+	Oil_temperature_ouom        *string  `json:"oil_temperature_ouom" default:""`
+	Ppdm_guid                   *string  `json:"ppdm_guid" default:""`
+	Remark                      *string  `json:"remark" default:""`
+	Salinity_type               *string  `json:"salinity_type" default:""`
+	Sulphur_percent             *float64 `json:"sulphur_percent" default:""`
+	Water_cut                   *float64 `json:"water_cut" default:""`
+	Water_resistivity           *float64 `json:"water_resistivity" default:""`
+	Water_resistivity_ouom      *string  `json:"water_resistivity_ouom" default:""`
+	Water_salinity              *float64 `json:"water_salinity" default:""`
+	Water_salinity_ouom         *string  `json:"water_salinity_ouom" default:""`
+	Water_temperature           *float64 `json:"water_temperature" default:""`
+	Water_temperature_ouom      *string  `json:"water_temperature_ouom" default:""`
+	Wor                         *float64 `json:"wor" default:""`
+	Row_changed_by              *string  `json:"row_changed_by" default:""`
+	Row_changed_date            *string  `json:"row_changed_date" default:""`
+	Row_created_by              *string  `json:"row_created_by" default:""`
+	Row_created_date            *string  `json:"row_created_date" default:""`
+	Row_effective_date          *string  `json:"row_effective_date" default:""`
+	Row_expiry_date             *string  `json:"row_expiry_date" default:""`
+	Row_quality                 *string  `json:"row_quality" default:""`
+}

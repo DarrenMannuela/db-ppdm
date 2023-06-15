@@ -1,0 +1,185 @@
+/lith-rockpart:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_rockpart
+    responses:
+      '200':
+        description: get lith_rockpart data to be returned
+        content:
+          application/json:
+            example:
+            - lithology_log_id: Lorem Ipsum
+              lith_log_source: Lorem Ipsum
+              rock_type: Lorem Ipsum
+              rockpart_name: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              lith_pattern_code: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              rockpart_percent: 0.1
+              rockpart_rel_abundance: Lorem Ipsum
+              rockpart_texture: Lorem Ipsum
+              rockpart_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_rockpart
+    description: Create a new lith_rockpart data
+    requestBody:
+      required: true
+      description: Request body to create lith_rockpart data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_rockpart'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            rockpart_name: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lith_pattern_code: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rockpart_percent: 0.1
+            rockpart_rel_abundance: Lorem Ipsum
+            rockpart_texture: Lorem Ipsum
+            rockpart_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_rockpart data is added
+        content:
+          application/json:
+            example:
+              message: The lith_rockpart data was successfully added
+/lith-rockpart/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_rockpart data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_rockpart data
+    description: Update a new lith_rockpart data
+    requestBody:
+      required: true
+      description: Request body to update lith_rockpart data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_rockpart'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            rockpart_name: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lith_pattern_code: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rockpart_percent: 0.1
+            rockpart_rel_abundance: Lorem Ipsum
+            rockpart_texture: Lorem Ipsum
+            rockpart_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_rockpart data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_rockpart data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_rockpart data
+    description: Update a new lith_rockpart data
+    requestBody:
+      required: true
+      description: Request body to update lith_rockpart data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_rockpart'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            rockpart_name: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lith_pattern_code: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rockpart_percent: 0.1
+            rockpart_rel_abundance: Lorem Ipsum
+            rockpart_texture: Lorem Ipsum
+            rockpart_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_rockpart data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_rockpart data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_rockpart data
+    description: Delete lith_rockpart data
+    responses:
+      '200':
+        description: lith_rockpart data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_rockpart data was successfully deleted

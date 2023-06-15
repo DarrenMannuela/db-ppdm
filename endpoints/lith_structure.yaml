@@ -1,0 +1,169 @@
+/lith-structure:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_structure
+    responses:
+      '200':
+        description: get lith_structure data to be returned
+        content:
+          application/json:
+            example:
+            - lithology_log_id: Lorem Ipsum
+              lith_log_source: Lorem Ipsum
+              structure_type: Lorem Ipsum
+              active_ind: y
+              boundary_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              structure_rel_abund: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_structure
+    description: Create a new lith_structure data
+    requestBody:
+      required: true
+      description: Request body to create lith_structure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_structure'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            structure_type: Lorem Ipsum
+            active_ind: y
+            boundary_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            structure_rel_abund: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_structure data is added
+        content:
+          application/json:
+            example:
+              message: The lith_structure data was successfully added
+/lith-structure/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_structure data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_structure data
+    description: Update a new lith_structure data
+    requestBody:
+      required: true
+      description: Request body to update lith_structure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_structure'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            structure_type: Lorem Ipsum
+            active_ind: y
+            boundary_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            structure_rel_abund: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_structure data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_structure data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_structure data
+    description: Update a new lith_structure data
+    requestBody:
+      required: true
+      description: Request body to update lith_structure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_structure'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            structure_type: Lorem Ipsum
+            active_ind: y
+            boundary_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            structure_rel_abund: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_structure data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_structure data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_structure data
+    description: Delete lith_structure data
+    responses:
+      '200':
+        description: lith_structure data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_structure data was successfully deleted

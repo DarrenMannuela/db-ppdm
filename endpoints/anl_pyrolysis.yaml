@@ -1,0 +1,321 @@
+/anl-pyrolysis:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_pyrolysis
+    responses:
+      '200':
+        description: get anl_pyrolysis data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_temperature: 0.1
+              max_temperature_ouom: Lorem Ipsum
+              max_temperature_uom: Lorem Ipsum
+              peak_temperature: 0.1
+              peak_temperature_ouom: Lorem Ipsum
+              peak_temperature_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              reported_ind: y
+              rep_bitumen_index: 0.1
+              rep_bitumen_index_ouom: Lorem Ipsum
+              rep_bitumen_index_uom: Lorem Ipsum
+              rep_hydrogen_index: 0.1
+              rep_hydrogen_index_ouom: Lorem Ipsum
+              rep_hydrogen_index_uom: Lorem Ipsum
+              rep_oxygen_index: 0.1
+              rep_oxygen_index_ouom: Lorem Ipsum
+              rep_oxygen_index_uom: Lorem Ipsum
+              rep_production_index: 0.1
+              rep_pyrolisable_carbon: 0.1
+              rep_pyrolisable_carbon_ouom: Lorem Ipsum
+              rep_pyrolisable_carbon_uom: Lorem Ipsum
+              source: Lorem Ipsum
+              s_0: 0.1
+              s_0_ouom: Lorem Ipsum
+              s_1: 0.1
+              s_1_ouom: Lorem Ipsum
+              s_2: 0.1
+              s_2_ouom: Lorem Ipsum
+              s_3: 0.1
+              s_3_ouom: Lorem Ipsum
+              s_4: 0.1
+              s_4_ouom: Lorem Ipsum
+              s_5: 0.1
+              s_5_ouom: Lorem Ipsum
+              total_organic_carbon: 0.1
+              total_organic_carbon_ouom: Lorem Ipsum
+              total_organic_carbon_uom: Lorem Ipsum
+              valid_anl_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_pyrolysis
+    description: Create a new anl_pyrolysis data
+    requestBody:
+      required: true
+      description: Request body to create anl_pyrolysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_pyrolysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_temperature: 0.1
+            max_temperature_ouom: Lorem Ipsum
+            max_temperature_uom: Lorem Ipsum
+            peak_temperature: 0.1
+            peak_temperature_ouom: Lorem Ipsum
+            peak_temperature_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            rep_bitumen_index: 0.1
+            rep_bitumen_index_ouom: Lorem Ipsum
+            rep_bitumen_index_uom: Lorem Ipsum
+            rep_hydrogen_index: 0.1
+            rep_hydrogen_index_ouom: Lorem Ipsum
+            rep_hydrogen_index_uom: Lorem Ipsum
+            rep_oxygen_index: 0.1
+            rep_oxygen_index_ouom: Lorem Ipsum
+            rep_oxygen_index_uom: Lorem Ipsum
+            rep_production_index: 0.1
+            rep_pyrolisable_carbon: 0.1
+            rep_pyrolisable_carbon_ouom: Lorem Ipsum
+            rep_pyrolisable_carbon_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            s_0: 0.1
+            s_0_ouom: Lorem Ipsum
+            s_1: 0.1
+            s_1_ouom: Lorem Ipsum
+            s_2: 0.1
+            s_2_ouom: Lorem Ipsum
+            s_3: 0.1
+            s_3_ouom: Lorem Ipsum
+            s_4: 0.1
+            s_4_ouom: Lorem Ipsum
+            s_5: 0.1
+            s_5_ouom: Lorem Ipsum
+            total_organic_carbon: 0.1
+            total_organic_carbon_ouom: Lorem Ipsum
+            total_organic_carbon_uom: Lorem Ipsum
+            valid_anl_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_pyrolysis data is added
+        content:
+          application/json:
+            example:
+              message: The anl_pyrolysis data was successfully added
+/anl-pyrolysis/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_pyrolysis data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_pyrolysis data
+    description: Update a new anl_pyrolysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_pyrolysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_pyrolysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_temperature: 0.1
+            max_temperature_ouom: Lorem Ipsum
+            max_temperature_uom: Lorem Ipsum
+            peak_temperature: 0.1
+            peak_temperature_ouom: Lorem Ipsum
+            peak_temperature_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            rep_bitumen_index: 0.1
+            rep_bitumen_index_ouom: Lorem Ipsum
+            rep_bitumen_index_uom: Lorem Ipsum
+            rep_hydrogen_index: 0.1
+            rep_hydrogen_index_ouom: Lorem Ipsum
+            rep_hydrogen_index_uom: Lorem Ipsum
+            rep_oxygen_index: 0.1
+            rep_oxygen_index_ouom: Lorem Ipsum
+            rep_oxygen_index_uom: Lorem Ipsum
+            rep_production_index: 0.1
+            rep_pyrolisable_carbon: 0.1
+            rep_pyrolisable_carbon_ouom: Lorem Ipsum
+            rep_pyrolisable_carbon_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            s_0: 0.1
+            s_0_ouom: Lorem Ipsum
+            s_1: 0.1
+            s_1_ouom: Lorem Ipsum
+            s_2: 0.1
+            s_2_ouom: Lorem Ipsum
+            s_3: 0.1
+            s_3_ouom: Lorem Ipsum
+            s_4: 0.1
+            s_4_ouom: Lorem Ipsum
+            s_5: 0.1
+            s_5_ouom: Lorem Ipsum
+            total_organic_carbon: 0.1
+            total_organic_carbon_ouom: Lorem Ipsum
+            total_organic_carbon_uom: Lorem Ipsum
+            valid_anl_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_pyrolysis data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_pyrolysis data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_pyrolysis data
+    description: Update a new anl_pyrolysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_pyrolysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_pyrolysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_temperature: 0.1
+            max_temperature_ouom: Lorem Ipsum
+            max_temperature_uom: Lorem Ipsum
+            peak_temperature: 0.1
+            peak_temperature_ouom: Lorem Ipsum
+            peak_temperature_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            rep_bitumen_index: 0.1
+            rep_bitumen_index_ouom: Lorem Ipsum
+            rep_bitumen_index_uom: Lorem Ipsum
+            rep_hydrogen_index: 0.1
+            rep_hydrogen_index_ouom: Lorem Ipsum
+            rep_hydrogen_index_uom: Lorem Ipsum
+            rep_oxygen_index: 0.1
+            rep_oxygen_index_ouom: Lorem Ipsum
+            rep_oxygen_index_uom: Lorem Ipsum
+            rep_production_index: 0.1
+            rep_pyrolisable_carbon: 0.1
+            rep_pyrolisable_carbon_ouom: Lorem Ipsum
+            rep_pyrolisable_carbon_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            s_0: 0.1
+            s_0_ouom: Lorem Ipsum
+            s_1: 0.1
+            s_1_ouom: Lorem Ipsum
+            s_2: 0.1
+            s_2_ouom: Lorem Ipsum
+            s_3: 0.1
+            s_3_ouom: Lorem Ipsum
+            s_4: 0.1
+            s_4_ouom: Lorem Ipsum
+            s_5: 0.1
+            s_5_ouom: Lorem Ipsum
+            total_organic_carbon: 0.1
+            total_organic_carbon_ouom: Lorem Ipsum
+            total_organic_carbon_uom: Lorem Ipsum
+            valid_anl_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_pyrolysis data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_pyrolysis data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_pyrolysis data
+    description: Delete anl_pyrolysis data
+    responses:
+      '200':
+        description: anl_pyrolysis data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_pyrolysis data was successfully deleted

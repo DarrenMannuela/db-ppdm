@@ -1,0 +1,49 @@
+package dto
+
+type Anl_elemental struct {
+	Analysis_id              string   `json:"analysis_id" default:"source"`
+	Anl_source               string   `json:"anl_source" default:"source"`
+	Elemental_anl_obs_no     int      `json:"elemental_anl_obs_no" default:"1"`
+	Active_ind               *string  `json:"active_ind" default:""`
+	Ash_element              *float64 `json:"ash_element" default:""`
+	Ash_element_ouom         *string  `json:"ash_element_ouom" default:""`
+	C_element                *float64 `json:"c_element" default:""`
+	C_element_ouom           *string  `json:"c_element_ouom" default:""`
+	Effective_date           *string  `json:"effective_date" default:""`
+	Expiry_date              *string  `json:"expiry_date" default:""`
+	Fe_element               *float64 `json:"fe_element" default:""`
+	Fe_element_ouom          *string  `json:"fe_element_ouom" default:""`
+	H_element                *float64 `json:"h_element" default:""`
+	H_element_ouom           *string  `json:"h_element_ouom" default:""`
+	Measurement_type         *string  `json:"measurement_type" default:""`
+	Ni_element               *float64 `json:"ni_element" default:""`
+	Ni_element_ouom          *string  `json:"ni_element_ouom" default:""`
+	N_element                *float64 `json:"n_element" default:""`
+	N_element_ouom           *string  `json:"n_element_ouom" default:""`
+	O_element                *float64 `json:"o_element" default:""`
+	O_element_ouom           *string  `json:"o_element_ouom" default:""`
+	Ppdm_guid                *string  `json:"ppdm_guid" default:""`
+	Problem_ind              *string  `json:"problem_ind" default:""`
+	Remark                   *string  `json:"remark" default:""`
+	Reported_h_c_ratio       *float64 `json:"reported_h_c_ratio" default:""`
+	Reported_h_c_ratio_ouom  *string  `json:"reported_h_c_ratio_ouom" default:""`
+	Reported_ni_c_ratio      *float64 `json:"reported_ni_c_ratio" default:""`
+	Reported_ni_c_ratio_ouom *string  `json:"reported_ni_c_ratio_ouom" default:""`
+	Reported_n_c_ratio       *float64 `json:"reported_n_c_ratio" default:""`
+	Reported_n_c_ratio_ouom  *string  `json:"reported_n_c_ratio_ouom" default:""`
+	Reported_o_c_ratio       *float64 `json:"reported_o_c_ratio" default:""`
+	Reported_o_c_ratio_ouom  *string  `json:"reported_o_c_ratio_ouom" default:""`
+	Source                   *string  `json:"source" default:""`
+	Step_seq_no              *int     `json:"step_seq_no" default:""`
+	S_element                *float64 `json:"s_element" default:""`
+	S_element_ouom           *string  `json:"s_element_ouom" default:""`
+	V_element                *float64 `json:"v_element" default:""`
+	V_element_ouom           *string  `json:"v_element_ouom" default:""`
+	Row_changed_by           *string  `json:"row_changed_by" default:""`
+	Row_changed_date         *string  `json:"row_changed_date" default:""`
+	Row_created_by           *string  `json:"row_created_by" default:""`
+	Row_created_date         *string  `json:"row_created_date" default:""`
+	Row_effective_date       *string  `json:"row_effective_date" default:""`
+	Row_expiry_date          *string  `json:"row_expiry_date" default:""`
+	Row_quality              *string  `json:"row_quality" default:""`
+}

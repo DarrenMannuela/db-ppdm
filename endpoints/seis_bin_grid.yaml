@@ -1,0 +1,257 @@
+/seis-bin-grid:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_bin_grid
+    responses:
+      '200':
+        description: get seis_bin_grid data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              bin_grid_id: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              angle_rotation: 0.1
+              bin_grid_type: Lorem Ipsum
+              bin_grid_version: 0.1
+              bin_method: Lorem Ipsum
+              coord_acquisition_id: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              corner1_lat: 0.1
+              corner1_long: 0.1
+              corner2_lat: 0.1
+              corner2_long: 0.1
+              corner3_lat: 0.1
+              corner3_long: 0.1
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fold_coverage: 0.1
+              local_coord_system_id: Lorem Ipsum
+              nline_azimuth: 0.1
+              nline_spacing: 0.1
+              north_type: Lorem Ipsum
+              point_origin_easting: 0.1
+              point_origin_latitude: 0.1
+              point_origin_longitude: 0.1
+              point_origin_northing: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              xline_azimuth: 0.1
+              xline_spacing: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_bin_grid
+    description: Create a new seis_bin_grid data
+    requestBody:
+      required: true
+      description: Request body to create seis_bin_grid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_grid'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            angle_rotation: 0.1
+            bin_grid_type: Lorem Ipsum
+            bin_grid_version: 0.1
+            bin_method: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            corner1_lat: 0.1
+            corner1_long: 0.1
+            corner2_lat: 0.1
+            corner2_long: 0.1
+            corner3_lat: 0.1
+            corner3_long: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fold_coverage: 0.1
+            local_coord_system_id: Lorem Ipsum
+            nline_azimuth: 0.1
+            nline_spacing: 0.1
+            north_type: Lorem Ipsum
+            point_origin_easting: 0.1
+            point_origin_latitude: 0.1
+            point_origin_longitude: 0.1
+            point_origin_northing: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            xline_azimuth: 0.1
+            xline_spacing: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_bin_grid data is added
+        content:
+          application/json:
+            example:
+              message: The seis_bin_grid data was successfully added
+/seis-bin-grid/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_bin_grid data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_bin_grid data
+    description: Update a new seis_bin_grid data
+    requestBody:
+      required: true
+      description: Request body to update seis_bin_grid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_grid'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            angle_rotation: 0.1
+            bin_grid_type: Lorem Ipsum
+            bin_grid_version: 0.1
+            bin_method: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            corner1_lat: 0.1
+            corner1_long: 0.1
+            corner2_lat: 0.1
+            corner2_long: 0.1
+            corner3_lat: 0.1
+            corner3_long: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fold_coverage: 0.1
+            local_coord_system_id: Lorem Ipsum
+            nline_azimuth: 0.1
+            nline_spacing: 0.1
+            north_type: Lorem Ipsum
+            point_origin_easting: 0.1
+            point_origin_latitude: 0.1
+            point_origin_longitude: 0.1
+            point_origin_northing: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            xline_azimuth: 0.1
+            xline_spacing: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_bin_grid data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_bin_grid data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_bin_grid data
+    description: Update a new seis_bin_grid data
+    requestBody:
+      required: true
+      description: Request body to update seis_bin_grid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_grid'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            angle_rotation: 0.1
+            bin_grid_type: Lorem Ipsum
+            bin_grid_version: 0.1
+            bin_method: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            corner1_lat: 0.1
+            corner1_long: 0.1
+            corner2_lat: 0.1
+            corner2_long: 0.1
+            corner3_lat: 0.1
+            corner3_long: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fold_coverage: 0.1
+            local_coord_system_id: Lorem Ipsum
+            nline_azimuth: 0.1
+            nline_spacing: 0.1
+            north_type: Lorem Ipsum
+            point_origin_easting: 0.1
+            point_origin_latitude: 0.1
+            point_origin_longitude: 0.1
+            point_origin_northing: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            xline_azimuth: 0.1
+            xline_spacing: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_bin_grid data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_bin_grid data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_bin_grid data
+    description: Delete seis_bin_grid data
+    responses:
+      '200':
+        description: seis_bin_grid data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_bin_grid data was successfully deleted

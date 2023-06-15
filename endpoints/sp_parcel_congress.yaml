@@ -1,0 +1,221 @@
+/sp-parcel-congress:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sp_parcel_congress
+    responses:
+      '200':
+        description: get sp_parcel_congress data to be returned
+        content:
+          application/json:
+            example:
+            - parcel_congress_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              congress_range: 0.1
+              congress_section: 0.1
+              congress_section_suffix: y
+              congress_township: 0.1
+              congress_twp_name: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              ew_direction: Lorem Ipsum
+              expiry_date: 12/12/2023
+              ns_direction: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              principal_meridian: Lorem Ipsum
+              reference_plan_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              section_type: Lorem Ipsum
+              source: Lorem Ipsum
+              spatial_description_id: Lorem Ipsum
+              spot_code: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sp_parcel_congress
+    description: Create a new sp_parcel_congress data
+    requestBody:
+      required: true
+      description: Request body to create sp_parcel_congress data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_congress'
+          example:
+            parcel_congress_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            congress_range: 0.1
+            congress_section: 0.1
+            congress_section_suffix: y
+            congress_township: 0.1
+            congress_twp_name: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            ew_direction: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ns_direction: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            section_type: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            spot_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_congress data is added
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_congress data was successfully added
+/sp-parcel-congress/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sp_parcel_congress data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sp_parcel_congress data
+    description: Update a new sp_parcel_congress data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_congress data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_congress'
+          example:
+            parcel_congress_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            congress_range: 0.1
+            congress_section: 0.1
+            congress_section_suffix: y
+            congress_township: 0.1
+            congress_twp_name: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            ew_direction: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ns_direction: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            section_type: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            spot_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_congress data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_congress data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sp_parcel_congress data
+    description: Update a new sp_parcel_congress data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_congress data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_congress'
+          example:
+            parcel_congress_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            congress_range: 0.1
+            congress_section: 0.1
+            congress_section_suffix: y
+            congress_township: 0.1
+            congress_twp_name: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            ew_direction: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ns_direction: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            section_type: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            spot_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sp_parcel_congress data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sp_parcel_congress data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sp_parcel_congress data
+    description: Delete sp_parcel_congress data
+    responses:
+      '200':
+        description: sp_parcel_congress data is deleted
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_congress data was successfully deleted

@@ -1,0 +1,221 @@
+/anl-oil-viscosity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_oil_viscosity
+    responses:
+      '200':
+        description: get anl_oil_viscosity data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              oil_temperature: 0.1
+              oil_temperature_ouom: Lorem Ipsum
+              oil_type: Lorem Ipsum
+              oil_viscosity: 0.1
+              oil_viscosity_ouom: Lorem Ipsum
+              oil_viscosity_uom: Lorem Ipsum
+              pour_point_temperature: 0.1
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              viscosity_press: 0.1
+              viscosity_press_ouom: Lorem Ipsum
+              viscosity_temp: 0.1
+              viscosity_temp_ouom: Lorem Ipsum
+              viscosity_value: 0.1
+              viscosity_value_ouom: Lorem Ipsum
+              viscosity_value_uom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_oil_viscosity
+    description: Create a new anl_oil_viscosity data
+    requestBody:
+      required: true
+      description: Request body to create anl_oil_viscosity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_viscosity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            oil_temperature: 0.1
+            oil_temperature_ouom: Lorem Ipsum
+            oil_type: Lorem Ipsum
+            oil_viscosity: 0.1
+            oil_viscosity_ouom: Lorem Ipsum
+            oil_viscosity_uom: Lorem Ipsum
+            pour_point_temperature: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            viscosity_press: 0.1
+            viscosity_press_ouom: Lorem Ipsum
+            viscosity_temp: 0.1
+            viscosity_temp_ouom: Lorem Ipsum
+            viscosity_value: 0.1
+            viscosity_value_ouom: Lorem Ipsum
+            viscosity_value_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_oil_viscosity data is added
+        content:
+          application/json:
+            example:
+              message: The anl_oil_viscosity data was successfully added
+/anl-oil-viscosity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_oil_viscosity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_oil_viscosity data
+    description: Update a new anl_oil_viscosity data
+    requestBody:
+      required: true
+      description: Request body to update anl_oil_viscosity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_viscosity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            oil_temperature: 0.1
+            oil_temperature_ouom: Lorem Ipsum
+            oil_type: Lorem Ipsum
+            oil_viscosity: 0.1
+            oil_viscosity_ouom: Lorem Ipsum
+            oil_viscosity_uom: Lorem Ipsum
+            pour_point_temperature: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            viscosity_press: 0.1
+            viscosity_press_ouom: Lorem Ipsum
+            viscosity_temp: 0.1
+            viscosity_temp_ouom: Lorem Ipsum
+            viscosity_value: 0.1
+            viscosity_value_ouom: Lorem Ipsum
+            viscosity_value_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_oil_viscosity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_oil_viscosity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_oil_viscosity data
+    description: Update a new anl_oil_viscosity data
+    requestBody:
+      required: true
+      description: Request body to update anl_oil_viscosity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_oil_viscosity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            oil_temperature: 0.1
+            oil_temperature_ouom: Lorem Ipsum
+            oil_type: Lorem Ipsum
+            oil_viscosity: 0.1
+            oil_viscosity_ouom: Lorem Ipsum
+            oil_viscosity_uom: Lorem Ipsum
+            pour_point_temperature: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            viscosity_press: 0.1
+            viscosity_press_ouom: Lorem Ipsum
+            viscosity_temp: 0.1
+            viscosity_temp_ouom: Lorem Ipsum
+            viscosity_value: 0.1
+            viscosity_value_ouom: Lorem Ipsum
+            viscosity_value_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_oil_viscosity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_oil_viscosity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_oil_viscosity data
+    description: Delete anl_oil_viscosity data
+    responses:
+      '200':
+        description: anl_oil_viscosity data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_oil_viscosity data was successfully deleted

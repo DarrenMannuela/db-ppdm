@@ -1,0 +1,193 @@
+/ppdm-unit-conversion:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_unit_conversion
+    responses:
+      '200':
+        description: get ppdm_unit_conversion data to be returned
+        content:
+          application/json:
+            example:
+            - from_uom_id: Lorem Ipsum
+              to_uom_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              exact_conversion_ind: y
+              expiry_date: 12/12/2023
+              factor_denominator: 1.0
+              factor_numerator: 1.0
+              post_offset: 1.0
+              ppdm_guid: Lorem Ipsum
+              pre_offset: 1.0
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              unit_expression: 1.0
+              unit_quantity_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_unit_conversion
+    description: Create a new ppdm_unit_conversion data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_unit_conversion data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_unit_conversion'
+          example:
+            from_uom_id: Lorem Ipsum
+            to_uom_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            exact_conversion_ind: y
+            expiry_date: 12/12/2023
+            factor_denominator: 1.0
+            factor_numerator: 1.0
+            post_offset: 1.0
+            ppdm_guid: Lorem Ipsum
+            pre_offset: 1.0
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            unit_expression: 1.0
+            unit_quantity_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_unit_conversion data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_unit_conversion data was successfully added
+/ppdm-unit-conversion/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_unit_conversion data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_unit_conversion data
+    description: Update a new ppdm_unit_conversion data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_unit_conversion data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_unit_conversion'
+          example:
+            from_uom_id: Lorem Ipsum
+            to_uom_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            exact_conversion_ind: y
+            expiry_date: 12/12/2023
+            factor_denominator: 1.0
+            factor_numerator: 1.0
+            post_offset: 1.0
+            ppdm_guid: Lorem Ipsum
+            pre_offset: 1.0
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            unit_expression: 1.0
+            unit_quantity_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_unit_conversion data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_unit_conversion data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_unit_conversion data
+    description: Update a new ppdm_unit_conversion data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_unit_conversion data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_unit_conversion'
+          example:
+            from_uom_id: Lorem Ipsum
+            to_uom_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            exact_conversion_ind: y
+            expiry_date: 12/12/2023
+            factor_denominator: 1.0
+            factor_numerator: 1.0
+            post_offset: 1.0
+            ppdm_guid: Lorem Ipsum
+            pre_offset: 1.0
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            unit_expression: 1.0
+            unit_quantity_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_unit_conversion data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_unit_conversion data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_unit_conversion data
+    description: Delete ppdm_unit_conversion data
+    responses:
+      '200':
+        description: ppdm_unit_conversion data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_unit_conversion data was successfully deleted

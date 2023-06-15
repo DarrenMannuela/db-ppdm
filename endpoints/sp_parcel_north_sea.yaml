@@ -1,0 +1,201 @@
+/sp-parcel-north-sea:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sp_parcel_north_sea
+    responses:
+      '200':
+        description: get sp_parcel_north_sea data to be returned
+        content:
+          application/json:
+            example:
+            - parcel_north_sea_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              block_suffix: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              principal_meridian: Lorem Ipsum
+              quadrant: 1.0
+              quadrant_prefix: Lorem Ipsum
+              reference_plan_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              spatial_description_id: Lorem Ipsum
+              subdivision: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sp_parcel_north_sea
+    description: Create a new sp_parcel_north_sea data
+    requestBody:
+      required: true
+      description: Request body to create sp_parcel_north_sea data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_north_sea'
+          example:
+            parcel_north_sea_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            block_suffix: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            quadrant: 1.0
+            quadrant_prefix: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            subdivision: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_north_sea data is added
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_north_sea data was successfully added
+/sp-parcel-north-sea/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sp_parcel_north_sea data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sp_parcel_north_sea data
+    description: Update a new sp_parcel_north_sea data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_north_sea data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_north_sea'
+          example:
+            parcel_north_sea_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            block_suffix: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            quadrant: 1.0
+            quadrant_prefix: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            subdivision: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_north_sea data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_north_sea data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sp_parcel_north_sea data
+    description: Update a new sp_parcel_north_sea data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_north_sea data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_north_sea'
+          example:
+            parcel_north_sea_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            block_suffix: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            quadrant: 1.0
+            quadrant_prefix: Lorem Ipsum
+            reference_plan_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spatial_description_id: Lorem Ipsum
+            subdivision: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sp_parcel_north_sea data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sp_parcel_north_sea data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sp_parcel_north_sea data
+    description: Delete sp_parcel_north_sea data
+    responses:
+      '200':
+        description: sp_parcel_north_sea data is deleted
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_north_sea data was successfully deleted

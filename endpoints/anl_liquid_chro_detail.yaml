@@ -1,0 +1,245 @@
+/anl-liquid-chro-detail:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_liquid_chro_detail
+    responses:
+      '200':
+        description: get anl_liquid_chro_detail data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              anl_value: 0.1
+              anl_value_ouom: Lorem Ipsum
+              anl_value_remark: Lorem Ipsum
+              anl_value_uom: Lorem Ipsum
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              chro_property_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              error_bar_value: 0.1
+              error_bar_value_ouom: Lorem Ipsum
+              error_bar_value_uom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              measured_ind: y
+              measurement_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              quantif_additive_amt: 0.1
+              quantif_additive_amt_ouom: Lorem Ipsum
+              quantif_additive_amt_uom: Lorem Ipsum
+              quantif_additive_desc: Lorem Ipsum
+              quantif_additive_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_liquid_chro_detail
+    description: Create a new anl_liquid_chro_detail data
+    requestBody:
+      required: true
+      description: Request body to create anl_liquid_chro_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_liquid_chro_detail'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            anl_value: 0.1
+            anl_value_ouom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            anl_value_uom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            chro_property_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            error_bar_value: 0.1
+            error_bar_value_ouom: Lorem Ipsum
+            error_bar_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            measured_ind: y
+            measurement_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            quantif_additive_amt: 0.1
+            quantif_additive_amt_ouom: Lorem Ipsum
+            quantif_additive_amt_uom: Lorem Ipsum
+            quantif_additive_desc: Lorem Ipsum
+            quantif_additive_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_liquid_chro_detail data is added
+        content:
+          application/json:
+            example:
+              message: The anl_liquid_chro_detail data was successfully added
+/anl-liquid-chro-detail/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_liquid_chro_detail data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_liquid_chro_detail data
+    description: Update a new anl_liquid_chro_detail data
+    requestBody:
+      required: true
+      description: Request body to update anl_liquid_chro_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_liquid_chro_detail'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            anl_value: 0.1
+            anl_value_ouom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            anl_value_uom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            chro_property_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            error_bar_value: 0.1
+            error_bar_value_ouom: Lorem Ipsum
+            error_bar_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            measured_ind: y
+            measurement_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            quantif_additive_amt: 0.1
+            quantif_additive_amt_ouom: Lorem Ipsum
+            quantif_additive_amt_uom: Lorem Ipsum
+            quantif_additive_desc: Lorem Ipsum
+            quantif_additive_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_liquid_chro_detail data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_liquid_chro_detail data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_liquid_chro_detail data
+    description: Update a new anl_liquid_chro_detail data
+    requestBody:
+      required: true
+      description: Request body to update anl_liquid_chro_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_liquid_chro_detail'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            anl_value: 0.1
+            anl_value_ouom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            anl_value_uom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            chro_property_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            error_bar_value: 0.1
+            error_bar_value_ouom: Lorem Ipsum
+            error_bar_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            measured_ind: y
+            measurement_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            quantif_additive_amt: 0.1
+            quantif_additive_amt_ouom: Lorem Ipsum
+            quantif_additive_amt_uom: Lorem Ipsum
+            quantif_additive_desc: Lorem Ipsum
+            quantif_additive_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_liquid_chro_detail data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_liquid_chro_detail data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_liquid_chro_detail data
+    description: Delete anl_liquid_chro_detail data
+    responses:
+      '200':
+        description: anl_liquid_chro_detail data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_liquid_chro_detail data was successfully deleted

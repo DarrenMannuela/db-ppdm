@@ -1,0 +1,44 @@
+package dto
+
+type Seis_pick struct {
+	Seis_set_subtype       string   `json:"seis_set_subtype" default:"source"`
+	Interp_set_id          string   `json:"interp_set_id" default:"source"`
+	Surface_id             string   `json:"surface_id" default:"source"`
+	Seis_pick_id           string   `json:"seis_pick_id" default:"source"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Bin_grid_id            *string  `json:"bin_grid_id" default:""`
+	Bin_point_id           *string  `json:"bin_point_id" default:""`
+	Bin_seis_set_id        *string  `json:"bin_seis_set_id" default:""`
+	Bin_seis_set_subtype   *string  `json:"bin_seis_set_subtype" default:""`
+	Bin_source             *string  `json:"bin_source" default:""`
+	Date_format_desc       *string  `json:"date_format_desc" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Interp_type            *string  `json:"interp_type" default:""`
+	Pick_depth             *float64 `json:"pick_depth" default:""`
+	Pick_depth_ouom        *string  `json:"pick_depth_ouom" default:""`
+	Pick_description       *string  `json:"pick_description" default:""`
+	Pick_method            *string  `json:"pick_method" default:""`
+	Pick_qualifier         *string  `json:"pick_qualifier" default:""`
+	Pick_qualif_reason     *string  `json:"pick_qualif_reason" default:""`
+	Pick_quality           *string  `json:"pick_quality" default:""`
+	Pick_version_type      *string  `json:"pick_version_type" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Preferred_pick_ind     *string  `json:"preferred_pick_ind" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Seis_pick_value        *float64 `json:"seis_pick_value" default:""`
+	Seis_pick_value_ouom   *string  `json:"seis_pick_value_ouom" default:""`
+	Seis_pick_value_uom    *string  `json:"seis_pick_value_uom" default:""`
+	Seis_point_id          *string  `json:"seis_point_id" default:""`
+	Seis_point_set_id      *string  `json:"seis_point_set_id" default:""`
+	Seis_point_set_subtype *string  `json:"seis_point_set_subtype" default:""`
+	Source                 *string  `json:"source" default:""`
+	Trace_id               *string  `json:"trace_id" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

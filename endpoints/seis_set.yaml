@@ -1,0 +1,233 @@
+/seis-set:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_set
+    responses:
+      '200':
+        description: get seis_set data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              acqtn_design_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_size: 0.1
+              area_size_ouom: Lorem Ipsum
+              area_type: Lorem Ipsum
+              coord_acquisition_id: Lorem Ipsum
+              current_seis_status: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              finance_id: Lorem Ipsum
+              geographic_coord_system_id: Lorem Ipsum
+              local_coord_system_id: Lorem Ipsum
+              max_latitude: 0.1
+              max_longitude: 0.1
+              min_latitude: 0.1
+              min_longitude: 0.1
+              ppdm_guid: Lorem Ipsum
+              preferred_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              xy_coord_system_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_set
+    description: Create a new seis_set data
+    requestBody:
+      required: true
+      description: Request body to create seis_set data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_set'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            acqtn_design_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            area_type: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            current_seis_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_id: Lorem Ipsum
+            geographic_coord_system_id: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            min_latitude: 0.1
+            min_longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            xy_coord_system_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_set data is added
+        content:
+          application/json:
+            example:
+              message: The seis_set data was successfully added
+/seis-set/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_set data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_set data
+    description: Update a new seis_set data
+    requestBody:
+      required: true
+      description: Request body to update seis_set data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_set'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            acqtn_design_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            area_type: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            current_seis_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_id: Lorem Ipsum
+            geographic_coord_system_id: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            min_latitude: 0.1
+            min_longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            xy_coord_system_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_set data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_set data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_set data
+    description: Update a new seis_set data
+    requestBody:
+      required: true
+      description: Request body to update seis_set data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_set'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            acqtn_design_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            area_type: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            current_seis_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_id: Lorem Ipsum
+            geographic_coord_system_id: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            min_latitude: 0.1
+            min_longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            xy_coord_system_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_set data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_set data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_set data
+    description: Delete seis_set data
+    responses:
+      '200':
+        description: seis_set data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_set data was successfully deleted

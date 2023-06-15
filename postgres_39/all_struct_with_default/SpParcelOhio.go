@@ -1,0 +1,44 @@
+package dto
+
+type Sp_parcel_ohio struct {
+	Parcel_ohio_id             string   `json:"parcel_ohio_id" default:"source"`
+	Active_ind                 *string  `json:"active_ind" default:""`
+	Area_id                    *string  `json:"area_id" default:""`
+	Area_type                  *string  `json:"area_type" default:""`
+	Coord_system_id            *string  `json:"coord_system_id" default:""`
+	Description                *string  `json:"description" default:""`
+	Effective_date             *string  `json:"effective_date" default:""`
+	Expiry_date                *string  `json:"expiry_date" default:""`
+	Jurisdiction               *string  `json:"jurisdiction" default:""`
+	Map_quad_min               *float64 `json:"map_quad_min" default:""`
+	Map_quad_name              *string  `json:"map_quad_name" default:""`
+	Ohio_allotment             *string  `json:"ohio_allotment" default:""`
+	Ohio_division              *string  `json:"ohio_division" default:""`
+	Ohio_fraction              *string  `json:"ohio_fraction" default:""`
+	Ohio_land_subdivision_name *string  `json:"ohio_land_subdivision_name" default:""`
+	Ohio_other_subdivision     *string  `json:"ohio_other_subdivision" default:""`
+	Ohio_quarter_township      *string  `json:"ohio_quarter_township" default:""`
+	Ohio_range                 *float64 `json:"ohio_range" default:""`
+	Ohio_range_dir             *string  `json:"ohio_range_dir" default:""`
+	Ohio_township              *float64 `json:"ohio_township" default:""`
+	Ohio_township_dir          *string  `json:"ohio_township_dir" default:""`
+	Ohio_township_name         *string  `json:"ohio_township_name" default:""`
+	Ohio_tract                 *string  `json:"ohio_tract" default:""`
+	Ohio_twp_lot_code          *string  `json:"ohio_twp_lot_code" default:""`
+	Ohio_twp_section_code      *string  `json:"ohio_twp_section_code" default:""`
+	Ppdm_guid                  *string  `json:"ppdm_guid" default:""`
+	Principal_meridian         *string  `json:"principal_meridian" default:""`
+	Reference_plan_num         *string  `json:"reference_plan_num" default:""`
+	Remark                     *string  `json:"remark" default:""`
+	Source                     *string  `json:"source" default:""`
+	Spatial_description_id     *string  `json:"spatial_description_id" default:""`
+	Spatial_obs_no             *int     `json:"spatial_obs_no" default:""`
+	Spot_code                  *string  `json:"spot_code" default:""`
+	Row_changed_by             *string  `json:"row_changed_by" default:""`
+	Row_changed_date           *string  `json:"row_changed_date" default:""`
+	Row_created_by             *string  `json:"row_created_by" default:""`
+	Row_created_date           *string  `json:"row_created_date" default:""`
+	Row_effective_date         *string  `json:"row_effective_date" default:""`
+	Row_expiry_date            *string  `json:"row_expiry_date" default:""`
+	Row_quality                *string  `json:"row_quality" default:""`
+}

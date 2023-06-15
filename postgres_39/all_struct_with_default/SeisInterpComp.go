@@ -1,0 +1,43 @@
+package dto
+
+type Seis_interp_comp struct {
+	Seis_set_subtype      string   `json:"seis_set_subtype" default:"source"`
+	Interp_set_id         string   `json:"interp_set_id" default:"source"`
+	Component_id          string   `json:"component_id" default:"source"`
+	Active_ind            *string  `json:"active_ind" default:""`
+	Area_id               *string  `json:"area_id" default:""`
+	Area_type             *string  `json:"area_type" default:""`
+	Coord_acquisition_id  *string  `json:"coord_acquisition_id" default:""`
+	Coord_system_id       *string  `json:"coord_system_id" default:""`
+	Corner1_lat           *float64 `json:"corner_1_lat" default:""`
+	Corner1_long          *float64 `json:"corner_1_long" default:""`
+	Corner2_lat           *float64 `json:"corner_2_lat" default:""`
+	Corner2_long          *float64 `json:"corner_2_long" default:""`
+	Corner3_lat           *float64 `json:"corner_3_lat" default:""`
+	Corner3_long          *float64 `json:"corner_3_long" default:""`
+	Data_sample_size      *float64 `json:"data_sample_size" default:""`
+	Effective_date        *string  `json:"effective_date" default:""`
+	Expiry_date           *string  `json:"expiry_date" default:""`
+	Information_item_id   *string  `json:"information_item_id" default:""`
+	Info_item_subtype     *string  `json:"info_item_subtype" default:""`
+	Input_ind             *string  `json:"input_ind" default:""`
+	Local_coord_system_id *string  `json:"local_coord_system_id" default:""`
+	Origin_type           *string  `json:"origin_type" default:""`
+	Output_ind            *string  `json:"output_ind" default:""`
+	Ppdm_guid             *string  `json:"ppdm_guid" default:""`
+	Process_step_id       *string  `json:"process_step_id" default:""`
+	Proc_component_id     *string  `json:"proc_component_id" default:""`
+	Proc_set_id           *string  `json:"proc_set_id" default:""`
+	Proc_set_subtype      *string  `json:"proc_set_subtype" default:""`
+	Remark                *string  `json:"remark" default:""`
+	Source                *string  `json:"source" default:""`
+	Uwi                   *string  `json:"uwi" default:""`
+	Velocity_volume_id    *string  `json:"velocity_volume_id" default:""`
+	Row_changed_by        *string  `json:"row_changed_by" default:""`
+	Row_changed_date      *string  `json:"row_changed_date" default:""`
+	Row_created_by        *string  `json:"row_created_by" default:""`
+	Row_created_date      *string  `json:"row_created_date" default:""`
+	Row_effective_date    *string  `json:"row_effective_date" default:""`
+	Row_expiry_date       *string  `json:"row_expiry_date" default:""`
+	Row_quality           *string  `json:"row_quality" default:""`
+}

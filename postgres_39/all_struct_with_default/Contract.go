@@ -1,0 +1,47 @@
+package dto
+
+type Contract struct {
+	Contract_id                string   `json:"contract_id" default:"source"`
+	Active_ind                 *string  `json:"active_ind" default:""`
+	Ami_aoe_ind                *string  `json:"ami_aoe_ind" default:""`
+	Area_id                    *string  `json:"area_id" default:""`
+	Area_type                  *string  `json:"area_type" default:""`
+	Assignment_proc_ind        *string  `json:"assignment_proc_ind" default:""`
+	Casing_point_election      *string  `json:"casing_point_election" default:""`
+	Closing_date               *string  `json:"closing_date" default:""`
+	Confidential_ind           *string  `json:"confidential_ind" default:""`
+	Contract_name              *string  `json:"contract_name" default:""`
+	Contract_num               *string  `json:"contract_num" default:""`
+	Currency_conversion        *float64 `json:"currency_conversion" default:""`
+	Currency_ouom              *string  `json:"currency_ouom" default:""`
+	Effective_date             *string  `json:"effective_date" default:""`
+	Expiry_date                *string  `json:"expiry_date" default:""`
+	Extension_condition        *string  `json:"extension_condition" default:""`
+	Governing_contract_ind     *string  `json:"governing_contract_ind" default:""`
+	Liability_period           *float64 `json:"liability_period" default:""`
+	Liability_period_ouom      *string  `json:"liability_period_ouom" default:""`
+	Liability_release_date     *string  `json:"liability_release_date" default:""`
+	Nat_currency_conversion    *float64 `json:"nat_currency_conversion" default:""`
+	Nat_currency_uom           *string  `json:"nat_currency_uom" default:""`
+	Operating_proc_ind         *string  `json:"operating_proc_ind" default:""`
+	Ppdm_guid                  *string  `json:"ppdm_guid" default:""`
+	Primary_term               *float64 `json:"primary_term" default:""`
+	Primary_term_ouom          *string  `json:"primary_term_ouom" default:""`
+	Remark                     *string  `json:"remark" default:""`
+	Rofr_ind                   *string  `json:"rofr_ind" default:""`
+	Secondary_term             *float64 `json:"secondary_term" default:""`
+	Secondary_term_ouom        *string  `json:"secondary_term_ouom" default:""`
+	Source                     *string  `json:"source" default:""`
+	Source_document            *string  `json:"source_document" default:""`
+	Surrender_notice_term      *float64 `json:"surrender_notice_term" default:""`
+	Surrender_notice_term_ouom *string  `json:"surrender_notice_term_ouom" default:""`
+	Termination_date           *string  `json:"termination_date" default:""`
+	Voting_proc_ind            *string  `json:"voting_proc_ind" default:""`
+	Row_changed_by             *string  `json:"row_changed_by" default:""`
+	Row_changed_date           *string  `json:"row_changed_date" default:""`
+	Row_created_by             *string  `json:"row_created_by" default:""`
+	Row_created_date           *string  `json:"row_created_date" default:""`
+	Row_effective_date         *string  `json:"row_effective_date" default:""`
+	Row_expiry_date            *string  `json:"row_expiry_date" default:""`
+	Row_quality                *string  `json:"row_quality" default:""`
+}

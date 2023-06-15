@@ -1,0 +1,205 @@
+/hse-incident:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get hse_incident
+    responses:
+      '200':
+        description: get hse_incident data to be returned
+        content:
+          application/json:
+            example:
+            - incident_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              incident_class_id: Lorem Ipsum
+              incident_date: 12/12/2023
+              incident_duration: 0.1
+              incident_duration_ouom: Lorem Ipsum
+              incident_duration_uom: Lorem Ipsum
+              lost_time_ind: y
+              ppdm_guid: Lorem Ipsum
+              recorded_time: 12/12/2023
+              recorded_timezone: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_by_ba_id: Lorem Ipsum
+              reported_by_name: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              work_related_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new hse_incident
+    description: Create a new hse_incident data
+    requestBody:
+      required: true
+      description: Request body to create hse_incident data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident'
+          example:
+            incident_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            incident_class_id: Lorem Ipsum
+            incident_date: 12/12/2023
+            incident_duration: 0.1
+            incident_duration_ouom: Lorem Ipsum
+            incident_duration_uom: Lorem Ipsum
+            lost_time_ind: y
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_by_ba_id: Lorem Ipsum
+            reported_by_name: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            work_related_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: hse_incident data is added
+        content:
+          application/json:
+            example:
+              message: The hse_incident data was successfully added
+/hse-incident/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of hse_incident data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new hse_incident data
+    description: Update a new hse_incident data
+    requestBody:
+      required: true
+      description: Request body to update hse_incident data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident'
+          example:
+            incident_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            incident_class_id: Lorem Ipsum
+            incident_date: 12/12/2023
+            incident_duration: 0.1
+            incident_duration_ouom: Lorem Ipsum
+            incident_duration_uom: Lorem Ipsum
+            lost_time_ind: y
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_by_ba_id: Lorem Ipsum
+            reported_by_name: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            work_related_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: hse_incident data is completely updated
+        content:
+          application/json:
+            example:
+              message: The hse_incident data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new hse_incident data
+    description: Update a new hse_incident data
+    requestBody:
+      required: true
+      description: Request body to update hse_incident data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident'
+          example:
+            incident_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            incident_class_id: Lorem Ipsum
+            incident_date: 12/12/2023
+            incident_duration: 0.1
+            incident_duration_ouom: Lorem Ipsum
+            incident_duration_uom: Lorem Ipsum
+            lost_time_ind: y
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_by_ba_id: Lorem Ipsum
+            reported_by_name: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            work_related_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in hse_incident data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in hse_incident data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete hse_incident data
+    description: Delete hse_incident data
+    responses:
+      '200':
+        description: hse_incident data is deleted
+        content:
+          application/json:
+            example:
+              message: The hse_incident data was successfully deleted

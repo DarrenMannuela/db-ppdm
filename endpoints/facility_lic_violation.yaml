@@ -1,0 +1,197 @@
+/facility-lic-violation:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get facility_lic_violation
+    responses:
+      '200':
+        description: get facility_lic_violation data to be returned
+        content:
+          application/json:
+            example:
+            - license_id: Lorem Ipsum
+              facility_type: Lorem Ipsum
+              facility_id: Lorem Ipsum
+              violation_id: Lorem Ipsum
+              active_ind: y
+              condition_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              resolve_date: 12/12/2023
+              resolve_desc: Lorem Ipsum
+              resolve_type: Lorem Ipsum
+              source: Lorem Ipsum
+              violation_date: 12/12/2023
+              violation_desc: Lorem Ipsum
+              violation_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new facility_lic_violation
+    description: Create a new facility_lic_violation data
+    requestBody:
+      required: true
+      description: Request body to create facility_lic_violation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_lic_violation'
+          example:
+            license_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            facility_id: Lorem Ipsum
+            violation_id: Lorem Ipsum
+            active_ind: y
+            condition_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolve_date: 12/12/2023
+            resolve_desc: Lorem Ipsum
+            resolve_type: Lorem Ipsum
+            source: Lorem Ipsum
+            violation_date: 12/12/2023
+            violation_desc: Lorem Ipsum
+            violation_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility_lic_violation data is added
+        content:
+          application/json:
+            example:
+              message: The facility_lic_violation data was successfully added
+/facility-lic-violation/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of facility_lic_violation data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new facility_lic_violation data
+    description: Update a new facility_lic_violation data
+    requestBody:
+      required: true
+      description: Request body to update facility_lic_violation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_lic_violation'
+          example:
+            license_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            facility_id: Lorem Ipsum
+            violation_id: Lorem Ipsum
+            active_ind: y
+            condition_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolve_date: 12/12/2023
+            resolve_desc: Lorem Ipsum
+            resolve_type: Lorem Ipsum
+            source: Lorem Ipsum
+            violation_date: 12/12/2023
+            violation_desc: Lorem Ipsum
+            violation_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility_lic_violation data is completely updated
+        content:
+          application/json:
+            example:
+              message: The facility_lic_violation data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new facility_lic_violation data
+    description: Update a new facility_lic_violation data
+    requestBody:
+      required: true
+      description: Request body to update facility_lic_violation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_lic_violation'
+          example:
+            license_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            facility_id: Lorem Ipsum
+            violation_id: Lorem Ipsum
+            active_ind: y
+            condition_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolve_date: 12/12/2023
+            resolve_desc: Lorem Ipsum
+            resolve_type: Lorem Ipsum
+            source: Lorem Ipsum
+            violation_date: 12/12/2023
+            violation_desc: Lorem Ipsum
+            violation_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in facility_lic_violation data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in facility_lic_violation data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete facility_lic_violation data
+    description: Delete facility_lic_violation data
+    responses:
+      '200':
+        description: facility_lic_violation data is deleted
+        content:
+          application/json:
+            example:
+              message: The facility_lic_violation data was successfully deleted

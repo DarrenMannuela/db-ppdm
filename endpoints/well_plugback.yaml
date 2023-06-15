@@ -1,0 +1,225 @@
+/well-plugback:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_plugback
+    responses:
+      '200':
+        description: get well_plugback data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              cement_amount: 0.1
+              cement_amount_ouom: Lorem Ipsum
+              cement_amount_uom: Lorem Ipsum
+              completion_source: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              plugback_ba_id: Lorem Ipsum
+              plugback_date: 12/12/2023
+              plug_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              surface_abandon_date: 12/12/2023
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_found_depth: 0.1
+              top_found_depth_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_plugback
+    description: Create a new well_plugback data
+    requestBody:
+      required: true
+      description: Request body to create well_plugback data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_plugback'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            cement_amount: 0.1
+            cement_amount_ouom: Lorem Ipsum
+            cement_amount_uom: Lorem Ipsum
+            completion_source: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            plugback_ba_id: Lorem Ipsum
+            plugback_date: 12/12/2023
+            plug_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            surface_abandon_date: 12/12/2023
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_found_depth: 0.1
+            top_found_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_plugback data is added
+        content:
+          application/json:
+            example:
+              message: The well_plugback data was successfully added
+/well-plugback/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_plugback data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_plugback data
+    description: Update a new well_plugback data
+    requestBody:
+      required: true
+      description: Request body to update well_plugback data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_plugback'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            cement_amount: 0.1
+            cement_amount_ouom: Lorem Ipsum
+            cement_amount_uom: Lorem Ipsum
+            completion_source: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            plugback_ba_id: Lorem Ipsum
+            plugback_date: 12/12/2023
+            plug_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            surface_abandon_date: 12/12/2023
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_found_depth: 0.1
+            top_found_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_plugback data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_plugback data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_plugback data
+    description: Update a new well_plugback data
+    requestBody:
+      required: true
+      description: Request body to update well_plugback data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_plugback'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            cement_amount: 0.1
+            cement_amount_ouom: Lorem Ipsum
+            cement_amount_uom: Lorem Ipsum
+            completion_source: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            plugback_ba_id: Lorem Ipsum
+            plugback_date: 12/12/2023
+            plug_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            surface_abandon_date: 12/12/2023
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_found_depth: 0.1
+            top_found_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_plugback data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_plugback data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_plugback data
+    description: Delete well_plugback data
+    responses:
+      '200':
+        description: well_plugback data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_plugback data was successfully deleted

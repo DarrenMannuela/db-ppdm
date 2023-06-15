@@ -1,0 +1,173 @@
+/anl-analysis-batch:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_analysis_batch
+    responses:
+      '200':
+        description: get anl_analysis_batch data to be returned
+        content:
+          application/json:
+            example:
+            - batch_id: Lorem Ipsum
+              active_ind: y
+              batch_desc: Lorem Ipsum
+              batch_name: Lorem Ipsum
+              batch_ref_num: Lorem Ipsum
+              create_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_analysis_batch
+    description: Create a new anl_analysis_batch data
+    requestBody:
+      required: true
+      description: Request body to create anl_analysis_batch data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_batch'
+          example:
+            batch_id: Lorem Ipsum
+            active_ind: y
+            batch_desc: Lorem Ipsum
+            batch_name: Lorem Ipsum
+            batch_ref_num: Lorem Ipsum
+            create_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_analysis_batch data is added
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_batch data was successfully added
+/anl-analysis-batch/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_analysis_batch data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_analysis_batch data
+    description: Update a new anl_analysis_batch data
+    requestBody:
+      required: true
+      description: Request body to update anl_analysis_batch data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_batch'
+          example:
+            batch_id: Lorem Ipsum
+            active_ind: y
+            batch_desc: Lorem Ipsum
+            batch_name: Lorem Ipsum
+            batch_ref_num: Lorem Ipsum
+            create_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_analysis_batch data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_batch data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_analysis_batch data
+    description: Update a new anl_analysis_batch data
+    requestBody:
+      required: true
+      description: Request body to update anl_analysis_batch data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_batch'
+          example:
+            batch_id: Lorem Ipsum
+            active_ind: y
+            batch_desc: Lorem Ipsum
+            batch_name: Lorem Ipsum
+            batch_ref_num: Lorem Ipsum
+            create_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_analysis_batch data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_analysis_batch data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_analysis_batch data
+    description: Delete anl_analysis_batch data
+    responses:
+      '200':
+        description: anl_analysis_batch data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_batch data was successfully deleted

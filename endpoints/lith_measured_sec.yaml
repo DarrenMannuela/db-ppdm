@@ -1,0 +1,197 @@
+/lith-measured-sec:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_measured_sec
+    responses:
+      '200':
+        description: get lith_measured_sec data to be returned
+        content:
+          application/json:
+            example:
+            - meas_section_id: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              author: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              location_desc: Lorem Ipsum
+              location_qualifier: Lorem Ipsum
+              node_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              publication_reference_text: Lorem Ipsum
+              reference_date: 12/12/2023
+              remark: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_measured_sec
+    description: Create a new lith_measured_sec data
+    requestBody:
+      required: true
+      description: Request body to create lith_measured_sec data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_measured_sec'
+          example:
+            meas_section_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            author: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location_desc: Lorem Ipsum
+            location_qualifier: Lorem Ipsum
+            node_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            publication_reference_text: Lorem Ipsum
+            reference_date: 12/12/2023
+            remark: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_measured_sec data is added
+        content:
+          application/json:
+            example:
+              message: The lith_measured_sec data was successfully added
+/lith-measured-sec/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_measured_sec data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_measured_sec data
+    description: Update a new lith_measured_sec data
+    requestBody:
+      required: true
+      description: Request body to update lith_measured_sec data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_measured_sec'
+          example:
+            meas_section_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            author: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location_desc: Lorem Ipsum
+            location_qualifier: Lorem Ipsum
+            node_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            publication_reference_text: Lorem Ipsum
+            reference_date: 12/12/2023
+            remark: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_measured_sec data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_measured_sec data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_measured_sec data
+    description: Update a new lith_measured_sec data
+    requestBody:
+      required: true
+      description: Request body to update lith_measured_sec data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_measured_sec'
+          example:
+            meas_section_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            author: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location_desc: Lorem Ipsum
+            location_qualifier: Lorem Ipsum
+            node_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            publication_reference_text: Lorem Ipsum
+            reference_date: 12/12/2023
+            remark: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_measured_sec data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_measured_sec data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_measured_sec data
+    description: Delete lith_measured_sec data
+    responses:
+      '200':
+        description: lith_measured_sec data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_measured_sec data was successfully deleted

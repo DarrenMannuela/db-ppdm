@@ -1,0 +1,233 @@
+/resent-eco-schedule:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get resent_eco_schedule
+    responses:
+      '200':
+        description: get resent_eco_schedule data to be returned
+        content:
+          application/json:
+            example:
+            - resent_id: Lorem Ipsum
+              reserve_class_id: Lorem Ipsum
+              economics_run_id: Lorem Ipsum
+              schedule_id: Lorem Ipsum
+              active_ind: y
+              economic_schedule: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              period_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              product_ind: y
+              product_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              schedule_date: 12/12/2023
+              schedule_date_desc: Lorem Ipsum
+              schedule_desc: Lorem Ipsum
+              schedule_value: 0.1
+              schedule_value_ouom: Lorem Ipsum
+              schedule_value_uom: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new resent_eco_schedule
+    description: Create a new resent_eco_schedule data
+    requestBody:
+      required: true
+      description: Request body to create resent_eco_schedule data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_eco_schedule'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            economics_run_id: Lorem Ipsum
+            schedule_id: Lorem Ipsum
+            active_ind: y
+            economic_schedule: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_ind: y
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            schedule_date: 12/12/2023
+            schedule_date_desc: Lorem Ipsum
+            schedule_desc: Lorem Ipsum
+            schedule_value: 0.1
+            schedule_value_ouom: Lorem Ipsum
+            schedule_value_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_eco_schedule data is added
+        content:
+          application/json:
+            example:
+              message: The resent_eco_schedule data was successfully added
+/resent-eco-schedule/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of resent_eco_schedule data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new resent_eco_schedule data
+    description: Update a new resent_eco_schedule data
+    requestBody:
+      required: true
+      description: Request body to update resent_eco_schedule data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_eco_schedule'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            economics_run_id: Lorem Ipsum
+            schedule_id: Lorem Ipsum
+            active_ind: y
+            economic_schedule: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_ind: y
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            schedule_date: 12/12/2023
+            schedule_date_desc: Lorem Ipsum
+            schedule_desc: Lorem Ipsum
+            schedule_value: 0.1
+            schedule_value_ouom: Lorem Ipsum
+            schedule_value_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_eco_schedule data is completely updated
+        content:
+          application/json:
+            example:
+              message: The resent_eco_schedule data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new resent_eco_schedule data
+    description: Update a new resent_eco_schedule data
+    requestBody:
+      required: true
+      description: Request body to update resent_eco_schedule data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_eco_schedule'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            economics_run_id: Lorem Ipsum
+            schedule_id: Lorem Ipsum
+            active_ind: y
+            economic_schedule: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_ind: y
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            schedule_date: 12/12/2023
+            schedule_date_desc: Lorem Ipsum
+            schedule_desc: Lorem Ipsum
+            schedule_value: 0.1
+            schedule_value_ouom: Lorem Ipsum
+            schedule_value_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in resent_eco_schedule data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in resent_eco_schedule data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete resent_eco_schedule data
+    description: Delete resent_eco_schedule data
+    responses:
+      '200':
+        description: resent_eco_schedule data is deleted
+        content:
+          application/json:
+            example:
+              message: The resent_eco_schedule data was successfully deleted

@@ -1,0 +1,269 @@
+/prod-string:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get prod_string
+    responses:
+      '200':
+        description: get prod_string data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              string_id: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              commingled_ind: y
+              current_status: Lorem Ipsum
+              current_status_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              facility_id: Lorem Ipsum
+              facility_type: Lorem Ipsum
+              field_id: Lorem Ipsum
+              government_string_id: Lorem Ipsum
+              lease_unit_id: Lorem Ipsum
+              on_injection_date: 12/12/2023
+              on_production_date: 12/12/2023
+              plot_symbol: Lorem Ipsum
+              pool_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              prod_string_tvd: 0.1
+              prod_string_tvd_ouom: Lorem Ipsum
+              prod_string_type: Lorem Ipsum
+              profile_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              status_type: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              tax_credit_code: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              total_depth: 0.1
+              total_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new prod_string
+    description: Create a new prod_string data
+    requestBody:
+      required: true
+      description: Request body to create prod_string data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_string'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            commingled_ind: y
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            government_string_id: Lorem Ipsum
+            lease_unit_id: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            plot_symbol: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_tvd: 0.1
+            prod_string_tvd_ouom: Lorem Ipsum
+            prod_string_type: Lorem Ipsum
+            profile_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            status_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            total_depth: 0.1
+            total_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_string data is added
+        content:
+          application/json:
+            example:
+              message: The prod_string data was successfully added
+/prod-string/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of prod_string data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new prod_string data
+    description: Update a new prod_string data
+    requestBody:
+      required: true
+      description: Request body to update prod_string data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_string'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            commingled_ind: y
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            government_string_id: Lorem Ipsum
+            lease_unit_id: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            plot_symbol: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_tvd: 0.1
+            prod_string_tvd_ouom: Lorem Ipsum
+            prod_string_type: Lorem Ipsum
+            profile_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            status_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            total_depth: 0.1
+            total_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_string data is completely updated
+        content:
+          application/json:
+            example:
+              message: The prod_string data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new prod_string data
+    description: Update a new prod_string data
+    requestBody:
+      required: true
+      description: Request body to update prod_string data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_string'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            commingled_ind: y
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            government_string_id: Lorem Ipsum
+            lease_unit_id: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            plot_symbol: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_tvd: 0.1
+            prod_string_tvd_ouom: Lorem Ipsum
+            prod_string_type: Lorem Ipsum
+            profile_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            status_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            total_depth: 0.1
+            total_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in prod_string data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in prod_string data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete prod_string data
+    description: Delete prod_string data
+    responses:
+      '200':
+        description: prod_string data is deleted
+        content:
+          application/json:
+            example:
+              message: The prod_string data was successfully deleted

@@ -1,0 +1,273 @@
+/resent-vol-summary:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get resent_vol_summary
+    responses:
+      '200':
+        description: get resent_vol_summary data to be returned
+        content:
+          application/json:
+            example:
+            - resent_id: Lorem Ipsum
+              reserve_class_id: Lorem Ipsum
+              product_type: Lorem Ipsum
+              summary_id: Lorem Ipsum
+              active_ind: y
+              analyst_ba_id: Lorem Ipsum
+              approved_by_ba_id: Lorem Ipsum
+              approved_date: 12/12/2023
+              created_date: 12/12/2023
+              created_date_desc: Lorem Ipsum
+              current_balance: 0.1
+              current_balance_ouom: Lorem Ipsum
+              current_balance_uom: Lorem Ipsum
+              decline_case_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              gross_summary_ind: y
+              material_balance_case_id: Lorem Ipsum
+              net_summary_ind: y
+              open_balance: 0.1
+              open_balance_ouom: Lorem Ipsum
+              open_balance_uom: Lorem Ipsum
+              pden_id: Lorem Ipsum
+              pden_product_type: Lorem Ipsum
+              pden_source: Lorem Ipsum
+              pden_subtype: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              report_ind: y
+              source: Lorem Ipsum
+              volume_method: Lorem Ipsum
+              vol_anal_case_id: Lorem Ipsum
+              yield_parent_product: Lorem Ipsum
+              yield_rate: 0.1
+              yield_rate_ouom: Lorem Ipsum
+              yield_rate_uom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new resent_vol_summary
+    description: Create a new resent_vol_summary data
+    requestBody:
+      required: true
+      description: Request body to create resent_vol_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_vol_summary'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            product_type: Lorem Ipsum
+            summary_id: Lorem Ipsum
+            active_ind: y
+            analyst_ba_id: Lorem Ipsum
+            approved_by_ba_id: Lorem Ipsum
+            approved_date: 12/12/2023
+            created_date: 12/12/2023
+            created_date_desc: Lorem Ipsum
+            current_balance: 0.1
+            current_balance_ouom: Lorem Ipsum
+            current_balance_uom: Lorem Ipsum
+            decline_case_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_summary_ind: y
+            material_balance_case_id: Lorem Ipsum
+            net_summary_ind: y
+            open_balance: 0.1
+            open_balance_ouom: Lorem Ipsum
+            open_balance_uom: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_product_type: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            volume_method: Lorem Ipsum
+            vol_anal_case_id: Lorem Ipsum
+            yield_parent_product: Lorem Ipsum
+            yield_rate: 0.1
+            yield_rate_ouom: Lorem Ipsum
+            yield_rate_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_vol_summary data is added
+        content:
+          application/json:
+            example:
+              message: The resent_vol_summary data was successfully added
+/resent-vol-summary/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of resent_vol_summary data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new resent_vol_summary data
+    description: Update a new resent_vol_summary data
+    requestBody:
+      required: true
+      description: Request body to update resent_vol_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_vol_summary'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            product_type: Lorem Ipsum
+            summary_id: Lorem Ipsum
+            active_ind: y
+            analyst_ba_id: Lorem Ipsum
+            approved_by_ba_id: Lorem Ipsum
+            approved_date: 12/12/2023
+            created_date: 12/12/2023
+            created_date_desc: Lorem Ipsum
+            current_balance: 0.1
+            current_balance_ouom: Lorem Ipsum
+            current_balance_uom: Lorem Ipsum
+            decline_case_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_summary_ind: y
+            material_balance_case_id: Lorem Ipsum
+            net_summary_ind: y
+            open_balance: 0.1
+            open_balance_ouom: Lorem Ipsum
+            open_balance_uom: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_product_type: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            volume_method: Lorem Ipsum
+            vol_anal_case_id: Lorem Ipsum
+            yield_parent_product: Lorem Ipsum
+            yield_rate: 0.1
+            yield_rate_ouom: Lorem Ipsum
+            yield_rate_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: resent_vol_summary data is completely updated
+        content:
+          application/json:
+            example:
+              message: The resent_vol_summary data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new resent_vol_summary data
+    description: Update a new resent_vol_summary data
+    requestBody:
+      required: true
+      description: Request body to update resent_vol_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/resent_vol_summary'
+          example:
+            resent_id: Lorem Ipsum
+            reserve_class_id: Lorem Ipsum
+            product_type: Lorem Ipsum
+            summary_id: Lorem Ipsum
+            active_ind: y
+            analyst_ba_id: Lorem Ipsum
+            approved_by_ba_id: Lorem Ipsum
+            approved_date: 12/12/2023
+            created_date: 12/12/2023
+            created_date_desc: Lorem Ipsum
+            current_balance: 0.1
+            current_balance_ouom: Lorem Ipsum
+            current_balance_uom: Lorem Ipsum
+            decline_case_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_summary_ind: y
+            material_balance_case_id: Lorem Ipsum
+            net_summary_ind: y
+            open_balance: 0.1
+            open_balance_ouom: Lorem Ipsum
+            open_balance_uom: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_product_type: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            source: Lorem Ipsum
+            volume_method: Lorem Ipsum
+            vol_anal_case_id: Lorem Ipsum
+            yield_parent_product: Lorem Ipsum
+            yield_rate: 0.1
+            yield_rate_ouom: Lorem Ipsum
+            yield_rate_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in resent_vol_summary data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in resent_vol_summary data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete resent_vol_summary data
+    description: Delete resent_vol_summary data
+    responses:
+      '200':
+        description: resent_vol_summary data is deleted
+        content:
+          application/json:
+            example:
+              message: The resent_vol_summary data was successfully deleted

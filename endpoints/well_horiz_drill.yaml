@@ -1,0 +1,249 @@
+/well-horiz-drill:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_horiz_drill
+    responses:
+      '200':
+        description: get well_horiz_drill data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              buildup_radius_type: Lorem Ipsum
+              buildup_rate_degree: 0.1
+              buildup_rate_length: 0.1
+              buildup_rate_length_ouom: Lorem Ipsum
+              contractor: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              horiz_displacement: 0.1
+              horiz_displacement_ouom: Lorem Ipsum
+              horiz_drilling_reason: Lorem Ipsum
+              horiz_drilling_type: Lorem Ipsum
+              horiz_strat_unit_id: Lorem Ipsum
+              lateral_hole_id: Lorem Ipsum
+              lateral_hole_length: 0.1
+              lateral_hole_length_ouom: Lorem Ipsum
+              max_deviation_angle: 0.1
+              pay_length: 0.1
+              pay_length_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              rat_hole_depth: 0.1
+              rat_hole_depth_ouom: Lorem Ipsum
+              rat_hole_depth_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              reservoir: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              wb_length_in_form: 0.1
+              wb_length_in_form_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_horiz_drill
+    description: Create a new well_horiz_drill data
+    requestBody:
+      required: true
+      description: Request body to create well_horiz_drill data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_horiz_drill'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            buildup_radius_type: Lorem Ipsum
+            buildup_rate_degree: 0.1
+            buildup_rate_length: 0.1
+            buildup_rate_length_ouom: Lorem Ipsum
+            contractor: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horiz_displacement: 0.1
+            horiz_displacement_ouom: Lorem Ipsum
+            horiz_drilling_reason: Lorem Ipsum
+            horiz_drilling_type: Lorem Ipsum
+            horiz_strat_unit_id: Lorem Ipsum
+            lateral_hole_id: Lorem Ipsum
+            lateral_hole_length: 0.1
+            lateral_hole_length_ouom: Lorem Ipsum
+            max_deviation_angle: 0.1
+            pay_length: 0.1
+            pay_length_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rat_hole_depth: 0.1
+            rat_hole_depth_ouom: Lorem Ipsum
+            rat_hole_depth_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            wb_length_in_form: 0.1
+            wb_length_in_form_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_horiz_drill data is added
+        content:
+          application/json:
+            example:
+              message: The well_horiz_drill data was successfully added
+/well-horiz-drill/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_horiz_drill data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_horiz_drill data
+    description: Update a new well_horiz_drill data
+    requestBody:
+      required: true
+      description: Request body to update well_horiz_drill data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_horiz_drill'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            buildup_radius_type: Lorem Ipsum
+            buildup_rate_degree: 0.1
+            buildup_rate_length: 0.1
+            buildup_rate_length_ouom: Lorem Ipsum
+            contractor: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horiz_displacement: 0.1
+            horiz_displacement_ouom: Lorem Ipsum
+            horiz_drilling_reason: Lorem Ipsum
+            horiz_drilling_type: Lorem Ipsum
+            horiz_strat_unit_id: Lorem Ipsum
+            lateral_hole_id: Lorem Ipsum
+            lateral_hole_length: 0.1
+            lateral_hole_length_ouom: Lorem Ipsum
+            max_deviation_angle: 0.1
+            pay_length: 0.1
+            pay_length_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rat_hole_depth: 0.1
+            rat_hole_depth_ouom: Lorem Ipsum
+            rat_hole_depth_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            wb_length_in_form: 0.1
+            wb_length_in_form_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_horiz_drill data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_horiz_drill data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_horiz_drill data
+    description: Update a new well_horiz_drill data
+    requestBody:
+      required: true
+      description: Request body to update well_horiz_drill data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_horiz_drill'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            buildup_radius_type: Lorem Ipsum
+            buildup_rate_degree: 0.1
+            buildup_rate_length: 0.1
+            buildup_rate_length_ouom: Lorem Ipsum
+            contractor: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horiz_displacement: 0.1
+            horiz_displacement_ouom: Lorem Ipsum
+            horiz_drilling_reason: Lorem Ipsum
+            horiz_drilling_type: Lorem Ipsum
+            horiz_strat_unit_id: Lorem Ipsum
+            lateral_hole_id: Lorem Ipsum
+            lateral_hole_length: 0.1
+            lateral_hole_length_ouom: Lorem Ipsum
+            max_deviation_angle: 0.1
+            pay_length: 0.1
+            pay_length_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rat_hole_depth: 0.1
+            rat_hole_depth_ouom: Lorem Ipsum
+            rat_hole_depth_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            wb_length_in_form: 0.1
+            wb_length_in_form_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_horiz_drill data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_horiz_drill data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_horiz_drill data
+    description: Delete well_horiz_drill data
+    responses:
+      '200':
+        description: well_horiz_drill data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_horiz_drill data was successfully deleted

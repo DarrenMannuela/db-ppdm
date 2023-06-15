@@ -1,0 +1,173 @@
+/well-horiz-drill-kop:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_horiz_drill_kop
+    responses:
+      '200':
+        description: get well_horiz_drill_kop data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              kickoff_point_md: 0.1
+              kickoff_point_tvd: 0.1
+              lateral_hole_id: Lorem Ipsum
+              node_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_horiz_drill_kop
+    description: Create a new well_horiz_drill_kop data
+    requestBody:
+      required: true
+      description: Request body to create well_horiz_drill_kop data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_horiz_drill_kop'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            kickoff_point_md: 0.1
+            kickoff_point_tvd: 0.1
+            lateral_hole_id: Lorem Ipsum
+            node_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_horiz_drill_kop data is added
+        content:
+          application/json:
+            example:
+              message: The well_horiz_drill_kop data was successfully added
+/well-horiz-drill-kop/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_horiz_drill_kop data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_horiz_drill_kop data
+    description: Update a new well_horiz_drill_kop data
+    requestBody:
+      required: true
+      description: Request body to update well_horiz_drill_kop data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_horiz_drill_kop'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            kickoff_point_md: 0.1
+            kickoff_point_tvd: 0.1
+            lateral_hole_id: Lorem Ipsum
+            node_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_horiz_drill_kop data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_horiz_drill_kop data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_horiz_drill_kop data
+    description: Update a new well_horiz_drill_kop data
+    requestBody:
+      required: true
+      description: Request body to update well_horiz_drill_kop data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_horiz_drill_kop'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            kickoff_point_md: 0.1
+            kickoff_point_tvd: 0.1
+            lateral_hole_id: Lorem Ipsum
+            node_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_horiz_drill_kop data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_horiz_drill_kop data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_horiz_drill_kop data
+    description: Delete well_horiz_drill_kop data
+    responses:
+      '200':
+        description: well_horiz_drill_kop data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_horiz_drill_kop data was successfully deleted

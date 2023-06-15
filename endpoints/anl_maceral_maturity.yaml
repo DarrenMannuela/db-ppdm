@@ -1,0 +1,265 @@
+/anl-maceral-maturity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_maceral_maturity
+    responses:
+      '200':
+        description: get anl_maceral_maturity data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              coal_rank_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fluor_color: Lorem Ipsum
+              fluor_intensity_value: 1.0
+              mean_max_reflectance: 1.0
+              mean_random_reflectance: 1.0
+              population_name: Lorem Ipsum
+              population_num: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              reflect_max_meas_value: 1.0
+              reflect_max_meas_value_ouom: Lorem Ipsum
+              reflect_max_meas_value_uom: Lorem Ipsum
+              reflect_meas_value: 1.0
+              reflect_meas_value_ouom: Lorem Ipsum
+              reflect_meas_value_uom: Lorem Ipsum
+              reflect_min_meas_value: 1.0
+              reflect_min_meas_value_ouom: Lorem Ipsum
+              reflect_min_meas_value_uom: Lorem Ipsum
+              reflect_std_dev_value: 1.0
+              refl_random_meas_value: 1.0
+              refl_random_meas_value_ouom: Lorem Ipsum
+              refl_random_meas_value_uom: Lorem Ipsum
+              remark: Lorem Ipsum
+              reworked_percent: 0.1
+              sample_tot_maceral_val: 1.0
+              sample_tot_maceral_val_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_maceral_maturity
+    description: Create a new anl_maceral_maturity data
+    requestBody:
+      required: true
+      description: Request body to create anl_maceral_maturity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_maceral_maturity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            coal_rank_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_color: Lorem Ipsum
+            fluor_intensity_value: 1.0
+            mean_max_reflectance: 1.0
+            mean_random_reflectance: 1.0
+            population_name: Lorem Ipsum
+            population_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            reflect_max_meas_value: 1.0
+            reflect_max_meas_value_ouom: Lorem Ipsum
+            reflect_max_meas_value_uom: Lorem Ipsum
+            reflect_meas_value: 1.0
+            reflect_meas_value_ouom: Lorem Ipsum
+            reflect_meas_value_uom: Lorem Ipsum
+            reflect_min_meas_value: 1.0
+            reflect_min_meas_value_ouom: Lorem Ipsum
+            reflect_min_meas_value_uom: Lorem Ipsum
+            reflect_std_dev_value: 1.0
+            refl_random_meas_value: 1.0
+            refl_random_meas_value_ouom: Lorem Ipsum
+            refl_random_meas_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reworked_percent: 0.1
+            sample_tot_maceral_val: 1.0
+            sample_tot_maceral_val_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_maceral_maturity data is added
+        content:
+          application/json:
+            example:
+              message: The anl_maceral_maturity data was successfully added
+/anl-maceral-maturity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_maceral_maturity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_maceral_maturity data
+    description: Update a new anl_maceral_maturity data
+    requestBody:
+      required: true
+      description: Request body to update anl_maceral_maturity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_maceral_maturity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            coal_rank_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_color: Lorem Ipsum
+            fluor_intensity_value: 1.0
+            mean_max_reflectance: 1.0
+            mean_random_reflectance: 1.0
+            population_name: Lorem Ipsum
+            population_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            reflect_max_meas_value: 1.0
+            reflect_max_meas_value_ouom: Lorem Ipsum
+            reflect_max_meas_value_uom: Lorem Ipsum
+            reflect_meas_value: 1.0
+            reflect_meas_value_ouom: Lorem Ipsum
+            reflect_meas_value_uom: Lorem Ipsum
+            reflect_min_meas_value: 1.0
+            reflect_min_meas_value_ouom: Lorem Ipsum
+            reflect_min_meas_value_uom: Lorem Ipsum
+            reflect_std_dev_value: 1.0
+            refl_random_meas_value: 1.0
+            refl_random_meas_value_ouom: Lorem Ipsum
+            refl_random_meas_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reworked_percent: 0.1
+            sample_tot_maceral_val: 1.0
+            sample_tot_maceral_val_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_maceral_maturity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_maceral_maturity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_maceral_maturity data
+    description: Update a new anl_maceral_maturity data
+    requestBody:
+      required: true
+      description: Request body to update anl_maceral_maturity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_maceral_maturity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            coal_rank_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_color: Lorem Ipsum
+            fluor_intensity_value: 1.0
+            mean_max_reflectance: 1.0
+            mean_random_reflectance: 1.0
+            population_name: Lorem Ipsum
+            population_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            reflect_max_meas_value: 1.0
+            reflect_max_meas_value_ouom: Lorem Ipsum
+            reflect_max_meas_value_uom: Lorem Ipsum
+            reflect_meas_value: 1.0
+            reflect_meas_value_ouom: Lorem Ipsum
+            reflect_meas_value_uom: Lorem Ipsum
+            reflect_min_meas_value: 1.0
+            reflect_min_meas_value_ouom: Lorem Ipsum
+            reflect_min_meas_value_uom: Lorem Ipsum
+            reflect_std_dev_value: 1.0
+            refl_random_meas_value: 1.0
+            refl_random_meas_value_ouom: Lorem Ipsum
+            refl_random_meas_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reworked_percent: 0.1
+            sample_tot_maceral_val: 1.0
+            sample_tot_maceral_val_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_maceral_maturity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_maceral_maturity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_maceral_maturity data
+    description: Delete anl_maceral_maturity data
+    responses:
+      '200':
+        description: anl_maceral_maturity data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_maceral_maturity data was successfully deleted

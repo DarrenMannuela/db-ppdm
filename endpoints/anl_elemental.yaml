@@ -1,0 +1,273 @@
+/anl-elemental:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_elemental
+    responses:
+      '200':
+        description: get anl_elemental data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              ash_element: 0.1
+              ash_element_ouom: Lorem Ipsum
+              c_element: 0.1
+              c_element_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fe_element: 0.1
+              fe_element_ouom: Lorem Ipsum
+              h_element: 0.1
+              h_element_ouom: Lorem Ipsum
+              measurement_type: Lorem Ipsum
+              ni_element: 0.1
+              ni_element_ouom: Lorem Ipsum
+              n_element: 0.1
+              n_element_ouom: Lorem Ipsum
+              o_element: 0.1
+              o_element_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              problem_ind: y
+              remark: Lorem Ipsum
+              reported_h_c_ratio: 0.1
+              reported_h_c_ratio_ouom: Lorem Ipsum
+              reported_ni_c_ratio: 0.1
+              reported_ni_c_ratio_ouom: Lorem Ipsum
+              reported_n_c_ratio: 0.1
+              reported_n_c_ratio_ouom: Lorem Ipsum
+              reported_o_c_ratio: 0.1
+              reported_o_c_ratio_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              s_element: 0.1
+              s_element_ouom: Lorem Ipsum
+              v_element: 0.1
+              v_element_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_elemental
+    description: Create a new anl_elemental data
+    requestBody:
+      required: true
+      description: Request body to create anl_elemental data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_elemental'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            ash_element: 0.1
+            ash_element_ouom: Lorem Ipsum
+            c_element: 0.1
+            c_element_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fe_element: 0.1
+            fe_element_ouom: Lorem Ipsum
+            h_element: 0.1
+            h_element_ouom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            ni_element: 0.1
+            ni_element_ouom: Lorem Ipsum
+            n_element: 0.1
+            n_element_ouom: Lorem Ipsum
+            o_element: 0.1
+            o_element_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_h_c_ratio: 0.1
+            reported_h_c_ratio_ouom: Lorem Ipsum
+            reported_ni_c_ratio: 0.1
+            reported_ni_c_ratio_ouom: Lorem Ipsum
+            reported_n_c_ratio: 0.1
+            reported_n_c_ratio_ouom: Lorem Ipsum
+            reported_o_c_ratio: 0.1
+            reported_o_c_ratio_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            s_element: 0.1
+            s_element_ouom: Lorem Ipsum
+            v_element: 0.1
+            v_element_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_elemental data is added
+        content:
+          application/json:
+            example:
+              message: The anl_elemental data was successfully added
+/anl-elemental/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_elemental data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_elemental data
+    description: Update a new anl_elemental data
+    requestBody:
+      required: true
+      description: Request body to update anl_elemental data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_elemental'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            ash_element: 0.1
+            ash_element_ouom: Lorem Ipsum
+            c_element: 0.1
+            c_element_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fe_element: 0.1
+            fe_element_ouom: Lorem Ipsum
+            h_element: 0.1
+            h_element_ouom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            ni_element: 0.1
+            ni_element_ouom: Lorem Ipsum
+            n_element: 0.1
+            n_element_ouom: Lorem Ipsum
+            o_element: 0.1
+            o_element_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_h_c_ratio: 0.1
+            reported_h_c_ratio_ouom: Lorem Ipsum
+            reported_ni_c_ratio: 0.1
+            reported_ni_c_ratio_ouom: Lorem Ipsum
+            reported_n_c_ratio: 0.1
+            reported_n_c_ratio_ouom: Lorem Ipsum
+            reported_o_c_ratio: 0.1
+            reported_o_c_ratio_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            s_element: 0.1
+            s_element_ouom: Lorem Ipsum
+            v_element: 0.1
+            v_element_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_elemental data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_elemental data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_elemental data
+    description: Update a new anl_elemental data
+    requestBody:
+      required: true
+      description: Request body to update anl_elemental data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_elemental'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            ash_element: 0.1
+            ash_element_ouom: Lorem Ipsum
+            c_element: 0.1
+            c_element_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fe_element: 0.1
+            fe_element_ouom: Lorem Ipsum
+            h_element: 0.1
+            h_element_ouom: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            ni_element: 0.1
+            ni_element_ouom: Lorem Ipsum
+            n_element: 0.1
+            n_element_ouom: Lorem Ipsum
+            o_element: 0.1
+            o_element_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_h_c_ratio: 0.1
+            reported_h_c_ratio_ouom: Lorem Ipsum
+            reported_ni_c_ratio: 0.1
+            reported_ni_c_ratio_ouom: Lorem Ipsum
+            reported_n_c_ratio: 0.1
+            reported_n_c_ratio_ouom: Lorem Ipsum
+            reported_o_c_ratio: 0.1
+            reported_o_c_ratio_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            s_element: 0.1
+            s_element_ouom: Lorem Ipsum
+            v_element: 0.1
+            v_element_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_elemental data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_elemental data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_elemental data
+    description: Delete anl_elemental data
+    responses:
+      '200':
+        description: anl_elemental data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_elemental data was successfully deleted

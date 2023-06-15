@@ -1,0 +1,277 @@
+/pden:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get pden
+    responses:
+      '200':
+        description: get pden data to be returned
+        content:
+          application/json:
+            example:
+            - pden_subtype: Lorem Ipsum
+              pden_id: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              current_operator: Lorem Ipsum
+              current_prod_str_name: Lorem Ipsum
+              current_status_date: 12/12/2023
+              current_well_str_number: Lorem Ipsum
+              effective_date: 12/12/2023
+              enhanced_recovery_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              field_id: Lorem Ipsum
+              last_injection_date: 12/12/2023
+              last_production_date: 12/12/2023
+              last_reported_date: 12/12/2023
+              location_desc: Lorem Ipsum
+              location_desc_type: Lorem Ipsum
+              on_injection_date: 12/12/2023
+              on_production_date: 12/12/2023
+              pden_long_name: Lorem Ipsum
+              pden_short_name: Lorem Ipsum
+              pden_status: Lorem Ipsum
+              pden_status_type: Lorem Ipsum
+              plot_name: Lorem Ipsum
+              plot_symbol: Lorem Ipsum
+              pool_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              primary_product: Lorem Ipsum
+              production_method: Lorem Ipsum
+              proprietary_ind: y
+              remark: Lorem Ipsum
+              state_or_federal_waters: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              string_serial_number: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new pden
+    description: Create a new pden data
+    requestBody:
+      required: true
+      description: Request body to create pden data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            current_prod_str_name: Lorem Ipsum
+            current_status_date: 12/12/2023
+            current_well_str_number: Lorem Ipsum
+            effective_date: 12/12/2023
+            enhanced_recovery_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            last_injection_date: 12/12/2023
+            last_production_date: 12/12/2023
+            last_reported_date: 12/12/2023
+            location_desc: Lorem Ipsum
+            location_desc_type: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            pden_long_name: Lorem Ipsum
+            pden_short_name: Lorem Ipsum
+            pden_status: Lorem Ipsum
+            pden_status_type: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_product: Lorem Ipsum
+            production_method: Lorem Ipsum
+            proprietary_ind: y
+            remark: Lorem Ipsum
+            state_or_federal_waters: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            string_serial_number: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden data is added
+        content:
+          application/json:
+            example:
+              message: The pden data was successfully added
+/pden/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of pden data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new pden data
+    description: Update a new pden data
+    requestBody:
+      required: true
+      description: Request body to update pden data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            current_prod_str_name: Lorem Ipsum
+            current_status_date: 12/12/2023
+            current_well_str_number: Lorem Ipsum
+            effective_date: 12/12/2023
+            enhanced_recovery_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            last_injection_date: 12/12/2023
+            last_production_date: 12/12/2023
+            last_reported_date: 12/12/2023
+            location_desc: Lorem Ipsum
+            location_desc_type: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            pden_long_name: Lorem Ipsum
+            pden_short_name: Lorem Ipsum
+            pden_status: Lorem Ipsum
+            pden_status_type: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_product: Lorem Ipsum
+            production_method: Lorem Ipsum
+            proprietary_ind: y
+            remark: Lorem Ipsum
+            state_or_federal_waters: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            string_serial_number: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden data is completely updated
+        content:
+          application/json:
+            example:
+              message: The pden data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new pden data
+    description: Update a new pden data
+    requestBody:
+      required: true
+      description: Request body to update pden data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden'
+          example:
+            pden_subtype: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            current_prod_str_name: Lorem Ipsum
+            current_status_date: 12/12/2023
+            current_well_str_number: Lorem Ipsum
+            effective_date: 12/12/2023
+            enhanced_recovery_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            last_injection_date: 12/12/2023
+            last_production_date: 12/12/2023
+            last_reported_date: 12/12/2023
+            location_desc: Lorem Ipsum
+            location_desc_type: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            pden_long_name: Lorem Ipsum
+            pden_short_name: Lorem Ipsum
+            pden_status: Lorem Ipsum
+            pden_status_type: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_product: Lorem Ipsum
+            production_method: Lorem Ipsum
+            proprietary_ind: y
+            remark: Lorem Ipsum
+            state_or_federal_waters: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            string_serial_number: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in pden data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in pden data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete pden data
+    description: Delete pden data
+    responses:
+      '200':
+        description: pden data is deleted
+        content:
+          application/json:
+            example:
+              message: The pden data was successfully deleted

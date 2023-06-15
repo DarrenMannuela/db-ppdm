@@ -1,0 +1,177 @@
+/ppdm-schema-group:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_schema_group
+    responses:
+      '200':
+        description: get ppdm_schema_group data to be returned
+        content:
+          application/json:
+            example:
+            - group_system_id: Lorem Ipsum
+              group_schema_entity_id: Lorem Ipsum
+              comp_schema_entity_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              extension_ind: y
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              schema_group_type: Lorem Ipsum
+              source: Lorem Ipsum
+              surrogate_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_schema_group
+    description: Create a new ppdm_schema_group data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_schema_group data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_schema_group'
+          example:
+            group_system_id: Lorem Ipsum
+            group_schema_entity_id: Lorem Ipsum
+            comp_schema_entity_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            schema_group_type: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_schema_group data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_schema_group data was successfully added
+/ppdm-schema-group/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_schema_group data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_schema_group data
+    description: Update a new ppdm_schema_group data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_schema_group data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_schema_group'
+          example:
+            group_system_id: Lorem Ipsum
+            group_schema_entity_id: Lorem Ipsum
+            comp_schema_entity_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            schema_group_type: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_schema_group data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_schema_group data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_schema_group data
+    description: Update a new ppdm_schema_group data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_schema_group data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_schema_group'
+          example:
+            group_system_id: Lorem Ipsum
+            group_schema_entity_id: Lorem Ipsum
+            comp_schema_entity_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            schema_group_type: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_schema_group data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_schema_group data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_schema_group data
+    description: Delete ppdm_schema_group data
+    responses:
+      '200':
+        description: ppdm_schema_group data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_schema_group data was successfully deleted

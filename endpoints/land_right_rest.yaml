@@ -1,0 +1,165 @@
+/land-right-rest:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get land_right_rest
+    responses:
+      '200':
+        description: get land_right_rest data to be returned
+        content:
+          application/json:
+            example:
+            - land_right_subtype: Lorem Ipsum
+              land_right_id: Lorem Ipsum
+              restriction_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new land_right_rest
+    description: Create a new land_right_rest data
+    requestBody:
+      required: true
+      description: Request body to create land_right_rest data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_right_rest'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_right_rest data is added
+        content:
+          application/json:
+            example:
+              message: The land_right_rest data was successfully added
+/land-right-rest/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of land_right_rest data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new land_right_rest data
+    description: Update a new land_right_rest data
+    requestBody:
+      required: true
+      description: Request body to update land_right_rest data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_right_rest'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_right_rest data is completely updated
+        content:
+          application/json:
+            example:
+              message: The land_right_rest data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new land_right_rest data
+    description: Update a new land_right_rest data
+    requestBody:
+      required: true
+      description: Request body to update land_right_rest data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_right_rest'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in land_right_rest data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in land_right_rest data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete land_right_rest data
+    description: Delete land_right_rest data
+    responses:
+      '200':
+        description: land_right_rest data is deleted
+        content:
+          application/json:
+            example:
+              message: The land_right_rest data was successfully deleted

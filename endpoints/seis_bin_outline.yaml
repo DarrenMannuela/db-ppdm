@@ -1,0 +1,189 @@
+/seis-bin-outline:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_bin_outline
+    responses:
+      '200':
+        description: get seis_bin_outline data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              bin_grid_id: Lorem Ipsum
+              bin_grid_source: Lorem Ipsum
+              active_ind: y
+              bin_outline_type: Lorem Ipsum
+              coord_acquisition_id: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              easting: 0.1
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              local_coord_system_id: Lorem Ipsum
+              northing: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_bin_outline
+    description: Create a new seis_bin_outline data
+    requestBody:
+      required: true
+      description: Request body to create seis_bin_outline data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_outline'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            active_ind: y
+            bin_outline_type: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            easting: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            local_coord_system_id: Lorem Ipsum
+            northing: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_bin_outline data is added
+        content:
+          application/json:
+            example:
+              message: The seis_bin_outline data was successfully added
+/seis-bin-outline/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_bin_outline data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_bin_outline data
+    description: Update a new seis_bin_outline data
+    requestBody:
+      required: true
+      description: Request body to update seis_bin_outline data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_outline'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            active_ind: y
+            bin_outline_type: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            easting: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            local_coord_system_id: Lorem Ipsum
+            northing: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_bin_outline data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_bin_outline data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_bin_outline data
+    description: Update a new seis_bin_outline data
+    requestBody:
+      required: true
+      description: Request body to update seis_bin_outline data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_bin_outline'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            bin_grid_id: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            active_ind: y
+            bin_outline_type: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            easting: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            local_coord_system_id: Lorem Ipsum
+            northing: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_bin_outline data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_bin_outline data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_bin_outline data
+    description: Delete seis_bin_outline data
+    responses:
+      '200':
+        description: seis_bin_outline data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_bin_outline data was successfully deleted

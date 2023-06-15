@@ -1,0 +1,201 @@
+/seis-inspection:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_inspection
+    responses:
+      '200':
+        description: get seis_inspection data to be returned
+        content:
+          application/json:
+            example:
+            - inspection_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              inspected_length: 0.1
+              inspected_length_ouom: Lorem Ipsum
+              inspecting_ba_id: Lorem Ipsum
+              inspection_date: 12/12/2023
+              inspection_status: Lorem Ipsum
+              insp_loc_ba_id: Lorem Ipsum
+              insp_loc_source: Lorem Ipsum
+              min_length: 0.1
+              min_length_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              reason_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              scheduled_date: 12/12/2023
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_inspection
+    description: Create a new seis_inspection data
+    requestBody:
+      required: true
+      description: Request body to create seis_inspection data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_inspection'
+          example:
+            inspection_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inspected_length: 0.1
+            inspected_length_ouom: Lorem Ipsum
+            inspecting_ba_id: Lorem Ipsum
+            inspection_date: 12/12/2023
+            inspection_status: Lorem Ipsum
+            insp_loc_ba_id: Lorem Ipsum
+            insp_loc_source: Lorem Ipsum
+            min_length: 0.1
+            min_length_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_inspection data is added
+        content:
+          application/json:
+            example:
+              message: The seis_inspection data was successfully added
+/seis-inspection/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_inspection data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_inspection data
+    description: Update a new seis_inspection data
+    requestBody:
+      required: true
+      description: Request body to update seis_inspection data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_inspection'
+          example:
+            inspection_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inspected_length: 0.1
+            inspected_length_ouom: Lorem Ipsum
+            inspecting_ba_id: Lorem Ipsum
+            inspection_date: 12/12/2023
+            inspection_status: Lorem Ipsum
+            insp_loc_ba_id: Lorem Ipsum
+            insp_loc_source: Lorem Ipsum
+            min_length: 0.1
+            min_length_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_inspection data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_inspection data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_inspection data
+    description: Update a new seis_inspection data
+    requestBody:
+      required: true
+      description: Request body to update seis_inspection data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_inspection'
+          example:
+            inspection_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inspected_length: 0.1
+            inspected_length_ouom: Lorem Ipsum
+            inspecting_ba_id: Lorem Ipsum
+            inspection_date: 12/12/2023
+            inspection_status: Lorem Ipsum
+            insp_loc_ba_id: Lorem Ipsum
+            insp_loc_source: Lorem Ipsum
+            min_length: 0.1
+            min_length_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_inspection data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_inspection data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_inspection data
+    description: Delete seis_inspection data
+    responses:
+      '200':
+        description: seis_inspection data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_inspection data was successfully deleted

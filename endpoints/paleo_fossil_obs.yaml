@@ -1,0 +1,173 @@
+/paleo-fossil-obs:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get paleo_fossil_obs
+    responses:
+      '200':
+        description: get paleo_fossil_obs data to be returned
+        content:
+          application/json:
+            example:
+            - paleo_summary_id: Lorem Ipsum
+              fossil_detail_id: Lorem Ipsum
+              fossil_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fossil_obs_type: Lorem Ipsum
+              observation: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new paleo_fossil_obs
+    description: Create a new paleo_fossil_obs data
+    requestBody:
+      required: true
+      description: Request body to create paleo_fossil_obs data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_fossil_obs'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            fossil_detail_id: Lorem Ipsum
+            fossil_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fossil_obs_type: Lorem Ipsum
+            observation: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_fossil_obs data is added
+        content:
+          application/json:
+            example:
+              message: The paleo_fossil_obs data was successfully added
+/paleo-fossil-obs/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of paleo_fossil_obs data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new paleo_fossil_obs data
+    description: Update a new paleo_fossil_obs data
+    requestBody:
+      required: true
+      description: Request body to update paleo_fossil_obs data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_fossil_obs'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            fossil_detail_id: Lorem Ipsum
+            fossil_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fossil_obs_type: Lorem Ipsum
+            observation: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_fossil_obs data is completely updated
+        content:
+          application/json:
+            example:
+              message: The paleo_fossil_obs data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new paleo_fossil_obs data
+    description: Update a new paleo_fossil_obs data
+    requestBody:
+      required: true
+      description: Request body to update paleo_fossil_obs data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_fossil_obs'
+          example:
+            paleo_summary_id: Lorem Ipsum
+            fossil_detail_id: Lorem Ipsum
+            fossil_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fossil_obs_type: Lorem Ipsum
+            observation: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in paleo_fossil_obs data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in paleo_fossil_obs data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete paleo_fossil_obs data
+    description: Delete paleo_fossil_obs data
+    responses:
+      '200':
+        description: paleo_fossil_obs data is deleted
+        content:
+          application/json:
+            example:
+              message: The paleo_fossil_obs data was successfully deleted

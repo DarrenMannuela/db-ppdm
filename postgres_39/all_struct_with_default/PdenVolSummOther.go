@@ -1,0 +1,40 @@
+package dto
+
+type Pden_vol_summ_other struct {
+	Pden_subtype        string   `json:"pden_subtype" default:"source"`
+	Pden_id             string   `json:"pden_id" default:"source"`
+	Pden_source         string   `json:"pden_source" default:"source"`
+	Volume_method       string   `json:"volume_method" default:"source"`
+	Activity_type       string   `json:"activity_type" default:"source"`
+	Period_type         string   `json:"period_type" default:"source"`
+	Pden_period_id      string   `json:"pden_period_id" default:"source"`
+	Amendment_seq_no    int      `json:"amendment_seq_no" default:"1"`
+	Product_type        string   `json:"product_type" default:"source"`
+	Active_ind          *string  `json:"active_ind" default:""`
+	Cum_volume          *float64 `json:"cum_volume" default:""`
+	Effective_date      *string  `json:"effective_date" default:""`
+	Expiry_date         *string  `json:"expiry_date" default:""`
+	Gas_energy          *float64 `json:"gas_energy" default:""`
+	Gas_energy_ouom     *string  `json:"gas_energy_ouom" default:""`
+	Mass                *float64 `json:"mass" default:""`
+	Mass_ouom           *string  `json:"mass_ouom" default:""`
+	Ppdm_guid           *string  `json:"ppdm_guid" default:""`
+	Remark              *string  `json:"remark" default:""`
+	Report_ind          *string  `json:"report_ind" default:""`
+	Source              *string  `json:"source" default:""`
+	Volume              *float64 `json:"volume" default:""`
+	Volume_date         *string  `json:"volume_date" default:""`
+	Volume_date_desc    *string  `json:"volume_date_desc" default:""`
+	Volume_ouom         *string  `json:"volume_ouom" default:""`
+	Volume_quality      *float64 `json:"volume_quality" default:""`
+	Volume_quality_ouom *string  `json:"volume_quality_ouom" default:""`
+	Volume_uom          *string  `json:"volume_uom" default:""`
+	Ytd_volume          *float64 `json:"ytd_volume" default:""`
+	Row_changed_by      *string  `json:"row_changed_by" default:""`
+	Row_changed_date    *string  `json:"row_changed_date" default:""`
+	Row_created_by      *string  `json:"row_created_by" default:""`
+	Row_created_date    *string  `json:"row_created_date" default:""`
+	Row_effective_date  *string  `json:"row_effective_date" default:""`
+	Row_expiry_date     *string  `json:"row_expiry_date" default:""`
+	Row_quality         *string  `json:"row_quality" default:""`
+}

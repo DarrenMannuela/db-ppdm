@@ -1,0 +1,249 @@
+/applic-desc:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get applic_desc
+    responses:
+      '200':
+        description: get applic_desc data to be returned
+        content:
+          application/json:
+            example:
+            - application_id: Lorem Ipsum
+              description_id: Lorem Ipsum
+              active_ind: y
+              application_type: Lorem Ipsum
+              applic_desc_type: Lorem Ipsum
+              contact_ba_id: Lorem Ipsum
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              currency_uom: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              description: Lorem Ipsum
+              desc_date: 12/12/2023
+              desc_value: 0.1
+              desc_value_ouom: Lorem Ipsum
+              desc_value_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_cost: 0.1
+              max_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_cost: 0.1
+              min_date: 12/12/2023
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new applic_desc
+    description: Create a new applic_desc data
+    requestBody:
+      required: true
+      description: Request body to create applic_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/applic_desc'
+          example:
+            application_id: Lorem Ipsum
+            description_id: Lorem Ipsum
+            active_ind: y
+            application_type: Lorem Ipsum
+            applic_desc_type: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            desc_date: 12/12/2023
+            desc_value: 0.1
+            desc_value_ouom: Lorem Ipsum
+            desc_value_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_cost: 0.1
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_cost: 0.1
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: applic_desc data is added
+        content:
+          application/json:
+            example:
+              message: The applic_desc data was successfully added
+/applic-desc/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of applic_desc data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new applic_desc data
+    description: Update a new applic_desc data
+    requestBody:
+      required: true
+      description: Request body to update applic_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/applic_desc'
+          example:
+            application_id: Lorem Ipsum
+            description_id: Lorem Ipsum
+            active_ind: y
+            application_type: Lorem Ipsum
+            applic_desc_type: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            desc_date: 12/12/2023
+            desc_value: 0.1
+            desc_value_ouom: Lorem Ipsum
+            desc_value_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_cost: 0.1
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_cost: 0.1
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: applic_desc data is completely updated
+        content:
+          application/json:
+            example:
+              message: The applic_desc data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new applic_desc data
+    description: Update a new applic_desc data
+    requestBody:
+      required: true
+      description: Request body to update applic_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/applic_desc'
+          example:
+            application_id: Lorem Ipsum
+            description_id: Lorem Ipsum
+            active_ind: y
+            application_type: Lorem Ipsum
+            applic_desc_type: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            desc_date: 12/12/2023
+            desc_value: 0.1
+            desc_value_ouom: Lorem Ipsum
+            desc_value_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_cost: 0.1
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_cost: 0.1
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in applic_desc data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in applic_desc data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete applic_desc data
+    description: Delete applic_desc data
+    responses:
+      '200':
+        description: applic_desc data is deleted
+        content:
+          application/json:
+            example:
+              message: The applic_desc data was successfully deleted

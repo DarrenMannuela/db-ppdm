@@ -1,0 +1,42 @@
+package dto
+
+type Ppdm_column struct {
+	System_id                 string   `json:"system_id" default:"source"`
+	Table_name                string   `json:"table_name" default:"source"`
+	Column_name               string   `json:"column_name" default:"source"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Column_comment            *string  `json:"column_comment" default:""`
+	Column_key_method         *string  `json:"column_key_method" default:""`
+	Column_precision          *float64 `json:"column_precision" default:""`
+	Column_scale              *float64 `json:"column_scale" default:""`
+	Column_sequence           *int     `json:"column_sequence" default:""`
+	Column_size               *float64 `json:"column_size" default:""`
+	Control_column_ind        *string  `json:"control_column_ind" default:""`
+	Control_column_name       *string  `json:"control_column_name" default:""`
+	Data_type                 *string  `json:"data_type" default:""`
+	Default_ind_value         *string  `json:"default_ind_value" default:""`
+	Default_uom_id            *string  `json:"default_uom_id" default:""`
+	Default_value_method      *string  `json:"default_value_method" default:""`
+	Distinct_value_count      *float64 `json:"distinct_value_count" default:""`
+	Distinct_value_count_date *string  `json:"distinct_value_count_date" default:""`
+	Domain                    *string  `json:"domain" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Extension_ind             *string  `json:"extension_ind" default:""`
+	Last_system_key           *string  `json:"last_system_key" default:""`
+	Nullable_ind              *string  `json:"nullable_ind" default:""`
+	Ouom_column_name          *string  `json:"ouom_column_name" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Primary_key_sequence      *int     `json:"primary_key_sequence" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Source                    *string  `json:"source" default:""`
+	Surrogate_ind             *string  `json:"surrogate_ind" default:""`
+	Uom_column_name           *string  `json:"uom_column_name" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

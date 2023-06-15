@@ -1,0 +1,177 @@
+/ent-security-group:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ent_security_group
+    responses:
+      '200':
+        description: get ent_security_group data to be returned
+        content:
+          application/json:
+            example:
+            - security_group_id: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              group_desc: Lorem Ipsum
+              group_long_name: Lorem Ipsum
+              group_short_name: Lorem Ipsum
+              group_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ent_security_group
+    description: Create a new ent_security_group data
+    requestBody:
+      required: true
+      description: Request body to create ent_security_group data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ent_security_group'
+          example:
+            security_group_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_desc: Lorem Ipsum
+            group_long_name: Lorem Ipsum
+            group_short_name: Lorem Ipsum
+            group_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ent_security_group data is added
+        content:
+          application/json:
+            example:
+              message: The ent_security_group data was successfully added
+/ent-security-group/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ent_security_group data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ent_security_group data
+    description: Update a new ent_security_group data
+    requestBody:
+      required: true
+      description: Request body to update ent_security_group data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ent_security_group'
+          example:
+            security_group_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_desc: Lorem Ipsum
+            group_long_name: Lorem Ipsum
+            group_short_name: Lorem Ipsum
+            group_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ent_security_group data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ent_security_group data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ent_security_group data
+    description: Update a new ent_security_group data
+    requestBody:
+      required: true
+      description: Request body to update ent_security_group data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ent_security_group'
+          example:
+            security_group_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_desc: Lorem Ipsum
+            group_long_name: Lorem Ipsum
+            group_short_name: Lorem Ipsum
+            group_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ent_security_group data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ent_security_group data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ent_security_group data
+    description: Delete ent_security_group data
+    responses:
+      '200':
+        description: ent_security_group data is deleted
+        content:
+          application/json:
+            example:
+              message: The ent_security_group data was successfully deleted

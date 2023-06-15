@@ -1,0 +1,193 @@
+/applic-attach:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get applic_attach
+    responses:
+      '200':
+        description: get applic_attach data to be returned
+        content:
+          application/json:
+            example:
+            - application_id: Lorem Ipsum
+              attachment_id: Lorem Ipsum
+              active_ind: y
+              attachment_description: Lorem Ipsum
+              attachment_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              physical_item_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              received_date: 12/12/2023
+              received_ind: y
+              remark: Lorem Ipsum
+              sent_by: Lorem Ipsum
+              sent_date: 12/12/2023
+              sent_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new applic_attach
+    description: Create a new applic_attach data
+    requestBody:
+      required: true
+      description: Request body to create applic_attach data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/applic_attach'
+          example:
+            application_id: Lorem Ipsum
+            attachment_id: Lorem Ipsum
+            active_ind: y
+            attachment_description: Lorem Ipsum
+            attachment_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            received_date: 12/12/2023
+            received_ind: y
+            remark: Lorem Ipsum
+            sent_by: Lorem Ipsum
+            sent_date: 12/12/2023
+            sent_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: applic_attach data is added
+        content:
+          application/json:
+            example:
+              message: The applic_attach data was successfully added
+/applic-attach/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of applic_attach data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new applic_attach data
+    description: Update a new applic_attach data
+    requestBody:
+      required: true
+      description: Request body to update applic_attach data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/applic_attach'
+          example:
+            application_id: Lorem Ipsum
+            attachment_id: Lorem Ipsum
+            active_ind: y
+            attachment_description: Lorem Ipsum
+            attachment_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            received_date: 12/12/2023
+            received_ind: y
+            remark: Lorem Ipsum
+            sent_by: Lorem Ipsum
+            sent_date: 12/12/2023
+            sent_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: applic_attach data is completely updated
+        content:
+          application/json:
+            example:
+              message: The applic_attach data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new applic_attach data
+    description: Update a new applic_attach data
+    requestBody:
+      required: true
+      description: Request body to update applic_attach data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/applic_attach'
+          example:
+            application_id: Lorem Ipsum
+            attachment_id: Lorem Ipsum
+            active_ind: y
+            attachment_description: Lorem Ipsum
+            attachment_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            received_date: 12/12/2023
+            received_ind: y
+            remark: Lorem Ipsum
+            sent_by: Lorem Ipsum
+            sent_date: 12/12/2023
+            sent_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in applic_attach data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in applic_attach data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete applic_attach data
+    description: Delete applic_attach data
+    responses:
+      '200':
+        description: applic_attach data is deleted
+        content:
+          application/json:
+            example:
+              message: The applic_attach data was successfully deleted

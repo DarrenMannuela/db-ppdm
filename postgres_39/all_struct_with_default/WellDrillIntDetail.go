@@ -1,0 +1,43 @@
+package dto
+
+type Well_drill_int_detail struct {
+	Uwi                 string   `json:"uwi" default:"source"`
+	Bit_source          string   `json:"bit_source" default:"source"`
+	Bit_interval_obs_no int      `json:"bit_interval_obs_no" default:"1"`
+	Bit_detail_type     string   `json:"bit_detail_type" default:"source"`
+	Detail_obs_no       int      `json:"detail_obs_no" default:"1"`
+	Active_ind          *string  `json:"active_ind" default:""`
+	Average_value       *float64 `json:"average_value" default:""`
+	Average_value_ouom  *string  `json:"average_value_ouom" default:""`
+	Average_value_uom   *string  `json:"average_value_uom" default:""`
+	Base_depth          *float64 `json:"base_depth" default:""`
+	Base_depth_ouom     *string  `json:"base_depth_ouom" default:""`
+	Bit_detail_code     *string  `json:"bit_detail_code" default:""`
+	Date_format_desc    *string  `json:"date_format_desc" default:""`
+	Detail_desc         *string  `json:"detail_desc" default:""`
+	Effective_date      *string  `json:"effective_date" default:""`
+	End_date            *string  `json:"end_date" default:""`
+	End_time            *string  `json:"end_time" default:""`
+	Expiry_date         *string  `json:"expiry_date" default:""`
+	Max_value           *float64 `json:"max_value" default:""`
+	Max_value_ouom      *string  `json:"max_value_ouom" default:""`
+	Max_value_uom       *string  `json:"max_value_uom" default:""`
+	Min_value           *float64 `json:"min_value" default:""`
+	Min_value_ouom      *string  `json:"min_value_ouom" default:""`
+	Min_value_uom       *string  `json:"min_value_uom" default:""`
+	Ppdm_guid           *string  `json:"ppdm_guid" default:""`
+	Remark              *string  `json:"remark" default:""`
+	Source              *string  `json:"source" default:""`
+	Start_date          *string  `json:"start_date" default:""`
+	Start_time          *string  `json:"start_time" default:""`
+	Timezone            *string  `json:"timezone" default:""`
+	Top_depth           *float64 `json:"top_depth" default:""`
+	Top_depth_ouom      *string  `json:"top_depth_ouom" default:""`
+	Row_changed_by      *string  `json:"row_changed_by" default:""`
+	Row_changed_date    *string  `json:"row_changed_date" default:""`
+	Row_created_by      *string  `json:"row_created_by" default:""`
+	Row_created_date    *string  `json:"row_created_date" default:""`
+	Row_effective_date  *string  `json:"row_effective_date" default:""`
+	Row_expiry_date     *string  `json:"row_expiry_date" default:""`
+	Row_quality         *string  `json:"row_quality" default:""`
+}

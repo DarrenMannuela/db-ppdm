@@ -1,0 +1,185 @@
+/cs-ellipsoid:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cs_ellipsoid
+    responses:
+      '200':
+        description: get cs_ellipsoid data to be returned
+        content:
+          application/json:
+            example:
+            - ellipsoid_id: Lorem Ipsum
+              active_ind: y
+              axis_ouom: Lorem Ipsum
+              eccentricity: 0.1
+              effective_date: 12/12/2023
+              ellipsoid_name: Lorem Ipsum
+              expiry_date: 12/12/2023
+              inverse_flattening: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              semi_major_axis: 0.1
+              semi_minor_axis: 0.1
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cs_ellipsoid
+    description: Create a new cs_ellipsoid data
+    requestBody:
+      required: true
+      description: Request body to create cs_ellipsoid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_ellipsoid'
+          example:
+            ellipsoid_id: Lorem Ipsum
+            active_ind: y
+            axis_ouom: Lorem Ipsum
+            eccentricity: 0.1
+            effective_date: 12/12/2023
+            ellipsoid_name: Lorem Ipsum
+            expiry_date: 12/12/2023
+            inverse_flattening: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            semi_major_axis: 0.1
+            semi_minor_axis: 0.1
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_ellipsoid data is added
+        content:
+          application/json:
+            example:
+              message: The cs_ellipsoid data was successfully added
+/cs-ellipsoid/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cs_ellipsoid data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cs_ellipsoid data
+    description: Update a new cs_ellipsoid data
+    requestBody:
+      required: true
+      description: Request body to update cs_ellipsoid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_ellipsoid'
+          example:
+            ellipsoid_id: Lorem Ipsum
+            active_ind: y
+            axis_ouom: Lorem Ipsum
+            eccentricity: 0.1
+            effective_date: 12/12/2023
+            ellipsoid_name: Lorem Ipsum
+            expiry_date: 12/12/2023
+            inverse_flattening: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            semi_major_axis: 0.1
+            semi_minor_axis: 0.1
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_ellipsoid data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cs_ellipsoid data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cs_ellipsoid data
+    description: Update a new cs_ellipsoid data
+    requestBody:
+      required: true
+      description: Request body to update cs_ellipsoid data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_ellipsoid'
+          example:
+            ellipsoid_id: Lorem Ipsum
+            active_ind: y
+            axis_ouom: Lorem Ipsum
+            eccentricity: 0.1
+            effective_date: 12/12/2023
+            ellipsoid_name: Lorem Ipsum
+            expiry_date: 12/12/2023
+            inverse_flattening: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            semi_major_axis: 0.1
+            semi_minor_axis: 0.1
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cs_ellipsoid data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cs_ellipsoid data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cs_ellipsoid data
+    description: Delete cs_ellipsoid data
+    responses:
+      '200':
+        description: cs_ellipsoid data is deleted
+        content:
+          application/json:
+            example:
+              message: The cs_ellipsoid data was successfully deleted

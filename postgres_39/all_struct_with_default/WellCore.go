@@ -1,0 +1,47 @@
+package dto
+
+type Well_core struct {
+	Uwi                        string   `json:"uwi" default:"source"`
+	Source                     string   `json:"source" default:"source"`
+	Core_id                    string   `json:"core_id" default:"source"`
+	Active_ind                 *string  `json:"active_ind" default:""`
+	Base_depth                 *float64 `json:"base_depth" default:""`
+	Base_depth_ouom            *string  `json:"base_depth_ouom" default:""`
+	Contractor                 *string  `json:"contractor" default:""`
+	Core_barrel_size           *float64 `json:"core_barrel_size" default:""`
+	Core_barrel_size_ouom      *string  `json:"core_barrel_size_ouom" default:""`
+	Core_diameter              *float64 `json:"core_diameter" default:""`
+	Core_diameter_ouom         *string  `json:"core_diameter_ouom" default:""`
+	Core_handling_type         *string  `json:"core_handling_type" default:""`
+	Core_oriented_ind          *string  `json:"core_oriented_ind" default:""`
+	Core_show_type             *string  `json:"core_show_type" default:""`
+	Core_type                  *string  `json:"core_type" default:""`
+	Coring_fluid               *string  `json:"coring_fluid" default:""`
+	Digit_avail_ind            *string  `json:"digit_avail_ind" default:""`
+	Effective_date             *string  `json:"effective_date" default:""`
+	Expiry_date                *string  `json:"expiry_date" default:""`
+	Gamma_correlation_ind      *string  `json:"gamma_correlation_ind" default:""`
+	Operation_seq_no           *int     `json:"operation_seq_no" default:""`
+	Ppdm_guid                  *string  `json:"ppdm_guid" default:""`
+	Primary_core_strat_unit_id *string  `json:"primary_core_strat_unit_id" default:""`
+	Recovered_amount           *float64 `json:"recovered_amount" default:""`
+	Recovered_amount_ouom      *string  `json:"recovered_amount_ouom" default:""`
+	Recovered_amount_uom       *string  `json:"recovered_amount_uom" default:""`
+	Recovery_date              *string  `json:"recovery_date" default:""`
+	Remark                     *string  `json:"remark" default:""`
+	Reported_core_num          *string  `json:"reported_core_num" default:""`
+	Run_num                    *string  `json:"run_num" default:""`
+	Shot_recovered_count       *int     `json:"shot_recovered_count" default:""`
+	Sidewall_ind               *string  `json:"sidewall_ind" default:""`
+	Strat_name_set_id          *string  `json:"strat_name_set_id" default:""`
+	Top_depth                  *float64 `json:"top_depth" default:""`
+	Top_depth_ouom             *string  `json:"top_depth_ouom" default:""`
+	Total_shot_count           *int     `json:"total_shot_count" default:""`
+	Row_changed_by             *string  `json:"row_changed_by" default:""`
+	Row_changed_date           *string  `json:"row_changed_date" default:""`
+	Row_created_by             *string  `json:"row_created_by" default:""`
+	Row_created_date           *string  `json:"row_created_date" default:""`
+	Row_effective_date         *string  `json:"row_effective_date" default:""`
+	Row_expiry_date            *string  `json:"row_expiry_date" default:""`
+	Row_quality                *string  `json:"row_quality" default:""`
+}

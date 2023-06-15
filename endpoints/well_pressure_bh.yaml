@@ -1,0 +1,261 @@
+/well-pressure-bh:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_pressure_bh
+    responses:
+      '200':
+        description: get well_pressure_bh data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              bhfp: 0.1
+              bhfp_ouom: Lorem Ipsum
+              bhp_method: Lorem Ipsum
+              bh_test_code: Lorem Ipsum
+              datum_pressure: 0.1
+              datum_pressure_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              packer_depth: 0.1
+              packer_depth_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              pressure_gradient: 0.1
+              pressure_gradient_ouom: Lorem Ipsum
+              recorder_datum: 0.1
+              recorder_datum_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_run_tvd: 0.1
+              reported_run_tvd_ouom: Lorem Ipsum
+              run_depth: 0.1
+              run_depth_ouom: Lorem Ipsum
+              run_depth_temperature: 0.1
+              run_depth_temperature_ouom: Lorem Ipsum
+              shutin_period: 0.1
+              shutin_period_ouom: Lorem Ipsum
+              survey_date: 12/12/2023
+              test_duration: 0.1
+              test_duration_ouom: Lorem Ipsum
+              tubing_size_desc: Lorem Ipsum
+              well_head_pressure: 0.1
+              well_head_pressure_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_pressure_bh
+    description: Create a new well_pressure_bh data
+    requestBody:
+      required: true
+      description: Request body to create well_pressure_bh data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_pressure_bh'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            bhfp: 0.1
+            bhfp_ouom: Lorem Ipsum
+            bhp_method: Lorem Ipsum
+            bh_test_code: Lorem Ipsum
+            datum_pressure: 0.1
+            datum_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            packer_depth: 0.1
+            packer_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pressure_gradient: 0.1
+            pressure_gradient_ouom: Lorem Ipsum
+            recorder_datum: 0.1
+            recorder_datum_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_run_tvd: 0.1
+            reported_run_tvd_ouom: Lorem Ipsum
+            run_depth: 0.1
+            run_depth_ouom: Lorem Ipsum
+            run_depth_temperature: 0.1
+            run_depth_temperature_ouom: Lorem Ipsum
+            shutin_period: 0.1
+            shutin_period_ouom: Lorem Ipsum
+            survey_date: 12/12/2023
+            test_duration: 0.1
+            test_duration_ouom: Lorem Ipsum
+            tubing_size_desc: Lorem Ipsum
+            well_head_pressure: 0.1
+            well_head_pressure_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_pressure_bh data is added
+        content:
+          application/json:
+            example:
+              message: The well_pressure_bh data was successfully added
+/well-pressure-bh/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_pressure_bh data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_pressure_bh data
+    description: Update a new well_pressure_bh data
+    requestBody:
+      required: true
+      description: Request body to update well_pressure_bh data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_pressure_bh'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            bhfp: 0.1
+            bhfp_ouom: Lorem Ipsum
+            bhp_method: Lorem Ipsum
+            bh_test_code: Lorem Ipsum
+            datum_pressure: 0.1
+            datum_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            packer_depth: 0.1
+            packer_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pressure_gradient: 0.1
+            pressure_gradient_ouom: Lorem Ipsum
+            recorder_datum: 0.1
+            recorder_datum_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_run_tvd: 0.1
+            reported_run_tvd_ouom: Lorem Ipsum
+            run_depth: 0.1
+            run_depth_ouom: Lorem Ipsum
+            run_depth_temperature: 0.1
+            run_depth_temperature_ouom: Lorem Ipsum
+            shutin_period: 0.1
+            shutin_period_ouom: Lorem Ipsum
+            survey_date: 12/12/2023
+            test_duration: 0.1
+            test_duration_ouom: Lorem Ipsum
+            tubing_size_desc: Lorem Ipsum
+            well_head_pressure: 0.1
+            well_head_pressure_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_pressure_bh data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_pressure_bh data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_pressure_bh data
+    description: Update a new well_pressure_bh data
+    requestBody:
+      required: true
+      description: Request body to update well_pressure_bh data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_pressure_bh'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            bhfp: 0.1
+            bhfp_ouom: Lorem Ipsum
+            bhp_method: Lorem Ipsum
+            bh_test_code: Lorem Ipsum
+            datum_pressure: 0.1
+            datum_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            packer_depth: 0.1
+            packer_depth_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pressure_gradient: 0.1
+            pressure_gradient_ouom: Lorem Ipsum
+            recorder_datum: 0.1
+            recorder_datum_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_run_tvd: 0.1
+            reported_run_tvd_ouom: Lorem Ipsum
+            run_depth: 0.1
+            run_depth_ouom: Lorem Ipsum
+            run_depth_temperature: 0.1
+            run_depth_temperature_ouom: Lorem Ipsum
+            shutin_period: 0.1
+            shutin_period_ouom: Lorem Ipsum
+            survey_date: 12/12/2023
+            test_duration: 0.1
+            test_duration_ouom: Lorem Ipsum
+            tubing_size_desc: Lorem Ipsum
+            well_head_pressure: 0.1
+            well_head_pressure_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_pressure_bh data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_pressure_bh data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_pressure_bh data
+    description: Delete well_pressure_bh data
+    responses:
+      '200':
+        description: well_pressure_bh data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_pressure_bh data was successfully deleted

@@ -1,0 +1,201 @@
+/seis-vessel:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_vessel
+    responses:
+      '200':
+        description: get seis_vessel data to be returned
+        content:
+          application/json:
+            example:
+            - sf_subtype: Lorem Ipsum
+              vessel_id: Lorem Ipsum
+              acqtn_design_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fath_azimuth: 0.1
+              fath_offset: 0.1
+              master_vessel_ind: y
+              offset_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              shot_offset: 0.1
+              slave_vessel_ind: y
+              source: Lorem Ipsum
+              streamer_far_offset: 0.1
+              streamer_near_offset: 0.1
+              vessel_azimuth: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_vessel
+    description: Create a new seis_vessel data
+    requestBody:
+      required: true
+      description: Request body to create seis_vessel data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_vessel'
+          example:
+            sf_subtype: Lorem Ipsum
+            vessel_id: Lorem Ipsum
+            acqtn_design_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fath_azimuth: 0.1
+            fath_offset: 0.1
+            master_vessel_ind: y
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            shot_offset: 0.1
+            slave_vessel_ind: y
+            source: Lorem Ipsum
+            streamer_far_offset: 0.1
+            streamer_near_offset: 0.1
+            vessel_azimuth: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_vessel data is added
+        content:
+          application/json:
+            example:
+              message: The seis_vessel data was successfully added
+/seis-vessel/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_vessel data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_vessel data
+    description: Update a new seis_vessel data
+    requestBody:
+      required: true
+      description: Request body to update seis_vessel data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_vessel'
+          example:
+            sf_subtype: Lorem Ipsum
+            vessel_id: Lorem Ipsum
+            acqtn_design_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fath_azimuth: 0.1
+            fath_offset: 0.1
+            master_vessel_ind: y
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            shot_offset: 0.1
+            slave_vessel_ind: y
+            source: Lorem Ipsum
+            streamer_far_offset: 0.1
+            streamer_near_offset: 0.1
+            vessel_azimuth: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_vessel data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_vessel data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_vessel data
+    description: Update a new seis_vessel data
+    requestBody:
+      required: true
+      description: Request body to update seis_vessel data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_vessel'
+          example:
+            sf_subtype: Lorem Ipsum
+            vessel_id: Lorem Ipsum
+            acqtn_design_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fath_azimuth: 0.1
+            fath_offset: 0.1
+            master_vessel_ind: y
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            shot_offset: 0.1
+            slave_vessel_ind: y
+            source: Lorem Ipsum
+            streamer_far_offset: 0.1
+            streamer_near_offset: 0.1
+            vessel_azimuth: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_vessel data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_vessel data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_vessel data
+    description: Delete seis_vessel data
+    responses:
+      '200':
+        description: seis_vessel data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_vessel data was successfully deleted

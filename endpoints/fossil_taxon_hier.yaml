@@ -1,0 +1,173 @@
+/fossil-taxon-hier:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get fossil_taxon_hier
+    responses:
+      '200':
+        description: get fossil_taxon_hier data to be returned
+        content:
+          application/json:
+            example:
+            - parent_taxon_leaf_id: Lorem Ipsum
+              child_taxon_leaf_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              taxon_name: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new fossil_taxon_hier
+    description: Create a new fossil_taxon_hier data
+    requestBody:
+      required: true
+      description: Request body to create fossil_taxon_hier data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fossil_taxon_hier'
+          example:
+            parent_taxon_leaf_id: Lorem Ipsum
+            child_taxon_leaf_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            taxon_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: fossil_taxon_hier data is added
+        content:
+          application/json:
+            example:
+              message: The fossil_taxon_hier data was successfully added
+/fossil-taxon-hier/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of fossil_taxon_hier data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new fossil_taxon_hier data
+    description: Update a new fossil_taxon_hier data
+    requestBody:
+      required: true
+      description: Request body to update fossil_taxon_hier data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fossil_taxon_hier'
+          example:
+            parent_taxon_leaf_id: Lorem Ipsum
+            child_taxon_leaf_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            taxon_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: fossil_taxon_hier data is completely updated
+        content:
+          application/json:
+            example:
+              message: The fossil_taxon_hier data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new fossil_taxon_hier data
+    description: Update a new fossil_taxon_hier data
+    requestBody:
+      required: true
+      description: Request body to update fossil_taxon_hier data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fossil_taxon_hier'
+          example:
+            parent_taxon_leaf_id: Lorem Ipsum
+            child_taxon_leaf_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            taxon_name: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in fossil_taxon_hier data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in fossil_taxon_hier data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete fossil_taxon_hier data
+    description: Delete fossil_taxon_hier data
+    responses:
+      '200':
+        description: fossil_taxon_hier data is deleted
+        content:
+          application/json:
+            example:
+              message: The fossil_taxon_hier data was successfully deleted

@@ -1,0 +1,169 @@
+/ppdm-vol-meas-regime:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_vol_meas_regime
+    responses:
+      '200':
+        description: get ppdm_vol_meas_regime data to be returned
+        content:
+          application/json:
+            example:
+            - volume_regime_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              owner_ba_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              regime_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_vol_meas_regime
+    description: Create a new ppdm_vol_meas_regime data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_vol_meas_regime data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_vol_meas_regime'
+          example:
+            volume_regime_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            regime_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_vol_meas_regime data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_vol_meas_regime data was successfully added
+/ppdm-vol-meas-regime/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_vol_meas_regime data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_vol_meas_regime data
+    description: Update a new ppdm_vol_meas_regime data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_vol_meas_regime data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_vol_meas_regime'
+          example:
+            volume_regime_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            regime_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_vol_meas_regime data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_vol_meas_regime data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_vol_meas_regime data
+    description: Update a new ppdm_vol_meas_regime data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_vol_meas_regime data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_vol_meas_regime'
+          example:
+            volume_regime_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            regime_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_vol_meas_regime data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_vol_meas_regime data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_vol_meas_regime data
+    description: Delete ppdm_vol_meas_regime data
+    responses:
+      '200':
+        description: ppdm_vol_meas_regime data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_vol_meas_regime data was successfully deleted

@@ -1,0 +1,42 @@
+package dto
+
+type Pden_vol_disposition struct {
+	Pden_subtype           string   `json:"pden_subtype" default:"source"`
+	Pden_id                string   `json:"pden_id" default:"source"`
+	Pden_source            string   `json:"pden_source" default:"source"`
+	Volume_method          string   `json:"volume_method" default:"source"`
+	Activity_type          string   `json:"activity_type" default:"source"`
+	Product_type           string   `json:"product_type" default:"source"`
+	Period_type            string   `json:"period_type" default:"source"`
+	Disposition_obs_no     int      `json:"disposition_obs_no" default:"1"`
+	Amendment_seq_no       int      `json:"amendment_seq_no" default:"1"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Amend_reason           *string  `json:"amend_reason" default:""`
+	Business_associate_id  *string  `json:"business_associate_id" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Posted_date            *string  `json:"posted_date" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Receiving_pden_id      *string  `json:"receiving_pden_id" default:""`
+	Receiving_pden_subtype *string  `json:"receiving_pden_subtype" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Report_ind             *string  `json:"report_ind" default:""`
+	Source                 *string  `json:"source" default:""`
+	Volume                 *float64 `json:"volume" default:""`
+	Volume_end_date        *string  `json:"volume_end_date" default:""`
+	Volume_end_date_desc   *string  `json:"volume_end_date_desc" default:""`
+	Volume_ouom            *string  `json:"volume_ouom" default:""`
+	Volume_period          *float64 `json:"volume_period" default:""`
+	Volume_period_ouom     *string  `json:"volume_period_ouom" default:""`
+	Volume_quality         *float64 `json:"volume_quality" default:""`
+	Volume_quality_ouom    *string  `json:"volume_quality_ouom" default:""`
+	Volume_start_date      *string  `json:"volume_start_date" default:""`
+	Volume_uom             *string  `json:"volume_uom" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

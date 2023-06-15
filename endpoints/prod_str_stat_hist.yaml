@@ -1,0 +1,197 @@
+/prod-str-stat-hist:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get prod_str_stat_hist
+    responses:
+      '200':
+        description: get prod_str_stat_hist data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              prod_string_source: Lorem Ipsum
+              string_id: Lorem Ipsum
+              status_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              end_time: 12/12/2023
+              expiry_date: 12/12/2023
+              percent_capability: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_time: 12/12/2023
+              status: Lorem Ipsum
+              status_date: 12/12/2023
+              status_type: Lorem Ipsum
+              timezone: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new prod_str_stat_hist
+    description: Create a new prod_str_stat_hist data
+    requestBody:
+      required: true
+      description: Request body to create prod_str_stat_hist data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_str_stat_hist'
+          example:
+            uwi: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            status: Lorem Ipsum
+            status_date: 12/12/2023
+            status_type: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_str_stat_hist data is added
+        content:
+          application/json:
+            example:
+              message: The prod_str_stat_hist data was successfully added
+/prod-str-stat-hist/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of prod_str_stat_hist data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new prod_str_stat_hist data
+    description: Update a new prod_str_stat_hist data
+    requestBody:
+      required: true
+      description: Request body to update prod_str_stat_hist data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_str_stat_hist'
+          example:
+            uwi: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            status: Lorem Ipsum
+            status_date: 12/12/2023
+            status_type: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_str_stat_hist data is completely updated
+        content:
+          application/json:
+            example:
+              message: The prod_str_stat_hist data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new prod_str_stat_hist data
+    description: Update a new prod_str_stat_hist data
+    requestBody:
+      required: true
+      description: Request body to update prod_str_stat_hist data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_str_stat_hist'
+          example:
+            uwi: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            status: Lorem Ipsum
+            status_date: 12/12/2023
+            status_type: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in prod_str_stat_hist data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in prod_str_stat_hist data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete prod_str_stat_hist data
+    description: Delete prod_str_stat_hist data
+    responses:
+      '200':
+        description: prod_str_stat_hist data is deleted
+        content:
+          application/json:
+            example:
+              message: The prod_str_stat_hist data was successfully deleted

@@ -1,0 +1,301 @@
+/facility:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get facility
+    responses:
+      '200':
+        description: get facility data to be returned
+        content:
+          application/json:
+            example:
+            - facility_id: Lorem Ipsum
+              facility_type: Lorem Ipsum
+              abandoned_date: 12/12/2023
+              active_date: 12/12/2023
+              active_ind: y
+              catalogue_equip_id: Lorem Ipsum
+              constructed_date: 12/12/2023
+              coord_acquisition_id: Lorem Ipsum
+              coord_system_id: Lorem Ipsum
+              current_operator: Lorem Ipsum
+              depth: 0.1
+              depth_ouom: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              elevation: 0.1
+              elevation_ouom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              facility_diameter: 0.1
+              facility_diameter_ouom: Lorem Ipsum
+              facility_function: Lorem Ipsum
+              facility_long_name: Lorem Ipsum
+              facility_short_name: Lorem Ipsum
+              h2s_ind: y
+              inactive_date: 12/12/2023
+              last_injection_date: 12/12/2023
+              last_production_date: 12/12/2023
+              last_reported_date: 12/12/2023
+              latitude: 0.1
+              local_coord_system_id: Lorem Ipsum
+              longitude: 0.1
+              manufactured_by: Lorem Ipsum
+              on_injection_date: 12/12/2023
+              on_production_date: 12/12/2023
+              pipeline_material: Lorem Ipsum
+              pipeline_type: Lorem Ipsum
+              pipe_cover_type: Lorem Ipsum
+              plot_name: Lorem Ipsum
+              plot_symbol: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              primary_field_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              unit_operated_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new facility
+    description: Create a new facility data
+    requestBody:
+      required: true
+      description: Request body to create facility data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            abandoned_date: 12/12/2023
+            active_date: 12/12/2023
+            active_ind: y
+            catalogue_equip_id: Lorem Ipsum
+            constructed_date: 12/12/2023
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            depth: 0.1
+            depth_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            elevation: 0.1
+            elevation_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            facility_diameter: 0.1
+            facility_diameter_ouom: Lorem Ipsum
+            facility_function: Lorem Ipsum
+            facility_long_name: Lorem Ipsum
+            facility_short_name: Lorem Ipsum
+            h2s_ind: y
+            inactive_date: 12/12/2023
+            last_injection_date: 12/12/2023
+            last_production_date: 12/12/2023
+            last_reported_date: 12/12/2023
+            latitude: 0.1
+            local_coord_system_id: Lorem Ipsum
+            longitude: 0.1
+            manufactured_by: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            pipeline_material: Lorem Ipsum
+            pipeline_type: Lorem Ipsum
+            pipe_cover_type: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_field_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            unit_operated_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility data is added
+        content:
+          application/json:
+            example:
+              message: The facility data was successfully added
+/facility/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of facility data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new facility data
+    description: Update a new facility data
+    requestBody:
+      required: true
+      description: Request body to update facility data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            abandoned_date: 12/12/2023
+            active_date: 12/12/2023
+            active_ind: y
+            catalogue_equip_id: Lorem Ipsum
+            constructed_date: 12/12/2023
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            depth: 0.1
+            depth_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            elevation: 0.1
+            elevation_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            facility_diameter: 0.1
+            facility_diameter_ouom: Lorem Ipsum
+            facility_function: Lorem Ipsum
+            facility_long_name: Lorem Ipsum
+            facility_short_name: Lorem Ipsum
+            h2s_ind: y
+            inactive_date: 12/12/2023
+            last_injection_date: 12/12/2023
+            last_production_date: 12/12/2023
+            last_reported_date: 12/12/2023
+            latitude: 0.1
+            local_coord_system_id: Lorem Ipsum
+            longitude: 0.1
+            manufactured_by: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            pipeline_material: Lorem Ipsum
+            pipeline_type: Lorem Ipsum
+            pipe_cover_type: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_field_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            unit_operated_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility data is completely updated
+        content:
+          application/json:
+            example:
+              message: The facility data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new facility data
+    description: Update a new facility data
+    requestBody:
+      required: true
+      description: Request body to update facility data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            abandoned_date: 12/12/2023
+            active_date: 12/12/2023
+            active_ind: y
+            catalogue_equip_id: Lorem Ipsum
+            constructed_date: 12/12/2023
+            coord_acquisition_id: Lorem Ipsum
+            coord_system_id: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            depth: 0.1
+            depth_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            elevation: 0.1
+            elevation_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            facility_diameter: 0.1
+            facility_diameter_ouom: Lorem Ipsum
+            facility_function: Lorem Ipsum
+            facility_long_name: Lorem Ipsum
+            facility_short_name: Lorem Ipsum
+            h2s_ind: y
+            inactive_date: 12/12/2023
+            last_injection_date: 12/12/2023
+            last_production_date: 12/12/2023
+            last_reported_date: 12/12/2023
+            latitude: 0.1
+            local_coord_system_id: Lorem Ipsum
+            longitude: 0.1
+            manufactured_by: Lorem Ipsum
+            on_injection_date: 12/12/2023
+            on_production_date: 12/12/2023
+            pipeline_material: Lorem Ipsum
+            pipeline_type: Lorem Ipsum
+            pipe_cover_type: Lorem Ipsum
+            plot_name: Lorem Ipsum
+            plot_symbol: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_field_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            unit_operated_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in facility data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in facility data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete facility data
+    description: Delete facility data
+    responses:
+      '200':
+        description: facility data is deleted
+        content:
+          application/json:
+            example:
+              message: The facility data was successfully deleted

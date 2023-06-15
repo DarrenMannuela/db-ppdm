@@ -1,0 +1,197 @@
+/ppdm-vol-meas-conv:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_vol_meas_conv
+    responses:
+      '200':
+        description: get ppdm_vol_meas_conv data to be returned
+        content:
+          application/json:
+            example:
+            - volume_regime_id: Lorem Ipsum
+              conversion_quantity: Lorem Ipsum
+              active_ind: y
+              conversion_factor: 0.1
+              conversion_formula: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              from_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferrred_ind: y
+              pressure: 0.1
+              pressure_uom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              temperature: 0.1
+              temperature_uom: Lorem Ipsum
+              to_uom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_vol_meas_conv
+    description: Create a new ppdm_vol_meas_conv data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_vol_meas_conv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_vol_meas_conv'
+          example:
+            volume_regime_id: Lorem Ipsum
+            conversion_quantity: Lorem Ipsum
+            active_ind: y
+            conversion_factor: 0.1
+            conversion_formula: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            from_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferrred_ind: y
+            pressure: 0.1
+            pressure_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            temperature: 0.1
+            temperature_uom: Lorem Ipsum
+            to_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_vol_meas_conv data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_vol_meas_conv data was successfully added
+/ppdm-vol-meas-conv/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_vol_meas_conv data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_vol_meas_conv data
+    description: Update a new ppdm_vol_meas_conv data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_vol_meas_conv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_vol_meas_conv'
+          example:
+            volume_regime_id: Lorem Ipsum
+            conversion_quantity: Lorem Ipsum
+            active_ind: y
+            conversion_factor: 0.1
+            conversion_formula: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            from_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferrred_ind: y
+            pressure: 0.1
+            pressure_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            temperature: 0.1
+            temperature_uom: Lorem Ipsum
+            to_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_vol_meas_conv data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_vol_meas_conv data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_vol_meas_conv data
+    description: Update a new ppdm_vol_meas_conv data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_vol_meas_conv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_vol_meas_conv'
+          example:
+            volume_regime_id: Lorem Ipsum
+            conversion_quantity: Lorem Ipsum
+            active_ind: y
+            conversion_factor: 0.1
+            conversion_formula: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            from_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferrred_ind: y
+            pressure: 0.1
+            pressure_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            temperature: 0.1
+            temperature_uom: Lorem Ipsum
+            to_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_vol_meas_conv data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_vol_meas_conv data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_vol_meas_conv data
+    description: Delete ppdm_vol_meas_conv data
+    responses:
+      '200':
+        description: ppdm_vol_meas_conv data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_vol_meas_conv data was successfully deleted

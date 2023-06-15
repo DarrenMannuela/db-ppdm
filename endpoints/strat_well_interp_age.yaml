@@ -1,0 +1,273 @@
+/strat-well-interp-age:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get strat_well_interp_age
+    responses:
+      '200':
+        description: get strat_well_interp_age data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              age_source: Lorem Ipsum
+              age_id: Lorem Ipsum
+              active_ind: y
+              average_age: 0.1
+              average_age_error_minus: 0.1
+              average_age_error_plus: 0.1
+              average_rel_strat_name_set: Lorem Ipsum
+              average_rel_strat_unit_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              lower_max_age: 0.1
+              lower_max_age_error_minus: 0.1
+              lower_max_age_error_plus: 0.1
+              lower_min_age: 0.1
+              lower_min_age_error_minus: 0.1
+              lower_min_age_error_plus: 0.1
+              lower_rel_strat_name_set: Lorem Ipsum
+              lower_rel_strat_unit_id: Lorem Ipsum
+              post_qualifier: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              pre_qualifier: Lorem Ipsum
+              remark: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              strat_age_method: Lorem Ipsum
+              upper_max_age: 0.1
+              upper_max_age_error_minus: 0.1
+              upper_max_age_error_plus: 0.1
+              upper_min_age: 0.1
+              upper_min_age_error_minus: 0.1
+              upper_min_age_error_plus: 0.1
+              upper_rel_strat_name_set: Lorem Ipsum
+              upper_rel_strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new strat_well_interp_age
+    description: Create a new strat_well_interp_age data
+    requestBody:
+      required: true
+      description: Request body to create strat_well_interp_age data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_well_interp_age'
+          example:
+            uwi: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            age_source: Lorem Ipsum
+            age_id: Lorem Ipsum
+            active_ind: y
+            average_age: 0.1
+            average_age_error_minus: 0.1
+            average_age_error_plus: 0.1
+            average_rel_strat_name_set: Lorem Ipsum
+            average_rel_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lower_max_age: 0.1
+            lower_max_age_error_minus: 0.1
+            lower_max_age_error_plus: 0.1
+            lower_min_age: 0.1
+            lower_min_age_error_minus: 0.1
+            lower_min_age_error_plus: 0.1
+            lower_rel_strat_name_set: Lorem Ipsum
+            lower_rel_strat_unit_id: Lorem Ipsum
+            post_qualifier: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            pre_qualifier: Lorem Ipsum
+            remark: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_age_method: Lorem Ipsum
+            upper_max_age: 0.1
+            upper_max_age_error_minus: 0.1
+            upper_max_age_error_plus: 0.1
+            upper_min_age: 0.1
+            upper_min_age_error_minus: 0.1
+            upper_min_age_error_plus: 0.1
+            upper_rel_strat_name_set: Lorem Ipsum
+            upper_rel_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_well_interp_age data is added
+        content:
+          application/json:
+            example:
+              message: The strat_well_interp_age data was successfully added
+/strat-well-interp-age/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of strat_well_interp_age data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new strat_well_interp_age data
+    description: Update a new strat_well_interp_age data
+    requestBody:
+      required: true
+      description: Request body to update strat_well_interp_age data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_well_interp_age'
+          example:
+            uwi: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            age_source: Lorem Ipsum
+            age_id: Lorem Ipsum
+            active_ind: y
+            average_age: 0.1
+            average_age_error_minus: 0.1
+            average_age_error_plus: 0.1
+            average_rel_strat_name_set: Lorem Ipsum
+            average_rel_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lower_max_age: 0.1
+            lower_max_age_error_minus: 0.1
+            lower_max_age_error_plus: 0.1
+            lower_min_age: 0.1
+            lower_min_age_error_minus: 0.1
+            lower_min_age_error_plus: 0.1
+            lower_rel_strat_name_set: Lorem Ipsum
+            lower_rel_strat_unit_id: Lorem Ipsum
+            post_qualifier: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            pre_qualifier: Lorem Ipsum
+            remark: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_age_method: Lorem Ipsum
+            upper_max_age: 0.1
+            upper_max_age_error_minus: 0.1
+            upper_max_age_error_plus: 0.1
+            upper_min_age: 0.1
+            upper_min_age_error_minus: 0.1
+            upper_min_age_error_plus: 0.1
+            upper_rel_strat_name_set: Lorem Ipsum
+            upper_rel_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_well_interp_age data is completely updated
+        content:
+          application/json:
+            example:
+              message: The strat_well_interp_age data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new strat_well_interp_age data
+    description: Update a new strat_well_interp_age data
+    requestBody:
+      required: true
+      description: Request body to update strat_well_interp_age data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_well_interp_age'
+          example:
+            uwi: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            age_source: Lorem Ipsum
+            age_id: Lorem Ipsum
+            active_ind: y
+            average_age: 0.1
+            average_age_error_minus: 0.1
+            average_age_error_plus: 0.1
+            average_rel_strat_name_set: Lorem Ipsum
+            average_rel_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lower_max_age: 0.1
+            lower_max_age_error_minus: 0.1
+            lower_max_age_error_plus: 0.1
+            lower_min_age: 0.1
+            lower_min_age_error_minus: 0.1
+            lower_min_age_error_plus: 0.1
+            lower_rel_strat_name_set: Lorem Ipsum
+            lower_rel_strat_unit_id: Lorem Ipsum
+            post_qualifier: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            pre_qualifier: Lorem Ipsum
+            remark: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_age_method: Lorem Ipsum
+            upper_max_age: 0.1
+            upper_max_age_error_minus: 0.1
+            upper_max_age_error_plus: 0.1
+            upper_min_age: 0.1
+            upper_min_age_error_minus: 0.1
+            upper_min_age_error_plus: 0.1
+            upper_rel_strat_name_set: Lorem Ipsum
+            upper_rel_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in strat_well_interp_age data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in strat_well_interp_age data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete strat_well_interp_age data
+    description: Delete strat_well_interp_age data
+    responses:
+      '200':
+        description: strat_well_interp_age data is deleted
+        content:
+          application/json:
+            example:
+              message: The strat_well_interp_age data was successfully deleted

@@ -1,0 +1,169 @@
+/int-set-xref:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get int_set_xref
+    responses:
+      '200':
+        description: get int_set_xref data to be returned
+        content:
+          application/json:
+            example:
+            - active_ind: y
+              contract_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              partner_ba_id: Lorem Ipsum
+              partner_ba_id_2: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              provision_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new int_set_xref
+    description: Create a new int_set_xref data
+    requestBody:
+      required: true
+      description: Request body to create int_set_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_xref'
+          example:
+            active_ind: y
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            partner_ba_id: Lorem Ipsum
+            partner_ba_id_2: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: int_set_xref data is added
+        content:
+          application/json:
+            example:
+              message: The int_set_xref data was successfully added
+/int-set-xref/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of int_set_xref data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new int_set_xref data
+    description: Update a new int_set_xref data
+    requestBody:
+      required: true
+      description: Request body to update int_set_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_xref'
+          example:
+            active_ind: y
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            partner_ba_id: Lorem Ipsum
+            partner_ba_id_2: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: int_set_xref data is completely updated
+        content:
+          application/json:
+            example:
+              message: The int_set_xref data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new int_set_xref data
+    description: Update a new int_set_xref data
+    requestBody:
+      required: true
+      description: Request body to update int_set_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_xref'
+          example:
+            active_ind: y
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            partner_ba_id: Lorem Ipsum
+            partner_ba_id_2: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in int_set_xref data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in int_set_xref data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete int_set_xref data
+    description: Delete int_set_xref data
+    responses:
+      '200':
+        description: int_set_xref data is deleted
+        content:
+          application/json:
+            example:
+              message: The int_set_xref data was successfully deleted

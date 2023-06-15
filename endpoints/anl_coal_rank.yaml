@@ -1,0 +1,197 @@
+/anl-coal-rank:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_coal_rank
+    responses:
+      '200':
+        description: get anl_coal_rank data to be returned
+        content:
+          application/json:
+            example:
+            - coal_rank_id: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              coal_rank_scheme_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_coal_rank
+    description: Create a new anl_coal_rank data
+    requestBody:
+      required: true
+      description: Request body to create anl_coal_rank data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_coal_rank'
+          example:
+            coal_rank_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            coal_rank_scheme_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_coal_rank data is added
+        content:
+          application/json:
+            example:
+              message: The anl_coal_rank data was successfully added
+/anl-coal-rank/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_coal_rank data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_coal_rank data
+    description: Update a new anl_coal_rank data
+    requestBody:
+      required: true
+      description: Request body to update anl_coal_rank data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_coal_rank'
+          example:
+            coal_rank_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            coal_rank_scheme_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_coal_rank data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_coal_rank data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_coal_rank data
+    description: Update a new anl_coal_rank data
+    requestBody:
+      required: true
+      description: Request body to update anl_coal_rank data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_coal_rank'
+          example:
+            coal_rank_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            coal_rank_scheme_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_coal_rank data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_coal_rank data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_coal_rank data
+    description: Delete anl_coal_rank data
+    responses:
+      '200':
+        description: anl_coal_rank data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_coal_rank data was successfully deleted

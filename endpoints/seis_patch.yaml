@@ -1,0 +1,177 @@
+/seis-patch:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_patch
+    responses:
+      '200':
+        description: get seis_patch data to be returned
+        content:
+          application/json:
+            example:
+            - patch_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              patch_layout: Lorem Ipsum
+              patch_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              roll_along_method: Lorem Ipsum
+              shot_gap_ind: y
+              source: Lorem Ipsum
+              symmetric_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_patch
+    description: Create a new seis_patch data
+    requestBody:
+      required: true
+      description: Request body to create seis_patch data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_patch'
+          example:
+            patch_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            patch_layout: Lorem Ipsum
+            patch_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            roll_along_method: Lorem Ipsum
+            shot_gap_ind: y
+            source: Lorem Ipsum
+            symmetric_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_patch data is added
+        content:
+          application/json:
+            example:
+              message: The seis_patch data was successfully added
+/seis-patch/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_patch data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_patch data
+    description: Update a new seis_patch data
+    requestBody:
+      required: true
+      description: Request body to update seis_patch data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_patch'
+          example:
+            patch_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            patch_layout: Lorem Ipsum
+            patch_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            roll_along_method: Lorem Ipsum
+            shot_gap_ind: y
+            source: Lorem Ipsum
+            symmetric_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_patch data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_patch data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_patch data
+    description: Update a new seis_patch data
+    requestBody:
+      required: true
+      description: Request body to update seis_patch data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_patch'
+          example:
+            patch_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            patch_layout: Lorem Ipsum
+            patch_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            roll_along_method: Lorem Ipsum
+            shot_gap_ind: y
+            source: Lorem Ipsum
+            symmetric_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_patch data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_patch data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_patch data
+    description: Delete seis_patch data
+    responses:
+      '200':
+        description: seis_patch data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_patch data was successfully deleted

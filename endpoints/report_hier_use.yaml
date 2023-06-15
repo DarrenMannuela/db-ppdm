@@ -1,0 +1,189 @@
+/report-hier-use:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get report_hier_use
+    responses:
+      '200':
+        description: get report_hier_use data to be returned
+        content:
+          application/json:
+            example:
+            - report_hierarchy_id: Lorem Ipsum
+              component_id: Lorem Ipsum
+              active_ind: y
+              contribution_percent: 0.1
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              pden_id: Lorem Ipsum
+              pden_source: Lorem Ipsum
+              pden_subtype: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              report_ind: y
+              resent_id: Lorem Ipsum
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new report_hier_use
+    description: Create a new report_hier_use data
+    requestBody:
+      required: true
+      description: Request body to create report_hier_use data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/report_hier_use'
+          example:
+            report_hierarchy_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            contribution_percent: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            resent_id: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: report_hier_use data is added
+        content:
+          application/json:
+            example:
+              message: The report_hier_use data was successfully added
+/report-hier-use/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of report_hier_use data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new report_hier_use data
+    description: Update a new report_hier_use data
+    requestBody:
+      required: true
+      description: Request body to update report_hier_use data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/report_hier_use'
+          example:
+            report_hierarchy_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            contribution_percent: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            resent_id: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: report_hier_use data is completely updated
+        content:
+          application/json:
+            example:
+              message: The report_hier_use data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new report_hier_use data
+    description: Update a new report_hier_use data
+    requestBody:
+      required: true
+      description: Request body to update report_hier_use data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/report_hier_use'
+          example:
+            report_hierarchy_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            contribution_percent: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_ind: y
+            resent_id: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in report_hier_use data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in report_hier_use data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete report_hier_use data
+    description: Delete report_hier_use data
+    responses:
+      '200':
+        description: report_hier_use data is deleted
+        content:
+          application/json:
+            example:
+              message: The report_hier_use data was successfully deleted

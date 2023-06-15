@@ -1,0 +1,161 @@
+/rest-activity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rest_activity
+    responses:
+      '200':
+        description: get rest_activity data to be returned
+        content:
+          application/json:
+            example:
+            - restriction_id: Lorem Ipsum
+              restricted_activity: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rest_activity
+    description: Create a new rest_activity data
+    requestBody:
+      required: true
+      description: Request body to create rest_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_activity'
+          example:
+            restriction_id: Lorem Ipsum
+            restricted_activity: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rest_activity data is added
+        content:
+          application/json:
+            example:
+              message: The rest_activity data was successfully added
+/rest-activity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rest_activity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rest_activity data
+    description: Update a new rest_activity data
+    requestBody:
+      required: true
+      description: Request body to update rest_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_activity'
+          example:
+            restriction_id: Lorem Ipsum
+            restricted_activity: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rest_activity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rest_activity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rest_activity data
+    description: Update a new rest_activity data
+    requestBody:
+      required: true
+      description: Request body to update rest_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_activity'
+          example:
+            restriction_id: Lorem Ipsum
+            restricted_activity: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rest_activity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rest_activity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rest_activity data
+    description: Delete rest_activity data
+    responses:
+      '200':
+        description: rest_activity data is deleted
+        content:
+          application/json:
+            example:
+              message: The rest_activity data was successfully deleted

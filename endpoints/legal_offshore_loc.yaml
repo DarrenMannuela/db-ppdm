@@ -1,0 +1,285 @@
+/legal-offshore-loc:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get legal_offshore_loc
+    responses:
+      '200':
+        description: get legal_offshore_loc data to be returned
+        content:
+          application/json:
+            example:
+            - legal_offshore_loc_id: Lorem Ipsum
+              location_type: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              block_addition: y
+              block_modifier: y
+              coord_system_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              ew_footage: 0.1
+              ew_footage_ouom: Lorem Ipsum
+              ew_start_line: Lorem Ipsum
+              expiry_date: 12/12/2023
+              footage_origin: Lorem Ipsum
+              governing_agency_ba_id: Lorem Ipsum
+              grid_block_ew: Lorem Ipsum
+              grid_block_ns: Lorem Ipsum
+              grid_block_range: 1.0
+              grid_block_tier: 1.0
+              ns_footage: 0.1
+              ns_footage_ouom: Lorem Ipsum
+              ns_start_line: Lorem Ipsum
+              ocs_num: Lorem Ipsum
+              offshore_area_code: Lorem Ipsum
+              offshore_block: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              projected_ew_direction: Lorem Ipsum
+              projected_meridian: Lorem Ipsum
+              projected_ns_direction: Lorem Ipsum
+              projected_range: 0.1
+              projected_section: 0.1
+              projected_township: 0.1
+              remark: Lorem Ipsum
+              scaled_footage_ind: y
+              utm_quadrant: Lorem Ipsum
+              uwi: Lorem Ipsum
+              water_bottom_zone: Lorem Ipsum
+              well_node_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new legal_offshore_loc
+    description: Create a new legal_offshore_loc data
+    requestBody:
+      required: true
+      description: Request body to create legal_offshore_loc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/legal_offshore_loc'
+          example:
+            legal_offshore_loc_id: Lorem Ipsum
+            location_type: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            block_addition: y
+            block_modifier: y
+            coord_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            ew_footage: 0.1
+            ew_footage_ouom: Lorem Ipsum
+            ew_start_line: Lorem Ipsum
+            expiry_date: 12/12/2023
+            footage_origin: Lorem Ipsum
+            governing_agency_ba_id: Lorem Ipsum
+            grid_block_ew: Lorem Ipsum
+            grid_block_ns: Lorem Ipsum
+            grid_block_range: 1.0
+            grid_block_tier: 1.0
+            ns_footage: 0.1
+            ns_footage_ouom: Lorem Ipsum
+            ns_start_line: Lorem Ipsum
+            ocs_num: Lorem Ipsum
+            offshore_area_code: Lorem Ipsum
+            offshore_block: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            projected_ew_direction: Lorem Ipsum
+            projected_meridian: Lorem Ipsum
+            projected_ns_direction: Lorem Ipsum
+            projected_range: 0.1
+            projected_section: 0.1
+            projected_township: 0.1
+            remark: Lorem Ipsum
+            scaled_footage_ind: y
+            utm_quadrant: Lorem Ipsum
+            uwi: Lorem Ipsum
+            water_bottom_zone: Lorem Ipsum
+            well_node_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: legal_offshore_loc data is added
+        content:
+          application/json:
+            example:
+              message: The legal_offshore_loc data was successfully added
+/legal-offshore-loc/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of legal_offshore_loc data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new legal_offshore_loc data
+    description: Update a new legal_offshore_loc data
+    requestBody:
+      required: true
+      description: Request body to update legal_offshore_loc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/legal_offshore_loc'
+          example:
+            legal_offshore_loc_id: Lorem Ipsum
+            location_type: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            block_addition: y
+            block_modifier: y
+            coord_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            ew_footage: 0.1
+            ew_footage_ouom: Lorem Ipsum
+            ew_start_line: Lorem Ipsum
+            expiry_date: 12/12/2023
+            footage_origin: Lorem Ipsum
+            governing_agency_ba_id: Lorem Ipsum
+            grid_block_ew: Lorem Ipsum
+            grid_block_ns: Lorem Ipsum
+            grid_block_range: 1.0
+            grid_block_tier: 1.0
+            ns_footage: 0.1
+            ns_footage_ouom: Lorem Ipsum
+            ns_start_line: Lorem Ipsum
+            ocs_num: Lorem Ipsum
+            offshore_area_code: Lorem Ipsum
+            offshore_block: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            projected_ew_direction: Lorem Ipsum
+            projected_meridian: Lorem Ipsum
+            projected_ns_direction: Lorem Ipsum
+            projected_range: 0.1
+            projected_section: 0.1
+            projected_township: 0.1
+            remark: Lorem Ipsum
+            scaled_footage_ind: y
+            utm_quadrant: Lorem Ipsum
+            uwi: Lorem Ipsum
+            water_bottom_zone: Lorem Ipsum
+            well_node_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: legal_offshore_loc data is completely updated
+        content:
+          application/json:
+            example:
+              message: The legal_offshore_loc data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new legal_offshore_loc data
+    description: Update a new legal_offshore_loc data
+    requestBody:
+      required: true
+      description: Request body to update legal_offshore_loc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/legal_offshore_loc'
+          example:
+            legal_offshore_loc_id: Lorem Ipsum
+            location_type: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            block_addition: y
+            block_modifier: y
+            coord_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            ew_footage: 0.1
+            ew_footage_ouom: Lorem Ipsum
+            ew_start_line: Lorem Ipsum
+            expiry_date: 12/12/2023
+            footage_origin: Lorem Ipsum
+            governing_agency_ba_id: Lorem Ipsum
+            grid_block_ew: Lorem Ipsum
+            grid_block_ns: Lorem Ipsum
+            grid_block_range: 1.0
+            grid_block_tier: 1.0
+            ns_footage: 0.1
+            ns_footage_ouom: Lorem Ipsum
+            ns_start_line: Lorem Ipsum
+            ocs_num: Lorem Ipsum
+            offshore_area_code: Lorem Ipsum
+            offshore_block: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            projected_ew_direction: Lorem Ipsum
+            projected_meridian: Lorem Ipsum
+            projected_ns_direction: Lorem Ipsum
+            projected_range: 0.1
+            projected_section: 0.1
+            projected_township: 0.1
+            remark: Lorem Ipsum
+            scaled_footage_ind: y
+            utm_quadrant: Lorem Ipsum
+            uwi: Lorem Ipsum
+            water_bottom_zone: Lorem Ipsum
+            well_node_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in legal_offshore_loc data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in legal_offshore_loc data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete legal_offshore_loc data
+    description: Delete legal_offshore_loc data
+    responses:
+      '200':
+        description: legal_offshore_loc data is deleted
+        content:
+          application/json:
+            example:
+              message: The legal_offshore_loc data was successfully deleted

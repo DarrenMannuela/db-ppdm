@@ -1,0 +1,185 @@
+/class-level-type:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get class_level_type
+    responses:
+      '200':
+        description: get class_level_type data to be returned
+        content:
+          application/json:
+            example:
+            - classification_system_id: Lorem Ipsum
+              level_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              ppdm_system_id: Lorem Ipsum
+              ppdm_table_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              selection_criteria: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new class_level_type
+    description: Create a new class_level_type data
+    requestBody:
+      required: true
+      description: Request body to create class_level_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/class_level_type'
+          example:
+            classification_system_id: Lorem Ipsum
+            level_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            ppdm_system_id: Lorem Ipsum
+            ppdm_table_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            selection_criteria: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: class_level_type data is added
+        content:
+          application/json:
+            example:
+              message: The class_level_type data was successfully added
+/class-level-type/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of class_level_type data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new class_level_type data
+    description: Update a new class_level_type data
+    requestBody:
+      required: true
+      description: Request body to update class_level_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/class_level_type'
+          example:
+            classification_system_id: Lorem Ipsum
+            level_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            ppdm_system_id: Lorem Ipsum
+            ppdm_table_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            selection_criteria: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: class_level_type data is completely updated
+        content:
+          application/json:
+            example:
+              message: The class_level_type data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new class_level_type data
+    description: Update a new class_level_type data
+    requestBody:
+      required: true
+      description: Request body to update class_level_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/class_level_type'
+          example:
+            classification_system_id: Lorem Ipsum
+            level_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            ppdm_system_id: Lorem Ipsum
+            ppdm_table_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            selection_criteria: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in class_level_type data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in class_level_type data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete class_level_type data
+    description: Delete class_level_type data
+    responses:
+      '200':
+        description: class_level_type data is deleted
+        content:
+          application/json:
+            example:
+              message: The class_level_type data was successfully deleted

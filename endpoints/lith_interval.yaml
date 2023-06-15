@@ -1,0 +1,201 @@
+/lith-interval:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_interval
+    responses:
+      '200':
+        description: get lith_interval data to be returned
+        content:
+          application/json:
+            example:
+            - lithology_log_id: Lorem Ipsum
+              lith_log_source: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              cycle_bed: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              no_data_desc: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              sample_id: Lorem Ipsum
+              sample_quality: Lorem Ipsum
+              structure_type: Lorem Ipsum
+              thin_bed_ind: y
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_interval
+    description: Create a new lith_interval data
+    requestBody:
+      required: true
+      description: Request body to create lith_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_interval'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            cycle_bed: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            no_data_desc: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            sample_id: Lorem Ipsum
+            sample_quality: Lorem Ipsum
+            structure_type: Lorem Ipsum
+            thin_bed_ind: y
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_interval data is added
+        content:
+          application/json:
+            example:
+              message: The lith_interval data was successfully added
+/lith-interval/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_interval data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_interval data
+    description: Update a new lith_interval data
+    requestBody:
+      required: true
+      description: Request body to update lith_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_interval'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            cycle_bed: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            no_data_desc: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            sample_id: Lorem Ipsum
+            sample_quality: Lorem Ipsum
+            structure_type: Lorem Ipsum
+            thin_bed_ind: y
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_interval data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_interval data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_interval data
+    description: Update a new lith_interval data
+    requestBody:
+      required: true
+      description: Request body to update lith_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_interval'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            cycle_bed: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            no_data_desc: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            sample_id: Lorem Ipsum
+            sample_quality: Lorem Ipsum
+            structure_type: Lorem Ipsum
+            thin_bed_ind: y
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_interval data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_interval data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_interval data
+    description: Delete lith_interval data
+    responses:
+      '200':
+        description: lith_interval data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_interval data was successfully deleted

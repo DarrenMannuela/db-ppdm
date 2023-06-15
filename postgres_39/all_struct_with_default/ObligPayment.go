@@ -1,0 +1,49 @@
+package dto
+
+type Oblig_payment struct {
+	Obligation_id             string   `json:"obligation_id" default:"source"`
+	Obligation_seq_no         int      `json:"obligation_seq_no" default:"1"`
+	Payee_payor_ba_id         string   `json:"payee_payor_ba_id" default:"source"`
+	Payee_payor               string   `json:"payee_payor" default:"source"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Cheque_remark             *string  `json:"cheque_remark" default:""`
+	Contract_id               *string  `json:"contract_id" default:""`
+	Currency_conversion       *float64 `json:"currency_conversion" default:""`
+	Currency_ouom             *string  `json:"currency_ouom" default:""`
+	Currency_uom              *string  `json:"currency_uom" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Gross_cost                *float64 `json:"gross_cost" default:""`
+	Invoice_amount            *float64 `json:"invoice_amount" default:""`
+	Invoice_num               *string  `json:"invoice_num" default:""`
+	Land_rental_type          *string  `json:"land_rental_type" default:""`
+	Net_cost                  *float64 `json:"net_cost" default:""`
+	Payment_due_date          *string  `json:"payment_due_date" default:""`
+	Payment_ind               *string  `json:"payment_ind" default:""`
+	Payment_instruction_id    *string  `json:"payment_instruction_id" default:""`
+	Payment_type              *string  `json:"payment_type" default:""`
+	Pay_method                *string  `json:"pay_method" default:""`
+	Percent_of_gross          *float64 `json:"percent_of_gross" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Provision_id              *string  `json:"provision_id" default:""`
+	Rate_schedule_id          *string  `json:"rate_schedule_id" default:""`
+	Rate_type                 *string  `json:"rate_type" default:""`
+	Receipt_ind               *string  `json:"receipt_ind" default:""`
+	Related_obligation_id     *string  `json:"related_obligation_id" default:""`
+	Related_obligation_seq_no *int     `json:"related_obligation_seq_no" default:""`
+	Related_oblig_ba_id       *string  `json:"related_oblig_ba_id" default:""`
+	Related_oblig_payee_payor *string  `json:"related_oblig_payee_payor" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Royalty_type              *string  `json:"royalty_type" default:""`
+	Source                    *string  `json:"source" default:""`
+	Stop_payment_ind          *string  `json:"stop_payment_ind" default:""`
+	Substance_id              *string  `json:"substance_id" default:""`
+	Substance_seq_no          *int     `json:"substance_seq_no" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

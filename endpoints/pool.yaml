@@ -1,0 +1,201 @@
+/pool:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get pool
+    responses:
+      '200':
+        description: get pool data to be returned
+        content:
+          application/json:
+            example:
+            - pool_id: Lorem Ipsum
+              active_ind: y
+              business_associate_id: Lorem Ipsum
+              current_status_date: 12/12/2023
+              discovery_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_id: Lorem Ipsum
+              pool_code: Lorem Ipsum
+              pool_name: Lorem Ipsum
+              pool_name_abbreviation: Lorem Ipsum
+              pool_status: Lorem Ipsum
+              pool_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new pool
+    description: Create a new pool data
+    requestBody:
+      required: true
+      description: Request body to create pool data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pool'
+          example:
+            pool_id: Lorem Ipsum
+            active_ind: y
+            business_associate_id: Lorem Ipsum
+            current_status_date: 12/12/2023
+            discovery_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            pool_code: Lorem Ipsum
+            pool_name: Lorem Ipsum
+            pool_name_abbreviation: Lorem Ipsum
+            pool_status: Lorem Ipsum
+            pool_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pool data is added
+        content:
+          application/json:
+            example:
+              message: The pool data was successfully added
+/pool/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of pool data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new pool data
+    description: Update a new pool data
+    requestBody:
+      required: true
+      description: Request body to update pool data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pool'
+          example:
+            pool_id: Lorem Ipsum
+            active_ind: y
+            business_associate_id: Lorem Ipsum
+            current_status_date: 12/12/2023
+            discovery_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            pool_code: Lorem Ipsum
+            pool_name: Lorem Ipsum
+            pool_name_abbreviation: Lorem Ipsum
+            pool_status: Lorem Ipsum
+            pool_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pool data is completely updated
+        content:
+          application/json:
+            example:
+              message: The pool data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new pool data
+    description: Update a new pool data
+    requestBody:
+      required: true
+      description: Request body to update pool data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pool'
+          example:
+            pool_id: Lorem Ipsum
+            active_ind: y
+            business_associate_id: Lorem Ipsum
+            current_status_date: 12/12/2023
+            discovery_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            pool_code: Lorem Ipsum
+            pool_name: Lorem Ipsum
+            pool_name_abbreviation: Lorem Ipsum
+            pool_status: Lorem Ipsum
+            pool_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in pool data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in pool data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete pool data
+    description: Delete pool data
+    responses:
+      '200':
+        description: pool data is deleted
+        content:
+          application/json:
+            example:
+              message: The pool data was successfully deleted

@@ -1,0 +1,43 @@
+package dto
+
+type Anl_valid_measure struct {
+	Method_set_id          string   `json:"method_set_id" default:"source"`
+	Method_id              string   `json:"method_id" default:"source"`
+	Measurement_type       string   `json:"measurement_type" default:"source"`
+	Valid_value_obs_no     int      `json:"valid_value_obs_no" default:"1"`
+	Accuracy_type          *string  `json:"accuracy_type" default:""`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Average_ratio_value    *float64 `json:"average_ratio_value" default:""`
+	Average_value          *float64 `json:"average_value" default:""`
+	Average_value_ouom     *string  `json:"average_value_ouom" default:""`
+	Average_value_uom      *string  `json:"average_value_uom" default:""`
+	Calculate_method_id    *string  `json:"calculate_method_id" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Maximum_ratio_value    *float64 `json:"maximum_ratio_value" default:""`
+	Max_value              *float64 `json:"max_value" default:""`
+	Max_value_ouom         *string  `json:"max_value_ouom" default:""`
+	Max_value_uom          *string  `json:"max_value_uom" default:""`
+	Minimum_ratio_value    *float64 `json:"minimum_ratio_value" default:""`
+	Min_value              *float64 `json:"min_value" default:""`
+	Min_value_ouom         *string  `json:"min_value_ouom" default:""`
+	Min_value_uom          *string  `json:"min_value_uom" default:""`
+	Missing_representation *string  `json:"missing_representation" default:""`
+	Null_representation    *string  `json:"null_representation" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Reference_value        *float64 `json:"reference_value" default:""`
+	Reference_value_ouom   *string  `json:"reference_value_ouom" default:""`
+	Reference_value_uom    *string  `json:"reference_value_uom" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Source                 *string  `json:"source" default:""`
+	Substance_id           *string  `json:"substance_id" default:""`
+	Valid_desc             *string  `json:"valid_desc" default:""`
+	Valid_value_text       *string  `json:"valid_value_text" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

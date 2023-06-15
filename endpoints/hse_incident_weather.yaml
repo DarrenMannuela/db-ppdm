@@ -1,0 +1,213 @@
+/hse-incident-weather:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get hse_incident_weather
+    responses:
+      '200':
+        description: get hse_incident_weather data to be returned
+        content:
+          application/json:
+            example:
+            - incident_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              heave: 0.1
+              pitch: 0.1
+              ppdm_guid: Lorem Ipsum
+              recorded_time: 12/12/2023
+              recorded_timezone: Lorem Ipsum
+              remark: Lorem Ipsum
+              road_condition: Lorem Ipsum
+              roll: 0.1
+              source: Lorem Ipsum
+              swell_height: 0.1
+              temperature: 0.1
+              temperature_ouom: Lorem Ipsum
+              water_condition: Lorem Ipsum
+              wave_height: 0.1
+              weather_condition: Lorem Ipsum
+              wind_direction: Lorem Ipsum
+              wind_strength: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new hse_incident_weather
+    description: Create a new hse_incident_weather data
+    requestBody:
+      required: true
+      description: Request body to create hse_incident_weather data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident_weather'
+          example:
+            incident_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            heave: 0.1
+            pitch: 0.1
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_condition: Lorem Ipsum
+            roll: 0.1
+            source: Lorem Ipsum
+            swell_height: 0.1
+            temperature: 0.1
+            temperature_ouom: Lorem Ipsum
+            water_condition: Lorem Ipsum
+            wave_height: 0.1
+            weather_condition: Lorem Ipsum
+            wind_direction: Lorem Ipsum
+            wind_strength: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: hse_incident_weather data is added
+        content:
+          application/json:
+            example:
+              message: The hse_incident_weather data was successfully added
+/hse-incident-weather/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of hse_incident_weather data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new hse_incident_weather data
+    description: Update a new hse_incident_weather data
+    requestBody:
+      required: true
+      description: Request body to update hse_incident_weather data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident_weather'
+          example:
+            incident_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            heave: 0.1
+            pitch: 0.1
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_condition: Lorem Ipsum
+            roll: 0.1
+            source: Lorem Ipsum
+            swell_height: 0.1
+            temperature: 0.1
+            temperature_ouom: Lorem Ipsum
+            water_condition: Lorem Ipsum
+            wave_height: 0.1
+            weather_condition: Lorem Ipsum
+            wind_direction: Lorem Ipsum
+            wind_strength: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: hse_incident_weather data is completely updated
+        content:
+          application/json:
+            example:
+              message: The hse_incident_weather data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new hse_incident_weather data
+    description: Update a new hse_incident_weather data
+    requestBody:
+      required: true
+      description: Request body to update hse_incident_weather data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/hse_incident_weather'
+          example:
+            incident_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            heave: 0.1
+            pitch: 0.1
+            ppdm_guid: Lorem Ipsum
+            recorded_time: 12/12/2023
+            recorded_timezone: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_condition: Lorem Ipsum
+            roll: 0.1
+            source: Lorem Ipsum
+            swell_height: 0.1
+            temperature: 0.1
+            temperature_ouom: Lorem Ipsum
+            water_condition: Lorem Ipsum
+            wave_height: 0.1
+            weather_condition: Lorem Ipsum
+            wind_direction: Lorem Ipsum
+            wind_strength: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in hse_incident_weather data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in hse_incident_weather data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete hse_incident_weather data
+    description: Delete hse_incident_weather data
+    responses:
+      '200':
+        description: hse_incident_weather data is deleted
+        content:
+          application/json:
+            example:
+              message: The hse_incident_weather data was successfully deleted

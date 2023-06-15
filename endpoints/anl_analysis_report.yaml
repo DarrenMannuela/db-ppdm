@@ -1,0 +1,233 @@
+/anl-analysis-report:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_analysis_report
+    responses:
+      '200':
+        description: get anl_analysis_report data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              analysis_date: 12/12/2023
+              analysis_purpose: Lorem Ipsum
+              analysis_quality: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              received_date: 12/12/2023
+              remark: Lorem Ipsum
+              reported_date: 12/12/2023
+              reported_tvd: 0.1
+              reported_tvd_ouom: Lorem Ipsum
+              sample_date: 12/12/2023
+              sample_location: Lorem Ipsum
+              start_date: 12/12/2023
+              strat_name_set_id: Lorem Ipsum
+              study_type: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_analysis_report
+    description: Create a new anl_analysis_report data
+    requestBody:
+      required: true
+      description: Request body to create anl_analysis_report data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_report'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_date: 12/12/2023
+            analysis_purpose: Lorem Ipsum
+            analysis_quality: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            received_date: 12/12/2023
+            remark: Lorem Ipsum
+            reported_date: 12/12/2023
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            sample_date: 12/12/2023
+            sample_location: Lorem Ipsum
+            start_date: 12/12/2023
+            strat_name_set_id: Lorem Ipsum
+            study_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_analysis_report data is added
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_report data was successfully added
+/anl-analysis-report/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_analysis_report data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_analysis_report data
+    description: Update a new anl_analysis_report data
+    requestBody:
+      required: true
+      description: Request body to update anl_analysis_report data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_report'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_date: 12/12/2023
+            analysis_purpose: Lorem Ipsum
+            analysis_quality: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            received_date: 12/12/2023
+            remark: Lorem Ipsum
+            reported_date: 12/12/2023
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            sample_date: 12/12/2023
+            sample_location: Lorem Ipsum
+            start_date: 12/12/2023
+            strat_name_set_id: Lorem Ipsum
+            study_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_analysis_report data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_report data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_analysis_report data
+    description: Update a new anl_analysis_report data
+    requestBody:
+      required: true
+      description: Request body to update anl_analysis_report data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_analysis_report'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_date: 12/12/2023
+            analysis_purpose: Lorem Ipsum
+            analysis_quality: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            received_date: 12/12/2023
+            remark: Lorem Ipsum
+            reported_date: 12/12/2023
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            sample_date: 12/12/2023
+            sample_location: Lorem Ipsum
+            start_date: 12/12/2023
+            strat_name_set_id: Lorem Ipsum
+            study_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_analysis_report data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_analysis_report data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_analysis_report data
+    description: Delete anl_analysis_report data
+    responses:
+      '200':
+        description: anl_analysis_report data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_analysis_report data was successfully deleted

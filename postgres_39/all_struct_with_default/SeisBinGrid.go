@@ -1,0 +1,50 @@
+package dto
+
+type Seis_bin_grid struct {
+	Seis_set_subtype       string   `json:"seis_set_subtype" default:"source"`
+	Seis_set_id            string   `json:"seis_set_id" default:"source"`
+	Bin_grid_id            string   `json:"bin_grid_id" default:"source"`
+	Source                 string   `json:"source" default:"source"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Angle_rotation         *float64 `json:"angle_rotation" default:""`
+	Bin_grid_type          *string  `json:"bin_grid_type" default:""`
+	Bin_grid_version       *float64 `json:"bin_grid_version" default:""`
+	Bin_method             *string  `json:"bin_method" default:""`
+	Bin_point_ouom         *string  `json:"bin_point_ouom" default:""`
+	Coord_acquisition_id   *string  `json:"coord_acquisition_id" default:""`
+	Coord_system_id        *string  `json:"coord_system_id" default:""`
+	Corner1_lat            *float64 `json:"corner_1_lat" default:""`
+	Corner1_long           *float64 `json:"corner_1_long" default:""`
+	Corner2_lat            *float64 `json:"corner_2_lat" default:""`
+	Corner2_long           *float64 `json:"corner_2_long" default:""`
+	Corner3_lat            *float64 `json:"corner_3_lat" default:""`
+	Corner3_long           *float64 `json:"corner_3_long" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Fold_coverage          *float64 `json:"fold_coverage" default:""`
+	Local_coord_system_id  *string  `json:"local_coord_system_id" default:""`
+	Nline_azimuth          *float64 `json:"nline_azimuth" default:""`
+	Nline_count            *int     `json:"nline_count" default:""`
+	Nline_max_no           *int     `json:"nline_max_no" default:""`
+	Nline_min_no           *int     `json:"nline_min_no" default:""`
+	Nline_spacing          *float64 `json:"nline_spacing" default:""`
+	North_type             *string  `json:"north_type" default:""`
+	Point_origin_easting   *float64 `json:"point_origin_easting" default:""`
+	Point_origin_latitude  *float64 `json:"point_origin_latitude" default:""`
+	Point_origin_longitude *float64 `json:"point_origin_longitude" default:""`
+	Point_origin_northing  *float64 `json:"point_origin_northing" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Xline_azimuth          *float64 `json:"xline_azimuth" default:""`
+	Xline_count            *int     `json:"xline_count" default:""`
+	Xline_max_no           *int     `json:"xline_max_no" default:""`
+	Xline_min_no           *int     `json:"xline_min_no" default:""`
+	Xline_spacing          *float64 `json:"xline_spacing" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

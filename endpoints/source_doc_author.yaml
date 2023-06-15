@@ -1,0 +1,181 @@
+/source-doc-author:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get source_doc_author
+    responses:
+      '200':
+        description: get source_doc_author data to be returned
+        content:
+          application/json:
+            example:
+            - source_document_id: Lorem Ipsum
+              author_id: Lorem Ipsum
+              active_ind: y
+              author_ba_id: Lorem Ipsum
+              author_first_name: Lorem Ipsum
+              author_initial: Lorem Ipsum
+              author_last_name: Lorem Ipsum
+              author_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new source_doc_author
+    description: Create a new source_doc_author data
+    requestBody:
+      required: true
+      description: Request body to create source_doc_author data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/source_doc_author'
+          example:
+            source_document_id: Lorem Ipsum
+            author_id: Lorem Ipsum
+            active_ind: y
+            author_ba_id: Lorem Ipsum
+            author_first_name: Lorem Ipsum
+            author_initial: Lorem Ipsum
+            author_last_name: Lorem Ipsum
+            author_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: source_doc_author data is added
+        content:
+          application/json:
+            example:
+              message: The source_doc_author data was successfully added
+/source-doc-author/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of source_doc_author data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new source_doc_author data
+    description: Update a new source_doc_author data
+    requestBody:
+      required: true
+      description: Request body to update source_doc_author data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/source_doc_author'
+          example:
+            source_document_id: Lorem Ipsum
+            author_id: Lorem Ipsum
+            active_ind: y
+            author_ba_id: Lorem Ipsum
+            author_first_name: Lorem Ipsum
+            author_initial: Lorem Ipsum
+            author_last_name: Lorem Ipsum
+            author_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: source_doc_author data is completely updated
+        content:
+          application/json:
+            example:
+              message: The source_doc_author data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new source_doc_author data
+    description: Update a new source_doc_author data
+    requestBody:
+      required: true
+      description: Request body to update source_doc_author data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/source_doc_author'
+          example:
+            source_document_id: Lorem Ipsum
+            author_id: Lorem Ipsum
+            active_ind: y
+            author_ba_id: Lorem Ipsum
+            author_first_name: Lorem Ipsum
+            author_initial: Lorem Ipsum
+            author_last_name: Lorem Ipsum
+            author_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in source_doc_author data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in source_doc_author data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete source_doc_author data
+    description: Delete source_doc_author data
+    responses:
+      '200':
+        description: source_doc_author data is deleted
+        content:
+          application/json:
+            example:
+              message: The source_doc_author data was successfully deleted

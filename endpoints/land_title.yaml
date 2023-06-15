@@ -1,0 +1,189 @@
+/land-title:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get land_title
+    responses:
+      '200':
+        description: get land_title data to be returned
+        content:
+          application/json:
+            example:
+            - land_right_subtype: Lorem Ipsum
+              land_right_id: Lorem Ipsum
+              active_ind: y
+              certified_desc: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              registration_date: 12/12/2023
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              title_change_reason: Lorem Ipsum
+              title_holder: Lorem Ipsum
+              title_number: Lorem Ipsum
+              title_reference_num: Lorem Ipsum
+              title_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new land_title
+    description: Create a new land_title data
+    requestBody:
+      required: true
+      description: Request body to create land_title data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_title'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            active_ind: y
+            certified_desc: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            registration_date: 12/12/2023
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            title_change_reason: Lorem Ipsum
+            title_holder: Lorem Ipsum
+            title_number: Lorem Ipsum
+            title_reference_num: Lorem Ipsum
+            title_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_title data is added
+        content:
+          application/json:
+            example:
+              message: The land_title data was successfully added
+/land-title/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of land_title data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new land_title data
+    description: Update a new land_title data
+    requestBody:
+      required: true
+      description: Request body to update land_title data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_title'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            active_ind: y
+            certified_desc: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            registration_date: 12/12/2023
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            title_change_reason: Lorem Ipsum
+            title_holder: Lorem Ipsum
+            title_number: Lorem Ipsum
+            title_reference_num: Lorem Ipsum
+            title_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_title data is completely updated
+        content:
+          application/json:
+            example:
+              message: The land_title data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new land_title data
+    description: Update a new land_title data
+    requestBody:
+      required: true
+      description: Request body to update land_title data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_title'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            active_ind: y
+            certified_desc: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            registration_date: 12/12/2023
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            title_change_reason: Lorem Ipsum
+            title_holder: Lorem Ipsum
+            title_number: Lorem Ipsum
+            title_reference_num: Lorem Ipsum
+            title_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in land_title data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in land_title data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete land_title data
+    description: Delete land_title data
+    responses:
+      '200':
+        description: land_title data is deleted
+        content:
+          application/json:
+            example:
+              message: The land_title data was successfully deleted

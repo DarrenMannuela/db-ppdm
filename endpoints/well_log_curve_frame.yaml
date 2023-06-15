@@ -1,0 +1,233 @@
+/well-log-curve-frame:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_log_curve_frame
+    responses:
+      '200':
+        description: get well_log_curve_frame data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              well_log_id: Lorem Ipsum
+              well_log_source: Lorem Ipsum
+              frame_id: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              depth_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              frame_name: Lorem Ipsum
+              frame_spacing: 1.0
+              frame_spacing_ouom: Lorem Ipsum
+              frame_spacing_uom: Lorem Ipsum
+              gaps_ind: y
+              index_ouom: Lorem Ipsum
+              index_uom: Lorem Ipsum
+              irregular_desc: Lorem Ipsum
+              irregular_ind: y
+              log_direction: Lorem Ipsum
+              max_index: 1.0
+              min_index: 1.0
+              ppdm_guid: Lorem Ipsum
+              primary_index_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              top_depth: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_log_curve_frame
+    description: Create a new well_log_curve_frame data
+    requestBody:
+      required: true
+      description: Request body to create well_log_curve_frame data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve_frame'
+          example:
+            uwi: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            well_log_source: Lorem Ipsum
+            frame_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            frame_name: Lorem Ipsum
+            frame_spacing: 1.0
+            frame_spacing_ouom: Lorem Ipsum
+            frame_spacing_uom: Lorem Ipsum
+            gaps_ind: y
+            index_ouom: Lorem Ipsum
+            index_uom: Lorem Ipsum
+            irregular_desc: Lorem Ipsum
+            irregular_ind: y
+            log_direction: Lorem Ipsum
+            max_index: 1.0
+            min_index: 1.0
+            ppdm_guid: Lorem Ipsum
+            primary_index_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_curve_frame data is added
+        content:
+          application/json:
+            example:
+              message: The well_log_curve_frame data was successfully added
+/well-log-curve-frame/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_log_curve_frame data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_log_curve_frame data
+    description: Update a new well_log_curve_frame data
+    requestBody:
+      required: true
+      description: Request body to update well_log_curve_frame data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve_frame'
+          example:
+            uwi: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            well_log_source: Lorem Ipsum
+            frame_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            frame_name: Lorem Ipsum
+            frame_spacing: 1.0
+            frame_spacing_ouom: Lorem Ipsum
+            frame_spacing_uom: Lorem Ipsum
+            gaps_ind: y
+            index_ouom: Lorem Ipsum
+            index_uom: Lorem Ipsum
+            irregular_desc: Lorem Ipsum
+            irregular_ind: y
+            log_direction: Lorem Ipsum
+            max_index: 1.0
+            min_index: 1.0
+            ppdm_guid: Lorem Ipsum
+            primary_index_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_curve_frame data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_log_curve_frame data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_log_curve_frame data
+    description: Update a new well_log_curve_frame data
+    requestBody:
+      required: true
+      description: Request body to update well_log_curve_frame data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve_frame'
+          example:
+            uwi: Lorem Ipsum
+            well_log_id: Lorem Ipsum
+            well_log_source: Lorem Ipsum
+            frame_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            frame_name: Lorem Ipsum
+            frame_spacing: 1.0
+            frame_spacing_ouom: Lorem Ipsum
+            frame_spacing_uom: Lorem Ipsum
+            gaps_ind: y
+            index_ouom: Lorem Ipsum
+            index_uom: Lorem Ipsum
+            irregular_desc: Lorem Ipsum
+            irregular_ind: y
+            log_direction: Lorem Ipsum
+            max_index: 1.0
+            min_index: 1.0
+            ppdm_guid: Lorem Ipsum
+            primary_index_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_log_curve_frame data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_log_curve_frame data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_log_curve_frame data
+    description: Delete well_log_curve_frame data
+    responses:
+      '200':
+        description: well_log_curve_frame data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_log_curve_frame data was successfully deleted

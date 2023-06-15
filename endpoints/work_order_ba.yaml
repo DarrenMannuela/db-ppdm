@@ -1,0 +1,181 @@
+/work-order-ba:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get work_order_ba
+    responses:
+      '200':
+        description: get work_order_ba data to be returned
+        content:
+          application/json:
+            example:
+            - work_order_id: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              active_ind: y
+              ba_role: Lorem Ipsum
+              currency_conversion: 0.1
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              payment_amount: 0.1
+              payment_amount_ouom: Lorem Ipsum
+              payment_percent: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new work_order_ba
+    description: Create a new work_order_ba data
+    requestBody:
+      required: true
+      description: Request body to create work_order_ba data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/work_order_ba'
+          example:
+            work_order_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            active_ind: y
+            ba_role: Lorem Ipsum
+            currency_conversion: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_amount: 0.1
+            payment_amount_ouom: Lorem Ipsum
+            payment_percent: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: work_order_ba data is added
+        content:
+          application/json:
+            example:
+              message: The work_order_ba data was successfully added
+/work-order-ba/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of work_order_ba data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new work_order_ba data
+    description: Update a new work_order_ba data
+    requestBody:
+      required: true
+      description: Request body to update work_order_ba data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/work_order_ba'
+          example:
+            work_order_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            active_ind: y
+            ba_role: Lorem Ipsum
+            currency_conversion: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_amount: 0.1
+            payment_amount_ouom: Lorem Ipsum
+            payment_percent: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: work_order_ba data is completely updated
+        content:
+          application/json:
+            example:
+              message: The work_order_ba data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new work_order_ba data
+    description: Update a new work_order_ba data
+    requestBody:
+      required: true
+      description: Request body to update work_order_ba data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/work_order_ba'
+          example:
+            work_order_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            active_ind: y
+            ba_role: Lorem Ipsum
+            currency_conversion: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_amount: 0.1
+            payment_amount_ouom: Lorem Ipsum
+            payment_percent: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in work_order_ba data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in work_order_ba data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete work_order_ba data
+    description: Delete work_order_ba data
+    responses:
+      '200':
+        description: work_order_ba data is deleted
+        content:
+          application/json:
+            example:
+              message: The work_order_ba data was successfully deleted

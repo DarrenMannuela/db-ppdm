@@ -1,0 +1,201 @@
+/strat-topo-relation:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get strat_topo_relation
+    responses:
+      '200':
+        description: get strat_topo_relation data to be returned
+        content:
+          application/json:
+            example:
+            - strat_name_set_id_1: Lorem Ipsum
+              strat_unit_id_1: Lorem Ipsum
+              strat_name_set_id_2: Lorem Ipsum
+              strat_unit_id_2: Lorem Ipsum
+              source: Lorem Ipsum
+              topo_relation_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              strat_column_id_1: Lorem Ipsum
+              strat_column_id_2: Lorem Ipsum
+              strat_column_source_1: Lorem Ipsum
+              strat_column_source_2: Lorem Ipsum
+              topo_relation_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new strat_topo_relation
+    description: Create a new strat_topo_relation data
+    requestBody:
+      required: true
+      description: Request body to create strat_topo_relation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_topo_relation'
+          example:
+            strat_name_set_id_1: Lorem Ipsum
+            strat_unit_id_1: Lorem Ipsum
+            strat_name_set_id_2: Lorem Ipsum
+            strat_unit_id_2: Lorem Ipsum
+            source: Lorem Ipsum
+            topo_relation_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_column_id_1: Lorem Ipsum
+            strat_column_id_2: Lorem Ipsum
+            strat_column_source_1: Lorem Ipsum
+            strat_column_source_2: Lorem Ipsum
+            topo_relation_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_topo_relation data is added
+        content:
+          application/json:
+            example:
+              message: The strat_topo_relation data was successfully added
+/strat-topo-relation/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of strat_topo_relation data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new strat_topo_relation data
+    description: Update a new strat_topo_relation data
+    requestBody:
+      required: true
+      description: Request body to update strat_topo_relation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_topo_relation'
+          example:
+            strat_name_set_id_1: Lorem Ipsum
+            strat_unit_id_1: Lorem Ipsum
+            strat_name_set_id_2: Lorem Ipsum
+            strat_unit_id_2: Lorem Ipsum
+            source: Lorem Ipsum
+            topo_relation_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_column_id_1: Lorem Ipsum
+            strat_column_id_2: Lorem Ipsum
+            strat_column_source_1: Lorem Ipsum
+            strat_column_source_2: Lorem Ipsum
+            topo_relation_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_topo_relation data is completely updated
+        content:
+          application/json:
+            example:
+              message: The strat_topo_relation data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new strat_topo_relation data
+    description: Update a new strat_topo_relation data
+    requestBody:
+      required: true
+      description: Request body to update strat_topo_relation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_topo_relation'
+          example:
+            strat_name_set_id_1: Lorem Ipsum
+            strat_unit_id_1: Lorem Ipsum
+            strat_name_set_id_2: Lorem Ipsum
+            strat_unit_id_2: Lorem Ipsum
+            source: Lorem Ipsum
+            topo_relation_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_column_id_1: Lorem Ipsum
+            strat_column_id_2: Lorem Ipsum
+            strat_column_source_1: Lorem Ipsum
+            strat_column_source_2: Lorem Ipsum
+            topo_relation_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in strat_topo_relation data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in strat_topo_relation data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete strat_topo_relation data
+    description: Delete strat_topo_relation data
+    responses:
+      '200':
+        description: strat_topo_relation data is deleted
+        content:
+          application/json:
+            example:
+              message: The strat_topo_relation data was successfully deleted

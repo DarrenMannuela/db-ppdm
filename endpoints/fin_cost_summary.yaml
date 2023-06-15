@@ -1,0 +1,217 @@
+/fin-cost-summary:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get fin_cost_summary
+    responses:
+      '200':
+        description: get fin_cost_summary data to be returned
+        content:
+          application/json:
+            example:
+            - cost_id: Lorem Ipsum
+              active_ind: y
+              ami_ind: y
+              confidential_ind: y
+              cost_amount: 0.1
+              cost_per_size: 0.1
+              cost_per_size_ouom: Lorem Ipsum
+              cost_type: Lorem Ipsum
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              finance_component_id: Lorem Ipsum
+              finance_id: Lorem Ipsum
+              paid_date: 12/12/2023
+              parent_cost_id: Lorem Ipsum
+              percent_of_parent: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              report_cost_ind: y
+              source: Lorem Ipsum
+              submit_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new fin_cost_summary
+    description: Create a new fin_cost_summary data
+    requestBody:
+      required: true
+      description: Request body to create fin_cost_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fin_cost_summary'
+          example:
+            cost_id: Lorem Ipsum
+            active_ind: y
+            ami_ind: y
+            confidential_ind: y
+            cost_amount: 0.1
+            cost_per_size: 0.1
+            cost_per_size_ouom: Lorem Ipsum
+            cost_type: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_component_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            paid_date: 12/12/2023
+            parent_cost_id: Lorem Ipsum
+            percent_of_parent: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_cost_ind: y
+            source: Lorem Ipsum
+            submit_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: fin_cost_summary data is added
+        content:
+          application/json:
+            example:
+              message: The fin_cost_summary data was successfully added
+/fin-cost-summary/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of fin_cost_summary data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new fin_cost_summary data
+    description: Update a new fin_cost_summary data
+    requestBody:
+      required: true
+      description: Request body to update fin_cost_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fin_cost_summary'
+          example:
+            cost_id: Lorem Ipsum
+            active_ind: y
+            ami_ind: y
+            confidential_ind: y
+            cost_amount: 0.1
+            cost_per_size: 0.1
+            cost_per_size_ouom: Lorem Ipsum
+            cost_type: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_component_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            paid_date: 12/12/2023
+            parent_cost_id: Lorem Ipsum
+            percent_of_parent: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_cost_ind: y
+            source: Lorem Ipsum
+            submit_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: fin_cost_summary data is completely updated
+        content:
+          application/json:
+            example:
+              message: The fin_cost_summary data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new fin_cost_summary data
+    description: Update a new fin_cost_summary data
+    requestBody:
+      required: true
+      description: Request body to update fin_cost_summary data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fin_cost_summary'
+          example:
+            cost_id: Lorem Ipsum
+            active_ind: y
+            ami_ind: y
+            confidential_ind: y
+            cost_amount: 0.1
+            cost_per_size: 0.1
+            cost_per_size_ouom: Lorem Ipsum
+            cost_type: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_component_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            paid_date: 12/12/2023
+            parent_cost_id: Lorem Ipsum
+            percent_of_parent: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_cost_ind: y
+            source: Lorem Ipsum
+            submit_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in fin_cost_summary data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in fin_cost_summary data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete fin_cost_summary data
+    description: Delete fin_cost_summary data
+    responses:
+      '200':
+        description: fin_cost_summary data is deleted
+        content:
+          application/json:
+            example:
+              message: The fin_cost_summary data was successfully deleted

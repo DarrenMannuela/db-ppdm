@@ -1,0 +1,233 @@
+/seis-velocity-interval:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_velocity_interval
+    responses:
+      '200':
+        description: get seis_velocity_interval data to be returned
+        content:
+          application/json:
+            example:
+            - active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              compute_method: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              last_update: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_tvd: 0.1
+              reported_tvd_ouom: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              seis_set_subtype: Lorem Ipsum
+              seis_time_datum: 0.1
+              seis_time_datum_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              uwi: Lorem Ipsum
+              velocity_quality: Lorem Ipsum
+              velocity_type: Lorem Ipsum
+              velocity_value: 1.0
+              velocity_value_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_velocity_interval
+    description: Create a new seis_velocity_interval data
+    requestBody:
+      required: true
+      description: Request body to create seis_velocity_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity_interval'
+          example:
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            last_update: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            seis_time_datum: 0.1
+            seis_time_datum_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            velocity_quality: Lorem Ipsum
+            velocity_type: Lorem Ipsum
+            velocity_value: 1.0
+            velocity_value_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_velocity_interval data is added
+        content:
+          application/json:
+            example:
+              message: The seis_velocity_interval data was successfully added
+/seis-velocity-interval/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_velocity_interval data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_velocity_interval data
+    description: Update a new seis_velocity_interval data
+    requestBody:
+      required: true
+      description: Request body to update seis_velocity_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity_interval'
+          example:
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            last_update: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            seis_time_datum: 0.1
+            seis_time_datum_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            velocity_quality: Lorem Ipsum
+            velocity_type: Lorem Ipsum
+            velocity_value: 1.0
+            velocity_value_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_velocity_interval data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_velocity_interval data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_velocity_interval data
+    description: Update a new seis_velocity_interval data
+    requestBody:
+      required: true
+      description: Request body to update seis_velocity_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity_interval'
+          example:
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            last_update: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            seis_time_datum: 0.1
+            seis_time_datum_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            velocity_quality: Lorem Ipsum
+            velocity_type: Lorem Ipsum
+            velocity_value: 1.0
+            velocity_value_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_velocity_interval data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_velocity_interval data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_velocity_interval data
+    description: Delete seis_velocity_interval data
+    responses:
+      '200':
+        description: seis_velocity_interval data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_velocity_interval data was successfully deleted

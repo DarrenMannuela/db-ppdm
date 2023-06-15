@@ -1,0 +1,209 @@
+/well-log-dgtz-curve:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_log_dgtz_curve
+    responses:
+      '200':
+        description: get well_log_dgtz_curve data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              curve_id: Lorem Ipsum
+              digital_curve_id: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              curve_quality: Lorem Ipsum
+              depth_correction_method: Lorem Ipsum
+              depth_increment: 0.1
+              depth_increment_ouom: Lorem Ipsum
+              digitized_date: 12/12/2023
+              digitizer: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              null_value: 1.0
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_log_dgtz_curve
+    description: Create a new well_log_dgtz_curve data
+    requestBody:
+      required: true
+      description: Request body to create well_log_dgtz_curve data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_dgtz_curve'
+          example:
+            uwi: Lorem Ipsum
+            curve_id: Lorem Ipsum
+            digital_curve_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            curve_quality: Lorem Ipsum
+            depth_correction_method: Lorem Ipsum
+            depth_increment: 0.1
+            depth_increment_ouom: Lorem Ipsum
+            digitized_date: 12/12/2023
+            digitizer: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            null_value: 1.0
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_dgtz_curve data is added
+        content:
+          application/json:
+            example:
+              message: The well_log_dgtz_curve data was successfully added
+/well-log-dgtz-curve/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_log_dgtz_curve data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_log_dgtz_curve data
+    description: Update a new well_log_dgtz_curve data
+    requestBody:
+      required: true
+      description: Request body to update well_log_dgtz_curve data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_dgtz_curve'
+          example:
+            uwi: Lorem Ipsum
+            curve_id: Lorem Ipsum
+            digital_curve_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            curve_quality: Lorem Ipsum
+            depth_correction_method: Lorem Ipsum
+            depth_increment: 0.1
+            depth_increment_ouom: Lorem Ipsum
+            digitized_date: 12/12/2023
+            digitizer: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            null_value: 1.0
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_dgtz_curve data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_log_dgtz_curve data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_log_dgtz_curve data
+    description: Update a new well_log_dgtz_curve data
+    requestBody:
+      required: true
+      description: Request body to update well_log_dgtz_curve data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_dgtz_curve'
+          example:
+            uwi: Lorem Ipsum
+            curve_id: Lorem Ipsum
+            digital_curve_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            curve_quality: Lorem Ipsum
+            depth_correction_method: Lorem Ipsum
+            depth_increment: 0.1
+            depth_increment_ouom: Lorem Ipsum
+            digitized_date: 12/12/2023
+            digitizer: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            null_value: 1.0
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_log_dgtz_curve data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_log_dgtz_curve data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_log_dgtz_curve data
+    description: Delete well_log_dgtz_curve data
+    responses:
+      '200':
+        description: well_log_dgtz_curve data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_log_dgtz_curve data was successfully deleted

@@ -1,0 +1,177 @@
+/int-set-status:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get int_set_status
+    responses:
+      '200':
+        description: get int_set_status data to be returned
+        content:
+          application/json:
+            example:
+            - active_ind: y
+              effective_date: 12/12/2023
+              effective_term: Lorem Ipsum
+              effective_term_ouom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              reason: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              status: Lorem Ipsum
+              status_type: Lorem Ipsum
+              undetermined_term_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new int_set_status
+    description: Create a new int_set_status data
+    requestBody:
+      required: true
+      description: Request body to create int_set_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_status'
+          example:
+            active_ind: y
+            effective_date: 12/12/2023
+            effective_term: Lorem Ipsum
+            effective_term_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            status: Lorem Ipsum
+            status_type: Lorem Ipsum
+            undetermined_term_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: int_set_status data is added
+        content:
+          application/json:
+            example:
+              message: The int_set_status data was successfully added
+/int-set-status/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of int_set_status data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new int_set_status data
+    description: Update a new int_set_status data
+    requestBody:
+      required: true
+      description: Request body to update int_set_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_status'
+          example:
+            active_ind: y
+            effective_date: 12/12/2023
+            effective_term: Lorem Ipsum
+            effective_term_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            status: Lorem Ipsum
+            status_type: Lorem Ipsum
+            undetermined_term_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: int_set_status data is completely updated
+        content:
+          application/json:
+            example:
+              message: The int_set_status data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new int_set_status data
+    description: Update a new int_set_status data
+    requestBody:
+      required: true
+      description: Request body to update int_set_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_status'
+          example:
+            active_ind: y
+            effective_date: 12/12/2023
+            effective_term: Lorem Ipsum
+            effective_term_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            status: Lorem Ipsum
+            status_type: Lorem Ipsum
+            undetermined_term_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in int_set_status data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in int_set_status data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete int_set_status data
+    description: Delete int_set_status data
+    responses:
+      '200':
+        description: int_set_status data is deleted
+        content:
+          application/json:
+            example:
+              message: The int_set_status data was successfully deleted

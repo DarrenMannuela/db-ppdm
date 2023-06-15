@@ -1,0 +1,205 @@
+/anl-gas-composition:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_gas_composition
+    responses:
+      '200':
+        description: get anl_gas_composition data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              not_present_ind: y
+              ppdm_guid: Lorem Ipsum
+              problem_ind: y
+              remark: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              substance_amount: 0.1
+              substance_amount_ouom: Lorem Ipsum
+              substance_amount_uom: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              substance_percent: 0.1
+              trace_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_gas_composition
+    description: Create a new anl_gas_composition data
+    requestBody:
+      required: true
+      description: Request body to create anl_gas_composition data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_composition'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            not_present_ind: y
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_amount: 0.1
+            substance_amount_ouom: Lorem Ipsum
+            substance_amount_uom: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            substance_percent: 0.1
+            trace_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_gas_composition data is added
+        content:
+          application/json:
+            example:
+              message: The anl_gas_composition data was successfully added
+/anl-gas-composition/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_gas_composition data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_gas_composition data
+    description: Update a new anl_gas_composition data
+    requestBody:
+      required: true
+      description: Request body to update anl_gas_composition data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_composition'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            not_present_ind: y
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_amount: 0.1
+            substance_amount_ouom: Lorem Ipsum
+            substance_amount_uom: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            substance_percent: 0.1
+            trace_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_gas_composition data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_gas_composition data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_gas_composition data
+    description: Update a new anl_gas_composition data
+    requestBody:
+      required: true
+      description: Request body to update anl_gas_composition data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_composition'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            not_present_ind: y
+            ppdm_guid: Lorem Ipsum
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_amount: 0.1
+            substance_amount_ouom: Lorem Ipsum
+            substance_amount_uom: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            substance_percent: 0.1
+            trace_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_gas_composition data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_gas_composition data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_gas_composition data
+    description: Delete anl_gas_composition data
+    responses:
+      '200':
+        description: anl_gas_composition data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_gas_composition data was successfully deleted

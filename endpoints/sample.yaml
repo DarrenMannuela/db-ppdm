@@ -1,0 +1,453 @@
+/sample:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sample
+    responses:
+      '200':
+        description: get sample data to be returned
+        content:
+          application/json:
+            example:
+            - sample_id: Lorem Ipsum
+              active_ind: y
+              base_md: 0.1
+              base_md_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              collected_by_ba_id: Lorem Ipsum
+              collected_date: 12/12/2023
+              collected_equip_id: Lorem Ipsum
+              collected_for_ba_id: Lorem Ipsum
+              collected_time: 12/12/2023
+              collection_phase_type: Lorem Ipsum
+              collection_press: 0.1
+              collection_press_ouom: Lorem Ipsum
+              collection_temp: 0.1
+              collection_temp_ouom: Lorem Ipsum
+              collection_test_type: Lorem Ipsum
+              collection_type: Lorem Ipsum
+              composite_sample_ind: y
+              condensed_section_ind: y
+              current_length: 0.1
+              current_length_ouom: Lorem Ipsum
+              current_length_percent: 0.1
+              current_volume: 0.1
+              current_volume_ouom: Lorem Ipsum
+              current_volume_percent: 0.1
+              current_weight: 0.1
+              current_weight_ouom: Lorem Ipsum
+              current_weight_percent: 0.1
+              cylinder_press: 0.1
+              cylinder_press_ouom: Lorem Ipsum
+              cylinder_temp: 0.1
+              cylinder_temp_ouom: Lorem Ipsum
+              destroyed_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              initial_length: 0.1
+              initial_length_ouom: Lorem Ipsum
+              initial_length_percent: 0.1
+              initial_volume: 0.1
+              initial_volume_ouom: Lorem Ipsum
+              initial_volume_percent: 0.1
+              initial_weight: 0.1
+              initial_weight_ouom: Lorem Ipsum
+              initial_weight_percent: 0.1
+              interval_percent: 0.1
+              oil_stained_ind: y
+              physical_item_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_mud_desc: Lorem Ipsum
+              reported_res_press: 0.1
+              reported_res_press_ouom: Lorem Ipsum
+              sample_diameter: 0.1
+              sample_diameter_ouom: Lorem Ipsum
+              sample_interval: 0.1
+              sample_quality: Lorem Ipsum
+              sample_quality_desc: Lorem Ipsum
+              sample_ref_num: Lorem Ipsum
+              sample_shape_type: Lorem Ipsum
+              sample_type: Lorem Ipsum
+              sample_width: 0.1
+              sample_width_ouom: Lorem Ipsum
+              separator_press: 0.1
+              separator_press_ouom: Lorem Ipsum
+              separator_temp: 0.1
+              separator_temp_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              stored_equip_id: Lorem Ipsum
+              stored_phase_type: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              sub_sample_ind: y
+              top_md: 0.1
+              top_md_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              total_length: 0.1
+              total_length_ouom: Lorem Ipsum
+              total_volume: 0.1
+              total_volume_ouom: Lorem Ipsum
+              total_weight: 0.1
+              total_weight_ouom: Lorem Ipsum
+              well_datum_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sample
+    description: Create a new sample data
+    requestBody:
+      required: true
+      description: Request body to create sample data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sample'
+          example:
+            sample_id: Lorem Ipsum
+            active_ind: y
+            base_md: 0.1
+            base_md_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            collected_by_ba_id: Lorem Ipsum
+            collected_date: 12/12/2023
+            collected_equip_id: Lorem Ipsum
+            collected_for_ba_id: Lorem Ipsum
+            collected_time: 12/12/2023
+            collection_phase_type: Lorem Ipsum
+            collection_press: 0.1
+            collection_press_ouom: Lorem Ipsum
+            collection_temp: 0.1
+            collection_temp_ouom: Lorem Ipsum
+            collection_test_type: Lorem Ipsum
+            collection_type: Lorem Ipsum
+            composite_sample_ind: y
+            condensed_section_ind: y
+            current_length: 0.1
+            current_length_ouom: Lorem Ipsum
+            current_length_percent: 0.1
+            current_volume: 0.1
+            current_volume_ouom: Lorem Ipsum
+            current_volume_percent: 0.1
+            current_weight: 0.1
+            current_weight_ouom: Lorem Ipsum
+            current_weight_percent: 0.1
+            cylinder_press: 0.1
+            cylinder_press_ouom: Lorem Ipsum
+            cylinder_temp: 0.1
+            cylinder_temp_ouom: Lorem Ipsum
+            destroyed_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            initial_length: 0.1
+            initial_length_ouom: Lorem Ipsum
+            initial_length_percent: 0.1
+            initial_volume: 0.1
+            initial_volume_ouom: Lorem Ipsum
+            initial_volume_percent: 0.1
+            initial_weight: 0.1
+            initial_weight_ouom: Lorem Ipsum
+            initial_weight_percent: 0.1
+            interval_percent: 0.1
+            oil_stained_ind: y
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_mud_desc: Lorem Ipsum
+            reported_res_press: 0.1
+            reported_res_press_ouom: Lorem Ipsum
+            sample_diameter: 0.1
+            sample_diameter_ouom: Lorem Ipsum
+            sample_interval: 0.1
+            sample_quality: Lorem Ipsum
+            sample_quality_desc: Lorem Ipsum
+            sample_ref_num: Lorem Ipsum
+            sample_shape_type: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            sample_width: 0.1
+            sample_width_ouom: Lorem Ipsum
+            separator_press: 0.1
+            separator_press_ouom: Lorem Ipsum
+            separator_temp: 0.1
+            separator_temp_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            stored_equip_id: Lorem Ipsum
+            stored_phase_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            sub_sample_ind: y
+            top_md: 0.1
+            top_md_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            total_length: 0.1
+            total_length_ouom: Lorem Ipsum
+            total_volume: 0.1
+            total_volume_ouom: Lorem Ipsum
+            total_weight: 0.1
+            total_weight_ouom: Lorem Ipsum
+            well_datum_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sample data is added
+        content:
+          application/json:
+            example:
+              message: The sample data was successfully added
+/sample/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sample data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sample data
+    description: Update a new sample data
+    requestBody:
+      required: true
+      description: Request body to update sample data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sample'
+          example:
+            sample_id: Lorem Ipsum
+            active_ind: y
+            base_md: 0.1
+            base_md_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            collected_by_ba_id: Lorem Ipsum
+            collected_date: 12/12/2023
+            collected_equip_id: Lorem Ipsum
+            collected_for_ba_id: Lorem Ipsum
+            collected_time: 12/12/2023
+            collection_phase_type: Lorem Ipsum
+            collection_press: 0.1
+            collection_press_ouom: Lorem Ipsum
+            collection_temp: 0.1
+            collection_temp_ouom: Lorem Ipsum
+            collection_test_type: Lorem Ipsum
+            collection_type: Lorem Ipsum
+            composite_sample_ind: y
+            condensed_section_ind: y
+            current_length: 0.1
+            current_length_ouom: Lorem Ipsum
+            current_length_percent: 0.1
+            current_volume: 0.1
+            current_volume_ouom: Lorem Ipsum
+            current_volume_percent: 0.1
+            current_weight: 0.1
+            current_weight_ouom: Lorem Ipsum
+            current_weight_percent: 0.1
+            cylinder_press: 0.1
+            cylinder_press_ouom: Lorem Ipsum
+            cylinder_temp: 0.1
+            cylinder_temp_ouom: Lorem Ipsum
+            destroyed_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            initial_length: 0.1
+            initial_length_ouom: Lorem Ipsum
+            initial_length_percent: 0.1
+            initial_volume: 0.1
+            initial_volume_ouom: Lorem Ipsum
+            initial_volume_percent: 0.1
+            initial_weight: 0.1
+            initial_weight_ouom: Lorem Ipsum
+            initial_weight_percent: 0.1
+            interval_percent: 0.1
+            oil_stained_ind: y
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_mud_desc: Lorem Ipsum
+            reported_res_press: 0.1
+            reported_res_press_ouom: Lorem Ipsum
+            sample_diameter: 0.1
+            sample_diameter_ouom: Lorem Ipsum
+            sample_interval: 0.1
+            sample_quality: Lorem Ipsum
+            sample_quality_desc: Lorem Ipsum
+            sample_ref_num: Lorem Ipsum
+            sample_shape_type: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            sample_width: 0.1
+            sample_width_ouom: Lorem Ipsum
+            separator_press: 0.1
+            separator_press_ouom: Lorem Ipsum
+            separator_temp: 0.1
+            separator_temp_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            stored_equip_id: Lorem Ipsum
+            stored_phase_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            sub_sample_ind: y
+            top_md: 0.1
+            top_md_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            total_length: 0.1
+            total_length_ouom: Lorem Ipsum
+            total_volume: 0.1
+            total_volume_ouom: Lorem Ipsum
+            total_weight: 0.1
+            total_weight_ouom: Lorem Ipsum
+            well_datum_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sample data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sample data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sample data
+    description: Update a new sample data
+    requestBody:
+      required: true
+      description: Request body to update sample data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sample'
+          example:
+            sample_id: Lorem Ipsum
+            active_ind: y
+            base_md: 0.1
+            base_md_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            collected_by_ba_id: Lorem Ipsum
+            collected_date: 12/12/2023
+            collected_equip_id: Lorem Ipsum
+            collected_for_ba_id: Lorem Ipsum
+            collected_time: 12/12/2023
+            collection_phase_type: Lorem Ipsum
+            collection_press: 0.1
+            collection_press_ouom: Lorem Ipsum
+            collection_temp: 0.1
+            collection_temp_ouom: Lorem Ipsum
+            collection_test_type: Lorem Ipsum
+            collection_type: Lorem Ipsum
+            composite_sample_ind: y
+            condensed_section_ind: y
+            current_length: 0.1
+            current_length_ouom: Lorem Ipsum
+            current_length_percent: 0.1
+            current_volume: 0.1
+            current_volume_ouom: Lorem Ipsum
+            current_volume_percent: 0.1
+            current_weight: 0.1
+            current_weight_ouom: Lorem Ipsum
+            current_weight_percent: 0.1
+            cylinder_press: 0.1
+            cylinder_press_ouom: Lorem Ipsum
+            cylinder_temp: 0.1
+            cylinder_temp_ouom: Lorem Ipsum
+            destroyed_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            initial_length: 0.1
+            initial_length_ouom: Lorem Ipsum
+            initial_length_percent: 0.1
+            initial_volume: 0.1
+            initial_volume_ouom: Lorem Ipsum
+            initial_volume_percent: 0.1
+            initial_weight: 0.1
+            initial_weight_ouom: Lorem Ipsum
+            initial_weight_percent: 0.1
+            interval_percent: 0.1
+            oil_stained_ind: y
+            physical_item_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_mud_desc: Lorem Ipsum
+            reported_res_press: 0.1
+            reported_res_press_ouom: Lorem Ipsum
+            sample_diameter: 0.1
+            sample_diameter_ouom: Lorem Ipsum
+            sample_interval: 0.1
+            sample_quality: Lorem Ipsum
+            sample_quality_desc: Lorem Ipsum
+            sample_ref_num: Lorem Ipsum
+            sample_shape_type: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            sample_width: 0.1
+            sample_width_ouom: Lorem Ipsum
+            separator_press: 0.1
+            separator_press_ouom: Lorem Ipsum
+            separator_temp: 0.1
+            separator_temp_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            stored_equip_id: Lorem Ipsum
+            stored_phase_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            sub_sample_ind: y
+            top_md: 0.1
+            top_md_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            total_length: 0.1
+            total_length_ouom: Lorem Ipsum
+            total_volume: 0.1
+            total_volume_ouom: Lorem Ipsum
+            total_weight: 0.1
+            total_weight_ouom: Lorem Ipsum
+            well_datum_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sample data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sample data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sample data
+    description: Delete sample data
+    responses:
+      '200':
+        description: sample data is deleted
+        content:
+          application/json:
+            example:
+              message: The sample data was successfully deleted

@@ -1,0 +1,50 @@
+package dto
+
+type Sample_origin struct {
+	Sample_id             string   `json:"sample_id" default:"source"`
+	Collection_obs_no     int      `json:"collection_obs_no" default:"1"`
+	Active_ind            *string  `json:"active_ind" default:""`
+	Analysis_id           *string  `json:"analysis_id" default:""`
+	Analysis_source       *string  `json:"analysis_source" default:""`
+	Anl_step_seq_no       *int     `json:"anl_step_seq_no" default:""`
+	Area_id               *string  `json:"area_id" default:""`
+	Area_type             *string  `json:"area_type" default:""`
+	Collected_by_ba_id    *string  `json:"collected_by_ba_id" default:""`
+	Collected_for_ba_id   *string  `json:"collected_for_ba_id" default:""`
+	Collect_method        *string  `json:"collect_method" default:""`
+	Core_type             *string  `json:"core_type" default:""`
+	Effective_date        *string  `json:"effective_date" default:""`
+	Expiry_date           *string  `json:"expiry_date" default:""`
+	Field_station_id      *string  `json:"field_station_id" default:""`
+	Land_right_id         *string  `json:"land_right_id" default:""`
+	Land_right_subtype    *string  `json:"land_right_subtype" default:""`
+	Meas_section_id       *string  `json:"meas_section_id" default:""`
+	Meas_section_source   *string  `json:"meas_section_source" default:""`
+	Portion_diameter      *float64 `json:"portion_diameter" default:""`
+	Portion_diameter_ouom *string  `json:"portion_diameter_ouom" default:""`
+	Portion_length        *float64 `json:"portion_length" default:""`
+	Portion_length_ouom   *string  `json:"portion_length_ouom" default:""`
+	Portion_volume        *float64 `json:"portion_volume" default:""`
+	Portion_volume_ouom   *string  `json:"portion_volume_ouom" default:""`
+	Portion_weight        *float64 `json:"portion_weight" default:""`
+	Portion_weight_ouom   *string  `json:"portion_weight_ouom" default:""`
+	Ppdm_guid             *string  `json:"ppdm_guid" default:""`
+	Prod_string_id        *string  `json:"prod_string_id" default:""`
+	Prod_string_source    *string  `json:"prod_string_source" default:""`
+	Project_id            *string  `json:"project_id" default:""`
+	Remark                *string  `json:"remark" default:""`
+	Sample_part_id        *string  `json:"sample_part_id" default:""`
+	Source                *string  `json:"source" default:""`
+	Well_core_id          *string  `json:"well_core_id" default:""`
+	Well_source           *string  `json:"well_source" default:""`
+	Well_survey_id        *string  `json:"well_survey_id" default:""`
+	Well_survey_source    *string  `json:"well_survey_source" default:""`
+	Well_uwi              *string  `json:"well_uwi" default:""`
+	Row_changed_by        *string  `json:"row_changed_by" default:""`
+	Row_changed_date      *string  `json:"row_changed_date" default:""`
+	Row_created_by        *string  `json:"row_created_by" default:""`
+	Row_created_date      *string  `json:"row_created_date" default:""`
+	Row_effective_date    *string  `json:"row_effective_date" default:""`
+	Row_expiry_date       *string  `json:"row_expiry_date" default:""`
+	Row_quality           *string  `json:"row_quality" default:""`
+}

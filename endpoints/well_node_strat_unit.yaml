@@ -1,0 +1,225 @@
+/well-node-strat-unit:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_node_strat_unit
+    responses:
+      '200':
+        description: get well_node_strat_unit data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              active_ind: y
+              base_offset_tvd: 0.1
+              base_offset_tvd_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              location_type: Lorem Ipsum
+              node_id: Lorem Ipsum
+              node_position: Lorem Ipsum
+              pick_date: 12/12/2023
+              pick_depth: 0.1
+              pick_depth_ouom: Lorem Ipsum
+              pick_location: Lorem Ipsum
+              pick_method: Lorem Ipsum
+              pick_method_desc: Lorem Ipsum
+              pick_quality: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              top_offset_tvd: 0.1
+              top_offset_tvd_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_node_strat_unit
+    description: Create a new well_node_strat_unit data
+    requestBody:
+      required: true
+      description: Request body to create well_node_strat_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_node_strat_unit'
+          example:
+            uwi: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            base_offset_tvd: 0.1
+            base_offset_tvd_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location_type: Lorem Ipsum
+            node_id: Lorem Ipsum
+            node_position: Lorem Ipsum
+            pick_date: 12/12/2023
+            pick_depth: 0.1
+            pick_depth_ouom: Lorem Ipsum
+            pick_location: Lorem Ipsum
+            pick_method: Lorem Ipsum
+            pick_method_desc: Lorem Ipsum
+            pick_quality: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_offset_tvd: 0.1
+            top_offset_tvd_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_node_strat_unit data is added
+        content:
+          application/json:
+            example:
+              message: The well_node_strat_unit data was successfully added
+/well-node-strat-unit/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_node_strat_unit data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_node_strat_unit data
+    description: Update a new well_node_strat_unit data
+    requestBody:
+      required: true
+      description: Request body to update well_node_strat_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_node_strat_unit'
+          example:
+            uwi: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            base_offset_tvd: 0.1
+            base_offset_tvd_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location_type: Lorem Ipsum
+            node_id: Lorem Ipsum
+            node_position: Lorem Ipsum
+            pick_date: 12/12/2023
+            pick_depth: 0.1
+            pick_depth_ouom: Lorem Ipsum
+            pick_location: Lorem Ipsum
+            pick_method: Lorem Ipsum
+            pick_method_desc: Lorem Ipsum
+            pick_quality: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_offset_tvd: 0.1
+            top_offset_tvd_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_node_strat_unit data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_node_strat_unit data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_node_strat_unit data
+    description: Update a new well_node_strat_unit data
+    requestBody:
+      required: true
+      description: Request body to update well_node_strat_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_node_strat_unit'
+          example:
+            uwi: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            base_offset_tvd: 0.1
+            base_offset_tvd_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location_type: Lorem Ipsum
+            node_id: Lorem Ipsum
+            node_position: Lorem Ipsum
+            pick_date: 12/12/2023
+            pick_depth: 0.1
+            pick_depth_ouom: Lorem Ipsum
+            pick_location: Lorem Ipsum
+            pick_method: Lorem Ipsum
+            pick_method_desc: Lorem Ipsum
+            pick_quality: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_offset_tvd: 0.1
+            top_offset_tvd_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_node_strat_unit data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_node_strat_unit data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_node_strat_unit data
+    description: Delete well_node_strat_unit data
+    responses:
+      '200':
+        description: well_node_strat_unit data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_node_strat_unit data was successfully deleted

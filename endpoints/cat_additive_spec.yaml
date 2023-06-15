@@ -1,0 +1,233 @@
+/cat-additive-spec:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cat_additive_spec
+    responses:
+      '200':
+        description: get cat_additive_spec data to be returned
+        content:
+          application/json:
+            example:
+            - catalogue_additive_id: Lorem Ipsum
+              spec_id: Lorem Ipsum
+              active_ind: y
+              additive_component_id: Lorem Ipsum
+              additive_spec_type: Lorem Ipsum
+              average_value: 1.0
+              average_value_ouom: Lorem Ipsum
+              average_value_uom: Lorem Ipsum
+              cost: 0.1
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              currency_uom: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              spec_code: Lorem Ipsum
+              spec_desc: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cat_additive_spec
+    description: Create a new cat_additive_spec data
+    requestBody:
+      required: true
+      description: Request body to create cat_additive_spec data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive_spec'
+          example:
+            catalogue_additive_id: Lorem Ipsum
+            spec_id: Lorem Ipsum
+            active_ind: y
+            additive_component_id: Lorem Ipsum
+            additive_spec_type: Lorem Ipsum
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spec_code: Lorem Ipsum
+            spec_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cat_additive_spec data is added
+        content:
+          application/json:
+            example:
+              message: The cat_additive_spec data was successfully added
+/cat-additive-spec/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cat_additive_spec data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cat_additive_spec data
+    description: Update a new cat_additive_spec data
+    requestBody:
+      required: true
+      description: Request body to update cat_additive_spec data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive_spec'
+          example:
+            catalogue_additive_id: Lorem Ipsum
+            spec_id: Lorem Ipsum
+            active_ind: y
+            additive_component_id: Lorem Ipsum
+            additive_spec_type: Lorem Ipsum
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spec_code: Lorem Ipsum
+            spec_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cat_additive_spec data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cat_additive_spec data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cat_additive_spec data
+    description: Update a new cat_additive_spec data
+    requestBody:
+      required: true
+      description: Request body to update cat_additive_spec data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive_spec'
+          example:
+            catalogue_additive_id: Lorem Ipsum
+            spec_id: Lorem Ipsum
+            active_ind: y
+            additive_component_id: Lorem Ipsum
+            additive_spec_type: Lorem Ipsum
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            spec_code: Lorem Ipsum
+            spec_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cat_additive_spec data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cat_additive_spec data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cat_additive_spec data
+    description: Delete cat_additive_spec data
+    responses:
+      '200':
+        description: cat_additive_spec data is deleted
+        content:
+          application/json:
+            example:
+              message: The cat_additive_spec data was successfully deleted

@@ -1,0 +1,41 @@
+package dto
+
+type Well_horiz_drill struct {
+	Uwi                      string   `json:"uwi" default:"source"`
+	Source                   string   `json:"source" default:"source"`
+	Active_ind               *string  `json:"active_ind" default:""`
+	Buildup_radius_type      *string  `json:"buildup_radius_type" default:""`
+	Buildup_rate_degree      *float64 `json:"buildup_rate_degree" default:""`
+	Buildup_rate_length      *float64 `json:"buildup_rate_length" default:""`
+	Buildup_rate_length_ouom *string  `json:"buildup_rate_length_ouom" default:""`
+	Contractor               *string  `json:"contractor" default:""`
+	Effective_date           *string  `json:"effective_date" default:""`
+	Expiry_date              *string  `json:"expiry_date" default:""`
+	Horiz_displacement       *float64 `json:"horiz_displacement" default:""`
+	Horiz_displacement_ouom  *string  `json:"horiz_displacement_ouom" default:""`
+	Horiz_drilling_reason    *string  `json:"horiz_drilling_reason" default:""`
+	Horiz_drilling_type      *string  `json:"horiz_drilling_type" default:""`
+	Horiz_strat_unit_id      *string  `json:"horiz_strat_unit_id" default:""`
+	Lateral_hole_id          *string  `json:"lateral_hole_id" default:""`
+	Lateral_hole_length      *float64 `json:"lateral_hole_length" default:""`
+	Lateral_hole_length_ouom *string  `json:"lateral_hole_length_ouom" default:""`
+	Max_deviation_angle      *float64 `json:"max_deviation_angle" default:""`
+	Pay_length               *float64 `json:"pay_length" default:""`
+	Pay_length_ouom          *string  `json:"pay_length_ouom" default:""`
+	Ppdm_guid                *string  `json:"ppdm_guid" default:""`
+	Rat_hole_depth           *float64 `json:"rat_hole_depth" default:""`
+	Rat_hole_depth_ouom      *string  `json:"rat_hole_depth_ouom" default:""`
+	Rat_hole_depth_type      *string  `json:"rat_hole_depth_type" default:""`
+	Remark                   *string  `json:"remark" default:""`
+	Reservoir                *string  `json:"reservoir" default:""`
+	Strat_name_set_id        *string  `json:"strat_name_set_id" default:""`
+	Wb_length_in_form        *float64 `json:"wb_length_in_form" default:""`
+	Wb_length_in_form_ouom   *string  `json:"wb_length_in_form_ouom" default:""`
+	Row_changed_by           *string  `json:"row_changed_by" default:""`
+	Row_changed_date         *string  `json:"row_changed_date" default:""`
+	Row_created_by           *string  `json:"row_created_by" default:""`
+	Row_created_date         *string  `json:"row_created_date" default:""`
+	Row_effective_date       *string  `json:"row_effective_date" default:""`
+	Row_expiry_date          *string  `json:"row_expiry_date" default:""`
+	Row_quality              *string  `json:"row_quality" default:""`
+}

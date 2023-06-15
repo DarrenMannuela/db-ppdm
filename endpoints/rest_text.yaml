@@ -1,0 +1,161 @@
+/rest-text:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rest_text
+    responses:
+      '200':
+        description: get rest_text data to be returned
+        content:
+          application/json:
+            example:
+            - restriction_id: Lorem Ipsum
+              active_ind: y
+              body_of_text: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rest_text
+    description: Create a new rest_text data
+    requestBody:
+      required: true
+      description: Request body to create rest_text data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_text'
+          example:
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            body_of_text: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rest_text data is added
+        content:
+          application/json:
+            example:
+              message: The rest_text data was successfully added
+/rest-text/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rest_text data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rest_text data
+    description: Update a new rest_text data
+    requestBody:
+      required: true
+      description: Request body to update rest_text data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_text'
+          example:
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            body_of_text: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rest_text data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rest_text data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rest_text data
+    description: Update a new rest_text data
+    requestBody:
+      required: true
+      description: Request body to update rest_text data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rest_text'
+          example:
+            restriction_id: Lorem Ipsum
+            active_ind: y
+            body_of_text: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rest_text data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rest_text data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rest_text data
+    description: Delete rest_text data
+    responses:
+      '200':
+        description: rest_text data is deleted
+        content:
+          application/json:
+            example:
+              message: The rest_text data was successfully deleted

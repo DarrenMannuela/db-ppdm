@@ -1,0 +1,201 @@
+/source-document:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get source_document
+    responses:
+      '200':
+        description: get source_document data to be returned
+        content:
+          application/json:
+            example:
+            - source_document_id: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              document_title: Lorem Ipsum
+              document_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              figure_reference: Lorem Ipsum
+              issue: Lorem Ipsum
+              language: Lorem Ipsum
+              page_reference: Lorem Ipsum
+              plate_reference: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              publication: Lorem Ipsum
+              publication_date: 12/12/2023
+              publisher: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new source_document
+    description: Create a new source_document data
+    requestBody:
+      required: true
+      description: Request body to create source_document data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/source_document'
+          example:
+            source_document_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            document_title: Lorem Ipsum
+            document_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            figure_reference: Lorem Ipsum
+            issue: Lorem Ipsum
+            language: Lorem Ipsum
+            page_reference: Lorem Ipsum
+            plate_reference: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            publication: Lorem Ipsum
+            publication_date: 12/12/2023
+            publisher: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: source_document data is added
+        content:
+          application/json:
+            example:
+              message: The source_document data was successfully added
+/source-document/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of source_document data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new source_document data
+    description: Update a new source_document data
+    requestBody:
+      required: true
+      description: Request body to update source_document data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/source_document'
+          example:
+            source_document_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            document_title: Lorem Ipsum
+            document_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            figure_reference: Lorem Ipsum
+            issue: Lorem Ipsum
+            language: Lorem Ipsum
+            page_reference: Lorem Ipsum
+            plate_reference: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            publication: Lorem Ipsum
+            publication_date: 12/12/2023
+            publisher: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: source_document data is completely updated
+        content:
+          application/json:
+            example:
+              message: The source_document data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new source_document data
+    description: Update a new source_document data
+    requestBody:
+      required: true
+      description: Request body to update source_document data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/source_document'
+          example:
+            source_document_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            document_title: Lorem Ipsum
+            document_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            figure_reference: Lorem Ipsum
+            issue: Lorem Ipsum
+            language: Lorem Ipsum
+            page_reference: Lorem Ipsum
+            plate_reference: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            publication: Lorem Ipsum
+            publication_date: 12/12/2023
+            publisher: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in source_document data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in source_document data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete source_document data
+    description: Delete source_document data
+    responses:
+      '200':
+        description: source_document data is deleted
+        content:
+          application/json:
+            example:
+              message: The source_document data was successfully deleted

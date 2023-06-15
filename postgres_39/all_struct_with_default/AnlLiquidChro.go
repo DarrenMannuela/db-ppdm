@@ -1,0 +1,55 @@
+package dto
+
+type Anl_liquid_chro struct {
+	Analysis_id               string   `json:"analysis_id" default:"source"`
+	Anl_source                string   `json:"anl_source" default:"source"`
+	Chro_obs_no               int      `json:"chro_obs_no" default:"1"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Aged_oil_used             *float64 `json:"aged_oil_used" default:""`
+	Aged_oil_used_uom         *string  `json:"aged_oil_used_uom" default:""`
+	Aged_weight_of_oil        *float64 `json:"aged_weight_of_oil" default:""`
+	Aged_weight_of_oil_uom    *string  `json:"aged_weight_of_oil_uom" default:""`
+	Aromatic_hc_value         *float64 `json:"aromatic_hc_value" default:""`
+	Aromatic_hc_value_uom     *string  `json:"aromatic_hc_value_uom" default:""`
+	Asphaltene_free_value     *float64 `json:"asphaltene_free_value" default:""`
+	Asphaltene_free_value_uom *string  `json:"asphaltene_free_value_uom" default:""`
+	Asphaltene_value          *float64 `json:"asphaltene_value" default:""`
+	Asphaltene_value_uom      *string  `json:"asphaltene_value_uom" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Eom_used                  *float64 `json:"eom_used" default:""`
+	Eom_used_uom              *string  `json:"eom_used_uom" default:""`
+	Eom_value                 *float64 `json:"eom_value" default:""`
+	Eom_value_uom             *string  `json:"eom_value_uom" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Loss_on_column            *float64 `json:"loss_on_column" default:""`
+	Loss_on_column_uom        *string  `json:"loss_on_column_uom" default:""`
+	Measurement_type          *string  `json:"measurement_type" default:""`
+	Naphthene_value           *float64 `json:"naphthene_value" default:""`
+	Naphthene_value_uom       *string  `json:"naphthene_value_uom" default:""`
+	Nso_value                 *float64 `json:"nso_value" default:""`
+	Nso_value_uom             *string  `json:"nso_value_uom" default:""`
+	N_alkane_fraction         *float64 `json:"n_alkane_fraction" default:""`
+	N_alkane_fraction_uom     *string  `json:"n_alkane_fraction_uom" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Preferred_ind             *string  `json:"preferred_ind" default:""`
+	Problem_ind               *string  `json:"problem_ind" default:""`
+	Refraction_factor         *float64 `json:"refraction_factor" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Reported_hc_fraction      *float64 `json:"reported_hc_fraction" default:""`
+	Reported_hc_fraction_uom  *string  `json:"reported_hc_fraction_uom" default:""`
+	Reported_hc_in_toc        *float64 `json:"reported_hc_in_toc" default:""`
+	Reported_hc_in_toc_uom    *string  `json:"reported_hc_in_toc_uom" default:""`
+	Saturated_hc_value        *float64 `json:"saturated_hc_value" default:""`
+	Saturated_hc_value_uom    *string  `json:"saturated_hc_value_uom" default:""`
+	Source                    *string  `json:"source" default:""`
+	Step_seq_no               *int     `json:"step_seq_no" default:""`
+	Total_soluble_extract     *float64 `json:"total_soluble_extract" default:""`
+	Total_soluble_extract_uom *string  `json:"total_soluble_extract_uom" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

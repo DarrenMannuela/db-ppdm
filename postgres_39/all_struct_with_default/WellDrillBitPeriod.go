@@ -1,0 +1,53 @@
+package dto
+
+type Well_drill_bit_period struct {
+	Uwi                       string   `json:"uwi" default:"source"`
+	Period_obs_no             int      `json:"period_obs_no" default:"1"`
+	Bit_source                string   `json:"bit_source" default:"source"`
+	Bit_interval_obs_no       int      `json:"bit_interval_obs_no" default:"1"`
+	Drill_bit_period_obs_no   int      `json:"drill_bit_period_obs_no" default:"1"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Avg_force_on_bit          *float64 `json:"avg_force_on_bit" default:""`
+	Avg_force_on_bit_ouom     *string  `json:"avg_force_on_bit_ouom" default:""`
+	Avg_penetration_rate      *float64 `json:"avg_penetration_rate" default:""`
+	Avg_penetration_rate_ouom *string  `json:"avg_penetration_rate_ouom" default:""`
+	Avg_rotary_rpm            *float64 `json:"avg_rotary_rpm" default:""`
+	Base_depth                *float64 `json:"base_depth" default:""`
+	Base_depth_ouom           *string  `json:"base_depth_ouom" default:""`
+	Bit_operating_time        *float64 `json:"bit_operating_time" default:""`
+	Bit_operating_time_ouom   *string  `json:"bit_operating_time_ouom" default:""`
+	Drill_op_type             *string  `json:"drill_op_type" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Flow_rate                 *float64 `json:"flow_rate" default:""`
+	Flow_rate_ouom            *string  `json:"flow_rate_ouom" default:""`
+	Max_force_on_bit          *float64 `json:"max_force_on_bit" default:""`
+	Max_force_on_bit_ouom     *string  `json:"max_force_on_bit_ouom" default:""`
+	Max_penetration_rate      *float64 `json:"max_penetration_rate" default:""`
+	Max_penetration_rate_ouom *string  `json:"max_penetration_rate_ouom" default:""`
+	Max_rotary_rpm            *float64 `json:"max_rotary_rpm" default:""`
+	Min_force_on_bit          *float64 `json:"min_force_on_bit" default:""`
+	Min_force_on_bit_ouom     *string  `json:"min_force_on_bit_ouom" default:""`
+	Min_penetration_rate      *float64 `json:"min_penetration_rate" default:""`
+	Min_penetration_rate_ouom *string  `json:"min_penetration_rate_ouom" default:""`
+	Min_rotary_rpm            *float64 `json:"min_rotary_rpm" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Source                    *string  `json:"source" default:""`
+	Top_depth                 *float64 `json:"top_depth" default:""`
+	Top_depth_ouom            *string  `json:"top_depth_ouom" default:""`
+	Torque                    *float64 `json:"torque" default:""`
+	Torque_ouom               *string  `json:"torque_ouom" default:""`
+	Total_bit_revolution      *int     `json:"total_bit_revolution" default:""`
+	Total_drilled_dist        *float64 `json:"total_drilled_dist" default:""`
+	Total_drilled_dist_ouom   *string  `json:"total_drilled_dist_ouom" default:""`
+	Total_period_run          *float64 `json:"total_period_run" default:""`
+	Total_period_run_ouom     *string  `json:"total_period_run_ouom" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

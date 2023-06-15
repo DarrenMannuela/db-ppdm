@@ -1,0 +1,591 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="BB1D08A7-2D42-52D5-419E-B94B8552E770" schemaObject="573CA6AD-1D43-E910-4260-1A8A3355C0FF" name="LAND_SALE_OFFERING">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>LAND_SALE_OFFERING</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[LAND SALE OFFERING: describes a parcel of land offered in public land sale. Many such offerings may be included in a single land sale.]]></commentInRDBMS>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>B6BD110C-CB6F-91B9-26C0-0057486D720D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="JURISDICTION" id="02C419A4-E499-7A49-4BA5-545EAB3A1340">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>JURISDICTION</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>69D40CC3-B29A-6396-4D8A-8C91AA28F50D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="21D05F54-E08F-2968-A02C-B347F3443EA3" referredColumn="75F9D62E-74ED-B484-9B80-E02B1F4A3C16"/>
+</associations>
+</Column>
+<Column name="LAND_SALE_NUMBER" id="EA0BA190-CAB3-B73C-0026-FC30095C1810">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>LAND_SALE_NUMBER</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>2D82DE53-F13C-BAE7-93E5-9155EF93BE0E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="21D05F54-E08F-2968-A02C-B347F3443EA3" referredColumn="511AE7BC-684C-99CD-B096-25BFE4901A4E"/>
+</associations>
+</Column>
+<Column name="LAND_SALE_OFFERING_ID" id="FBEEEF64-6CD3-76F1-CC15-2F85715213E6">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>LAND_SALE_OFFERING_ID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6350E15B-1131-54E9-0913-AD60FE06B512</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVE_IND" id="A962768C-A134-32C4-8361-98C89EE865B2">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ACTIVE_IND</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6995EA89-0EB7-DBA4-6B08-62F146ED2970</importedID>
+<constraintName>LSO_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANCEL_REASON" id="4E51826C-39F5-8FC9-7B2A-C231E8FC6983">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>CANCEL_REASON</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6D96B153-B17F-029E-B7AF-F5A3A0348515</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09FF1DAD-FA3F-3726-B3E0-3895DEFB0639" referredColumn="25675253-E87E-9E33-B44C-547E16A8E641"/>
+</associations>
+</Column>
+<Column name="EFFECTIVE_DATE" id="416031E2-00DA-B495-21F7-D1A6A083E750">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>EFFECTIVE_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>65318A90-FD50-8004-B9AB-BA2C1034B080</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPIRY_DATE" id="15C310D1-06FD-36E7-D2F1-596E084ADFA4">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>EXPIRY_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>39079193-7A09-6067-6B41-0BEFB756B5BC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GROSS_SIZE" id="2EFAE852-1FF6-E002-9B8F-4C1C926E0723">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>GROSS_SIZE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>0FD84250-9C1D-C356-7EDE-5E1D4B4BD380</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>10</dataTypeScale>
+<ownDataTypeParameters>,20,10</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GROSS_SIZE_OUOM" id="7F161991-B133-BB96-6BAE-6DFA0187D994">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>GROSS_SIZE_OUOM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>590498CF-285E-7107-4330-4740EFDFED78</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0586A186-E564-5193-1839-CF4C6FF962F5" referredColumn="EF08C940-2352-2CE1-AE3F-9E5CC5C52CA1"/>
+</associations>
+</Column>
+<Column name="INACTIVATION_DATE" id="13EC9B08-D479-0A9E-48FA-62AD3F50A926">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>INACTIVATION_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>0B00291E-234F-502E-E628-7624E0AC6FA9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAND_OFFERING_STATUS" id="2F1E878B-EB11-4732-E23C-D1A2B4F48163">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>LAND_OFFERING_STATUS</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>EE630AC1-2150-1CA5-3F45-E3218876F1EB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E3DD4321-1A93-24E6-1DDE-ACB8BDBBF7FF" referredColumn="344B42CC-6A87-7A7D-D22D-E1AD8BD6DB58"/>
+</associations>
+</Column>
+<Column name="LAND_OFFERING_TYPE" id="3E49957F-2141-F7CE-D3C7-1934BCA1AD78">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>LAND_OFFERING_TYPE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>5DCDE4B0-FB39-74C6-5AAB-E3EA0B8BB146</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BA7AE175-244C-3EB0-311F-82228F7B2D4B" referredColumn="CFCAEFC9-A329-C28C-148D-7F4CEB4E82B3"/>
+</associations>
+</Column>
+<Column name="PPDM_GUID" id="9272BDEA-4B7A-F520-5424-5279F5329541">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>PPDM_GUID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>69E84C80-4824-87B4-4BE2-8E91227C256E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>38 BYTE</dataTypeSize>
+<ownDataTypeParameters>38 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REMARK" id="CDB184E0-96F7-5FFA-1E91-F1BAD1EF0E15">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>REMARK</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>6ACD3089-0C29-7B13-A026-5E548381BB3C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 BYTE</dataTypeSize>
+<ownDataTypeParameters>2000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOURCE" id="5C7A0CB6-C5AE-39D2-A8C1-D196D13D7DEC">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>SOURCE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>1D7F5F59-806A-097D-DE3C-5659F8DFF717</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D7612F2D-3738-4725-FC14-BA6D61A72737" referredColumn="20D9411A-144A-DF8A-6C0C-8E1F5B4DEA53"/>
+</associations>
+</Column>
+<Column name="STATUS_DATE" id="DA9862B5-3182-FBFE-53F2-E3F6412F1993">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>STATUS_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>4E913DFD-4142-7912-9E2E-54BD901F19F1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TERM_DURATION" id="0FA6B109-022E-D8D0-EBD6-5BD696361036">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>TERM_DURATION</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>5C51C0D6-4BFF-43A2-9925-6A43156D3ED8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,10,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TERM_DURATION_OUOM" id="E47D2A36-B005-2277-A405-E817313355F1">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>TERM_DURATION_OUOM</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>8E26C1A4-FA3A-072D-D7A6-9F60962D2309</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97FA8BC5-91DC-4F39-D277-345A766A0538" referredColumn="EF08C940-2352-2CE1-AE3F-9E5CC5C52CA1"/>
+</associations>
+</Column>
+<Column name="ROW_CHANGED_BY" id="5DF7783F-7F13-BE23-2914-C191C2AE26F9">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ROW_CHANGED_BY</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>A2ED5178-A6F7-04A2-D50E-0F9C27D38FB9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_CHANGED_DATE" id="C30D4848-CF34-302E-7E8B-FC0393C5F7F9">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ROW_CHANGED_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>E8D34567-0F94-2149-16D7-64C3BD1FBA08</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_CREATED_BY" id="BE7B7A23-198B-231E-EE3E-8E4CE2CD1877">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ROW_CREATED_BY</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>ABE006FA-98F8-2F6B-D7E9-DD47BA623838</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_CREATED_DATE" id="E3CFA018-4627-FCFE-6BB7-0502483F0E07">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ROW_CREATED_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>56B42645-3BC6-3E0B-BF45-E83183783E6B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_EFFECTIVE_DATE" id="5916F92B-67A8-9BFB-64D9-BD3349EFA2C2">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ROW_EFFECTIVE_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>C8769650-95DD-C472-629D-0D33DC380F88</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_EXPIRY_DATE" id="DDF9B830-28D1-43F2-2480-A7A73FAD5F98">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ROW_EXPIRY_DATE</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>661A75A6-CDF5-51E5-8483-7EE272A116D0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<ownDataTypeParameters>,0,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROW_QUALITY" id="3AB10763-2F8E-214A-05AF-CF8944E3AC24">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>LAND_SALE_OFFERING</sourceObjSchema>
+<sourceObjName>ROW_QUALITY</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>079ACA4B-1340-23BC-49D3-91092EDCC1CC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="66DAF01D-74AC-8F5C-9826-882ECB2562AA" referredColumn="91041B10-7C7A-D74D-6258-56FBA8ABD3A3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5723BEDD-667C-24C3-5179-B4D39CFC3E5F" name="LSO_PK">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>LSO_PK</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D239C8F2-CF0A-D53D-B6BC-24197221F9F1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02C419A4-E499-7A49-4BA5-545EAB3A1340"/>
+<colUsage columnID="EA0BA190-CAB3-B73C-0026-FC30095C1810"/>
+<colUsage columnID="FBEEEF64-6CD3-76F1-CC15-2F85715213E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0B90DB07-AADF-FCC5-49D9-40C6C14F3DDD" name="LSO_GUID">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>LSO_GUID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>818497F4-DCAB-8548-3375-B7E359BED1BC</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9272BDEA-4B7A-F520-5424-5279F5329541"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6AC113A8-EDA9-E3BB-89E1-2B34C3F51F3D" schemaObject="573CA6AD-1D43-E910-4260-1A8A3355C0FF" name="LSO_GUID">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>LSO_GUID</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>04EBDABB-9890-2D73-5142-4F80E17BECFC</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9272BDEA-4B7A-F520-5424-5279F5329541"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D132B81-C44A-9509-DB1C-024954581E43" schemaObject="573CA6AD-1D43-E910-4260-1A8A3355C0FF" name="LSO_PK">
+<sourceConnName>Oracle-RDS</sourceConnName>
+<sourceObjSchema>ADMIN</sourceObjSchema>
+<sourceObjName>LSO_PK</sourceObjName>
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:49 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<importedID>D2FF7303-FCF7-B976-390E-2F159B67AEE5</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02C419A4-E499-7A49-4BA5-545EAB3A1340"/>
+<colUsage columnID="EA0BA190-CAB3-B73C-0026-FC30095C1810"/>
+<colUsage columnID="FBEEEF64-6CD3-76F1-CC15-2F85715213E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3456A66A-9B02-1490-8D5A-6FB988C5FC69" name="LSO_LS_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02C419A4-E499-7A49-4BA5-545EAB3A1340"/>
+<colUsage columnID="EA0BA190-CAB3-B73C-0026-FC30095C1810"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5DFCA31C-968C-F5FA-559B-142E5B9FBE89" name="LSO_PUOM_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F161991-B133-BB96-6BAE-6DFA0187D994"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6775307E-A8FB-AE9F-8E9C-50EE9A3063C0" name="LSO_PUOM_FK2">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E47D2A36-B005-2277-A405-E817313355F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="660CB32B-F564-3A4B-E8D8-92FE223825F1" name="LSO_R_LOCR_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E51826C-39F5-8FC9-7B2A-C231E8FC6983"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB2DD28F-14F2-F5AC-387F-E4A6343E2728" name="LSO_R_LOS_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F1E878B-EB11-4732-E23C-D1A2B4F48163"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A3B97CF-55B0-1EAD-5239-8048186A382C" name="LSO_R_LOT1_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E49957F-2141-F7CE-D3C7-1934BCA1AD78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B9C42B9F-72B0-40C6-5446-41D300DC6C62" name="LSO_R_PRQ_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3AB10763-2F8E-214A-05AF-CF8944E3AC24"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3413F789-F9BF-D811-43A6-B1E02FFE3771" name="LSO_R_S_FK">
+<createdBy>johan</createdBy>
+<createdTime>2023-02-20 09:26:50 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C7A0CB6-C5AE-39D2-A8C1-D196D13D7DEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

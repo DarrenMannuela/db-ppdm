@@ -1,0 +1,233 @@
+/rm-info-coord-quality:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_info_coord_quality
+    responses:
+      '200':
+        description: get rm_info_coord_quality data to be returned
+        content:
+          application/json:
+            example:
+            - info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              quality_id: Lorem Ipsum
+              active_ind: y
+              completeness_desc: Lorem Ipsum
+              coord_accuracy_desc: Lorem Ipsum
+              coord_acquisition_id: Lorem Ipsum
+              coord_quality: Lorem Ipsum
+              coord_quality_desc: Lorem Ipsum
+              corrected_date: 12/12/2023
+              deficiency_ind: y
+              deficiency_type: Lorem Ipsum
+              described_by_ba_id: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              horizontal_accuracy: 0.1
+              horizontal_accuracy_desc: Lorem Ipsum
+              horizontal_accuracy_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              quality_date: 12/12/2023
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              vertical_accuracy: 0.1
+              vertical_accuracy_desc: Lorem Ipsum
+              vertical_accuracy_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_info_coord_quality
+    description: Create a new rm_info_coord_quality data
+    requestBody:
+      required: true
+      description: Request body to create rm_info_coord_quality data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_info_coord_quality'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            quality_id: Lorem Ipsum
+            active_ind: y
+            completeness_desc: Lorem Ipsum
+            coord_accuracy_desc: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_quality: Lorem Ipsum
+            coord_quality_desc: Lorem Ipsum
+            corrected_date: 12/12/2023
+            deficiency_ind: y
+            deficiency_type: Lorem Ipsum
+            described_by_ba_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horizontal_accuracy: 0.1
+            horizontal_accuracy_desc: Lorem Ipsum
+            horizontal_accuracy_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            quality_date: 12/12/2023
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            vertical_accuracy: 0.1
+            vertical_accuracy_desc: Lorem Ipsum
+            vertical_accuracy_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_info_coord_quality data is added
+        content:
+          application/json:
+            example:
+              message: The rm_info_coord_quality data was successfully added
+/rm-info-coord-quality/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_info_coord_quality data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_info_coord_quality data
+    description: Update a new rm_info_coord_quality data
+    requestBody:
+      required: true
+      description: Request body to update rm_info_coord_quality data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_info_coord_quality'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            quality_id: Lorem Ipsum
+            active_ind: y
+            completeness_desc: Lorem Ipsum
+            coord_accuracy_desc: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_quality: Lorem Ipsum
+            coord_quality_desc: Lorem Ipsum
+            corrected_date: 12/12/2023
+            deficiency_ind: y
+            deficiency_type: Lorem Ipsum
+            described_by_ba_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horizontal_accuracy: 0.1
+            horizontal_accuracy_desc: Lorem Ipsum
+            horizontal_accuracy_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            quality_date: 12/12/2023
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            vertical_accuracy: 0.1
+            vertical_accuracy_desc: Lorem Ipsum
+            vertical_accuracy_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_info_coord_quality data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_info_coord_quality data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_info_coord_quality data
+    description: Update a new rm_info_coord_quality data
+    requestBody:
+      required: true
+      description: Request body to update rm_info_coord_quality data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_info_coord_quality'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            quality_id: Lorem Ipsum
+            active_ind: y
+            completeness_desc: Lorem Ipsum
+            coord_accuracy_desc: Lorem Ipsum
+            coord_acquisition_id: Lorem Ipsum
+            coord_quality: Lorem Ipsum
+            coord_quality_desc: Lorem Ipsum
+            corrected_date: 12/12/2023
+            deficiency_ind: y
+            deficiency_type: Lorem Ipsum
+            described_by_ba_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            horizontal_accuracy: 0.1
+            horizontal_accuracy_desc: Lorem Ipsum
+            horizontal_accuracy_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            quality_date: 12/12/2023
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            vertical_accuracy: 0.1
+            vertical_accuracy_desc: Lorem Ipsum
+            vertical_accuracy_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_info_coord_quality data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_info_coord_quality data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_info_coord_quality data
+    description: Delete rm_info_coord_quality data
+    responses:
+      '200':
+        description: rm_info_coord_quality data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_info_coord_quality data was successfully deleted

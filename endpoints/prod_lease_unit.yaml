@@ -1,0 +1,225 @@
+/prod-lease-unit:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get prod_lease_unit
+    responses:
+      '200':
+        description: get prod_lease_unit data to be returned
+        content:
+          application/json:
+            example:
+            - lease_unit_id: Lorem Ipsum
+              acreage: 0.1
+              acreage_ouom: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              current_operator: Lorem Ipsum
+              current_status_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_id: Lorem Ipsum
+              government_lease_unit_id: Lorem Ipsum
+              land_right_id: Lorem Ipsum
+              land_right_subtype: Lorem Ipsum
+              lease_unit_long_name: Lorem Ipsum
+              lease_unit_short_name: Lorem Ipsum
+              lease_unit_status: Lorem Ipsum
+              lease_unit_type: Lorem Ipsum
+              pool_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new prod_lease_unit
+    description: Create a new prod_lease_unit data
+    requestBody:
+      required: true
+      description: Request body to create prod_lease_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_lease_unit'
+          example:
+            lease_unit_id: Lorem Ipsum
+            acreage: 0.1
+            acreage_ouom: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            government_lease_unit_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            lease_unit_long_name: Lorem Ipsum
+            lease_unit_short_name: Lorem Ipsum
+            lease_unit_status: Lorem Ipsum
+            lease_unit_type: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_lease_unit data is added
+        content:
+          application/json:
+            example:
+              message: The prod_lease_unit data was successfully added
+/prod-lease-unit/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of prod_lease_unit data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new prod_lease_unit data
+    description: Update a new prod_lease_unit data
+    requestBody:
+      required: true
+      description: Request body to update prod_lease_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_lease_unit'
+          example:
+            lease_unit_id: Lorem Ipsum
+            acreage: 0.1
+            acreage_ouom: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            government_lease_unit_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            lease_unit_long_name: Lorem Ipsum
+            lease_unit_short_name: Lorem Ipsum
+            lease_unit_status: Lorem Ipsum
+            lease_unit_type: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_lease_unit data is completely updated
+        content:
+          application/json:
+            example:
+              message: The prod_lease_unit data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new prod_lease_unit data
+    description: Update a new prod_lease_unit data
+    requestBody:
+      required: true
+      description: Request body to update prod_lease_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_lease_unit'
+          example:
+            lease_unit_id: Lorem Ipsum
+            acreage: 0.1
+            acreage_ouom: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_id: Lorem Ipsum
+            government_lease_unit_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            lease_unit_long_name: Lorem Ipsum
+            lease_unit_short_name: Lorem Ipsum
+            lease_unit_status: Lorem Ipsum
+            lease_unit_type: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in prod_lease_unit data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in prod_lease_unit data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete prod_lease_unit data
+    description: Delete prod_lease_unit data
+    responses:
+      '200':
+        description: prod_lease_unit data is deleted
+        content:
+          application/json:
+            example:
+              message: The prod_lease_unit data was successfully deleted

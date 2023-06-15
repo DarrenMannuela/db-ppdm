@@ -1,0 +1,43 @@
+package dto
+
+type Legal_congress_loc struct {
+	Legal_congress_loc_id   string   `json:"legal_congress_loc_id" default:"source"`
+	Location_type           string   `json:"location_type" default:"source"`
+	Source                  string   `json:"source" default:"source"`
+	Active_ind              *string  `json:"active_ind" default:""`
+	Area_id                 *string  `json:"area_id" default:""`
+	Area_type               *string  `json:"area_type" default:""`
+	Congress_lot_num        *string  `json:"congress_lot_num" default:""`
+	Congress_range          *float64 `json:"congress_range" default:""`
+	Congress_section        *float64 `json:"congress_section" default:""`
+	Congress_section_suffix *string  `json:"congress_section_suffix" default:""`
+	Congress_township       *float64 `json:"congress_township" default:""`
+	Congress_twp_name       *string  `json:"congress_twp_name" default:""`
+	Coord_system_id         *string  `json:"coord_system_id" default:""`
+	Effective_date          *string  `json:"effective_date" default:""`
+	Ew_direction            *string  `json:"ew_direction" default:""`
+	Ew_footage              *float64 `json:"ew_footage" default:""`
+	Ew_footage_ouom         *string  `json:"ew_footage_ouom" default:""`
+	Ew_start_line           *string  `json:"ew_start_line" default:""`
+	Expiry_date             *string  `json:"expiry_date" default:""`
+	Footage_origin          *string  `json:"footage_origin" default:""`
+	Ns_direction            *string  `json:"ns_direction" default:""`
+	Ns_footage              *float64 `json:"ns_footage" default:""`
+	Ns_footage_ouom         *string  `json:"ns_footage_ouom" default:""`
+	Ns_start_line           *string  `json:"ns_start_line" default:""`
+	Ppdm_guid               *string  `json:"ppdm_guid" default:""`
+	Principal_meridian      *string  `json:"principal_meridian" default:""`
+	Remark                  *string  `json:"remark" default:""`
+	Scaled_footage_ind      *string  `json:"scaled_footage_ind" default:""`
+	Section_type            *string  `json:"section_type" default:""`
+	Spot_code               *string  `json:"spot_code" default:""`
+	Uwi                     *string  `json:"uwi" default:""`
+	Well_node_id            *string  `json:"well_node_id" default:""`
+	Row_changed_by          *string  `json:"row_changed_by" default:""`
+	Row_changed_date        *string  `json:"row_changed_date" default:""`
+	Row_created_by          *string  `json:"row_created_by" default:""`
+	Row_created_date        *string  `json:"row_created_date" default:""`
+	Row_effective_date      *string  `json:"row_effective_date" default:""`
+	Row_expiry_date         *string  `json:"row_expiry_date" default:""`
+	Row_quality             *string  `json:"row_quality" default:""`
+}

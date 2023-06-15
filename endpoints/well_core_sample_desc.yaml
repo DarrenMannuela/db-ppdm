@@ -1,0 +1,253 @@
+/well-core-sample-desc:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_core_sample_desc
+    responses:
+      '200':
+        description: get well_core_sample_desc data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              core_id: Lorem Ipsum
+              sample_num: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              description: Lorem Ipsum
+              desc_source: Lorem Ipsum
+              dip_angle: 0.1
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              lithology_desc: Lorem Ipsum
+              porosity_length: 0.1
+              porosity_length_ouom: Lorem Ipsum
+              porosity_quality: Lorem Ipsum
+              porosity_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              recovered_amount: 0.1
+              recovered_amount_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              sample_type: Lorem Ipsum
+              show_length: 0.1
+              show_length_ouom: Lorem Ipsum
+              show_quality: Lorem Ipsum
+              show_type: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              swc_recovery_type: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_core_sample_desc
+    description: Create a new well_core_sample_desc data
+    requestBody:
+      required: true
+      description: Request body to create well_core_sample_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_desc'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            desc_source: Lorem Ipsum
+            dip_angle: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology_desc: Lorem Ipsum
+            porosity_length: 0.1
+            porosity_length_ouom: Lorem Ipsum
+            porosity_quality: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recovered_amount: 0.1
+            recovered_amount_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            show_length: 0.1
+            show_length_ouom: Lorem Ipsum
+            show_quality: Lorem Ipsum
+            show_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            swc_recovery_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_core_sample_desc data is added
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_desc data was successfully added
+/well-core-sample-desc/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_core_sample_desc data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_core_sample_desc data
+    description: Update a new well_core_sample_desc data
+    requestBody:
+      required: true
+      description: Request body to update well_core_sample_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_desc'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            desc_source: Lorem Ipsum
+            dip_angle: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology_desc: Lorem Ipsum
+            porosity_length: 0.1
+            porosity_length_ouom: Lorem Ipsum
+            porosity_quality: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recovered_amount: 0.1
+            recovered_amount_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            show_length: 0.1
+            show_length_ouom: Lorem Ipsum
+            show_quality: Lorem Ipsum
+            show_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            swc_recovery_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_core_sample_desc data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_desc data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_core_sample_desc data
+    description: Update a new well_core_sample_desc data
+    requestBody:
+      required: true
+      description: Request body to update well_core_sample_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_desc'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            description: Lorem Ipsum
+            desc_source: Lorem Ipsum
+            dip_angle: 0.1
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology_desc: Lorem Ipsum
+            porosity_length: 0.1
+            porosity_length_ouom: Lorem Ipsum
+            porosity_quality: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recovered_amount: 0.1
+            recovered_amount_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            show_length: 0.1
+            show_length_ouom: Lorem Ipsum
+            show_quality: Lorem Ipsum
+            show_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            swc_recovery_type: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_core_sample_desc data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_core_sample_desc data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_core_sample_desc data
+    description: Delete well_core_sample_desc data
+    responses:
+      '200':
+        description: well_core_sample_desc data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_desc data was successfully deleted

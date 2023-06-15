@@ -1,0 +1,46 @@
+package dto
+
+type Anl_analysis_step struct {
+	Analysis_id           string   `json:"analysis_id" default:"source"`
+	Anl_source            string   `json:"anl_source" default:"source"`
+	Step_seq_no           int      `json:"step_seq_no" default:"1"`
+	Active_ind            *string  `json:"active_ind" default:""`
+	Analysis_phase        *string  `json:"analysis_phase" default:""`
+	Anl_date              *string  `json:"anl_date" default:""`
+	Complete_date         *string  `json:"complete_date" default:""`
+	Effective_date        *string  `json:"effective_date" default:""`
+	End_date              *string  `json:"end_date" default:""`
+	Expiry_date           *string  `json:"expiry_date" default:""`
+	Final_volume          *float64 `json:"final_volume" default:""`
+	Final_volume_ouom     *string  `json:"final_volume_ouom" default:""`
+	Final_volume_percent  *float64 `json:"final_volume_percent" default:""`
+	Final_weight          *float64 `json:"final_weight" default:""`
+	Final_weight_ouom     *string  `json:"final_weight_ouom" default:""`
+	Method_id             *string  `json:"method_id" default:""`
+	Method_set_id         *string  `json:"method_set_id" default:""`
+	Ppdm_guid             *string  `json:"ppdm_guid" default:""`
+	Problem_ind           *string  `json:"problem_ind" default:""`
+	Received_date         *string  `json:"received_date" default:""`
+	Recovered_percent     *float64 `json:"recovered_percent" default:""`
+	Remark                *string  `json:"remark" default:""`
+	Reported_date         *string  `json:"reported_date" default:""`
+	Results_received_date *string  `json:"results_received_date" default:""`
+	Results_received_ind  *string  `json:"results_received_ind" default:""`
+	Sample_fraction_type  *string  `json:"sample_fraction_type" default:""`
+	Sample_quality        *string  `json:"sample_quality" default:""`
+	Sample_quality_desc   *string  `json:"sample_quality_desc" default:""`
+	Source                *string  `json:"source" default:""`
+	Start_date            *string  `json:"start_date" default:""`
+	Step_completed_ind    *string  `json:"step_completed_ind" default:""`
+	Step_desc             *string  `json:"step_desc" default:""`
+	Step_quality_desc     *string  `json:"step_quality_desc" default:""`
+	Step_quality_type     *string  `json:"step_quality_type" default:""`
+	Step_requested_ind    *string  `json:"step_requested_ind" default:""`
+	Row_changed_by        *string  `json:"row_changed_by" default:""`
+	Row_changed_date      *string  `json:"row_changed_date" default:""`
+	Row_created_by        *string  `json:"row_created_by" default:""`
+	Row_created_date      *string  `json:"row_created_date" default:""`
+	Row_effective_date    *string  `json:"row_effective_date" default:""`
+	Row_expiry_date       *string  `json:"row_expiry_date" default:""`
+	Row_quality           *string  `json:"row_quality" default:""`
+}

@@ -1,0 +1,281 @@
+/well-pressure:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_pressure
+    responses:
+      '200':
+        description: get well_pressure data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              assigned_field: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              event_source: Lorem Ipsum
+              expiry_date: 12/12/2023
+              flow_casing_pressure: 0.1
+              flow_casing_pressure_ouom: Lorem Ipsum
+              flow_tubing_pressure: 0.1
+              flow_tubing_pressure_ouom: Lorem Ipsum
+              init_reservoir_pressure: 0.1
+              init_reservoir_press_ouom: Lorem Ipsum
+              pool_datum: Lorem Ipsum
+              pool_datum_depth: 0.1
+              pool_datum_depth_ouom: Lorem Ipsum
+              pool_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              prod_string_id: Lorem Ipsum
+              prod_string_source: Lorem Ipsum
+              remark: Lorem Ipsum
+              shutin_casing_pressure: 0.1
+              shutin_casing_pressure_ouom: Lorem Ipsum
+              shutin_tubing_pressure: 0.1
+              shutin_tubing_pressure_ouom: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              well_datum_depth: 0.1
+              well_datum_ouom: Lorem Ipsum
+              well_test_num: Lorem Ipsum
+              well_test_run_num: Lorem Ipsum
+              well_test_source: Lorem Ipsum
+              well_test_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_pressure
+    description: Create a new well_pressure data
+    requestBody:
+      required: true
+      description: Request body to create well_pressure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_pressure'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            assigned_field: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            event_source: Lorem Ipsum
+            expiry_date: 12/12/2023
+            flow_casing_pressure: 0.1
+            flow_casing_pressure_ouom: Lorem Ipsum
+            flow_tubing_pressure: 0.1
+            flow_tubing_pressure_ouom: Lorem Ipsum
+            init_reservoir_pressure: 0.1
+            init_reservoir_press_ouom: Lorem Ipsum
+            pool_datum: Lorem Ipsum
+            pool_datum_depth: 0.1
+            pool_datum_depth_ouom: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            remark: Lorem Ipsum
+            shutin_casing_pressure: 0.1
+            shutin_casing_pressure_ouom: Lorem Ipsum
+            shutin_tubing_pressure: 0.1
+            shutin_tubing_pressure_ouom: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            well_datum_depth: 0.1
+            well_datum_ouom: Lorem Ipsum
+            well_test_num: Lorem Ipsum
+            well_test_run_num: Lorem Ipsum
+            well_test_source: Lorem Ipsum
+            well_test_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_pressure data is added
+        content:
+          application/json:
+            example:
+              message: The well_pressure data was successfully added
+/well-pressure/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_pressure data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_pressure data
+    description: Update a new well_pressure data
+    requestBody:
+      required: true
+      description: Request body to update well_pressure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_pressure'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            assigned_field: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            event_source: Lorem Ipsum
+            expiry_date: 12/12/2023
+            flow_casing_pressure: 0.1
+            flow_casing_pressure_ouom: Lorem Ipsum
+            flow_tubing_pressure: 0.1
+            flow_tubing_pressure_ouom: Lorem Ipsum
+            init_reservoir_pressure: 0.1
+            init_reservoir_press_ouom: Lorem Ipsum
+            pool_datum: Lorem Ipsum
+            pool_datum_depth: 0.1
+            pool_datum_depth_ouom: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            remark: Lorem Ipsum
+            shutin_casing_pressure: 0.1
+            shutin_casing_pressure_ouom: Lorem Ipsum
+            shutin_tubing_pressure: 0.1
+            shutin_tubing_pressure_ouom: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            well_datum_depth: 0.1
+            well_datum_ouom: Lorem Ipsum
+            well_test_num: Lorem Ipsum
+            well_test_run_num: Lorem Ipsum
+            well_test_source: Lorem Ipsum
+            well_test_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_pressure data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_pressure data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_pressure data
+    description: Update a new well_pressure data
+    requestBody:
+      required: true
+      description: Request body to update well_pressure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_pressure'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            assigned_field: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            event_source: Lorem Ipsum
+            expiry_date: 12/12/2023
+            flow_casing_pressure: 0.1
+            flow_casing_pressure_ouom: Lorem Ipsum
+            flow_tubing_pressure: 0.1
+            flow_tubing_pressure_ouom: Lorem Ipsum
+            init_reservoir_pressure: 0.1
+            init_reservoir_press_ouom: Lorem Ipsum
+            pool_datum: Lorem Ipsum
+            pool_datum_depth: 0.1
+            pool_datum_depth_ouom: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            remark: Lorem Ipsum
+            shutin_casing_pressure: 0.1
+            shutin_casing_pressure_ouom: Lorem Ipsum
+            shutin_tubing_pressure: 0.1
+            shutin_tubing_pressure_ouom: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            well_datum_depth: 0.1
+            well_datum_ouom: Lorem Ipsum
+            well_test_num: Lorem Ipsum
+            well_test_run_num: Lorem Ipsum
+            well_test_source: Lorem Ipsum
+            well_test_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_pressure data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_pressure data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_pressure data
+    description: Delete well_pressure data
+    responses:
+      '200':
+        description: well_pressure data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_pressure data was successfully deleted

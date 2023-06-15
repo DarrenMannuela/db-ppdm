@@ -1,0 +1,209 @@
+/equipment:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get equipment
+    responses:
+      '200':
+        description: get equipment data to be returned
+        content:
+          application/json:
+            example:
+            - equipment_id: Lorem Ipsum
+              acquire_date_new: 12/12/2023
+              active_ind: y
+              catalogue_equip_id: Lorem Ipsum
+              commission_date: 12/12/2023
+              current_owner_ba_id: Lorem Ipsum
+              decommission_date: 12/12/2023
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              equipment_group: Lorem Ipsum
+              equipment_name: Lorem Ipsum
+              equipment_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              manufacturer_ba_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              purchase_date: 12/12/2023
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              serial_num: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new equipment
+    description: Create a new equipment data
+    requestBody:
+      required: true
+      description: Request body to create equipment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment'
+          example:
+            equipment_id: Lorem Ipsum
+            acquire_date_new: 12/12/2023
+            active_ind: y
+            catalogue_equip_id: Lorem Ipsum
+            commission_date: 12/12/2023
+            current_owner_ba_id: Lorem Ipsum
+            decommission_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_group: Lorem Ipsum
+            equipment_name: Lorem Ipsum
+            equipment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            manufacturer_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            purchase_date: 12/12/2023
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            serial_num: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment data is added
+        content:
+          application/json:
+            example:
+              message: The equipment data was successfully added
+/equipment/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of equipment data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new equipment data
+    description: Update a new equipment data
+    requestBody:
+      required: true
+      description: Request body to update equipment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment'
+          example:
+            equipment_id: Lorem Ipsum
+            acquire_date_new: 12/12/2023
+            active_ind: y
+            catalogue_equip_id: Lorem Ipsum
+            commission_date: 12/12/2023
+            current_owner_ba_id: Lorem Ipsum
+            decommission_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_group: Lorem Ipsum
+            equipment_name: Lorem Ipsum
+            equipment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            manufacturer_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            purchase_date: 12/12/2023
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            serial_num: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment data is completely updated
+        content:
+          application/json:
+            example:
+              message: The equipment data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new equipment data
+    description: Update a new equipment data
+    requestBody:
+      required: true
+      description: Request body to update equipment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment'
+          example:
+            equipment_id: Lorem Ipsum
+            acquire_date_new: 12/12/2023
+            active_ind: y
+            catalogue_equip_id: Lorem Ipsum
+            commission_date: 12/12/2023
+            current_owner_ba_id: Lorem Ipsum
+            decommission_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_group: Lorem Ipsum
+            equipment_name: Lorem Ipsum
+            equipment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            manufacturer_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            purchase_date: 12/12/2023
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            serial_num: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in equipment data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in equipment data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete equipment data
+    description: Delete equipment data
+    responses:
+      '200':
+        description: equipment data is deleted
+        content:
+          application/json:
+            example:
+              message: The equipment data was successfully deleted

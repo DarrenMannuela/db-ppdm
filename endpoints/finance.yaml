@@ -1,0 +1,201 @@
+/finance:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get finance
+    responses:
+      '200':
+        description: get finance data to be returned
+        content:
+          application/json:
+            example:
+            - finance_id: Lorem Ipsum
+              active_ind: y
+              actual_cost: 0.1
+              authorized_by_ba_id: Lorem Ipsum
+              budget_cost: 0.1
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              finance_type: Lorem Ipsum
+              fin_status: Lorem Ipsum
+              issue_date: 12/12/2023
+              limit_amount: 0.1
+              ppdm_guid: Lorem Ipsum
+              reference_number: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              tax_credit_code: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new finance
+    description: Create a new finance data
+    requestBody:
+      required: true
+      description: Request body to create finance data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/finance'
+          example:
+            finance_id: Lorem Ipsum
+            active_ind: y
+            actual_cost: 0.1
+            authorized_by_ba_id: Lorem Ipsum
+            budget_cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_type: Lorem Ipsum
+            fin_status: Lorem Ipsum
+            issue_date: 12/12/2023
+            limit_amount: 0.1
+            ppdm_guid: Lorem Ipsum
+            reference_number: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: finance data is added
+        content:
+          application/json:
+            example:
+              message: The finance data was successfully added
+/finance/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of finance data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new finance data
+    description: Update a new finance data
+    requestBody:
+      required: true
+      description: Request body to update finance data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/finance'
+          example:
+            finance_id: Lorem Ipsum
+            active_ind: y
+            actual_cost: 0.1
+            authorized_by_ba_id: Lorem Ipsum
+            budget_cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_type: Lorem Ipsum
+            fin_status: Lorem Ipsum
+            issue_date: 12/12/2023
+            limit_amount: 0.1
+            ppdm_guid: Lorem Ipsum
+            reference_number: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: finance data is completely updated
+        content:
+          application/json:
+            example:
+              message: The finance data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new finance data
+    description: Update a new finance data
+    requestBody:
+      required: true
+      description: Request body to update finance data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/finance'
+          example:
+            finance_id: Lorem Ipsum
+            active_ind: y
+            actual_cost: 0.1
+            authorized_by_ba_id: Lorem Ipsum
+            budget_cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            finance_type: Lorem Ipsum
+            fin_status: Lorem Ipsum
+            issue_date: 12/12/2023
+            limit_amount: 0.1
+            ppdm_guid: Lorem Ipsum
+            reference_number: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tax_credit_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in finance data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in finance data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete finance data
+    description: Delete finance data
+    responses:
+      '200':
+        description: finance data is deleted
+        content:
+          application/json:
+            example:
+              message: The finance data was successfully deleted

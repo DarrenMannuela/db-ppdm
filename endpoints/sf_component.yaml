@@ -1,0 +1,345 @@
+/sf-component:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sf_component
+    responses:
+      '200':
+        description: get sf_component data to be returned
+        content:
+          application/json:
+            example:
+            - sf_subtype: Lorem Ipsum
+              support_facility_id: Lorem Ipsum
+              use_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              ba_licensee_ba_id: Lorem Ipsum
+              ba_license_id: Lorem Ipsum
+              business_associate_id: Lorem Ipsum
+              consent_id: Lorem Ipsum
+              consult_id: Lorem Ipsum
+              contest_id: Lorem Ipsum
+              contract_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              facility_id: Lorem Ipsum
+              facility_license_id: Lorem Ipsum
+              facility_type: Lorem Ipsum
+              field_id: Lorem Ipsum
+              field_station_id: Lorem Ipsum
+              finance_id: Lorem Ipsum
+              hse_incident_id: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              info_item_subtype: Lorem Ipsum
+              instrument_id: Lorem Ipsum
+              land_right_id: Lorem Ipsum
+              land_right_subtype: Lorem Ipsum
+              land_sale_jurisdiction: Lorem Ipsum
+              land_sale_number: Lorem Ipsum
+              obligation_id: Lorem Ipsum
+              pden_id: Lorem Ipsum
+              pden_source: Lorem Ipsum
+              pden_subtype: Lorem Ipsum
+              pool_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              ppdm_system_id: Lorem Ipsum
+              ppdm_table_name: Lorem Ipsum
+              prod_string_id: Lorem Ipsum
+              prod_string_source: Lorem Ipsum
+              project_id: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_license_id: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              seis_set_subtype: Lorem Ipsum
+              sf_component_type: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              sw_application_id: Lorem Ipsum
+              uwi: Lorem Ipsum
+              well_license_id: Lorem Ipsum
+              well_license_source: Lorem Ipsum
+              well_set_id: Lorem Ipsum
+              work_order_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sf_component
+    description: Create a new sf_component data
+    requestBody:
+      required: true
+      description: Request body to create sf_component data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_component'
+          example:
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            use_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            ba_licensee_ba_id: Lorem Ipsum
+            ba_license_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            consent_id: Lorem Ipsum
+            consult_id: Lorem Ipsum
+            contest_id: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_license_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            field_station_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            hse_incident_id: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            instrument_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            land_sale_jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            obligation_id: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            ppdm_system_id: Lorem Ipsum
+            ppdm_table_name: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            project_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_license_id: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            sf_component_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            well_license_id: Lorem Ipsum
+            well_license_source: Lorem Ipsum
+            well_set_id: Lorem Ipsum
+            work_order_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_component data is added
+        content:
+          application/json:
+            example:
+              message: The sf_component data was successfully added
+/sf-component/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sf_component data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sf_component data
+    description: Update a new sf_component data
+    requestBody:
+      required: true
+      description: Request body to update sf_component data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_component'
+          example:
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            use_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            ba_licensee_ba_id: Lorem Ipsum
+            ba_license_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            consent_id: Lorem Ipsum
+            consult_id: Lorem Ipsum
+            contest_id: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_license_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            field_station_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            hse_incident_id: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            instrument_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            land_sale_jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            obligation_id: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            ppdm_system_id: Lorem Ipsum
+            ppdm_table_name: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            project_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_license_id: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            sf_component_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            well_license_id: Lorem Ipsum
+            well_license_source: Lorem Ipsum
+            well_set_id: Lorem Ipsum
+            work_order_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_component data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sf_component data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sf_component data
+    description: Update a new sf_component data
+    requestBody:
+      required: true
+      description: Request body to update sf_component data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_component'
+          example:
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            use_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            ba_licensee_ba_id: Lorem Ipsum
+            ba_license_id: Lorem Ipsum
+            business_associate_id: Lorem Ipsum
+            consent_id: Lorem Ipsum
+            consult_id: Lorem Ipsum
+            contest_id: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_id: Lorem Ipsum
+            facility_license_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            field_id: Lorem Ipsum
+            field_station_id: Lorem Ipsum
+            finance_id: Lorem Ipsum
+            hse_incident_id: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            info_item_subtype: Lorem Ipsum
+            instrument_id: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            land_right_subtype: Lorem Ipsum
+            land_sale_jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            obligation_id: Lorem Ipsum
+            pden_id: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            ppdm_system_id: Lorem Ipsum
+            ppdm_table_name: Lorem Ipsum
+            prod_string_id: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            project_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_license_id: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            sf_component_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            uwi: Lorem Ipsum
+            well_license_id: Lorem Ipsum
+            well_license_source: Lorem Ipsum
+            well_set_id: Lorem Ipsum
+            work_order_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sf_component data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sf_component data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sf_component data
+    description: Delete sf_component data
+    responses:
+      '200':
+        description: sf_component data is deleted
+        content:
+          application/json:
+            example:
+              message: The sf_component data was successfully deleted

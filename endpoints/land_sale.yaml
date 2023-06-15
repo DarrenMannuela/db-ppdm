@@ -1,0 +1,209 @@
+/land-sale:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get land_sale
+    responses:
+      '200':
+        description: get land_sale data to be returned
+        content:
+          application/json:
+            example:
+            - jurisdiction: Lorem Ipsum
+              land_sale_number: Lorem Ipsum
+              active_ind: y
+              close_date: 12/12/2023
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              land_sale_name: Lorem Ipsum
+              open_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              publish_date: 12/12/2023
+              remark: Lorem Ipsum
+              sale_date: 12/12/2023
+              sold_size: 0.1
+              sold_size_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              total_bonus: 0.1
+              total_bonus_ouom: Lorem Ipsum
+              total_size: 0.1
+              total_size_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new land_sale
+    description: Create a new land_sale data
+    requestBody:
+      required: true
+      description: Request body to create land_sale data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            active_ind: y
+            close_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            land_sale_name: Lorem Ipsum
+            open_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            publish_date: 12/12/2023
+            remark: Lorem Ipsum
+            sale_date: 12/12/2023
+            sold_size: 0.1
+            sold_size_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            total_bonus: 0.1
+            total_bonus_ouom: Lorem Ipsum
+            total_size: 0.1
+            total_size_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_sale data is added
+        content:
+          application/json:
+            example:
+              message: The land_sale data was successfully added
+/land-sale/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of land_sale data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new land_sale data
+    description: Update a new land_sale data
+    requestBody:
+      required: true
+      description: Request body to update land_sale data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            active_ind: y
+            close_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            land_sale_name: Lorem Ipsum
+            open_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            publish_date: 12/12/2023
+            remark: Lorem Ipsum
+            sale_date: 12/12/2023
+            sold_size: 0.1
+            sold_size_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            total_bonus: 0.1
+            total_bonus_ouom: Lorem Ipsum
+            total_size: 0.1
+            total_size_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_sale data is completely updated
+        content:
+          application/json:
+            example:
+              message: The land_sale data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new land_sale data
+    description: Update a new land_sale data
+    requestBody:
+      required: true
+      description: Request body to update land_sale data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_sale'
+          example:
+            jurisdiction: Lorem Ipsum
+            land_sale_number: Lorem Ipsum
+            active_ind: y
+            close_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            land_sale_name: Lorem Ipsum
+            open_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            publish_date: 12/12/2023
+            remark: Lorem Ipsum
+            sale_date: 12/12/2023
+            sold_size: 0.1
+            sold_size_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            total_bonus: 0.1
+            total_bonus_ouom: Lorem Ipsum
+            total_size: 0.1
+            total_size_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in land_sale data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in land_sale data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete land_sale data
+    description: Delete land_sale data
+    responses:
+      '200':
+        description: land_sale data is deleted
+        content:
+          application/json:
+            example:
+              message: The land_sale data was successfully deleted

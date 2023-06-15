@@ -1,0 +1,181 @@
+/fossil-assemblage:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get fossil_assemblage
+    responses:
+      '200':
+        description: get fossil_assemblage data to be returned
+        content:
+          application/json:
+            example:
+            - strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              taxon_leaf_id: Lorem Ipsum
+              active_ind: y
+              assemblage_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              oldest_ind: y
+              ppdm_guid: Lorem Ipsum
+              primary_marker_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new fossil_assemblage
+    description: Create a new fossil_assemblage data
+    requestBody:
+      required: true
+      description: Request body to create fossil_assemblage data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fossil_assemblage'
+          example:
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            taxon_leaf_id: Lorem Ipsum
+            active_ind: y
+            assemblage_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            oldest_ind: y
+            ppdm_guid: Lorem Ipsum
+            primary_marker_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: fossil_assemblage data is added
+        content:
+          application/json:
+            example:
+              message: The fossil_assemblage data was successfully added
+/fossil-assemblage/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of fossil_assemblage data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new fossil_assemblage data
+    description: Update a new fossil_assemblage data
+    requestBody:
+      required: true
+      description: Request body to update fossil_assemblage data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fossil_assemblage'
+          example:
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            taxon_leaf_id: Lorem Ipsum
+            active_ind: y
+            assemblage_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            oldest_ind: y
+            ppdm_guid: Lorem Ipsum
+            primary_marker_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: fossil_assemblage data is completely updated
+        content:
+          application/json:
+            example:
+              message: The fossil_assemblage data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new fossil_assemblage data
+    description: Update a new fossil_assemblage data
+    requestBody:
+      required: true
+      description: Request body to update fossil_assemblage data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/fossil_assemblage'
+          example:
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            taxon_leaf_id: Lorem Ipsum
+            active_ind: y
+            assemblage_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            oldest_ind: y
+            ppdm_guid: Lorem Ipsum
+            primary_marker_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in fossil_assemblage data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in fossil_assemblage data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete fossil_assemblage data
+    description: Delete fossil_assemblage data
+    responses:
+      '200':
+        description: fossil_assemblage data is deleted
+        content:
+          application/json:
+            example:
+              message: The fossil_assemblage data was successfully deleted

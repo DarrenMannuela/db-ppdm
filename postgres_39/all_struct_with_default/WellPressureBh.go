@@ -1,0 +1,46 @@
+package dto
+
+type Well_pressure_bh struct {
+	Uwi                        string   `json:"uwi" default:"source"`
+	Source                     string   `json:"source" default:"source"`
+	Pressure_obs_no            int      `json:"pressure_obs_no" default:"1"`
+	Bhp_obs_no                 int      `json:"bhp_obs_no" default:"1"`
+	Active_ind                 *string  `json:"active_ind" default:""`
+	Bhfp                       *float64 `json:"bhfp" default:""`
+	Bhfp_ouom                  *string  `json:"bhfp_ouom" default:""`
+	Bhp_method                 *string  `json:"bhp_method" default:""`
+	Bh_test_code               *string  `json:"bh_test_code" default:""`
+	Datum_pressure             *float64 `json:"datum_pressure" default:""`
+	Datum_pressure_ouom        *string  `json:"datum_pressure_ouom" default:""`
+	Effective_date             *string  `json:"effective_date" default:""`
+	Expiry_date                *string  `json:"expiry_date" default:""`
+	Packer_depth               *float64 `json:"packer_depth" default:""`
+	Packer_depth_ouom          *string  `json:"packer_depth_ouom" default:""`
+	Ppdm_guid                  *string  `json:"ppdm_guid" default:""`
+	Pressure_gradient          *float64 `json:"pressure_gradient" default:""`
+	Pressure_gradient_ouom     *string  `json:"pressure_gradient_ouom" default:""`
+	Recorder_datum             *float64 `json:"recorder_datum" default:""`
+	Recorder_datum_ouom        *string  `json:"recorder_datum_ouom" default:""`
+	Remark                     *string  `json:"remark" default:""`
+	Reported_run_tvd           *float64 `json:"reported_run_tvd" default:""`
+	Reported_run_tvd_ouom      *string  `json:"reported_run_tvd_ouom" default:""`
+	Run_depth                  *float64 `json:"run_depth" default:""`
+	Run_depth_ouom             *string  `json:"run_depth_ouom" default:""`
+	Run_depth_temperature      *float64 `json:"run_depth_temperature" default:""`
+	Run_depth_temperature_ouom *string  `json:"run_depth_temperature_ouom" default:""`
+	Shutin_period              *float64 `json:"shutin_period" default:""`
+	Shutin_period_ouom         *string  `json:"shutin_period_ouom" default:""`
+	Survey_date                *string  `json:"survey_date" default:""`
+	Test_duration              *float64 `json:"test_duration" default:""`
+	Test_duration_ouom         *string  `json:"test_duration_ouom" default:""`
+	Tubing_size_desc           *string  `json:"tubing_size_desc" default:""`
+	Well_head_pressure         *float64 `json:"well_head_pressure" default:""`
+	Well_head_pressure_ouom    *string  `json:"well_head_pressure_ouom" default:""`
+	Row_changed_by             *string  `json:"row_changed_by" default:""`
+	Row_changed_date           *string  `json:"row_changed_date" default:""`
+	Row_created_by             *string  `json:"row_created_by" default:""`
+	Row_created_date           *string  `json:"row_created_date" default:""`
+	Row_effective_date         *string  `json:"row_effective_date" default:""`
+	Row_expiry_date            *string  `json:"row_expiry_date" default:""`
+	Row_quality                *string  `json:"row_quality" default:""`
+}

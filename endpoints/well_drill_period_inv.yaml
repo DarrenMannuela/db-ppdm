@@ -1,0 +1,209 @@
+/well-drill-period-inv:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_period_inv
+    responses:
+      '200':
+        description: get well_drill_period_inv data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              active_ind: y
+              cat_additive_id: Lorem Ipsum
+              cat_equip_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              equipment_id: Lorem Ipsum
+              expiry_date: 12/12/2023
+              inventory_material_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              quantity_on_hand: 1.0
+              quantity_on_hand_ouom: Lorem Ipsum
+              quantity_on_hand_uom: Lorem Ipsum
+              quantity_ordered: 1.0
+              quantity_ordered_ouom: Lorem Ipsum
+              quantity_ordered_uom: Lorem Ipsum
+              remark: Lorem Ipsum
+              report_time: 12/12/2023
+              report_timezone: Lorem Ipsum
+              report_time_type: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_period_inv
+    description: Create a new well_drill_period_inv data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_period_inv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_inv'
+          example:
+            uwi: Lorem Ipsum
+            active_ind: y
+            cat_additive_id: Lorem Ipsum
+            cat_equip_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            inventory_material_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            quantity_on_hand: 1.0
+            quantity_on_hand_ouom: Lorem Ipsum
+            quantity_on_hand_uom: Lorem Ipsum
+            quantity_ordered: 1.0
+            quantity_ordered_ouom: Lorem Ipsum
+            quantity_ordered_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_time: 12/12/2023
+            report_timezone: Lorem Ipsum
+            report_time_type: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_period_inv data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_inv data was successfully added
+/well-drill-period-inv/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_period_inv data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_period_inv data
+    description: Update a new well_drill_period_inv data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_period_inv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_inv'
+          example:
+            uwi: Lorem Ipsum
+            active_ind: y
+            cat_additive_id: Lorem Ipsum
+            cat_equip_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            inventory_material_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            quantity_on_hand: 1.0
+            quantity_on_hand_ouom: Lorem Ipsum
+            quantity_on_hand_uom: Lorem Ipsum
+            quantity_ordered: 1.0
+            quantity_ordered_ouom: Lorem Ipsum
+            quantity_ordered_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_time: 12/12/2023
+            report_timezone: Lorem Ipsum
+            report_time_type: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_period_inv data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_inv data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_period_inv data
+    description: Update a new well_drill_period_inv data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_period_inv data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_inv'
+          example:
+            uwi: Lorem Ipsum
+            active_ind: y
+            cat_additive_id: Lorem Ipsum
+            cat_equip_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            inventory_material_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            quantity_on_hand: 1.0
+            quantity_on_hand_ouom: Lorem Ipsum
+            quantity_on_hand_uom: Lorem Ipsum
+            quantity_ordered: 1.0
+            quantity_ordered_ouom: Lorem Ipsum
+            quantity_ordered_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            report_time: 12/12/2023
+            report_timezone: Lorem Ipsum
+            report_time_type: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_period_inv data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_period_inv data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_period_inv data
+    description: Delete well_drill_period_inv data
+    responses:
+      '200':
+        description: well_drill_period_inv data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_inv data was successfully deleted

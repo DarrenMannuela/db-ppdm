@@ -1,0 +1,241 @@
+/facility-lic-cond:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get facility_lic_cond
+    responses:
+      '200':
+        description: get facility_lic_cond data to be returned
+        content:
+          application/json:
+            example:
+            - facility_id: Lorem Ipsum
+              facility_type: Lorem Ipsum
+              license_id: Lorem Ipsum
+              condition_id: Lorem Ipsum
+              active_ind: y
+              condition_code: Lorem Ipsum
+              condition_type: Lorem Ipsum
+              condition_value: 0.1
+              condition_value_uom: Lorem Ipsum
+              contact_ba_id: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              description: Lorem Ipsum
+              due_condition: Lorem Ipsum
+              due_date: 12/12/2023
+              due_frequency: Lorem Ipsum
+              due_term: 0.1
+              due_term_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              exempt_ind: y
+              expiry_date: 12/12/2023
+              fulfilled_by_ba_id: Lorem Ipsum
+              fulfilled_date: 12/12/2023
+              fulfilled_ind: y
+              ppdm_guid: Lorem Ipsum
+              product_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              restriction_id: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new facility_lic_cond
+    description: Create a new facility_lic_cond data
+    requestBody:
+      required: true
+      description: Request body to create facility_lic_cond data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_lic_cond'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            license_id: Lorem Ipsum
+            condition_id: Lorem Ipsum
+            active_ind: y
+            condition_code: Lorem Ipsum
+            condition_type: Lorem Ipsum
+            condition_value: 0.1
+            condition_value_uom: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            due_condition: Lorem Ipsum
+            due_date: 12/12/2023
+            due_frequency: Lorem Ipsum
+            due_term: 0.1
+            due_term_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            exempt_ind: y
+            expiry_date: 12/12/2023
+            fulfilled_by_ba_id: Lorem Ipsum
+            fulfilled_date: 12/12/2023
+            fulfilled_ind: y
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            restriction_id: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility_lic_cond data is added
+        content:
+          application/json:
+            example:
+              message: The facility_lic_cond data was successfully added
+/facility-lic-cond/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of facility_lic_cond data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new facility_lic_cond data
+    description: Update a new facility_lic_cond data
+    requestBody:
+      required: true
+      description: Request body to update facility_lic_cond data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_lic_cond'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            license_id: Lorem Ipsum
+            condition_id: Lorem Ipsum
+            active_ind: y
+            condition_code: Lorem Ipsum
+            condition_type: Lorem Ipsum
+            condition_value: 0.1
+            condition_value_uom: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            due_condition: Lorem Ipsum
+            due_date: 12/12/2023
+            due_frequency: Lorem Ipsum
+            due_term: 0.1
+            due_term_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            exempt_ind: y
+            expiry_date: 12/12/2023
+            fulfilled_by_ba_id: Lorem Ipsum
+            fulfilled_date: 12/12/2023
+            fulfilled_ind: y
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            restriction_id: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility_lic_cond data is completely updated
+        content:
+          application/json:
+            example:
+              message: The facility_lic_cond data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new facility_lic_cond data
+    description: Update a new facility_lic_cond data
+    requestBody:
+      required: true
+      description: Request body to update facility_lic_cond data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_lic_cond'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            license_id: Lorem Ipsum
+            condition_id: Lorem Ipsum
+            active_ind: y
+            condition_code: Lorem Ipsum
+            condition_type: Lorem Ipsum
+            condition_value: 0.1
+            condition_value_uom: Lorem Ipsum
+            contact_ba_id: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            due_condition: Lorem Ipsum
+            due_date: 12/12/2023
+            due_frequency: Lorem Ipsum
+            due_term: 0.1
+            due_term_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            exempt_ind: y
+            expiry_date: 12/12/2023
+            fulfilled_by_ba_id: Lorem Ipsum
+            fulfilled_date: 12/12/2023
+            fulfilled_ind: y
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            restriction_id: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in facility_lic_cond data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in facility_lic_cond data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete facility_lic_cond data
+    description: Delete facility_lic_cond data
+    responses:
+      '200':
+        description: facility_lic_cond data is deleted
+        content:
+          application/json:
+            example:
+              message: The facility_lic_cond data was successfully deleted

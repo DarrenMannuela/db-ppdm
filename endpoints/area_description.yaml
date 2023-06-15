@@ -1,0 +1,221 @@
+/area-description:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get area_description
+    responses:
+      '200':
+        description: get area_description data to be returned
+        content:
+          application/json:
+            example:
+            - area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              active_ind: y
+              area_description_date: 12/12/2023
+              area_desc_code: Lorem Ipsum
+              area_desc_type: Lorem Ipsum
+              average_value: 1.0
+              average_value_ouom: Lorem Ipsum
+              average_value_uom: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new area_description
+    description: Create a new area_description data
+    requestBody:
+      required: true
+      description: Request body to create area_description data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/area_description'
+          example:
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            active_ind: y
+            area_description_date: 12/12/2023
+            area_desc_code: Lorem Ipsum
+            area_desc_type: Lorem Ipsum
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: area_description data is added
+        content:
+          application/json:
+            example:
+              message: The area_description data was successfully added
+/area-description/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of area_description data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new area_description data
+    description: Update a new area_description data
+    requestBody:
+      required: true
+      description: Request body to update area_description data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/area_description'
+          example:
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            active_ind: y
+            area_description_date: 12/12/2023
+            area_desc_code: Lorem Ipsum
+            area_desc_type: Lorem Ipsum
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: area_description data is completely updated
+        content:
+          application/json:
+            example:
+              message: The area_description data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new area_description data
+    description: Update a new area_description data
+    requestBody:
+      required: true
+      description: Request body to update area_description data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/area_description'
+          example:
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            active_ind: y
+            area_description_date: 12/12/2023
+            area_desc_code: Lorem Ipsum
+            area_desc_type: Lorem Ipsum
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in area_description data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in area_description data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete area_description data
+    description: Delete area_description data
+    responses:
+      '200':
+        description: area_description data is deleted
+        content:
+          application/json:
+            example:
+              message: The area_description data was successfully deleted

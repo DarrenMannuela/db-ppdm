@@ -1,0 +1,48 @@
+package dto
+
+type Well_drill_period_equip struct {
+	Uwi                         string   `json:"uwi" default:"source"`
+	Period_obs_no               int      `json:"period_obs_no" default:"1"`
+	Equipment_id                string   `json:"equipment_id" default:"source"`
+	Active_ind                  *string  `json:"active_ind" default:""`
+	Avg_boiler_ph               *float64 `json:"avg_boiler_ph" default:""`
+	Avg_boiler_stack_temp       *float64 `json:"avg_boiler_stack_temp" default:""`
+	Avg_boiler_stack_temp_ouom  *string  `json:"avg_boiler_stack_temp_ouom" default:""`
+	Avg_pump_pressure           *float64 `json:"avg_pump_pressure" default:""`
+	Avg_pump_pressure_ouom      *string  `json:"avg_pump_pressure_ouom" default:""`
+	Booked_time_elapsed         *float64 `json:"booked_time_elapsed" default:""`
+	Booked_time_elapsed_ouom    *string  `json:"booked_time_elapsed_ouom" default:""`
+	Effective_date              *string  `json:"effective_date" default:""`
+	Equipment_obs_no            *int     `json:"equipment_obs_no" default:""`
+	Equip_ref_num               *string  `json:"equip_ref_num" default:""`
+	Expiry_date                 *string  `json:"expiry_date" default:""`
+	Intake_density              *float64 `json:"intake_density" default:""`
+	Intake_density_ouom         *string  `json:"intake_density_ouom" default:""`
+	Overflow_density            *float64 `json:"overflow_density" default:""`
+	Overflow_density_ouom       *string  `json:"overflow_density_ouom" default:""`
+	Ppdm_guid                   *string  `json:"ppdm_guid" default:""`
+	Pump_liner_inside_diam      *float64 `json:"pump_liner_inside_diam" default:""`
+	Pump_liner_inside_diam_ouom *string  `json:"pump_liner_inside_diam_ouom" default:""`
+	Pump_stroke                 *int     `json:"pump_stroke" default:""`
+	Pump_stroke_ouom            *string  `json:"pump_stroke_ouom" default:""`
+	Reduced_pump_depth          *float64 `json:"reduced_pump_depth" default:""`
+	Reduced_pump_depth_ouom     *string  `json:"reduced_pump_depth_ouom" default:""`
+	Reduced_pump_press          *float64 `json:"reduced_pump_press" default:""`
+	Reduced_pump_press_ouom     *string  `json:"reduced_pump_press_ouom" default:""`
+	Reduced_pump_stroke         *float64 `json:"reduced_pump_stroke" default:""`
+	Reduced_pump_stroke_ouom    *string  `json:"reduced_pump_stroke_ouom" default:""`
+	Remark                      *string  `json:"remark" default:""`
+	Source                      *string  `json:"source" default:""`
+	Tubing_obs_no               *int     `json:"tubing_obs_no" default:""`
+	Tubing_source               *string  `json:"tubing_source" default:""`
+	Tubing_type                 *string  `json:"tubing_type" default:""`
+	Underflow_density           *float64 `json:"underflow_density" default:""`
+	Underflow_density_ouom      *string  `json:"underflow_density_ouom" default:""`
+	Row_changed_by              *string  `json:"row_changed_by" default:""`
+	Row_changed_date            *string  `json:"row_changed_date" default:""`
+	Row_created_by              *string  `json:"row_created_by" default:""`
+	Row_created_date            *string  `json:"row_created_date" default:""`
+	Row_effective_date          *string  `json:"row_effective_date" default:""`
+	Row_expiry_date             *string  `json:"row_expiry_date" default:""`
+	Row_quality                 *string  `json:"row_quality" default:""`
+}

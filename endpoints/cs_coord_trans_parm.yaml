@@ -1,0 +1,173 @@
+/cs-coord-trans-parm:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cs_coord_trans_parm
+    responses:
+      '200':
+        description: get cs_coord_trans_parm data to be returned
+        content:
+          application/json:
+            example:
+            - transform_type: Lorem Ipsum
+              parameter_id: Lorem Ipsum
+              active_ind: y
+              digital_output: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              transform_parm: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cs_coord_trans_parm
+    description: Create a new cs_coord_trans_parm data
+    requestBody:
+      required: true
+      description: Request body to create cs_coord_trans_parm data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coord_trans_parm'
+          example:
+            transform_type: Lorem Ipsum
+            parameter_id: Lorem Ipsum
+            active_ind: y
+            digital_output: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            transform_parm: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_coord_trans_parm data is added
+        content:
+          application/json:
+            example:
+              message: The cs_coord_trans_parm data was successfully added
+/cs-coord-trans-parm/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cs_coord_trans_parm data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cs_coord_trans_parm data
+    description: Update a new cs_coord_trans_parm data
+    requestBody:
+      required: true
+      description: Request body to update cs_coord_trans_parm data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coord_trans_parm'
+          example:
+            transform_type: Lorem Ipsum
+            parameter_id: Lorem Ipsum
+            active_ind: y
+            digital_output: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            transform_parm: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_coord_trans_parm data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cs_coord_trans_parm data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cs_coord_trans_parm data
+    description: Update a new cs_coord_trans_parm data
+    requestBody:
+      required: true
+      description: Request body to update cs_coord_trans_parm data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coord_trans_parm'
+          example:
+            transform_type: Lorem Ipsum
+            parameter_id: Lorem Ipsum
+            active_ind: y
+            digital_output: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            transform_parm: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cs_coord_trans_parm data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cs_coord_trans_parm data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cs_coord_trans_parm data
+    description: Delete cs_coord_trans_parm data
+    responses:
+      '200':
+        description: cs_coord_trans_parm data is deleted
+        content:
+          application/json:
+            example:
+              message: The cs_coord_trans_parm data was successfully deleted

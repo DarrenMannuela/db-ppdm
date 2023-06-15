@@ -1,0 +1,41 @@
+package dto
+
+type Well_drill_pipe_inv struct {
+	Uwi                         string   `json:"uwi" default:"source"`
+	Period_obs_no               int      `json:"period_obs_no" default:"1"`
+	Inventory_obs_no            int      `json:"inventory_obs_no" default:"1"`
+	Active_ind                  *string  `json:"active_ind" default:""`
+	Cat_equip_id                *string  `json:"cat_equip_id" default:""`
+	Coupling_type               *string  `json:"coupling_type" default:""`
+	Damaged_joint_count         *int     `json:"damaged_joint_count" default:""`
+	Effective_date              *string  `json:"effective_date" default:""`
+	Expiry_date                 *string  `json:"expiry_date" default:""`
+	Joint_count                 *int     `json:"joint_count" default:""`
+	Linear_mass                 *float64 `json:"linear_mass" default:""`
+	Linear_mass_ouom            *string  `json:"linear_mass_ouom" default:""`
+	Loan_authorized_by_ba_id    *string  `json:"loan_authorized_by_ba_id" default:""`
+	Loan_count                  *int     `json:"loan_count" default:""`
+	Loan_to_ba_id               *string  `json:"loan_to_ba_id" default:""`
+	Lost_count                  *int     `json:"lost_count" default:""`
+	Max_joint_outside_diam      *float64 `json:"max_joint_outside_diam" default:""`
+	Max_joint_outside_diam_ouom *string  `json:"max_joint_outside_diam_ouom" default:""`
+	Max_outside_diameter        *float64 `json:"max_outside_diameter" default:""`
+	Max_outside_diameter_ouom   *string  `json:"max_outside_diameter_ouom" default:""`
+	Min_inside_diameter         *float64 `json:"min_inside_diameter" default:""`
+	Min_inside_diameter_ouom    *string  `json:"min_inside_diameter_ouom" default:""`
+	Ppdm_guid                   *string  `json:"ppdm_guid" default:""`
+	Remark                      *string  `json:"remark" default:""`
+	Report_time                 *string  `json:"report_time" default:""`
+	Report_timezone             *string  `json:"report_timezone" default:""`
+	Report_time_type            *string  `json:"report_time_type" default:""`
+	Source                      *string  `json:"source" default:""`
+	Tubing_grade                *string  `json:"tubing_grade" default:""`
+	Tubing_type                 *string  `json:"tubing_type" default:""`
+	Row_changed_by              *string  `json:"row_changed_by" default:""`
+	Row_changed_date            *string  `json:"row_changed_date" default:""`
+	Row_created_by              *string  `json:"row_created_by" default:""`
+	Row_created_date            *string  `json:"row_created_date" default:""`
+	Row_effective_date          *string  `json:"row_effective_date" default:""`
+	Row_expiry_date             *string  `json:"row_expiry_date" default:""`
+	Row_quality                 *string  `json:"row_quality" default:""`
+}

@@ -1,0 +1,41 @@
+package dto
+
+type Sp_parcel_texas struct {
+	Parcel_texas_id        string   `json:"parcel_texas_id" default:"source"`
+	Abstract_num           *string  `json:"abstract_num" default:""`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Area_id                *string  `json:"area_id" default:""`
+	Area_type              *string  `json:"area_type" default:""`
+	Block_fraction         *string  `json:"block_fraction" default:""`
+	Coord_system_id        *string  `json:"coord_system_id" default:""`
+	Description            *string  `json:"description" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Labor                  *string  `json:"labor" default:""`
+	League                 *string  `json:"league" default:""`
+	Ns_direction           *string  `json:"ns_direction" default:""`
+	Porcion_num            *string  `json:"porcion_num" default:""`
+	Porcion_survey_name    *string  `json:"porcion_survey_name" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Reference_plan_num     *string  `json:"reference_plan_num" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Section_fraction       *string  `json:"section_fraction" default:""`
+	Source                 *string  `json:"source" default:""`
+	Spatial_description_id *string  `json:"spatial_description_id" default:""`
+	Spatial_obs_no         *int     `json:"spatial_obs_no" default:""`
+	Spot_code              *string  `json:"spot_code" default:""`
+	Texas_block            *string  `json:"texas_block" default:""`
+	Texas_lot              *string  `json:"texas_lot" default:""`
+	Texas_section          *string  `json:"texas_section" default:""`
+	Texas_share            *string  `json:"texas_share" default:""`
+	Texas_subdivision      *string  `json:"texas_subdivision" default:""`
+	Texas_survey           *string  `json:"texas_survey" default:""`
+	Texas_township         *float64 `json:"texas_township" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

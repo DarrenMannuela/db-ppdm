@@ -1,0 +1,205 @@
+/rate-sched-detail:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rate_sched_detail
+    responses:
+      '200':
+        description: get rate_sched_detail data to be returned
+        content:
+          application/json:
+            example:
+            - rate_schedule_id: Lorem Ipsum
+              rate_type: Lorem Ipsum
+              active_ind: y
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              nat_currency_conversion: 0.1
+              nat_currency_uom: Lorem Ipsum
+              period_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              rate_condition: Lorem Ipsum
+              rate_cost: 0.1
+              rate_cost_uom: Lorem Ipsum
+              rate_formula: Lorem Ipsum
+              rate_percent: 0.1
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              taxable_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rate_sched_detail
+    description: Create a new rate_sched_detail data
+    requestBody:
+      required: true
+      description: Request body to create rate_sched_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rate_sched_detail'
+          example:
+            rate_schedule_id: Lorem Ipsum
+            rate_type: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            nat_currency_conversion: 0.1
+            nat_currency_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rate_condition: Lorem Ipsum
+            rate_cost: 0.1
+            rate_cost_uom: Lorem Ipsum
+            rate_formula: Lorem Ipsum
+            rate_percent: 0.1
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            taxable_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rate_sched_detail data is added
+        content:
+          application/json:
+            example:
+              message: The rate_sched_detail data was successfully added
+/rate-sched-detail/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rate_sched_detail data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rate_sched_detail data
+    description: Update a new rate_sched_detail data
+    requestBody:
+      required: true
+      description: Request body to update rate_sched_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rate_sched_detail'
+          example:
+            rate_schedule_id: Lorem Ipsum
+            rate_type: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            nat_currency_conversion: 0.1
+            nat_currency_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rate_condition: Lorem Ipsum
+            rate_cost: 0.1
+            rate_cost_uom: Lorem Ipsum
+            rate_formula: Lorem Ipsum
+            rate_percent: 0.1
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            taxable_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rate_sched_detail data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rate_sched_detail data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rate_sched_detail data
+    description: Update a new rate_sched_detail data
+    requestBody:
+      required: true
+      description: Request body to update rate_sched_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rate_sched_detail'
+          example:
+            rate_schedule_id: Lorem Ipsum
+            rate_type: Lorem Ipsum
+            active_ind: y
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            nat_currency_conversion: 0.1
+            nat_currency_uom: Lorem Ipsum
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rate_condition: Lorem Ipsum
+            rate_cost: 0.1
+            rate_cost_uom: Lorem Ipsum
+            rate_formula: Lorem Ipsum
+            rate_percent: 0.1
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            taxable_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rate_sched_detail data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rate_sched_detail data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rate_sched_detail data
+    description: Delete rate_sched_detail data
+    responses:
+      '200':
+        description: rate_sched_detail data is deleted
+        content:
+          application/json:
+            example:
+              message: The rate_sched_detail data was successfully deleted

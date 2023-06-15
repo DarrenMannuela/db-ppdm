@@ -1,0 +1,201 @@
+/well-air-drill-interval:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_air_drill_interval
+    responses:
+      '200':
+        description: get well_air_drill_interval data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              air_drill_source: Lorem Ipsum
+              active_ind: y
+              air_gas_code: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              compressor_rate_volume: 0.1
+              compressor_rate_volume_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_interval_pressure: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              water_influx_amount: 0.1
+              water_influx_amount_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_air_drill_interval
+    description: Create a new well_air_drill_interval data
+    requestBody:
+      required: true
+      description: Request body to create well_air_drill_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_air_drill_interval'
+          example:
+            uwi: Lorem Ipsum
+            air_drill_source: Lorem Ipsum
+            active_ind: y
+            air_gas_code: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            compressor_rate_volume: 0.1
+            compressor_rate_volume_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_interval_pressure: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            water_influx_amount: 0.1
+            water_influx_amount_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_air_drill_interval data is added
+        content:
+          application/json:
+            example:
+              message: The well_air_drill_interval data was successfully added
+/well-air-drill-interval/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_air_drill_interval data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_air_drill_interval data
+    description: Update a new well_air_drill_interval data
+    requestBody:
+      required: true
+      description: Request body to update well_air_drill_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_air_drill_interval'
+          example:
+            uwi: Lorem Ipsum
+            air_drill_source: Lorem Ipsum
+            active_ind: y
+            air_gas_code: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            compressor_rate_volume: 0.1
+            compressor_rate_volume_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_interval_pressure: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            water_influx_amount: 0.1
+            water_influx_amount_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_air_drill_interval data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_air_drill_interval data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_air_drill_interval data
+    description: Update a new well_air_drill_interval data
+    requestBody:
+      required: true
+      description: Request body to update well_air_drill_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_air_drill_interval'
+          example:
+            uwi: Lorem Ipsum
+            air_drill_source: Lorem Ipsum
+            active_ind: y
+            air_gas_code: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            compressor_rate_volume: 0.1
+            compressor_rate_volume_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_interval_pressure: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            water_influx_amount: 0.1
+            water_influx_amount_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_air_drill_interval data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_air_drill_interval data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_air_drill_interval data
+    description: Delete well_air_drill_interval data
+    responses:
+      '200':
+        description: well_air_drill_interval data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_air_drill_interval data was successfully deleted

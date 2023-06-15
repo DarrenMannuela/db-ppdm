@@ -1,0 +1,169 @@
+/paleo-confidence:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get paleo_confidence
+    responses:
+      '200':
+        description: get paleo_confidence data to be returned
+        content:
+          application/json:
+            example:
+            - confidence_id: Lorem Ipsum
+              active_ind: y
+              confidence_code: Lorem Ipsum
+              confidence_name: Lorem Ipsum
+              confidence_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new paleo_confidence
+    description: Create a new paleo_confidence data
+    requestBody:
+      required: true
+      description: Request body to create paleo_confidence data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_confidence'
+          example:
+            confidence_id: Lorem Ipsum
+            active_ind: y
+            confidence_code: Lorem Ipsum
+            confidence_name: Lorem Ipsum
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_confidence data is added
+        content:
+          application/json:
+            example:
+              message: The paleo_confidence data was successfully added
+/paleo-confidence/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of paleo_confidence data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new paleo_confidence data
+    description: Update a new paleo_confidence data
+    requestBody:
+      required: true
+      description: Request body to update paleo_confidence data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_confidence'
+          example:
+            confidence_id: Lorem Ipsum
+            active_ind: y
+            confidence_code: Lorem Ipsum
+            confidence_name: Lorem Ipsum
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: paleo_confidence data is completely updated
+        content:
+          application/json:
+            example:
+              message: The paleo_confidence data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new paleo_confidence data
+    description: Update a new paleo_confidence data
+    requestBody:
+      required: true
+      description: Request body to update paleo_confidence data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/paleo_confidence'
+          example:
+            confidence_id: Lorem Ipsum
+            active_ind: y
+            confidence_code: Lorem Ipsum
+            confidence_name: Lorem Ipsum
+            confidence_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in paleo_confidence data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in paleo_confidence data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete paleo_confidence data
+    description: Delete paleo_confidence data
+    responses:
+      '200':
+        description: paleo_confidence data is deleted
+        content:
+          application/json:
+            example:
+              message: The paleo_confidence data was successfully deleted

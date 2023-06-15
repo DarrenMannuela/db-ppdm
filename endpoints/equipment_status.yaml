@@ -1,0 +1,189 @@
+/equipment-status:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get equipment_status
+    responses:
+      '200':
+        description: get equipment_status data to be returned
+        content:
+          application/json:
+            example:
+            - equipment_id: Lorem Ipsum
+              equip_status_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              end_time: 12/12/2023
+              equip_status: Lorem Ipsum
+              equip_status_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              percent_capability: 0.1
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_time: 12/12/2023
+              timezone: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new equipment_status
+    description: Create a new equipment_status data
+    requestBody:
+      required: true
+      description: Request body to create equipment_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_status'
+          example:
+            equipment_id: Lorem Ipsum
+            equip_status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            equip_status: Lorem Ipsum
+            equip_status_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_status data is added
+        content:
+          application/json:
+            example:
+              message: The equipment_status data was successfully added
+/equipment-status/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of equipment_status data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new equipment_status data
+    description: Update a new equipment_status data
+    requestBody:
+      required: true
+      description: Request body to update equipment_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_status'
+          example:
+            equipment_id: Lorem Ipsum
+            equip_status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            equip_status: Lorem Ipsum
+            equip_status_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_status data is completely updated
+        content:
+          application/json:
+            example:
+              message: The equipment_status data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new equipment_status data
+    description: Update a new equipment_status data
+    requestBody:
+      required: true
+      description: Request body to update equipment_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_status'
+          example:
+            equipment_id: Lorem Ipsum
+            equip_status_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_time: 12/12/2023
+            equip_status: Lorem Ipsum
+            equip_status_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            percent_capability: 0.1
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_time: 12/12/2023
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in equipment_status data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in equipment_status data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete equipment_status data
+    description: Delete equipment_status data
+    responses:
+      '200':
+        description: equipment_status data is deleted
+        content:
+          application/json:
+            example:
+              message: The equipment_status data was successfully deleted

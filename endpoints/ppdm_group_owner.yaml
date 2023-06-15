@@ -1,0 +1,177 @@
+/ppdm-group-owner:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_group_owner
+    responses:
+      '200':
+        description: get ppdm_group_owner data to be returned
+        content:
+          application/json:
+            example:
+            - group_id: Lorem Ipsum
+              active_ind: y
+              default_unit_system_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              organization_id: Lorem Ipsum
+              owner_ba_id: Lorem Ipsum
+              owner_role: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              sw_application_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_group_owner
+    description: Create a new ppdm_group_owner data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_group_owner data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_group_owner'
+          example:
+            group_id: Lorem Ipsum
+            active_ind: y
+            default_unit_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            organization_id: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            owner_role: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_group_owner data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_group_owner data was successfully added
+/ppdm-group-owner/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_group_owner data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_group_owner data
+    description: Update a new ppdm_group_owner data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_group_owner data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_group_owner'
+          example:
+            group_id: Lorem Ipsum
+            active_ind: y
+            default_unit_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            organization_id: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            owner_role: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_group_owner data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_group_owner data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_group_owner data
+    description: Update a new ppdm_group_owner data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_group_owner data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_group_owner'
+          example:
+            group_id: Lorem Ipsum
+            active_ind: y
+            default_unit_system_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            organization_id: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            owner_role: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_group_owner data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_group_owner data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_group_owner data
+    description: Delete ppdm_group_owner data
+    responses:
+      '200':
+        description: ppdm_group_owner data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_group_owner data was successfully deleted

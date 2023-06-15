@@ -1,0 +1,197 @@
+/entitlement:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get entitlement
+    responses:
+      '200':
+        description: get entitlement data to be returned
+        content:
+          application/json:
+            example:
+            - entitlement_id: Lorem Ipsum
+              access_condition: Lorem Ipsum
+              access_cond_code: Lorem Ipsum
+              active_ind: y
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              entitlement_name: Lorem Ipsum
+              entitlement_type: Lorem Ipsum
+              expiry_action: Lorem Ipsum
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              primary_term: 0.1
+              primary_term_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              security_desc: Lorem Ipsum
+              source: Lorem Ipsum
+              use_condition: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new entitlement
+    description: Create a new entitlement data
+    requestBody:
+      required: true
+      description: Request body to create entitlement data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/entitlement'
+          example:
+            entitlement_id: Lorem Ipsum
+            access_condition: Lorem Ipsum
+            access_cond_code: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            entitlement_name: Lorem Ipsum
+            entitlement_type: Lorem Ipsum
+            expiry_action: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            primary_term: 0.1
+            primary_term_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            security_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            use_condition: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: entitlement data is added
+        content:
+          application/json:
+            example:
+              message: The entitlement data was successfully added
+/entitlement/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of entitlement data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new entitlement data
+    description: Update a new entitlement data
+    requestBody:
+      required: true
+      description: Request body to update entitlement data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/entitlement'
+          example:
+            entitlement_id: Lorem Ipsum
+            access_condition: Lorem Ipsum
+            access_cond_code: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            entitlement_name: Lorem Ipsum
+            entitlement_type: Lorem Ipsum
+            expiry_action: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            primary_term: 0.1
+            primary_term_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            security_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            use_condition: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: entitlement data is completely updated
+        content:
+          application/json:
+            example:
+              message: The entitlement data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new entitlement data
+    description: Update a new entitlement data
+    requestBody:
+      required: true
+      description: Request body to update entitlement data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/entitlement'
+          example:
+            entitlement_id: Lorem Ipsum
+            access_condition: Lorem Ipsum
+            access_cond_code: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            entitlement_name: Lorem Ipsum
+            entitlement_type: Lorem Ipsum
+            expiry_action: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            primary_term: 0.1
+            primary_term_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            security_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            use_condition: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in entitlement data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in entitlement data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete entitlement data
+    description: Delete entitlement data
+    responses:
+      '200':
+        description: entitlement data is deleted
+        content:
+          application/json:
+            example:
+              message: The entitlement data was successfully deleted

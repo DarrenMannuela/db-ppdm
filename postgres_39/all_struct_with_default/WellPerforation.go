@@ -1,0 +1,42 @@
+package dto
+
+type Well_perforation struct {
+	Uwi                       string   `json:"uwi" default:"source"`
+	Source                    string   `json:"source" default:"source"`
+	Perforation_obs_no        int      `json:"perforation_obs_no" default:"1"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Base_depth                *float64 `json:"base_depth" default:""`
+	Base_depth_ouom           *string  `json:"base_depth_ouom" default:""`
+	Base_strat_unit_id        *string  `json:"base_strat_unit_id" default:""`
+	Completion_obs_no         *int     `json:"completion_obs_no" default:""`
+	Completion_source         *string  `json:"completion_source" default:""`
+	Completion_status         *string  `json:"completion_status" default:""`
+	Completion_status_type    *string  `json:"completion_status_type" default:""`
+	Current_status_date       *string  `json:"current_status_date" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Perforation_angle         *float64 `json:"perforation_angle" default:""`
+	Perforation_ba_id         *string  `json:"perforation_ba_id" default:""`
+	Perforation_count         *int     `json:"perforation_count" default:""`
+	Perforation_date          *string  `json:"perforation_date" default:""`
+	Perforation_density       *float64 `json:"perforation_density" default:""`
+	Perforation_diameter      *float64 `json:"perforation_diameter" default:""`
+	Perforation_diameter_ouom *string  `json:"perforation_diameter_ouom" default:""`
+	Perforation_method        *string  `json:"perforation_method" default:""`
+	Perforation_per_uom       *string  `json:"perforation_per_uom" default:""`
+	Perforation_phase         *string  `json:"perforation_phase" default:""`
+	Perforation_type          *string  `json:"perforation_type" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Strat_name_set_id         *string  `json:"strat_name_set_id" default:""`
+	Top_depth                 *float64 `json:"top_depth" default:""`
+	Top_depth_ouom            *string  `json:"top_depth_ouom" default:""`
+	Top_strat_unit_id         *string  `json:"top_strat_unit_id" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

@@ -1,0 +1,225 @@
+/anl-fluor:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_fluor
+    responses:
+      '200':
+        description: get anl_fluor data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              color_remark: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fluor_percent: 0.1
+              fluor_remark: Lorem Ipsum
+              from_color: Lorem Ipsum
+              from_color_frequency: 0.1
+              from_color_frequency_uom: Lorem Ipsum
+              from_color_intensity: 0.1
+              from_mobility_type: Lorem Ipsum
+              hydrocarbon_show_ind: y
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              to_color: Lorem Ipsum
+              to_color_frequency: 0.1
+              to_color_frequency_uom: Lorem Ipsum
+              to_color_intensity: 0.1
+              to_mobility_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_fluor
+    description: Create a new anl_fluor data
+    requestBody:
+      required: true
+      description: Request body to create anl_fluor data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_fluor'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            color_remark: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_percent: 0.1
+            fluor_remark: Lorem Ipsum
+            from_color: Lorem Ipsum
+            from_color_frequency: 0.1
+            from_color_frequency_uom: Lorem Ipsum
+            from_color_intensity: 0.1
+            from_mobility_type: Lorem Ipsum
+            hydrocarbon_show_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            to_color: Lorem Ipsum
+            to_color_frequency: 0.1
+            to_color_frequency_uom: Lorem Ipsum
+            to_color_intensity: 0.1
+            to_mobility_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_fluor data is added
+        content:
+          application/json:
+            example:
+              message: The anl_fluor data was successfully added
+/anl-fluor/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_fluor data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_fluor data
+    description: Update a new anl_fluor data
+    requestBody:
+      required: true
+      description: Request body to update anl_fluor data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_fluor'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            color_remark: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_percent: 0.1
+            fluor_remark: Lorem Ipsum
+            from_color: Lorem Ipsum
+            from_color_frequency: 0.1
+            from_color_frequency_uom: Lorem Ipsum
+            from_color_intensity: 0.1
+            from_mobility_type: Lorem Ipsum
+            hydrocarbon_show_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            to_color: Lorem Ipsum
+            to_color_frequency: 0.1
+            to_color_frequency_uom: Lorem Ipsum
+            to_color_intensity: 0.1
+            to_mobility_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_fluor data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_fluor data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_fluor data
+    description: Update a new anl_fluor data
+    requestBody:
+      required: true
+      description: Request body to update anl_fluor data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_fluor'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            color_remark: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_percent: 0.1
+            fluor_remark: Lorem Ipsum
+            from_color: Lorem Ipsum
+            from_color_frequency: 0.1
+            from_color_frequency_uom: Lorem Ipsum
+            from_color_intensity: 0.1
+            from_mobility_type: Lorem Ipsum
+            hydrocarbon_show_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            to_color: Lorem Ipsum
+            to_color_frequency: 0.1
+            to_color_frequency_uom: Lorem Ipsum
+            to_color_intensity: 0.1
+            to_mobility_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_fluor data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_fluor data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_fluor data
+    description: Delete anl_fluor data
+    responses:
+      '200':
+        description: anl_fluor data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_fluor data was successfully deleted

@@ -1,0 +1,249 @@
+/well-test-comput-anal:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_comput_anal
+    responses:
+      '200':
+        description: get well_test_comput_anal data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              active_ind: y
+              analysis_company: Lorem Ipsum
+              computed_permeability: 0.1
+              computed_permeability_ouom: Lorem Ipsum
+              confidence_limit: 0.1
+              confidence_limit_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              est_damage_ratio: 0.1
+              expiry_date: 12/12/2023
+              extrap_pressure_percent: 0.1
+              final_reservoir_pressure: 0.1
+              final_reservoir_press_ouom: Lorem Ipsum
+              gauge_depth: 0.1
+              gauge_depth_ouom: Lorem Ipsum
+              investigation_radius: 0.1
+              investigation_radius_ouom: Lorem Ipsum
+              max_reservoir_pressure: 0.1
+              max_reservoir_pressure_ouom: Lorem Ipsum
+              potmtrc_surf_height: 0.1
+              potmtrc_surf_height_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              production_index_rate: 0.1
+              production_index_rate_ouom: Lorem Ipsum
+              recorder_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_comput_anal
+    description: Create a new well_test_comput_anal data
+    requestBody:
+      required: true
+      description: Request body to create well_test_comput_anal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_comput_anal'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            analysis_company: Lorem Ipsum
+            computed_permeability: 0.1
+            computed_permeability_ouom: Lorem Ipsum
+            confidence_limit: 0.1
+            confidence_limit_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            est_damage_ratio: 0.1
+            expiry_date: 12/12/2023
+            extrap_pressure_percent: 0.1
+            final_reservoir_pressure: 0.1
+            final_reservoir_press_ouom: Lorem Ipsum
+            gauge_depth: 0.1
+            gauge_depth_ouom: Lorem Ipsum
+            investigation_radius: 0.1
+            investigation_radius_ouom: Lorem Ipsum
+            max_reservoir_pressure: 0.1
+            max_reservoir_pressure_ouom: Lorem Ipsum
+            potmtrc_surf_height: 0.1
+            potmtrc_surf_height_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            production_index_rate: 0.1
+            production_index_rate_ouom: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_comput_anal data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_comput_anal data was successfully added
+/well-test-comput-anal/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_comput_anal data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_comput_anal data
+    description: Update a new well_test_comput_anal data
+    requestBody:
+      required: true
+      description: Request body to update well_test_comput_anal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_comput_anal'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            analysis_company: Lorem Ipsum
+            computed_permeability: 0.1
+            computed_permeability_ouom: Lorem Ipsum
+            confidence_limit: 0.1
+            confidence_limit_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            est_damage_ratio: 0.1
+            expiry_date: 12/12/2023
+            extrap_pressure_percent: 0.1
+            final_reservoir_pressure: 0.1
+            final_reservoir_press_ouom: Lorem Ipsum
+            gauge_depth: 0.1
+            gauge_depth_ouom: Lorem Ipsum
+            investigation_radius: 0.1
+            investigation_radius_ouom: Lorem Ipsum
+            max_reservoir_pressure: 0.1
+            max_reservoir_pressure_ouom: Lorem Ipsum
+            potmtrc_surf_height: 0.1
+            potmtrc_surf_height_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            production_index_rate: 0.1
+            production_index_rate_ouom: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_comput_anal data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_comput_anal data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_comput_anal data
+    description: Update a new well_test_comput_anal data
+    requestBody:
+      required: true
+      description: Request body to update well_test_comput_anal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_comput_anal'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            active_ind: y
+            analysis_company: Lorem Ipsum
+            computed_permeability: 0.1
+            computed_permeability_ouom: Lorem Ipsum
+            confidence_limit: 0.1
+            confidence_limit_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            est_damage_ratio: 0.1
+            expiry_date: 12/12/2023
+            extrap_pressure_percent: 0.1
+            final_reservoir_pressure: 0.1
+            final_reservoir_press_ouom: Lorem Ipsum
+            gauge_depth: 0.1
+            gauge_depth_ouom: Lorem Ipsum
+            investigation_radius: 0.1
+            investigation_radius_ouom: Lorem Ipsum
+            max_reservoir_pressure: 0.1
+            max_reservoir_pressure_ouom: Lorem Ipsum
+            potmtrc_surf_height: 0.1
+            potmtrc_surf_height_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            production_index_rate: 0.1
+            production_index_rate_ouom: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_comput_anal data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_comput_anal data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_comput_anal data
+    description: Delete well_test_comput_anal data
+    responses:
+      '200':
+        description: well_test_comput_anal data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_comput_anal data was successfully deleted

@@ -1,0 +1,165 @@
+/sp-parcel-remark:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sp_parcel_remark
+    responses:
+      '200':
+        description: get sp_parcel_remark data to be returned
+        content:
+          application/json:
+            example:
+            - spatial_description_id: Lorem Ipsum
+              parcel_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              remark_date: 12/12/2023
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sp_parcel_remark
+    description: Create a new sp_parcel_remark data
+    requestBody:
+      required: true
+      description: Request body to create sp_parcel_remark data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_remark'
+          example:
+            spatial_description_id: Lorem Ipsum
+            parcel_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_remark data is added
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_remark data was successfully added
+/sp-parcel-remark/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sp_parcel_remark data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sp_parcel_remark data
+    description: Update a new sp_parcel_remark data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_remark data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_remark'
+          example:
+            spatial_description_id: Lorem Ipsum
+            parcel_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_parcel_remark data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_remark data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sp_parcel_remark data
+    description: Update a new sp_parcel_remark data
+    requestBody:
+      required: true
+      description: Request body to update sp_parcel_remark data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_parcel_remark'
+          example:
+            spatial_description_id: Lorem Ipsum
+            parcel_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sp_parcel_remark data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sp_parcel_remark data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sp_parcel_remark data
+    description: Delete sp_parcel_remark data
+    responses:
+      '200':
+        description: sp_parcel_remark data is deleted
+        content:
+          application/json:
+            example:
+              message: The sp_parcel_remark data was successfully deleted

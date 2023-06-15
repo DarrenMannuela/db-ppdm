@@ -1,0 +1,341 @@
+/well-core-sample-anal:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_core_sample_anal
+    responses:
+      '200':
+        description: get well_core_sample_anal data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              core_id: Lorem Ipsum
+              sample_num: Lorem Ipsum
+              active_ind: y
+              analysis_source: Lorem Ipsum
+              bulk_density: 0.1
+              bulk_density_ouom: Lorem Ipsum
+              bulk_mass_oil_sat: 0.1
+              bulk_mass_oil_sat_ouom: Lorem Ipsum
+              bulk_mass_sand_sat: 0.1
+              bulk_mass_sand_sat_ouom: Lorem Ipsum
+              bulk_mass_water_sat: 0.1
+              bulk_mass_water_sat_ouom: Lorem Ipsum
+              bulk_volume_oil_sat: 0.1
+              bulk_volume_water_sat: 0.1
+              confine_perm_pressure: 0.1
+              confine_perm_pressure_ouom: Lorem Ipsum
+              confine_por_pressure: 0.1
+              confine_por_pressure_ouom: Lorem Ipsum
+              confine_sat_pressure: 0.1
+              confine_sat_pressure_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              effective_porosity: 0.1
+              expiry_date: 12/12/2023
+              gas_sat_volume: 0.1
+              grain_density: 0.1
+              grain_density_ouom: Lorem Ipsum
+              grain_mass_oil_sat: 0.1
+              grain_mass_oil_sat_ouom: Lorem Ipsum
+              grain_mass_water_sat: 0.1
+              grain_mass_water_sat_ouom: Lorem Ipsum
+              interval_depth: 0.1
+              interval_length: 0.1
+              k90: 0.1
+              k90_ouom: Lorem Ipsum
+              k90_qualifier: Lorem Ipsum
+              kmax: 0.1
+              kmax_ouom: Lorem Ipsum
+              kmax_qualifier: Lorem Ipsum
+              kvert: 0.1
+              kvert_ouom: Lorem Ipsum
+              kvert_qualifier: Lorem Ipsum
+              oil_sat: 0.1
+              pore_volume_gas_sat: 0.1
+              pore_volume_oil_sat: 0.1
+              pore_volume_water_sat: 0.1
+              porosity: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              water_sat: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_core_sample_anal
+    description: Create a new well_core_sample_anal data
+    requestBody:
+      required: true
+      description: Request body to create well_core_sample_anal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_anal'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            analysis_source: Lorem Ipsum
+            bulk_density: 0.1
+            bulk_density_ouom: Lorem Ipsum
+            bulk_mass_oil_sat: 0.1
+            bulk_mass_oil_sat_ouom: Lorem Ipsum
+            bulk_mass_sand_sat: 0.1
+            bulk_mass_sand_sat_ouom: Lorem Ipsum
+            bulk_mass_water_sat: 0.1
+            bulk_mass_water_sat_ouom: Lorem Ipsum
+            bulk_volume_oil_sat: 0.1
+            bulk_volume_water_sat: 0.1
+            confine_perm_pressure: 0.1
+            confine_perm_pressure_ouom: Lorem Ipsum
+            confine_por_pressure: 0.1
+            confine_por_pressure_ouom: Lorem Ipsum
+            confine_sat_pressure: 0.1
+            confine_sat_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            effective_porosity: 0.1
+            expiry_date: 12/12/2023
+            gas_sat_volume: 0.1
+            grain_density: 0.1
+            grain_density_ouom: Lorem Ipsum
+            grain_mass_oil_sat: 0.1
+            grain_mass_oil_sat_ouom: Lorem Ipsum
+            grain_mass_water_sat: 0.1
+            grain_mass_water_sat_ouom: Lorem Ipsum
+            interval_depth: 0.1
+            interval_length: 0.1
+            k90: 0.1
+            k90_ouom: Lorem Ipsum
+            k90_qualifier: Lorem Ipsum
+            kmax: 0.1
+            kmax_ouom: Lorem Ipsum
+            kmax_qualifier: Lorem Ipsum
+            kvert: 0.1
+            kvert_ouom: Lorem Ipsum
+            kvert_qualifier: Lorem Ipsum
+            oil_sat: 0.1
+            pore_volume_gas_sat: 0.1
+            pore_volume_oil_sat: 0.1
+            pore_volume_water_sat: 0.1
+            porosity: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            water_sat: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_core_sample_anal data is added
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_anal data was successfully added
+/well-core-sample-anal/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_core_sample_anal data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_core_sample_anal data
+    description: Update a new well_core_sample_anal data
+    requestBody:
+      required: true
+      description: Request body to update well_core_sample_anal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_anal'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            analysis_source: Lorem Ipsum
+            bulk_density: 0.1
+            bulk_density_ouom: Lorem Ipsum
+            bulk_mass_oil_sat: 0.1
+            bulk_mass_oil_sat_ouom: Lorem Ipsum
+            bulk_mass_sand_sat: 0.1
+            bulk_mass_sand_sat_ouom: Lorem Ipsum
+            bulk_mass_water_sat: 0.1
+            bulk_mass_water_sat_ouom: Lorem Ipsum
+            bulk_volume_oil_sat: 0.1
+            bulk_volume_water_sat: 0.1
+            confine_perm_pressure: 0.1
+            confine_perm_pressure_ouom: Lorem Ipsum
+            confine_por_pressure: 0.1
+            confine_por_pressure_ouom: Lorem Ipsum
+            confine_sat_pressure: 0.1
+            confine_sat_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            effective_porosity: 0.1
+            expiry_date: 12/12/2023
+            gas_sat_volume: 0.1
+            grain_density: 0.1
+            grain_density_ouom: Lorem Ipsum
+            grain_mass_oil_sat: 0.1
+            grain_mass_oil_sat_ouom: Lorem Ipsum
+            grain_mass_water_sat: 0.1
+            grain_mass_water_sat_ouom: Lorem Ipsum
+            interval_depth: 0.1
+            interval_length: 0.1
+            k90: 0.1
+            k90_ouom: Lorem Ipsum
+            k90_qualifier: Lorem Ipsum
+            kmax: 0.1
+            kmax_ouom: Lorem Ipsum
+            kmax_qualifier: Lorem Ipsum
+            kvert: 0.1
+            kvert_ouom: Lorem Ipsum
+            kvert_qualifier: Lorem Ipsum
+            oil_sat: 0.1
+            pore_volume_gas_sat: 0.1
+            pore_volume_oil_sat: 0.1
+            pore_volume_water_sat: 0.1
+            porosity: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            water_sat: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_core_sample_anal data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_anal data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_core_sample_anal data
+    description: Update a new well_core_sample_anal data
+    requestBody:
+      required: true
+      description: Request body to update well_core_sample_anal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_core_sample_anal'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            core_id: Lorem Ipsum
+            sample_num: Lorem Ipsum
+            active_ind: y
+            analysis_source: Lorem Ipsum
+            bulk_density: 0.1
+            bulk_density_ouom: Lorem Ipsum
+            bulk_mass_oil_sat: 0.1
+            bulk_mass_oil_sat_ouom: Lorem Ipsum
+            bulk_mass_sand_sat: 0.1
+            bulk_mass_sand_sat_ouom: Lorem Ipsum
+            bulk_mass_water_sat: 0.1
+            bulk_mass_water_sat_ouom: Lorem Ipsum
+            bulk_volume_oil_sat: 0.1
+            bulk_volume_water_sat: 0.1
+            confine_perm_pressure: 0.1
+            confine_perm_pressure_ouom: Lorem Ipsum
+            confine_por_pressure: 0.1
+            confine_por_pressure_ouom: Lorem Ipsum
+            confine_sat_pressure: 0.1
+            confine_sat_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            effective_porosity: 0.1
+            expiry_date: 12/12/2023
+            gas_sat_volume: 0.1
+            grain_density: 0.1
+            grain_density_ouom: Lorem Ipsum
+            grain_mass_oil_sat: 0.1
+            grain_mass_oil_sat_ouom: Lorem Ipsum
+            grain_mass_water_sat: 0.1
+            grain_mass_water_sat_ouom: Lorem Ipsum
+            interval_depth: 0.1
+            interval_length: 0.1
+            k90: 0.1
+            k90_ouom: Lorem Ipsum
+            k90_qualifier: Lorem Ipsum
+            kmax: 0.1
+            kmax_ouom: Lorem Ipsum
+            kmax_qualifier: Lorem Ipsum
+            kvert: 0.1
+            kvert_ouom: Lorem Ipsum
+            kvert_qualifier: Lorem Ipsum
+            oil_sat: 0.1
+            pore_volume_gas_sat: 0.1
+            pore_volume_oil_sat: 0.1
+            pore_volume_water_sat: 0.1
+            porosity: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            water_sat: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_core_sample_anal data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_core_sample_anal data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_core_sample_anal data
+    description: Delete well_core_sample_anal data
+    responses:
+      '200':
+        description: well_core_sample_anal data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_core_sample_anal data was successfully deleted

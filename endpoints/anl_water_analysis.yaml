@@ -1,0 +1,397 @@
+/anl-water-analysis:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_water_analysis
+    responses:
+      '200':
+        description: get anl_water_analysis data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              barium: 0.1
+              barium_ouom: Lorem Ipsum
+              bicarbonate: 0.1
+              bicarbonate_ouom: Lorem Ipsum
+              boron: 0.1
+              boron_ouom: Lorem Ipsum
+              bromine: 0.1
+              bromine_ouom: Lorem Ipsum
+              calcium: 0.1
+              calcium_ouom: Lorem Ipsum
+              carbonate: 0.1
+              carbonate_ouom: Lorem Ipsum
+              chlorine: 0.1
+              chlorine_ouom: Lorem Ipsum
+              conductivity: 0.1
+              conductivity_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              hydrogen_sulphide: 0.1
+              hydrogen_sulphide_ouom: Lorem Ipsum
+              hydroxide: 0.1
+              hydroxide_ouom: Lorem Ipsum
+              iodine: 0.1
+              iodine_ouom: Lorem Ipsum
+              ion_ouom: Lorem Ipsum
+              ion_uom: Lorem Ipsum
+              iron: 0.1
+              iron_ouom: Lorem Ipsum
+              magnesium: 0.1
+              magnesium_ouom: Lorem Ipsum
+              organics_desc: Lorem Ipsum
+              ph_observed: 0.1
+              ph_temp: 0.1
+              ph_temp_ouom: Lorem Ipsum
+              potassium: 0.1
+              potassium_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              recovery_desc: Lorem Ipsum
+              refractive_index: 0.1
+              refractive_index_temp: 0.1
+              refractive_index_temp_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              reservoir_temperature: 0.1
+              reservoir_temperature_ouom: Lorem Ipsum
+              rw_temperature: 0.1
+              rw_temperature_ouom: Lorem Ipsum
+              sample_water_type: Lorem Ipsum
+              sodium: 0.1
+              sodium_ouom: Lorem Ipsum
+              sodium_potassium: 0.1
+              sodium_potassium_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              strontium: 0.1
+              strontium_ouom: Lorem Ipsum
+              sulphate: 0.1
+              sulphate_ouom: Lorem Ipsum
+              water_density: 0.1
+              water_density_ouom: Lorem Ipsum
+              water_ph: 0.1
+              water_resistivity: 0.1
+              water_resistivity_ouom: Lorem Ipsum
+              water_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_water_analysis
+    description: Create a new anl_water_analysis data
+    requestBody:
+      required: true
+      description: Request body to create anl_water_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_water_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            barium: 0.1
+            barium_ouom: Lorem Ipsum
+            bicarbonate: 0.1
+            bicarbonate_ouom: Lorem Ipsum
+            boron: 0.1
+            boron_ouom: Lorem Ipsum
+            bromine: 0.1
+            bromine_ouom: Lorem Ipsum
+            calcium: 0.1
+            calcium_ouom: Lorem Ipsum
+            carbonate: 0.1
+            carbonate_ouom: Lorem Ipsum
+            chlorine: 0.1
+            chlorine_ouom: Lorem Ipsum
+            conductivity: 0.1
+            conductivity_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            hydrogen_sulphide: 0.1
+            hydrogen_sulphide_ouom: Lorem Ipsum
+            hydroxide: 0.1
+            hydroxide_ouom: Lorem Ipsum
+            iodine: 0.1
+            iodine_ouom: Lorem Ipsum
+            ion_ouom: Lorem Ipsum
+            ion_uom: Lorem Ipsum
+            iron: 0.1
+            iron_ouom: Lorem Ipsum
+            magnesium: 0.1
+            magnesium_ouom: Lorem Ipsum
+            organics_desc: Lorem Ipsum
+            ph_observed: 0.1
+            ph_temp: 0.1
+            ph_temp_ouom: Lorem Ipsum
+            potassium: 0.1
+            potassium_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            recovery_desc: Lorem Ipsum
+            refractive_index: 0.1
+            refractive_index_temp: 0.1
+            refractive_index_temp_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir_temperature: 0.1
+            reservoir_temperature_ouom: Lorem Ipsum
+            rw_temperature: 0.1
+            rw_temperature_ouom: Lorem Ipsum
+            sample_water_type: Lorem Ipsum
+            sodium: 0.1
+            sodium_ouom: Lorem Ipsum
+            sodium_potassium: 0.1
+            sodium_potassium_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            strontium: 0.1
+            strontium_ouom: Lorem Ipsum
+            sulphate: 0.1
+            sulphate_ouom: Lorem Ipsum
+            water_density: 0.1
+            water_density_ouom: Lorem Ipsum
+            water_ph: 0.1
+            water_resistivity: 0.1
+            water_resistivity_ouom: Lorem Ipsum
+            water_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_water_analysis data is added
+        content:
+          application/json:
+            example:
+              message: The anl_water_analysis data was successfully added
+/anl-water-analysis/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_water_analysis data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_water_analysis data
+    description: Update a new anl_water_analysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_water_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_water_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            barium: 0.1
+            barium_ouom: Lorem Ipsum
+            bicarbonate: 0.1
+            bicarbonate_ouom: Lorem Ipsum
+            boron: 0.1
+            boron_ouom: Lorem Ipsum
+            bromine: 0.1
+            bromine_ouom: Lorem Ipsum
+            calcium: 0.1
+            calcium_ouom: Lorem Ipsum
+            carbonate: 0.1
+            carbonate_ouom: Lorem Ipsum
+            chlorine: 0.1
+            chlorine_ouom: Lorem Ipsum
+            conductivity: 0.1
+            conductivity_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            hydrogen_sulphide: 0.1
+            hydrogen_sulphide_ouom: Lorem Ipsum
+            hydroxide: 0.1
+            hydroxide_ouom: Lorem Ipsum
+            iodine: 0.1
+            iodine_ouom: Lorem Ipsum
+            ion_ouom: Lorem Ipsum
+            ion_uom: Lorem Ipsum
+            iron: 0.1
+            iron_ouom: Lorem Ipsum
+            magnesium: 0.1
+            magnesium_ouom: Lorem Ipsum
+            organics_desc: Lorem Ipsum
+            ph_observed: 0.1
+            ph_temp: 0.1
+            ph_temp_ouom: Lorem Ipsum
+            potassium: 0.1
+            potassium_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            recovery_desc: Lorem Ipsum
+            refractive_index: 0.1
+            refractive_index_temp: 0.1
+            refractive_index_temp_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir_temperature: 0.1
+            reservoir_temperature_ouom: Lorem Ipsum
+            rw_temperature: 0.1
+            rw_temperature_ouom: Lorem Ipsum
+            sample_water_type: Lorem Ipsum
+            sodium: 0.1
+            sodium_ouom: Lorem Ipsum
+            sodium_potassium: 0.1
+            sodium_potassium_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            strontium: 0.1
+            strontium_ouom: Lorem Ipsum
+            sulphate: 0.1
+            sulphate_ouom: Lorem Ipsum
+            water_density: 0.1
+            water_density_ouom: Lorem Ipsum
+            water_ph: 0.1
+            water_resistivity: 0.1
+            water_resistivity_ouom: Lorem Ipsum
+            water_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_water_analysis data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_water_analysis data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_water_analysis data
+    description: Update a new anl_water_analysis data
+    requestBody:
+      required: true
+      description: Request body to update anl_water_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_water_analysis'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            barium: 0.1
+            barium_ouom: Lorem Ipsum
+            bicarbonate: 0.1
+            bicarbonate_ouom: Lorem Ipsum
+            boron: 0.1
+            boron_ouom: Lorem Ipsum
+            bromine: 0.1
+            bromine_ouom: Lorem Ipsum
+            calcium: 0.1
+            calcium_ouom: Lorem Ipsum
+            carbonate: 0.1
+            carbonate_ouom: Lorem Ipsum
+            chlorine: 0.1
+            chlorine_ouom: Lorem Ipsum
+            conductivity: 0.1
+            conductivity_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            hydrogen_sulphide: 0.1
+            hydrogen_sulphide_ouom: Lorem Ipsum
+            hydroxide: 0.1
+            hydroxide_ouom: Lorem Ipsum
+            iodine: 0.1
+            iodine_ouom: Lorem Ipsum
+            ion_ouom: Lorem Ipsum
+            ion_uom: Lorem Ipsum
+            iron: 0.1
+            iron_ouom: Lorem Ipsum
+            magnesium: 0.1
+            magnesium_ouom: Lorem Ipsum
+            organics_desc: Lorem Ipsum
+            ph_observed: 0.1
+            ph_temp: 0.1
+            ph_temp_ouom: Lorem Ipsum
+            potassium: 0.1
+            potassium_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            recovery_desc: Lorem Ipsum
+            refractive_index: 0.1
+            refractive_index_temp: 0.1
+            refractive_index_temp_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            reservoir_temperature: 0.1
+            reservoir_temperature_ouom: Lorem Ipsum
+            rw_temperature: 0.1
+            rw_temperature_ouom: Lorem Ipsum
+            sample_water_type: Lorem Ipsum
+            sodium: 0.1
+            sodium_ouom: Lorem Ipsum
+            sodium_potassium: 0.1
+            sodium_potassium_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            strontium: 0.1
+            strontium_ouom: Lorem Ipsum
+            sulphate: 0.1
+            sulphate_ouom: Lorem Ipsum
+            water_density: 0.1
+            water_density_ouom: Lorem Ipsum
+            water_ph: 0.1
+            water_resistivity: 0.1
+            water_resistivity_ouom: Lorem Ipsum
+            water_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_water_analysis data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_water_analysis data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_water_analysis data
+    description: Delete anl_water_analysis data
+    responses:
+      '200':
+        description: anl_water_analysis data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_water_analysis data was successfully deleted

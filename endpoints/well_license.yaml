@@ -1,0 +1,353 @@
+/well-license:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_license
+    responses:
+      '200':
+        description: get well_license data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              license_id: Lorem Ipsum
+              active_ind: y
+              agent: Lorem Ipsum
+              application_id: Lorem Ipsum
+              authorized_strat_unit_id: Lorem Ipsum
+              bidding_round_num: Lorem Ipsum
+              contractor: Lorem Ipsum
+              direction_to_loc: 0.1
+              direction_to_loc_ouom: Lorem Ipsum
+              distance_to_loc: 0.1
+              distance_to_loc_ouom: Lorem Ipsum
+              drill_rig_num: Lorem Ipsum
+              drill_tool: Lorem Ipsum
+              effective_date: 12/12/2023
+              exception_granted: Lorem Ipsum
+              exception_requested: Lorem Ipsum
+              expired_ind: y
+              expiry_date: 12/12/2023
+              fees_paid_ind: y
+              licensee: Lorem Ipsum
+              licensee_contact_id: Lorem Ipsum
+              license_date: 12/12/2023
+              license_num: Lorem Ipsum
+              no_of_wells: 0.1
+              offshore_completion_type: Lorem Ipsum
+              permit_reference_num: Lorem Ipsum
+              permit_reissue_date: 12/12/2023
+              permit_type: Lorem Ipsum
+              platform_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              projected_depth: 0.1
+              projected_depth_ouom: Lorem Ipsum
+              projected_strat_unit_id: Lorem Ipsum
+              projected_tvd: 0.1
+              projected_tvd_ouom: Lorem Ipsum
+              proposed_spud_date: 12/12/2023
+              purpose: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              regulation_text: Lorem Ipsum
+              regulation_text_source_doc: Lorem Ipsum
+              regulatory_agency: Lorem Ipsum
+              regulatory_contact_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              rig_code: Lorem Ipsum
+              rig_sf_subtype: Lorem Ipsum
+              rig_substr_height: 0.1
+              rig_substr_height_ouom: Lorem Ipsum
+              rig_support_facility_id: Lorem Ipsum
+              rig_type: Lorem Ipsum
+              section_of_regulation: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              surveyor: Lorem Ipsum
+              target_objective_fluid: Lorem Ipsum
+              violation_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_license
+    description: Create a new well_license data
+    requestBody:
+      required: true
+      description: Request body to create well_license data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_license'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            license_id: Lorem Ipsum
+            active_ind: y
+            agent: Lorem Ipsum
+            application_id: Lorem Ipsum
+            authorized_strat_unit_id: Lorem Ipsum
+            bidding_round_num: Lorem Ipsum
+            contractor: Lorem Ipsum
+            direction_to_loc: 0.1
+            direction_to_loc_ouom: Lorem Ipsum
+            distance_to_loc: 0.1
+            distance_to_loc_ouom: Lorem Ipsum
+            drill_rig_num: Lorem Ipsum
+            drill_tool: Lorem Ipsum
+            effective_date: 12/12/2023
+            exception_granted: Lorem Ipsum
+            exception_requested: Lorem Ipsum
+            expired_ind: y
+            expiry_date: 12/12/2023
+            fees_paid_ind: y
+            licensee: Lorem Ipsum
+            licensee_contact_id: Lorem Ipsum
+            license_date: 12/12/2023
+            license_num: Lorem Ipsum
+            no_of_wells: 0.1
+            offshore_completion_type: Lorem Ipsum
+            permit_reference_num: Lorem Ipsum
+            permit_reissue_date: 12/12/2023
+            permit_type: Lorem Ipsum
+            platform_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            projected_depth: 0.1
+            projected_depth_ouom: Lorem Ipsum
+            projected_strat_unit_id: Lorem Ipsum
+            projected_tvd: 0.1
+            projected_tvd_ouom: Lorem Ipsum
+            proposed_spud_date: 12/12/2023
+            purpose: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            regulation_text: Lorem Ipsum
+            regulation_text_source_doc: Lorem Ipsum
+            regulatory_agency: Lorem Ipsum
+            regulatory_contact_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_code: Lorem Ipsum
+            rig_sf_subtype: Lorem Ipsum
+            rig_substr_height: 0.1
+            rig_substr_height_ouom: Lorem Ipsum
+            rig_support_facility_id: Lorem Ipsum
+            rig_type: Lorem Ipsum
+            section_of_regulation: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            surveyor: Lorem Ipsum
+            target_objective_fluid: Lorem Ipsum
+            violation_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_license data is added
+        content:
+          application/json:
+            example:
+              message: The well_license data was successfully added
+/well-license/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_license data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_license data
+    description: Update a new well_license data
+    requestBody:
+      required: true
+      description: Request body to update well_license data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_license'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            license_id: Lorem Ipsum
+            active_ind: y
+            agent: Lorem Ipsum
+            application_id: Lorem Ipsum
+            authorized_strat_unit_id: Lorem Ipsum
+            bidding_round_num: Lorem Ipsum
+            contractor: Lorem Ipsum
+            direction_to_loc: 0.1
+            direction_to_loc_ouom: Lorem Ipsum
+            distance_to_loc: 0.1
+            distance_to_loc_ouom: Lorem Ipsum
+            drill_rig_num: Lorem Ipsum
+            drill_tool: Lorem Ipsum
+            effective_date: 12/12/2023
+            exception_granted: Lorem Ipsum
+            exception_requested: Lorem Ipsum
+            expired_ind: y
+            expiry_date: 12/12/2023
+            fees_paid_ind: y
+            licensee: Lorem Ipsum
+            licensee_contact_id: Lorem Ipsum
+            license_date: 12/12/2023
+            license_num: Lorem Ipsum
+            no_of_wells: 0.1
+            offshore_completion_type: Lorem Ipsum
+            permit_reference_num: Lorem Ipsum
+            permit_reissue_date: 12/12/2023
+            permit_type: Lorem Ipsum
+            platform_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            projected_depth: 0.1
+            projected_depth_ouom: Lorem Ipsum
+            projected_strat_unit_id: Lorem Ipsum
+            projected_tvd: 0.1
+            projected_tvd_ouom: Lorem Ipsum
+            proposed_spud_date: 12/12/2023
+            purpose: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            regulation_text: Lorem Ipsum
+            regulation_text_source_doc: Lorem Ipsum
+            regulatory_agency: Lorem Ipsum
+            regulatory_contact_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_code: Lorem Ipsum
+            rig_sf_subtype: Lorem Ipsum
+            rig_substr_height: 0.1
+            rig_substr_height_ouom: Lorem Ipsum
+            rig_support_facility_id: Lorem Ipsum
+            rig_type: Lorem Ipsum
+            section_of_regulation: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            surveyor: Lorem Ipsum
+            target_objective_fluid: Lorem Ipsum
+            violation_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_license data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_license data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_license data
+    description: Update a new well_license data
+    requestBody:
+      required: true
+      description: Request body to update well_license data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_license'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            license_id: Lorem Ipsum
+            active_ind: y
+            agent: Lorem Ipsum
+            application_id: Lorem Ipsum
+            authorized_strat_unit_id: Lorem Ipsum
+            bidding_round_num: Lorem Ipsum
+            contractor: Lorem Ipsum
+            direction_to_loc: 0.1
+            direction_to_loc_ouom: Lorem Ipsum
+            distance_to_loc: 0.1
+            distance_to_loc_ouom: Lorem Ipsum
+            drill_rig_num: Lorem Ipsum
+            drill_tool: Lorem Ipsum
+            effective_date: 12/12/2023
+            exception_granted: Lorem Ipsum
+            exception_requested: Lorem Ipsum
+            expired_ind: y
+            expiry_date: 12/12/2023
+            fees_paid_ind: y
+            licensee: Lorem Ipsum
+            licensee_contact_id: Lorem Ipsum
+            license_date: 12/12/2023
+            license_num: Lorem Ipsum
+            no_of_wells: 0.1
+            offshore_completion_type: Lorem Ipsum
+            permit_reference_num: Lorem Ipsum
+            permit_reissue_date: 12/12/2023
+            permit_type: Lorem Ipsum
+            platform_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            projected_depth: 0.1
+            projected_depth_ouom: Lorem Ipsum
+            projected_strat_unit_id: Lorem Ipsum
+            projected_tvd: 0.1
+            projected_tvd_ouom: Lorem Ipsum
+            proposed_spud_date: 12/12/2023
+            purpose: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            regulation_text: Lorem Ipsum
+            regulation_text_source_doc: Lorem Ipsum
+            regulatory_agency: Lorem Ipsum
+            regulatory_contact_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_code: Lorem Ipsum
+            rig_sf_subtype: Lorem Ipsum
+            rig_substr_height: 0.1
+            rig_substr_height_ouom: Lorem Ipsum
+            rig_support_facility_id: Lorem Ipsum
+            rig_type: Lorem Ipsum
+            section_of_regulation: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            surveyor: Lorem Ipsum
+            target_objective_fluid: Lorem Ipsum
+            violation_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_license data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_license data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_license data
+    description: Delete well_license data
+    responses:
+      '200':
+        description: well_license data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_license data was successfully deleted

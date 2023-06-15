@@ -1,0 +1,52 @@
+package dto
+
+type Spatial_description struct {
+	Spatial_description_id string   `json:"spatial_description_id" default:"source"`
+	Spatial_obs_no         int      `json:"spatial_obs_no" default:"1"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Carter_ind             *string  `json:"carter_ind" default:""`
+	Congress_ind           *string  `json:"congress_ind" default:""`
+	Coord_acquisition_id   *string  `json:"coord_acquisition_id" default:""`
+	Coord_system_id        *string  `json:"coord_system_id" default:""`
+	Dls_ind                *string  `json:"dls_ind" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Fps_ind                *string  `json:"fps_ind" default:""`
+	Geodetic_ind           *string  `json:"geodetic_ind" default:""`
+	Gross_size             *float64 `json:"gross_size" default:""`
+	Gross_size_ouom        *string  `json:"gross_size_ouom" default:""`
+	Inactivation_date      *string  `json:"inactivation_date" default:""`
+	Libya_ind              *string  `json:"libya_ind" default:""`
+	Line_ind               *string  `json:"line_ind" default:""`
+	Line_version_ind       *string  `json:"line_version_ind" default:""`
+	Local_coord_system_id  *string  `json:"local_coord_system_id" default:""`
+	Max_latitude           *float64 `json:"max_latitude" default:""`
+	Max_longitude          *float64 `json:"max_longitude" default:""`
+	Mineral_zone_ind       *string  `json:"mineral_zone_ind" default:""`
+	Min_latitude           *float64 `json:"min_latitude" default:""`
+	Min_longitude          *float64 `json:"min_longitude" default:""`
+	Ne_loc_ind             *string  `json:"ne_loc_ind" default:""`
+	North_sea_ind          *string  `json:"north_sea_ind" default:""`
+	Nts_ind                *string  `json:"nts_ind" default:""`
+	Offshore_ind           *string  `json:"offshore_ind" default:""`
+	Ohio_ind               *string  `json:"ohio_ind" default:""`
+	Pbl_ind                *string  `json:"pbl_ind" default:""`
+	Point_ind              *string  `json:"point_ind" default:""`
+	Point_version_ind      *string  `json:"point_version_ind" default:""`
+	Polygon_ind            *string  `json:"polygon_ind" default:""`
+	Polygon_version_ind    *string  `json:"polygon_version_ind" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Reference_num          *string  `json:"reference_num" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Source                 *string  `json:"source" default:""`
+	Spatial_desc_text_ind  *string  `json:"spatial_desc_text_ind" default:""`
+	Spatial_desc_type      *string  `json:"spatial_desc_type" default:""`
+	Texas_ind              *string  `json:"texas_ind" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

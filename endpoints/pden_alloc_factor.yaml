@@ -1,0 +1,209 @@
+/pden-alloc-factor:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get pden_alloc_factor
+    responses:
+      '200':
+        description: get pden_alloc_factor data to be returned
+        content:
+          application/json:
+            example:
+            - from_pden_subtype: Lorem Ipsum
+              from_pden_id: Lorem Ipsum
+              from_pden_source: Lorem Ipsum
+              to_pden_subtype: Lorem Ipsum
+              to_pden_id: Lorem Ipsum
+              to_pden_source: Lorem Ipsum
+              active_ind: y
+              activity_type: Lorem Ipsum
+              allocation_factor: 0.1
+              allocation_type: Lorem Ipsum
+              business_rule: Lorem Ipsum
+              calculated_from: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              period_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              product_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              volume_method: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new pden_alloc_factor
+    description: Create a new pden_alloc_factor data
+    requestBody:
+      required: true
+      description: Request body to create pden_alloc_factor data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_alloc_factor'
+          example:
+            from_pden_subtype: Lorem Ipsum
+            from_pden_id: Lorem Ipsum
+            from_pden_source: Lorem Ipsum
+            to_pden_subtype: Lorem Ipsum
+            to_pden_id: Lorem Ipsum
+            to_pden_source: Lorem Ipsum
+            active_ind: y
+            activity_type: Lorem Ipsum
+            allocation_factor: 0.1
+            allocation_type: Lorem Ipsum
+            business_rule: Lorem Ipsum
+            calculated_from: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            volume_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_alloc_factor data is added
+        content:
+          application/json:
+            example:
+              message: The pden_alloc_factor data was successfully added
+/pden-alloc-factor/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of pden_alloc_factor data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new pden_alloc_factor data
+    description: Update a new pden_alloc_factor data
+    requestBody:
+      required: true
+      description: Request body to update pden_alloc_factor data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_alloc_factor'
+          example:
+            from_pden_subtype: Lorem Ipsum
+            from_pden_id: Lorem Ipsum
+            from_pden_source: Lorem Ipsum
+            to_pden_subtype: Lorem Ipsum
+            to_pden_id: Lorem Ipsum
+            to_pden_source: Lorem Ipsum
+            active_ind: y
+            activity_type: Lorem Ipsum
+            allocation_factor: 0.1
+            allocation_type: Lorem Ipsum
+            business_rule: Lorem Ipsum
+            calculated_from: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            volume_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_alloc_factor data is completely updated
+        content:
+          application/json:
+            example:
+              message: The pden_alloc_factor data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new pden_alloc_factor data
+    description: Update a new pden_alloc_factor data
+    requestBody:
+      required: true
+      description: Request body to update pden_alloc_factor data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_alloc_factor'
+          example:
+            from_pden_subtype: Lorem Ipsum
+            from_pden_id: Lorem Ipsum
+            from_pden_source: Lorem Ipsum
+            to_pden_subtype: Lorem Ipsum
+            to_pden_id: Lorem Ipsum
+            to_pden_source: Lorem Ipsum
+            active_ind: y
+            activity_type: Lorem Ipsum
+            allocation_factor: 0.1
+            allocation_type: Lorem Ipsum
+            business_rule: Lorem Ipsum
+            calculated_from: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            period_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            product_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            volume_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in pden_alloc_factor data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in pden_alloc_factor data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete pden_alloc_factor data
+    description: Delete pden_alloc_factor data
+    responses:
+      '200':
+        description: pden_alloc_factor data is deleted
+        content:
+          application/json:
+            example:
+              message: The pden_alloc_factor data was successfully deleted

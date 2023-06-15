@@ -1,0 +1,165 @@
+/work-order-inst-comp:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get work_order_inst_comp
+    responses:
+      '200':
+        description: get work_order_inst_comp data to be returned
+        content:
+          application/json:
+            example:
+            - work_order_id: Lorem Ipsum
+              instruction_id: Lorem Ipsum
+              component_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new work_order_inst_comp
+    description: Create a new work_order_inst_comp data
+    requestBody:
+      required: true
+      description: Request body to create work_order_inst_comp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/work_order_inst_comp'
+          example:
+            work_order_id: Lorem Ipsum
+            instruction_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: work_order_inst_comp data is added
+        content:
+          application/json:
+            example:
+              message: The work_order_inst_comp data was successfully added
+/work-order-inst-comp/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of work_order_inst_comp data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new work_order_inst_comp data
+    description: Update a new work_order_inst_comp data
+    requestBody:
+      required: true
+      description: Request body to update work_order_inst_comp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/work_order_inst_comp'
+          example:
+            work_order_id: Lorem Ipsum
+            instruction_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: work_order_inst_comp data is completely updated
+        content:
+          application/json:
+            example:
+              message: The work_order_inst_comp data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new work_order_inst_comp data
+    description: Update a new work_order_inst_comp data
+    requestBody:
+      required: true
+      description: Request body to update work_order_inst_comp data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/work_order_inst_comp'
+          example:
+            work_order_id: Lorem Ipsum
+            instruction_id: Lorem Ipsum
+            component_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in work_order_inst_comp data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in work_order_inst_comp data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete work_order_inst_comp data
+    description: Delete work_order_inst_comp data
+    responses:
+      '200':
+        description: work_order_inst_comp data is deleted
+        content:
+          application/json:
+            example:
+              message: The work_order_inst_comp data was successfully deleted

@@ -1,0 +1,273 @@
+/anl-water-detail:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_water_detail
+    responses:
+      '200':
+        description: get anl_water_detail data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              analysis_press: 0.1
+              analysis_press_ouom: Lorem Ipsum
+              analysis_press_uom: Lorem Ipsum
+              analysis_temp: 0.1
+              analysis_temp_ouom: Lorem Ipsum
+              analysis_temp_uom: Lorem Ipsum
+              analysis_value: 1.0
+              analysis_value_ouom: Lorem Ipsum
+              analysis_value_type: Lorem Ipsum
+              analysis_value_uom: Lorem Ipsum
+              anl_value_remark: Lorem Ipsum
+              calculated_value_ind: y
+              calculate_method_id: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              measured_value_ind: y
+              measurement_type: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              reported_value_ind: y
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              water_property: Lorem Ipsum
+              water_property_code: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_water_detail
+    description: Create a new anl_water_detail data
+    requestBody:
+      required: true
+      description: Request body to create anl_water_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_water_detail'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_press: 0.1
+            analysis_press_ouom: Lorem Ipsum
+            analysis_press_uom: Lorem Ipsum
+            analysis_temp: 0.1
+            analysis_temp_ouom: Lorem Ipsum
+            analysis_temp_uom: Lorem Ipsum
+            analysis_value: 1.0
+            analysis_value_ouom: Lorem Ipsum
+            analysis_value_type: Lorem Ipsum
+            analysis_value_uom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            calculated_value_ind: y
+            calculate_method_id: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            measured_value_ind: y
+            measurement_type: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_value_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            water_property: Lorem Ipsum
+            water_property_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_water_detail data is added
+        content:
+          application/json:
+            example:
+              message: The anl_water_detail data was successfully added
+/anl-water-detail/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_water_detail data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_water_detail data
+    description: Update a new anl_water_detail data
+    requestBody:
+      required: true
+      description: Request body to update anl_water_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_water_detail'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_press: 0.1
+            analysis_press_ouom: Lorem Ipsum
+            analysis_press_uom: Lorem Ipsum
+            analysis_temp: 0.1
+            analysis_temp_ouom: Lorem Ipsum
+            analysis_temp_uom: Lorem Ipsum
+            analysis_value: 1.0
+            analysis_value_ouom: Lorem Ipsum
+            analysis_value_type: Lorem Ipsum
+            analysis_value_uom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            calculated_value_ind: y
+            calculate_method_id: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            measured_value_ind: y
+            measurement_type: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_value_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            water_property: Lorem Ipsum
+            water_property_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_water_detail data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_water_detail data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_water_detail data
+    description: Update a new anl_water_detail data
+    requestBody:
+      required: true
+      description: Request body to update anl_water_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_water_detail'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            analysis_press: 0.1
+            analysis_press_ouom: Lorem Ipsum
+            analysis_press_uom: Lorem Ipsum
+            analysis_temp: 0.1
+            analysis_temp_ouom: Lorem Ipsum
+            analysis_temp_uom: Lorem Ipsum
+            analysis_value: 1.0
+            analysis_value_ouom: Lorem Ipsum
+            analysis_value_type: Lorem Ipsum
+            analysis_value_uom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            calculated_value_ind: y
+            calculate_method_id: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            measured_value_ind: y
+            measurement_type: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            reported_value_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            water_property: Lorem Ipsum
+            water_property_code: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_water_detail data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_water_detail data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_water_detail data
+    description: Delete anl_water_detail data
+    responses:
+      '200':
+        description: anl_water_detail data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_water_detail data was successfully deleted

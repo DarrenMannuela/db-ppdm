@@ -1,0 +1,181 @@
+/rm-info-item-maint:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_info_item_maint
+    responses:
+      '200':
+        description: get rm_info_item_maint data to be returned
+        content:
+          application/json:
+            example:
+            - info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              instruction: Lorem Ipsum
+              maint_complete_date: 12/12/2023
+              maint_due_date: 12/12/2023
+              maint_period: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              scheduled_ind: y
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_info_item_maint
+    description: Create a new rm_info_item_maint data
+    requestBody:
+      required: true
+      description: Request body to create rm_info_item_maint data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_info_item_maint'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            instruction: Lorem Ipsum
+            maint_complete_date: 12/12/2023
+            maint_due_date: 12/12/2023
+            maint_period: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_info_item_maint data is added
+        content:
+          application/json:
+            example:
+              message: The rm_info_item_maint data was successfully added
+/rm-info-item-maint/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_info_item_maint data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_info_item_maint data
+    description: Update a new rm_info_item_maint data
+    requestBody:
+      required: true
+      description: Request body to update rm_info_item_maint data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_info_item_maint'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            instruction: Lorem Ipsum
+            maint_complete_date: 12/12/2023
+            maint_due_date: 12/12/2023
+            maint_period: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_info_item_maint data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_info_item_maint data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_info_item_maint data
+    description: Update a new rm_info_item_maint data
+    requestBody:
+      required: true
+      description: Request body to update rm_info_item_maint data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_info_item_maint'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            instruction: Lorem Ipsum
+            maint_complete_date: 12/12/2023
+            maint_due_date: 12/12/2023
+            maint_period: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_ind: y
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_info_item_maint data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_info_item_maint data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_info_item_maint data
+    description: Delete rm_info_item_maint data
+    responses:
+      '200':
+        description: rm_info_item_maint data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_info_item_maint data was successfully deleted

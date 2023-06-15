@@ -1,0 +1,277 @@
+/rm-information-item:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_information_item
+    responses:
+      '200':
+        description: get rm_information_item data to be returned
+        content:
+          application/json:
+            example:
+            - info_item_subtype: Lorem Ipsum
+              information_item_id: Lorem Ipsum
+              abstract: Lorem Ipsum
+              accepted_date: 12/12/2023
+              access_condition: Lorem Ipsum
+              active_ind: y
+              available_date: 12/12/2023
+              coord_acquisition_id: Lorem Ipsum
+              copyright_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              geog_coord_system_id: Lorem Ipsum
+              group_ind: y
+              issue_date: 12/12/2023
+              item_category: Lorem Ipsum
+              item_sub_category: Lorem Ipsum
+              local_coord_system_id: Lorem Ipsum
+              map_coord_system_id: Lorem Ipsum
+              max_latitude: 0.1
+              max_longitude: 0.1
+              min_latitude: 0.1
+              min_longitude: 0.1
+              modified_date: 12/12/2023
+              origin_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              publish_date: 12/12/2023
+              purpose: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              security_desc: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              submit_date: 12/12/2023
+              time_period_desc: Lorem Ipsum
+              title: Lorem Ipsum
+              use_condition: Lorem Ipsum
+              version_num: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_information_item
+    description: Create a new rm_information_item data
+    requestBody:
+      required: true
+      description: Request body to create rm_information_item data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_information_item'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            abstract: Lorem Ipsum
+            accepted_date: 12/12/2023
+            access_condition: Lorem Ipsum
+            active_ind: y
+            available_date: 12/12/2023
+            coord_acquisition_id: Lorem Ipsum
+            copyright_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geog_coord_system_id: Lorem Ipsum
+            group_ind: y
+            issue_date: 12/12/2023
+            item_category: Lorem Ipsum
+            item_sub_category: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            map_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            min_latitude: 0.1
+            min_longitude: 0.1
+            modified_date: 12/12/2023
+            origin_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            publish_date: 12/12/2023
+            purpose: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            security_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            submit_date: 12/12/2023
+            time_period_desc: Lorem Ipsum
+            title: Lorem Ipsum
+            use_condition: Lorem Ipsum
+            version_num: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_information_item data is added
+        content:
+          application/json:
+            example:
+              message: The rm_information_item data was successfully added
+/rm-information-item/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_information_item data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_information_item data
+    description: Update a new rm_information_item data
+    requestBody:
+      required: true
+      description: Request body to update rm_information_item data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_information_item'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            abstract: Lorem Ipsum
+            accepted_date: 12/12/2023
+            access_condition: Lorem Ipsum
+            active_ind: y
+            available_date: 12/12/2023
+            coord_acquisition_id: Lorem Ipsum
+            copyright_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geog_coord_system_id: Lorem Ipsum
+            group_ind: y
+            issue_date: 12/12/2023
+            item_category: Lorem Ipsum
+            item_sub_category: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            map_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            min_latitude: 0.1
+            min_longitude: 0.1
+            modified_date: 12/12/2023
+            origin_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            publish_date: 12/12/2023
+            purpose: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            security_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            submit_date: 12/12/2023
+            time_period_desc: Lorem Ipsum
+            title: Lorem Ipsum
+            use_condition: Lorem Ipsum
+            version_num: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_information_item data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_information_item data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_information_item data
+    description: Update a new rm_information_item data
+    requestBody:
+      required: true
+      description: Request body to update rm_information_item data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_information_item'
+          example:
+            info_item_subtype: Lorem Ipsum
+            information_item_id: Lorem Ipsum
+            abstract: Lorem Ipsum
+            accepted_date: 12/12/2023
+            access_condition: Lorem Ipsum
+            active_ind: y
+            available_date: 12/12/2023
+            coord_acquisition_id: Lorem Ipsum
+            copyright_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geog_coord_system_id: Lorem Ipsum
+            group_ind: y
+            issue_date: 12/12/2023
+            item_category: Lorem Ipsum
+            item_sub_category: Lorem Ipsum
+            local_coord_system_id: Lorem Ipsum
+            map_coord_system_id: Lorem Ipsum
+            max_latitude: 0.1
+            max_longitude: 0.1
+            min_latitude: 0.1
+            min_longitude: 0.1
+            modified_date: 12/12/2023
+            origin_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            publish_date: 12/12/2023
+            purpose: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            security_desc: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            submit_date: 12/12/2023
+            time_period_desc: Lorem Ipsum
+            title: Lorem Ipsum
+            use_condition: Lorem Ipsum
+            version_num: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_information_item data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_information_item data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_information_item data
+    description: Delete rm_information_item data
+    responses:
+      '200':
+        description: rm_information_item data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_information_item data was successfully deleted

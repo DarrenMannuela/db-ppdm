@@ -1,0 +1,44 @@
+package dto
+
+type Well_porous_interval struct {
+	Uwi                     string   `json:"uwi" default:"source"`
+	Source                  string   `json:"source" default:"source"`
+	Porous_interval_id      string   `json:"porous_interval_id" default:"source"`
+	Active_ind              *string  `json:"active_ind" default:""`
+	Average_porosity        *float64 `json:"average_porosity" default:""`
+	Base_depth              *float64 `json:"base_depth" default:""`
+	Base_depth_ouom         *string  `json:"base_depth_ouom" default:""`
+	Base_tvd                *float64 `json:"base_tvd" default:""`
+	Base_tvd_ouom           *string  `json:"base_tvd_ouom" default:""`
+	Core_sample_length      *float64 `json:"core_sample_length" default:""`
+	Core_sample_length_ouom *string  `json:"core_sample_length_ouom" default:""`
+	Effective_date          *string  `json:"effective_date" default:""`
+	Expiry_date             *string  `json:"expiry_date" default:""`
+	Gas_show_ind            *string  `json:"gas_show_ind" default:""`
+	Gross_thickness         *float64 `json:"gross_thickness" default:""`
+	Gross_thickness_ouom    *string  `json:"gross_thickness_ouom" default:""`
+	Net_thickness           *float64 `json:"net_thickness" default:""`
+	Net_thickness_ouom      *string  `json:"net_thickness_ouom" default:""`
+	Oil_show_ind            *string  `json:"oil_show_ind" default:""`
+	Porosity_cutoff         *float64 `json:"porosity_cutoff" default:""`
+	Porosity_quality        *string  `json:"porosity_quality" default:""`
+	Porosity_type           *string  `json:"porosity_type" default:""`
+	Porous_form_age         *string  `json:"porous_form_age" default:""`
+	Porous_strat_unit_id    *string  `json:"porous_strat_unit_id" default:""`
+	Ppdm_guid               *string  `json:"ppdm_guid" default:""`
+	Remark                  *string  `json:"remark" default:""`
+	Strat_age               *string  `json:"strat_age" default:""`
+	Strat_age_name_set_id   *string  `json:"strat_age_name_set_id" default:""`
+	Strat_name_set_id       *string  `json:"strat_name_set_id" default:""`
+	Top_depth               *float64 `json:"top_depth" default:""`
+	Top_depth_ouom          *string  `json:"top_depth_ouom" default:""`
+	Top_tvd                 *float64 `json:"top_tvd" default:""`
+	Top_tvd_ouom            *string  `json:"top_tvd_ouom" default:""`
+	Row_changed_by          *string  `json:"row_changed_by" default:""`
+	Row_changed_date        *string  `json:"row_changed_date" default:""`
+	Row_created_by          *string  `json:"row_created_by" default:""`
+	Row_created_date        *string  `json:"row_created_date" default:""`
+	Row_effective_date      *string  `json:"row_effective_date" default:""`
+	Row_expiry_date         *string  `json:"row_expiry_date" default:""`
+	Row_quality             *string  `json:"row_quality" default:""`
+}

@@ -1,0 +1,233 @@
+/sf-vessel:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sf_vessel
+    responses:
+      '200':
+        description: get sf_vessel data to be returned
+        content:
+          application/json:
+            example:
+            - sf_subtype: Lorem Ipsum
+              vessel_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              backup_antenna_location: Lorem Ipsum
+              backup_antenna_type: Lorem Ipsum
+              current_operator: Lorem Ipsum
+              drill_hole_position: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              positioning_method: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              primary_antenna_location: Lorem Ipsum
+              primary_antenna_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              secondary_antennal_location: Lorem Ipsum
+              secondary_antenna_type: Lorem Ipsum
+              source: Lorem Ipsum
+              vessel_beam: 0.1
+              vessel_displacement: 0.1
+              vessel_draft: 0.1
+              vessel_length: 0.1
+              vessel_name: Lorem Ipsum
+              vessel_size: Lorem Ipsum
+              vessel_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sf_vessel
+    description: Create a new sf_vessel data
+    requestBody:
+      required: true
+      description: Request body to create sf_vessel data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_vessel'
+          example:
+            sf_subtype: Lorem Ipsum
+            vessel_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            backup_antenna_location: Lorem Ipsum
+            backup_antenna_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            drill_hole_position: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            positioning_method: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_antenna_location: Lorem Ipsum
+            primary_antenna_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            secondary_antennal_location: Lorem Ipsum
+            secondary_antenna_type: Lorem Ipsum
+            source: Lorem Ipsum
+            vessel_beam: 0.1
+            vessel_displacement: 0.1
+            vessel_draft: 0.1
+            vessel_length: 0.1
+            vessel_name: Lorem Ipsum
+            vessel_size: Lorem Ipsum
+            vessel_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_vessel data is added
+        content:
+          application/json:
+            example:
+              message: The sf_vessel data was successfully added
+/sf-vessel/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sf_vessel data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sf_vessel data
+    description: Update a new sf_vessel data
+    requestBody:
+      required: true
+      description: Request body to update sf_vessel data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_vessel'
+          example:
+            sf_subtype: Lorem Ipsum
+            vessel_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            backup_antenna_location: Lorem Ipsum
+            backup_antenna_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            drill_hole_position: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            positioning_method: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_antenna_location: Lorem Ipsum
+            primary_antenna_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            secondary_antennal_location: Lorem Ipsum
+            secondary_antenna_type: Lorem Ipsum
+            source: Lorem Ipsum
+            vessel_beam: 0.1
+            vessel_displacement: 0.1
+            vessel_draft: 0.1
+            vessel_length: 0.1
+            vessel_name: Lorem Ipsum
+            vessel_size: Lorem Ipsum
+            vessel_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_vessel data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sf_vessel data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sf_vessel data
+    description: Update a new sf_vessel data
+    requestBody:
+      required: true
+      description: Request body to update sf_vessel data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_vessel'
+          example:
+            sf_subtype: Lorem Ipsum
+            vessel_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            backup_antenna_location: Lorem Ipsum
+            backup_antenna_type: Lorem Ipsum
+            current_operator: Lorem Ipsum
+            drill_hole_position: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            positioning_method: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            primary_antenna_location: Lorem Ipsum
+            primary_antenna_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            secondary_antennal_location: Lorem Ipsum
+            secondary_antenna_type: Lorem Ipsum
+            source: Lorem Ipsum
+            vessel_beam: 0.1
+            vessel_displacement: 0.1
+            vessel_draft: 0.1
+            vessel_length: 0.1
+            vessel_name: Lorem Ipsum
+            vessel_size: Lorem Ipsum
+            vessel_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sf_vessel data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sf_vessel data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sf_vessel data
+    description: Delete sf_vessel data
+    responses:
+      '200':
+        description: sf_vessel data is deleted
+        content:
+          application/json:
+            example:
+              message: The sf_vessel data was successfully deleted

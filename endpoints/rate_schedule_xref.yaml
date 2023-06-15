@@ -1,0 +1,165 @@
+/rate-schedule-xref:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rate_schedule_xref
+    responses:
+      '200':
+        description: get rate_schedule_xref data to be returned
+        content:
+          application/json:
+            example:
+            - rate_schedule_id_1: Lorem Ipsum
+              rate_schedule_id_2: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              rate_schedule_xref_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rate_schedule_xref
+    description: Create a new rate_schedule_xref data
+    requestBody:
+      required: true
+      description: Request body to create rate_schedule_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rate_schedule_xref'
+          example:
+            rate_schedule_id_1: Lorem Ipsum
+            rate_schedule_id_2: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            rate_schedule_xref_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rate_schedule_xref data is added
+        content:
+          application/json:
+            example:
+              message: The rate_schedule_xref data was successfully added
+/rate-schedule-xref/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rate_schedule_xref data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rate_schedule_xref data
+    description: Update a new rate_schedule_xref data
+    requestBody:
+      required: true
+      description: Request body to update rate_schedule_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rate_schedule_xref'
+          example:
+            rate_schedule_id_1: Lorem Ipsum
+            rate_schedule_id_2: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            rate_schedule_xref_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rate_schedule_xref data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rate_schedule_xref data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rate_schedule_xref data
+    description: Update a new rate_schedule_xref data
+    requestBody:
+      required: true
+      description: Request body to update rate_schedule_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rate_schedule_xref'
+          example:
+            rate_schedule_id_1: Lorem Ipsum
+            rate_schedule_id_2: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            rate_schedule_xref_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rate_schedule_xref data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rate_schedule_xref data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rate_schedule_xref data
+    description: Delete rate_schedule_xref data
+    responses:
+      '200':
+        description: rate_schedule_xref data is deleted
+        content:
+          application/json:
+            example:
+              message: The rate_schedule_xref data was successfully deleted

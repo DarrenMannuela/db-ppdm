@@ -1,0 +1,217 @@
+/strat-column-unit:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get strat_column_unit
+    responses:
+      '200':
+        description: get strat_column_unit data to be returned
+        content:
+          application/json:
+            example:
+            - strat_column_id: Lorem Ipsum
+              strat_column_source: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              active_ind: y
+              business_associate_id: Lorem Ipsum
+              certified_ind: y
+              conformity_relationship: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              lithology: Lorem Ipsum
+              occurrence_type: Lorem Ipsum
+              overturned_ind: y
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              repeat_strat_type: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              sour_gas_ind: y
+              strat_topo_relation_ind: y
+              sw_application_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new strat_column_unit
+    description: Create a new strat_column_unit data
+    requestBody:
+      required: true
+      description: Request body to create strat_column_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_column_unit'
+          example:
+            strat_column_id: Lorem Ipsum
+            strat_column_source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            business_associate_id: Lorem Ipsum
+            certified_ind: y
+            conformity_relationship: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology: Lorem Ipsum
+            occurrence_type: Lorem Ipsum
+            overturned_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            repeat_strat_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            sour_gas_ind: y
+            strat_topo_relation_ind: y
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_column_unit data is added
+        content:
+          application/json:
+            example:
+              message: The strat_column_unit data was successfully added
+/strat-column-unit/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of strat_column_unit data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new strat_column_unit data
+    description: Update a new strat_column_unit data
+    requestBody:
+      required: true
+      description: Request body to update strat_column_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_column_unit'
+          example:
+            strat_column_id: Lorem Ipsum
+            strat_column_source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            business_associate_id: Lorem Ipsum
+            certified_ind: y
+            conformity_relationship: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology: Lorem Ipsum
+            occurrence_type: Lorem Ipsum
+            overturned_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            repeat_strat_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            sour_gas_ind: y
+            strat_topo_relation_ind: y
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_column_unit data is completely updated
+        content:
+          application/json:
+            example:
+              message: The strat_column_unit data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new strat_column_unit data
+    description: Update a new strat_column_unit data
+    requestBody:
+      required: true
+      description: Request body to update strat_column_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_column_unit'
+          example:
+            strat_column_id: Lorem Ipsum
+            strat_column_source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            business_associate_id: Lorem Ipsum
+            certified_ind: y
+            conformity_relationship: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology: Lorem Ipsum
+            occurrence_type: Lorem Ipsum
+            overturned_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            repeat_strat_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            sour_gas_ind: y
+            strat_topo_relation_ind: y
+            sw_application_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in strat_column_unit data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in strat_column_unit data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete strat_column_unit data
+    description: Delete strat_column_unit data
+    responses:
+      '200':
+        description: strat_column_unit data is deleted
+        content:
+          application/json:
+            example:
+              message: The strat_column_unit data was successfully deleted

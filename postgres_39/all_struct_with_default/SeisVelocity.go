@@ -1,0 +1,50 @@
+package dto
+
+type Seis_velocity struct {
+	Velocity_volume_id        string   `json:"velocity_volume_id" default:"source"`
+	Volume_point              string   `json:"volume_point" default:"source"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Bin_grid_id               *string  `json:"bin_grid_id" default:""`
+	Bin_point_id              *string  `json:"bin_point_id" default:""`
+	Bin_source                *string  `json:"bin_source" default:""`
+	Compute_method            *string  `json:"compute_method" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Latitude                  *float64 `json:"latitude" default:""`
+	Longitude                 *float64 `json:"longitude" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Receiver_md               *float64 `json:"receiver_md" default:""`
+	Receiver_md_ouom          *string  `json:"receiver_md_ouom" default:""`
+	Receiver_vert_depth       *float64 `json:"receiver_vert_depth" default:""`
+	Receiver_vert_depth_ouom  *string  `json:"receiver_vert_depth_ouom" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Seis_point_id             *string  `json:"seis_point_id" default:""`
+	Seis_set_id               *string  `json:"seis_set_id" default:""`
+	Seis_set_subtype          *string  `json:"seis_set_subtype" default:""`
+	Seis_time                 *float64 `json:"seis_time" default:""`
+	Seis_time_ouom            *string  `json:"seis_time_ouom" default:""`
+	Seis_well_set_id          *string  `json:"seis_well_set_id" default:""`
+	Seis_well_set_subtype     *string  `json:"seis_well_set_subtype" default:""`
+	Source                    *string  `json:"source" default:""`
+	Source_md                 *float64 `json:"source_md" default:""`
+	Source_md_ouom            *string  `json:"source_md_ouom" default:""`
+	Source_vert_depth         *float64 `json:"source_vert_depth" default:""`
+	Source_vert_depth_ouom    *string  `json:"source_vert_depth_ouom" default:""`
+	Velocity                  *float64 `json:"velocity" default:""`
+	Velocity_azimuth          *float64 `json:"velocity_azimuth" default:""`
+	Velocity_depth            *float64 `json:"velocity_depth" default:""`
+	Velocity_inclination      *float64 `json:"velocity_inclination" default:""`
+	Velocity_inclination_ouom *string  `json:"velocity_inclination_ouom" default:""`
+	Velocity_ouom             *string  `json:"velocity_ouom" default:""`
+	Velocity_type             *string  `json:"velocity_type" default:""`
+	Velocity_x                *float64 `json:"velocity_x" default:""`
+	Velocity_y                *float64 `json:"velocity_y" default:""`
+	Velocity_z                *float64 `json:"velocity_z" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

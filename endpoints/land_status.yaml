@@ -1,0 +1,193 @@
+/land-status:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get land_status
+    responses:
+      '200':
+        description: get land_status data to be returned
+        content:
+          application/json:
+            example:
+            - land_right_subtype: Lorem Ipsum
+              land_right_id: Lorem Ipsum
+              status_type: Lorem Ipsum
+              land_right_status: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              effective_term: Lorem Ipsum
+              effective_term_ouom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              reason: Lorem Ipsum
+              remark: Lorem Ipsum
+              section_of_act: Lorem Ipsum
+              section_of_act_date: 12/12/2023
+              source: Lorem Ipsum
+              undetermined_term_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new land_status
+    description: Create a new land_status data
+    requestBody:
+      required: true
+      description: Request body to create land_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_status'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            status_type: Lorem Ipsum
+            land_right_status: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            effective_term: Lorem Ipsum
+            effective_term_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            section_of_act: Lorem Ipsum
+            section_of_act_date: 12/12/2023
+            source: Lorem Ipsum
+            undetermined_term_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_status data is added
+        content:
+          application/json:
+            example:
+              message: The land_status data was successfully added
+/land-status/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of land_status data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new land_status data
+    description: Update a new land_status data
+    requestBody:
+      required: true
+      description: Request body to update land_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_status'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            status_type: Lorem Ipsum
+            land_right_status: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            effective_term: Lorem Ipsum
+            effective_term_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            section_of_act: Lorem Ipsum
+            section_of_act_date: 12/12/2023
+            source: Lorem Ipsum
+            undetermined_term_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: land_status data is completely updated
+        content:
+          application/json:
+            example:
+              message: The land_status data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new land_status data
+    description: Update a new land_status data
+    requestBody:
+      required: true
+      description: Request body to update land_status data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/land_status'
+          example:
+            land_right_subtype: Lorem Ipsum
+            land_right_id: Lorem Ipsum
+            status_type: Lorem Ipsum
+            land_right_status: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            effective_term: Lorem Ipsum
+            effective_term_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            section_of_act: Lorem Ipsum
+            section_of_act_date: 12/12/2023
+            source: Lorem Ipsum
+            undetermined_term_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in land_status data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in land_status data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete land_status data
+    description: Delete land_status data
+    responses:
+      '200':
+        description: land_status data is deleted
+        content:
+          application/json:
+            example:
+              message: The land_status data was successfully deleted

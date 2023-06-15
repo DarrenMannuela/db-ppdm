@@ -1,0 +1,169 @@
+/project-step-equip:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get project_step_equip
+    responses:
+      '200':
+        description: get project_step_equip data to be returned
+        content:
+          application/json:
+            example:
+            - project_id: Lorem Ipsum
+              equipment_role: Lorem Ipsum
+              step_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              operated_by_ba_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new project_step_equip
+    description: Create a new project_step_equip data
+    requestBody:
+      required: true
+      description: Request body to create project_step_equip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_step_equip'
+          example:
+            project_id: Lorem Ipsum
+            equipment_role: Lorem Ipsum
+            step_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            operated_by_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project_step_equip data is added
+        content:
+          application/json:
+            example:
+              message: The project_step_equip data was successfully added
+/project-step-equip/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of project_step_equip data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new project_step_equip data
+    description: Update a new project_step_equip data
+    requestBody:
+      required: true
+      description: Request body to update project_step_equip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_step_equip'
+          example:
+            project_id: Lorem Ipsum
+            equipment_role: Lorem Ipsum
+            step_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            operated_by_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project_step_equip data is completely updated
+        content:
+          application/json:
+            example:
+              message: The project_step_equip data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new project_step_equip data
+    description: Update a new project_step_equip data
+    requestBody:
+      required: true
+      description: Request body to update project_step_equip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_step_equip'
+          example:
+            project_id: Lorem Ipsum
+            equipment_role: Lorem Ipsum
+            step_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            operated_by_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in project_step_equip data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in project_step_equip data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete project_step_equip data
+    description: Delete project_step_equip data
+    responses:
+      '200':
+        description: project_step_equip data is deleted
+        content:
+          application/json:
+            example:
+              message: The project_step_equip data was successfully deleted

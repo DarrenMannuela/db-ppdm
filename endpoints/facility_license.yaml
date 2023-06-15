@@ -1,0 +1,269 @@
+/facility-license:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get facility_license
+    responses:
+      '200':
+        description: get facility_license data to be returned
+        content:
+          application/json:
+            example:
+            - facility_id: Lorem Ipsum
+              facility_type: Lorem Ipsum
+              license_id: Lorem Ipsum
+              active_ind: y
+              adjust_13_month_desc: Lorem Ipsum
+              adjust_13_month_ind: y
+              application_id: Lorem Ipsum
+              approved_facility_class: Lorem Ipsum
+              assigned_field_id: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              facility_license_type: Lorem Ipsum
+              fees_paid_ind: y
+              granted_by_ba_id: Lorem Ipsum
+              granted_by_contact_id: Lorem Ipsum
+              granted_date: 12/12/2023
+              granted_to_ba_id: Lorem Ipsum
+              granted_to_contact_id: Lorem Ipsum
+              license_extension_cond: Lorem Ipsum
+              license_latitude: 0.1
+              license_location: Lorem Ipsum
+              license_longitude: 0.1
+              license_num: Lorem Ipsum
+              license_term: 0.1
+              license_term_uom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              rel_license_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              renewal_condition: Lorem Ipsum
+              secondary_term: 0.1
+              secondary_term_uom: Lorem Ipsum
+              source: Lorem Ipsum
+              violation_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new facility_license
+    description: Create a new facility_license data
+    requestBody:
+      required: true
+      description: Request body to create facility_license data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_license'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            license_id: Lorem Ipsum
+            active_ind: y
+            adjust_13_month_desc: Lorem Ipsum
+            adjust_13_month_ind: y
+            application_id: Lorem Ipsum
+            approved_facility_class: Lorem Ipsum
+            assigned_field_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_license_type: Lorem Ipsum
+            fees_paid_ind: y
+            granted_by_ba_id: Lorem Ipsum
+            granted_by_contact_id: Lorem Ipsum
+            granted_date: 12/12/2023
+            granted_to_ba_id: Lorem Ipsum
+            granted_to_contact_id: Lorem Ipsum
+            license_extension_cond: Lorem Ipsum
+            license_latitude: 0.1
+            license_location: Lorem Ipsum
+            license_longitude: 0.1
+            license_num: Lorem Ipsum
+            license_term: 0.1
+            license_term_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            rel_license_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            renewal_condition: Lorem Ipsum
+            secondary_term: 0.1
+            secondary_term_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            violation_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility_license data is added
+        content:
+          application/json:
+            example:
+              message: The facility_license data was successfully added
+/facility-license/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of facility_license data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new facility_license data
+    description: Update a new facility_license data
+    requestBody:
+      required: true
+      description: Request body to update facility_license data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_license'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            license_id: Lorem Ipsum
+            active_ind: y
+            adjust_13_month_desc: Lorem Ipsum
+            adjust_13_month_ind: y
+            application_id: Lorem Ipsum
+            approved_facility_class: Lorem Ipsum
+            assigned_field_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_license_type: Lorem Ipsum
+            fees_paid_ind: y
+            granted_by_ba_id: Lorem Ipsum
+            granted_by_contact_id: Lorem Ipsum
+            granted_date: 12/12/2023
+            granted_to_ba_id: Lorem Ipsum
+            granted_to_contact_id: Lorem Ipsum
+            license_extension_cond: Lorem Ipsum
+            license_latitude: 0.1
+            license_location: Lorem Ipsum
+            license_longitude: 0.1
+            license_num: Lorem Ipsum
+            license_term: 0.1
+            license_term_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            rel_license_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            renewal_condition: Lorem Ipsum
+            secondary_term: 0.1
+            secondary_term_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            violation_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: facility_license data is completely updated
+        content:
+          application/json:
+            example:
+              message: The facility_license data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new facility_license data
+    description: Update a new facility_license data
+    requestBody:
+      required: true
+      description: Request body to update facility_license data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/facility_license'
+          example:
+            facility_id: Lorem Ipsum
+            facility_type: Lorem Ipsum
+            license_id: Lorem Ipsum
+            active_ind: y
+            adjust_13_month_desc: Lorem Ipsum
+            adjust_13_month_ind: y
+            application_id: Lorem Ipsum
+            approved_facility_class: Lorem Ipsum
+            assigned_field_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            facility_license_type: Lorem Ipsum
+            fees_paid_ind: y
+            granted_by_ba_id: Lorem Ipsum
+            granted_by_contact_id: Lorem Ipsum
+            granted_date: 12/12/2023
+            granted_to_ba_id: Lorem Ipsum
+            granted_to_contact_id: Lorem Ipsum
+            license_extension_cond: Lorem Ipsum
+            license_latitude: 0.1
+            license_location: Lorem Ipsum
+            license_longitude: 0.1
+            license_num: Lorem Ipsum
+            license_term: 0.1
+            license_term_uom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            rel_license_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            renewal_condition: Lorem Ipsum
+            secondary_term: 0.1
+            secondary_term_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            violation_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in facility_license data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in facility_license data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete facility_license data
+    description: Delete facility_license data
+    responses:
+      '200':
+        description: facility_license data is deleted
+        content:
+          application/json:
+            example:
+              message: The facility_license data was successfully deleted

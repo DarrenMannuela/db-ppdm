@@ -1,0 +1,221 @@
+/ppdm-map-detail:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_map_detail
+    responses:
+      '200':
+        description: get ppdm_map_detail data to be returned
+        content:
+          application/json:
+            example:
+            - map_id: Lorem Ipsum
+              active_ind: y
+              column_name1: Lorem Ipsum
+              column_name2: Lorem Ipsum
+              create_method: Lorem Ipsum
+              default_value: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              map_desc: Lorem Ipsum
+              map_owner_ba_id: Lorem Ipsum
+              map_type: Lorem Ipsum
+              map_version_num: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              remark: Lorem Ipsum
+              schema_entity_id1: Lorem Ipsum
+              schema_entity_id2: Lorem Ipsum
+              source: Lorem Ipsum
+              sw_application_id: Lorem Ipsum
+              system_id1: Lorem Ipsum
+              system_id2: Lorem Ipsum
+              table_name1: Lorem Ipsum
+              table_name2: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_map_detail
+    description: Create a new ppdm_map_detail data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_map_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_detail'
+          example:
+            map_id: Lorem Ipsum
+            active_ind: y
+            column_name1: Lorem Ipsum
+            column_name2: Lorem Ipsum
+            create_method: Lorem Ipsum
+            default_value: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            map_desc: Lorem Ipsum
+            map_owner_ba_id: Lorem Ipsum
+            map_type: Lorem Ipsum
+            map_version_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            schema_entity_id1: Lorem Ipsum
+            schema_entity_id2: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            system_id1: Lorem Ipsum
+            system_id2: Lorem Ipsum
+            table_name1: Lorem Ipsum
+            table_name2: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_detail data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_detail data was successfully added
+/ppdm-map-detail/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_map_detail data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_map_detail data
+    description: Update a new ppdm_map_detail data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_detail'
+          example:
+            map_id: Lorem Ipsum
+            active_ind: y
+            column_name1: Lorem Ipsum
+            column_name2: Lorem Ipsum
+            create_method: Lorem Ipsum
+            default_value: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            map_desc: Lorem Ipsum
+            map_owner_ba_id: Lorem Ipsum
+            map_type: Lorem Ipsum
+            map_version_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            schema_entity_id1: Lorem Ipsum
+            schema_entity_id2: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            system_id1: Lorem Ipsum
+            system_id2: Lorem Ipsum
+            table_name1: Lorem Ipsum
+            table_name2: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_detail data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_detail data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_map_detail data
+    description: Update a new ppdm_map_detail data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_detail'
+          example:
+            map_id: Lorem Ipsum
+            active_ind: y
+            column_name1: Lorem Ipsum
+            column_name2: Lorem Ipsum
+            create_method: Lorem Ipsum
+            default_value: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            map_desc: Lorem Ipsum
+            map_owner_ba_id: Lorem Ipsum
+            map_type: Lorem Ipsum
+            map_version_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            remark: Lorem Ipsum
+            schema_entity_id1: Lorem Ipsum
+            schema_entity_id2: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            system_id1: Lorem Ipsum
+            system_id2: Lorem Ipsum
+            table_name1: Lorem Ipsum
+            table_name2: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_map_detail data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_map_detail data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_map_detail data
+    description: Delete ppdm_map_detail data
+    responses:
+      '200':
+        description: ppdm_map_detail data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_detail data was successfully deleted

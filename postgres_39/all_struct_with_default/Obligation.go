@@ -1,0 +1,53 @@
+package dto
+
+type Obligation struct {
+	Obligation_id             string   `json:"obligation_id" default:"source"`
+	Obligation_seq_no         int      `json:"obligation_seq_no" default:"1"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Calculation_method        *string  `json:"calculation_method" default:""`
+	Convertible_ind           *string  `json:"convertible_ind" default:""`
+	Critical_date             *string  `json:"critical_date" default:""`
+	Currency_conversion       *float64 `json:"currency_conversion" default:""`
+	Currency_ouom             *string  `json:"currency_ouom" default:""`
+	Description               *string  `json:"description" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Fulfilled_date            *string  `json:"fulfilled_date" default:""`
+	Fulfilled_ind             *string  `json:"fulfilled_ind" default:""`
+	Gross_obligation_cost     *float64 `json:"gross_obligation_cost" default:""`
+	Instrument_id             *string  `json:"instrument_id" default:""`
+	Liability_release_date    *string  `json:"liability_release_date" default:""`
+	Net_obligation_cost       *float64 `json:"net_obligation_cost" default:""`
+	Notice_period_length      *float64 `json:"notice_period_length" default:""`
+	Notice_period_ouom        *string  `json:"notice_period_ouom" default:""`
+	Obligation_category       *string  `json:"obligation_category" default:""`
+	Obligation_duration       *float64 `json:"obligation_duration" default:""`
+	Obligation_duration_ouom  *string  `json:"obligation_duration_ouom" default:""`
+	Obligation_frequency      *string  `json:"obligation_frequency" default:""`
+	Obligation_type           *string  `json:"obligation_type" default:""`
+	Payment_ind               *string  `json:"payment_ind" default:""`
+	Payment_responsibility    *string  `json:"payment_responsibility" default:""`
+	Percentage                *float64 `json:"percentage" default:""`
+	Potential_obligation_desc *string  `json:"potential_obligation_desc" default:""`
+	Potential_obligation_ind  *string  `json:"potential_obligation_ind" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Prepaid_ind               *string  `json:"prepaid_ind" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Resp_party_ba_id          *string  `json:"resp_party_ba_id" default:""`
+	Review_frequency          *string  `json:"review_frequency" default:""`
+	Royalty_owner_ba_id       *string  `json:"royalty_owner_ba_id" default:""`
+	Royalty_payor_ba_id       *string  `json:"royalty_payor_ba_id" default:""`
+	Royalty_type              *string  `json:"royalty_type" default:""`
+	Source                    *string  `json:"source" default:""`
+	Start_date                *string  `json:"start_date" default:""`
+	Substance_id              *string  `json:"substance_id" default:""`
+	Trigger_method            *string  `json:"trigger_method" default:""`
+	Work_obligation_desc      *string  `json:"work_obligation_desc" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

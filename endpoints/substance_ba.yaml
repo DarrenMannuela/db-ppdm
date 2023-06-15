@@ -1,0 +1,209 @@
+/substance-ba:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get substance_ba
+    responses:
+      '200':
+        description: get substance_ba data to be returned
+        content:
+          application/json:
+            example:
+            - substance_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              ba_role_type: Lorem Ipsum
+              cas_number: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              location: Lorem Ipsum
+              manufacturer: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              price: 0.1
+              price_ouom: Lorem Ipsum
+              problem_ind: y
+              purchase_quantity: 0.1
+              purchase_quantity_ouom: Lorem Ipsum
+              purchase_quantity_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              substance_ba_id: Lorem Ipsum
+              supplier: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new substance_ba
+    description: Create a new substance_ba data
+    requestBody:
+      required: true
+      description: Request body to create substance_ba data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_ba'
+          example:
+            substance_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            ba_role_type: Lorem Ipsum
+            cas_number: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location: Lorem Ipsum
+            manufacturer: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            price: 0.1
+            price_ouom: Lorem Ipsum
+            problem_ind: y
+            purchase_quantity: 0.1
+            purchase_quantity_ouom: Lorem Ipsum
+            purchase_quantity_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_ba_id: Lorem Ipsum
+            supplier: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance_ba data is added
+        content:
+          application/json:
+            example:
+              message: The substance_ba data was successfully added
+/substance-ba/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of substance_ba data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new substance_ba data
+    description: Update a new substance_ba data
+    requestBody:
+      required: true
+      description: Request body to update substance_ba data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_ba'
+          example:
+            substance_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            ba_role_type: Lorem Ipsum
+            cas_number: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location: Lorem Ipsum
+            manufacturer: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            price: 0.1
+            price_ouom: Lorem Ipsum
+            problem_ind: y
+            purchase_quantity: 0.1
+            purchase_quantity_ouom: Lorem Ipsum
+            purchase_quantity_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_ba_id: Lorem Ipsum
+            supplier: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance_ba data is completely updated
+        content:
+          application/json:
+            example:
+              message: The substance_ba data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new substance_ba data
+    description: Update a new substance_ba data
+    requestBody:
+      required: true
+      description: Request body to update substance_ba data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_ba'
+          example:
+            substance_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            ba_role_type: Lorem Ipsum
+            cas_number: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            location: Lorem Ipsum
+            manufacturer: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            price: 0.1
+            price_ouom: Lorem Ipsum
+            problem_ind: y
+            purchase_quantity: 0.1
+            purchase_quantity_ouom: Lorem Ipsum
+            purchase_quantity_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_ba_id: Lorem Ipsum
+            supplier: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in substance_ba data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in substance_ba data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete substance_ba data
+    description: Delete substance_ba data
+    responses:
+      '200':
+        description: substance_ba data is deleted
+        content:
+          application/json:
+            example:
+              message: The substance_ba data was successfully deleted

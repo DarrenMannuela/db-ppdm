@@ -1,0 +1,40 @@
+package dto
+
+type Well_drill_report struct {
+	Uwi                      string   `json:"uwi" default:"source"`
+	Report_id                string   `json:"report_id" default:"source"`
+	Active_ind               *string  `json:"active_ind" default:""`
+	Contractor_ba_id         *string  `json:"contractor_ba_id" default:""`
+	Effective_date           *string  `json:"effective_date" default:""`
+	End_date                 *string  `json:"end_date" default:""`
+	End_time                 *string  `json:"end_time" default:""`
+	End_timezone             *string  `json:"end_timezone" default:""`
+	Expiry_date              *string  `json:"expiry_date" default:""`
+	File_date                *string  `json:"file_date" default:""`
+	File_time                *string  `json:"file_time" default:""`
+	File_timezone            *string  `json:"file_timezone" default:""`
+	Period_count             *int     `json:"period_count" default:""`
+	Period_duration          *float64 `json:"period_duration" default:""`
+	Period_duration_uom      *string  `json:"period_duration_uom" default:""`
+	Ppdm_guid                *string  `json:"ppdm_guid" default:""`
+	Record_count             *int     `json:"record_count" default:""`
+	Reference_num            *string  `json:"reference_num" default:""`
+	Remark                   *string  `json:"remark" default:""`
+	Reported_contractor_name *string  `json:"reported_contractor_name" default:""`
+	Reported_rig_num         *string  `json:"reported_rig_num" default:""`
+	Source                   *string  `json:"source" default:""`
+	Standard_digital_format  *string  `json:"standard_digital_format" default:""`
+	Start_date               *string  `json:"start_date" default:""`
+	Start_time               *string  `json:"start_time" default:""`
+	Start_timezone           *string  `json:"start_timezone" default:""`
+	Sw_application_id        *string  `json:"sw_application_id" default:""`
+	Vendor_digital_format    *string  `json:"vendor_digital_format" default:""`
+	Version_seq_no           *int     `json:"version_seq_no" default:""`
+	Row_changed_by           *string  `json:"row_changed_by" default:""`
+	Row_changed_date         *string  `json:"row_changed_date" default:""`
+	Row_created_by           *string  `json:"row_created_by" default:""`
+	Row_created_date         *string  `json:"row_created_date" default:""`
+	Row_effective_date       *string  `json:"row_effective_date" default:""`
+	Row_expiry_date          *string  `json:"row_expiry_date" default:""`
+	Row_quality              *string  `json:"row_quality" default:""`
+}

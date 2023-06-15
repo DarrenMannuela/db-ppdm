@@ -1,0 +1,257 @@
+/well-drill-period-equip:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_period_equip
+    responses:
+      '200':
+        description: get well_drill_period_equip data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              equipment_id: Lorem Ipsum
+              active_ind: y
+              avg_boiler_ph: 0.1
+              avg_boiler_stack_temp: 0.1
+              avg_boiler_stack_temp_ouom: Lorem Ipsum
+              avg_pump_pressure: 0.1
+              avg_pump_pressure_ouom: Lorem Ipsum
+              booked_time_elapsed: 0.1
+              booked_time_elapsed_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              equip_ref_num: Lorem Ipsum
+              expiry_date: 12/12/2023
+              intake_density: 0.1
+              overflow_density: 0.1
+              overflow_density_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              pump_liner_inside_diam: 0.1
+              pump_liner_inside_diam_ouom: Lorem Ipsum
+              pump_stroke_ouom: Lorem Ipsum
+              reduced_pump_depth: 0.1
+              reduced_pump_depth_ouom: Lorem Ipsum
+              reduced_pump_press: 0.1
+              reduced_pump_press_ouom: Lorem Ipsum
+              reduced_pump_stroke: 0.1
+              reduced_pump_stroke_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              tubing_source: Lorem Ipsum
+              tubing_type: Lorem Ipsum
+              underflow_density: 0.1
+              underflow_density_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_period_equip
+    description: Create a new well_drill_period_equip data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_period_equip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_equip'
+          example:
+            uwi: Lorem Ipsum
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            avg_boiler_ph: 0.1
+            avg_boiler_stack_temp: 0.1
+            avg_boiler_stack_temp_ouom: Lorem Ipsum
+            avg_pump_pressure: 0.1
+            avg_pump_pressure_ouom: Lorem Ipsum
+            booked_time_elapsed: 0.1
+            booked_time_elapsed_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_ref_num: Lorem Ipsum
+            expiry_date: 12/12/2023
+            intake_density: 0.1
+            overflow_density: 0.1
+            overflow_density_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pump_liner_inside_diam: 0.1
+            pump_liner_inside_diam_ouom: Lorem Ipsum
+            pump_stroke_ouom: Lorem Ipsum
+            reduced_pump_depth: 0.1
+            reduced_pump_depth_ouom: Lorem Ipsum
+            reduced_pump_press: 0.1
+            reduced_pump_press_ouom: Lorem Ipsum
+            reduced_pump_stroke: 0.1
+            reduced_pump_stroke_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tubing_source: Lorem Ipsum
+            tubing_type: Lorem Ipsum
+            underflow_density: 0.1
+            underflow_density_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_period_equip data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_equip data was successfully added
+/well-drill-period-equip/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_period_equip data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_period_equip data
+    description: Update a new well_drill_period_equip data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_period_equip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_equip'
+          example:
+            uwi: Lorem Ipsum
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            avg_boiler_ph: 0.1
+            avg_boiler_stack_temp: 0.1
+            avg_boiler_stack_temp_ouom: Lorem Ipsum
+            avg_pump_pressure: 0.1
+            avg_pump_pressure_ouom: Lorem Ipsum
+            booked_time_elapsed: 0.1
+            booked_time_elapsed_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_ref_num: Lorem Ipsum
+            expiry_date: 12/12/2023
+            intake_density: 0.1
+            overflow_density: 0.1
+            overflow_density_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pump_liner_inside_diam: 0.1
+            pump_liner_inside_diam_ouom: Lorem Ipsum
+            pump_stroke_ouom: Lorem Ipsum
+            reduced_pump_depth: 0.1
+            reduced_pump_depth_ouom: Lorem Ipsum
+            reduced_pump_press: 0.1
+            reduced_pump_press_ouom: Lorem Ipsum
+            reduced_pump_stroke: 0.1
+            reduced_pump_stroke_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tubing_source: Lorem Ipsum
+            tubing_type: Lorem Ipsum
+            underflow_density: 0.1
+            underflow_density_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_period_equip data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_equip data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_period_equip data
+    description: Update a new well_drill_period_equip data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_period_equip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_period_equip'
+          example:
+            uwi: Lorem Ipsum
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            avg_boiler_ph: 0.1
+            avg_boiler_stack_temp: 0.1
+            avg_boiler_stack_temp_ouom: Lorem Ipsum
+            avg_pump_pressure: 0.1
+            avg_pump_pressure_ouom: Lorem Ipsum
+            booked_time_elapsed: 0.1
+            booked_time_elapsed_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            equip_ref_num: Lorem Ipsum
+            expiry_date: 12/12/2023
+            intake_density: 0.1
+            overflow_density: 0.1
+            overflow_density_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            pump_liner_inside_diam: 0.1
+            pump_liner_inside_diam_ouom: Lorem Ipsum
+            pump_stroke_ouom: Lorem Ipsum
+            reduced_pump_depth: 0.1
+            reduced_pump_depth_ouom: Lorem Ipsum
+            reduced_pump_press: 0.1
+            reduced_pump_press_ouom: Lorem Ipsum
+            reduced_pump_stroke: 0.1
+            reduced_pump_stroke_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            tubing_source: Lorem Ipsum
+            tubing_type: Lorem Ipsum
+            underflow_density: 0.1
+            underflow_density_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_period_equip data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_period_equip data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_period_equip data
+    description: Delete well_drill_period_equip data
+    responses:
+      '200':
+        description: well_drill_period_equip data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_period_equip data was successfully deleted

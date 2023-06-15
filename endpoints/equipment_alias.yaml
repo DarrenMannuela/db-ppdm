@@ -1,0 +1,225 @@
+/equipment-alias:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get equipment_alias
+    responses:
+      '200':
+        description: get equipment_alias data to be returned
+        content:
+          application/json:
+            example:
+            - equipment_id: Lorem Ipsum
+              equip_alias_id: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              alias_full_name: Lorem Ipsum
+              alias_reason_type: Lorem Ipsum
+              alias_short_name: Lorem Ipsum
+              alias_type: Lorem Ipsum
+              amended_date: 12/12/2023
+              created_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              language_id: Lorem Ipsum
+              original_ind: y
+              owner_ba_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              reason_desc: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              struckoff_date: 12/12/2023
+              sw_application_id: Lorem Ipsum
+              use_rule: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new equipment_alias
+    description: Create a new equipment_alias data
+    requestBody:
+      required: true
+      description: Request body to create equipment_alias data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_alias'
+          example:
+            equipment_id: Lorem Ipsum
+            equip_alias_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            alias_full_name: Lorem Ipsum
+            alias_reason_type: Lorem Ipsum
+            alias_short_name: Lorem Ipsum
+            alias_type: Lorem Ipsum
+            amended_date: 12/12/2023
+            created_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            language_id: Lorem Ipsum
+            original_ind: y
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            reason_desc: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            struckoff_date: 12/12/2023
+            sw_application_id: Lorem Ipsum
+            use_rule: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_alias data is added
+        content:
+          application/json:
+            example:
+              message: The equipment_alias data was successfully added
+/equipment-alias/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of equipment_alias data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new equipment_alias data
+    description: Update a new equipment_alias data
+    requestBody:
+      required: true
+      description: Request body to update equipment_alias data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_alias'
+          example:
+            equipment_id: Lorem Ipsum
+            equip_alias_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            alias_full_name: Lorem Ipsum
+            alias_reason_type: Lorem Ipsum
+            alias_short_name: Lorem Ipsum
+            alias_type: Lorem Ipsum
+            amended_date: 12/12/2023
+            created_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            language_id: Lorem Ipsum
+            original_ind: y
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            reason_desc: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            struckoff_date: 12/12/2023
+            sw_application_id: Lorem Ipsum
+            use_rule: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_alias data is completely updated
+        content:
+          application/json:
+            example:
+              message: The equipment_alias data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new equipment_alias data
+    description: Update a new equipment_alias data
+    requestBody:
+      required: true
+      description: Request body to update equipment_alias data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_alias'
+          example:
+            equipment_id: Lorem Ipsum
+            equip_alias_id: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            alias_full_name: Lorem Ipsum
+            alias_reason_type: Lorem Ipsum
+            alias_short_name: Lorem Ipsum
+            alias_type: Lorem Ipsum
+            amended_date: 12/12/2023
+            created_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            language_id: Lorem Ipsum
+            original_ind: y
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            reason_desc: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            struckoff_date: 12/12/2023
+            sw_application_id: Lorem Ipsum
+            use_rule: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in equipment_alias data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in equipment_alias data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete equipment_alias data
+    description: Delete equipment_alias data
+    responses:
+      '200':
+        description: equipment_alias data is deleted
+        content:
+          application/json:
+            example:
+              message: The equipment_alias data was successfully deleted

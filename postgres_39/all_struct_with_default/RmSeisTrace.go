@@ -1,0 +1,44 @@
+package dto
+
+type Rm_seis_trace struct {
+	Info_item_subtype         string   `json:"info_item_subtype" default:"source"`
+	Information_item_id       string   `json:"information_item_id" default:"source"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Datum_vel_correction      *string  `json:"datum_vel_correction" default:""`
+	Datum_vel_correction_ouom *string  `json:"datum_vel_correction_ouom" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	First_sample_time         *float64 `json:"first_sample_time" default:""`
+	First_sample_timezone     *string  `json:"first_sample_timezone" default:""`
+	Horizontal_scale          *string  `json:"horizontal_scale" default:""`
+	Horizontal_scale_ouom     *string  `json:"horizontal_scale_ouom" default:""`
+	Phase                     *string  `json:"phase" default:""`
+	Polarity                  *string  `json:"polarity" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Record_length             *float64 `json:"record_length" default:""`
+	Record_length_ouom        *string  `json:"record_length_ouom" default:""`
+	Reference_datum           *float64 `json:"reference_datum" default:""`
+	Reference_datum_ouom      *string  `json:"reference_datum_ouom" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Replacement_vel           *float64 `json:"replacement_vel" default:""`
+	Replacement_vel_ouom      *string  `json:"replacement_vel_ouom" default:""`
+	Reported_first_ref_num    *string  `json:"reported_first_ref_num" default:""`
+	Reported_last_ref_num     *string  `json:"reported_last_ref_num" default:""`
+	Reported_ref_num_type     *string  `json:"reported_ref_num_type" default:""`
+	Sample_rate               *float64 `json:"sample_rate" default:""`
+	Sample_rate_ouom          *string  `json:"sample_rate_ouom" default:""`
+	Sample_type               *string  `json:"sample_type" default:""`
+	Source                    *string  `json:"source" default:""`
+	Static_correction         *float64 `json:"static_correction" default:""`
+	Static_correction_ouom    *string  `json:"static_correction_ouom" default:""`
+	Variable_area_ind         *string  `json:"variable_area_ind" default:""`
+	Vertical_scale            *string  `json:"vertical_scale" default:""`
+	Vertical_scale_ouom       *string  `json:"vertical_scale_ouom" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

@@ -1,0 +1,209 @@
+/seis-patch-desc:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_patch_desc
+    responses:
+      '200':
+        description: get seis_patch_desc data to be returned
+        content:
+          application/json:
+            example:
+            - patch_id: Lorem Ipsum
+              patch_desc_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              end_channel: 1.0
+              end_station_id: Lorem Ipsum
+              end_x_offset: 0.1
+              end_y_offset: 0.1
+              end_z_offset: 0.1
+              expiry_date: 12/12/2023
+              offset_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              recorded_line: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_channel: 0.1
+              start_station_id: Lorem Ipsum
+              start_x_offset: 0.1
+              start_y_offset: 0.1
+              start_z_offset: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_patch_desc
+    description: Create a new seis_patch_desc data
+    requestBody:
+      required: true
+      description: Request body to create seis_patch_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_patch_desc'
+          example:
+            patch_id: Lorem Ipsum
+            patch_desc_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_channel: 1.0
+            end_station_id: Lorem Ipsum
+            end_x_offset: 0.1
+            end_y_offset: 0.1
+            end_z_offset: 0.1
+            expiry_date: 12/12/2023
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorded_line: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_channel: 0.1
+            start_station_id: Lorem Ipsum
+            start_x_offset: 0.1
+            start_y_offset: 0.1
+            start_z_offset: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_patch_desc data is added
+        content:
+          application/json:
+            example:
+              message: The seis_patch_desc data was successfully added
+/seis-patch-desc/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_patch_desc data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_patch_desc data
+    description: Update a new seis_patch_desc data
+    requestBody:
+      required: true
+      description: Request body to update seis_patch_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_patch_desc'
+          example:
+            patch_id: Lorem Ipsum
+            patch_desc_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_channel: 1.0
+            end_station_id: Lorem Ipsum
+            end_x_offset: 0.1
+            end_y_offset: 0.1
+            end_z_offset: 0.1
+            expiry_date: 12/12/2023
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorded_line: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_channel: 0.1
+            start_station_id: Lorem Ipsum
+            start_x_offset: 0.1
+            start_y_offset: 0.1
+            start_z_offset: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_patch_desc data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_patch_desc data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_patch_desc data
+    description: Update a new seis_patch_desc data
+    requestBody:
+      required: true
+      description: Request body to update seis_patch_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_patch_desc'
+          example:
+            patch_id: Lorem Ipsum
+            patch_desc_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_channel: 1.0
+            end_station_id: Lorem Ipsum
+            end_x_offset: 0.1
+            end_y_offset: 0.1
+            end_z_offset: 0.1
+            expiry_date: 12/12/2023
+            offset_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recorded_line: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_channel: 0.1
+            start_station_id: Lorem Ipsum
+            start_x_offset: 0.1
+            start_y_offset: 0.1
+            start_z_offset: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_patch_desc data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_patch_desc data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_patch_desc data
+    description: Delete seis_patch_desc data
+    responses:
+      '200':
+        description: seis_patch_desc data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_patch_desc data was successfully deleted

@@ -1,0 +1,181 @@
+/lith-rock-color:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_rock_color
+    responses:
+      '200':
+        description: get lith_rock_color data to be returned
+        content:
+          application/json:
+            example:
+            - lithology_log_id: Lorem Ipsum
+              lith_log_source: Lorem Ipsum
+              rock_type: Lorem Ipsum
+              basic_color: Lorem Ipsum
+              active_ind: y
+              color_adjective: Lorem Ipsum
+              color_distribution: Lorem Ipsum
+              dominant_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              weathered_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_rock_color
+    description: Create a new lith_rock_color data
+    requestBody:
+      required: true
+      description: Request body to create lith_rock_color data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_rock_color'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            basic_color: Lorem Ipsum
+            active_ind: y
+            color_adjective: Lorem Ipsum
+            color_distribution: Lorem Ipsum
+            dominant_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            weathered_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_rock_color data is added
+        content:
+          application/json:
+            example:
+              message: The lith_rock_color data was successfully added
+/lith-rock-color/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_rock_color data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_rock_color data
+    description: Update a new lith_rock_color data
+    requestBody:
+      required: true
+      description: Request body to update lith_rock_color data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_rock_color'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            basic_color: Lorem Ipsum
+            active_ind: y
+            color_adjective: Lorem Ipsum
+            color_distribution: Lorem Ipsum
+            dominant_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            weathered_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_rock_color data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_rock_color data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_rock_color data
+    description: Update a new lith_rock_color data
+    requestBody:
+      required: true
+      description: Request body to update lith_rock_color data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_rock_color'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            basic_color: Lorem Ipsum
+            active_ind: y
+            color_adjective: Lorem Ipsum
+            color_distribution: Lorem Ipsum
+            dominant_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            weathered_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_rock_color data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_rock_color data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_rock_color data
+    description: Delete lith_rock_color data
+    responses:
+      '200':
+        description: lith_rock_color data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_rock_color data was successfully deleted

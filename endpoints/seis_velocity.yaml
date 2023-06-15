@@ -1,0 +1,273 @@
+/seis-velocity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_velocity
+    responses:
+      '200':
+        description: get seis_velocity data to be returned
+        content:
+          application/json:
+            example:
+            - velocity_volume_id: Lorem Ipsum
+              active_ind: y
+              bin_grid_id: Lorem Ipsum
+              bin_source: Lorem Ipsum
+              compute_method: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              latitude: 0.1
+              longitude: 0.1
+              ppdm_guid: Lorem Ipsum
+              receiver_md: 0.1
+              receiver_md_ouom: Lorem Ipsum
+              receiver_vert_depth: 0.1
+              receiver_vert_depth_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              seis_set_subtype: Lorem Ipsum
+              seis_time: 0.1
+              seis_time_ouom: Lorem Ipsum
+              seis_well_set_id: Lorem Ipsum
+              seis_well_set_subtype: Lorem Ipsum
+              source: Lorem Ipsum
+              source_md: 0.1
+              source_md_ouom: Lorem Ipsum
+              source_vert_depth: 0.1
+              source_vert_depth_ouom: Lorem Ipsum
+              velocity: 0.1
+              velocity_azimuth: 0.1
+              velocity_depth: 0.1
+              velocity_inclination: 0.1
+              velocity_inclination_ouom: Lorem Ipsum
+              velocity_ouom: Lorem Ipsum
+              velocity_type: Lorem Ipsum
+              velocity_x: 0.1
+              velocity_y: 0.1
+              velocity_z: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_velocity
+    description: Create a new seis_velocity data
+    requestBody:
+      required: true
+      description: Request body to create seis_velocity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity'
+          example:
+            velocity_volume_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_source: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            latitude: 0.1
+            longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            receiver_md: 0.1
+            receiver_md_ouom: Lorem Ipsum
+            receiver_vert_depth: 0.1
+            receiver_vert_depth_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            seis_time: 0.1
+            seis_time_ouom: Lorem Ipsum
+            seis_well_set_id: Lorem Ipsum
+            seis_well_set_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            source_md: 0.1
+            source_md_ouom: Lorem Ipsum
+            source_vert_depth: 0.1
+            source_vert_depth_ouom: Lorem Ipsum
+            velocity: 0.1
+            velocity_azimuth: 0.1
+            velocity_depth: 0.1
+            velocity_inclination: 0.1
+            velocity_inclination_ouom: Lorem Ipsum
+            velocity_ouom: Lorem Ipsum
+            velocity_type: Lorem Ipsum
+            velocity_x: 0.1
+            velocity_y: 0.1
+            velocity_z: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_velocity data is added
+        content:
+          application/json:
+            example:
+              message: The seis_velocity data was successfully added
+/seis-velocity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_velocity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_velocity data
+    description: Update a new seis_velocity data
+    requestBody:
+      required: true
+      description: Request body to update seis_velocity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity'
+          example:
+            velocity_volume_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_source: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            latitude: 0.1
+            longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            receiver_md: 0.1
+            receiver_md_ouom: Lorem Ipsum
+            receiver_vert_depth: 0.1
+            receiver_vert_depth_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            seis_time: 0.1
+            seis_time_ouom: Lorem Ipsum
+            seis_well_set_id: Lorem Ipsum
+            seis_well_set_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            source_md: 0.1
+            source_md_ouom: Lorem Ipsum
+            source_vert_depth: 0.1
+            source_vert_depth_ouom: Lorem Ipsum
+            velocity: 0.1
+            velocity_azimuth: 0.1
+            velocity_depth: 0.1
+            velocity_inclination: 0.1
+            velocity_inclination_ouom: Lorem Ipsum
+            velocity_ouom: Lorem Ipsum
+            velocity_type: Lorem Ipsum
+            velocity_x: 0.1
+            velocity_y: 0.1
+            velocity_z: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_velocity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_velocity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_velocity data
+    description: Update a new seis_velocity data
+    requestBody:
+      required: true
+      description: Request body to update seis_velocity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity'
+          example:
+            velocity_volume_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_source: Lorem Ipsum
+            compute_method: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            latitude: 0.1
+            longitude: 0.1
+            ppdm_guid: Lorem Ipsum
+            receiver_md: 0.1
+            receiver_md_ouom: Lorem Ipsum
+            receiver_vert_depth: 0.1
+            receiver_vert_depth_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            seis_set_subtype: Lorem Ipsum
+            seis_time: 0.1
+            seis_time_ouom: Lorem Ipsum
+            seis_well_set_id: Lorem Ipsum
+            seis_well_set_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            source_md: 0.1
+            source_md_ouom: Lorem Ipsum
+            source_vert_depth: 0.1
+            source_vert_depth_ouom: Lorem Ipsum
+            velocity: 0.1
+            velocity_azimuth: 0.1
+            velocity_depth: 0.1
+            velocity_inclination: 0.1
+            velocity_inclination_ouom: Lorem Ipsum
+            velocity_ouom: Lorem Ipsum
+            velocity_type: Lorem Ipsum
+            velocity_x: 0.1
+            velocity_y: 0.1
+            velocity_z: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_velocity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_velocity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_velocity data
+    description: Delete seis_velocity data
+    responses:
+      '200':
+        description: seis_velocity data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_velocity data was successfully deleted

@@ -1,0 +1,173 @@
+/cat-additive-type:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cat_additive_type
+    responses:
+      '200':
+        description: get cat_additive_type data to be returned
+        content:
+          application/json:
+            example:
+            - additive_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              additive_group: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cat_additive_type
+    description: Create a new cat_additive_type data
+    requestBody:
+      required: true
+      description: Request body to create cat_additive_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive_type'
+          example:
+            additive_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            additive_group: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cat_additive_type data is added
+        content:
+          application/json:
+            example:
+              message: The cat_additive_type data was successfully added
+/cat-additive-type/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cat_additive_type data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cat_additive_type data
+    description: Update a new cat_additive_type data
+    requestBody:
+      required: true
+      description: Request body to update cat_additive_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive_type'
+          example:
+            additive_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            additive_group: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cat_additive_type data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cat_additive_type data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cat_additive_type data
+    description: Update a new cat_additive_type data
+    requestBody:
+      required: true
+      description: Request body to update cat_additive_type data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cat_additive_type'
+          example:
+            additive_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            additive_group: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cat_additive_type data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cat_additive_type data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cat_additive_type data
+    description: Delete cat_additive_type data
+    responses:
+      '200':
+        description: cat_additive_type data is deleted
+        content:
+          application/json:
+            example:
+              message: The cat_additive_type data was successfully deleted

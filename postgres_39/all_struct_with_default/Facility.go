@@ -1,0 +1,55 @@
+package dto
+
+type Facility struct {
+	Facility_id            string   `json:"facility_id" default:"source"`
+	Facility_type          string   `json:"facility_type" default:"source"`
+	Abandoned_date         *string  `json:"abandoned_date" default:""`
+	Active_date            *string  `json:"active_date" default:""`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Catalogue_equip_id     *string  `json:"catalogue_equip_id" default:""`
+	Constructed_date       *string  `json:"constructed_date" default:""`
+	Coord_acquisition_id   *string  `json:"coord_acquisition_id" default:""`
+	Coord_system_id        *string  `json:"coord_system_id" default:""`
+	Current_operator       *string  `json:"current_operator" default:""`
+	Depth                  *float64 `json:"depth" default:""`
+	Depth_ouom             *string  `json:"depth_ouom" default:""`
+	Description            *string  `json:"description" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Elevation              *float64 `json:"elevation" default:""`
+	Elevation_ouom         *string  `json:"elevation_ouom" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Facility_diameter      *float64 `json:"facility_diameter" default:""`
+	Facility_diameter_ouom *string  `json:"facility_diameter_ouom" default:""`
+	Facility_function      *string  `json:"facility_function" default:""`
+	Facility_long_name     *string  `json:"facility_long_name" default:""`
+	Facility_no            *int     `json:"facility_no" default:""`
+	Facility_short_name    *string  `json:"facility_short_name" default:""`
+	H2s_ind                *string  `json:"h_2_s_ind" default:""`
+	Inactive_date          *string  `json:"inactive_date" default:""`
+	Last_injection_date    *string  `json:"last_injection_date" default:""`
+	Last_production_date   *string  `json:"last_production_date" default:""`
+	Last_reported_date     *string  `json:"last_reported_date" default:""`
+	Latitude               *float64 `json:"latitude" default:""`
+	Local_coord_system_id  *string  `json:"local_coord_system_id" default:""`
+	Longitude              *float64 `json:"longitude" default:""`
+	Manufactured_by        *string  `json:"manufactured_by" default:""`
+	On_injection_date      *string  `json:"on_injection_date" default:""`
+	On_production_date     *string  `json:"on_production_date" default:""`
+	Pipeline_material      *string  `json:"pipeline_material" default:""`
+	Pipeline_type          *string  `json:"pipeline_type" default:""`
+	Pipe_cover_type        *string  `json:"pipe_cover_type" default:""`
+	Plot_name              *string  `json:"plot_name" default:""`
+	Plot_symbol            *string  `json:"plot_symbol" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Primary_field_id       *string  `json:"primary_field_id" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Source                 *string  `json:"source" default:""`
+	Unit_operated_ind      *string  `json:"unit_operated_ind" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

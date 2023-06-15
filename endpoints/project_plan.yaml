@@ -1,0 +1,169 @@
+/project-plan:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get project_plan
+    responses:
+      '200':
+        description: get project_plan data to be returned
+        content:
+          application/json:
+            example:
+            - project_plan_id: Lorem Ipsum
+              active_ind: y
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              plan_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              project_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new project_plan
+    description: Create a new project_plan data
+    requestBody:
+      required: true
+      description: Request body to create project_plan data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_plan'
+          example:
+            project_plan_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            plan_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project_plan data is added
+        content:
+          application/json:
+            example:
+              message: The project_plan data was successfully added
+/project-plan/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of project_plan data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new project_plan data
+    description: Update a new project_plan data
+    requestBody:
+      required: true
+      description: Request body to update project_plan data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_plan'
+          example:
+            project_plan_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            plan_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project_plan data is completely updated
+        content:
+          application/json:
+            example:
+              message: The project_plan data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new project_plan data
+    description: Update a new project_plan data
+    requestBody:
+      required: true
+      description: Request body to update project_plan data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_plan'
+          example:
+            project_plan_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            plan_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in project_plan data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in project_plan data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete project_plan data
+    description: Delete project_plan data
+    responses:
+      '200':
+        description: project_plan data is deleted
+        content:
+          application/json:
+            example:
+              message: The project_plan data was successfully deleted

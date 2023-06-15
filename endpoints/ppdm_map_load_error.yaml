@@ -1,0 +1,205 @@
+/ppdm-map-load-error:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_map_load_error
+    responses:
+      '200':
+        description: get ppdm_map_load_error data to be returned
+        content:
+          application/json:
+            example:
+            - map_id: Lorem Ipsum
+              load_process_id: Lorem Ipsum
+              error_id: Lorem Ipsum
+              active_ind: y
+              delete_error_ind: y
+              effective_date: 12/12/2023
+              error_cause_desc: Lorem Ipsum
+              error_cause_type: Lorem Ipsum
+              error_code: Lorem Ipsum
+              error_date: 12/12/2023
+              error_message: Lorem Ipsum
+              expiry_date: 12/12/2023
+              insert_error_ind: y
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              resolution_desc: Lorem Ipsum
+              resolution_type: Lorem Ipsum
+              source: Lorem Ipsum
+              update_error_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_map_load_error
+    description: Create a new ppdm_map_load_error data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_map_load_error data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_load_error'
+          example:
+            map_id: Lorem Ipsum
+            load_process_id: Lorem Ipsum
+            error_id: Lorem Ipsum
+            active_ind: y
+            delete_error_ind: y
+            effective_date: 12/12/2023
+            error_cause_desc: Lorem Ipsum
+            error_cause_type: Lorem Ipsum
+            error_code: Lorem Ipsum
+            error_date: 12/12/2023
+            error_message: Lorem Ipsum
+            expiry_date: 12/12/2023
+            insert_error_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_desc: Lorem Ipsum
+            resolution_type: Lorem Ipsum
+            source: Lorem Ipsum
+            update_error_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_load_error data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_load_error data was successfully added
+/ppdm-map-load-error/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_map_load_error data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_map_load_error data
+    description: Update a new ppdm_map_load_error data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_load_error data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_load_error'
+          example:
+            map_id: Lorem Ipsum
+            load_process_id: Lorem Ipsum
+            error_id: Lorem Ipsum
+            active_ind: y
+            delete_error_ind: y
+            effective_date: 12/12/2023
+            error_cause_desc: Lorem Ipsum
+            error_cause_type: Lorem Ipsum
+            error_code: Lorem Ipsum
+            error_date: 12/12/2023
+            error_message: Lorem Ipsum
+            expiry_date: 12/12/2023
+            insert_error_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_desc: Lorem Ipsum
+            resolution_type: Lorem Ipsum
+            source: Lorem Ipsum
+            update_error_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_load_error data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_load_error data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_map_load_error data
+    description: Update a new ppdm_map_load_error data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_load_error data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_load_error'
+          example:
+            map_id: Lorem Ipsum
+            load_process_id: Lorem Ipsum
+            error_id: Lorem Ipsum
+            active_ind: y
+            delete_error_ind: y
+            effective_date: 12/12/2023
+            error_cause_desc: Lorem Ipsum
+            error_cause_type: Lorem Ipsum
+            error_code: Lorem Ipsum
+            error_date: 12/12/2023
+            error_message: Lorem Ipsum
+            expiry_date: 12/12/2023
+            insert_error_ind: y
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_desc: Lorem Ipsum
+            resolution_type: Lorem Ipsum
+            source: Lorem Ipsum
+            update_error_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_map_load_error data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_map_load_error data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_map_load_error data
+    description: Delete ppdm_map_load_error data
+    responses:
+      '200':
+        description: ppdm_map_load_error data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_load_error data was successfully deleted

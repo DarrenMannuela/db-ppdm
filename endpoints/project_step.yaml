@@ -1,0 +1,233 @@
+/project-step:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get project_step
+    responses:
+      '200':
+        description: get project_step data to be returned
+        content:
+          application/json:
+            example:
+            - project_id: Lorem Ipsum
+              step_id: Lorem Ipsum
+              active_ind: y
+              actual_end_date: 12/12/2023
+              actual_start_date: 12/12/2023
+              actual_time_elapsed: 0.1
+              actual_time_elapsed_ouom: Lorem Ipsum
+              actual_time_elapsed_uom: Lorem Ipsum
+              critical_date: 12/12/2023
+              description: Lorem Ipsum
+              due_date: 12/12/2023
+              effective_date: 12/12/2023
+              estimated_time_elapsed: 0.1
+              estimated_time_elapsed_ouom: Lorem Ipsum
+              estimated_time_elapsed_uom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              plan_end_date: 12/12/2023
+              plan_start_date: 12/12/2023
+              plan_step_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              project_plan_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              step_name: Lorem Ipsum
+              step_type: Lorem Ipsum
+              where_completed: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new project_step
+    description: Create a new project_step data
+    requestBody:
+      required: true
+      description: Request body to create project_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_step'
+          example:
+            project_id: Lorem Ipsum
+            step_id: Lorem Ipsum
+            active_ind: y
+            actual_end_date: 12/12/2023
+            actual_start_date: 12/12/2023
+            actual_time_elapsed: 0.1
+            actual_time_elapsed_ouom: Lorem Ipsum
+            actual_time_elapsed_uom: Lorem Ipsum
+            critical_date: 12/12/2023
+            description: Lorem Ipsum
+            due_date: 12/12/2023
+            effective_date: 12/12/2023
+            estimated_time_elapsed: 0.1
+            estimated_time_elapsed_ouom: Lorem Ipsum
+            estimated_time_elapsed_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            plan_end_date: 12/12/2023
+            plan_start_date: 12/12/2023
+            plan_step_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_plan_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            step_name: Lorem Ipsum
+            step_type: Lorem Ipsum
+            where_completed: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project_step data is added
+        content:
+          application/json:
+            example:
+              message: The project_step data was successfully added
+/project-step/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of project_step data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new project_step data
+    description: Update a new project_step data
+    requestBody:
+      required: true
+      description: Request body to update project_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_step'
+          example:
+            project_id: Lorem Ipsum
+            step_id: Lorem Ipsum
+            active_ind: y
+            actual_end_date: 12/12/2023
+            actual_start_date: 12/12/2023
+            actual_time_elapsed: 0.1
+            actual_time_elapsed_ouom: Lorem Ipsum
+            actual_time_elapsed_uom: Lorem Ipsum
+            critical_date: 12/12/2023
+            description: Lorem Ipsum
+            due_date: 12/12/2023
+            effective_date: 12/12/2023
+            estimated_time_elapsed: 0.1
+            estimated_time_elapsed_ouom: Lorem Ipsum
+            estimated_time_elapsed_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            plan_end_date: 12/12/2023
+            plan_start_date: 12/12/2023
+            plan_step_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_plan_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            step_name: Lorem Ipsum
+            step_type: Lorem Ipsum
+            where_completed: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project_step data is completely updated
+        content:
+          application/json:
+            example:
+              message: The project_step data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new project_step data
+    description: Update a new project_step data
+    requestBody:
+      required: true
+      description: Request body to update project_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project_step'
+          example:
+            project_id: Lorem Ipsum
+            step_id: Lorem Ipsum
+            active_ind: y
+            actual_end_date: 12/12/2023
+            actual_start_date: 12/12/2023
+            actual_time_elapsed: 0.1
+            actual_time_elapsed_ouom: Lorem Ipsum
+            actual_time_elapsed_uom: Lorem Ipsum
+            critical_date: 12/12/2023
+            description: Lorem Ipsum
+            due_date: 12/12/2023
+            effective_date: 12/12/2023
+            estimated_time_elapsed: 0.1
+            estimated_time_elapsed_ouom: Lorem Ipsum
+            estimated_time_elapsed_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            plan_end_date: 12/12/2023
+            plan_start_date: 12/12/2023
+            plan_step_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_plan_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            step_name: Lorem Ipsum
+            step_type: Lorem Ipsum
+            where_completed: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in project_step data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in project_step data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete project_step data
+    description: Delete project_step data
+    responses:
+      '200':
+        description: project_step data is deleted
+        content:
+          application/json:
+            example:
+              message: The project_step data was successfully deleted

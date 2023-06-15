@@ -1,0 +1,165 @@
+/substance-xref:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get substance_xref
+    responses:
+      '200':
+        description: get substance_xref data to be returned
+        content:
+          application/json:
+            example:
+            - substance_id1: Lorem Ipsum
+              substance_id2: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              substance_xref_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new substance_xref
+    description: Create a new substance_xref data
+    requestBody:
+      required: true
+      description: Request body to create substance_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_xref'
+          example:
+            substance_id1: Lorem Ipsum
+            substance_id2: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_xref_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance_xref data is added
+        content:
+          application/json:
+            example:
+              message: The substance_xref data was successfully added
+/substance-xref/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of substance_xref data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new substance_xref data
+    description: Update a new substance_xref data
+    requestBody:
+      required: true
+      description: Request body to update substance_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_xref'
+          example:
+            substance_id1: Lorem Ipsum
+            substance_id2: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_xref_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: substance_xref data is completely updated
+        content:
+          application/json:
+            example:
+              message: The substance_xref data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new substance_xref data
+    description: Update a new substance_xref data
+    requestBody:
+      required: true
+      description: Request body to update substance_xref data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/substance_xref'
+          example:
+            substance_id1: Lorem Ipsum
+            substance_id2: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_xref_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in substance_xref data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in substance_xref data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete substance_xref data
+    description: Delete substance_xref data
+    responses:
+      '200':
+        description: substance_xref data is deleted
+        content:
+          application/json:
+            example:
+              message: The substance_xref data was successfully deleted

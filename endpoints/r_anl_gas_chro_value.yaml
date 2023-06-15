@@ -1,0 +1,173 @@
+/r-anl-gas-chro-value:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get r_anl_gas_chro_value
+    responses:
+      '200':
+        description: get r_anl_gas_chro_value data to be returned
+        content:
+          application/json:
+            example:
+            - anl_value_type: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              property_set_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new r_anl_gas_chro_value
+    description: Create a new r_anl_gas_chro_value data
+    requestBody:
+      required: true
+      description: Request body to create r_anl_gas_chro_value data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_anl_gas_chro_value'
+          example:
+            anl_value_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_anl_gas_chro_value data is added
+        content:
+          application/json:
+            example:
+              message: The r_anl_gas_chro_value data was successfully added
+/r-anl-gas-chro-value/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of r_anl_gas_chro_value data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new r_anl_gas_chro_value data
+    description: Update a new r_anl_gas_chro_value data
+    requestBody:
+      required: true
+      description: Request body to update r_anl_gas_chro_value data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_anl_gas_chro_value'
+          example:
+            anl_value_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_anl_gas_chro_value data is completely updated
+        content:
+          application/json:
+            example:
+              message: The r_anl_gas_chro_value data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new r_anl_gas_chro_value data
+    description: Update a new r_anl_gas_chro_value data
+    requestBody:
+      required: true
+      description: Request body to update r_anl_gas_chro_value data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_anl_gas_chro_value'
+          example:
+            anl_value_type: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in r_anl_gas_chro_value data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in r_anl_gas_chro_value data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete r_anl_gas_chro_value data
+    description: Delete r_anl_gas_chro_value data
+    responses:
+      '200':
+        description: r_anl_gas_chro_value data is deleted
+        content:
+          application/json:
+            example:
+              message: The r_anl_gas_chro_value data was successfully deleted

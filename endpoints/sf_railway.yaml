@@ -1,0 +1,169 @@
+/sf-railway:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sf_railway
+    responses:
+      '200':
+        description: get sf_railway data to be returned
+        content:
+          application/json:
+            example:
+            - sf_subtype: Lorem Ipsum
+              railway_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              rail_gauge: 0.1
+              rail_gauge_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sf_railway
+    description: Create a new sf_railway data
+    requestBody:
+      required: true
+      description: Request body to create sf_railway data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_railway'
+          example:
+            sf_subtype: Lorem Ipsum
+            railway_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            rail_gauge: 0.1
+            rail_gauge_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_railway data is added
+        content:
+          application/json:
+            example:
+              message: The sf_railway data was successfully added
+/sf-railway/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sf_railway data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sf_railway data
+    description: Update a new sf_railway data
+    requestBody:
+      required: true
+      description: Request body to update sf_railway data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_railway'
+          example:
+            sf_subtype: Lorem Ipsum
+            railway_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            rail_gauge: 0.1
+            rail_gauge_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_railway data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sf_railway data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sf_railway data
+    description: Update a new sf_railway data
+    requestBody:
+      required: true
+      description: Request body to update sf_railway data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_railway'
+          example:
+            sf_subtype: Lorem Ipsum
+            railway_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            rail_gauge: 0.1
+            rail_gauge_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sf_railway data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sf_railway data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sf_railway data
+    description: Delete sf_railway data
+    responses:
+      '200':
+        description: sf_railway data is deleted
+        content:
+          application/json:
+            example:
+              message: The sf_railway data was successfully deleted

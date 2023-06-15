@@ -1,0 +1,55 @@
+package dto
+
+type Strat_well_section struct {
+	Uwi                     string   `json:"uwi" default:"source"`
+	Strat_name_set_id       string   `json:"strat_name_set_id" default:"source"`
+	Strat_unit_id           string   `json:"strat_unit_id" default:"source"`
+	Interp_id               string   `json:"interp_id" default:"source"`
+	Active_ind              *string  `json:"active_ind" default:""`
+	Area_id                 *string  `json:"area_id" default:""`
+	Area_type               *string  `json:"area_type" default:""`
+	Azimuth_north_type      *string  `json:"azimuth_north_type" default:""`
+	Certified_ind           *string  `json:"certified_ind" default:""`
+	Conformity_relationship *string  `json:"conformity_relationship" default:""`
+	Dip_angle               *float64 `json:"dip_angle" default:""`
+	Dip_direction           *string  `json:"dip_direction" default:""`
+	Dominant_lithology      *string  `json:"dominant_lithology" default:""`
+	Effective_date          *string  `json:"effective_date" default:""`
+	Expiry_date             *string  `json:"expiry_date" default:""`
+	Fault_heave             *float64 `json:"fault_heave" default:""`
+	Fault_throw             *float64 `json:"fault_throw" default:""`
+	Interpreter             *string  `json:"interpreter" default:""`
+	Missing_section         *float64 `json:"missing_section" default:""`
+	Missing_strat_type      *string  `json:"missing_strat_type" default:""`
+	Ordinal_seq_no          *int     `json:"ordinal_seq_no" default:""`
+	Overturned_ind          *string  `json:"overturned_ind" default:""`
+	Pick_date               *string  `json:"pick_date" default:""`
+	Pick_depth              *float64 `json:"pick_depth" default:""`
+	Pick_depth_ouom         *string  `json:"pick_depth_ouom" default:""`
+	Pick_location           *string  `json:"pick_location" default:""`
+	Pick_qualifier          *string  `json:"pick_qualifier" default:""`
+	Pick_qualif_reason      *string  `json:"pick_qualif_reason" default:""`
+	Pick_quality            *string  `json:"pick_quality" default:""`
+	Pick_tvd                *float64 `json:"pick_tvd" default:""`
+	Pick_version_type       *string  `json:"pick_version_type" default:""`
+	Ppdm_guid               *string  `json:"ppdm_guid" default:""`
+	Preferred_pick_ind      *string  `json:"preferred_pick_ind" default:""`
+	Remark                  *string  `json:"remark" default:""`
+	Repeat_section          *float64 `json:"repeat_section" default:""`
+	Repeat_strat_occur_no   *int     `json:"repeat_strat_occur_no" default:""`
+	Repeat_strat_type       *string  `json:"repeat_strat_type" default:""`
+	Source                  *string  `json:"source" default:""`
+	Source_document_id      *string  `json:"source_document_id" default:""`
+	Strat_interpret_method  *string  `json:"strat_interpret_method" default:""`
+	Strike                  *float64 `json:"strike" default:""`
+	Sw_application_id       *string  `json:"sw_application_id" default:""`
+	Tvd_method              *string  `json:"tvd_method" default:""`
+	Version_obs_no          *int     `json:"version_obs_no" default:""`
+	Row_changed_by          *string  `json:"row_changed_by" default:""`
+	Row_changed_date        *string  `json:"row_changed_date" default:""`
+	Row_created_by          *string  `json:"row_created_by" default:""`
+	Row_created_date        *string  `json:"row_created_date" default:""`
+	Row_effective_date      *string  `json:"row_effective_date" default:""`
+	Row_expiry_date         *string  `json:"row_expiry_date" default:""`
+	Row_quality             *string  `json:"row_quality" default:""`
+}

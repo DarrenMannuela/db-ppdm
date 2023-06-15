@@ -1,0 +1,49 @@
+package dto
+
+type Sf_landing struct {
+	Sf_subtype              string   `json:"sf_subtype" default:"source"`
+	Support_facility_id     string   `json:"support_facility_id" default:"source"`
+	Activation_freq_desc    *string  `json:"activation_freq_desc" default:""`
+	Activation_tone_desc    *string  `json:"activation_tone_desc" default:""`
+	Active_ind              *string  `json:"active_ind" default:""`
+	Airpspace_desc          *string  `json:"airpspace_desc" default:""`
+	Altitude                *float64 `json:"altitude" default:""`
+	Altitude_ouom           *string  `json:"altitude_ouom" default:""`
+	Approach_direction      *string  `json:"approach_direction" default:""`
+	Area_id                 *string  `json:"area_id" default:""`
+	Area_size               *float64 `json:"area_size" default:""`
+	Area_size_ouom          *string  `json:"area_size_ouom" default:""`
+	Area_type               *string  `json:"area_type" default:""`
+	Communication_freq      *float64 `json:"communication_freq" default:""`
+	Communication_freq_desc *string  `json:"communication_freq_desc" default:""`
+	Depart_direction        *string  `json:"depart_direction" default:""`
+	Effective_date          *string  `json:"effective_date" default:""`
+	Expiry_date             *string  `json:"expiry_date" default:""`
+	Fuel_avail_desc         *string  `json:"fuel_avail_desc" default:""`
+	Landing_facility_code   *string  `json:"landing_facility_code" default:""`
+	Landing_type            *string  `json:"landing_type" default:""`
+	Lighting_avail_ind      *string  `json:"lighting_avail_ind" default:""`
+	Lighting_cycle_desc     *string  `json:"lighting_cycle_desc" default:""`
+	Lighting_desc           *string  `json:"lighting_desc" default:""`
+	Max_allow_mass          *float64 `json:"max_allow_mass" default:""`
+	Max_allow_mass_desc     *string  `json:"max_allow_mass_desc" default:""`
+	Max_allow_mass_ouom     *string  `json:"max_allow_mass_ouom" default:""`
+	Perm_obstacle_desc      *string  `json:"perm_obstacle_desc" default:""`
+	Ppdm_guid               *string  `json:"ppdm_guid" default:""`
+	Radio_call_name         *string  `json:"radio_call_name" default:""`
+	Radio_channel           *string  `json:"radio_channel" default:""`
+	Remark                  *string  `json:"remark" default:""`
+	Source                  *string  `json:"source" default:""`
+	Special_procedure_desc  *string  `json:"special_procedure_desc" default:""`
+	Surface_desc            *string  `json:"surface_desc" default:""`
+	Surface_type            *string  `json:"surface_type" default:""`
+	Weather_info_desc       *string  `json:"weather_info_desc" default:""`
+	Windcone_ind            *string  `json:"windcone_ind" default:""`
+	Row_changed_by          *string  `json:"row_changed_by" default:""`
+	Row_changed_date        *string  `json:"row_changed_date" default:""`
+	Row_created_by          *string  `json:"row_created_by" default:""`
+	Row_created_date        *string  `json:"row_created_date" default:""`
+	Row_effective_date      *string  `json:"row_effective_date" default:""`
+	Row_expiry_date         *string  `json:"row_expiry_date" default:""`
+	Row_quality             *string  `json:"row_quality" default:""`
+}

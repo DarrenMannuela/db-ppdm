@@ -1,0 +1,285 @@
+/strat-field-section:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get strat_field_section
+    responses:
+      '200':
+        description: get strat_field_section data to be returned
+        content:
+          application/json:
+            example:
+            - field_station_id: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              azimuth_north_type: Lorem Ipsum
+              certified_ind: y
+              conformity_relationship: Lorem Ipsum
+              dip_angle: 0.1
+              dip_direction: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fault_heave: 0.1
+              fault_throw: 0.1
+              lithology: Lorem Ipsum
+              missing_section: 0.1
+              missing_strat_type: Lorem Ipsum
+              overturned_ind: y
+              pick_date: 12/12/2023
+              pick_location: Lorem Ipsum
+              pick_qualifier: Lorem Ipsum
+              pick_qualif_reason: Lorem Ipsum
+              pick_quality: Lorem Ipsum
+              pick_version_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_pick_ind: y
+              remark: Lorem Ipsum
+              repeat_section: 0.1
+              repeat_strat_type: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              strat_unit_md: 0.1
+              strat_unit_md_ouom: Lorem Ipsum
+              strat_unit_tvd: 0.1
+              strike: 0.1
+              sw_application_id: Lorem Ipsum
+              true_thickness_ind: y
+              tvd_method: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new strat_field_section
+    description: Create a new strat_field_section data
+    requestBody:
+      required: true
+      description: Request body to create strat_field_section data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_field_section'
+          example:
+            field_station_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            azimuth_north_type: Lorem Ipsum
+            certified_ind: y
+            conformity_relationship: Lorem Ipsum
+            dip_angle: 0.1
+            dip_direction: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fault_heave: 0.1
+            fault_throw: 0.1
+            lithology: Lorem Ipsum
+            missing_section: 0.1
+            missing_strat_type: Lorem Ipsum
+            overturned_ind: y
+            pick_date: 12/12/2023
+            pick_location: Lorem Ipsum
+            pick_qualifier: Lorem Ipsum
+            pick_qualif_reason: Lorem Ipsum
+            pick_quality: Lorem Ipsum
+            pick_version_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_pick_ind: y
+            remark: Lorem Ipsum
+            repeat_section: 0.1
+            repeat_strat_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_unit_md: 0.1
+            strat_unit_md_ouom: Lorem Ipsum
+            strat_unit_tvd: 0.1
+            strike: 0.1
+            sw_application_id: Lorem Ipsum
+            true_thickness_ind: y
+            tvd_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_field_section data is added
+        content:
+          application/json:
+            example:
+              message: The strat_field_section data was successfully added
+/strat-field-section/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of strat_field_section data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new strat_field_section data
+    description: Update a new strat_field_section data
+    requestBody:
+      required: true
+      description: Request body to update strat_field_section data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_field_section'
+          example:
+            field_station_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            azimuth_north_type: Lorem Ipsum
+            certified_ind: y
+            conformity_relationship: Lorem Ipsum
+            dip_angle: 0.1
+            dip_direction: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fault_heave: 0.1
+            fault_throw: 0.1
+            lithology: Lorem Ipsum
+            missing_section: 0.1
+            missing_strat_type: Lorem Ipsum
+            overturned_ind: y
+            pick_date: 12/12/2023
+            pick_location: Lorem Ipsum
+            pick_qualifier: Lorem Ipsum
+            pick_qualif_reason: Lorem Ipsum
+            pick_quality: Lorem Ipsum
+            pick_version_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_pick_ind: y
+            remark: Lorem Ipsum
+            repeat_section: 0.1
+            repeat_strat_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_unit_md: 0.1
+            strat_unit_md_ouom: Lorem Ipsum
+            strat_unit_tvd: 0.1
+            strike: 0.1
+            sw_application_id: Lorem Ipsum
+            true_thickness_ind: y
+            tvd_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: strat_field_section data is completely updated
+        content:
+          application/json:
+            example:
+              message: The strat_field_section data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new strat_field_section data
+    description: Update a new strat_field_section data
+    requestBody:
+      required: true
+      description: Request body to update strat_field_section data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/strat_field_section'
+          example:
+            field_station_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            azimuth_north_type: Lorem Ipsum
+            certified_ind: y
+            conformity_relationship: Lorem Ipsum
+            dip_angle: 0.1
+            dip_direction: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fault_heave: 0.1
+            fault_throw: 0.1
+            lithology: Lorem Ipsum
+            missing_section: 0.1
+            missing_strat_type: Lorem Ipsum
+            overturned_ind: y
+            pick_date: 12/12/2023
+            pick_location: Lorem Ipsum
+            pick_qualifier: Lorem Ipsum
+            pick_qualif_reason: Lorem Ipsum
+            pick_quality: Lorem Ipsum
+            pick_version_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_pick_ind: y
+            remark: Lorem Ipsum
+            repeat_section: 0.1
+            repeat_strat_type: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            strat_unit_md: 0.1
+            strat_unit_md_ouom: Lorem Ipsum
+            strat_unit_tvd: 0.1
+            strike: 0.1
+            sw_application_id: Lorem Ipsum
+            true_thickness_ind: y
+            tvd_method: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in strat_field_section data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in strat_field_section data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete strat_field_section data
+    description: Delete strat_field_section data
+    responses:
+      '200':
+        description: strat_field_section data is deleted
+        content:
+          application/json:
+            example:
+              message: The strat_field_section data was successfully deleted

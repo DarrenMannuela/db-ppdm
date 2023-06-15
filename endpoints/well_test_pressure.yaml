@@ -1,0 +1,201 @@
+/well-test-pressure:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_pressure
+    responses:
+      '200':
+        description: get well_test_pressure data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              period_type: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              end_pressure: 0.1
+              end_pressure_ouom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              quality_code: Lorem Ipsum
+              recorder_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              start_pressure: 0.1
+              start_pressure_ouom: Lorem Ipsum
+              summary_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_pressure
+    description: Create a new well_test_pressure data
+    requestBody:
+      required: true
+      description: Request body to create well_test_pressure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_pressure'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_pressure: 0.1
+            end_pressure_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            quality_code: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            start_pressure: 0.1
+            start_pressure_ouom: Lorem Ipsum
+            summary_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_pressure data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_pressure data was successfully added
+/well-test-pressure/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_pressure data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_pressure data
+    description: Update a new well_test_pressure data
+    requestBody:
+      required: true
+      description: Request body to update well_test_pressure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_pressure'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_pressure: 0.1
+            end_pressure_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            quality_code: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            start_pressure: 0.1
+            start_pressure_ouom: Lorem Ipsum
+            summary_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_pressure data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_pressure data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_pressure data
+    description: Update a new well_test_pressure data
+    requestBody:
+      required: true
+      description: Request body to update well_test_pressure data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_pressure'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_pressure: 0.1
+            end_pressure_ouom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            quality_code: Lorem Ipsum
+            recorder_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            start_pressure: 0.1
+            start_pressure_ouom: Lorem Ipsum
+            summary_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_pressure data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_pressure data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_pressure data
+    description: Delete well_test_pressure data
+    responses:
+      '200':
+        description: well_test_pressure data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_pressure data was successfully deleted

@@ -1,0 +1,173 @@
+/seis-proc-plan-step:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_proc_plan_step
+    responses:
+      '200':
+        description: get seis_proc_plan_step data to be returned
+        content:
+          application/json:
+            example:
+            - seis_proc_plan_id: Lorem Ipsum
+              proc_plan_step_id: Lorem Ipsum
+              active_ind: y
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              step_name: Lorem Ipsum
+              step_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_proc_plan_step
+    description: Create a new seis_proc_plan_step data
+    requestBody:
+      required: true
+      description: Request body to create seis_proc_plan_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_proc_plan_step'
+          example:
+            seis_proc_plan_id: Lorem Ipsum
+            proc_plan_step_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            step_name: Lorem Ipsum
+            step_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_proc_plan_step data is added
+        content:
+          application/json:
+            example:
+              message: The seis_proc_plan_step data was successfully added
+/seis-proc-plan-step/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_proc_plan_step data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_proc_plan_step data
+    description: Update a new seis_proc_plan_step data
+    requestBody:
+      required: true
+      description: Request body to update seis_proc_plan_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_proc_plan_step'
+          example:
+            seis_proc_plan_id: Lorem Ipsum
+            proc_plan_step_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            step_name: Lorem Ipsum
+            step_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_proc_plan_step data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_proc_plan_step data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_proc_plan_step data
+    description: Update a new seis_proc_plan_step data
+    requestBody:
+      required: true
+      description: Request body to update seis_proc_plan_step data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_proc_plan_step'
+          example:
+            seis_proc_plan_id: Lorem Ipsum
+            proc_plan_step_id: Lorem Ipsum
+            active_ind: y
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            step_name: Lorem Ipsum
+            step_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_proc_plan_step data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_proc_plan_step data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_proc_plan_step data
+    description: Delete seis_proc_plan_step data
+    responses:
+      '200':
+        description: seis_proc_plan_step data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_proc_plan_step data was successfully deleted

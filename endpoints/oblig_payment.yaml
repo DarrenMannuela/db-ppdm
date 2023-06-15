@@ -1,0 +1,269 @@
+/oblig-payment:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get oblig_payment
+    responses:
+      '200':
+        description: get oblig_payment data to be returned
+        content:
+          application/json:
+            example:
+            - obligation_id: Lorem Ipsum
+              payee_payor_ba_id: Lorem Ipsum
+              payee_payor: Lorem Ipsum
+              active_ind: y
+              cheque_remark: Lorem Ipsum
+              contract_id: Lorem Ipsum
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              currency_uom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              gross_cost: 0.1
+              invoice_amount: 0.1
+              invoice_num: Lorem Ipsum
+              land_rental_type: Lorem Ipsum
+              net_cost: 0.1
+              payment_due_date: 12/12/2023
+              payment_ind: y
+              payment_instruction_id: Lorem Ipsum
+              payment_type: Lorem Ipsum
+              pay_method: Lorem Ipsum
+              percent_of_gross: 0.1
+              ppdm_guid: Lorem Ipsum
+              provision_id: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              rate_type: Lorem Ipsum
+              receipt_ind: y
+              related_obligation_id: Lorem Ipsum
+              related_oblig_ba_id: Lorem Ipsum
+              related_oblig_payee_payor: Lorem Ipsum
+              remark: Lorem Ipsum
+              royalty_type: Lorem Ipsum
+              source: Lorem Ipsum
+              stop_payment_ind: y
+              substance_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new oblig_payment
+    description: Create a new oblig_payment data
+    requestBody:
+      required: true
+      description: Request body to create oblig_payment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/oblig_payment'
+          example:
+            obligation_id: Lorem Ipsum
+            payee_payor_ba_id: Lorem Ipsum
+            payee_payor: Lorem Ipsum
+            active_ind: y
+            cheque_remark: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_cost: 0.1
+            invoice_amount: 0.1
+            invoice_num: Lorem Ipsum
+            land_rental_type: Lorem Ipsum
+            net_cost: 0.1
+            payment_due_date: 12/12/2023
+            payment_ind: y
+            payment_instruction_id: Lorem Ipsum
+            payment_type: Lorem Ipsum
+            pay_method: Lorem Ipsum
+            percent_of_gross: 0.1
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            rate_type: Lorem Ipsum
+            receipt_ind: y
+            related_obligation_id: Lorem Ipsum
+            related_oblig_ba_id: Lorem Ipsum
+            related_oblig_payee_payor: Lorem Ipsum
+            remark: Lorem Ipsum
+            royalty_type: Lorem Ipsum
+            source: Lorem Ipsum
+            stop_payment_ind: y
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: oblig_payment data is added
+        content:
+          application/json:
+            example:
+              message: The oblig_payment data was successfully added
+/oblig-payment/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of oblig_payment data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new oblig_payment data
+    description: Update a new oblig_payment data
+    requestBody:
+      required: true
+      description: Request body to update oblig_payment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/oblig_payment'
+          example:
+            obligation_id: Lorem Ipsum
+            payee_payor_ba_id: Lorem Ipsum
+            payee_payor: Lorem Ipsum
+            active_ind: y
+            cheque_remark: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_cost: 0.1
+            invoice_amount: 0.1
+            invoice_num: Lorem Ipsum
+            land_rental_type: Lorem Ipsum
+            net_cost: 0.1
+            payment_due_date: 12/12/2023
+            payment_ind: y
+            payment_instruction_id: Lorem Ipsum
+            payment_type: Lorem Ipsum
+            pay_method: Lorem Ipsum
+            percent_of_gross: 0.1
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            rate_type: Lorem Ipsum
+            receipt_ind: y
+            related_obligation_id: Lorem Ipsum
+            related_oblig_ba_id: Lorem Ipsum
+            related_oblig_payee_payor: Lorem Ipsum
+            remark: Lorem Ipsum
+            royalty_type: Lorem Ipsum
+            source: Lorem Ipsum
+            stop_payment_ind: y
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: oblig_payment data is completely updated
+        content:
+          application/json:
+            example:
+              message: The oblig_payment data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new oblig_payment data
+    description: Update a new oblig_payment data
+    requestBody:
+      required: true
+      description: Request body to update oblig_payment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/oblig_payment'
+          example:
+            obligation_id: Lorem Ipsum
+            payee_payor_ba_id: Lorem Ipsum
+            payee_payor: Lorem Ipsum
+            active_ind: y
+            cheque_remark: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gross_cost: 0.1
+            invoice_amount: 0.1
+            invoice_num: Lorem Ipsum
+            land_rental_type: Lorem Ipsum
+            net_cost: 0.1
+            payment_due_date: 12/12/2023
+            payment_ind: y
+            payment_instruction_id: Lorem Ipsum
+            payment_type: Lorem Ipsum
+            pay_method: Lorem Ipsum
+            percent_of_gross: 0.1
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            rate_type: Lorem Ipsum
+            receipt_ind: y
+            related_obligation_id: Lorem Ipsum
+            related_oblig_ba_id: Lorem Ipsum
+            related_oblig_payee_payor: Lorem Ipsum
+            remark: Lorem Ipsum
+            royalty_type: Lorem Ipsum
+            source: Lorem Ipsum
+            stop_payment_ind: y
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in oblig_payment data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in oblig_payment data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete oblig_payment data
+    description: Delete oblig_payment data
+    responses:
+      '200':
+        description: oblig_payment data is deleted
+        content:
+          application/json:
+            example:
+              message: The oblig_payment data was successfully deleted

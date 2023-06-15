@@ -1,0 +1,28 @@
+package dto
+
+type Seis_velocity_volume struct {
+	Velocity_volume_id        string  `json:"velocity_volume_id" default:"source"`
+	Active_ind                *string `json:"active_ind" default:""`
+	Bin_grid_id               *string `json:"bin_grid_id" default:""`
+	Bin_grid_seis_set_id      *string `json:"bin_grid_seis_set_id" default:""`
+	Bin_grid_seis_set_subtype *string `json:"bin_grid_seis_set_subtype" default:""`
+	Bin_grid_source           *string `json:"bin_grid_source" default:""`
+	Created_date              *string `json:"created_date" default:""`
+	Effective_date            *string `json:"effective_date" default:""`
+	Expiry_date               *string `json:"expiry_date" default:""`
+	Picked_by                 *string `json:"picked_by" default:""`
+	Ppdm_guid                 *string `json:"ppdm_guid" default:""`
+	Remark                    *string `json:"remark" default:""`
+	Seis_well_set_id          *string `json:"seis_well_set_id" default:""`
+	Seis_well_set_subtype     *string `json:"seis_well_set_subtype" default:""`
+	Source                    *string `json:"source" default:""`
+	Velocity_dimension        *string `json:"velocity_dimension" default:""`
+	Velocity_origin           *string `json:"velocity_origin" default:""`
+	Row_changed_by            *string `json:"row_changed_by" default:""`
+	Row_changed_date          *string `json:"row_changed_date" default:""`
+	Row_created_by            *string `json:"row_created_by" default:""`
+	Row_created_date          *string `json:"row_created_date" default:""`
+	Row_effective_date        *string `json:"row_effective_date" default:""`
+	Row_expiry_date           *string `json:"row_expiry_date" default:""`
+	Row_quality               *string `json:"row_quality" default:""`
+}

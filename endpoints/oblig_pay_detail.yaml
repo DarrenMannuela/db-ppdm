@@ -1,0 +1,209 @@
+/oblig-pay-detail:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get oblig_pay_detail
+    responses:
+      '200':
+        description: get oblig_pay_detail data to be returned
+        content:
+          application/json:
+            example:
+            - obligation_id: Lorem Ipsum
+              payee_payor_ba_id: Lorem Ipsum
+              payee_payor: Lorem Ipsum
+              detail_id: Lorem Ipsum
+              active_ind: y
+              cheque_number: Lorem Ipsum
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              deduction_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              payment_amount: 0.1
+              payment_date: 12/12/2023
+              pay_detail_type: Lorem Ipsum
+              percent_of_payment: 0.1
+              ppdm_guid: Lorem Ipsum
+              rate: 0.1
+              rate_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new oblig_pay_detail
+    description: Create a new oblig_pay_detail data
+    requestBody:
+      required: true
+      description: Request body to create oblig_pay_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/oblig_pay_detail'
+          example:
+            obligation_id: Lorem Ipsum
+            payee_payor_ba_id: Lorem Ipsum
+            payee_payor: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            cheque_number: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            deduction_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_amount: 0.1
+            payment_date: 12/12/2023
+            pay_detail_type: Lorem Ipsum
+            percent_of_payment: 0.1
+            ppdm_guid: Lorem Ipsum
+            rate: 0.1
+            rate_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: oblig_pay_detail data is added
+        content:
+          application/json:
+            example:
+              message: The oblig_pay_detail data was successfully added
+/oblig-pay-detail/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of oblig_pay_detail data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new oblig_pay_detail data
+    description: Update a new oblig_pay_detail data
+    requestBody:
+      required: true
+      description: Request body to update oblig_pay_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/oblig_pay_detail'
+          example:
+            obligation_id: Lorem Ipsum
+            payee_payor_ba_id: Lorem Ipsum
+            payee_payor: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            cheque_number: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            deduction_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_amount: 0.1
+            payment_date: 12/12/2023
+            pay_detail_type: Lorem Ipsum
+            percent_of_payment: 0.1
+            ppdm_guid: Lorem Ipsum
+            rate: 0.1
+            rate_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: oblig_pay_detail data is completely updated
+        content:
+          application/json:
+            example:
+              message: The oblig_pay_detail data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new oblig_pay_detail data
+    description: Update a new oblig_pay_detail data
+    requestBody:
+      required: true
+      description: Request body to update oblig_pay_detail data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/oblig_pay_detail'
+          example:
+            obligation_id: Lorem Ipsum
+            payee_payor_ba_id: Lorem Ipsum
+            payee_payor: Lorem Ipsum
+            detail_id: Lorem Ipsum
+            active_ind: y
+            cheque_number: Lorem Ipsum
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            deduction_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            payment_amount: 0.1
+            payment_date: 12/12/2023
+            pay_detail_type: Lorem Ipsum
+            percent_of_payment: 0.1
+            ppdm_guid: Lorem Ipsum
+            rate: 0.1
+            rate_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in oblig_pay_detail data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in oblig_pay_detail data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete oblig_pay_detail data
+    description: Delete oblig_pay_detail data
+    responses:
+      '200':
+        description: oblig_pay_detail data is deleted
+        content:
+          application/json:
+            example:
+              message: The oblig_pay_detail data was successfully deleted

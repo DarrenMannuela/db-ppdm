@@ -1,0 +1,333 @@
+/well-drill-bit-interval:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_bit_interval
+    responses:
+      '200':
+        description: get well_drill_bit_interval data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              avg_force_on_bit: 0.1
+              avg_force_on_bit_ouom: Lorem Ipsum
+              avg_penetration_rate: 0.1
+              avg_penetration_rate_ouom: Lorem Ipsum
+              bit_company: Lorem Ipsum
+              bit_drilled_rate: 0.1
+              bit_drilled_rate_ouom: Lorem Ipsum
+              bit_jet_remark: Lorem Ipsum
+              bit_number: Lorem Ipsum
+              bit_operating_time: 0.1
+              bit_operating_time_ouom: Lorem Ipsum
+              bit_remark: Lorem Ipsum
+              bit_size: 0.1
+              bit_size_desc: Lorem Ipsum
+              bit_size_ouom: Lorem Ipsum
+              cutting_structure_loc: Lorem Ipsum
+              cutting_structure_mdc: Lorem Ipsum
+              cutting_structure_ti: Lorem Ipsum
+              cutting_structure_to: Lorem Ipsum
+              distance_drilled: 0.1
+              distance_drilled_ouom: Lorem Ipsum
+              drill_bit_type: Lorem Ipsum
+              effective_date: 12/12/2023
+              equipment_id: Lorem Ipsum
+              expiry_date: 12/12/2023
+              flow_rate: 0.1
+              flow_rate_ouom: Lorem Ipsum
+              gage_out_distance: 0.1
+              gage_out_distance_ouom: Lorem Ipsum
+              max_force_on_bit: 0.1
+              max_force_on_bit_ouom: Lorem Ipsum
+              max_penetration_rate: 0.1
+              max_penetration_rate_ouom: Lorem Ipsum
+              min_force_on_bit: 0.1
+              min_force_on_bit_ouom: Lorem Ipsum
+              min_penetration_rate: 0.1
+              min_penetration_rate_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              reason_pulled: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_tfa: 0.1
+              reported_tfa_ouom: Lorem Ipsum
+              run_in_depth: 0.1
+              run_in_depth_ouom: Lorem Ipsum
+              run_out_depth: 0.1
+              run_out_depth_ouom: Lorem Ipsum
+              torque: 0.1
+              torque_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_bit_interval
+    description: Create a new well_drill_bit_interval data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_bit_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_bit_interval'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            avg_force_on_bit: 0.1
+            avg_force_on_bit_ouom: Lorem Ipsum
+            avg_penetration_rate: 0.1
+            avg_penetration_rate_ouom: Lorem Ipsum
+            bit_company: Lorem Ipsum
+            bit_drilled_rate: 0.1
+            bit_drilled_rate_ouom: Lorem Ipsum
+            bit_jet_remark: Lorem Ipsum
+            bit_number: Lorem Ipsum
+            bit_operating_time: 0.1
+            bit_operating_time_ouom: Lorem Ipsum
+            bit_remark: Lorem Ipsum
+            bit_size: 0.1
+            bit_size_desc: Lorem Ipsum
+            bit_size_ouom: Lorem Ipsum
+            cutting_structure_loc: Lorem Ipsum
+            cutting_structure_mdc: Lorem Ipsum
+            cutting_structure_ti: Lorem Ipsum
+            cutting_structure_to: Lorem Ipsum
+            distance_drilled: 0.1
+            distance_drilled_ouom: Lorem Ipsum
+            drill_bit_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            gage_out_distance: 0.1
+            gage_out_distance_ouom: Lorem Ipsum
+            max_force_on_bit: 0.1
+            max_force_on_bit_ouom: Lorem Ipsum
+            max_penetration_rate: 0.1
+            max_penetration_rate_ouom: Lorem Ipsum
+            min_force_on_bit: 0.1
+            min_force_on_bit_ouom: Lorem Ipsum
+            min_penetration_rate: 0.1
+            min_penetration_rate_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason_pulled: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tfa: 0.1
+            reported_tfa_ouom: Lorem Ipsum
+            run_in_depth: 0.1
+            run_in_depth_ouom: Lorem Ipsum
+            run_out_depth: 0.1
+            run_out_depth_ouom: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_bit_interval data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_bit_interval data was successfully added
+/well-drill-bit-interval/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_bit_interval data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_bit_interval data
+    description: Update a new well_drill_bit_interval data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_bit_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_bit_interval'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            avg_force_on_bit: 0.1
+            avg_force_on_bit_ouom: Lorem Ipsum
+            avg_penetration_rate: 0.1
+            avg_penetration_rate_ouom: Lorem Ipsum
+            bit_company: Lorem Ipsum
+            bit_drilled_rate: 0.1
+            bit_drilled_rate_ouom: Lorem Ipsum
+            bit_jet_remark: Lorem Ipsum
+            bit_number: Lorem Ipsum
+            bit_operating_time: 0.1
+            bit_operating_time_ouom: Lorem Ipsum
+            bit_remark: Lorem Ipsum
+            bit_size: 0.1
+            bit_size_desc: Lorem Ipsum
+            bit_size_ouom: Lorem Ipsum
+            cutting_structure_loc: Lorem Ipsum
+            cutting_structure_mdc: Lorem Ipsum
+            cutting_structure_ti: Lorem Ipsum
+            cutting_structure_to: Lorem Ipsum
+            distance_drilled: 0.1
+            distance_drilled_ouom: Lorem Ipsum
+            drill_bit_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            gage_out_distance: 0.1
+            gage_out_distance_ouom: Lorem Ipsum
+            max_force_on_bit: 0.1
+            max_force_on_bit_ouom: Lorem Ipsum
+            max_penetration_rate: 0.1
+            max_penetration_rate_ouom: Lorem Ipsum
+            min_force_on_bit: 0.1
+            min_force_on_bit_ouom: Lorem Ipsum
+            min_penetration_rate: 0.1
+            min_penetration_rate_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason_pulled: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tfa: 0.1
+            reported_tfa_ouom: Lorem Ipsum
+            run_in_depth: 0.1
+            run_in_depth_ouom: Lorem Ipsum
+            run_out_depth: 0.1
+            run_out_depth_ouom: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_bit_interval data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_bit_interval data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_bit_interval data
+    description: Update a new well_drill_bit_interval data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_bit_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_bit_interval'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            avg_force_on_bit: 0.1
+            avg_force_on_bit_ouom: Lorem Ipsum
+            avg_penetration_rate: 0.1
+            avg_penetration_rate_ouom: Lorem Ipsum
+            bit_company: Lorem Ipsum
+            bit_drilled_rate: 0.1
+            bit_drilled_rate_ouom: Lorem Ipsum
+            bit_jet_remark: Lorem Ipsum
+            bit_number: Lorem Ipsum
+            bit_operating_time: 0.1
+            bit_operating_time_ouom: Lorem Ipsum
+            bit_remark: Lorem Ipsum
+            bit_size: 0.1
+            bit_size_desc: Lorem Ipsum
+            bit_size_ouom: Lorem Ipsum
+            cutting_structure_loc: Lorem Ipsum
+            cutting_structure_mdc: Lorem Ipsum
+            cutting_structure_ti: Lorem Ipsum
+            cutting_structure_to: Lorem Ipsum
+            distance_drilled: 0.1
+            distance_drilled_ouom: Lorem Ipsum
+            drill_bit_type: Lorem Ipsum
+            effective_date: 12/12/2023
+            equipment_id: Lorem Ipsum
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            gage_out_distance: 0.1
+            gage_out_distance_ouom: Lorem Ipsum
+            max_force_on_bit: 0.1
+            max_force_on_bit_ouom: Lorem Ipsum
+            max_penetration_rate: 0.1
+            max_penetration_rate_ouom: Lorem Ipsum
+            min_force_on_bit: 0.1
+            min_force_on_bit_ouom: Lorem Ipsum
+            min_penetration_rate: 0.1
+            min_penetration_rate_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason_pulled: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tfa: 0.1
+            reported_tfa_ouom: Lorem Ipsum
+            run_in_depth: 0.1
+            run_in_depth_ouom: Lorem Ipsum
+            run_out_depth: 0.1
+            run_out_depth_ouom: Lorem Ipsum
+            torque: 0.1
+            torque_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_bit_interval data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_bit_interval data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_bit_interval data
+    description: Delete well_drill_bit_interval data
+    responses:
+      '200':
+        description: well_drill_bit_interval data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_bit_interval data was successfully deleted

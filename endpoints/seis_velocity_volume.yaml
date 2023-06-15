@@ -1,0 +1,197 @@
+/seis-velocity-volume:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_velocity_volume
+    responses:
+      '200':
+        description: get seis_velocity_volume data to be returned
+        content:
+          application/json:
+            example:
+            - velocity_volume_id: Lorem Ipsum
+              active_ind: y
+              bin_grid_id: Lorem Ipsum
+              bin_grid_seis_set_id: Lorem Ipsum
+              bin_grid_seis_set_subtype: Lorem Ipsum
+              bin_grid_source: Lorem Ipsum
+              created_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              picked_by: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_well_set_id: Lorem Ipsum
+              seis_well_set_subtype: Lorem Ipsum
+              source: Lorem Ipsum
+              velocity_dimension: Lorem Ipsum
+              velocity_origin: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_velocity_volume
+    description: Create a new seis_velocity_volume data
+    requestBody:
+      required: true
+      description: Request body to create seis_velocity_volume data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity_volume'
+          example:
+            velocity_volume_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_grid_seis_set_id: Lorem Ipsum
+            bin_grid_seis_set_subtype: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            created_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            picked_by: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_well_set_id: Lorem Ipsum
+            seis_well_set_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            velocity_dimension: Lorem Ipsum
+            velocity_origin: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_velocity_volume data is added
+        content:
+          application/json:
+            example:
+              message: The seis_velocity_volume data was successfully added
+/seis-velocity-volume/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_velocity_volume data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_velocity_volume data
+    description: Update a new seis_velocity_volume data
+    requestBody:
+      required: true
+      description: Request body to update seis_velocity_volume data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity_volume'
+          example:
+            velocity_volume_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_grid_seis_set_id: Lorem Ipsum
+            bin_grid_seis_set_subtype: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            created_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            picked_by: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_well_set_id: Lorem Ipsum
+            seis_well_set_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            velocity_dimension: Lorem Ipsum
+            velocity_origin: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_velocity_volume data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_velocity_volume data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_velocity_volume data
+    description: Update a new seis_velocity_volume data
+    requestBody:
+      required: true
+      description: Request body to update seis_velocity_volume data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_velocity_volume'
+          example:
+            velocity_volume_id: Lorem Ipsum
+            active_ind: y
+            bin_grid_id: Lorem Ipsum
+            bin_grid_seis_set_id: Lorem Ipsum
+            bin_grid_seis_set_subtype: Lorem Ipsum
+            bin_grid_source: Lorem Ipsum
+            created_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            picked_by: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_well_set_id: Lorem Ipsum
+            seis_well_set_subtype: Lorem Ipsum
+            source: Lorem Ipsum
+            velocity_dimension: Lorem Ipsum
+            velocity_origin: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_velocity_volume data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_velocity_volume data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_velocity_volume data
+    description: Delete seis_velocity_volume data
+    responses:
+      '200':
+        description: seis_velocity_volume data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_velocity_volume data was successfully deleted

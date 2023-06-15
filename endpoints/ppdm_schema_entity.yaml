@@ -1,0 +1,209 @@
+/ppdm-schema-entity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_schema_entity
+    responses:
+      '200':
+        description: get ppdm_schema_entity data to be returned
+        content:
+          application/json:
+            example:
+            - system_id: Lorem Ipsum
+              schema_entity_id: Lorem Ipsum
+              active_ind: y
+              data_type: Lorem Ipsum
+              default_uom_id: Lorem Ipsum
+              delimiter: Lorem Ipsum
+              domain: Lorem Ipsum
+              effective_date: 12/12/2023
+              element_type: Lorem Ipsum
+              entity_comment: Lorem Ipsum
+              expiry_date: 12/12/2023
+              extension_ind: y
+              last_system_key: Lorem Ipsum
+              nullable_ind: y
+              ppdm_guid: Lorem Ipsum
+              preferred_name: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              surrogate_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_schema_entity
+    description: Create a new ppdm_schema_entity data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_schema_entity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_schema_entity'
+          example:
+            system_id: Lorem Ipsum
+            schema_entity_id: Lorem Ipsum
+            active_ind: y
+            data_type: Lorem Ipsum
+            default_uom_id: Lorem Ipsum
+            delimiter: Lorem Ipsum
+            domain: Lorem Ipsum
+            effective_date: 12/12/2023
+            element_type: Lorem Ipsum
+            entity_comment: Lorem Ipsum
+            expiry_date: 12/12/2023
+            extension_ind: y
+            last_system_key: Lorem Ipsum
+            nullable_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_name: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_schema_entity data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_schema_entity data was successfully added
+/ppdm-schema-entity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_schema_entity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_schema_entity data
+    description: Update a new ppdm_schema_entity data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_schema_entity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_schema_entity'
+          example:
+            system_id: Lorem Ipsum
+            schema_entity_id: Lorem Ipsum
+            active_ind: y
+            data_type: Lorem Ipsum
+            default_uom_id: Lorem Ipsum
+            delimiter: Lorem Ipsum
+            domain: Lorem Ipsum
+            effective_date: 12/12/2023
+            element_type: Lorem Ipsum
+            entity_comment: Lorem Ipsum
+            expiry_date: 12/12/2023
+            extension_ind: y
+            last_system_key: Lorem Ipsum
+            nullable_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_name: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_schema_entity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_schema_entity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_schema_entity data
+    description: Update a new ppdm_schema_entity data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_schema_entity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_schema_entity'
+          example:
+            system_id: Lorem Ipsum
+            schema_entity_id: Lorem Ipsum
+            active_ind: y
+            data_type: Lorem Ipsum
+            default_uom_id: Lorem Ipsum
+            delimiter: Lorem Ipsum
+            domain: Lorem Ipsum
+            effective_date: 12/12/2023
+            element_type: Lorem Ipsum
+            entity_comment: Lorem Ipsum
+            expiry_date: 12/12/2023
+            extension_ind: y
+            last_system_key: Lorem Ipsum
+            nullable_ind: y
+            ppdm_guid: Lorem Ipsum
+            preferred_name: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            surrogate_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_schema_entity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_schema_entity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_schema_entity data
+    description: Delete ppdm_schema_entity data
+    responses:
+      '200':
+        description: ppdm_schema_entity data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_schema_entity data was successfully deleted

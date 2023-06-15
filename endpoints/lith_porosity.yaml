@@ -1,0 +1,185 @@
+/lith-porosity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get lith_porosity
+    responses:
+      '200':
+        description: get lith_porosity data to be returned
+        content:
+          application/json:
+            example:
+            - lithology_log_id: Lorem Ipsum
+              lith_log_source: Lorem Ipsum
+              rock_type: Lorem Ipsum
+              porosity_grade: 0.1
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              matrix_class: Lorem Ipsum
+              percent_of_sample: 0.1
+              porosity_scale: Lorem Ipsum
+              porosity_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              sample_rel_abundance: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new lith_porosity
+    description: Create a new lith_porosity data
+    requestBody:
+      required: true
+      description: Request body to create lith_porosity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_porosity'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            porosity_grade: 0.1
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            matrix_class: Lorem Ipsum
+            percent_of_sample: 0.1
+            porosity_scale: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_rel_abundance: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_porosity data is added
+        content:
+          application/json:
+            example:
+              message: The lith_porosity data was successfully added
+/lith-porosity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of lith_porosity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new lith_porosity data
+    description: Update a new lith_porosity data
+    requestBody:
+      required: true
+      description: Request body to update lith_porosity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_porosity'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            porosity_grade: 0.1
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            matrix_class: Lorem Ipsum
+            percent_of_sample: 0.1
+            porosity_scale: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_rel_abundance: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: lith_porosity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The lith_porosity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new lith_porosity data
+    description: Update a new lith_porosity data
+    requestBody:
+      required: true
+      description: Request body to update lith_porosity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/lith_porosity'
+          example:
+            lithology_log_id: Lorem Ipsum
+            lith_log_source: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            porosity_grade: 0.1
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            matrix_class: Lorem Ipsum
+            percent_of_sample: 0.1
+            porosity_scale: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_rel_abundance: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in lith_porosity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in lith_porosity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete lith_porosity data
+    description: Delete lith_porosity data
+    responses:
+      '200':
+        description: lith_porosity data is deleted
+        content:
+          application/json:
+            example:
+              message: The lith_porosity data was successfully deleted

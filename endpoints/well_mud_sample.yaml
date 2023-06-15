@@ -1,0 +1,273 @@
+/well-mud-sample:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_mud_sample
+    responses:
+      '200':
+        description: get well_mud_sample data to be returned
+        content:
+          application/json:
+            example:
+            - anl_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              circulation_stop_date: 12/12/2023
+              circulation_stop_time: 12/12/2023
+              circulation_stop_timezone: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fluid_flow: 0.1
+              fluid_flow_ouom: Lorem Ipsum
+              fluid_loss: 0.1
+              fluid_loss_ouom: Lorem Ipsum
+              mud_collect_reason: Lorem Ipsum
+              mud_density: 0.1
+              mud_density_ouom: Lorem Ipsum
+              mud_density_uom: Lorem Ipsum
+              mud_ph: 0.1
+              mud_ph_ouom: Lorem Ipsum
+              mud_sample_type: Lorem Ipsum
+              mud_type: Lorem Ipsum
+              mud_viscosity: 0.1
+              mud_viscosity_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              sample_date: 12/12/2023
+              sample_depth: 0.1
+              sample_depth_ouom: Lorem Ipsum
+              sample_time: 12/12/2023
+              sample_timezone: Lorem Ipsum
+              source: Lorem Ipsum
+              source_location: Lorem Ipsum
+              time_since_circ: 0.1
+              time_since_circ_ouom: Lorem Ipsum
+              uwi: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_mud_sample
+    description: Create a new well_mud_sample data
+    requestBody:
+      required: true
+      description: Request body to create well_mud_sample data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_sample'
+          example:
+            anl_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            circulation_stop_date: 12/12/2023
+            circulation_stop_time: 12/12/2023
+            circulation_stop_timezone: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_flow: 0.1
+            fluid_flow_ouom: Lorem Ipsum
+            fluid_loss: 0.1
+            fluid_loss_ouom: Lorem Ipsum
+            mud_collect_reason: Lorem Ipsum
+            mud_density: 0.1
+            mud_density_ouom: Lorem Ipsum
+            mud_density_uom: Lorem Ipsum
+            mud_ph: 0.1
+            mud_ph_ouom: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_type: Lorem Ipsum
+            mud_viscosity: 0.1
+            mud_viscosity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sample_date: 12/12/2023
+            sample_depth: 0.1
+            sample_depth_ouom: Lorem Ipsum
+            sample_time: 12/12/2023
+            sample_timezone: Lorem Ipsum
+            source: Lorem Ipsum
+            source_location: Lorem Ipsum
+            time_since_circ: 0.1
+            time_since_circ_ouom: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_mud_sample data is added
+        content:
+          application/json:
+            example:
+              message: The well_mud_sample data was successfully added
+/well-mud-sample/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_mud_sample data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_mud_sample data
+    description: Update a new well_mud_sample data
+    requestBody:
+      required: true
+      description: Request body to update well_mud_sample data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_sample'
+          example:
+            anl_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            circulation_stop_date: 12/12/2023
+            circulation_stop_time: 12/12/2023
+            circulation_stop_timezone: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_flow: 0.1
+            fluid_flow_ouom: Lorem Ipsum
+            fluid_loss: 0.1
+            fluid_loss_ouom: Lorem Ipsum
+            mud_collect_reason: Lorem Ipsum
+            mud_density: 0.1
+            mud_density_ouom: Lorem Ipsum
+            mud_density_uom: Lorem Ipsum
+            mud_ph: 0.1
+            mud_ph_ouom: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_type: Lorem Ipsum
+            mud_viscosity: 0.1
+            mud_viscosity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sample_date: 12/12/2023
+            sample_depth: 0.1
+            sample_depth_ouom: Lorem Ipsum
+            sample_time: 12/12/2023
+            sample_timezone: Lorem Ipsum
+            source: Lorem Ipsum
+            source_location: Lorem Ipsum
+            time_since_circ: 0.1
+            time_since_circ_ouom: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_mud_sample data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_mud_sample data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_mud_sample data
+    description: Update a new well_mud_sample data
+    requestBody:
+      required: true
+      description: Request body to update well_mud_sample data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_sample'
+          example:
+            anl_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            circulation_stop_date: 12/12/2023
+            circulation_stop_time: 12/12/2023
+            circulation_stop_timezone: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_flow: 0.1
+            fluid_flow_ouom: Lorem Ipsum
+            fluid_loss: 0.1
+            fluid_loss_ouom: Lorem Ipsum
+            mud_collect_reason: Lorem Ipsum
+            mud_density: 0.1
+            mud_density_ouom: Lorem Ipsum
+            mud_density_uom: Lorem Ipsum
+            mud_ph: 0.1
+            mud_ph_ouom: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_type: Lorem Ipsum
+            mud_viscosity: 0.1
+            mud_viscosity_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sample_date: 12/12/2023
+            sample_depth: 0.1
+            sample_depth_ouom: Lorem Ipsum
+            sample_time: 12/12/2023
+            sample_timezone: Lorem Ipsum
+            source: Lorem Ipsum
+            source_location: Lorem Ipsum
+            time_since_circ: 0.1
+            time_since_circ_ouom: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_mud_sample data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_mud_sample data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_mud_sample data
+    description: Delete well_mud_sample data
+    responses:
+      '200':
+        description: well_mud_sample data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_mud_sample data was successfully deleted

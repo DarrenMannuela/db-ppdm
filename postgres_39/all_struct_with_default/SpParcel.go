@@ -1,0 +1,42 @@
+package dto
+
+type Sp_parcel struct {
+	Spatial_description_id string   `json:"spatial_description_id" default:"source"`
+	Spatial_obs_no         int      `json:"spatial_obs_no" default:"1"`
+	Parcel_id              string   `json:"parcel_id" default:"source"`
+	Active_ind             *string  `json:"active_ind" default:""`
+	Description            *string  `json:"description" default:""`
+	Dls_road_allowance_id  *string  `json:"dls_road_allowance_id" default:""`
+	Effective_date         *string  `json:"effective_date" default:""`
+	Expiry_date            *string  `json:"expiry_date" default:""`
+	Gross_size             *float64 `json:"gross_size" default:""`
+	Gross_size_ouom        *string  `json:"gross_size_ouom" default:""`
+	Inactivation_date      *string  `json:"inactivation_date" default:""`
+	Local_coord_system_id  *string  `json:"local_coord_system_id" default:""`
+	Parcel_carter_id       *string  `json:"parcel_carter_id" default:""`
+	Parcel_congress_id     *string  `json:"parcel_congress_id" default:""`
+	Parcel_dls_id          *string  `json:"parcel_dls_id" default:""`
+	Parcel_fps_id          *string  `json:"parcel_fps_id" default:""`
+	Parcel_libya_id        *string  `json:"parcel_libya_id" default:""`
+	Parcel_lot_id          *string  `json:"parcel_lot_id" default:""`
+	Parcel_lot_num         *string  `json:"parcel_lot_num" default:""`
+	Parcel_lot_type        *string  `json:"parcel_lot_type" default:""`
+	Parcel_ne_loc_id       *string  `json:"parcel_ne_loc_id" default:""`
+	Parcel_north_sea_id    *string  `json:"parcel_north_sea_id" default:""`
+	Parcel_nts_id          *string  `json:"parcel_nts_id" default:""`
+	Parcel_offshore_id     *string  `json:"parcel_offshore_id" default:""`
+	Parcel_ohio_id         *string  `json:"parcel_ohio_id" default:""`
+	Parcel_pbl_id          *string  `json:"parcel_pbl_id" default:""`
+	Parcel_texas_id        *string  `json:"parcel_texas_id" default:""`
+	Percent_ownership      *float64 `json:"percent_ownership" default:""`
+	Ppdm_guid              *string  `json:"ppdm_guid" default:""`
+	Remark                 *string  `json:"remark" default:""`
+	Source                 *string  `json:"source" default:""`
+	Row_changed_by         *string  `json:"row_changed_by" default:""`
+	Row_changed_date       *string  `json:"row_changed_date" default:""`
+	Row_created_by         *string  `json:"row_created_by" default:""`
+	Row_created_date       *string  `json:"row_created_date" default:""`
+	Row_effective_date     *string  `json:"row_effective_date" default:""`
+	Row_expiry_date        *string  `json:"row_expiry_date" default:""`
+	Row_quality            *string  `json:"row_quality" default:""`
+}

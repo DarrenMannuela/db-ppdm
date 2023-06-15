@@ -1,0 +1,213 @@
+/prod-string-formation:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get prod_string_formation
+    responses:
+      '200':
+        description: get prod_string_formation data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              prod_string_source: Lorem Ipsum
+              string_id: Lorem Ipsum
+              active_ind: y
+              allocation_factor: 0.1
+              allocation_type: Lorem Ipsum
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              current_status: Lorem Ipsum
+              current_status_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              pool_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              status_type: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new prod_string_formation
+    description: Create a new prod_string_formation data
+    requestBody:
+      required: true
+      description: Request body to create prod_string_formation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_string_formation'
+          example:
+            uwi: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            allocation_factor: 0.1
+            allocation_type: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            status_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_string_formation data is added
+        content:
+          application/json:
+            example:
+              message: The prod_string_formation data was successfully added
+/prod-string-formation/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of prod_string_formation data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new prod_string_formation data
+    description: Update a new prod_string_formation data
+    requestBody:
+      required: true
+      description: Request body to update prod_string_formation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_string_formation'
+          example:
+            uwi: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            allocation_factor: 0.1
+            allocation_type: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            status_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: prod_string_formation data is completely updated
+        content:
+          application/json:
+            example:
+              message: The prod_string_formation data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new prod_string_formation data
+    description: Update a new prod_string_formation data
+    requestBody:
+      required: true
+      description: Request body to update prod_string_formation data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/prod_string_formation'
+          example:
+            uwi: Lorem Ipsum
+            prod_string_source: Lorem Ipsum
+            string_id: Lorem Ipsum
+            active_ind: y
+            allocation_factor: 0.1
+            allocation_type: Lorem Ipsum
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            current_status: Lorem Ipsum
+            current_status_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            pool_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            status_type: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in prod_string_formation data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in prod_string_formation data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete prod_string_formation data
+    description: Delete prod_string_formation data
+    responses:
+      '200':
+        description: prod_string_formation data is deleted
+        content:
+          application/json:
+            example:
+              message: The prod_string_formation data was successfully deleted

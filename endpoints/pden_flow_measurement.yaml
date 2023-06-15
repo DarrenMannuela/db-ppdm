@@ -1,0 +1,281 @@
+/pden-flow-measurement:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get pden_flow_measurement
+    responses:
+      '200':
+        description: get pden_flow_measurement data to be returned
+        content:
+          application/json:
+            example:
+            - pden_id: Lorem Ipsum
+              pden_subtype: Lorem Ipsum
+              pden_source: Lorem Ipsum
+              product_type: Lorem Ipsum
+              period_type: Lorem Ipsum
+              active_ind: y
+              amend_reason: Lorem Ipsum
+              casing_pressure: 0.1
+              casing_pressure_ouom: Lorem Ipsum
+              choke_position: 0.1
+              choke_size: 0.1
+              choke_size_ouom: Lorem Ipsum
+              differential_pressure: 0.1
+              diff_pressure_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              flow_rate: 0.1
+              flow_rate_ouom: Lorem Ipsum
+              measurement_date: 12/12/2023
+              measurement_date_desc: Lorem Ipsum
+              measurement_time: 0.1
+              measurement_timezone: Lorem Ipsum
+              measurement_type: Lorem Ipsum
+              meas_temperature: 0.1
+              meas_temperature_ouom: Lorem Ipsum
+              posted_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              production_volume: 0.1
+              production_volume_ouom: Lorem Ipsum
+              production_volume_uom: Lorem Ipsum
+              prod_time_elapsed: 0.1
+              prod_time_elapsed_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              static_pressure: 0.1
+              static_pressure_ouom: Lorem Ipsum
+              tubing_pressure: 0.1
+              tubing_pressure_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new pden_flow_measurement
+    description: Create a new pden_flow_measurement data
+    requestBody:
+      required: true
+      description: Request body to create pden_flow_measurement data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_flow_measurement'
+          example:
+            pden_id: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            product_type: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            amend_reason: Lorem Ipsum
+            casing_pressure: 0.1
+            casing_pressure_ouom: Lorem Ipsum
+            choke_position: 0.1
+            choke_size: 0.1
+            choke_size_ouom: Lorem Ipsum
+            differential_pressure: 0.1
+            diff_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            measurement_date: 12/12/2023
+            measurement_date_desc: Lorem Ipsum
+            measurement_time: 0.1
+            measurement_timezone: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            meas_temperature: 0.1
+            meas_temperature_ouom: Lorem Ipsum
+            posted_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            production_volume: 0.1
+            production_volume_ouom: Lorem Ipsum
+            production_volume_uom: Lorem Ipsum
+            prod_time_elapsed: 0.1
+            prod_time_elapsed_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            static_pressure: 0.1
+            static_pressure_ouom: Lorem Ipsum
+            tubing_pressure: 0.1
+            tubing_pressure_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_flow_measurement data is added
+        content:
+          application/json:
+            example:
+              message: The pden_flow_measurement data was successfully added
+/pden-flow-measurement/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of pden_flow_measurement data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new pden_flow_measurement data
+    description: Update a new pden_flow_measurement data
+    requestBody:
+      required: true
+      description: Request body to update pden_flow_measurement data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_flow_measurement'
+          example:
+            pden_id: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            product_type: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            amend_reason: Lorem Ipsum
+            casing_pressure: 0.1
+            casing_pressure_ouom: Lorem Ipsum
+            choke_position: 0.1
+            choke_size: 0.1
+            choke_size_ouom: Lorem Ipsum
+            differential_pressure: 0.1
+            diff_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            measurement_date: 12/12/2023
+            measurement_date_desc: Lorem Ipsum
+            measurement_time: 0.1
+            measurement_timezone: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            meas_temperature: 0.1
+            meas_temperature_ouom: Lorem Ipsum
+            posted_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            production_volume: 0.1
+            production_volume_ouom: Lorem Ipsum
+            production_volume_uom: Lorem Ipsum
+            prod_time_elapsed: 0.1
+            prod_time_elapsed_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            static_pressure: 0.1
+            static_pressure_ouom: Lorem Ipsum
+            tubing_pressure: 0.1
+            tubing_pressure_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: pden_flow_measurement data is completely updated
+        content:
+          application/json:
+            example:
+              message: The pden_flow_measurement data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new pden_flow_measurement data
+    description: Update a new pden_flow_measurement data
+    requestBody:
+      required: true
+      description: Request body to update pden_flow_measurement data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/pden_flow_measurement'
+          example:
+            pden_id: Lorem Ipsum
+            pden_subtype: Lorem Ipsum
+            pden_source: Lorem Ipsum
+            product_type: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            amend_reason: Lorem Ipsum
+            casing_pressure: 0.1
+            casing_pressure_ouom: Lorem Ipsum
+            choke_position: 0.1
+            choke_size: 0.1
+            choke_size_ouom: Lorem Ipsum
+            differential_pressure: 0.1
+            diff_pressure_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            flow_rate: 0.1
+            flow_rate_ouom: Lorem Ipsum
+            measurement_date: 12/12/2023
+            measurement_date_desc: Lorem Ipsum
+            measurement_time: 0.1
+            measurement_timezone: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            meas_temperature: 0.1
+            meas_temperature_ouom: Lorem Ipsum
+            posted_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            production_volume: 0.1
+            production_volume_ouom: Lorem Ipsum
+            production_volume_uom: Lorem Ipsum
+            prod_time_elapsed: 0.1
+            prod_time_elapsed_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            static_pressure: 0.1
+            static_pressure_ouom: Lorem Ipsum
+            tubing_pressure: 0.1
+            tubing_pressure_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in pden_flow_measurement data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in pden_flow_measurement data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete pden_flow_measurement data
+    description: Delete pden_flow_measurement data
+    responses:
+      '200':
+        description: pden_flow_measurement data is deleted
+        content:
+          application/json:
+            example:
+              message: The pden_flow_measurement data was successfully deleted

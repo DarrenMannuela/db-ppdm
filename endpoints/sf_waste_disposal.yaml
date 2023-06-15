@@ -1,0 +1,285 @@
+/sf-waste-disposal:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sf_waste_disposal
+    responses:
+      '200':
+        description: get sf_waste_disposal data to be returned
+        content:
+          application/json:
+            example:
+            - sf_subtype: Lorem Ipsum
+              waste_facility_id: Lorem Ipsum
+              waste_id: Lorem Ipsum
+              active_ind: y
+              adjust_reason: Lorem Ipsum
+              amount_adjustment: 1.0
+              amount_adjustment_ouom: Lorem Ipsum
+              amount_adjustment_uom: Lorem Ipsum
+              amount_received: 1.0
+              amount_received_ouom: Lorem Ipsum
+              amount_received_uom: Lorem Ipsum
+              amount_shipped: 1.0
+              amount_shipped_ouom: Lorem Ipsum
+              amount_shipped_uom: Lorem Ipsum
+              contract_id: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              operator_ba_id: Lorem Ipsum
+              origin_facility_id: Lorem Ipsum
+              origin_facility_type: Lorem Ipsum
+              origin_hse_incident_id: Lorem Ipsum
+              origin_uwi: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              provision_id: Lorem Ipsum
+              rate_schedule_id: Lorem Ipsum
+              receiver_ba_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              reporting_uom: Lorem Ipsum
+              service_quality: Lorem Ipsum
+              service_type: Lorem Ipsum
+              shipped_date: 12/12/2023
+              source: Lorem Ipsum
+              transport_ba_id: Lorem Ipsum
+              waste_handling_method: Lorem Ipsum
+              waste_hazard: Lorem Ipsum
+              waste_material: Lorem Ipsum
+              waste_origin: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sf_waste_disposal
+    description: Create a new sf_waste_disposal data
+    requestBody:
+      required: true
+      description: Request body to create sf_waste_disposal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_waste_disposal'
+          example:
+            sf_subtype: Lorem Ipsum
+            waste_facility_id: Lorem Ipsum
+            waste_id: Lorem Ipsum
+            active_ind: y
+            adjust_reason: Lorem Ipsum
+            amount_adjustment: 1.0
+            amount_adjustment_ouom: Lorem Ipsum
+            amount_adjustment_uom: Lorem Ipsum
+            amount_received: 1.0
+            amount_received_ouom: Lorem Ipsum
+            amount_received_uom: Lorem Ipsum
+            amount_shipped: 1.0
+            amount_shipped_ouom: Lorem Ipsum
+            amount_shipped_uom: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            operator_ba_id: Lorem Ipsum
+            origin_facility_id: Lorem Ipsum
+            origin_facility_type: Lorem Ipsum
+            origin_hse_incident_id: Lorem Ipsum
+            origin_uwi: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            receiver_ba_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            reporting_uom: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            service_type: Lorem Ipsum
+            shipped_date: 12/12/2023
+            source: Lorem Ipsum
+            transport_ba_id: Lorem Ipsum
+            waste_handling_method: Lorem Ipsum
+            waste_hazard: Lorem Ipsum
+            waste_material: Lorem Ipsum
+            waste_origin: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_waste_disposal data is added
+        content:
+          application/json:
+            example:
+              message: The sf_waste_disposal data was successfully added
+/sf-waste-disposal/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sf_waste_disposal data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sf_waste_disposal data
+    description: Update a new sf_waste_disposal data
+    requestBody:
+      required: true
+      description: Request body to update sf_waste_disposal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_waste_disposal'
+          example:
+            sf_subtype: Lorem Ipsum
+            waste_facility_id: Lorem Ipsum
+            waste_id: Lorem Ipsum
+            active_ind: y
+            adjust_reason: Lorem Ipsum
+            amount_adjustment: 1.0
+            amount_adjustment_ouom: Lorem Ipsum
+            amount_adjustment_uom: Lorem Ipsum
+            amount_received: 1.0
+            amount_received_ouom: Lorem Ipsum
+            amount_received_uom: Lorem Ipsum
+            amount_shipped: 1.0
+            amount_shipped_ouom: Lorem Ipsum
+            amount_shipped_uom: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            operator_ba_id: Lorem Ipsum
+            origin_facility_id: Lorem Ipsum
+            origin_facility_type: Lorem Ipsum
+            origin_hse_incident_id: Lorem Ipsum
+            origin_uwi: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            receiver_ba_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            reporting_uom: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            service_type: Lorem Ipsum
+            shipped_date: 12/12/2023
+            source: Lorem Ipsum
+            transport_ba_id: Lorem Ipsum
+            waste_handling_method: Lorem Ipsum
+            waste_hazard: Lorem Ipsum
+            waste_material: Lorem Ipsum
+            waste_origin: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_waste_disposal data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sf_waste_disposal data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sf_waste_disposal data
+    description: Update a new sf_waste_disposal data
+    requestBody:
+      required: true
+      description: Request body to update sf_waste_disposal data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_waste_disposal'
+          example:
+            sf_subtype: Lorem Ipsum
+            waste_facility_id: Lorem Ipsum
+            waste_id: Lorem Ipsum
+            active_ind: y
+            adjust_reason: Lorem Ipsum
+            amount_adjustment: 1.0
+            amount_adjustment_ouom: Lorem Ipsum
+            amount_adjustment_uom: Lorem Ipsum
+            amount_received: 1.0
+            amount_received_ouom: Lorem Ipsum
+            amount_received_uom: Lorem Ipsum
+            amount_shipped: 1.0
+            amount_shipped_ouom: Lorem Ipsum
+            amount_shipped_uom: Lorem Ipsum
+            contract_id: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            operator_ba_id: Lorem Ipsum
+            origin_facility_id: Lorem Ipsum
+            origin_facility_type: Lorem Ipsum
+            origin_hse_incident_id: Lorem Ipsum
+            origin_uwi: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            rate_schedule_id: Lorem Ipsum
+            receiver_ba_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            reporting_uom: Lorem Ipsum
+            service_quality: Lorem Ipsum
+            service_type: Lorem Ipsum
+            shipped_date: 12/12/2023
+            source: Lorem Ipsum
+            transport_ba_id: Lorem Ipsum
+            waste_handling_method: Lorem Ipsum
+            waste_hazard: Lorem Ipsum
+            waste_material: Lorem Ipsum
+            waste_origin: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sf_waste_disposal data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sf_waste_disposal data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sf_waste_disposal data
+    description: Delete sf_waste_disposal data
+    responses:
+      '200':
+        description: sf_waste_disposal data is deleted
+        content:
+          application/json:
+            example:
+              message: The sf_waste_disposal data was successfully deleted

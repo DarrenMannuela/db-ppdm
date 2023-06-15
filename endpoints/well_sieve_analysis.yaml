@@ -1,0 +1,193 @@
+/well-sieve-analysis:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_sieve_analysis
+    responses:
+      '200':
+        description: get well_sieve_analysis data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              analysis_date: 12/12/2023
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              interval_depth: 0.1
+              interval_length: 0.1
+              laboratory: Lorem Ipsum
+              lab_file_num: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_sieve_analysis
+    description: Create a new well_sieve_analysis data
+    requestBody:
+      required: true
+      description: Request body to create well_sieve_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_sieve_analysis'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            analysis_date: 12/12/2023
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            interval_depth: 0.1
+            interval_length: 0.1
+            laboratory: Lorem Ipsum
+            lab_file_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_sieve_analysis data is added
+        content:
+          application/json:
+            example:
+              message: The well_sieve_analysis data was successfully added
+/well-sieve-analysis/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_sieve_analysis data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_sieve_analysis data
+    description: Update a new well_sieve_analysis data
+    requestBody:
+      required: true
+      description: Request body to update well_sieve_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_sieve_analysis'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            analysis_date: 12/12/2023
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            interval_depth: 0.1
+            interval_length: 0.1
+            laboratory: Lorem Ipsum
+            lab_file_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_sieve_analysis data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_sieve_analysis data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_sieve_analysis data
+    description: Update a new well_sieve_analysis data
+    requestBody:
+      required: true
+      description: Request body to update well_sieve_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_sieve_analysis'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            analysis_date: 12/12/2023
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            interval_depth: 0.1
+            interval_length: 0.1
+            laboratory: Lorem Ipsum
+            lab_file_num: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_sieve_analysis data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_sieve_analysis data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_sieve_analysis data
+    description: Delete well_sieve_analysis data
+    responses:
+      '200':
+        description: well_sieve_analysis data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_sieve_analysis data was successfully deleted

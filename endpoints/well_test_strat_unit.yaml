@@ -1,0 +1,185 @@
+/well-test-strat-unit:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_strat_unit
+    responses:
+      '200':
+        description: get well_test_strat_unit data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              strat_age: Lorem Ipsum
+              strat_age_name_set_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_strat_unit
+    description: Create a new well_test_strat_unit data
+    requestBody:
+      required: true
+      description: Request body to create well_test_strat_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_strat_unit'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_age: Lorem Ipsum
+            strat_age_name_set_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_strat_unit data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_strat_unit data was successfully added
+/well-test-strat-unit/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_strat_unit data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_strat_unit data
+    description: Update a new well_test_strat_unit data
+    requestBody:
+      required: true
+      description: Request body to update well_test_strat_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_strat_unit'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_age: Lorem Ipsum
+            strat_age_name_set_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_strat_unit data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_strat_unit data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_strat_unit data
+    description: Update a new well_test_strat_unit data
+    requestBody:
+      required: true
+      description: Request body to update well_test_strat_unit data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_strat_unit'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_age: Lorem Ipsum
+            strat_age_name_set_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_strat_unit data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_strat_unit data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_strat_unit data
+    description: Delete well_test_strat_unit data
+    responses:
+      '200':
+        description: well_test_strat_unit data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_strat_unit data was successfully deleted

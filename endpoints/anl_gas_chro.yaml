@@ -1,0 +1,261 @@
+/anl-gas-chro:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_gas_chro
+    responses:
+      '200':
+        description: get anl_gas_chro data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              anl_value: 1.0
+              anl_value_code: Lorem Ipsum
+              anl_value_ouom: Lorem Ipsum
+              anl_value_remark: Lorem Ipsum
+              anl_value_type: Lorem Ipsum
+              anl_value_uom: Lorem Ipsum
+              calculated_ind: y
+              calculate_method_id: Lorem Ipsum
+              daughter_ion_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              error_bar_value: 0.1
+              error_bar_value_ouom: Lorem Ipsum
+              error_bar_value_uom: Lorem Ipsum
+              expiry_date: 12/12/2023
+              gas_anl_value_type: Lorem Ipsum
+              measurement_type: Lorem Ipsum
+              parent_ion_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              qualifier_ion_id: Lorem Ipsum
+              quantif_additive_amt: 0.1
+              quantif_additive_amt_ouom: Lorem Ipsum
+              quantif_additive_amt_uom: Lorem Ipsum
+              quantif_additive_desc: Lorem Ipsum
+              quantif_additive_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_ind: y
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_gas_chro
+    description: Create a new anl_gas_chro data
+    requestBody:
+      required: true
+      description: Request body to create anl_gas_chro data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_chro'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            anl_value: 1.0
+            anl_value_code: Lorem Ipsum
+            anl_value_ouom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            anl_value_type: Lorem Ipsum
+            anl_value_uom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            daughter_ion_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            error_bar_value: 0.1
+            error_bar_value_ouom: Lorem Ipsum
+            error_bar_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            gas_anl_value_type: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            parent_ion_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            qualifier_ion_id: Lorem Ipsum
+            quantif_additive_amt: 0.1
+            quantif_additive_amt_ouom: Lorem Ipsum
+            quantif_additive_amt_uom: Lorem Ipsum
+            quantif_additive_desc: Lorem Ipsum
+            quantif_additive_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_gas_chro data is added
+        content:
+          application/json:
+            example:
+              message: The anl_gas_chro data was successfully added
+/anl-gas-chro/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_gas_chro data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_gas_chro data
+    description: Update a new anl_gas_chro data
+    requestBody:
+      required: true
+      description: Request body to update anl_gas_chro data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_chro'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            anl_value: 1.0
+            anl_value_code: Lorem Ipsum
+            anl_value_ouom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            anl_value_type: Lorem Ipsum
+            anl_value_uom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            daughter_ion_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            error_bar_value: 0.1
+            error_bar_value_ouom: Lorem Ipsum
+            error_bar_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            gas_anl_value_type: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            parent_ion_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            qualifier_ion_id: Lorem Ipsum
+            quantif_additive_amt: 0.1
+            quantif_additive_amt_ouom: Lorem Ipsum
+            quantif_additive_amt_uom: Lorem Ipsum
+            quantif_additive_desc: Lorem Ipsum
+            quantif_additive_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_gas_chro data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_gas_chro data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_gas_chro data
+    description: Update a new anl_gas_chro data
+    requestBody:
+      required: true
+      description: Request body to update anl_gas_chro data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_gas_chro'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            anl_value: 1.0
+            anl_value_code: Lorem Ipsum
+            anl_value_ouom: Lorem Ipsum
+            anl_value_remark: Lorem Ipsum
+            anl_value_type: Lorem Ipsum
+            anl_value_uom: Lorem Ipsum
+            calculated_ind: y
+            calculate_method_id: Lorem Ipsum
+            daughter_ion_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            error_bar_value: 0.1
+            error_bar_value_ouom: Lorem Ipsum
+            error_bar_value_uom: Lorem Ipsum
+            expiry_date: 12/12/2023
+            gas_anl_value_type: Lorem Ipsum
+            measurement_type: Lorem Ipsum
+            parent_ion_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            qualifier_ion_id: Lorem Ipsum
+            quantif_additive_amt: 0.1
+            quantif_additive_amt_ouom: Lorem Ipsum
+            quantif_additive_amt_uom: Lorem Ipsum
+            quantif_additive_desc: Lorem Ipsum
+            quantif_additive_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_ind: y
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_gas_chro data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_gas_chro data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_gas_chro data
+    description: Delete anl_gas_chro data
+    responses:
+      '200':
+        description: anl_gas_chro data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_gas_chro data was successfully deleted

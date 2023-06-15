@@ -1,0 +1,205 @@
+/ppdm-map-load:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_map_load
+    responses:
+      '200':
+        description: get ppdm_map_load data to be returned
+        content:
+          application/json:
+            example:
+            - map_id: Lorem Ipsum
+              load_process_id: Lorem Ipsum
+              active_ind: y
+              delete_allowed_ind: y
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              insert_allowed_ind: y
+              ppdm_group_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              procedure_id: Lorem Ipsum
+              procedure_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              source_system_id: Lorem Ipsum
+              start_date: 12/12/2023
+              sw_application_id: Lorem Ipsum
+              target_system_id: Lorem Ipsum
+              update_allowed_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_map_load
+    description: Create a new ppdm_map_load data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_map_load data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_load'
+          example:
+            map_id: Lorem Ipsum
+            load_process_id: Lorem Ipsum
+            active_ind: y
+            delete_allowed_ind: y
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            insert_allowed_ind: y
+            ppdm_group_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            procedure_id: Lorem Ipsum
+            procedure_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_system_id: Lorem Ipsum
+            start_date: 12/12/2023
+            sw_application_id: Lorem Ipsum
+            target_system_id: Lorem Ipsum
+            update_allowed_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_load data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_load data was successfully added
+/ppdm-map-load/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_map_load data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_map_load data
+    description: Update a new ppdm_map_load data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_load data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_load'
+          example:
+            map_id: Lorem Ipsum
+            load_process_id: Lorem Ipsum
+            active_ind: y
+            delete_allowed_ind: y
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            insert_allowed_ind: y
+            ppdm_group_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            procedure_id: Lorem Ipsum
+            procedure_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_system_id: Lorem Ipsum
+            start_date: 12/12/2023
+            sw_application_id: Lorem Ipsum
+            target_system_id: Lorem Ipsum
+            update_allowed_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_map_load data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_load data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_map_load data
+    description: Update a new ppdm_map_load data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_map_load data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_map_load'
+          example:
+            map_id: Lorem Ipsum
+            load_process_id: Lorem Ipsum
+            active_ind: y
+            delete_allowed_ind: y
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            insert_allowed_ind: y
+            ppdm_group_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            procedure_id: Lorem Ipsum
+            procedure_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            source_system_id: Lorem Ipsum
+            start_date: 12/12/2023
+            sw_application_id: Lorem Ipsum
+            target_system_id: Lorem Ipsum
+            update_allowed_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_map_load data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_map_load data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_map_load data
+    description: Delete ppdm_map_load data
+    responses:
+      '200':
+        description: ppdm_map_load data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_map_load data was successfully deleted

@@ -1,0 +1,169 @@
+/ppdm-quantity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_quantity
+    responses:
+      '200':
+        description: get ppdm_quantity data to be returned
+        content:
+          application/json:
+            example:
+            - quantity_type: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_quantity
+    description: Create a new ppdm_quantity data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_quantity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_quantity'
+          example:
+            quantity_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_quantity data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_quantity data was successfully added
+/ppdm-quantity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_quantity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_quantity data
+    description: Update a new ppdm_quantity data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_quantity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_quantity'
+          example:
+            quantity_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_quantity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_quantity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_quantity data
+    description: Update a new ppdm_quantity data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_quantity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_quantity'
+          example:
+            quantity_type: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_quantity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_quantity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_quantity data
+    description: Delete ppdm_quantity data
+    responses:
+      '200':
+        description: ppdm_quantity data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_quantity data was successfully deleted

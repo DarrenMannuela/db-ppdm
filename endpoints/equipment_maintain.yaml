@@ -1,0 +1,209 @@
+/equipment-maintain:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get equipment_maintain
+    responses:
+      '200':
+        description: get equipment_maintain data to be returned
+        content:
+          application/json:
+            example:
+            - equipment_id: Lorem Ipsum
+              active_ind: y
+              actual_end_date: 12/12/2023
+              actual_start_date: 12/12/2023
+              catalogue_equip_id: Lorem Ipsum
+              completed_by_ba_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              failure_ind: y
+              location_ba_id: Lorem Ipsum
+              location_ba_source: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              project_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              scheduled_date: 12/12/2023
+              scheduled_ind: y
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              system_condition: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new equipment_maintain
+    description: Create a new equipment_maintain data
+    requestBody:
+      required: true
+      description: Request body to create equipment_maintain data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_maintain'
+          example:
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            actual_end_date: 12/12/2023
+            actual_start_date: 12/12/2023
+            catalogue_equip_id: Lorem Ipsum
+            completed_by_ba_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            failure_ind: y
+            location_ba_id: Lorem Ipsum
+            location_ba_source: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_date: 12/12/2023
+            scheduled_ind: y
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            system_condition: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_maintain data is added
+        content:
+          application/json:
+            example:
+              message: The equipment_maintain data was successfully added
+/equipment-maintain/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of equipment_maintain data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new equipment_maintain data
+    description: Update a new equipment_maintain data
+    requestBody:
+      required: true
+      description: Request body to update equipment_maintain data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_maintain'
+          example:
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            actual_end_date: 12/12/2023
+            actual_start_date: 12/12/2023
+            catalogue_equip_id: Lorem Ipsum
+            completed_by_ba_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            failure_ind: y
+            location_ba_id: Lorem Ipsum
+            location_ba_source: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_date: 12/12/2023
+            scheduled_ind: y
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            system_condition: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_maintain data is completely updated
+        content:
+          application/json:
+            example:
+              message: The equipment_maintain data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new equipment_maintain data
+    description: Update a new equipment_maintain data
+    requestBody:
+      required: true
+      description: Request body to update equipment_maintain data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_maintain'
+          example:
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            actual_end_date: 12/12/2023
+            actual_start_date: 12/12/2023
+            catalogue_equip_id: Lorem Ipsum
+            completed_by_ba_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            failure_ind: y
+            location_ba_id: Lorem Ipsum
+            location_ba_source: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            project_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            scheduled_date: 12/12/2023
+            scheduled_ind: y
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            system_condition: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in equipment_maintain data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in equipment_maintain data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete equipment_maintain data
+    description: Delete equipment_maintain data
+    responses:
+      '200':
+        description: equipment_maintain data is deleted
+        content:
+          application/json:
+            example:
+              message: The equipment_maintain data was successfully deleted

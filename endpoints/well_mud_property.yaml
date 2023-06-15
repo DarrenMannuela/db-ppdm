@@ -1,0 +1,237 @@
+/well-mud-property:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_mud_property
+    responses:
+      '200':
+        description: get well_mud_property data to be returned
+        content:
+          application/json:
+            example:
+            - sample_analysis_id: Lorem Ipsum
+              sample_analysis_source: Lorem Ipsum
+              active_ind: y
+              average_value: 1.0
+              average_value_ouom: Lorem Ipsum
+              average_value_uom: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              mud_property: Lorem Ipsum
+              mud_property_code: Lorem Ipsum
+              mud_property_desc: Lorem Ipsum
+              mud_property_ref: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              reference_value: 1.0
+              reference_value_ouom: Lorem Ipsum
+              reference_value_uom: Lorem Ipsum
+              remark: Lorem Ipsum
+              sample_type: Lorem Ipsum
+              source: Lorem Ipsum
+              uwi: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_mud_property
+    description: Create a new well_mud_property data
+    requestBody:
+      required: true
+      description: Request body to create well_mud_property data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_property'
+          example:
+            sample_analysis_id: Lorem Ipsum
+            sample_analysis_source: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            mud_property: Lorem Ipsum
+            mud_property_code: Lorem Ipsum
+            mud_property_desc: Lorem Ipsum
+            mud_property_ref: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_value: 1.0
+            reference_value_ouom: Lorem Ipsum
+            reference_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_mud_property data is added
+        content:
+          application/json:
+            example:
+              message: The well_mud_property data was successfully added
+/well-mud-property/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_mud_property data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_mud_property data
+    description: Update a new well_mud_property data
+    requestBody:
+      required: true
+      description: Request body to update well_mud_property data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_property'
+          example:
+            sample_analysis_id: Lorem Ipsum
+            sample_analysis_source: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            mud_property: Lorem Ipsum
+            mud_property_code: Lorem Ipsum
+            mud_property_desc: Lorem Ipsum
+            mud_property_ref: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_value: 1.0
+            reference_value_ouom: Lorem Ipsum
+            reference_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_mud_property data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_mud_property data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_mud_property data
+    description: Update a new well_mud_property data
+    requestBody:
+      required: true
+      description: Request body to update well_mud_property data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_mud_property'
+          example:
+            sample_analysis_id: Lorem Ipsum
+            sample_analysis_source: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            mud_property: Lorem Ipsum
+            mud_property_code: Lorem Ipsum
+            mud_property_desc: Lorem Ipsum
+            mud_property_ref: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_value: 1.0
+            reference_value_ouom: Lorem Ipsum
+            reference_value_uom: Lorem Ipsum
+            remark: Lorem Ipsum
+            sample_type: Lorem Ipsum
+            source: Lorem Ipsum
+            uwi: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_mud_property data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_mud_property data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_mud_property data
+    description: Delete well_mud_property data
+    responses:
+      '200':
+        description: well_mud_property data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_mud_property data was successfully deleted

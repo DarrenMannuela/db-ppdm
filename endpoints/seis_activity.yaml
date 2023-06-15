@@ -1,0 +1,237 @@
+/seis-activity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_activity
+    responses:
+      '200':
+        description: get seis_activity data to be returned
+        content:
+          application/json:
+            example:
+            - seis_set_subtype: Lorem Ipsum
+              seis_set_id: Lorem Ipsum
+              active_ind: y
+              activity_duration: 0.1
+              activity_duration_ouom: Lorem Ipsum
+              area_size: 0.1
+              area_size_ouom: Lorem Ipsum
+              crew_company_ba_id: Lorem Ipsum
+              crew_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              end_time: 12/12/2023
+              end_timezone: Lorem Ipsum
+              expiry_date: 12/12/2023
+              line_length: 0.1
+              line_length_ouom: Lorem Ipsum
+              owner_ba_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_activity_class: Lorem Ipsum
+              seis_activity_type: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              start_time: 12/12/2023
+              start_timezone: Lorem Ipsum
+              total_time_elapsed: 0.1
+              total_time_elapsed_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_activity
+    description: Create a new seis_activity data
+    requestBody:
+      required: true
+      description: Request body to create seis_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_activity'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            activity_duration: 0.1
+            activity_duration_ouom: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            crew_company_ba_id: Lorem Ipsum
+            crew_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            end_timezone: Lorem Ipsum
+            expiry_date: 12/12/2023
+            line_length: 0.1
+            line_length_ouom: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_activity_class: Lorem Ipsum
+            seis_activity_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            start_time: 12/12/2023
+            start_timezone: Lorem Ipsum
+            total_time_elapsed: 0.1
+            total_time_elapsed_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_activity data is added
+        content:
+          application/json:
+            example:
+              message: The seis_activity data was successfully added
+/seis-activity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_activity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_activity data
+    description: Update a new seis_activity data
+    requestBody:
+      required: true
+      description: Request body to update seis_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_activity'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            activity_duration: 0.1
+            activity_duration_ouom: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            crew_company_ba_id: Lorem Ipsum
+            crew_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            end_timezone: Lorem Ipsum
+            expiry_date: 12/12/2023
+            line_length: 0.1
+            line_length_ouom: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_activity_class: Lorem Ipsum
+            seis_activity_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            start_time: 12/12/2023
+            start_timezone: Lorem Ipsum
+            total_time_elapsed: 0.1
+            total_time_elapsed_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_activity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_activity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_activity data
+    description: Update a new seis_activity data
+    requestBody:
+      required: true
+      description: Request body to update seis_activity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_activity'
+          example:
+            seis_set_subtype: Lorem Ipsum
+            seis_set_id: Lorem Ipsum
+            active_ind: y
+            activity_duration: 0.1
+            activity_duration_ouom: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            crew_company_ba_id: Lorem Ipsum
+            crew_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            end_timezone: Lorem Ipsum
+            expiry_date: 12/12/2023
+            line_length: 0.1
+            line_length_ouom: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_activity_class: Lorem Ipsum
+            seis_activity_type: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            start_time: 12/12/2023
+            start_timezone: Lorem Ipsum
+            total_time_elapsed: 0.1
+            total_time_elapsed_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_activity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_activity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_activity data
+    description: Delete seis_activity data
+    responses:
+      '200':
+        description: seis_activity data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_activity data was successfully deleted

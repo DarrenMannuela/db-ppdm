@@ -1,0 +1,281 @@
+/sf-landing:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sf_landing
+    responses:
+      '200':
+        description: get sf_landing data to be returned
+        content:
+          application/json:
+            example:
+            - sf_subtype: Lorem Ipsum
+              support_facility_id: Lorem Ipsum
+              activation_freq_desc: Lorem Ipsum
+              activation_tone_desc: Lorem Ipsum
+              active_ind: y
+              airpspace_desc: Lorem Ipsum
+              altitude: 0.1
+              altitude_ouom: Lorem Ipsum
+              approach_direction: Lorem Ipsum
+              area_id: Lorem Ipsum
+              area_size: 0.1
+              area_size_ouom: Lorem Ipsum
+              area_type: Lorem Ipsum
+              communication_freq: 0.1
+              communication_freq_desc: Lorem Ipsum
+              depart_direction: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fuel_avail_desc: Lorem Ipsum
+              landing_facility_code: Lorem Ipsum
+              landing_type: Lorem Ipsum
+              lighting_avail_ind: y
+              lighting_cycle_desc: Lorem Ipsum
+              lighting_desc: Lorem Ipsum
+              max_allow_mass: 0.1
+              max_allow_mass_desc: Lorem Ipsum
+              max_allow_mass_ouom: Lorem Ipsum
+              perm_obstacle_desc: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              radio_call_name: Lorem Ipsum
+              radio_channel: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              special_procedure_desc: Lorem Ipsum
+              surface_desc: Lorem Ipsum
+              surface_type: Lorem Ipsum
+              weather_info_desc: Lorem Ipsum
+              windcone_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sf_landing
+    description: Create a new sf_landing data
+    requestBody:
+      required: true
+      description: Request body to create sf_landing data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_landing'
+          example:
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            activation_freq_desc: Lorem Ipsum
+            activation_tone_desc: Lorem Ipsum
+            active_ind: y
+            airpspace_desc: Lorem Ipsum
+            altitude: 0.1
+            altitude_ouom: Lorem Ipsum
+            approach_direction: Lorem Ipsum
+            area_id: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            area_type: Lorem Ipsum
+            communication_freq: 0.1
+            communication_freq_desc: Lorem Ipsum
+            depart_direction: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fuel_avail_desc: Lorem Ipsum
+            landing_facility_code: Lorem Ipsum
+            landing_type: Lorem Ipsum
+            lighting_avail_ind: y
+            lighting_cycle_desc: Lorem Ipsum
+            lighting_desc: Lorem Ipsum
+            max_allow_mass: 0.1
+            max_allow_mass_desc: Lorem Ipsum
+            max_allow_mass_ouom: Lorem Ipsum
+            perm_obstacle_desc: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            radio_call_name: Lorem Ipsum
+            radio_channel: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            special_procedure_desc: Lorem Ipsum
+            surface_desc: Lorem Ipsum
+            surface_type: Lorem Ipsum
+            weather_info_desc: Lorem Ipsum
+            windcone_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_landing data is added
+        content:
+          application/json:
+            example:
+              message: The sf_landing data was successfully added
+/sf-landing/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sf_landing data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sf_landing data
+    description: Update a new sf_landing data
+    requestBody:
+      required: true
+      description: Request body to update sf_landing data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_landing'
+          example:
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            activation_freq_desc: Lorem Ipsum
+            activation_tone_desc: Lorem Ipsum
+            active_ind: y
+            airpspace_desc: Lorem Ipsum
+            altitude: 0.1
+            altitude_ouom: Lorem Ipsum
+            approach_direction: Lorem Ipsum
+            area_id: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            area_type: Lorem Ipsum
+            communication_freq: 0.1
+            communication_freq_desc: Lorem Ipsum
+            depart_direction: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fuel_avail_desc: Lorem Ipsum
+            landing_facility_code: Lorem Ipsum
+            landing_type: Lorem Ipsum
+            lighting_avail_ind: y
+            lighting_cycle_desc: Lorem Ipsum
+            lighting_desc: Lorem Ipsum
+            max_allow_mass: 0.1
+            max_allow_mass_desc: Lorem Ipsum
+            max_allow_mass_ouom: Lorem Ipsum
+            perm_obstacle_desc: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            radio_call_name: Lorem Ipsum
+            radio_channel: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            special_procedure_desc: Lorem Ipsum
+            surface_desc: Lorem Ipsum
+            surface_type: Lorem Ipsum
+            weather_info_desc: Lorem Ipsum
+            windcone_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_landing data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sf_landing data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sf_landing data
+    description: Update a new sf_landing data
+    requestBody:
+      required: true
+      description: Request body to update sf_landing data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_landing'
+          example:
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            activation_freq_desc: Lorem Ipsum
+            activation_tone_desc: Lorem Ipsum
+            active_ind: y
+            airpspace_desc: Lorem Ipsum
+            altitude: 0.1
+            altitude_ouom: Lorem Ipsum
+            approach_direction: Lorem Ipsum
+            area_id: Lorem Ipsum
+            area_size: 0.1
+            area_size_ouom: Lorem Ipsum
+            area_type: Lorem Ipsum
+            communication_freq: 0.1
+            communication_freq_desc: Lorem Ipsum
+            depart_direction: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fuel_avail_desc: Lorem Ipsum
+            landing_facility_code: Lorem Ipsum
+            landing_type: Lorem Ipsum
+            lighting_avail_ind: y
+            lighting_cycle_desc: Lorem Ipsum
+            lighting_desc: Lorem Ipsum
+            max_allow_mass: 0.1
+            max_allow_mass_desc: Lorem Ipsum
+            max_allow_mass_ouom: Lorem Ipsum
+            perm_obstacle_desc: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            radio_call_name: Lorem Ipsum
+            radio_channel: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            special_procedure_desc: Lorem Ipsum
+            surface_desc: Lorem Ipsum
+            surface_type: Lorem Ipsum
+            weather_info_desc: Lorem Ipsum
+            windcone_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sf_landing data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sf_landing data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sf_landing data
+    description: Delete sf_landing data
+    responses:
+      '200':
+        description: sf_landing data is deleted
+        content:
+          application/json:
+            example:
+              message: The sf_landing data was successfully deleted

@@ -1,0 +1,289 @@
+/well-log-trip:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_log_trip
+    responses:
+      '200':
+        description: get well_log_trip data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              job_id: Lorem Ipsum
+              active_ind: y
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_strat_unit_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              logging_service_type: Lorem Ipsum
+              max_depth: 0.1
+              max_depth_ouom: Lorem Ipsum
+              max_temperature: 0.1
+              max_temperature_ouom: Lorem Ipsum
+              mud_sample_id: Lorem Ipsum
+              mud_sample_type: Lorem Ipsum
+              mud_source: Lorem Ipsum
+              observer: Lorem Ipsum
+              on_bottom_date: 12/12/2023
+              on_bottom_time: 12/12/2023
+              on_bottom_timezone: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              reported_tvd: 0.1
+              reported_tvd_ouom: Lorem Ipsum
+              report_apd: 0.1
+              report_log_datum: Lorem Ipsum
+              report_log_datum_elev: 0.1
+              report_log_datum_elev_ouom: Lorem Ipsum
+              report_log_run: Lorem Ipsum
+              report_perm_datum: Lorem Ipsum
+              report_perm_datum_elev: 0.1
+              report_perm_datum_elev_ouom: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_strat_unit_id: Lorem Ipsum
+              trip_date: 12/12/2023
+              tubing_bottom_depth: 0.1
+              tubing_bottom_depth_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_log_trip
+    description: Create a new well_log_trip data
+    requestBody:
+      required: true
+      description: Request body to create well_log_trip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_trip'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            job_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            logging_service_type: Lorem Ipsum
+            max_depth: 0.1
+            max_depth_ouom: Lorem Ipsum
+            max_temperature: 0.1
+            max_temperature_ouom: Lorem Ipsum
+            mud_sample_id: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_source: Lorem Ipsum
+            observer: Lorem Ipsum
+            on_bottom_date: 12/12/2023
+            on_bottom_time: 12/12/2023
+            on_bottom_timezone: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            report_apd: 0.1
+            report_log_datum: Lorem Ipsum
+            report_log_datum_elev: 0.1
+            report_log_datum_elev_ouom: Lorem Ipsum
+            report_log_run: Lorem Ipsum
+            report_perm_datum: Lorem Ipsum
+            report_perm_datum_elev: 0.1
+            report_perm_datum_elev_ouom: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            trip_date: 12/12/2023
+            tubing_bottom_depth: 0.1
+            tubing_bottom_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_trip data is added
+        content:
+          application/json:
+            example:
+              message: The well_log_trip data was successfully added
+/well-log-trip/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_log_trip data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_log_trip data
+    description: Update a new well_log_trip data
+    requestBody:
+      required: true
+      description: Request body to update well_log_trip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_trip'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            job_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            logging_service_type: Lorem Ipsum
+            max_depth: 0.1
+            max_depth_ouom: Lorem Ipsum
+            max_temperature: 0.1
+            max_temperature_ouom: Lorem Ipsum
+            mud_sample_id: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_source: Lorem Ipsum
+            observer: Lorem Ipsum
+            on_bottom_date: 12/12/2023
+            on_bottom_time: 12/12/2023
+            on_bottom_timezone: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            report_apd: 0.1
+            report_log_datum: Lorem Ipsum
+            report_log_datum_elev: 0.1
+            report_log_datum_elev_ouom: Lorem Ipsum
+            report_log_run: Lorem Ipsum
+            report_perm_datum: Lorem Ipsum
+            report_perm_datum_elev: 0.1
+            report_perm_datum_elev_ouom: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            trip_date: 12/12/2023
+            tubing_bottom_depth: 0.1
+            tubing_bottom_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_trip data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_log_trip data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_log_trip data
+    description: Update a new well_log_trip data
+    requestBody:
+      required: true
+      description: Request body to update well_log_trip data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_trip'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            job_id: Lorem Ipsum
+            active_ind: y
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_strat_unit_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            logging_service_type: Lorem Ipsum
+            max_depth: 0.1
+            max_depth_ouom: Lorem Ipsum
+            max_temperature: 0.1
+            max_temperature_ouom: Lorem Ipsum
+            mud_sample_id: Lorem Ipsum
+            mud_sample_type: Lorem Ipsum
+            mud_source: Lorem Ipsum
+            observer: Lorem Ipsum
+            on_bottom_date: 12/12/2023
+            on_bottom_time: 12/12/2023
+            on_bottom_timezone: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            reported_tvd: 0.1
+            reported_tvd_ouom: Lorem Ipsum
+            report_apd: 0.1
+            report_log_datum: Lorem Ipsum
+            report_log_datum_elev: 0.1
+            report_log_datum_elev_ouom: Lorem Ipsum
+            report_log_run: Lorem Ipsum
+            report_perm_datum: Lorem Ipsum
+            report_perm_datum_elev: 0.1
+            report_perm_datum_elev_ouom: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_strat_unit_id: Lorem Ipsum
+            trip_date: 12/12/2023
+            tubing_bottom_depth: 0.1
+            tubing_bottom_depth_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_log_trip data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_log_trip data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_log_trip data
+    description: Delete well_log_trip data
+    responses:
+      '200':
+        description: well_log_trip data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_log_trip data was successfully deleted

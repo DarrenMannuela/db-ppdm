@@ -1,0 +1,225 @@
+/well-support-facility:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_support_facility
+    responses:
+      '200':
+        description: get well_support_facility data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              sf_subtype: Lorem Ipsum
+              support_facility_id: Lorem Ipsum
+              active_ind: y
+              depth_datum: Lorem Ipsum
+              depth_datum_elev: 0.1
+              depth_datum_elev_ouom: Lorem Ipsum
+              derrick_floor_elev: 0.1
+              derrick_floor_elev_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              elev_ref_datum: Lorem Ipsum
+              environment_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              kb_elev: 0.1
+              kb_elev_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              rig_on_site_date: 12/12/2023
+              rig_release_date: 12/12/2023
+              rotary_table_elev: 0.1
+              rotary_table_elev_ouom: Lorem Ipsum
+              sf_use_type: Lorem Ipsum
+              source: Lorem Ipsum
+              subsea_elev_ref_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_support_facility
+    description: Create a new well_support_facility data
+    requestBody:
+      required: true
+      description: Request body to create well_support_facility data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_support_facility'
+          example:
+            uwi: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            active_ind: y
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            derrick_floor_elev: 0.1
+            derrick_floor_elev_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev_ref_datum: Lorem Ipsum
+            environment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            kb_elev: 0.1
+            kb_elev_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_on_site_date: 12/12/2023
+            rig_release_date: 12/12/2023
+            rotary_table_elev: 0.1
+            rotary_table_elev_ouom: Lorem Ipsum
+            sf_use_type: Lorem Ipsum
+            source: Lorem Ipsum
+            subsea_elev_ref_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_support_facility data is added
+        content:
+          application/json:
+            example:
+              message: The well_support_facility data was successfully added
+/well-support-facility/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_support_facility data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_support_facility data
+    description: Update a new well_support_facility data
+    requestBody:
+      required: true
+      description: Request body to update well_support_facility data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_support_facility'
+          example:
+            uwi: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            active_ind: y
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            derrick_floor_elev: 0.1
+            derrick_floor_elev_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev_ref_datum: Lorem Ipsum
+            environment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            kb_elev: 0.1
+            kb_elev_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_on_site_date: 12/12/2023
+            rig_release_date: 12/12/2023
+            rotary_table_elev: 0.1
+            rotary_table_elev_ouom: Lorem Ipsum
+            sf_use_type: Lorem Ipsum
+            source: Lorem Ipsum
+            subsea_elev_ref_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_support_facility data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_support_facility data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_support_facility data
+    description: Update a new well_support_facility data
+    requestBody:
+      required: true
+      description: Request body to update well_support_facility data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_support_facility'
+          example:
+            uwi: Lorem Ipsum
+            sf_subtype: Lorem Ipsum
+            support_facility_id: Lorem Ipsum
+            active_ind: y
+            depth_datum: Lorem Ipsum
+            depth_datum_elev: 0.1
+            depth_datum_elev_ouom: Lorem Ipsum
+            derrick_floor_elev: 0.1
+            derrick_floor_elev_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            elev_ref_datum: Lorem Ipsum
+            environment_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            kb_elev: 0.1
+            kb_elev_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rig_on_site_date: 12/12/2023
+            rig_release_date: 12/12/2023
+            rotary_table_elev: 0.1
+            rotary_table_elev_ouom: Lorem Ipsum
+            sf_use_type: Lorem Ipsum
+            source: Lorem Ipsum
+            subsea_elev_ref_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_support_facility data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_support_facility data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_support_facility data
+    description: Delete well_support_facility data
+    responses:
+      '200':
+        description: well_support_facility data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_support_facility data was successfully deleted

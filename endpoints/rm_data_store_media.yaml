@@ -1,0 +1,165 @@
+/rm-data-store-media:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get rm_data_store_media
+    responses:
+      '200':
+        description: get rm_data_store_media data to be returned
+        content:
+          application/json:
+            example:
+            - store_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              media_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              used_capacity_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new rm_data_store_media
+    description: Create a new rm_data_store_media data
+    requestBody:
+      required: true
+      description: Request body to create rm_data_store_media data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_data_store_media'
+          example:
+            store_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            media_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            used_capacity_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_data_store_media data is added
+        content:
+          application/json:
+            example:
+              message: The rm_data_store_media data was successfully added
+/rm-data-store-media/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of rm_data_store_media data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new rm_data_store_media data
+    description: Update a new rm_data_store_media data
+    requestBody:
+      required: true
+      description: Request body to update rm_data_store_media data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_data_store_media'
+          example:
+            store_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            media_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            used_capacity_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: rm_data_store_media data is completely updated
+        content:
+          application/json:
+            example:
+              message: The rm_data_store_media data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new rm_data_store_media data
+    description: Update a new rm_data_store_media data
+    requestBody:
+      required: true
+      description: Request body to update rm_data_store_media data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/rm_data_store_media'
+          example:
+            store_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            media_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            used_capacity_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in rm_data_store_media data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in rm_data_store_media data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete rm_data_store_media data
+    description: Delete rm_data_store_media data
+    responses:
+      '200':
+        description: rm_data_store_media data is deleted
+        content:
+          application/json:
+            example:
+              message: The rm_data_store_media data was successfully deleted

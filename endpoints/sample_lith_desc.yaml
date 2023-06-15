@@ -1,0 +1,217 @@
+/sample-lith-desc:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sample_lith_desc
+    responses:
+      '200':
+        description: get sample_lith_desc data to be returned
+        content:
+          application/json:
+            example:
+            - sample_id: Lorem Ipsum
+              description_id: Lorem Ipsum
+              active_ind: y
+              color_type: Lorem Ipsum
+              contaminant: Lorem Ipsum
+              depositional_environment: Lorem Ipsum
+              diagenesis_type: Lorem Ipsum
+              ecozone_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              lithology: Lorem Ipsum
+              oil_stain: Lorem Ipsum
+              percent: 0.1
+              permeability_type: Lorem Ipsum
+              porosity_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              rock_matrix: Lorem Ipsum
+              rock_type: Lorem Ipsum
+              source: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              strat_unit_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sample_lith_desc
+    description: Create a new sample_lith_desc data
+    requestBody:
+      required: true
+      description: Request body to create sample_lith_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sample_lith_desc'
+          example:
+            sample_id: Lorem Ipsum
+            description_id: Lorem Ipsum
+            active_ind: y
+            color_type: Lorem Ipsum
+            contaminant: Lorem Ipsum
+            depositional_environment: Lorem Ipsum
+            diagenesis_type: Lorem Ipsum
+            ecozone_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology: Lorem Ipsum
+            oil_stain: Lorem Ipsum
+            percent: 0.1
+            permeability_type: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rock_matrix: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sample_lith_desc data is added
+        content:
+          application/json:
+            example:
+              message: The sample_lith_desc data was successfully added
+/sample-lith-desc/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sample_lith_desc data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sample_lith_desc data
+    description: Update a new sample_lith_desc data
+    requestBody:
+      required: true
+      description: Request body to update sample_lith_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sample_lith_desc'
+          example:
+            sample_id: Lorem Ipsum
+            description_id: Lorem Ipsum
+            active_ind: y
+            color_type: Lorem Ipsum
+            contaminant: Lorem Ipsum
+            depositional_environment: Lorem Ipsum
+            diagenesis_type: Lorem Ipsum
+            ecozone_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology: Lorem Ipsum
+            oil_stain: Lorem Ipsum
+            percent: 0.1
+            permeability_type: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rock_matrix: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sample_lith_desc data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sample_lith_desc data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sample_lith_desc data
+    description: Update a new sample_lith_desc data
+    requestBody:
+      required: true
+      description: Request body to update sample_lith_desc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sample_lith_desc'
+          example:
+            sample_id: Lorem Ipsum
+            description_id: Lorem Ipsum
+            active_ind: y
+            color_type: Lorem Ipsum
+            contaminant: Lorem Ipsum
+            depositional_environment: Lorem Ipsum
+            diagenesis_type: Lorem Ipsum
+            ecozone_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology: Lorem Ipsum
+            oil_stain: Lorem Ipsum
+            percent: 0.1
+            permeability_type: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            rock_matrix: Lorem Ipsum
+            rock_type: Lorem Ipsum
+            source: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            strat_unit_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sample_lith_desc data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sample_lith_desc data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sample_lith_desc data
+    description: Delete sample_lith_desc data
+    responses:
+      '200':
+        description: sample_lith_desc data is deleted
+        content:
+          application/json:
+            example:
+              message: The sample_lith_desc data was successfully deleted

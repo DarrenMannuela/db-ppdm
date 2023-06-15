@@ -1,0 +1,169 @@
+/well-perf-remark:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_perf_remark
+    responses:
+      '200':
+        description: get well_perf_remark data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              perforation_source: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              remark_ba_id: Lorem Ipsum
+              remark_date: 12/12/2023
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_perf_remark
+    description: Create a new well_perf_remark data
+    requestBody:
+      required: true
+      description: Request body to create well_perf_remark data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_perf_remark'
+          example:
+            uwi: Lorem Ipsum
+            perforation_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_ba_id: Lorem Ipsum
+            remark_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_perf_remark data is added
+        content:
+          application/json:
+            example:
+              message: The well_perf_remark data was successfully added
+/well-perf-remark/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_perf_remark data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_perf_remark data
+    description: Update a new well_perf_remark data
+    requestBody:
+      required: true
+      description: Request body to update well_perf_remark data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_perf_remark'
+          example:
+            uwi: Lorem Ipsum
+            perforation_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_ba_id: Lorem Ipsum
+            remark_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_perf_remark data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_perf_remark data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_perf_remark data
+    description: Update a new well_perf_remark data
+    requestBody:
+      required: true
+      description: Request body to update well_perf_remark data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_perf_remark'
+          example:
+            uwi: Lorem Ipsum
+            perforation_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            remark_ba_id: Lorem Ipsum
+            remark_date: 12/12/2023
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_perf_remark data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_perf_remark data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_perf_remark data
+    description: Delete well_perf_remark data
+    responses:
+      '200':
+        description: well_perf_remark data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_perf_remark data was successfully deleted

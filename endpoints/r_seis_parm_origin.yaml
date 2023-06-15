@@ -1,0 +1,169 @@
+/r-seis-parm-origin:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get r_seis_parm_origin
+    responses:
+      '200':
+        description: get r_seis_parm_origin data to be returned
+        content:
+          application/json:
+            example:
+            - parameter_origin: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new r_seis_parm_origin
+    description: Create a new r_seis_parm_origin data
+    requestBody:
+      required: true
+      description: Request body to create r_seis_parm_origin data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_seis_parm_origin'
+          example:
+            parameter_origin: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_seis_parm_origin data is added
+        content:
+          application/json:
+            example:
+              message: The r_seis_parm_origin data was successfully added
+/r-seis-parm-origin/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of r_seis_parm_origin data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new r_seis_parm_origin data
+    description: Update a new r_seis_parm_origin data
+    requestBody:
+      required: true
+      description: Request body to update r_seis_parm_origin data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_seis_parm_origin'
+          example:
+            parameter_origin: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_seis_parm_origin data is completely updated
+        content:
+          application/json:
+            example:
+              message: The r_seis_parm_origin data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new r_seis_parm_origin data
+    description: Update a new r_seis_parm_origin data
+    requestBody:
+      required: true
+      description: Request body to update r_seis_parm_origin data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_seis_parm_origin'
+          example:
+            parameter_origin: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in r_seis_parm_origin data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in r_seis_parm_origin data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete r_seis_parm_origin data
+    description: Delete r_seis_parm_origin data
+    responses:
+      '200':
+        description: r_seis_parm_origin data is deleted
+        content:
+          application/json:
+            example:
+              message: The r_seis_parm_origin data was successfully deleted

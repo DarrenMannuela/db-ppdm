@@ -1,0 +1,293 @@
+/cont-oper-proc:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cont_oper_proc
+    responses:
+      '200':
+        description: get cont_oper_proc data to be returned
+        content:
+          application/json:
+            example:
+            - contract_id: Lorem Ipsum
+              operating_procedure_id: Lorem Ipsum
+              active_ind: y
+              adjust_13_month_desc: Lorem Ipsum
+              adjust_13_month_ind: y
+              claim_amount_limit: 0.1
+              claim_amount_limit_ouom: Lorem Ipsum
+              dev_penalty_cost: 0.1
+              dev_penalty_cost_ouom: Lorem Ipsum
+              dev_penalty_percent: 0.1
+              effective_date: 12/12/2023
+              equip_penalty_cost: 0.1
+              equip_penalty_cost_ouom: Lorem Ipsum
+              equip_penalty_percent: 0.1
+              expiry_date: 12/12/2023
+              expl_penalty_cost: 0.1
+              expl_penalty_cost_ouom: Lorem Ipsum
+              expl_penalty_percent: 0.1
+              inflation_adjustment_ind: y
+              insurance_election: Lorem Ipsum
+              mktg_fee_elect_cost: 0.1
+              mktg_fee_elect_cost_ouom: Lorem Ipsum
+              mktg_fee_elect_percent: 0.1
+              nat_currency_conversion: 0.1
+              nat_currency_uom: Lorem Ipsum
+              operating_procedure_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              recog_on_assignment_ind: y
+              remark: Lorem Ipsum
+              rofr_ind: y
+              rofr_reply_term: 0.1
+              rofr_reply_term_uom: Lorem Ipsum
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              statute_limit_period: 0.1
+              statute_limit_period_uom: Lorem Ipsum
+              surrender_notice: 0.1
+              surrender_notice_uom: Lorem Ipsum
+              title_preserve_desc: Lorem Ipsum
+              unauthorized_amount: 0.1
+              unauthorized_amount_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cont_oper_proc
+    description: Create a new cont_oper_proc data
+    requestBody:
+      required: true
+      description: Request body to create cont_oper_proc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cont_oper_proc'
+          example:
+            contract_id: Lorem Ipsum
+            operating_procedure_id: Lorem Ipsum
+            active_ind: y
+            adjust_13_month_desc: Lorem Ipsum
+            adjust_13_month_ind: y
+            claim_amount_limit: 0.1
+            claim_amount_limit_ouom: Lorem Ipsum
+            dev_penalty_cost: 0.1
+            dev_penalty_cost_ouom: Lorem Ipsum
+            dev_penalty_percent: 0.1
+            effective_date: 12/12/2023
+            equip_penalty_cost: 0.1
+            equip_penalty_cost_ouom: Lorem Ipsum
+            equip_penalty_percent: 0.1
+            expiry_date: 12/12/2023
+            expl_penalty_cost: 0.1
+            expl_penalty_cost_ouom: Lorem Ipsum
+            expl_penalty_percent: 0.1
+            inflation_adjustment_ind: y
+            insurance_election: Lorem Ipsum
+            mktg_fee_elect_cost: 0.1
+            mktg_fee_elect_cost_ouom: Lorem Ipsum
+            mktg_fee_elect_percent: 0.1
+            nat_currency_conversion: 0.1
+            nat_currency_uom: Lorem Ipsum
+            operating_procedure_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recog_on_assignment_ind: y
+            remark: Lorem Ipsum
+            rofr_ind: y
+            rofr_reply_term: 0.1
+            rofr_reply_term_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            statute_limit_period: 0.1
+            statute_limit_period_uom: Lorem Ipsum
+            surrender_notice: 0.1
+            surrender_notice_uom: Lorem Ipsum
+            title_preserve_desc: Lorem Ipsum
+            unauthorized_amount: 0.1
+            unauthorized_amount_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cont_oper_proc data is added
+        content:
+          application/json:
+            example:
+              message: The cont_oper_proc data was successfully added
+/cont-oper-proc/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cont_oper_proc data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cont_oper_proc data
+    description: Update a new cont_oper_proc data
+    requestBody:
+      required: true
+      description: Request body to update cont_oper_proc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cont_oper_proc'
+          example:
+            contract_id: Lorem Ipsum
+            operating_procedure_id: Lorem Ipsum
+            active_ind: y
+            adjust_13_month_desc: Lorem Ipsum
+            adjust_13_month_ind: y
+            claim_amount_limit: 0.1
+            claim_amount_limit_ouom: Lorem Ipsum
+            dev_penalty_cost: 0.1
+            dev_penalty_cost_ouom: Lorem Ipsum
+            dev_penalty_percent: 0.1
+            effective_date: 12/12/2023
+            equip_penalty_cost: 0.1
+            equip_penalty_cost_ouom: Lorem Ipsum
+            equip_penalty_percent: 0.1
+            expiry_date: 12/12/2023
+            expl_penalty_cost: 0.1
+            expl_penalty_cost_ouom: Lorem Ipsum
+            expl_penalty_percent: 0.1
+            inflation_adjustment_ind: y
+            insurance_election: Lorem Ipsum
+            mktg_fee_elect_cost: 0.1
+            mktg_fee_elect_cost_ouom: Lorem Ipsum
+            mktg_fee_elect_percent: 0.1
+            nat_currency_conversion: 0.1
+            nat_currency_uom: Lorem Ipsum
+            operating_procedure_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recog_on_assignment_ind: y
+            remark: Lorem Ipsum
+            rofr_ind: y
+            rofr_reply_term: 0.1
+            rofr_reply_term_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            statute_limit_period: 0.1
+            statute_limit_period_uom: Lorem Ipsum
+            surrender_notice: 0.1
+            surrender_notice_uom: Lorem Ipsum
+            title_preserve_desc: Lorem Ipsum
+            unauthorized_amount: 0.1
+            unauthorized_amount_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cont_oper_proc data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cont_oper_proc data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cont_oper_proc data
+    description: Update a new cont_oper_proc data
+    requestBody:
+      required: true
+      description: Request body to update cont_oper_proc data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cont_oper_proc'
+          example:
+            contract_id: Lorem Ipsum
+            operating_procedure_id: Lorem Ipsum
+            active_ind: y
+            adjust_13_month_desc: Lorem Ipsum
+            adjust_13_month_ind: y
+            claim_amount_limit: 0.1
+            claim_amount_limit_ouom: Lorem Ipsum
+            dev_penalty_cost: 0.1
+            dev_penalty_cost_ouom: Lorem Ipsum
+            dev_penalty_percent: 0.1
+            effective_date: 12/12/2023
+            equip_penalty_cost: 0.1
+            equip_penalty_cost_ouom: Lorem Ipsum
+            equip_penalty_percent: 0.1
+            expiry_date: 12/12/2023
+            expl_penalty_cost: 0.1
+            expl_penalty_cost_ouom: Lorem Ipsum
+            expl_penalty_percent: 0.1
+            inflation_adjustment_ind: y
+            insurance_election: Lorem Ipsum
+            mktg_fee_elect_cost: 0.1
+            mktg_fee_elect_cost_ouom: Lorem Ipsum
+            mktg_fee_elect_percent: 0.1
+            nat_currency_conversion: 0.1
+            nat_currency_uom: Lorem Ipsum
+            operating_procedure_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            recog_on_assignment_ind: y
+            remark: Lorem Ipsum
+            rofr_ind: y
+            rofr_reply_term: 0.1
+            rofr_reply_term_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            statute_limit_period: 0.1
+            statute_limit_period_uom: Lorem Ipsum
+            surrender_notice: 0.1
+            surrender_notice_uom: Lorem Ipsum
+            title_preserve_desc: Lorem Ipsum
+            unauthorized_amount: 0.1
+            unauthorized_amount_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cont_oper_proc data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cont_oper_proc data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cont_oper_proc data
+    description: Delete cont_oper_proc data
+    responses:
+      '200':
+        description: cont_oper_proc data is deleted
+        content:
+          application/json:
+            example:
+              message: The cont_oper_proc data was successfully deleted

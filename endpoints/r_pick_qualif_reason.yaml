@@ -1,0 +1,169 @@
+/r-pick-qualif-reason:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get r_pick_qualif_reason
+    responses:
+      '200':
+        description: get r_pick_qualif_reason data to be returned
+        content:
+          application/json:
+            example:
+            - pick_qualif_reason: Lorem Ipsum
+              abbreviation: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              long_name: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              short_name: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new r_pick_qualif_reason
+    description: Create a new r_pick_qualif_reason data
+    requestBody:
+      required: true
+      description: Request body to create r_pick_qualif_reason data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_pick_qualif_reason'
+          example:
+            pick_qualif_reason: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_pick_qualif_reason data is added
+        content:
+          application/json:
+            example:
+              message: The r_pick_qualif_reason data was successfully added
+/r-pick-qualif-reason/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of r_pick_qualif_reason data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new r_pick_qualif_reason data
+    description: Update a new r_pick_qualif_reason data
+    requestBody:
+      required: true
+      description: Request body to update r_pick_qualif_reason data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_pick_qualif_reason'
+          example:
+            pick_qualif_reason: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: r_pick_qualif_reason data is completely updated
+        content:
+          application/json:
+            example:
+              message: The r_pick_qualif_reason data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new r_pick_qualif_reason data
+    description: Update a new r_pick_qualif_reason data
+    requestBody:
+      required: true
+      description: Request body to update r_pick_qualif_reason data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/r_pick_qualif_reason'
+          example:
+            pick_qualif_reason: Lorem Ipsum
+            abbreviation: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            long_name: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            short_name: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in r_pick_qualif_reason data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in r_pick_qualif_reason data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete r_pick_qualif_reason data
+    description: Delete r_pick_qualif_reason data
+    responses:
+      '200':
+        description: r_pick_qualif_reason data is deleted
+        content:
+          application/json:
+            example:
+              message: The r_pick_qualif_reason data was successfully deleted

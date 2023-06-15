@@ -1,0 +1,199 @@
+package apiv1
+
+import (
+	dto "github.com/DarrenMannuela/pt_gtn_bibliography/dto"
+	"github.com/gofiber/fiber/v2"
+	"strconv"
+	"encoding/json"
+)
+
+
+func GetWellLogParmArray(c *fiber.Ctx) error {
+	rows, err := db.Query("select * from well_log_parm_array")
+	if err != nil {
+		return c.Status(500).SendString(err.Error())
+	}
+	defer rows.Close()
+	var result []dto.Well_log_parm_array
+
+	for rows.Next() {
+		var well_log_parm_array dto.Well_log_parm_array
+		if err := rows.Scan(&well_log_parm_array.Uwi, &well_log_parm_array.Well_log_id, &well_log_parm_array.Well_log_source, &well_log_parm_array.Parameter_seq_no, &well_log_parm_array.Element_seq_no, &well_log_parm_array.Active_ind, &well_log_parm_array.Dimension, &well_log_parm_array.Effective_date, &well_log_parm_array.Element_num, &well_log_parm_array.Expiry_date, &well_log_parm_array.Parameter_text_value, &well_log_parm_array.Parameter_value, &well_log_parm_array.Parameter_value_ouom, &well_log_parm_array.Parameter_value_uom, &well_log_parm_array.Ppdm_guid, &well_log_parm_array.Remark, &well_log_parm_array.Source, &well_log_parm_array.Row_changed_by, &well_log_parm_array.Row_changed_date, &well_log_parm_array.Row_created_by, &well_log_parm_array.Row_created_date, &well_log_parm_array.Row_effective_date, &well_log_parm_array.Row_expiry_date, &well_log_parm_array.Row_quality); err != nil {
+			return err // Exit if we get an error
+		}
+
+		// Append well_log_parm_array to result
+		result = append(result, well_log_parm_array)
+	}
+	// Return result in JSON format
+	return c.JSON(result)
+	 
+}
+
+func SetWellLogParmArray(c *fiber.Ctx) error {
+	var well_log_parm_array dto.Well_log_parm_array
+
+	setDefaults(&well_log_parm_array)
+
+	if err := json.Unmarshal(c.Body(), &well_log_parm_array); err != nil {
+		return c.Status(400).SendString(err.Error())
+	}
+
+	stmt, err := db.Prepare("insert into well_log_parm_array values(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12, :13, :14, :15, :16, :17, :18, :19, :20, :21, :22, :23, :24)")
+	if err != nil {
+		return err
+	}
+	well_log_parm_array.Row_created_date = formatDate(well_log_parm_array.Row_created_date)
+	well_log_parm_array.Row_changed_date = formatDate(well_log_parm_array.Row_changed_date)
+	well_log_parm_array.Effective_date = formatDateString(well_log_parm_array.Effective_date)
+	well_log_parm_array.Expiry_date = formatDateString(well_log_parm_array.Expiry_date)
+	well_log_parm_array.Row_effective_date = formatDateString(well_log_parm_array.Row_effective_date)
+	well_log_parm_array.Row_expiry_date = formatDateString(well_log_parm_array.Row_expiry_date)
+
+
+
+
+
+
+	rows, err := stmt.Exec(well_log_parm_array.Uwi, well_log_parm_array.Well_log_id, well_log_parm_array.Well_log_source, well_log_parm_array.Parameter_seq_no, well_log_parm_array.Element_seq_no, well_log_parm_array.Active_ind, well_log_parm_array.Dimension, well_log_parm_array.Effective_date, well_log_parm_array.Element_num, well_log_parm_array.Expiry_date, well_log_parm_array.Parameter_text_value, well_log_parm_array.Parameter_value, well_log_parm_array.Parameter_value_ouom, well_log_parm_array.Parameter_value_uom, well_log_parm_array.Ppdm_guid, well_log_parm_array.Remark, well_log_parm_array.Source, well_log_parm_array.Row_changed_by, well_log_parm_array.Row_changed_date, well_log_parm_array.Row_created_by, well_log_parm_array.Row_created_date, well_log_parm_array.Row_effective_date, well_log_parm_array.Row_expiry_date, well_log_parm_array.Row_quality)
+	
+	if err != nil {
+		return err
+	}
+
+	return c.JSON(rows)
+}
+
+func UpdateWellLogParmArray(c *fiber.Ctx) error {
+	var well_log_parm_array dto.Well_log_parm_array
+
+	setDefaults(&well_log_parm_array)
+
+	if err := json.Unmarshal(c.Body(), &well_log_parm_array); err != nil {
+		return c.Status(400).SendString(err.Error())
+	}
+
+	id := c.Params("id")
+	well_log_parm_array.Uwi = id
+
+    if well_log_parm_array.Row_created_date != nil {
+        return c.Status(400).SendString("Cannot update row_created_date")
+    }
+
+	stmt, err := db.Prepare("update well_log_parm_array set well_log_id = :1, well_log_source = :2, parameter_seq_no = :3, element_seq_no = :4, active_ind = :5, dimension = :6, effective_date = :7, element_num = :8, expiry_date = :9, parameter_text_value = :10, parameter_value = :11, parameter_value_ouom = :12, parameter_value_uom = :13, ppdm_guid = :14, remark = :15, source = :16, row_changed_by = :17, row_changed_date = :18, row_created_by = :19, row_effective_date = :20, row_expiry_date = :21, row_quality = :22 where uwi = :24")
+	if err != nil {
+		return err
+	}
+
+	well_log_parm_array.Row_changed_date = formatDate(well_log_parm_array.Row_changed_date)
+	well_log_parm_array.Effective_date = formatDateString(well_log_parm_array.Effective_date)
+	well_log_parm_array.Expiry_date = formatDateString(well_log_parm_array.Expiry_date)
+	well_log_parm_array.Row_effective_date = formatDateString(well_log_parm_array.Row_effective_date)
+	well_log_parm_array.Row_expiry_date = formatDateString(well_log_parm_array.Row_expiry_date)
+
+
+
+
+
+
+	rows, err := stmt.Exec(well_log_parm_array.Well_log_id, well_log_parm_array.Well_log_source, well_log_parm_array.Parameter_seq_no, well_log_parm_array.Element_seq_no, well_log_parm_array.Active_ind, well_log_parm_array.Dimension, well_log_parm_array.Effective_date, well_log_parm_array.Element_num, well_log_parm_array.Expiry_date, well_log_parm_array.Parameter_text_value, well_log_parm_array.Parameter_value, well_log_parm_array.Parameter_value_ouom, well_log_parm_array.Parameter_value_uom, well_log_parm_array.Ppdm_guid, well_log_parm_array.Remark, well_log_parm_array.Source, well_log_parm_array.Row_changed_by, well_log_parm_array.Row_changed_date, well_log_parm_array.Row_created_by, well_log_parm_array.Row_effective_date, well_log_parm_array.Row_expiry_date, well_log_parm_array.Row_quality, well_log_parm_array.Uwi)
+	if err != nil {
+		return err
+	}
+
+	if count, err := rows.RowsAffected(); err == nil {
+		if count == 0 {
+			return c.Status(404).SendString("No matching record found")
+		}
+	} else {
+		return err
+	}
+
+	return c.Status(201).JSON(rows)
+}
+
+func PatchWellLogParmArray(c *fiber.Ctx) error {
+	id := c.Params("id")
+
+	updatedFields := make(map[string]interface{})
+
+	if err := c.BodyParser(&updatedFields); err != nil {
+		return err
+	}
+	if _, ok := updatedFields["row_created_date"]; ok {
+        return c.Status(400).SendString("Cannot update row_created_date field")
+    }
+
+	query := "update well_log_parm_array set "
+	values := []interface{}{}
+	i := 1
+	for key, value := range updatedFields {
+		query += key + " = :" + strconv.Itoa(i)
+		i++
+		if i <= len(updatedFields) {
+			query += ", "
+		}
+		if key == "row_changed_date" {
+			if date, ok := value.(string); ok && len(date) > 0 {
+				formattedDate := formatDate(&date)
+				value = formattedDate
+			}
+		} else if key == "effective_date" || key == "expiry_date" || key == "row_effective_date" || key == "row_expiry_date"      {
+			if date, ok := value.(string); ok && len(date) > 0 {
+				formattedDate := formatDateString(&date)
+				value = formattedDate
+			}
+		}
+		values = append(values, value)
+	}
+	query += " where uwi = :id"
+
+	stmt, err := db.Prepare(query)
+	if err != nil {
+		return c.Status(500).SendString(err.Error())
+	}
+
+	values = append(values, id)
+	res, err := stmt.Exec(values...)
+	if err != nil {
+		return c.Status(500).SendString(err.Error())
+	}
+	if count, err := res.RowsAffected(); err == nil {
+		if count == 0 {
+			return c.Status(404).SendString("No matching record found")
+		}
+	} else {
+		return err
+	}
+
+	return c.JSON(res)
+}
+
+func DeleteWellLogParmArray(c *fiber.Ctx) error {
+	id := c.Params("id")
+	var well_log_parm_array dto.Well_log_parm_array
+	well_log_parm_array.Uwi = id
+
+	stmt, err := db.Prepare("delete from well_log_parm_array where uwi = :1")
+	if err != nil {
+		return err
+	}
+
+	rows, err := stmt.Exec(well_log_parm_array.Uwi)
+	if err != nil {
+		return err
+	}
+
+	rowsAffected, err := rows.RowsAffected()
+	if err != nil {
+		return err
+	}
+
+	if rowsAffected == 0 {
+		return c.Status(404).SendString("No matching record found")
+	}
+
+	return c.JSON(rows)
+}
+
+

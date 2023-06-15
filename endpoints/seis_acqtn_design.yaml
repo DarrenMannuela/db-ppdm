@@ -1,0 +1,441 @@
+/seis-acqtn-design:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get seis_acqtn_design
+    responses:
+      '200':
+        description: get seis_acqtn_design data to be returned
+        content:
+          application/json:
+            example:
+            - acqtn_design_id: Lorem Ipsum
+              acqtn_completed_date: 12/12/2023
+              acqtn_completed_date_desc: Lorem Ipsum
+              acqtn_dimension: Lorem Ipsum
+              acqtn_direction: Lorem Ipsum
+              acqtn_inline_bin_size: 1.0
+              acqtn_inline_bin_size_ouom: Lorem Ipsum
+              acqtn_remark: Lorem Ipsum
+              acqtn_shotpt_interval: 0.1
+              acqtn_shot_line_spacing: 0.1
+              acqtn_shot_line_spacing_ouom: Lorem Ipsum
+              acqtn_shot_time_intvl: 0.1
+              acqtn_start_date: 12/12/2023
+              acqtn_start_date_desc: Lorem Ipsum
+              acqtn_xline_bin_size: 1.0
+              acqtn_xline_bin_size_ouom: Lorem Ipsum
+              active_ind: y
+              actual_ind: y
+              cdp_coverage: 1.0
+              effective_date: 12/12/2023
+              energy_charge_size: 1.0
+              energy_charge_size_ouom: Lorem Ipsum
+              energy_oprg_psr: 0.1
+              energy_oprg_psr_ouom: Lorem Ipsum
+              energy_oprg_volume: 0.1
+              energy_oprg_volume_ouom: Lorem Ipsum
+              energy_shot_depth: 0.1
+              energy_shot_depth_ouom: Lorem Ipsum
+              energy_src_array_spc: 0.1
+              energy_src_array_spc_ouom: Lorem Ipsum
+              energy_src_array_type: Lorem Ipsum
+              energy_src_make: Lorem Ipsum
+              energy_src_per_shot: 0.1
+              energy_sweep_duration: 0.1
+              energy_sweep_duration_ouom: Lorem Ipsum
+              energy_sweep_end_freq: 0.1
+              energy_sweep_freq_ouom: Lorem Ipsum
+              energy_sweep_mvup_dist: 0.1
+              energy_sweep_mvup_dist_ouom: Lorem Ipsum
+              energy_sweep_st_freq: 0.1
+              energy_sweep_taper: 0.1
+              energy_sweep_taper_ouom: Lorem Ipsum
+              energy_sweep_type: Lorem Ipsum
+              energy_type: Lorem Ipsum
+              environment: Lorem Ipsum
+              expiry_date: 12/12/2023
+              monitor_depth: 0.1
+              monitor_depth_ouom: Lorem Ipsum
+              nominal_ind: y
+              ppdm_guid: Lorem Ipsum
+              rcrd_format_type: Lorem Ipsum
+              rcrd_gain_mode: Lorem Ipsum
+              rcrd_hf_freq: 0.1
+              rcrd_hf_slope: 0.1
+              rcrd_lf_freq: 0.1
+              rcrd_lf_slope: 0.1
+              rcrd_make: Lorem Ipsum
+              rcrd_near_surf_corr: Lorem Ipsum
+              rcrd_near_surf_corr_ouom: Lorem Ipsum
+              rcrd_nf_freq: 0.1
+              rcrd_nf_ind: y
+              rcrd_polarity: Lorem Ipsum
+              rcrd_rec_length: 0.1
+              rcrd_rec_length_ouom: Lorem Ipsum
+              rcrd_sample_rate: 0.1
+              rcrd_sample_rate_ouom: Lorem Ipsum
+              rcvr_line_spacing: 0.1
+              rcvr_line_spacing_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              rep_water_acoustic_vel: 0.1
+              rep_water_acoustic_vel_ouom: Lorem Ipsum
+              shot_by: Lorem Ipsum
+              shot_for: Lorem Ipsum
+              source: Lorem Ipsum
+              well_src_azimuth: 0.1
+              well_src_azimuth_north: Lorem Ipsum
+              well_src_offset: 0.1
+              well_src_offset_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new seis_acqtn_design
+    description: Create a new seis_acqtn_design data
+    requestBody:
+      required: true
+      description: Request body to create seis_acqtn_design data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_acqtn_design'
+          example:
+            acqtn_design_id: Lorem Ipsum
+            acqtn_completed_date: 12/12/2023
+            acqtn_completed_date_desc: Lorem Ipsum
+            acqtn_dimension: Lorem Ipsum
+            acqtn_direction: Lorem Ipsum
+            acqtn_inline_bin_size: 1.0
+            acqtn_inline_bin_size_ouom: Lorem Ipsum
+            acqtn_remark: Lorem Ipsum
+            acqtn_shotpt_interval: 0.1
+            acqtn_shot_line_spacing: 0.1
+            acqtn_shot_line_spacing_ouom: Lorem Ipsum
+            acqtn_shot_time_intvl: 0.1
+            acqtn_start_date: 12/12/2023
+            acqtn_start_date_desc: Lorem Ipsum
+            acqtn_xline_bin_size: 1.0
+            acqtn_xline_bin_size_ouom: Lorem Ipsum
+            active_ind: y
+            actual_ind: y
+            cdp_coverage: 1.0
+            effective_date: 12/12/2023
+            energy_charge_size: 1.0
+            energy_charge_size_ouom: Lorem Ipsum
+            energy_oprg_psr: 0.1
+            energy_oprg_psr_ouom: Lorem Ipsum
+            energy_oprg_volume: 0.1
+            energy_oprg_volume_ouom: Lorem Ipsum
+            energy_shot_depth: 0.1
+            energy_shot_depth_ouom: Lorem Ipsum
+            energy_src_array_spc: 0.1
+            energy_src_array_spc_ouom: Lorem Ipsum
+            energy_src_array_type: Lorem Ipsum
+            energy_src_make: Lorem Ipsum
+            energy_src_per_shot: 0.1
+            energy_sweep_duration: 0.1
+            energy_sweep_duration_ouom: Lorem Ipsum
+            energy_sweep_end_freq: 0.1
+            energy_sweep_freq_ouom: Lorem Ipsum
+            energy_sweep_mvup_dist: 0.1
+            energy_sweep_mvup_dist_ouom: Lorem Ipsum
+            energy_sweep_st_freq: 0.1
+            energy_sweep_taper: 0.1
+            energy_sweep_taper_ouom: Lorem Ipsum
+            energy_sweep_type: Lorem Ipsum
+            energy_type: Lorem Ipsum
+            environment: Lorem Ipsum
+            expiry_date: 12/12/2023
+            monitor_depth: 0.1
+            monitor_depth_ouom: Lorem Ipsum
+            nominal_ind: y
+            ppdm_guid: Lorem Ipsum
+            rcrd_format_type: Lorem Ipsum
+            rcrd_gain_mode: Lorem Ipsum
+            rcrd_hf_freq: 0.1
+            rcrd_hf_slope: 0.1
+            rcrd_lf_freq: 0.1
+            rcrd_lf_slope: 0.1
+            rcrd_make: Lorem Ipsum
+            rcrd_near_surf_corr: Lorem Ipsum
+            rcrd_near_surf_corr_ouom: Lorem Ipsum
+            rcrd_nf_freq: 0.1
+            rcrd_nf_ind: y
+            rcrd_polarity: Lorem Ipsum
+            rcrd_rec_length: 0.1
+            rcrd_rec_length_ouom: Lorem Ipsum
+            rcrd_sample_rate: 0.1
+            rcrd_sample_rate_ouom: Lorem Ipsum
+            rcvr_line_spacing: 0.1
+            rcvr_line_spacing_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            rep_water_acoustic_vel: 0.1
+            rep_water_acoustic_vel_ouom: Lorem Ipsum
+            shot_by: Lorem Ipsum
+            shot_for: Lorem Ipsum
+            source: Lorem Ipsum
+            well_src_azimuth: 0.1
+            well_src_azimuth_north: Lorem Ipsum
+            well_src_offset: 0.1
+            well_src_offset_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_acqtn_design data is added
+        content:
+          application/json:
+            example:
+              message: The seis_acqtn_design data was successfully added
+/seis-acqtn-design/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of seis_acqtn_design data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new seis_acqtn_design data
+    description: Update a new seis_acqtn_design data
+    requestBody:
+      required: true
+      description: Request body to update seis_acqtn_design data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_acqtn_design'
+          example:
+            acqtn_design_id: Lorem Ipsum
+            acqtn_completed_date: 12/12/2023
+            acqtn_completed_date_desc: Lorem Ipsum
+            acqtn_dimension: Lorem Ipsum
+            acqtn_direction: Lorem Ipsum
+            acqtn_inline_bin_size: 1.0
+            acqtn_inline_bin_size_ouom: Lorem Ipsum
+            acqtn_remark: Lorem Ipsum
+            acqtn_shotpt_interval: 0.1
+            acqtn_shot_line_spacing: 0.1
+            acqtn_shot_line_spacing_ouom: Lorem Ipsum
+            acqtn_shot_time_intvl: 0.1
+            acqtn_start_date: 12/12/2023
+            acqtn_start_date_desc: Lorem Ipsum
+            acqtn_xline_bin_size: 1.0
+            acqtn_xline_bin_size_ouom: Lorem Ipsum
+            active_ind: y
+            actual_ind: y
+            cdp_coverage: 1.0
+            effective_date: 12/12/2023
+            energy_charge_size: 1.0
+            energy_charge_size_ouom: Lorem Ipsum
+            energy_oprg_psr: 0.1
+            energy_oprg_psr_ouom: Lorem Ipsum
+            energy_oprg_volume: 0.1
+            energy_oprg_volume_ouom: Lorem Ipsum
+            energy_shot_depth: 0.1
+            energy_shot_depth_ouom: Lorem Ipsum
+            energy_src_array_spc: 0.1
+            energy_src_array_spc_ouom: Lorem Ipsum
+            energy_src_array_type: Lorem Ipsum
+            energy_src_make: Lorem Ipsum
+            energy_src_per_shot: 0.1
+            energy_sweep_duration: 0.1
+            energy_sweep_duration_ouom: Lorem Ipsum
+            energy_sweep_end_freq: 0.1
+            energy_sweep_freq_ouom: Lorem Ipsum
+            energy_sweep_mvup_dist: 0.1
+            energy_sweep_mvup_dist_ouom: Lorem Ipsum
+            energy_sweep_st_freq: 0.1
+            energy_sweep_taper: 0.1
+            energy_sweep_taper_ouom: Lorem Ipsum
+            energy_sweep_type: Lorem Ipsum
+            energy_type: Lorem Ipsum
+            environment: Lorem Ipsum
+            expiry_date: 12/12/2023
+            monitor_depth: 0.1
+            monitor_depth_ouom: Lorem Ipsum
+            nominal_ind: y
+            ppdm_guid: Lorem Ipsum
+            rcrd_format_type: Lorem Ipsum
+            rcrd_gain_mode: Lorem Ipsum
+            rcrd_hf_freq: 0.1
+            rcrd_hf_slope: 0.1
+            rcrd_lf_freq: 0.1
+            rcrd_lf_slope: 0.1
+            rcrd_make: Lorem Ipsum
+            rcrd_near_surf_corr: Lorem Ipsum
+            rcrd_near_surf_corr_ouom: Lorem Ipsum
+            rcrd_nf_freq: 0.1
+            rcrd_nf_ind: y
+            rcrd_polarity: Lorem Ipsum
+            rcrd_rec_length: 0.1
+            rcrd_rec_length_ouom: Lorem Ipsum
+            rcrd_sample_rate: 0.1
+            rcrd_sample_rate_ouom: Lorem Ipsum
+            rcvr_line_spacing: 0.1
+            rcvr_line_spacing_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            rep_water_acoustic_vel: 0.1
+            rep_water_acoustic_vel_ouom: Lorem Ipsum
+            shot_by: Lorem Ipsum
+            shot_for: Lorem Ipsum
+            source: Lorem Ipsum
+            well_src_azimuth: 0.1
+            well_src_azimuth_north: Lorem Ipsum
+            well_src_offset: 0.1
+            well_src_offset_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: seis_acqtn_design data is completely updated
+        content:
+          application/json:
+            example:
+              message: The seis_acqtn_design data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new seis_acqtn_design data
+    description: Update a new seis_acqtn_design data
+    requestBody:
+      required: true
+      description: Request body to update seis_acqtn_design data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/seis_acqtn_design'
+          example:
+            acqtn_design_id: Lorem Ipsum
+            acqtn_completed_date: 12/12/2023
+            acqtn_completed_date_desc: Lorem Ipsum
+            acqtn_dimension: Lorem Ipsum
+            acqtn_direction: Lorem Ipsum
+            acqtn_inline_bin_size: 1.0
+            acqtn_inline_bin_size_ouom: Lorem Ipsum
+            acqtn_remark: Lorem Ipsum
+            acqtn_shotpt_interval: 0.1
+            acqtn_shot_line_spacing: 0.1
+            acqtn_shot_line_spacing_ouom: Lorem Ipsum
+            acqtn_shot_time_intvl: 0.1
+            acqtn_start_date: 12/12/2023
+            acqtn_start_date_desc: Lorem Ipsum
+            acqtn_xline_bin_size: 1.0
+            acqtn_xline_bin_size_ouom: Lorem Ipsum
+            active_ind: y
+            actual_ind: y
+            cdp_coverage: 1.0
+            effective_date: 12/12/2023
+            energy_charge_size: 1.0
+            energy_charge_size_ouom: Lorem Ipsum
+            energy_oprg_psr: 0.1
+            energy_oprg_psr_ouom: Lorem Ipsum
+            energy_oprg_volume: 0.1
+            energy_oprg_volume_ouom: Lorem Ipsum
+            energy_shot_depth: 0.1
+            energy_shot_depth_ouom: Lorem Ipsum
+            energy_src_array_spc: 0.1
+            energy_src_array_spc_ouom: Lorem Ipsum
+            energy_src_array_type: Lorem Ipsum
+            energy_src_make: Lorem Ipsum
+            energy_src_per_shot: 0.1
+            energy_sweep_duration: 0.1
+            energy_sweep_duration_ouom: Lorem Ipsum
+            energy_sweep_end_freq: 0.1
+            energy_sweep_freq_ouom: Lorem Ipsum
+            energy_sweep_mvup_dist: 0.1
+            energy_sweep_mvup_dist_ouom: Lorem Ipsum
+            energy_sweep_st_freq: 0.1
+            energy_sweep_taper: 0.1
+            energy_sweep_taper_ouom: Lorem Ipsum
+            energy_sweep_type: Lorem Ipsum
+            energy_type: Lorem Ipsum
+            environment: Lorem Ipsum
+            expiry_date: 12/12/2023
+            monitor_depth: 0.1
+            monitor_depth_ouom: Lorem Ipsum
+            nominal_ind: y
+            ppdm_guid: Lorem Ipsum
+            rcrd_format_type: Lorem Ipsum
+            rcrd_gain_mode: Lorem Ipsum
+            rcrd_hf_freq: 0.1
+            rcrd_hf_slope: 0.1
+            rcrd_lf_freq: 0.1
+            rcrd_lf_slope: 0.1
+            rcrd_make: Lorem Ipsum
+            rcrd_near_surf_corr: Lorem Ipsum
+            rcrd_near_surf_corr_ouom: Lorem Ipsum
+            rcrd_nf_freq: 0.1
+            rcrd_nf_ind: y
+            rcrd_polarity: Lorem Ipsum
+            rcrd_rec_length: 0.1
+            rcrd_rec_length_ouom: Lorem Ipsum
+            rcrd_sample_rate: 0.1
+            rcrd_sample_rate_ouom: Lorem Ipsum
+            rcvr_line_spacing: 0.1
+            rcvr_line_spacing_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            rep_water_acoustic_vel: 0.1
+            rep_water_acoustic_vel_ouom: Lorem Ipsum
+            shot_by: Lorem Ipsum
+            shot_for: Lorem Ipsum
+            source: Lorem Ipsum
+            well_src_azimuth: 0.1
+            well_src_azimuth_north: Lorem Ipsum
+            well_src_offset: 0.1
+            well_src_offset_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in seis_acqtn_design data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in seis_acqtn_design data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete seis_acqtn_design data
+    description: Delete seis_acqtn_design data
+    responses:
+      '200':
+        description: seis_acqtn_design data is deleted
+        content:
+          application/json:
+            example:
+              message: The seis_acqtn_design data was successfully deleted

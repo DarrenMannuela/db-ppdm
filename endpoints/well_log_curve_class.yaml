@@ -1,0 +1,177 @@
+/well-log-curve-class:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_log_curve_class
+    responses:
+      '200':
+        description: get well_log_curve_class data to be returned
+        content:
+          application/json:
+            example:
+            - curve_class_id: Lorem Ipsum
+              active_ind: y
+              class_mnemonic: Lorem Ipsum
+              curve_class_name: Lorem Ipsum
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              quantity_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              system_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_log_curve_class
+    description: Create a new well_log_curve_class data
+    requestBody:
+      required: true
+      description: Request body to create well_log_curve_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve_class'
+          example:
+            curve_class_id: Lorem Ipsum
+            active_ind: y
+            class_mnemonic: Lorem Ipsum
+            curve_class_name: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            quantity_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            system_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_curve_class data is added
+        content:
+          application/json:
+            example:
+              message: The well_log_curve_class data was successfully added
+/well-log-curve-class/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_log_curve_class data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_log_curve_class data
+    description: Update a new well_log_curve_class data
+    requestBody:
+      required: true
+      description: Request body to update well_log_curve_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve_class'
+          example:
+            curve_class_id: Lorem Ipsum
+            active_ind: y
+            class_mnemonic: Lorem Ipsum
+            curve_class_name: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            quantity_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            system_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_log_curve_class data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_log_curve_class data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_log_curve_class data
+    description: Update a new well_log_curve_class data
+    requestBody:
+      required: true
+      description: Request body to update well_log_curve_class data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_log_curve_class'
+          example:
+            curve_class_id: Lorem Ipsum
+            active_ind: y
+            class_mnemonic: Lorem Ipsum
+            curve_class_name: Lorem Ipsum
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            quantity_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            system_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_log_curve_class data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_log_curve_class data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_log_curve_class data
+    description: Delete well_log_curve_class data
+    responses:
+      '200':
+        description: well_log_curve_class data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_log_curve_class data was successfully deleted

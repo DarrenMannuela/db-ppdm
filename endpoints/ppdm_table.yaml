@@ -1,0 +1,185 @@
+/ppdm-table:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_table
+    responses:
+      '200':
+        description: get ppdm_table data to be returned
+        content:
+          application/json:
+            example:
+            - system_id: Lorem Ipsum
+              table_name: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              extension_ind: y
+              ppdm_guid: Lorem Ipsum
+              primary_key_name: Lorem Ipsum
+              remark: Lorem Ipsum
+              row_count: 1.0
+              row_count_date: 12/12/2023
+              source: Lorem Ipsum
+              table_comment: Lorem Ipsum
+              table_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_table
+    description: Create a new ppdm_table data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_table data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_table'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            ppdm_guid: Lorem Ipsum
+            primary_key_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_count: 1.0
+            row_count_date: 12/12/2023
+            source: Lorem Ipsum
+            table_comment: Lorem Ipsum
+            table_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_table data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_table data was successfully added
+/ppdm-table/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_table data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_table data
+    description: Update a new ppdm_table data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_table data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_table'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            ppdm_guid: Lorem Ipsum
+            primary_key_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_count: 1.0
+            row_count_date: 12/12/2023
+            source: Lorem Ipsum
+            table_comment: Lorem Ipsum
+            table_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_table data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_table data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_table data
+    description: Update a new ppdm_table data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_table data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_table'
+          example:
+            system_id: Lorem Ipsum
+            table_name: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            extension_ind: y
+            ppdm_guid: Lorem Ipsum
+            primary_key_name: Lorem Ipsum
+            remark: Lorem Ipsum
+            row_count: 1.0
+            row_count_date: 12/12/2023
+            source: Lorem Ipsum
+            table_comment: Lorem Ipsum
+            table_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_table data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_table data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_table data
+    description: Delete ppdm_table data
+    responses:
+      '200':
+        description: ppdm_table data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_table data was successfully deleted

@@ -1,0 +1,297 @@
+/well-test-analysis:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_test_analysis
+    responses:
+      '200':
+        description: get well_test_analysis data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              test_type: Lorem Ipsum
+              run_num: Lorem Ipsum
+              test_num: Lorem Ipsum
+              period_type: Lorem Ipsum
+              active_ind: y
+              bsw: 0.1
+              condensate_gravity: 0.1
+              condensate_ratio: 0.1
+              condensate_ratio_ouom: Lorem Ipsum
+              condensate_temperature: 0.1
+              condensate_temperature_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fluid_type: Lorem Ipsum
+              gas_content: Lorem Ipsum
+              gas_gravity: 0.1
+              gor: 0.1
+              gor_ouom: Lorem Ipsum
+              gwr: 0.1
+              gwr_ouom: Lorem Ipsum
+              h2s_percent: 0.1
+              lgr: 0.1
+              lgr_ouom: Lorem Ipsum
+              oil_density: 0.1
+              oil_density_ouom: Lorem Ipsum
+              oil_gravity: 0.1
+              oil_temperature: 0.1
+              oil_temperature_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              salinity_type: Lorem Ipsum
+              sulphur_percent: 0.1
+              water_cut: 0.1
+              water_resistivity: 0.1
+              water_resistivity_ouom: Lorem Ipsum
+              water_salinity: 1.0
+              water_salinity_ouom: Lorem Ipsum
+              water_temperature: 0.1
+              water_temperature_ouom: Lorem Ipsum
+              wor: 0.1
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_test_analysis
+    description: Create a new well_test_analysis data
+    requestBody:
+      required: true
+      description: Request body to create well_test_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_analysis'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            bsw: 0.1
+            condensate_gravity: 0.1
+            condensate_ratio: 0.1
+            condensate_ratio_ouom: Lorem Ipsum
+            condensate_temperature: 0.1
+            condensate_temperature_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_type: Lorem Ipsum
+            gas_content: Lorem Ipsum
+            gas_gravity: 0.1
+            gor: 0.1
+            gor_ouom: Lorem Ipsum
+            gwr: 0.1
+            gwr_ouom: Lorem Ipsum
+            h2s_percent: 0.1
+            lgr: 0.1
+            lgr_ouom: Lorem Ipsum
+            oil_density: 0.1
+            oil_density_ouom: Lorem Ipsum
+            oil_gravity: 0.1
+            oil_temperature: 0.1
+            oil_temperature_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            salinity_type: Lorem Ipsum
+            sulphur_percent: 0.1
+            water_cut: 0.1
+            water_resistivity: 0.1
+            water_resistivity_ouom: Lorem Ipsum
+            water_salinity: 1.0
+            water_salinity_ouom: Lorem Ipsum
+            water_temperature: 0.1
+            water_temperature_ouom: Lorem Ipsum
+            wor: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_analysis data is added
+        content:
+          application/json:
+            example:
+              message: The well_test_analysis data was successfully added
+/well-test-analysis/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_test_analysis data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_test_analysis data
+    description: Update a new well_test_analysis data
+    requestBody:
+      required: true
+      description: Request body to update well_test_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_analysis'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            bsw: 0.1
+            condensate_gravity: 0.1
+            condensate_ratio: 0.1
+            condensate_ratio_ouom: Lorem Ipsum
+            condensate_temperature: 0.1
+            condensate_temperature_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_type: Lorem Ipsum
+            gas_content: Lorem Ipsum
+            gas_gravity: 0.1
+            gor: 0.1
+            gor_ouom: Lorem Ipsum
+            gwr: 0.1
+            gwr_ouom: Lorem Ipsum
+            h2s_percent: 0.1
+            lgr: 0.1
+            lgr_ouom: Lorem Ipsum
+            oil_density: 0.1
+            oil_density_ouom: Lorem Ipsum
+            oil_gravity: 0.1
+            oil_temperature: 0.1
+            oil_temperature_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            salinity_type: Lorem Ipsum
+            sulphur_percent: 0.1
+            water_cut: 0.1
+            water_resistivity: 0.1
+            water_resistivity_ouom: Lorem Ipsum
+            water_salinity: 1.0
+            water_salinity_ouom: Lorem Ipsum
+            water_temperature: 0.1
+            water_temperature_ouom: Lorem Ipsum
+            wor: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_test_analysis data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_test_analysis data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_test_analysis data
+    description: Update a new well_test_analysis data
+    requestBody:
+      required: true
+      description: Request body to update well_test_analysis data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_test_analysis'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            test_type: Lorem Ipsum
+            run_num: Lorem Ipsum
+            test_num: Lorem Ipsum
+            period_type: Lorem Ipsum
+            active_ind: y
+            bsw: 0.1
+            condensate_gravity: 0.1
+            condensate_ratio: 0.1
+            condensate_ratio_ouom: Lorem Ipsum
+            condensate_temperature: 0.1
+            condensate_temperature_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluid_type: Lorem Ipsum
+            gas_content: Lorem Ipsum
+            gas_gravity: 0.1
+            gor: 0.1
+            gor_ouom: Lorem Ipsum
+            gwr: 0.1
+            gwr_ouom: Lorem Ipsum
+            h2s_percent: 0.1
+            lgr: 0.1
+            lgr_ouom: Lorem Ipsum
+            oil_density: 0.1
+            oil_density_ouom: Lorem Ipsum
+            oil_gravity: 0.1
+            oil_temperature: 0.1
+            oil_temperature_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            salinity_type: Lorem Ipsum
+            sulphur_percent: 0.1
+            water_cut: 0.1
+            water_resistivity: 0.1
+            water_resistivity_ouom: Lorem Ipsum
+            water_salinity: 1.0
+            water_salinity_ouom: Lorem Ipsum
+            water_temperature: 0.1
+            water_temperature_ouom: Lorem Ipsum
+            wor: 0.1
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_test_analysis data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_test_analysis data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_test_analysis data
+    description: Delete well_test_analysis data
+    responses:
+      '200':
+        description: well_test_analysis data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_test_analysis data was successfully deleted

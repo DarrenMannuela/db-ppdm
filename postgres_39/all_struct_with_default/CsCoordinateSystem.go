@@ -1,0 +1,39 @@
+package dto
+
+type Cs_coordinate_system struct {
+	Coord_system_id           string   `json:"coord_system_id" default:"source"`
+	Active_ind                *string  `json:"active_ind" default:""`
+	Coordinate_system_type    *string  `json:"coordinate_system_type" default:""`
+	Coord_system_abbreviation *string  `json:"coord_system_abbreviation" default:""`
+	Coord_system_area         *string  `json:"coord_system_area" default:""`
+	Coord_system_long_name    *string  `json:"coord_system_long_name" default:""`
+	Coord_system_short_name   *string  `json:"coord_system_short_name" default:""`
+	Coord_system_uom          *string  `json:"coord_system_uom" default:""`
+	Datum_ouom                *string  `json:"datum_ouom" default:""`
+	Effective_date            *string  `json:"effective_date" default:""`
+	Expiry_date               *string  `json:"expiry_date" default:""`
+	Geodetic_datum            *string  `json:"geodetic_datum" default:""`
+	N_value                   *float64 `json:"n_value" default:""`
+	N_value_ouom              *string  `json:"n_value_ouom" default:""`
+	Owner_ba_id               *string  `json:"owner_ba_id" default:""`
+	Parent_coord_system_id    *string  `json:"parent_coord_system_id" default:""`
+	Perspective_height        *float64 `json:"perspective_height" default:""`
+	Ppdm_guid                 *string  `json:"ppdm_guid" default:""`
+	Prime_meridian            *string  `json:"prime_meridian" default:""`
+	Principal_meridian        *string  `json:"principal_meridian" default:""`
+	Projection_type           *string  `json:"projection_type" default:""`
+	Reference_elev            *float64 `json:"reference_elev" default:""`
+	Reference_elev_ouom       *string  `json:"reference_elev_ouom" default:""`
+	Remark                    *string  `json:"remark" default:""`
+	Rotation_ind              *string  `json:"rotation_ind" default:""`
+	Source                    *string  `json:"source" default:""`
+	Source_document_id        *string  `json:"source_document_id" default:""`
+	Vertical_datum_type       *string  `json:"vertical_datum_type" default:""`
+	Row_changed_by            *string  `json:"row_changed_by" default:""`
+	Row_changed_date          *string  `json:"row_changed_date" default:""`
+	Row_created_by            *string  `json:"row_created_by" default:""`
+	Row_created_date          *string  `json:"row_created_date" default:""`
+	Row_effective_date        *string  `json:"row_effective_date" default:""`
+	Row_expiry_date           *string  `json:"row_expiry_date" default:""`
+	Row_quality               *string  `json:"row_quality" default:""`
+}

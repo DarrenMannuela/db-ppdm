@@ -1,0 +1,185 @@
+/consent:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get consent
+    responses:
+      '200':
+        description: get consent data to be returned
+        content:
+          application/json:
+            example:
+            - consent_id: Lorem Ipsum
+              active_ind: y
+              consent_desc: Lorem Ipsum
+              consent_method_desc: Lorem Ipsum
+              consent_type: Lorem Ipsum
+              current_status: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              receive_date: 12/12/2023
+              remark: Lorem Ipsum
+              request_date: 12/12/2023
+              source: Lorem Ipsum
+              status_remark: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new consent
+    description: Create a new consent data
+    requestBody:
+      required: true
+      description: Request body to create consent data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/consent'
+          example:
+            consent_id: Lorem Ipsum
+            active_ind: y
+            consent_desc: Lorem Ipsum
+            consent_method_desc: Lorem Ipsum
+            consent_type: Lorem Ipsum
+            current_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            receive_date: 12/12/2023
+            remark: Lorem Ipsum
+            request_date: 12/12/2023
+            source: Lorem Ipsum
+            status_remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: consent data is added
+        content:
+          application/json:
+            example:
+              message: The consent data was successfully added
+/consent/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of consent data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new consent data
+    description: Update a new consent data
+    requestBody:
+      required: true
+      description: Request body to update consent data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/consent'
+          example:
+            consent_id: Lorem Ipsum
+            active_ind: y
+            consent_desc: Lorem Ipsum
+            consent_method_desc: Lorem Ipsum
+            consent_type: Lorem Ipsum
+            current_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            receive_date: 12/12/2023
+            remark: Lorem Ipsum
+            request_date: 12/12/2023
+            source: Lorem Ipsum
+            status_remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: consent data is completely updated
+        content:
+          application/json:
+            example:
+              message: The consent data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new consent data
+    description: Update a new consent data
+    requestBody:
+      required: true
+      description: Request body to update consent data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/consent'
+          example:
+            consent_id: Lorem Ipsum
+            active_ind: y
+            consent_desc: Lorem Ipsum
+            consent_method_desc: Lorem Ipsum
+            consent_type: Lorem Ipsum
+            current_status: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            receive_date: 12/12/2023
+            remark: Lorem Ipsum
+            request_date: 12/12/2023
+            source: Lorem Ipsum
+            status_remark: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in consent data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in consent data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete consent data
+    description: Delete consent data
+    responses:
+      '200':
+        description: consent data is deleted
+        content:
+          application/json:
+            example:
+              message: The consent data was successfully deleted

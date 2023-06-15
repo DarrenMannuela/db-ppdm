@@ -1,0 +1,205 @@
+/well-drill-equipment:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_drill_equipment
+    responses:
+      '200':
+        description: get well_drill_equipment data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              equipment_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              offsite_date: 12/12/2023
+              offsite_time: 12/12/2023
+              onsite_date: 12/12/2023
+              onsite_time: 12/12/2023
+              operated_by_ba_id: Lorem Ipsum
+              parent_equipment_id: Lorem Ipsum
+              period_on_well: 0.1
+              period_on_well_ouom: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              reference_num: Lorem Ipsum
+              remark: Lorem Ipsum
+              rented_ind: y
+              source: Lorem Ipsum
+              timezone: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_drill_equipment
+    description: Create a new well_drill_equipment data
+    requestBody:
+      required: true
+      description: Request body to create well_drill_equipment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_equipment'
+          example:
+            uwi: Lorem Ipsum
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            offsite_date: 12/12/2023
+            offsite_time: 12/12/2023
+            onsite_date: 12/12/2023
+            onsite_time: 12/12/2023
+            operated_by_ba_id: Lorem Ipsum
+            parent_equipment_id: Lorem Ipsum
+            period_on_well: 0.1
+            period_on_well_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            rented_ind: y
+            source: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_equipment data is added
+        content:
+          application/json:
+            example:
+              message: The well_drill_equipment data was successfully added
+/well-drill-equipment/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_drill_equipment data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_drill_equipment data
+    description: Update a new well_drill_equipment data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_equipment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_equipment'
+          example:
+            uwi: Lorem Ipsum
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            offsite_date: 12/12/2023
+            offsite_time: 12/12/2023
+            onsite_date: 12/12/2023
+            onsite_time: 12/12/2023
+            operated_by_ba_id: Lorem Ipsum
+            parent_equipment_id: Lorem Ipsum
+            period_on_well: 0.1
+            period_on_well_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            rented_ind: y
+            source: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_drill_equipment data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_drill_equipment data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_drill_equipment data
+    description: Update a new well_drill_equipment data
+    requestBody:
+      required: true
+      description: Request body to update well_drill_equipment data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_drill_equipment'
+          example:
+            uwi: Lorem Ipsum
+            equipment_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            offsite_date: 12/12/2023
+            offsite_time: 12/12/2023
+            onsite_date: 12/12/2023
+            onsite_time: 12/12/2023
+            operated_by_ba_id: Lorem Ipsum
+            parent_equipment_id: Lorem Ipsum
+            period_on_well: 0.1
+            period_on_well_ouom: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reference_num: Lorem Ipsum
+            remark: Lorem Ipsum
+            rented_ind: y
+            source: Lorem Ipsum
+            timezone: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_drill_equipment data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_drill_equipment data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_drill_equipment data
+    description: Delete well_drill_equipment data
+    responses:
+      '200':
+        description: well_drill_equipment data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_drill_equipment data was successfully deleted

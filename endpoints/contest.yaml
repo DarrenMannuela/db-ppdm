@@ -1,0 +1,185 @@
+/contest:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get contest
+    responses:
+      '200':
+        description: get contest data to be returned
+        content:
+          application/json:
+            example:
+            - contest_id: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              expiry_date: 12/12/2023
+              lr_contest_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              reason: Lorem Ipsum
+              remark: Lorem Ipsum
+              resolution_date: 12/12/2023
+              resolution_method: Lorem Ipsum
+              resolution_remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new contest
+    description: Create a new contest data
+    requestBody:
+      required: true
+      description: Request body to create contest data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/contest'
+          example:
+            contest_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lr_contest_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_date: 12/12/2023
+            resolution_method: Lorem Ipsum
+            resolution_remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: contest data is added
+        content:
+          application/json:
+            example:
+              message: The contest data was successfully added
+/contest/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of contest data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new contest data
+    description: Update a new contest data
+    requestBody:
+      required: true
+      description: Request body to update contest data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/contest'
+          example:
+            contest_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lr_contest_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_date: 12/12/2023
+            resolution_method: Lorem Ipsum
+            resolution_remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: contest data is completely updated
+        content:
+          application/json:
+            example:
+              message: The contest data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new contest data
+    description: Update a new contest data
+    requestBody:
+      required: true
+      description: Request body to update contest data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/contest'
+          example:
+            contest_id: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lr_contest_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            reason: Lorem Ipsum
+            remark: Lorem Ipsum
+            resolution_date: 12/12/2023
+            resolution_method: Lorem Ipsum
+            resolution_remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in contest data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in contest data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete contest data
+    description: Delete contest data
+    responses:
+      '200':
+        description: contest data is deleted
+        content:
+          application/json:
+            example:
+              message: The contest data was successfully deleted

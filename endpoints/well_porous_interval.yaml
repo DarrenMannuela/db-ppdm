@@ -1,0 +1,257 @@
+/well-porous-interval:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get well_porous_interval
+    responses:
+      '200':
+        description: get well_porous_interval data to be returned
+        content:
+          application/json:
+            example:
+            - uwi: Lorem Ipsum
+              source: Lorem Ipsum
+              active_ind: y
+              average_porosity: 0.1
+              base_depth: 0.1
+              base_depth_ouom: Lorem Ipsum
+              base_tvd: 0.1
+              base_tvd_ouom: Lorem Ipsum
+              core_sample_length: 0.1
+              core_sample_length_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              gas_show_ind: y
+              gross_thickness: 0.1
+              gross_thickness_ouom: Lorem Ipsum
+              net_thickness: 0.1
+              net_thickness_ouom: Lorem Ipsum
+              oil_show_ind: y
+              porosity_cutoff: 0.1
+              porosity_quality: Lorem Ipsum
+              porosity_type: Lorem Ipsum
+              porous_form_age: Lorem Ipsum
+              porous_strat_unit_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              strat_age: Lorem Ipsum
+              strat_age_name_set_id: Lorem Ipsum
+              strat_name_set_id: Lorem Ipsum
+              top_depth: 0.1
+              top_depth_ouom: Lorem Ipsum
+              top_tvd: 0.1
+              top_tvd_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new well_porous_interval
+    description: Create a new well_porous_interval data
+    requestBody:
+      required: true
+      description: Request body to create well_porous_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_porous_interval'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            average_porosity: 0.1
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_tvd: 0.1
+            base_tvd_ouom: Lorem Ipsum
+            core_sample_length: 0.1
+            core_sample_length_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gas_show_ind: y
+            gross_thickness: 0.1
+            gross_thickness_ouom: Lorem Ipsum
+            net_thickness: 0.1
+            net_thickness_ouom: Lorem Ipsum
+            oil_show_ind: y
+            porosity_cutoff: 0.1
+            porosity_quality: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            porous_form_age: Lorem Ipsum
+            porous_strat_unit_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_age: Lorem Ipsum
+            strat_age_name_set_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_tvd: 0.1
+            top_tvd_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_porous_interval data is added
+        content:
+          application/json:
+            example:
+              message: The well_porous_interval data was successfully added
+/well-porous-interval/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of well_porous_interval data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new well_porous_interval data
+    description: Update a new well_porous_interval data
+    requestBody:
+      required: true
+      description: Request body to update well_porous_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_porous_interval'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            average_porosity: 0.1
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_tvd: 0.1
+            base_tvd_ouom: Lorem Ipsum
+            core_sample_length: 0.1
+            core_sample_length_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gas_show_ind: y
+            gross_thickness: 0.1
+            gross_thickness_ouom: Lorem Ipsum
+            net_thickness: 0.1
+            net_thickness_ouom: Lorem Ipsum
+            oil_show_ind: y
+            porosity_cutoff: 0.1
+            porosity_quality: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            porous_form_age: Lorem Ipsum
+            porous_strat_unit_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_age: Lorem Ipsum
+            strat_age_name_set_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_tvd: 0.1
+            top_tvd_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: well_porous_interval data is completely updated
+        content:
+          application/json:
+            example:
+              message: The well_porous_interval data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new well_porous_interval data
+    description: Update a new well_porous_interval data
+    requestBody:
+      required: true
+      description: Request body to update well_porous_interval data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/well_porous_interval'
+          example:
+            uwi: Lorem Ipsum
+            source: Lorem Ipsum
+            active_ind: y
+            average_porosity: 0.1
+            base_depth: 0.1
+            base_depth_ouom: Lorem Ipsum
+            base_tvd: 0.1
+            base_tvd_ouom: Lorem Ipsum
+            core_sample_length: 0.1
+            core_sample_length_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            gas_show_ind: y
+            gross_thickness: 0.1
+            gross_thickness_ouom: Lorem Ipsum
+            net_thickness: 0.1
+            net_thickness_ouom: Lorem Ipsum
+            oil_show_ind: y
+            porosity_cutoff: 0.1
+            porosity_quality: Lorem Ipsum
+            porosity_type: Lorem Ipsum
+            porous_form_age: Lorem Ipsum
+            porous_strat_unit_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            strat_age: Lorem Ipsum
+            strat_age_name_set_id: Lorem Ipsum
+            strat_name_set_id: Lorem Ipsum
+            top_depth: 0.1
+            top_depth_ouom: Lorem Ipsum
+            top_tvd: 0.1
+            top_tvd_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in well_porous_interval data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in well_porous_interval data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete well_porous_interval data
+    description: Delete well_porous_interval data
+    responses:
+      '200':
+        description: well_porous_interval data is deleted
+        content:
+          application/json:
+            example:
+              message: The well_porous_interval data was successfully deleted

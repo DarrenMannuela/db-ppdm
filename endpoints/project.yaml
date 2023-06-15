@@ -1,0 +1,213 @@
+/project:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get project
+    responses:
+      '200':
+        description: get project data to be returned
+        content:
+          application/json:
+            example:
+            - project_id: Lorem Ipsum
+              active_ind: y
+              complete_date: 12/12/2023
+              confidential_ind: y
+              confidential_release_date: 12/12/2023
+              description: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_station_ind: y
+              land_right_ind: y
+              pden_ind: y
+              ppdm_guid: Lorem Ipsum
+              project_name: Lorem Ipsum
+              project_num: Lorem Ipsum
+              project_type: Lorem Ipsum
+              remark: Lorem Ipsum
+              seis_set_ind: y
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              strat_column_ind: y
+              well_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new project
+    description: Create a new project data
+    requestBody:
+      required: true
+      description: Request body to create project data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project'
+          example:
+            project_id: Lorem Ipsum
+            active_ind: y
+            complete_date: 12/12/2023
+            confidential_ind: y
+            confidential_release_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_station_ind: y
+            land_right_ind: y
+            pden_ind: y
+            ppdm_guid: Lorem Ipsum
+            project_name: Lorem Ipsum
+            project_num: Lorem Ipsum
+            project_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_set_ind: y
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            strat_column_ind: y
+            well_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project data is added
+        content:
+          application/json:
+            example:
+              message: The project data was successfully added
+/project/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of project data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new project data
+    description: Update a new project data
+    requestBody:
+      required: true
+      description: Request body to update project data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project'
+          example:
+            project_id: Lorem Ipsum
+            active_ind: y
+            complete_date: 12/12/2023
+            confidential_ind: y
+            confidential_release_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_station_ind: y
+            land_right_ind: y
+            pden_ind: y
+            ppdm_guid: Lorem Ipsum
+            project_name: Lorem Ipsum
+            project_num: Lorem Ipsum
+            project_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_set_ind: y
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            strat_column_ind: y
+            well_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: project data is completely updated
+        content:
+          application/json:
+            example:
+              message: The project data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new project data
+    description: Update a new project data
+    requestBody:
+      required: true
+      description: Request body to update project data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/project'
+          example:
+            project_id: Lorem Ipsum
+            active_ind: y
+            complete_date: 12/12/2023
+            confidential_ind: y
+            confidential_release_date: 12/12/2023
+            description: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_station_ind: y
+            land_right_ind: y
+            pden_ind: y
+            ppdm_guid: Lorem Ipsum
+            project_name: Lorem Ipsum
+            project_num: Lorem Ipsum
+            project_type: Lorem Ipsum
+            remark: Lorem Ipsum
+            seis_set_ind: y
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            strat_column_ind: y
+            well_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in project data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in project data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete project data
+    description: Delete project data
+    responses:
+      '200':
+        description: project data is deleted
+        content:
+          application/json:
+            example:
+              message: The project data was successfully deleted

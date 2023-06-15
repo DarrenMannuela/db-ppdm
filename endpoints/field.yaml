@@ -1,0 +1,185 @@
+/field:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get field
+    responses:
+      '200':
+        description: get field data to be returned
+        content:
+          application/json:
+            example:
+            - field_id: Lorem Ipsum
+              active_ind: y
+              area_id: Lorem Ipsum
+              area_type: Lorem Ipsum
+              discovery_date: 12/12/2023
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              field_abbreviation: Lorem Ipsum
+              field_name: Lorem Ipsum
+              field_type: Lorem Ipsum
+              group_field_id: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new field
+    description: Create a new field data
+    requestBody:
+      required: true
+      description: Request body to create field data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/field'
+          example:
+            field_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            discovery_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_abbreviation: Lorem Ipsum
+            field_name: Lorem Ipsum
+            field_type: Lorem Ipsum
+            group_field_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: field data is added
+        content:
+          application/json:
+            example:
+              message: The field data was successfully added
+/field/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of field data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new field data
+    description: Update a new field data
+    requestBody:
+      required: true
+      description: Request body to update field data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/field'
+          example:
+            field_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            discovery_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_abbreviation: Lorem Ipsum
+            field_name: Lorem Ipsum
+            field_type: Lorem Ipsum
+            group_field_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: field data is completely updated
+        content:
+          application/json:
+            example:
+              message: The field data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new field data
+    description: Update a new field data
+    requestBody:
+      required: true
+      description: Request body to update field data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/field'
+          example:
+            field_id: Lorem Ipsum
+            active_ind: y
+            area_id: Lorem Ipsum
+            area_type: Lorem Ipsum
+            discovery_date: 12/12/2023
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            field_abbreviation: Lorem Ipsum
+            field_name: Lorem Ipsum
+            field_type: Lorem Ipsum
+            group_field_id: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in field data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in field data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete field data
+    description: Delete field data
+    responses:
+      '200':
+        description: field data is deleted
+        content:
+          application/json:
+            example:
+              message: The field data was successfully deleted

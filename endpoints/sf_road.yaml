@@ -1,0 +1,221 @@
+/sf-road:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sf_road
+    responses:
+      '200':
+        description: get sf_road data to be returned
+        content:
+          application/json:
+            example:
+            - sf_subtype: Lorem Ipsum
+              road_id: Lorem Ipsum
+              active_ind: y
+              capacity: 0.1
+              capacity_ouom: Lorem Ipsum
+              communication_freq: 0.1
+              communication_freq_desc: Lorem Ipsum
+              control_type: Lorem Ipsum
+              current_operator_ba_id: Lorem Ipsum
+              direction: Lorem Ipsum
+              driving_side: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              road_length: 0.1
+              road_length_ouom: Lorem Ipsum
+              road_type: Lorem Ipsum
+              road_width: 0.1
+              road_width_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              surface_type: Lorem Ipsum
+              traffic_flow_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sf_road
+    description: Create a new sf_road data
+    requestBody:
+      required: true
+      description: Request body to create sf_road data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_road'
+          example:
+            sf_subtype: Lorem Ipsum
+            road_id: Lorem Ipsum
+            active_ind: y
+            capacity: 0.1
+            capacity_ouom: Lorem Ipsum
+            communication_freq: 0.1
+            communication_freq_desc: Lorem Ipsum
+            control_type: Lorem Ipsum
+            current_operator_ba_id: Lorem Ipsum
+            direction: Lorem Ipsum
+            driving_side: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_length: 0.1
+            road_length_ouom: Lorem Ipsum
+            road_type: Lorem Ipsum
+            road_width: 0.1
+            road_width_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            surface_type: Lorem Ipsum
+            traffic_flow_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_road data is added
+        content:
+          application/json:
+            example:
+              message: The sf_road data was successfully added
+/sf-road/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sf_road data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sf_road data
+    description: Update a new sf_road data
+    requestBody:
+      required: true
+      description: Request body to update sf_road data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_road'
+          example:
+            sf_subtype: Lorem Ipsum
+            road_id: Lorem Ipsum
+            active_ind: y
+            capacity: 0.1
+            capacity_ouom: Lorem Ipsum
+            communication_freq: 0.1
+            communication_freq_desc: Lorem Ipsum
+            control_type: Lorem Ipsum
+            current_operator_ba_id: Lorem Ipsum
+            direction: Lorem Ipsum
+            driving_side: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_length: 0.1
+            road_length_ouom: Lorem Ipsum
+            road_type: Lorem Ipsum
+            road_width: 0.1
+            road_width_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            surface_type: Lorem Ipsum
+            traffic_flow_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sf_road data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sf_road data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sf_road data
+    description: Update a new sf_road data
+    requestBody:
+      required: true
+      description: Request body to update sf_road data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sf_road'
+          example:
+            sf_subtype: Lorem Ipsum
+            road_id: Lorem Ipsum
+            active_ind: y
+            capacity: 0.1
+            capacity_ouom: Lorem Ipsum
+            communication_freq: 0.1
+            communication_freq_desc: Lorem Ipsum
+            control_type: Lorem Ipsum
+            current_operator_ba_id: Lorem Ipsum
+            direction: Lorem Ipsum
+            driving_side: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            road_length: 0.1
+            road_length_ouom: Lorem Ipsum
+            road_type: Lorem Ipsum
+            road_width: 0.1
+            road_width_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            surface_type: Lorem Ipsum
+            traffic_flow_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sf_road data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sf_road data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sf_road data
+    description: Delete sf_road data
+    responses:
+      '200':
+        description: sf_road data is deleted
+        content:
+          application/json:
+            example:
+              message: The sf_road data was successfully deleted

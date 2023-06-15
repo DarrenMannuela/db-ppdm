@@ -1,0 +1,241 @@
+/anl-paleo-maturity:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_paleo_maturity
+    responses:
+      '200':
+        description: get anl_paleo_maturity data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              fluor_color: Lorem Ipsum
+              fluor_intensity_value: 1.0
+              maturity_method_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              sci_color: Lorem Ipsum
+              sci_max: 1.0
+              sci_max_ouom: Lorem Ipsum
+              sci_max_uom: Lorem Ipsum
+              sci_min: 1.0
+              sci_min_ouom: Lorem Ipsum
+              sci_min_uom: Lorem Ipsum
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              tai_color: Lorem Ipsum
+              tai_max: 1.0
+              tai_max_ouom: Lorem Ipsum
+              tai_max_uom: Lorem Ipsum
+              tai_min: 1.0
+              tai_min_ouom: Lorem Ipsum
+              tai_min_uom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_paleo_maturity
+    description: Create a new anl_paleo_maturity data
+    requestBody:
+      required: true
+      description: Request body to create anl_paleo_maturity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_paleo_maturity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_color: Lorem Ipsum
+            fluor_intensity_value: 1.0
+            maturity_method_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sci_color: Lorem Ipsum
+            sci_max: 1.0
+            sci_max_ouom: Lorem Ipsum
+            sci_max_uom: Lorem Ipsum
+            sci_min: 1.0
+            sci_min_ouom: Lorem Ipsum
+            sci_min_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            tai_color: Lorem Ipsum
+            tai_max: 1.0
+            tai_max_ouom: Lorem Ipsum
+            tai_max_uom: Lorem Ipsum
+            tai_min: 1.0
+            tai_min_ouom: Lorem Ipsum
+            tai_min_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_paleo_maturity data is added
+        content:
+          application/json:
+            example:
+              message: The anl_paleo_maturity data was successfully added
+/anl-paleo-maturity/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_paleo_maturity data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_paleo_maturity data
+    description: Update a new anl_paleo_maturity data
+    requestBody:
+      required: true
+      description: Request body to update anl_paleo_maturity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_paleo_maturity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_color: Lorem Ipsum
+            fluor_intensity_value: 1.0
+            maturity_method_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sci_color: Lorem Ipsum
+            sci_max: 1.0
+            sci_max_ouom: Lorem Ipsum
+            sci_max_uom: Lorem Ipsum
+            sci_min: 1.0
+            sci_min_ouom: Lorem Ipsum
+            sci_min_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            tai_color: Lorem Ipsum
+            tai_max: 1.0
+            tai_max_ouom: Lorem Ipsum
+            tai_max_uom: Lorem Ipsum
+            tai_min: 1.0
+            tai_min_ouom: Lorem Ipsum
+            tai_min_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_paleo_maturity data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_paleo_maturity data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_paleo_maturity data
+    description: Update a new anl_paleo_maturity data
+    requestBody:
+      required: true
+      description: Request body to update anl_paleo_maturity data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_paleo_maturity'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            fluor_color: Lorem Ipsum
+            fluor_intensity_value: 1.0
+            maturity_method_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sci_color: Lorem Ipsum
+            sci_max: 1.0
+            sci_max_ouom: Lorem Ipsum
+            sci_max_uom: Lorem Ipsum
+            sci_min: 1.0
+            sci_min_ouom: Lorem Ipsum
+            sci_min_uom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            tai_color: Lorem Ipsum
+            tai_max: 1.0
+            tai_max_ouom: Lorem Ipsum
+            tai_max_uom: Lorem Ipsum
+            tai_min: 1.0
+            tai_min_ouom: Lorem Ipsum
+            tai_min_uom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_paleo_maturity data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_paleo_maturity data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_paleo_maturity data
+    description: Delete anl_paleo_maturity data
+    responses:
+      '200':
+        description: anl_paleo_maturity data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_paleo_maturity data was successfully deleted

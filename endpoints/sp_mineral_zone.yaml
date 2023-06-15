@@ -1,0 +1,189 @@
+/sp-mineral-zone:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get sp_mineral_zone
+    responses:
+      '200':
+        description: get sp_mineral_zone data to be returned
+        content:
+          application/json:
+            example:
+            - spatial_description_id: Lorem Ipsum
+              mineral_zone_id: Lorem Ipsum
+              active_ind: y
+              base_qualifier: Lorem Ipsum
+              base_zone_definition_id: Lorem Ipsum
+              deep_right_reversion_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              inactivation_date: 12/12/2023
+              metes_and_bounds: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              top_qualifier: Lorem Ipsum
+              top_zone_definition_id: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new sp_mineral_zone
+    description: Create a new sp_mineral_zone data
+    requestBody:
+      required: true
+      description: Request body to create sp_mineral_zone data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_mineral_zone'
+          example:
+            spatial_description_id: Lorem Ipsum
+            mineral_zone_id: Lorem Ipsum
+            active_ind: y
+            base_qualifier: Lorem Ipsum
+            base_zone_definition_id: Lorem Ipsum
+            deep_right_reversion_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inactivation_date: 12/12/2023
+            metes_and_bounds: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_qualifier: Lorem Ipsum
+            top_zone_definition_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_mineral_zone data is added
+        content:
+          application/json:
+            example:
+              message: The sp_mineral_zone data was successfully added
+/sp-mineral-zone/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of sp_mineral_zone data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new sp_mineral_zone data
+    description: Update a new sp_mineral_zone data
+    requestBody:
+      required: true
+      description: Request body to update sp_mineral_zone data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_mineral_zone'
+          example:
+            spatial_description_id: Lorem Ipsum
+            mineral_zone_id: Lorem Ipsum
+            active_ind: y
+            base_qualifier: Lorem Ipsum
+            base_zone_definition_id: Lorem Ipsum
+            deep_right_reversion_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inactivation_date: 12/12/2023
+            metes_and_bounds: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_qualifier: Lorem Ipsum
+            top_zone_definition_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: sp_mineral_zone data is completely updated
+        content:
+          application/json:
+            example:
+              message: The sp_mineral_zone data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new sp_mineral_zone data
+    description: Update a new sp_mineral_zone data
+    requestBody:
+      required: true
+      description: Request body to update sp_mineral_zone data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/sp_mineral_zone'
+          example:
+            spatial_description_id: Lorem Ipsum
+            mineral_zone_id: Lorem Ipsum
+            active_ind: y
+            base_qualifier: Lorem Ipsum
+            base_zone_definition_id: Lorem Ipsum
+            deep_right_reversion_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            inactivation_date: 12/12/2023
+            metes_and_bounds: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            top_qualifier: Lorem Ipsum
+            top_zone_definition_id: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in sp_mineral_zone data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in sp_mineral_zone data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete sp_mineral_zone data
+    description: Delete sp_mineral_zone data
+    responses:
+      '200':
+        description: sp_mineral_zone data is deleted
+        content:
+          application/json:
+            example:
+              message: The sp_mineral_zone data was successfully deleted

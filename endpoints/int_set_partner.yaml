@@ -1,0 +1,229 @@
+/int-set-partner:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get int_set_partner
+    responses:
+      '200':
+        description: get int_set_partner data to be returned
+        content:
+          application/json:
+            example:
+            - partner_ba_id: Lorem Ipsum
+              active_ind: y
+              address_source: Lorem Ipsum
+              breach_desc: Lorem Ipsum
+              breach_ind: y
+              change_reason: Lorem Ipsum
+              confidential_ind: y
+              contract_id: Lorem Ipsum
+              effective_date: 12/12/2023
+              escrow_desc: Lorem Ipsum
+              escrow_ind: y
+              expiry_date: 12/12/2023
+              gross_percent_interest: 0.1
+              inactive_date: 12/12/2023
+              instrument_id: Lorem Ipsum
+              net_percent_interest: 0.1
+              penalty_ind: y
+              ppdm_guid: Lorem Ipsum
+              provision_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              right_to_earn_desc: Lorem Ipsum
+              right_to_earn_ind: y
+              source: Lorem Ipsum
+              title_own_type: Lorem Ipsum
+              unit_operated_ind: y
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new int_set_partner
+    description: Create a new int_set_partner data
+    requestBody:
+      required: true
+      description: Request body to create int_set_partner data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_partner'
+          example:
+            partner_ba_id: Lorem Ipsum
+            active_ind: y
+            address_source: Lorem Ipsum
+            breach_desc: Lorem Ipsum
+            breach_ind: y
+            change_reason: Lorem Ipsum
+            confidential_ind: y
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            escrow_desc: Lorem Ipsum
+            escrow_ind: y
+            expiry_date: 12/12/2023
+            gross_percent_interest: 0.1
+            inactive_date: 12/12/2023
+            instrument_id: Lorem Ipsum
+            net_percent_interest: 0.1
+            penalty_ind: y
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            right_to_earn_desc: Lorem Ipsum
+            right_to_earn_ind: y
+            source: Lorem Ipsum
+            title_own_type: Lorem Ipsum
+            unit_operated_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: int_set_partner data is added
+        content:
+          application/json:
+            example:
+              message: The int_set_partner data was successfully added
+/int-set-partner/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of int_set_partner data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new int_set_partner data
+    description: Update a new int_set_partner data
+    requestBody:
+      required: true
+      description: Request body to update int_set_partner data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_partner'
+          example:
+            partner_ba_id: Lorem Ipsum
+            active_ind: y
+            address_source: Lorem Ipsum
+            breach_desc: Lorem Ipsum
+            breach_ind: y
+            change_reason: Lorem Ipsum
+            confidential_ind: y
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            escrow_desc: Lorem Ipsum
+            escrow_ind: y
+            expiry_date: 12/12/2023
+            gross_percent_interest: 0.1
+            inactive_date: 12/12/2023
+            instrument_id: Lorem Ipsum
+            net_percent_interest: 0.1
+            penalty_ind: y
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            right_to_earn_desc: Lorem Ipsum
+            right_to_earn_ind: y
+            source: Lorem Ipsum
+            title_own_type: Lorem Ipsum
+            unit_operated_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: int_set_partner data is completely updated
+        content:
+          application/json:
+            example:
+              message: The int_set_partner data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new int_set_partner data
+    description: Update a new int_set_partner data
+    requestBody:
+      required: true
+      description: Request body to update int_set_partner data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/int_set_partner'
+          example:
+            partner_ba_id: Lorem Ipsum
+            active_ind: y
+            address_source: Lorem Ipsum
+            breach_desc: Lorem Ipsum
+            breach_ind: y
+            change_reason: Lorem Ipsum
+            confidential_ind: y
+            contract_id: Lorem Ipsum
+            effective_date: 12/12/2023
+            escrow_desc: Lorem Ipsum
+            escrow_ind: y
+            expiry_date: 12/12/2023
+            gross_percent_interest: 0.1
+            inactive_date: 12/12/2023
+            instrument_id: Lorem Ipsum
+            net_percent_interest: 0.1
+            penalty_ind: y
+            ppdm_guid: Lorem Ipsum
+            provision_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            right_to_earn_desc: Lorem Ipsum
+            right_to_earn_ind: y
+            source: Lorem Ipsum
+            title_own_type: Lorem Ipsum
+            unit_operated_ind: y
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in int_set_partner data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in int_set_partner data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete int_set_partner data
+    description: Delete int_set_partner data
+    responses:
+      '200':
+        description: int_set_partner data is deleted
+        content:
+          application/json:
+            example:
+              message: The int_set_partner data was successfully deleted

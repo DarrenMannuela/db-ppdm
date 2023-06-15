@@ -1,0 +1,52 @@
+package dto
+
+type Seis_bin_point_version struct {
+	Seis_set_subtype      string   `json:"seis_set_subtype" default:"source"`
+	Seis_set_id           string   `json:"seis_set_id" default:"source"`
+	Bin_grid_id           string   `json:"bin_grid_id" default:"source"`
+	Bin_grid_source       string   `json:"bin_grid_source" default:"source"`
+	Bin_point_id          string   `json:"bin_point_id" default:"source"`
+	Bin_point_obs_no      int      `json:"bin_point_obs_no" default:"1"`
+	Acquisition_id        *string  `json:"acquisition_id" default:""`
+	Active_ind            *string  `json:"active_ind" default:""`
+	Easting               *float64 `json:"easting" default:""`
+	Easting_ouom          *string  `json:"easting_ouom" default:""`
+	Effective_date        *string  `json:"effective_date" default:""`
+	Elev                  *float64 `json:"elev" default:""`
+	Elev_ouom             *string  `json:"elev_ouom" default:""`
+	Ew_direction          *string  `json:"ew_direction" default:""`
+	Ew_distance           *float64 `json:"ew_distance" default:""`
+	Ew_start_line         *string  `json:"ew_start_line" default:""`
+	Expiry_date           *string  `json:"expiry_date" default:""`
+	Geog_coord_system_id  *string  `json:"geog_coord_system_id" default:""`
+	Local_coord_system_id *string  `json:"local_coord_system_id" default:""`
+	Map_coord_system_id   *string  `json:"map_coord_system_id" default:""`
+	Northing              *float64 `json:"northing" default:""`
+	Northing_ouom         *string  `json:"northing_ouom" default:""`
+	North_type            *string  `json:"north_type" default:""`
+	Ns_direction          *string  `json:"ns_direction" default:""`
+	Ns_distance           *float64 `json:"ns_distance" default:""`
+	Ns_start_line         *string  `json:"ns_start_line" default:""`
+	Polar_azimuth         *float64 `json:"polar_azimuth" default:""`
+	Polar_offset          *float64 `json:"polar_offset" default:""`
+	Polar_offset_ouom     *string  `json:"polar_offset_ouom" default:""`
+	Ppdm_guid             *string  `json:"ppdm_guid" default:""`
+	Preferred_ind         *string  `json:"preferred_ind" default:""`
+	Reference_loc         *string  `json:"reference_loc" default:""`
+	Remark                *string  `json:"remark" default:""`
+	Seis_point_label      *string  `json:"seis_point_label" default:""`
+	Seis_point_lat        *float64 `json:"seis_point_lat" default:""`
+	Seis_point_long       *float64 `json:"seis_point_long" default:""`
+	Seis_point_no         *int     `json:"seis_point_no" default:""`
+	Uwi                   *string  `json:"uwi" default:""`
+	Version_type          *string  `json:"version_type" default:""`
+	X_coordinate          *float64 `json:"x_coordinate" default:""`
+	Y_coordinate          *float64 `json:"y_coordinate" default:""`
+	Row_changed_by        *string  `json:"row_changed_by" default:""`
+	Row_changed_date      *string  `json:"row_changed_date" default:""`
+	Row_created_by        *string  `json:"row_created_by" default:""`
+	Row_created_date      *string  `json:"row_created_date" default:""`
+	Row_effective_date    *string  `json:"row_effective_date" default:""`
+	Row_expiry_date       *string  `json:"row_expiry_date" default:""`
+	Row_quality           *string  `json:"row_quality" default:""`
+}

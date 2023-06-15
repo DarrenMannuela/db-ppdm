@@ -1,0 +1,253 @@
+/ppdm-group-object:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get ppdm_group_object
+    responses:
+      '200':
+        description: get ppdm_group_object data to be returned
+        content:
+          application/json:
+            example:
+            - group_id: Lorem Ipsum
+              active_ind: y
+              code_version_source: Lorem Ipsum
+              column_alias_id: Lorem Ipsum
+              column_name: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              group_use: Lorem Ipsum
+              index_id: Lorem Ipsum
+              object_type: Lorem Ipsum
+              output_font: Lorem Ipsum
+              output_font_backgr_color: Lorem Ipsum
+              output_font_color: Lorem Ipsum
+              output_font_effect: Lorem Ipsum
+              output_font_size: 0.1
+              output_font_size_uom: Lorem Ipsum
+              output_heading: Lorem Ipsum
+              output_length_uom: Lorem Ipsum
+              output_precision: 1.0
+              ppdm_guid: Lorem Ipsum
+              preferred_uom: Lorem Ipsum
+              procedure_id: Lorem Ipsum
+              property_set_id: Lorem Ipsum
+              remark: Lorem Ipsum
+              rule_id: Lorem Ipsum
+              source: Lorem Ipsum
+              sw_application_id: Lorem Ipsum
+              system_id: Lorem Ipsum
+              table_alias: Lorem Ipsum
+              table_name: Lorem Ipsum
+              use_rule_description: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new ppdm_group_object
+    description: Create a new ppdm_group_object data
+    requestBody:
+      required: true
+      description: Request body to create ppdm_group_object data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_group_object'
+          example:
+            group_id: Lorem Ipsum
+            active_ind: y
+            code_version_source: Lorem Ipsum
+            column_alias_id: Lorem Ipsum
+            column_name: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_use: Lorem Ipsum
+            index_id: Lorem Ipsum
+            object_type: Lorem Ipsum
+            output_font: Lorem Ipsum
+            output_font_backgr_color: Lorem Ipsum
+            output_font_color: Lorem Ipsum
+            output_font_effect: Lorem Ipsum
+            output_font_size: 0.1
+            output_font_size_uom: Lorem Ipsum
+            output_heading: Lorem Ipsum
+            output_length_uom: Lorem Ipsum
+            output_precision: 1.0
+            ppdm_guid: Lorem Ipsum
+            preferred_uom: Lorem Ipsum
+            procedure_id: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rule_id: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            system_id: Lorem Ipsum
+            table_alias: Lorem Ipsum
+            table_name: Lorem Ipsum
+            use_rule_description: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_group_object data is added
+        content:
+          application/json:
+            example:
+              message: The ppdm_group_object data was successfully added
+/ppdm-group-object/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of ppdm_group_object data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new ppdm_group_object data
+    description: Update a new ppdm_group_object data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_group_object data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_group_object'
+          example:
+            group_id: Lorem Ipsum
+            active_ind: y
+            code_version_source: Lorem Ipsum
+            column_alias_id: Lorem Ipsum
+            column_name: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_use: Lorem Ipsum
+            index_id: Lorem Ipsum
+            object_type: Lorem Ipsum
+            output_font: Lorem Ipsum
+            output_font_backgr_color: Lorem Ipsum
+            output_font_color: Lorem Ipsum
+            output_font_effect: Lorem Ipsum
+            output_font_size: 0.1
+            output_font_size_uom: Lorem Ipsum
+            output_heading: Lorem Ipsum
+            output_length_uom: Lorem Ipsum
+            output_precision: 1.0
+            ppdm_guid: Lorem Ipsum
+            preferred_uom: Lorem Ipsum
+            procedure_id: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rule_id: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            system_id: Lorem Ipsum
+            table_alias: Lorem Ipsum
+            table_name: Lorem Ipsum
+            use_rule_description: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: ppdm_group_object data is completely updated
+        content:
+          application/json:
+            example:
+              message: The ppdm_group_object data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new ppdm_group_object data
+    description: Update a new ppdm_group_object data
+    requestBody:
+      required: true
+      description: Request body to update ppdm_group_object data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ppdm_group_object'
+          example:
+            group_id: Lorem Ipsum
+            active_ind: y
+            code_version_source: Lorem Ipsum
+            column_alias_id: Lorem Ipsum
+            column_name: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            group_use: Lorem Ipsum
+            index_id: Lorem Ipsum
+            object_type: Lorem Ipsum
+            output_font: Lorem Ipsum
+            output_font_backgr_color: Lorem Ipsum
+            output_font_color: Lorem Ipsum
+            output_font_effect: Lorem Ipsum
+            output_font_size: 0.1
+            output_font_size_uom: Lorem Ipsum
+            output_heading: Lorem Ipsum
+            output_length_uom: Lorem Ipsum
+            output_precision: 1.0
+            ppdm_guid: Lorem Ipsum
+            preferred_uom: Lorem Ipsum
+            procedure_id: Lorem Ipsum
+            property_set_id: Lorem Ipsum
+            remark: Lorem Ipsum
+            rule_id: Lorem Ipsum
+            source: Lorem Ipsum
+            sw_application_id: Lorem Ipsum
+            system_id: Lorem Ipsum
+            table_alias: Lorem Ipsum
+            table_name: Lorem Ipsum
+            use_rule_description: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in ppdm_group_object data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in ppdm_group_object data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete ppdm_group_object data
+    description: Delete ppdm_group_object data
+    responses:
+      '200':
+        description: ppdm_group_object data is deleted
+        content:
+          application/json:
+            example:
+              message: The ppdm_group_object data was successfully deleted

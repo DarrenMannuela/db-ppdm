@@ -1,0 +1,46 @@
+package dto
+
+type Paleo_interp struct {
+	Paleo_summary_id           string   `json:"paleo_summary_id" default:"source"`
+	Detail_id                  string   `json:"detail_id" default:"source"`
+	Active_ind                 *string  `json:"active_ind" default:""`
+	Analysis_id                *string  `json:"analysis_id" default:""`
+	Anl_source                 *string  `json:"anl_source" default:""`
+	Base_md                    *float64 `json:"base_md" default:""`
+	Base_md_ouom               *string  `json:"base_md_ouom" default:""`
+	Climate_id                 *string  `json:"climate_id" default:""`
+	Description                *string  `json:"description" default:""`
+	Ecozone_confidence_id      *string  `json:"ecozone_confidence_id" default:""`
+	Ecozone_id                 *string  `json:"ecozone_id" default:""`
+	Ecozone_qualifier_id       *string  `json:"ecozone_qualifier_id" default:""`
+	Effective_date             *string  `json:"effective_date" default:""`
+	Expiry_date                *string  `json:"expiry_date" default:""`
+	From_rel_strat_name_set_id *string  `json:"from_rel_strat_name_set_id" default:""`
+	From_rel_strat_unit_id     *string  `json:"from_rel_strat_unit_id" default:""`
+	From_strat_name_set_id     *string  `json:"from_strat_name_set_id" default:""`
+	From_strat_unit_id         *string  `json:"from_strat_unit_id" default:""`
+	Interp_type                *string  `json:"interp_type" default:""`
+	Lithology_type             *string  `json:"lithology_type" default:""`
+	Lith_structure_id          *string  `json:"lith_structure_id" default:""`
+	Maturation_obs_no          *int     `json:"maturation_obs_no" default:""`
+	Paleo_confidence_id        *string  `json:"paleo_confidence_id" default:""`
+	Paleo_qualifier_id         *string  `json:"paleo_qualifier_id" default:""`
+	Ppdm_guid                  *string  `json:"ppdm_guid" default:""`
+	Preferred_ind              *string  `json:"preferred_ind" default:""`
+	Remark                     *string  `json:"remark" default:""`
+	Source                     *string  `json:"source" default:""`
+	Tai_color                  *string  `json:"tai_color" default:""`
+	Top_md                     *float64 `json:"top_md" default:""`
+	Top_md_ouom                *string  `json:"top_md_ouom" default:""`
+	To_rel_strat_name_set_id   *string  `json:"to_rel_strat_name_set_id" default:""`
+	To_rel_strat_unit_id       *string  `json:"to_rel_strat_unit_id" default:""`
+	To_strat_name_set_id       *string  `json:"to_strat_name_set_id" default:""`
+	To_strat_unit_id           *string  `json:"to_strat_unit_id" default:""`
+	Row_changed_by             *string  `json:"row_changed_by" default:""`
+	Row_changed_date           *string  `json:"row_changed_date" default:""`
+	Row_created_by             *string  `json:"row_created_by" default:""`
+	Row_created_date           *string  `json:"row_created_date" default:""`
+	Row_effective_date         *string  `json:"row_effective_date" default:""`
+	Row_expiry_date            *string  `json:"row_expiry_date" default:""`
+	Row_quality                *string  `json:"row_quality" default:""`
+}

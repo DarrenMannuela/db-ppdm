@@ -1,0 +1,261 @@
+/equipment-use-stat:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get equipment_use_stat
+    responses:
+      '200':
+        description: get equipment_use_stat data to be returned
+        content:
+          application/json:
+            example:
+            - equipment_id: Lorem Ipsum
+              spec_id: Lorem Ipsum
+              active_ind: y
+              average_value: 1.0
+              average_value_ouom: Lorem Ipsum
+              average_value_uom: Lorem Ipsum
+              cost: 0.1
+              currency_conversion: 0.1
+              currency_ouom: Lorem Ipsum
+              currency_uom: Lorem Ipsum
+              date_format_desc: 12/12/2023
+              effective_date: 12/12/2023
+              end_date: 12/12/2023
+              end_time: 12/12/2023
+              equip_use_stat_type: Lorem Ipsum
+              expiry_date: 12/12/2023
+              max_date: 12/12/2023
+              max_value: 1.0
+              max_value_ouom: Lorem Ipsum
+              max_value_uom: Lorem Ipsum
+              min_date: 12/12/2023
+              min_value: 1.0
+              min_value_ouom: Lorem Ipsum
+              min_value_uom: Lorem Ipsum
+              percent_capacity: 0.1
+              ppdm_guid: Lorem Ipsum
+              remark: Lorem Ipsum
+              source: Lorem Ipsum
+              start_date: 12/12/2023
+              start_time: 12/12/2023
+              timezone: Lorem Ipsum
+              use_code: Lorem Ipsum
+              use_desc: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new equipment_use_stat
+    description: Create a new equipment_use_stat data
+    requestBody:
+      required: true
+      description: Request body to create equipment_use_stat data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_use_stat'
+          example:
+            equipment_id: Lorem Ipsum
+            spec_id: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            equip_use_stat_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            percent_capacity: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            start_time: 12/12/2023
+            timezone: Lorem Ipsum
+            use_code: Lorem Ipsum
+            use_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_use_stat data is added
+        content:
+          application/json:
+            example:
+              message: The equipment_use_stat data was successfully added
+/equipment-use-stat/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of equipment_use_stat data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new equipment_use_stat data
+    description: Update a new equipment_use_stat data
+    requestBody:
+      required: true
+      description: Request body to update equipment_use_stat data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_use_stat'
+          example:
+            equipment_id: Lorem Ipsum
+            spec_id: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            equip_use_stat_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            percent_capacity: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            start_time: 12/12/2023
+            timezone: Lorem Ipsum
+            use_code: Lorem Ipsum
+            use_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: equipment_use_stat data is completely updated
+        content:
+          application/json:
+            example:
+              message: The equipment_use_stat data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new equipment_use_stat data
+    description: Update a new equipment_use_stat data
+    requestBody:
+      required: true
+      description: Request body to update equipment_use_stat data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/equipment_use_stat'
+          example:
+            equipment_id: Lorem Ipsum
+            spec_id: Lorem Ipsum
+            active_ind: y
+            average_value: 1.0
+            average_value_ouom: Lorem Ipsum
+            average_value_uom: Lorem Ipsum
+            cost: 0.1
+            currency_conversion: 0.1
+            currency_ouom: Lorem Ipsum
+            currency_uom: Lorem Ipsum
+            date_format_desc: 12/12/2023
+            effective_date: 12/12/2023
+            end_date: 12/12/2023
+            end_time: 12/12/2023
+            equip_use_stat_type: Lorem Ipsum
+            expiry_date: 12/12/2023
+            max_date: 12/12/2023
+            max_value: 1.0
+            max_value_ouom: Lorem Ipsum
+            max_value_uom: Lorem Ipsum
+            min_date: 12/12/2023
+            min_value: 1.0
+            min_value_ouom: Lorem Ipsum
+            min_value_uom: Lorem Ipsum
+            percent_capacity: 0.1
+            ppdm_guid: Lorem Ipsum
+            remark: Lorem Ipsum
+            source: Lorem Ipsum
+            start_date: 12/12/2023
+            start_time: 12/12/2023
+            timezone: Lorem Ipsum
+            use_code: Lorem Ipsum
+            use_desc: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in equipment_use_stat data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in equipment_use_stat data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete equipment_use_stat data
+    description: Delete equipment_use_stat data
+    responses:
+      '200':
+        description: equipment_use_stat data is deleted
+        content:
+          application/json:
+            example:
+              message: The equipment_use_stat data was successfully deleted

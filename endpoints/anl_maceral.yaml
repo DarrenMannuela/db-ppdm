@@ -1,0 +1,197 @@
+/anl-maceral:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get anl_maceral
+    responses:
+      '200':
+        description: get anl_maceral data to be returned
+        content:
+          application/json:
+            example:
+            - analysis_id: Lorem Ipsum
+              anl_source: Lorem Ipsum
+              active_ind: y
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              lithology_desc: Lorem Ipsum
+              maceral_amount_type: Lorem Ipsum
+              ppdm_guid: Lorem Ipsum
+              preferred_ind: y
+              problem_ind: y
+              remark: Lorem Ipsum
+              sample_tot_maceral_val: 1.0
+              sample_tot_maceral_val_ouom: Lorem Ipsum
+              source: Lorem Ipsum
+              substance_id: Lorem Ipsum
+              total_maceral_val: 1.0
+              total_maceral_val_ouom: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new anl_maceral
+    description: Create a new anl_maceral data
+    requestBody:
+      required: true
+      description: Request body to create anl_maceral data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_maceral'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology_desc: Lorem Ipsum
+            maceral_amount_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sample_tot_maceral_val: 1.0
+            sample_tot_maceral_val_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            total_maceral_val: 1.0
+            total_maceral_val_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_maceral data is added
+        content:
+          application/json:
+            example:
+              message: The anl_maceral data was successfully added
+/anl-maceral/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of anl_maceral data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new anl_maceral data
+    description: Update a new anl_maceral data
+    requestBody:
+      required: true
+      description: Request body to update anl_maceral data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_maceral'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology_desc: Lorem Ipsum
+            maceral_amount_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sample_tot_maceral_val: 1.0
+            sample_tot_maceral_val_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            total_maceral_val: 1.0
+            total_maceral_val_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: anl_maceral data is completely updated
+        content:
+          application/json:
+            example:
+              message: The anl_maceral data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new anl_maceral data
+    description: Update a new anl_maceral data
+    requestBody:
+      required: true
+      description: Request body to update anl_maceral data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/anl_maceral'
+          example:
+            analysis_id: Lorem Ipsum
+            anl_source: Lorem Ipsum
+            active_ind: y
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            lithology_desc: Lorem Ipsum
+            maceral_amount_type: Lorem Ipsum
+            ppdm_guid: Lorem Ipsum
+            preferred_ind: y
+            problem_ind: y
+            remark: Lorem Ipsum
+            sample_tot_maceral_val: 1.0
+            sample_tot_maceral_val_ouom: Lorem Ipsum
+            source: Lorem Ipsum
+            substance_id: Lorem Ipsum
+            total_maceral_val: 1.0
+            total_maceral_val_ouom: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in anl_maceral data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in anl_maceral data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete anl_maceral data
+    description: Delete anl_maceral data
+    responses:
+      '200':
+        description: anl_maceral data is deleted
+        content:
+          application/json:
+            example:
+              message: The anl_maceral data was successfully deleted

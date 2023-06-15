@@ -1,0 +1,241 @@
+/cs-coordinate-system:
+  get:
+    security:
+    - Authorization: []
+    tags:
+    - Query
+    summary: Get cs_coordinate_system
+    responses:
+      '200':
+        description: get cs_coordinate_system data to be returned
+        content:
+          application/json:
+            example:
+            - coord_system_id: Lorem Ipsum
+              active_ind: y
+              coordinate_system_type: Lorem Ipsum
+              coord_system_abbreviation: Lorem Ipsum
+              coord_system_area: Lorem Ipsum
+              coord_system_long_name: Lorem Ipsum
+              coord_system_short_name: Lorem Ipsum
+              coord_system_uom: Lorem Ipsum
+              datum_ouom: Lorem Ipsum
+              effective_date: 12/12/2023
+              expiry_date: 12/12/2023
+              geodetic_datum: Lorem Ipsum
+              n_value: 1.0
+              n_value_ouom: Lorem Ipsum
+              owner_ba_id: Lorem Ipsum
+              parent_coord_system_id: Lorem Ipsum
+              perspective_height: 0.1
+              ppdm_guid: Lorem Ipsum
+              prime_meridian: Lorem Ipsum
+              principal_meridian: Lorem Ipsum
+              projection_type: Lorem Ipsum
+              reference_elev: 0.1
+              reference_elev_ouom: Lorem Ipsum
+              remark: Lorem Ipsum
+              rotation_ind: y
+              source: Lorem Ipsum
+              source_document_id: Lorem Ipsum
+              vertical_datum_type: Lorem Ipsum
+              row_changed_by: Lorem Ipsum
+              row_changed_date: 12/12/2023
+              row_created_by: Lorem Ipsum
+              row_created_date: 12/12/2023
+              row_effective_date: 12/12/2023
+              row_expiry_date: 12/12/2023
+              row_quality: Lorem Ipsum
+  post:
+    security:
+    - Authorization: []
+    tags:
+    - Create
+    summary: Post a new cs_coordinate_system
+    description: Create a new cs_coordinate_system data
+    requestBody:
+      required: true
+      description: Request body to create cs_coordinate_system data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coordinate_system'
+          example:
+            coord_system_id: Lorem Ipsum
+            active_ind: y
+            coordinate_system_type: Lorem Ipsum
+            coord_system_abbreviation: Lorem Ipsum
+            coord_system_area: Lorem Ipsum
+            coord_system_long_name: Lorem Ipsum
+            coord_system_short_name: Lorem Ipsum
+            coord_system_uom: Lorem Ipsum
+            datum_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geodetic_datum: Lorem Ipsum
+            n_value: 1.0
+            n_value_ouom: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            parent_coord_system_id: Lorem Ipsum
+            perspective_height: 0.1
+            ppdm_guid: Lorem Ipsum
+            prime_meridian: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            projection_type: Lorem Ipsum
+            reference_elev: 0.1
+            reference_elev_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            rotation_ind: y
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            vertical_datum_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_coordinate_system data is added
+        content:
+          application/json:
+            example:
+              message: The cs_coordinate_system data was successfully added
+/cs-coordinate-system/{id}:
+  parameters:
+  - in: path
+    name: id
+    required: true
+    description: ID of cs_coordinate_system data to fetch
+    schema:
+      type: string
+  put:
+    security:
+    - Authorization: []
+    tags:
+    - Put
+    summary: Update a new cs_coordinate_system data
+    description: Update a new cs_coordinate_system data
+    requestBody:
+      required: true
+      description: Request body to update cs_coordinate_system data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coordinate_system'
+          example:
+            coord_system_id: Lorem Ipsum
+            active_ind: y
+            coordinate_system_type: Lorem Ipsum
+            coord_system_abbreviation: Lorem Ipsum
+            coord_system_area: Lorem Ipsum
+            coord_system_long_name: Lorem Ipsum
+            coord_system_short_name: Lorem Ipsum
+            coord_system_uom: Lorem Ipsum
+            datum_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geodetic_datum: Lorem Ipsum
+            n_value: 1.0
+            n_value_ouom: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            parent_coord_system_id: Lorem Ipsum
+            perspective_height: 0.1
+            ppdm_guid: Lorem Ipsum
+            prime_meridian: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            projection_type: Lorem Ipsum
+            reference_elev: 0.1
+            reference_elev_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            rotation_ind: y
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            vertical_datum_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: cs_coordinate_system data is completely updated
+        content:
+          application/json:
+            example:
+              message: The cs_coordinate_system data is completely updated
+  patch:
+    security:
+    - Authorization: []
+    tags:
+    - Patch
+    summary: Update a new cs_coordinate_system data
+    description: Update a new cs_coordinate_system data
+    requestBody:
+      required: true
+      description: Request body to update cs_coordinate_system data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/cs_coordinate_system'
+          example:
+            coord_system_id: Lorem Ipsum
+            active_ind: y
+            coordinate_system_type: Lorem Ipsum
+            coord_system_abbreviation: Lorem Ipsum
+            coord_system_area: Lorem Ipsum
+            coord_system_long_name: Lorem Ipsum
+            coord_system_short_name: Lorem Ipsum
+            coord_system_uom: Lorem Ipsum
+            datum_ouom: Lorem Ipsum
+            effective_date: 12/12/2023
+            expiry_date: 12/12/2023
+            geodetic_datum: Lorem Ipsum
+            n_value: 1.0
+            n_value_ouom: Lorem Ipsum
+            owner_ba_id: Lorem Ipsum
+            parent_coord_system_id: Lorem Ipsum
+            perspective_height: 0.1
+            ppdm_guid: Lorem Ipsum
+            prime_meridian: Lorem Ipsum
+            principal_meridian: Lorem Ipsum
+            projection_type: Lorem Ipsum
+            reference_elev: 0.1
+            reference_elev_ouom: Lorem Ipsum
+            remark: Lorem Ipsum
+            rotation_ind: y
+            source: Lorem Ipsum
+            source_document_id: Lorem Ipsum
+            vertical_datum_type: Lorem Ipsum
+            row_changed_by: Lorem Ipsum
+            row_changed_date: 12/12/2023
+            row_created_by: Lorem Ipsum
+            row_created_date: 12/12/2023
+            row_effective_date: 12/12/2023
+            row_expiry_date: 12/12/2023
+            row_quality: Lorem Ipsum
+    responses:
+      '200':
+        description: one row in cs_coordinate_system data is updated
+        content:
+          application/json:
+            example:
+              message: The one row in cs_coordinate_system data is updated
+  delete:
+    security:
+    - Authorization: []
+    tags:
+    - Delete
+    summary: Delete cs_coordinate_system data
+    description: Delete cs_coordinate_system data
+    responses:
+      '200':
+        description: cs_coordinate_system data is deleted
+        content:
+          application/json:
+            example:
+              message: The cs_coordinate_system data was successfully deleted
