@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import re
+import shutil
 
 # Specify the path to your CSV file
 folder = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_csv'
@@ -139,13 +140,79 @@ for file in data_types:
 
     closer = "}"
 
+    abbreviation_list = struct_name.split("_")
 
-    with open(f"permen_dto/{struct_name.lower()}.go", 'w') as file:
+    abbreviation = ""
+
+    for word in range(len(abbreviation_list)):
+        if len(abbreviation_list) == 1:
+            abbreviation += abbreviation_list[0]
+        else:
+            get_letter = abbreviation_list[word][0]
+            abbreviation += get_letter
+
+    abbreviation = abbreviation.title()
+    abbreviation += "_id"
+
+    file_name_list = struct_name.split("_")
+    file_name = ""
+
+    for name in file_name_list:
+        file_name += name.title()
+
+
+            
+
+
+    workspace_field = ["Id", "Afe_number"]
+
+    workspace_field.append(abbreviation)
+    print(workspace_field)
+
+
+    content = ""
+
+    for field in range(len(cur_fields)):
+        if cur_fields[field] not in content:
+            content += f'{cur_fields[field].replace(" ", "")}       {field_types[field]}   `json:"{cur_fields[field].replace(" ", "").lower()}" default:""`\n'
+
+    closer = "}"
+
+
+    opener_workspace = "package dto\n\n"+"type Workspace struct{\n\n"
+
+    content_workspace = ""
+
+
+    for field in range(len(workspace_field)):
+        if field == 0:
+            content_workspace += f'{workspace_field[field].replace(" ", "")}       int  `json:"{workspace_field[field].replace(" ", "").lower()}" default:""`\n'
+        else:
+             content_workspace += f'{workspace_field[field]}       *int  `json:"{workspace_field[field].replace(" ", "").lower()}" default:""`\n'
+            
+
+
+    # os.makedirs(f"permen_workspace_dto/{file_name}")
+
+
+    with open(f"permen_workspace_dto/{file_name}/workspace.go", 'w') as file:
+        file.write(opener_workspace+content_workspace+closer)
+
+
+    with open(f"permen_dto/{file_name}.go", 'w') as file:
         file.write(opener+content+closer)
 
 
+    afe = "/Users/darrenmp/Documents/vscode/db-ppdm-copy/temp_dto/Afe.go"
+    submission = "/Users/darrenmp/Documents/vscode/db-ppdm-copy/temp_dto/submission.go"
+    folder = f"permen_workspace_dto/{file_name}/"
 
-print(opener+content+closer)
+
+    shutil.copy(afe, folder)
+    shutil.copy(submission, folder)
+
+
+# print(opener+content+closer)
 
 
 
