@@ -1,0 +1,517 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Print_Technical_Report
+  version: 1.0.0
+  title: Print_Technical_Report
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Print_Technical_Report
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Print_Technical_Report/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Print_Technical_Report AFE
+- name: Workspace
+  description: All endpoints related to Print_Technical_Report Workspace
+- name: Print Technical Report
+  description: All endpoints related to Print_Technical_Report
+- name: Print Technical Report Dummy Data
+  description: All endpoints related to Print_Technical_Report
+paths:
+  /Print-Technical-Report-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Print_Technical_Report AFE
+      responses:
+        '200':
+          description: get Print_Technical_Report AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Print Technical Report
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Print_Technical_Report AFE
+      description: Create a new Print_Technical_Report AFE data
+      requestBody:
+        required: true
+        description: Request body to create Print_Technical_Report AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Print Technical Report
+      responses:
+        '200':
+          description: Print_Technical_Report data is added
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report AFE data was successfully added
+  /Print-Technical-Report-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Print_Technical_Report data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Print_Technical_Report AFE
+      responses:
+        '200':
+          description: get Print_Technical_Report AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Print Technical Report
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Print_Technical_Report AFE data
+      description: Update a new Print_Technical_Report data
+      requestBody:
+        required: true
+        description: Request body to update Print_Technical_Report AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Print Technical Report
+      responses:
+        '200':
+          description: Print_Technical_Report data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report AFE data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Print_Technical_Report AFE data
+      description: Update a new Print_Technical_Report data
+      requestBody:
+        required: true
+        description: Request body to update Print_Technical_Report AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Print Technical Report
+      responses:
+        '200':
+          description: one row in Print_Technical_Report data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Print_Technical_Report AFE data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Print_Technical_Report AFE data
+      description: Delete Print_Technical_Report AFE data
+      responses:
+        '200':
+          description: Print_Technical_Report AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report AFE data was successfully deleted
+  /Print-Technical-Report-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Print_Technical_Report Workspace
+      responses:
+        '200':
+          description: get Print_Technical_Report Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Ptr_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Print_Technical_Report Workspace
+      description: Create a new Print_Technical_Report Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Print_Technical_Report Workspace data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example:
+              Id: 1
+              Afe_number: 1
+              Ptr_id: 1
+      responses:
+        '200':
+          description: Print_Technical_Report Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report Workspace data was successfully
+                  added
+  /Print-Technical-Report-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Print_Technical_Report data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Print_Technical_Report Workspace
+      responses:
+        '200':
+          description: get Print_Technical_Report Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Ptr_id: 1
+  /Print-Technical-Report-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Print_Technical_Report data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Print_Technical_Report Workspace data
+      description: Update a new Print_Technical_Report Workspace Workspace data
+      requestBody:
+        required: true
+        description: Request body to update Print_Technical_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example:
+              Id: 1
+              Afe_number: 1
+              Ptr_id: 1
+      responses:
+        '200':
+          description: Print_Technical_Report Workspace data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report Workspace data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Print_Technical_Report data
+      description: Update a new Print_Technical_Report data
+      requestBody:
+        required: true
+        description: Request body to update Print_Technical_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example:
+              Id: 1
+              Afe_number: 1
+              Ptr_id: 1
+      responses:
+        '200':
+          description: one row in Print_Technical_Report data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Print_Technical_Report Workspace data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Print_Technical_Report Workspace data
+      description: Delete Print_Technical_Report data
+      responses:
+        '200':
+          description: Print_Technical_Report Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report Workspace data was successfully
+                  deleted
+  /Print-Technical-Report:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Print Technical Report
+      summary: Get Print_Technical_Report
+      responses:
+        '200':
+          description: get Print_Technical_Report data to be returned
+          content:
+            application/json:
+              example:
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Title: LoremIpsum
+                Creator_name: LoremIpsum
+                Create_date: LoremIpsum
+                Page_count: LoremIpsum
+                Media_type: LoremIpsum
+                Document_type: LoremIpsum
+                Item_category: LoremIpsum
+                Item_sub_category: LoremIpsum
+                Data_store_name: LoremIpsum
+                Data_store_type: LoremIpsum
+                Location_id: LoremIpsum
+                Remark: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Print Technical Report
+      summary: Post a new Print_Technical_Report
+      description: Create a new Print_Technical_Report data
+      requestBody:
+        required: true
+        description: Request body to create Print_Technical_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example: []
+      responses:
+        '200':
+          description: Print_Technical_Report data is added
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report data was successfully added
+  /Print-Technical-Report/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Print_Technical_Report data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Print Technical Report
+      summary: Get Print_Technical_Report
+      responses:
+        '200':
+          description: get Print_Technical_Report data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Print Technical Report
+      summary: Update a new Print_Technical_Report data
+      description: Update a new Print_Technical_Report data
+      requestBody:
+        required: true
+        description: Request body to update Print_Technical_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example: []
+      responses:
+        '200':
+          description: Print_Technical_Report data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Print Technical Report
+      summary: Update a new Print_Technical_Report data
+      description: Update a new Print_Technical_Report data
+      requestBody:
+        required: true
+        description: Request body to update Print_Technical_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Technical_Report'
+            example: []
+      responses:
+        '200':
+          description: one row in Print_Technical_Report data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Print_Technical_Report data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Print Technical Report
+      summary: Delete Print_Technical_Report data
+      description: Delete Print_Technical_Report data
+      responses:
+        '200':
+          description: Print_Technical_Report data is deleted
+          content:
+            application/json:
+              example:
+                message: The Print_Technical_Report data was successfully deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Print_Technical_Report_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Ptr_id:
+            type: integer
+    Print_Technical_Report:
+      type: object
+      properties:
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Title:
+          type: string
+        Creator_name:
+          type: string
+        Create_date:
+          type: string
+        Page_count:
+          type: string
+        Media_type:
+          type: string
+        Document_type:
+          type: string
+        Item_category:
+          type: string
+        Item_sub_category:
+          type: string
+        Data_store_name:
+          type: string
+        Data_store_type:
+          type: string
+        Location_id:
+          type: string
+        Remark:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

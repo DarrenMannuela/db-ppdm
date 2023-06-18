@@ -1,0 +1,544 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Digital_Image_Well_Log
+  version: 1.0.0
+  title: Digital_Image_Well_Log
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Digital_Image_Well_Log
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Digital_Image_Well_Log/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Digital_Image_Well_Log AFE
+- name: Workspace
+  description: All endpoints related to Digital_Image_Well_Log Workspace
+- name: Digital Image Well Log
+  description: All endpoints related to Digital_Image_Well_Log
+- name: Digital Image Well Log Dummy Data
+  description: All endpoints related to Digital_Image_Well_Log
+paths:
+  /Digital-Image-Well-Log-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Digital_Image_Well_Log AFE
+      responses:
+        '200':
+          description: get Digital_Image_Well_Log AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Digital Image Well Log
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Digital_Image_Well_Log AFE
+      description: Create a new Digital_Image_Well_Log AFE data
+      requestBody:
+        required: true
+        description: Request body to create Digital_Image_Well_Log AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Digital Image Well Log
+      responses:
+        '200':
+          description: Digital_Image_Well_Log data is added
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log AFE data was successfully added
+  /Digital-Image-Well-Log-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Digital_Image_Well_Log data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Digital_Image_Well_Log AFE
+      responses:
+        '200':
+          description: get Digital_Image_Well_Log AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Digital Image Well Log
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Digital_Image_Well_Log AFE data
+      description: Update a new Digital_Image_Well_Log data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Image_Well_Log AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Digital Image Well Log
+      responses:
+        '200':
+          description: Digital_Image_Well_Log data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log AFE data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Digital_Image_Well_Log AFE data
+      description: Update a new Digital_Image_Well_Log data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Image_Well_Log AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Digital Image Well Log
+      responses:
+        '200':
+          description: one row in Digital_Image_Well_Log data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Digital_Image_Well_Log AFE data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Digital_Image_Well_Log AFE data
+      description: Delete Digital_Image_Well_Log AFE data
+      responses:
+        '200':
+          description: Digital_Image_Well_Log AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log AFE data was successfully deleted
+  /Digital-Image-Well-Log-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Digital_Image_Well_Log Workspace
+      responses:
+        '200':
+          description: get Digital_Image_Well_Log Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Diwl_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Digital_Image_Well_Log Workspace
+      description: Create a new Digital_Image_Well_Log Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Digital_Image_Well_Log Workspace data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example:
+              Id: 1
+              Afe_number: 1
+              Diwl_id: 1
+      responses:
+        '200':
+          description: Digital_Image_Well_Log Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log Workspace data was successfully
+                  added
+  /Digital-Image-Well-Log-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Digital_Image_Well_Log data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Digital_Image_Well_Log Workspace
+      responses:
+        '200':
+          description: get Digital_Image_Well_Log Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Diwl_id: 1
+  /Digital-Image-Well-Log-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Digital_Image_Well_Log data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Digital_Image_Well_Log Workspace data
+      description: Update a new Digital_Image_Well_Log Workspace Workspace data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Image_Well_Log data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example:
+              Id: 1
+              Afe_number: 1
+              Diwl_id: 1
+      responses:
+        '200':
+          description: Digital_Image_Well_Log Workspace data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log Workspace data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Digital_Image_Well_Log data
+      description: Update a new Digital_Image_Well_Log data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Image_Well_Log data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example:
+              Id: 1
+              Afe_number: 1
+              Diwl_id: 1
+      responses:
+        '200':
+          description: one row in Digital_Image_Well_Log data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Digital_Image_Well_Log Workspace data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Digital_Image_Well_Log Workspace data
+      description: Delete Digital_Image_Well_Log data
+      responses:
+        '200':
+          description: Digital_Image_Well_Log Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log Workspace data was successfully
+                  deleted
+  /Digital-Image-Well-Log:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Image Well Log
+      summary: Get Digital_Image_Well_Log
+      responses:
+        '200':
+          description: get Digital_Image_Well_Log data to be returned
+          content:
+            application/json:
+              example:
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Field_name: LoremIpsum
+                Well_name: LoremIpsum
+                Uwi: LoremIpsum
+                Logging_company: LoremIpsum
+                Scale_ratio: LoremIpsum
+                Media_type: LoremIpsum
+                Digital_format: LoremIpsum
+                Well_log_class_id: LoremIpsum
+                Log_title: LoremIpsum
+                Report_log_run: LoremIpsum
+                Trip_date: LoremIpsum
+                Top_depth: LoremIpsum
+                Top_depth_ouom: LoremIpsum
+                Base_depth: LoremIpsum
+                Base_depth_ouom: LoremIpsum
+                Original_file_name: LoremIpsum
+                Password: LoremIpsum
+                Digital_size: LoremIpsum
+                Digital_size_uom: LoremIpsum
+                Data_store_name: LoremIpsum
+                Remark: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Image Well Log
+      summary: Post a new Digital_Image_Well_Log
+      description: Create a new Digital_Image_Well_Log data
+      requestBody:
+        required: true
+        description: Request body to create Digital_Image_Well_Log data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example: []
+      responses:
+        '200':
+          description: Digital_Image_Well_Log data is added
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log data was successfully added
+  /Digital-Image-Well-Log/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Digital_Image_Well_Log data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Image Well Log
+      summary: Get Digital_Image_Well_Log
+      responses:
+        '200':
+          description: get Digital_Image_Well_Log data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Image Well Log
+      summary: Update a new Digital_Image_Well_Log data
+      description: Update a new Digital_Image_Well_Log data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Image_Well_Log data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example: []
+      responses:
+        '200':
+          description: Digital_Image_Well_Log data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Image Well Log
+      summary: Update a new Digital_Image_Well_Log data
+      description: Update a new Digital_Image_Well_Log data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Image_Well_Log data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Image_Well_Log'
+            example: []
+      responses:
+        '200':
+          description: one row in Digital_Image_Well_Log data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Digital_Image_Well_Log data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Image Well Log
+      summary: Delete Digital_Image_Well_Log data
+      description: Delete Digital_Image_Well_Log data
+      responses:
+        '200':
+          description: Digital_Image_Well_Log data is deleted
+          content:
+            application/json:
+              example:
+                message: The Digital_Image_Well_Log data was successfully deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Digital_Image_Well_Log_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Diwl_id:
+            type: integer
+    Digital_Image_Well_Log:
+      type: object
+      properties:
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Field_name:
+          type: string
+        Well_name:
+          type: string
+        Uwi:
+          type: string
+        Logging_company:
+          type: string
+        Scale_ratio:
+          type: string
+        Media_type:
+          type: string
+        Digital_format:
+          type: string
+        Well_log_class_id:
+          type: string
+        Log_title:
+          type: string
+        Report_log_run:
+          type: string
+        Trip_date:
+          type: string
+        Top_depth:
+          type: string
+        Top_depth_ouom:
+          type: string
+        Base_depth:
+          type: string
+        Base_depth_ouom:
+          type: string
+        Original_file_name:
+          type: string
+        Password:
+          type: string
+        Digital_size:
+          type: string
+        Digital_size_uom:
+          type: string
+        Data_store_name:
+          type: string
+        Remark:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

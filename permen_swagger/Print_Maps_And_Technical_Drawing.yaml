@@ -1,0 +1,531 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Print_Maps_And_Technical_Drawing
+  version: 1.0.0
+  title: Print_Maps_And_Technical_Drawing
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Print_Maps_And_Technical_Drawing
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Print_Maps_And_Technical_Drawing/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Print_Maps_And_Technical_Drawing AFE
+- name: Workspace
+  description: All endpoints related to Print_Maps_And_Technical_Drawing Workspace
+- name: Print Maps And Technical Drawing
+  description: All endpoints related to Print_Maps_And_Technical_Drawing
+- name: Print Maps And Technical Drawing Dummy Data
+  description: All endpoints related to Print_Maps_And_Technical_Drawing
+paths:
+  /Print-Maps-And-Technical-Drawing-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Print_Maps_And_Technical_Drawing AFE
+      responses:
+        '200':
+          description: get Print_Maps_And_Technical_Drawing AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Print Maps And Technical Drawing
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Print_Maps_And_Technical_Drawing AFE
+      description: Create a new Print_Maps_And_Technical_Drawing AFE data
+      requestBody:
+        required: true
+        description: Request body to create Print_Maps_And_Technical_Drawing AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Print Maps And Technical Drawing
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing data is added
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing AFE data was successfully
+                  added
+  /Print-Maps-And-Technical-Drawing-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Print_Maps_And_Technical_Drawing data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Print_Maps_And_Technical_Drawing AFE
+      responses:
+        '200':
+          description: get Print_Maps_And_Technical_Drawing AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Print Maps And Technical Drawing
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Print_Maps_And_Technical_Drawing AFE data
+      description: Update a new Print_Maps_And_Technical_Drawing data
+      requestBody:
+        required: true
+        description: Request body to update Print_Maps_And_Technical_Drawing AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Print Maps And Technical Drawing
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing AFE data is completely
+                  updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Print_Maps_And_Technical_Drawing AFE data
+      description: Update a new Print_Maps_And_Technical_Drawing data
+      requestBody:
+        required: true
+        description: Request body to update Print_Maps_And_Technical_Drawing AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Print Maps And Technical Drawing
+      responses:
+        '200':
+          description: one row in Print_Maps_And_Technical_Drawing data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Print_Maps_And_Technical_Drawing AFE data
+                  is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Print_Maps_And_Technical_Drawing AFE data
+      description: Delete Print_Maps_And_Technical_Drawing AFE data
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing AFE data was successfully
+                  deleted
+  /Print-Maps-And-Technical-Drawing-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Print_Maps_And_Technical_Drawing Workspace
+      responses:
+        '200':
+          description: get Print_Maps_And_Technical_Drawing Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Pmatd_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Print_Maps_And_Technical_Drawing Workspace
+      description: Create a new Print_Maps_And_Technical_Drawing Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Print_Maps_And_Technical_Drawing Workspace
+          data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example:
+              Id: 1
+              Afe_number: 1
+              Pmatd_id: 1
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing Workspace data was successfully
+                  added
+  /Print-Maps-And-Technical-Drawing-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Print_Maps_And_Technical_Drawing data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Print_Maps_And_Technical_Drawing Workspace
+      responses:
+        '200':
+          description: get Print_Maps_And_Technical_Drawing Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Pmatd_id: 1
+  /Print-Maps-And-Technical-Drawing-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Print_Maps_And_Technical_Drawing data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Print_Maps_And_Technical_Drawing Workspace data
+      description: Update a new Print_Maps_And_Technical_Drawing Workspace Workspace
+        data
+      requestBody:
+        required: true
+        description: Request body to update Print_Maps_And_Technical_Drawing data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example:
+              Id: 1
+              Afe_number: 1
+              Pmatd_id: 1
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing Workspace data is completely
+            updated
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing Workspace data is completely
+                  updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Print_Maps_And_Technical_Drawing data
+      description: Update a new Print_Maps_And_Technical_Drawing data
+      requestBody:
+        required: true
+        description: Request body to update Print_Maps_And_Technical_Drawing data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example:
+              Id: 1
+              Afe_number: 1
+              Pmatd_id: 1
+      responses:
+        '200':
+          description: one row in Print_Maps_And_Technical_Drawing data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Print_Maps_And_Technical_Drawing Workspace
+                  data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Print_Maps_And_Technical_Drawing Workspace data
+      description: Delete Print_Maps_And_Technical_Drawing data
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing Workspace data was successfully
+                  deleted
+  /Print-Maps-And-Technical-Drawing:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Print Maps And Technical Drawing
+      summary: Get Print_Maps_And_Technical_Drawing
+      responses:
+        '200':
+          description: get Print_Maps_And_Technical_Drawing data to be returned
+          content:
+            application/json:
+              example:
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Title: LoremIpsum
+                Creator_name: LoremIpsum
+                Create_date: LoremIpsum
+                Map_scale: LoremIpsum
+                Projection_type: LoremIpsum
+                Geodetic_datum_name: LoremIpsum
+                Media_type: LoremIpsum
+                Document_type: LoremIpsum
+                Item_category: LoremIpsum
+                Data_store_name: LoremIpsum
+                Data_store_type: LoremIpsum
+                Location_id: LoremIpsum
+                Remark: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Print Maps And Technical Drawing
+      summary: Post a new Print_Maps_And_Technical_Drawing
+      description: Create a new Print_Maps_And_Technical_Drawing data
+      requestBody:
+        required: true
+        description: Request body to create Print_Maps_And_Technical_Drawing data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example: []
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing data is added
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing data was successfully
+                  added
+  /Print-Maps-And-Technical-Drawing/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Print_Maps_And_Technical_Drawing data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Print Maps And Technical Drawing
+      summary: Get Print_Maps_And_Technical_Drawing
+      responses:
+        '200':
+          description: get Print_Maps_And_Technical_Drawing data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Print Maps And Technical Drawing
+      summary: Update a new Print_Maps_And_Technical_Drawing data
+      description: Update a new Print_Maps_And_Technical_Drawing data
+      requestBody:
+        required: true
+        description: Request body to update Print_Maps_And_Technical_Drawing data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example: []
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Print Maps And Technical Drawing
+      summary: Update a new Print_Maps_And_Technical_Drawing data
+      description: Update a new Print_Maps_And_Technical_Drawing data
+      requestBody:
+        required: true
+        description: Request body to update Print_Maps_And_Technical_Drawing data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Print_Maps_And_Technical_Drawing'
+            example: []
+      responses:
+        '200':
+          description: one row in Print_Maps_And_Technical_Drawing data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Print_Maps_And_Technical_Drawing data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Print Maps And Technical Drawing
+      summary: Delete Print_Maps_And_Technical_Drawing data
+      description: Delete Print_Maps_And_Technical_Drawing data
+      responses:
+        '200':
+          description: Print_Maps_And_Technical_Drawing data is deleted
+          content:
+            application/json:
+              example:
+                message: The Print_Maps_And_Technical_Drawing data was successfully
+                  deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Print_Maps_And_Technical_Drawing_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Pmatd_id:
+            type: integer
+    Print_Maps_And_Technical_Drawing:
+      type: object
+      properties:
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Title:
+          type: string
+        Creator_name:
+          type: string
+        Create_date:
+          type: string
+        Map_scale:
+          type: string
+        Projection_type:
+          type: string
+        Geodetic_datum_name:
+          type: string
+        Media_type:
+          type: string
+        Document_type:
+          type: string
+        Item_category:
+          type: string
+        Data_store_name:
+          type: string
+        Data_store_type:
+          type: string
+        Location_id:
+          type: string
+        Remark:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

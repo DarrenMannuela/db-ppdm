@@ -1,0 +1,545 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Two_D_Seismic_Process_Data
+  version: 1.0.0
+  title: Two_D_Seismic_Process_Data
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Two_D_Seismic_Process_Data
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Two_D_Seismic_Process_Data/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Two_D_Seismic_Process_Data AFE
+- name: Workspace
+  description: All endpoints related to Two_D_Seismic_Process_Data Workspace
+- name: Two D Seismic Process Data
+  description: All endpoints related to Two_D_Seismic_Process_Data
+- name: Two D Seismic Process Data Dummy Data
+  description: All endpoints related to Two_D_Seismic_Process_Data
+paths:
+  /Two-D-Seismic-Process-Data-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Two_D_Seismic_Process_Data AFE
+      responses:
+        '200':
+          description: get Two_D_Seismic_Process_Data AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Two D Seismic Process Data
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Two_D_Seismic_Process_Data AFE
+      description: Create a new Two_D_Seismic_Process_Data AFE data
+      requestBody:
+        required: true
+        description: Request body to create Two_D_Seismic_Process_Data AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Two D Seismic Process Data
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data data is added
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data AFE data was successfully
+                  added
+  /Two-D-Seismic-Process-Data-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Two_D_Seismic_Process_Data data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Two_D_Seismic_Process_Data AFE
+      responses:
+        '200':
+          description: get Two_D_Seismic_Process_Data AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Two D Seismic Process Data
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Two_D_Seismic_Process_Data AFE data
+      description: Update a new Two_D_Seismic_Process_Data data
+      requestBody:
+        required: true
+        description: Request body to update Two_D_Seismic_Process_Data AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Two D Seismic Process Data
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data AFE data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Two_D_Seismic_Process_Data AFE data
+      description: Update a new Two_D_Seismic_Process_Data data
+      requestBody:
+        required: true
+        description: Request body to update Two_D_Seismic_Process_Data AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Two D Seismic Process Data
+      responses:
+        '200':
+          description: one row in Two_D_Seismic_Process_Data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Two_D_Seismic_Process_Data AFE data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Two_D_Seismic_Process_Data AFE data
+      description: Delete Two_D_Seismic_Process_Data AFE data
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data AFE data was successfully
+                  deleted
+  /Two-D-Seismic-Process-Data-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Two_D_Seismic_Process_Data Workspace
+      responses:
+        '200':
+          description: get Two_D_Seismic_Process_Data Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Tdspd_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Two_D_Seismic_Process_Data Workspace
+      description: Create a new Two_D_Seismic_Process_Data Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Two_D_Seismic_Process_Data Workspace data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example:
+              Id: 1
+              Afe_number: 1
+              Tdspd_id: 1
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data Workspace data was successfully
+                  added
+  /Two-D-Seismic-Process-Data-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Two_D_Seismic_Process_Data data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Two_D_Seismic_Process_Data Workspace
+      responses:
+        '200':
+          description: get Two_D_Seismic_Process_Data Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Tdspd_id: 1
+  /Two-D-Seismic-Process-Data-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Two_D_Seismic_Process_Data data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Two_D_Seismic_Process_Data Workspace data
+      description: Update a new Two_D_Seismic_Process_Data Workspace Workspace data
+      requestBody:
+        required: true
+        description: Request body to update Two_D_Seismic_Process_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example:
+              Id: 1
+              Afe_number: 1
+              Tdspd_id: 1
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data Workspace data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data Workspace data is completely
+                  updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Two_D_Seismic_Process_Data data
+      description: Update a new Two_D_Seismic_Process_Data data
+      requestBody:
+        required: true
+        description: Request body to update Two_D_Seismic_Process_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example:
+              Id: 1
+              Afe_number: 1
+              Tdspd_id: 1
+      responses:
+        '200':
+          description: one row in Two_D_Seismic_Process_Data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Two_D_Seismic_Process_Data Workspace data
+                  is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Two_D_Seismic_Process_Data Workspace data
+      description: Delete Two_D_Seismic_Process_Data data
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data Workspace data was successfully
+                  deleted
+  /Two-D-Seismic-Process-Data:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Seismic Process Data
+      summary: Get Two_D_Seismic_Process_Data
+      responses:
+        '200':
+          description: get Two_D_Seismic_Process_Data data to be returned
+          content:
+            application/json:
+              example:
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Acqtn_survey_name: LoremIpsum
+                Processing_company: LoremIpsum
+                Start_date: LoremIpsum
+                Rcrd_rec_length: LoremIpsum
+                Rcrd_rec_length_ouom: LoremIpsum
+                Rcrd_sample_rate: LoremIpsum
+                Rcrd_sample_rate_ouom: LoremIpsum
+                Line_name: LoremIpsum
+                First_seis_point_id: LoremIpsum
+                Last_seis_point_id: LoremIpsum
+                Create_date: LoremIpsum
+                Proc_set_type: LoremIpsum
+                Media_type: LoremIpsum
+                Tape_number: LoremIpsum
+                Rcrd_format_type: LoremIpsum
+                Polarity: LoremIpsum
+                Data_store_name: LoremIpsum
+                Data_store_type: LoremIpsum
+                Location_id: LoremIpsum
+                Remark: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Seismic Process Data
+      summary: Post a new Two_D_Seismic_Process_Data
+      description: Create a new Two_D_Seismic_Process_Data data
+      requestBody:
+        required: true
+        description: Request body to create Two_D_Seismic_Process_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example: []
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data data is added
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data data was successfully added
+  /Two-D-Seismic-Process-Data/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Two_D_Seismic_Process_Data data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Seismic Process Data
+      summary: Get Two_D_Seismic_Process_Data
+      responses:
+        '200':
+          description: get Two_D_Seismic_Process_Data data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Seismic Process Data
+      summary: Update a new Two_D_Seismic_Process_Data data
+      description: Update a new Two_D_Seismic_Process_Data data
+      requestBody:
+        required: true
+        description: Request body to update Two_D_Seismic_Process_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example: []
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Seismic Process Data
+      summary: Update a new Two_D_Seismic_Process_Data data
+      description: Update a new Two_D_Seismic_Process_Data data
+      requestBody:
+        required: true
+        description: Request body to update Two_D_Seismic_Process_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Two_D_Seismic_Process_Data'
+            example: []
+      responses:
+        '200':
+          description: one row in Two_D_Seismic_Process_Data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Two_D_Seismic_Process_Data data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Seismic Process Data
+      summary: Delete Two_D_Seismic_Process_Data data
+      description: Delete Two_D_Seismic_Process_Data data
+      responses:
+        '200':
+          description: Two_D_Seismic_Process_Data data is deleted
+          content:
+            application/json:
+              example:
+                message: The Two_D_Seismic_Process_Data data was successfully deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Two_D_Seismic_Process_Data_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Tdspd_id:
+            type: integer
+    Two_D_Seismic_Process_Data:
+      type: object
+      properties:
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Acqtn_survey_name:
+          type: string
+        Processing_company:
+          type: string
+        Start_date:
+          type: string
+        Rcrd_rec_length:
+          type: string
+        Rcrd_rec_length_ouom:
+          type: string
+        Rcrd_sample_rate:
+          type: string
+        Rcrd_sample_rate_ouom:
+          type: string
+        Line_name:
+          type: string
+        First_seis_point_id:
+          type: string
+        Last_seis_point_id:
+          type: string
+        Create_date:
+          type: string
+        Proc_set_type:
+          type: string
+        Media_type:
+          type: string
+        Tape_number:
+          type: string
+        Rcrd_format_type:
+          type: string
+        Polarity:
+          type: string
+        Data_store_name:
+          type: string
+        Data_store_type:
+          type: string
+        Location_id:
+          type: string
+        Remark:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

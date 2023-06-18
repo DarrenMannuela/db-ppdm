@@ -1,0 +1,644 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Well_Data
+  version: 1.0.0
+  title: Well_Data
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Well_Data
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Well_Data/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Well_Data AFE
+- name: Workspace
+  description: All endpoints related to Well_Data Workspace
+- name: Well Data
+  description: All endpoints related to Well_Data
+- name: Well Data Dummy Data
+  description: All endpoints related to Well_Data
+paths:
+  /Well-Data-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Well_Data AFE
+      responses:
+        '200':
+          description: get Well_Data AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Well Data
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Well_Data AFE
+      description: Create a new Well_Data AFE data
+      requestBody:
+        required: true
+        description: Request body to create Well_Data AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Well Data
+      responses:
+        '200':
+          description: Well_Data data is added
+          content:
+            application/json:
+              example:
+                message: The Well_Data AFE data was successfully added
+  /Well-Data-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Well_Data data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Well_Data AFE
+      responses:
+        '200':
+          description: get Well_Data AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Well Data
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Well_Data AFE data
+      description: Update a new Well_Data data
+      requestBody:
+        required: true
+        description: Request body to update Well_Data AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Well Data
+      responses:
+        '200':
+          description: Well_Data data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Well_Data AFE data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Well_Data AFE data
+      description: Update a new Well_Data data
+      requestBody:
+        required: true
+        description: Request body to update Well_Data AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Well Data
+      responses:
+        '200':
+          description: one row in Well_Data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Well_Data AFE data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Well_Data AFE data
+      description: Delete Well_Data AFE data
+      responses:
+        '200':
+          description: Well_Data AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Well_Data AFE data was successfully deleted
+  /Well-Data-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Well_Data Workspace
+      responses:
+        '200':
+          description: get Well_Data Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Wd_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Well_Data Workspace
+      description: Create a new Well_Data Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Well_Data Workspace data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example:
+              Id: 1
+              Afe_number: 1
+              Wd_id: 1
+      responses:
+        '200':
+          description: Well_Data Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Well_Data Workspace data was successfully added
+  /Well-Data-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Well_Data data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Well_Data Workspace
+      responses:
+        '200':
+          description: get Well_Data Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Wd_id: 1
+  /Well-Data-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Well_Data data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Well_Data Workspace data
+      description: Update a new Well_Data Workspace Workspace data
+      requestBody:
+        required: true
+        description: Request body to update Well_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example:
+              Id: 1
+              Afe_number: 1
+              Wd_id: 1
+      responses:
+        '200':
+          description: Well_Data Workspace data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Well_Data Workspace data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Well_Data data
+      description: Update a new Well_Data data
+      requestBody:
+        required: true
+        description: Request body to update Well_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example:
+              Id: 1
+              Afe_number: 1
+              Wd_id: 1
+      responses:
+        '200':
+          description: one row in Well_Data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Well_Data Workspace data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Well_Data Workspace data
+      description: Delete Well_Data data
+      responses:
+        '200':
+          description: Well_Data Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Well_Data Workspace data was successfully deleted
+  /Well-Data:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Well Data
+      summary: Get Well_Data
+      responses:
+        '200':
+          description: get Well_Data data to be returned
+          content:
+            application/json:
+              example:
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Field_name: LoremIpsum
+                Well_name: LoremIpsum
+                Alias_long_name: LoremIpsum
+                Uwi: LoremIpsum
+                Status_type: LoremIpsum
+                Current_class: LoremIpsum
+                Well_level_type: LoremIpsum
+                Profile_type: LoremIpsum
+                Projected_strat_unit_id: LoremIpsum
+                Surface_longitude: LoremIpsum
+                Surface_latitude: LoremIpsum
+                Easting: LoremIpsum
+                Easting_ouom: LoremIpsum
+                Northing: LoremIpsum
+                Northing_ouom: LoremIpsum
+                Utm_quadrant: LoremIpsum
+                Projection_type: LoremIpsum
+                Geodetic_datum_name: LoremIpsum
+                Environment_type: LoremIpsum
+                Line_name: LoremIpsum
+                Seis_point_id: LoremIpsum
+                Spud_date: LoremIpsum
+                Final_drill_date: LoremIpsum
+                Completion_date: LoremIpsum
+                Rotary_table_elev: LoremIpsum
+                Rotary_table_elev_ouom: LoremIpsum
+                Kb_elev: LoremIpsum
+                Kb_elev_ouom: LoremIpsum
+                Derrick_floor_elev: LoremIpsum
+                Derrick_floor_elev_ouom: LoremIpsum
+                Water_depth: LoremIpsum
+                Water_depth_ouom: LoremIpsum
+                Ground_elev: LoremIpsum
+                Ground_elev_ouom: LoremIpsum
+                Depth_datum_elev: LoremIpsum
+                Drill_td: LoremIpsum
+                Drill_td_ouom: LoremIpsum
+                Log_td: LoremIpsum
+                Log_td_ouom: LoremIpsum
+                Max_tvd: LoremIpsum
+                Max_tvd_ouom: LoremIpsum
+                Projected_depth: LoremIpsum
+                Projected_depth_ouom: LoremIpsum
+                Final_td: LoremIpsum
+                Final_td_ouom: LoremIpsum
+                Operator_ba_id: LoremIpsum
+                Rig_name: LoremIpsum
+                Rig_type: LoremIpsum
+                Test_result_code: LoremIpsum
+                Remark: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+                Tubing_obs_no: LoremIpsum
+                Outside_diameter: LoremIpsum
+                Outside_diameter_ouom: LoremIpsum
+                Base_depth: LoremIpsum
+                Base_depth_ouom: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Well Data
+      summary: Post a new Well_Data
+      description: Create a new Well_Data data
+      requestBody:
+        required: true
+        description: Request body to create Well_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example: []
+      responses:
+        '200':
+          description: Well_Data data is added
+          content:
+            application/json:
+              example:
+                message: The Well_Data data was successfully added
+  /Well-Data/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Well_Data data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Well Data
+      summary: Get Well_Data
+      responses:
+        '200':
+          description: get Well_Data data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Well Data
+      summary: Update a new Well_Data data
+      description: Update a new Well_Data data
+      requestBody:
+        required: true
+        description: Request body to update Well_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example: []
+      responses:
+        '200':
+          description: Well_Data data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Well_Data data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Well Data
+      summary: Update a new Well_Data data
+      description: Update a new Well_Data data
+      requestBody:
+        required: true
+        description: Request body to update Well_Data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Well_Data'
+            example: []
+      responses:
+        '200':
+          description: one row in Well_Data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Well_Data data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Well Data
+      summary: Delete Well_Data data
+      description: Delete Well_Data data
+      responses:
+        '200':
+          description: Well_Data data is deleted
+          content:
+            application/json:
+              example:
+                message: The Well_Data data was successfully deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Well_Data_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Wd_id:
+            type: integer
+    Well_Data:
+      type: object
+      properties:
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Field_name:
+          type: string
+        Well_name:
+          type: string
+        Alias_long_name:
+          type: string
+        Uwi:
+          type: string
+        Status_type:
+          type: string
+        Current_class:
+          type: string
+        Well_level_type:
+          type: string
+        Profile_type:
+          type: string
+        Projected_strat_unit_id:
+          type: string
+        Surface_longitude:
+          type: string
+        Surface_latitude:
+          type: string
+        Easting:
+          type: string
+        Easting_ouom:
+          type: string
+        Northing:
+          type: string
+        Northing_ouom:
+          type: string
+        Utm_quadrant:
+          type: string
+        Projection_type:
+          type: string
+        Geodetic_datum_name:
+          type: string
+        Environment_type:
+          type: string
+        Line_name:
+          type: string
+        Seis_point_id:
+          type: string
+        Spud_date:
+          type: string
+        Final_drill_date:
+          type: string
+        Completion_date:
+          type: string
+        Rotary_table_elev:
+          type: string
+        Rotary_table_elev_ouom:
+          type: string
+        Kb_elev:
+          type: string
+        Kb_elev_ouom:
+          type: string
+        Derrick_floor_elev:
+          type: string
+        Derrick_floor_elev_ouom:
+          type: string
+        Water_depth:
+          type: string
+        Water_depth_ouom:
+          type: string
+        Ground_elev:
+          type: string
+        Ground_elev_ouom:
+          type: string
+        Depth_datum_elev:
+          type: string
+        Drill_td:
+          type: string
+        Drill_td_ouom:
+          type: string
+        Log_td:
+          type: string
+        Log_td_ouom:
+          type: string
+        Max_tvd:
+          type: string
+        Max_tvd_ouom:
+          type: string
+        Projected_depth:
+          type: string
+        Projected_depth_ouom:
+          type: string
+        Final_td:
+          type: string
+        Final_td_ouom:
+          type: string
+        Operator_ba_id:
+          type: string
+        Rig_name:
+          type: string
+        Rig_type:
+          type: string
+        Test_result_code:
+          type: string
+        Remark:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+        Tubing_obs_no:
+          type: string
+        Outside_diameter:
+          type: string
+        Outside_diameter_ouom:
+          type: string
+        Base_depth:
+          type: string
+        Base_depth_ouom:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

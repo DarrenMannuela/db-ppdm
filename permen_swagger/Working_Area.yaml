@@ -1,0 +1,521 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Working_Area
+  version: 1.0.0
+  title: Working_Area
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Working_Area
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Working_Area/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Working_Area AFE
+- name: Workspace
+  description: All endpoints related to Working_Area Workspace
+- name: Working Area
+  description: All endpoints related to Working_Area
+- name: Working Area Dummy Data
+  description: All endpoints related to Working_Area
+paths:
+  /Working-Area-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Working_Area AFE
+      responses:
+        '200':
+          description: get Working_Area AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Working Area
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Working_Area AFE
+      description: Create a new Working_Area AFE data
+      requestBody:
+        required: true
+        description: Request body to create Working_Area AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Working Area
+      responses:
+        '200':
+          description: Working_Area data is added
+          content:
+            application/json:
+              example:
+                message: The Working_Area AFE data was successfully added
+  /Working-Area-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Working_Area data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Working_Area AFE
+      responses:
+        '200':
+          description: get Working_Area AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Working Area
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Working_Area AFE data
+      description: Update a new Working_Area data
+      requestBody:
+        required: true
+        description: Request body to update Working_Area AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Working Area
+      responses:
+        '200':
+          description: Working_Area data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Working_Area AFE data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Working_Area AFE data
+      description: Update a new Working_Area data
+      requestBody:
+        required: true
+        description: Request body to update Working_Area AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Working Area
+      responses:
+        '200':
+          description: one row in Working_Area data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Working_Area AFE data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Working_Area AFE data
+      description: Delete Working_Area AFE data
+      responses:
+        '200':
+          description: Working_Area AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Working_Area AFE data was successfully deleted
+  /Working-Area-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Working_Area Workspace
+      responses:
+        '200':
+          description: get Working_Area Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Wa_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Working_Area Workspace
+      description: Create a new Working_Area Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Working_Area Workspace data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example:
+              Id: 1
+              Afe_number: 1
+              Wa_id: 1
+      responses:
+        '200':
+          description: Working_Area Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Working_Area Workspace data was successfully added
+  /Working-Area-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Working_Area data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Working_Area Workspace
+      responses:
+        '200':
+          description: get Working_Area Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Wa_id: 1
+  /Working-Area-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Working_Area data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Working_Area Workspace data
+      description: Update a new Working_Area Workspace Workspace data
+      requestBody:
+        required: true
+        description: Request body to update Working_Area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example:
+              Id: 1
+              Afe_number: 1
+              Wa_id: 1
+      responses:
+        '200':
+          description: Working_Area Workspace data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Working_Area Workspace data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Working_Area data
+      description: Update a new Working_Area data
+      requestBody:
+        required: true
+        description: Request body to update Working_Area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example:
+              Id: 1
+              Afe_number: 1
+              Wa_id: 1
+      responses:
+        '200':
+          description: one row in Working_Area data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Working_Area Workspace data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Working_Area Workspace data
+      description: Delete Working_Area data
+      responses:
+        '200':
+          description: Working_Area Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Working_Area Workspace data was successfully deleted
+  /Working-Area:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Working Area
+      summary: Get Working_Area
+      responses:
+        '200':
+          description: get Working_Area data to be returned
+          content:
+            application/json:
+              example:
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Effective_date: LoremIpsum
+                Term_exiry_date: LoremIpsum
+                Contract_type: LoremIpsum
+                R_granted_right_type: LoremIpsum
+                Gross_size: LoremIpsum
+                Gross_size_ouom: LoremIpsum
+                Land_right_category: LoremIpsum
+                Producing_ind: LoremIpsum
+                Original_file_name: LoremIpsum
+                Password: LoremIpsum
+                Digital_size: LoremIpsum
+                Digital_size_uom: LoremIpsum
+                Media_type: LoremIpsum
+                Data_store_name: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Working Area
+      summary: Post a new Working_Area
+      description: Create a new Working_Area data
+      requestBody:
+        required: true
+        description: Request body to create Working_Area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example: []
+      responses:
+        '200':
+          description: Working_Area data is added
+          content:
+            application/json:
+              example:
+                message: The Working_Area data was successfully added
+  /Working-Area/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Working_Area data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Working Area
+      summary: Get Working_Area
+      responses:
+        '200':
+          description: get Working_Area data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Working Area
+      summary: Update a new Working_Area data
+      description: Update a new Working_Area data
+      requestBody:
+        required: true
+        description: Request body to update Working_Area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example: []
+      responses:
+        '200':
+          description: Working_Area data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Working_Area data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Working Area
+      summary: Update a new Working_Area data
+      description: Update a new Working_Area data
+      requestBody:
+        required: true
+        description: Request body to update Working_Area data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Working_Area'
+            example: []
+      responses:
+        '200':
+          description: one row in Working_Area data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Working_Area data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Working Area
+      summary: Delete Working_Area data
+      description: Delete Working_Area data
+      responses:
+        '200':
+          description: Working_Area data is deleted
+          content:
+            application/json:
+              example:
+                message: The Working_Area data was successfully deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Working_Area_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Wa_id:
+            type: integer
+    Working_Area:
+      type: object
+      properties:
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Effective_date:
+          type: string
+        Term_exiry_date:
+          type: string
+        Contract_type:
+          type: string
+        R_granted_right_type:
+          type: string
+        Gross_size:
+          type: string
+        Gross_size_ouom:
+          type: string
+        Land_right_category:
+          type: string
+        Producing_ind:
+          type: string
+        Original_file_name:
+          type: string
+        Password:
+          type: string
+        Digital_size:
+          type: string
+        Digital_size_uom:
+          type: string
+        Media_type:
+          type: string
+        Data_store_name:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

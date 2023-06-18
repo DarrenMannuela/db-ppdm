@@ -1,0 +1,503 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Basin
+  version: 1.0.0
+  title: Basin
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Basin
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Basin/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Basin AFE
+- name: Workspace
+  description: All endpoints related to Basin Workspace
+- name: Basin
+  description: All endpoints related to Basin
+- name: Basin Dummy Data
+  description: All endpoints related to Basin
+paths:
+  /Basin-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Basin AFE
+      responses:
+        '200':
+          description: get Basin AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Basin
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Basin AFE
+      description: Create a new Basin AFE data
+      requestBody:
+        required: true
+        description: Request body to create Basin AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Basin
+      responses:
+        '200':
+          description: Basin data is added
+          content:
+            application/json:
+              example:
+                message: The Basin AFE data was successfully added
+  /Basin-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Basin data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Basin AFE
+      responses:
+        '200':
+          description: get Basin AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Basin
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Basin AFE data
+      description: Update a new Basin data
+      requestBody:
+        required: true
+        description: Request body to update Basin AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Basin
+      responses:
+        '200':
+          description: Basin data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Basin AFE data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Basin AFE data
+      description: Update a new Basin data
+      requestBody:
+        required: true
+        description: Request body to update Basin AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Basin
+      responses:
+        '200':
+          description: one row in Basin data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Basin AFE data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Basin AFE data
+      description: Delete Basin AFE data
+      responses:
+        '200':
+          description: Basin AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Basin AFE data was successfully deleted
+  /Basin-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Basin Workspace
+      responses:
+        '200':
+          description: get Basin Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Basin_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Basin Workspace
+      description: Create a new Basin Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Basin Workspace data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example:
+              Id: 1
+              Afe_number: 1
+              Basin_id: 1
+      responses:
+        '200':
+          description: Basin Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Basin Workspace data was successfully added
+  /Basin-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Basin data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Basin Workspace
+      responses:
+        '200':
+          description: get Basin Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Basin_id: 1
+  /Basin-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Basin data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Basin Workspace data
+      description: Update a new Basin Workspace Workspace data
+      requestBody:
+        required: true
+        description: Request body to update Basin data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example:
+              Id: 1
+              Afe_number: 1
+              Basin_id: 1
+      responses:
+        '200':
+          description: Basin Workspace data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Basin Workspace data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Basin data
+      description: Update a new Basin data
+      requestBody:
+        required: true
+        description: Request body to update Basin data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example:
+              Id: 1
+              Afe_number: 1
+              Basin_id: 1
+      responses:
+        '200':
+          description: one row in Basin data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Basin Workspace data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Basin Workspace data
+      description: Delete Basin data
+      responses:
+        '200':
+          description: Basin Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Basin Workspace data was successfully deleted
+  /Basin:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Basin
+      summary: Get Basin
+      responses:
+        '200':
+          description: get Basin data to be returned
+          content:
+            application/json:
+              example:
+                Project_name: LoremIpsum
+                Strat_name_set_id: LoremIpsum
+                Strat_status: LoremIpsum
+                Product_type: LoremIpsum
+                Reserve_class_id: LoremIpsum
+                Open_balance: LoremIpsum
+                Open_balance_ouom: LoremIpsum
+                Size_type: LoremIpsum
+                Gross_size: LoremIpsum
+                Size_ouom: LoremIpsum
+                Strat_type: LoremIpsum
+                Fault_type: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Basin
+      summary: Post a new Basin
+      description: Create a new Basin data
+      requestBody:
+        required: true
+        description: Request body to create Basin data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example: []
+      responses:
+        '200':
+          description: Basin data is added
+          content:
+            application/json:
+              example:
+                message: The Basin data was successfully added
+  /Basin/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Basin data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Basin
+      summary: Get Basin
+      responses:
+        '200':
+          description: get Basin data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Basin
+      summary: Update a new Basin data
+      description: Update a new Basin data
+      requestBody:
+        required: true
+        description: Request body to update Basin data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example: []
+      responses:
+        '200':
+          description: Basin data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Basin data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Basin
+      summary: Update a new Basin data
+      description: Update a new Basin data
+      requestBody:
+        required: true
+        description: Request body to update Basin data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basin'
+            example: []
+      responses:
+        '200':
+          description: one row in Basin data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Basin data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Basin
+      summary: Delete Basin data
+      description: Delete Basin data
+      responses:
+        '200':
+          description: Basin data is deleted
+          content:
+            application/json:
+              example:
+                message: The Basin data was successfully deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Basin_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Basin_id:
+            type: integer
+    Basin:
+      type: object
+      properties:
+        Project_name:
+          type: string
+        Strat_name_set_id:
+          type: string
+        Strat_status:
+          type: string
+        Product_type:
+          type: string
+        Reserve_class_id:
+          type: string
+        Open_balance:
+          type: string
+        Open_balance_ouom:
+          type: string
+        Size_type:
+          type: string
+        Gross_size:
+          type: string
+        Size_ouom:
+          type: string
+        Strat_type:
+          type: string
+        Fault_type:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token

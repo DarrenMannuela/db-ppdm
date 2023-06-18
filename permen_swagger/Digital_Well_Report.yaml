@@ -1,0 +1,530 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for Digital_Well_Report
+  version: 1.0.0
+  title: Digital_Well_Report
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: Digital_Well_Report
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Digital_Well_Report/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get Digital_Well_Report AFE
+- name: Workspace
+  description: All endpoints related to Digital_Well_Report Workspace
+- name: Digital Well Report
+  description: All endpoints related to Digital_Well_Report
+- name: Digital Well Report Dummy Data
+  description: All endpoints related to Digital_Well_Report
+paths:
+  /Digital-Well-Report-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Digital_Well_Report AFE
+      responses:
+        '200':
+          description: get Digital_Well_Report AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Digital Well Report
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Post a new Digital_Well_Report AFE
+      description: Create a new Digital_Well_Report AFE data
+      requestBody:
+        required: true
+        description: Request body to create Digital_Well_Report AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Digital Well Report
+      responses:
+        '200':
+          description: Digital_Well_Report data is added
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report AFE data was successfully added
+  /Digital-Well-Report-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Digital_Well_Report data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get Digital_Well_Report AFE
+      responses:
+        '200':
+          description: get Digital_Well_Report AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: Digital Well Report
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Digital_Well_Report AFE data
+      description: Update a new Digital_Well_Report data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Well_Report AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Digital Well Report
+      responses:
+        '200':
+          description: Digital_Well_Report data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report AFE data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new Digital_Well_Report AFE data
+      description: Update a new Digital_Well_Report data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Well_Report AFE data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: Digital Well Report
+      responses:
+        '200':
+          description: one row in Digital_Well_Report data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Digital_Well_Report AFE data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete Digital_Well_Report AFE data
+      description: Delete Digital_Well_Report AFE data
+      responses:
+        '200':
+          description: Digital_Well_Report AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report AFE data was successfully deleted
+  /Digital-Well-Report-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Digital_Well_Report Workspace
+      responses:
+        '200':
+          description: get Digital_Well_Report Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Dwr_id: 1
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Post a new Digital_Well_Report Workspace
+      description: Create a new Digital_Well_Report Workspace data
+      requestBody:
+        required: true
+        description: Request body to create Digital_Well_Report Workspace data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example:
+              Id: 1
+              Afe_number: 1
+              Dwr_id: 1
+      responses:
+        '200':
+          description: Digital_Well_Report Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report Workspace data was successfully added
+  /Digital-Well-Report-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of Digital_Well_Report data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get Digital_Well_Report Workspace
+      responses:
+        '200':
+          description: get Digital_Well_Report Workspace data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                Dwr_id: 1
+  /Digital-Well-Report-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Digital_Well_Report data to fetch
+      schema:
+        type: interger
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Digital_Well_Report Workspace data
+      description: Update a new Digital_Well_Report Workspace Workspace data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Well_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example:
+              Id: 1
+              Afe_number: 1
+              Dwr_id: 1
+      responses:
+        '200':
+          description: Digital_Well_Report Workspace data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report Workspace data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new Digital_Well_Report data
+      description: Update a new Digital_Well_Report data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Well_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example:
+              Id: 1
+              Afe_number: 1
+              Dwr_id: 1
+      responses:
+        '200':
+          description: one row in Digital_Well_Report data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Digital_Well_Report Workspace data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete Digital_Well_Report Workspace data
+      description: Delete Digital_Well_Report data
+      responses:
+        '200':
+          description: Digital_Well_Report Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report Workspace data was successfully deleted
+  /Digital-Well-Report:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Well Report
+      summary: Get Digital_Well_Report
+      responses:
+        '200':
+          description: get Digital_Well_Report data to be returned
+          content:
+            application/json:
+              example:
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Field_name: LoremIpsum
+                Well_name: LoremIpsum
+                Uwi: LoremIpsum
+                Title: LoremIpsum
+                Creator_name: LoremIpsum
+                Create_date: LoremIpsum
+                Media_type: LoremIpsum
+                Document_type: LoremIpsum
+                Item_category: LoremIpsum
+                Item_sub_category: LoremIpsum
+                Digital_format: LoremIpsum
+                Data_store_name: LoremIpsum
+                Original_file_name: LoremIpsum
+                Password: LoremIpsum
+                Digital_size: LoremIpsum
+                Digital_size_uom: LoremIpsum
+                Remark: LoremIpsum
+                Source: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Well Report
+      summary: Post a new Digital_Well_Report
+      description: Create a new Digital_Well_Report data
+      requestBody:
+        required: true
+        description: Request body to create Digital_Well_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example: []
+      responses:
+        '200':
+          description: Digital_Well_Report data is added
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report data was successfully added
+  /Digital-Well-Report/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of Digital_Well_Report data to fetch
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Well Report
+      summary: Get Digital_Well_Report
+      responses:
+        '200':
+          description: get Digital_Well_Report data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Well Report
+      summary: Update a new Digital_Well_Report data
+      description: Update a new Digital_Well_Report data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Well_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example: []
+      responses:
+        '200':
+          description: Digital_Well_Report data is completely updated
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report data is completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Well Report
+      summary: Update a new Digital_Well_Report data
+      description: Update a new Digital_Well_Report data
+      requestBody:
+        required: true
+        description: Request body to update Digital_Well_Report data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Digital_Well_Report'
+            example: []
+      responses:
+        '200':
+          description: one row in Digital_Well_Report data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in Digital_Well_Report data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Well Report
+      summary: Delete Digital_Well_Report data
+      description: Delete Digital_Well_Report data
+      responses:
+        '200':
+          description: Digital_Well_Report data is deleted
+          content:
+            application/json:
+              example:
+                message: The Digital_Well_Report data was successfully deleted
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Digital_Well_Report_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          Dwr_id:
+            type: integer
+    Digital_Well_Report:
+      type: object
+      properties:
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Field_name:
+          type: string
+        Well_name:
+          type: string
+        Uwi:
+          type: string
+        Title:
+          type: string
+        Creator_name:
+          type: string
+        Create_date:
+          type: string
+        Media_type:
+          type: string
+        Document_type:
+          type: string
+        Item_category:
+          type: string
+        Item_sub_category:
+          type: string
+        Digital_format:
+          type: string
+        Data_store_name:
+          type: string
+        Original_file_name:
+          type: string
+        Password:
+          type: string
+        Digital_size:
+          type: string
+        Digital_size_uom:
+          type: string
+        Remark:
+          type: string
+        Source:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    Authorization:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Please enter the access token
