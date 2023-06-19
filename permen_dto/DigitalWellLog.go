@@ -1,6 +1,6 @@
 package dto
 
-type Digita_well_log struct{
+type Digital_well_log struct{
 
 Ba_long_name       *string   `json:"ba_long_name" default:""`
 Ba_type       *string   `json:"ba_type" default:""`
