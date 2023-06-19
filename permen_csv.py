@@ -6,6 +6,7 @@ import shutil
 # Specify the path to your CSV file
 folder = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_csv'
 data_types = []
+table_names = []
 
 # Loop through files in the folder and get file names
 for filename in os.listdir(folder):
@@ -110,7 +111,11 @@ for file in data_types:
     #     file.write(str(cur_fields))
 
     get_struct_name = file.split('.')[0]
+
+    table_names.append(get_struct_name)
+
     get_struct_name = get_struct_name.split("_")
+
 
     struct_name = ""
 
@@ -210,6 +215,12 @@ for file in data_types:
 
     shutil.copy(afe, folder)
     shutil.copy(submission, folder)
+
+
+
+with open(f"table_names.txt", 'w') as file:
+    file.write(str(table_names))
+
 
 
 # print(opener+content+closer)
