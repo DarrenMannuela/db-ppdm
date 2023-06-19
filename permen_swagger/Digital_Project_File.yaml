@@ -441,6 +441,26 @@ paths:
             application/json:
               example:
                 message: The Digital_Project_File data was successfully deleted
+  /Digital-Project-File/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Project File Dummy Data
+      summary: Add dummy data to Digital_Project_File
+      responses:
+        '200':
+          description: add data to Digital_Project_File
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

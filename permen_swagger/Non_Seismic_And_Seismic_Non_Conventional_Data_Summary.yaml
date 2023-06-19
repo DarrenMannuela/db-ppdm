@@ -495,6 +495,26 @@ paths:
               example:
                 message: The Non_Seismic_And_Seismic_Non_Conventional_Data_Summary
                   data was successfully deleted
+  /Non-Seismic-And-Seismic-Non-Conventional-Data-Summary/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Non Seismic And Seismic Non Conventional Data Summary Dummy Data
+      summary: Add dummy data to Non_Seismic_And_Seismic_Non_Conventional_Data_Summary
+      responses:
+        '200':
+          description: add data to Non_Seismic_And_Seismic_Non_Conventional_Data_Summary
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

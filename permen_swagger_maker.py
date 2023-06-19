@@ -277,7 +277,12 @@ for file in views:
                                                                 'responses': {'200': {'description': rf'one row in {title} data is updated', 'content': {'application/json': {'example': {'message': rf'The one row in {title} data is updated'}}}}}},
                                                                 
             'delete': {'security': [{'Authorization':[]}], 'tags': [rf'{tag}'], 'summary': rf'Delete {title} data', 'description': rf'Delete {title} data',
-                        'responses':{'200': {'description': rf'{title} data is deleted', 'content': {'application/json': {'example': {'message': rf'The {title} data was successfully deleted'}}}}}}}}
+                        'responses':{'200': {'description': rf'{title} data is deleted', 'content': {'application/json': {'example': {'message': rf'The {title} data was successfully deleted'}}}}}}},
+
+        rf'/{endpoint_name}/'+"{num}": 
+        {'parameters': [{'in': 'path', 'name': 'num', 'required': True, 'description': rf'number of dummy data to add', 'schema':{'type': 'interger'}}],
+            'get':{'security': [{'Authorization':[]}], 'tags': [rf'{tag}'+" Dummy Data"], 'summary': rf'Add dummy data to {title}', 
+                'responses':{'200': {'description': rf'add data to {title}', 'content': {'application/json': {'example': []}}}}}}}
        
        schema[title] = {"type": "object", "properties":{}}
 

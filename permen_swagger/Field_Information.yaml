@@ -431,6 +431,26 @@ paths:
             application/json:
               example:
                 message: The Field_Information data was successfully deleted
+  /Field-Information/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Field Information Dummy Data
+      summary: Add dummy data to Field_Information
+      responses:
+        '200':
+          description: add data to Field_Information
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

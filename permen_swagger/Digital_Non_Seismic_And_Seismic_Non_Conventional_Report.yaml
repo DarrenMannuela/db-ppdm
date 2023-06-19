@@ -505,6 +505,26 @@ paths:
               example:
                 message: The Digital_Non_Seismic_And_Seismic_Non_Conventional_Report
                   data was successfully deleted
+  /Digital-Non-Seismic-And-Seismic-Non-Conventional-Report/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Non Seismic And Seismic Non Conventional Report Dummy Data
+      summary: Add dummy data to Digital_Non_Seismic_And_Seismic_Non_Conventional_Report
+      responses:
+        '200':
+          description: add data to Digital_Non_Seismic_And_Seismic_Non_Conventional_Report
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

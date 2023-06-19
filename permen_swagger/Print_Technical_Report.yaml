@@ -438,6 +438,26 @@ paths:
             application/json:
               example:
                 message: The Print_Technical_Report data was successfully deleted
+  /Print-Technical-Report/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Print Technical Report Dummy Data
+      summary: Add dummy data to Print_Technical_Report
+      responses:
+        '200':
+          description: add data to Print_Technical_Report
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

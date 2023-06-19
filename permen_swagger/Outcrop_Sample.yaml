@@ -443,6 +443,26 @@ paths:
             application/json:
               example:
                 message: The Outcrop_Sample data was successfully deleted
+  /Outcrop-Sample/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Outcrop Sample Dummy Data
+      summary: Add dummy data to Outcrop_Sample
+      responses:
+        '200':
+          description: add data to Outcrop_Sample
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

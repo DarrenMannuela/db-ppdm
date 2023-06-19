@@ -443,6 +443,26 @@ paths:
             application/json:
               example:
                 message: The Digital_Technical_Report data was successfully deleted
+  /Digital-Technical-Report/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Technical Report Dummy Data
+      summary: Add dummy data to Digital_Technical_Report
+      responses:
+        '200':
+          description: add data to Digital_Technical_Report
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

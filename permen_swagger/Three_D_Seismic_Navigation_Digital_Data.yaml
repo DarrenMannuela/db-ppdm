@@ -469,6 +469,26 @@ paths:
               example:
                 message: The Three_D_Seismic_Navigation_Digital_Data data was successfully
                   deleted
+  /Three-D-Seismic-Navigation-Digital-Data/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Three D Seismic Navigation Digital Data Dummy Data
+      summary: Add dummy data to Three_D_Seismic_Navigation_Digital_Data
+      responses:
+        '200':
+          description: add data to Three_D_Seismic_Navigation_Digital_Data
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:
