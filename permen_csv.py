@@ -7,6 +7,8 @@ import shutil
 folder = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_csv'
 data_types = []
 table_names = []
+cur_tables = {}
+
 
 # Loop through files in the folder and get file names
 for filename in os.listdir(folder):
@@ -113,6 +115,7 @@ for file in data_types:
     get_struct_name = file.split('.')[0]
 
     table_names.append(get_struct_name)
+    cur_tables[get_struct_name] = cur_fields
 
     get_struct_name = get_struct_name.split("_")
 
@@ -181,6 +184,8 @@ for file in data_types:
         if cur_fields[field] not in content:
             content += f'{cur_fields[field].replace(" ", "")}       {field_types[field]}   `json:"{cur_fields[field].replace(" ", "").lower()}" default:""`\n'
 
+
+
     closer = "}"
 
 
@@ -224,6 +229,9 @@ for file in data_types:
 with open(f"table_names.txt", 'w') as file:
     file.write(str(table_names))
 
+
+with open(f"table_field_names.txt", 'w') as file:
+    file.write(str(cur_tables))
 
 
 # print(opener+content+closer)
