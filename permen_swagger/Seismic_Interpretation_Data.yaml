@@ -450,6 +450,26 @@ paths:
             application/json:
               example:
                 message: The Seismic_Interpretation_Data data was successfully deleted
+  /Seismic-Interpretation-Data/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Seismic Interpretation Data Dummy Data
+      summary: Add dummy data to Seismic_Interpretation_Data
+      responses:
+        '200':
+          description: add data to Seismic_Interpretation_Data
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

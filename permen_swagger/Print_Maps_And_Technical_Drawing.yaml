@@ -450,6 +450,26 @@ paths:
               example:
                 message: The Print_Maps_And_Technical_Drawing data was successfully
                   deleted
+  /Print-Maps-And-Technical-Drawing/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Print Maps And Technical Drawing Dummy Data
+      summary: Add dummy data to Print_Maps_And_Technical_Drawing
+      responses:
+        '200':
+          description: add data to Print_Maps_And_Technical_Drawing
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

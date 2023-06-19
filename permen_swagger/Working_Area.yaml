@@ -438,6 +438,26 @@ paths:
             application/json:
               example:
                 message: The Working_Area data was successfully deleted
+  /Working-Area/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Working Area Dummy Data
+      summary: Add dummy data to Working_Area
+      responses:
+        '200':
+          description: add data to Working_Area
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

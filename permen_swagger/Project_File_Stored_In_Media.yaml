@@ -444,6 +444,26 @@ paths:
             application/json:
               example:
                 message: The Project_File_Stored_In_Media data was successfully deleted
+  /Project-File-Stored-In-Media/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Project File Stored In Media Dummy Data
+      summary: Add dummy data to Project_File_Stored_In_Media
+      responses:
+        '200':
+          description: add data to Project_File_Stored_In_Media
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:

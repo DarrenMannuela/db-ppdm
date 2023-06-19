@@ -424,6 +424,26 @@ paths:
             application/json:
               example:
                 message: The Bibliography data was successfully deleted
+  /Bibliography/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Bibliography Dummy Data
+      summary: Add dummy data to Bibliography
+      responses:
+        '200':
+          description: add data to Bibliography
+          content:
+            application/json:
+              example: []
 components:
   schemas:
     afe:
