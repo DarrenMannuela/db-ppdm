@@ -282,7 +282,7 @@ for file in views:
         rf'/{endpoint_name}/'+"{num}": 
         {'parameters': [{'in': 'path', 'name': 'num', 'required': True, 'description': rf'number of dummy data to add', 'schema':{'type': 'interger'}}],
             'get':{'security': [{'Authorization':[]}], 'tags': [rf'{tag}'+" Dummy Data"], 'summary': rf'Add dummy data to {title}', 
-                'responses':{'200': {'description': rf'add data to {title}', 'content': {'application/json': {'example': []}}}}}}}
+                'responses':{'200': {'description': rf'add data to {title}', 'content': {'application/json': {}}}}}}}
        
        schema[title] = {"type": "object", "properties":{}}
 
