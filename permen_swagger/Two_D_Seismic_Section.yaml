@@ -446,6 +446,25 @@ paths:
             application/json:
               example:
                 message: The Two_D_Seismic_Section data was successfully deleted
+  /Two-D-Seismic-Section/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Seismic Section Dummy Data
+      summary: Add dummy data to Two_D_Seismic_Section
+      responses:
+        '200':
+          description: add data to Two_D_Seismic_Section
+          content:
+            application/json: {}
 components:
   schemas:
     afe:

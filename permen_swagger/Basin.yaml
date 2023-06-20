@@ -432,6 +432,25 @@ paths:
             application/json:
               example:
                 message: The Basin data was successfully deleted
+  /Basin/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Basin Dummy Data
+      summary: Add dummy data to Basin
+      responses:
+        '200':
+          description: add data to Basin
+          content:
+            application/json: {}
 components:
   schemas:
     afe:

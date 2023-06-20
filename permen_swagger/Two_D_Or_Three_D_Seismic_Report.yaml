@@ -450,6 +450,25 @@ paths:
               example:
                 message: The Two_D_Or_Three_D_Seismic_Report data was successfully
                   deleted
+  /Two-D-Or-Three-D-Seismic-Report/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Two D Or Three D Seismic Report Dummy Data
+      summary: Add dummy data to Two_D_Or_Three_D_Seismic_Report
+      responses:
+        '200':
+          description: add data to Two_D_Or_Three_D_Seismic_Report
+          content:
+            application/json: {}
 components:
   schemas:
     afe:

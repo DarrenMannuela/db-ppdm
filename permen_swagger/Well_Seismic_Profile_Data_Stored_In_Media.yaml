@@ -479,6 +479,25 @@ paths:
               example:
                 message: The Well_Seismic_Profile_Data_Stored_In_Media data was successfully
                   deleted
+  /Well-Seismic-Profile-Data-Stored-In-Media/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Well Seismic Profile Data Stored In Media Dummy Data
+      summary: Add dummy data to Well_Seismic_Profile_Data_Stored_In_Media
+      responses:
+        '200':
+          description: add data to Well_Seismic_Profile_Data_Stored_In_Media
+          content:
+            application/json: {}
 components:
   schemas:
     afe:

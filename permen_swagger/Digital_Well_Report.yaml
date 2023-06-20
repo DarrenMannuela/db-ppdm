@@ -441,6 +441,25 @@ paths:
             application/json:
               example:
                 message: The Digital_Well_Report data was successfully deleted
+  /Digital-Well-Report/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Well Report Dummy Data
+      summary: Add dummy data to Digital_Well_Report
+      responses:
+        '200':
+          description: add data to Digital_Well_Report
+          content:
+            application/json: {}
 components:
   schemas:
     afe:

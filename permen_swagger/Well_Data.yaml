@@ -479,6 +479,25 @@ paths:
             application/json:
               example:
                 message: The Well_Data data was successfully deleted
+  /Well-Data/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Well Data Dummy Data
+      summary: Add dummy data to Well_Data
+      responses:
+        '200':
+          description: add data to Well_Data
+          content:
+            application/json: {}
 components:
   schemas:
     afe:

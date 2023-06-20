@@ -447,6 +447,25 @@ paths:
             application/json:
               example:
                 message: The Digital_Image_Well_Log data was successfully deleted
+  /Digital-Image-Well-Log/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Digital Image Well Log Dummy Data
+      summary: Add dummy data to Digital_Image_Well_Log
+      responses:
+        '200':
+          description: add data to Digital_Image_Well_Log
+          content:
+            application/json: {}
 components:
   schemas:
     afe:

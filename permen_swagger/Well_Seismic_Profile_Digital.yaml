@@ -451,6 +451,25 @@ paths:
             application/json:
               example:
                 message: The Well_Seismic_Profile_Digital data was successfully deleted
+  /Well-Seismic-Profile-Digital/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: interger
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Well Seismic Profile Digital Dummy Data
+      summary: Add dummy data to Well_Seismic_Profile_Digital
+      responses:
+        '200':
+          description: add data to Well_Seismic_Profile_Digital
+          content:
+            application/json: {}
 components:
   schemas:
     afe:
