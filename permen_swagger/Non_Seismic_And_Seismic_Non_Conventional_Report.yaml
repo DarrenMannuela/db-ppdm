@@ -46,9 +46,10 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Non Seismic And Seismic Non Conventional Report
+              user_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Afe
       summary: Post a new Non_Seismic_And_Seismic_Non_Conventional_Report AFE
@@ -69,6 +70,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Non Seismic And Seismic Non Conventional Report
+            user_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Report data is added
@@ -105,6 +107,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Non Seismic And Seismic Non Conventional Report
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -127,6 +130,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Non Seismic And Seismic Non Conventional Report
+            user_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Report data is completely
@@ -158,6 +162,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Non Seismic And Seismic Non Conventional Report
+            user_id: 1
       responses:
         '200':
           description: one row in Non_Seismic_And_Seismic_Non_Conventional_Report
@@ -199,10 +204,10 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Nsasncr_id: 1
+                Non_seismic_and_seismic_non_conventional_report_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Workspace
       summary: Post a new Non_Seismic_And_Seismic_Non_Conventional_Report Workspace
@@ -219,7 +224,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Nsasncr_id: 1
+              Non_seismic_and_seismic_non_conventional_report_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Report Workspace data
@@ -253,7 +258,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Nsasncr_id: 1
+                Non_seismic_and_seismic_non_conventional_report_id: 1
   /Non-Seismic-And-Seismic-Non-Conventional-Report-workspace/{id}:
     parameters:
     - in: path
@@ -282,7 +287,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Nsasncr_id: 1
+              Non_seismic_and_seismic_non_conventional_report_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Report Workspace data
@@ -310,7 +315,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Nsasncr_id: 1
+              Non_seismic_and_seismic_non_conventional_report_id: 1
       responses:
         '200':
           description: one row in Non_Seismic_And_Seismic_Non_Conventional_Report
@@ -370,7 +375,7 @@ paths:
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Non Seismic And Seismic Non Conventional Report
       summary: Post a new Non_Seismic_And_Seismic_Non_Conventional_Report
@@ -526,7 +531,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Nsasncr_id:
+          Non_seismic_and_seismic_non_conventional_report_id:
             type: integer
     Non_Seismic_And_Seismic_Non_Conventional_Report:
       type: object
@@ -568,8 +573,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

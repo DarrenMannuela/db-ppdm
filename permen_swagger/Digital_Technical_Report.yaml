@@ -43,9 +43,10 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Digital Technical Report
+              user_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Afe
       summary: Post a new Digital_Technical_Report AFE
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Technical Report
+            user_id: 1
       responses:
         '200':
           description: Digital_Technical_Report data is added
@@ -97,6 +99,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Digital Technical Report
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -118,6 +121,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Technical Report
+            user_id: 1
       responses:
         '200':
           description: Digital_Technical_Report data is completely updated
@@ -146,6 +150,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Technical Report
+            user_id: 1
       responses:
         '200':
           description: one row in Digital_Technical_Report data is updated
@@ -182,10 +187,10 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Dtr_id: 1
+                Digital_technical_report_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Workspace
       summary: Post a new Digital_Technical_Report Workspace
@@ -200,7 +205,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dtr_id: 1
+              Digital_technical_report_id: 1
       responses:
         '200':
           description: Digital_Technical_Report Workspace data is added
@@ -231,7 +236,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Dtr_id: 1
+                Digital_technical_report_id: 1
   /Digital-Technical-Report-workspace/{id}:
     parameters:
     - in: path
@@ -257,7 +262,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dtr_id: 1
+              Digital_technical_report_id: 1
       responses:
         '200':
           description: Digital_Technical_Report Workspace data is completely updated
@@ -283,7 +288,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dtr_id: 1
+              Digital_technical_report_id: 1
       responses:
         '200':
           description: one row in Digital_Technical_Report data is updated
@@ -344,7 +349,7 @@ paths:
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Digital Technical Report
       summary: Post a new Digital_Technical_Report
@@ -490,7 +495,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Dtr_id:
+          Digital_technical_report_id:
             type: integer
     Digital_Technical_Report:
       type: object
@@ -540,8 +545,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

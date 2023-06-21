@@ -44,9 +44,10 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Three D Seismic Processed Digital Data
+              user_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Afe
       summary: Post a new Three_D_Seismic_Processed_Digital_Data AFE
@@ -66,6 +67,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Processed Digital Data
+            user_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Processed_Digital_Data data is added
@@ -100,6 +102,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Three D Seismic Processed Digital Data
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -122,6 +125,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Processed Digital Data
+            user_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Processed_Digital_Data data is completely updated
@@ -152,6 +156,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Processed Digital Data
+            user_id: 1
       responses:
         '200':
           description: one row in Three_D_Seismic_Processed_Digital_Data data is updated
@@ -191,10 +196,10 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdspdd_id: 1
+                Three_d_seismic_processed_digital_data_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Workspace
       summary: Post a new Three_D_Seismic_Processed_Digital_Data Workspace
@@ -210,7 +215,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdspdd_id: 1
+              Three_d_seismic_processed_digital_data_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Processed_Digital_Data Workspace data is added
@@ -242,7 +247,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdspdd_id: 1
+                Three_d_seismic_processed_digital_data_id: 1
   /Three-D-Seismic-Processed-Digital-Data-workspace/{id}:
     parameters:
     - in: path
@@ -270,7 +275,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdspdd_id: 1
+              Three_d_seismic_processed_digital_data_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Processed_Digital_Data Workspace data is completely
@@ -298,7 +303,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdspdd_id: 1
+              Three_d_seismic_processed_digital_data_id: 1
       responses:
         '200':
           description: one row in Three_D_Seismic_Processed_Digital_Data data is updated
@@ -367,7 +372,7 @@ paths:
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Three D Seismic Processed Digital Data
       summary: Post a new Three_D_Seismic_Processed_Digital_Data
@@ -520,7 +525,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Tdspdd_id:
+          Three_d_seismic_processed_digital_data_id:
             type: integer
     Three_D_Seismic_Processed_Digital_Data:
       type: object
@@ -586,8 +591,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

@@ -43,9 +43,10 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Or Three D Seismic Report
+              user_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Afe
       summary: Post a new Two_D_Or_Three_D_Seismic_Report AFE
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Or Three D Seismic Report
+            user_id: 1
       responses:
         '200':
           description: Two_D_Or_Three_D_Seismic_Report data is added
@@ -98,6 +100,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Or Three D Seismic Report
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -119,6 +122,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Or Three D Seismic Report
+            user_id: 1
       responses:
         '200':
           description: Two_D_Or_Three_D_Seismic_Report data is completely updated
@@ -148,6 +152,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Or Three D Seismic Report
+            user_id: 1
       responses:
         '200':
           description: one row in Two_D_Or_Three_D_Seismic_Report data is updated
@@ -186,10 +191,10 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdotdsr_id: 1
+                Two_d_or_three_d_seismic_report_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Workspace
       summary: Post a new Two_D_Or_Three_D_Seismic_Report Workspace
@@ -205,7 +210,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdotdsr_id: 1
+              Two_d_or_three_d_seismic_report_id: 1
       responses:
         '200':
           description: Two_D_Or_Three_D_Seismic_Report Workspace data is added
@@ -236,7 +241,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdotdsr_id: 1
+                Two_d_or_three_d_seismic_report_id: 1
   /Two-D-Or-Three-D-Seismic-Report-workspace/{id}:
     parameters:
     - in: path
@@ -263,7 +268,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdotdsr_id: 1
+              Two_d_or_three_d_seismic_report_id: 1
       responses:
         '200':
           description: Two_D_Or_Three_D_Seismic_Report Workspace data is completely
@@ -290,7 +295,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdotdsr_id: 1
+              Two_d_or_three_d_seismic_report_id: 1
       responses:
         '200':
           description: one row in Two_D_Or_Three_D_Seismic_Report data is updated
@@ -349,7 +354,7 @@ paths:
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Two D Or Three D Seismic Report
       summary: Post a new Two_D_Or_Three_D_Seismic_Report
@@ -497,7 +502,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Tdotdsr_id:
+          Two_d_or_three_d_seismic_report_id:
             type: integer
     Two_D_Or_Three_D_Seismic_Report:
       type: object
@@ -543,8 +548,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

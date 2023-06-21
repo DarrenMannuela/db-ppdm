@@ -46,9 +46,10 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Three D Seismic Field Data Stored In Media
+              user_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Afe
       summary: Post a new Three_D_Seismic_Field_Data_Stored_In_Media AFE
@@ -68,6 +69,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Field Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Field_Data_Stored_In_Media data is added
@@ -103,6 +105,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Three D Seismic Field Data Stored In Media
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -125,6 +128,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Field Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Field_Data_Stored_In_Media data is completely
@@ -156,6 +160,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Field Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: one row in Three_D_Seismic_Field_Data_Stored_In_Media data
@@ -196,10 +201,10 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdsfdsim_id: 1
+                Three_d_seismic_field_data_stored_in_media_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Workspace
       summary: Post a new Three_D_Seismic_Field_Data_Stored_In_Media Workspace
@@ -216,7 +221,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsfdsim_id: 1
+              Three_d_seismic_field_data_stored_in_media_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Field_Data_Stored_In_Media Workspace data is
@@ -249,7 +254,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdsfdsim_id: 1
+                Three_d_seismic_field_data_stored_in_media_id: 1
   /Three-D-Seismic-Field-Data-Stored-In-Media-workspace/{id}:
     parameters:
     - in: path
@@ -277,7 +282,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsfdsim_id: 1
+              Three_d_seismic_field_data_stored_in_media_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Field_Data_Stored_In_Media Workspace data is
@@ -305,7 +310,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsfdsim_id: 1
+              Three_d_seismic_field_data_stored_in_media_id: 1
       responses:
         '200':
           description: one row in Three_D_Seismic_Field_Data_Stored_In_Media data
@@ -372,7 +377,7 @@ paths:
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Three D Seismic Field Data Stored In Media
       summary: Post a new Three_D_Seismic_Field_Data_Stored_In_Media
@@ -527,7 +532,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Tdsfdsim_id:
+          Three_d_seismic_field_data_stored_in_media_id:
             type: integer
     Three_D_Seismic_Field_Data_Stored_In_Media:
       type: object
@@ -585,8 +590,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

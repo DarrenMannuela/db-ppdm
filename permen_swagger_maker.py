@@ -107,7 +107,7 @@ for file in views:
             tag += seperated[word]+" "
     
 
-    cur_table = {'components': {'schemas': {}, 'securitySchemes': {'Authorization': {'type': 'http', 'scheme': 'bearer', 'bearerFormat': 'JWT', 'description': 'Please enter the access token'}}}}
+    cur_table = {'components': {'schemas': {}, 'securitySchemes': {'OAuth2PasswordBearer': {'type': 'oauth2', "flows": {"password":{"scopes": {}, "tokenUrl": "v1/token"}}}}}}
 
     cur_table['components']["schemas"].update(afe_struct_filler())
 
@@ -134,7 +134,7 @@ for file in views:
     afe_endpoint = {rf'/{endpoint_name}'+"-afe": 
             {'get':{'security': [{'Authorization':[]}], 'tags': ['Afe'], 'summary': rf'Get {title} AFE', 
                     'responses':{'200': {'description': rf'get {title} AFE data to be returned', 'content': {'application/json': {'example': [[]]}}}}}, 
-            'post': {'security': [{'Authorization': []}], 'tags': ['Afe'], 'summary': rf'Post a new {title} AFE', 
+            'post': {'security': [{'OAuth2PasswordBearer': []}], 'tags': ['Afe'], 'summary': rf'Post a new {title} AFE', 
                     'description': rf'Create a new {title} AFE data', 
                     'requestBody': {'required': True, 'description': rf'Request body to create {title} AFE data', 
                                         'content': {'application/json': {'schema': {"$ref": rf'#/components/schemas/{title}'}, 
@@ -201,7 +201,7 @@ for file in views:
             workspace_endpoint = {rf'/{endpoint_name}'+"-workspace": 
             {'get':{'security': [{'Authorization':[]}], 'tags': ['Workspace'], 'summary': rf'Get {title} Workspace', 
                     'responses':{'200': {'description': rf'get {title} Workspace data to be returned', 'content': {'application/json': {'example': [[]]}}}}}, 
-            'post': {'security': [{'Authorization': []}], 'tags': ['Workspace'], 'summary': rf'Post a new {title} Workspace', 
+            'post': {'security': [{'OAuth2PasswordBearer': []}], 'tags': ['Workspace'], 'summary': rf'Post a new {title} Workspace', 
                     'description': rf'Create a new {title} Workspace data', 
                     'requestBody': {'required': True, 'description': rf'Request body to create {title} Workspace data', 
                                         'content': {'application/json': {'schema': {"$ref": rf'#/components/schemas/{title}'}, 
@@ -256,7 +256,7 @@ for file in views:
        endpoint = {rf'/{endpoint_name}': 
         {'get':{'security': [{'Authorization':[]}], 'tags': [rf'{tag}'], 'summary': rf'Get {title}', 
                 'responses':{'200': {'description': rf'get {title} data to be returned', 'content': {'application/json': {'example': [[]]}}}}}, 
-        'post': {'security': [{'Authorization': []}], 'tags': [rf'{tag}'], 'summary': rf'Post a new {title}', 
+        'post': {'security': [{'OAuth2PasswordBearer': []}], 'tags': [rf'{tag}'], 'summary': rf'Post a new {title}', 
                 'description': rf'Create a new {title} data', 
                 'requestBody': {'required': True, 'description': rf'Request body to create {title} data', 
                                     'content': {'application/json': {'schema': {"$ref": rf'#/components/schemas/{title}'}, 
@@ -326,7 +326,7 @@ for file in views:
     #     #    endpoints = {rf'/{title_name}': 
     #               {'get':{'security': [{'Authorization':[]}], 'tags': ['Query'], 'summary': rf'Get {title}', 
     #                        'responses':{'200': {'description': rf'get {title} data to be returned', 'content': {'application/json': {'example': [{}]}}}}}, 
-    #               'post': {'security': [{'Authorization': []}], 'tags': ['Create'], 'summary': rf'Post a new {title}', 
+    #               'post': {'security': [{'OAuth2PasswordBearer': []}], 'tags': ['Create'], 'summary': rf'Post a new {title}', 
     #                        'description': rf'Create a new {title} data', 
     #                        'requestBody': {'required': True, 'description': rf'Request body to create {title} data', 
     #                                          'content': {'application/json': {'schema': {"$ref": rf'#/components/schemas/{title}'}, 

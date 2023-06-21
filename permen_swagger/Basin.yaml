@@ -43,9 +43,10 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Basin
+              user_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Afe
       summary: Post a new Basin AFE
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Basin
+            user_id: 1
       responses:
         '200':
           description: Basin data is added
@@ -97,6 +99,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Basin
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -118,6 +121,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Basin
+            user_id: 1
       responses:
         '200':
           description: Basin data is completely updated
@@ -146,6 +150,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Basin
+            user_id: 1
       responses:
         '200':
           description: one row in Basin data is updated
@@ -185,7 +190,7 @@ paths:
                 Basin_id: 1
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Workspace
       summary: Post a new Basin Workspace
@@ -333,7 +338,7 @@ paths:
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
-      - Authorization: []
+      - OAuth2PasswordBearer: []
       tags:
       - Basin
       summary: Post a new Basin
@@ -515,8 +520,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token
