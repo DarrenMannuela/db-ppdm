@@ -46,6 +46,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Seismic Navigation Data Stored In Media
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -69,6 +70,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Navigation Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Data_Stored_In_Media data is added
@@ -104,6 +106,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Seismic Navigation Data Stored In Media
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -126,6 +129,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Navigation Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Data_Stored_In_Media data is completely
@@ -157,6 +161,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Navigation Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: one row in Two_D_Seismic_Navigation_Data_Stored_In_Media data
@@ -197,7 +202,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdsndsim_id: 1
+                Two_d_seismic_navigation_data_stored_in_media_id: 1
     post:
       security:
       - Authorization: []
@@ -217,7 +222,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsndsim_id: 1
+              Two_d_seismic_navigation_data_stored_in_media_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Data_Stored_In_Media Workspace data
@@ -250,7 +255,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdsndsim_id: 1
+                Two_d_seismic_navigation_data_stored_in_media_id: 1
   /Two-D-Seismic-Navigation-Data-Stored-In-Media-workspace/{id}:
     parameters:
     - in: path
@@ -279,7 +284,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsndsim_id: 1
+              Two_d_seismic_navigation_data_stored_in_media_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Data_Stored_In_Media Workspace data
@@ -307,7 +312,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsndsim_id: 1
+              Two_d_seismic_navigation_data_stored_in_media_id: 1
       responses:
         '200':
           description: one row in Two_D_Seismic_Navigation_Data_Stored_In_Media data
@@ -524,7 +529,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Tdsndsim_id:
+          Two_d_seismic_navigation_data_stored_in_media_id:
             type: integer
     Two_D_Seismic_Navigation_Data_Stored_In_Media:
       type: object
@@ -568,8 +573,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

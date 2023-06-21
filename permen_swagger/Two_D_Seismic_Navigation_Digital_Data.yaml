@@ -44,6 +44,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Seismic Navigation Digital Data
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -66,6 +67,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Navigation Digital Data
+            user_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Digital_Data data is added
@@ -100,6 +102,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Seismic Navigation Digital Data
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -122,6 +125,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Navigation Digital Data
+            user_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Digital_Data data is completely updated
@@ -152,6 +156,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Navigation Digital Data
+            user_id: 1
       responses:
         '200':
           description: one row in Two_D_Seismic_Navigation_Digital_Data data is updated
@@ -191,7 +196,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdsndd_id: 1
+                Two_d_seismic_navigation_digital_data_id: 1
     post:
       security:
       - Authorization: []
@@ -210,7 +215,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsndd_id: 1
+              Two_d_seismic_navigation_digital_data_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Digital_Data Workspace data is added
@@ -242,7 +247,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdsndd_id: 1
+                Two_d_seismic_navigation_digital_data_id: 1
   /Two-D-Seismic-Navigation-Digital-Data-workspace/{id}:
     parameters:
     - in: path
@@ -270,7 +275,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsndd_id: 1
+              Two_d_seismic_navigation_digital_data_id: 1
       responses:
         '200':
           description: Two_D_Seismic_Navigation_Digital_Data Workspace data is completely
@@ -298,7 +303,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdsndd_id: 1
+              Two_d_seismic_navigation_digital_data_id: 1
       responses:
         '200':
           description: one row in Two_D_Seismic_Navigation_Digital_Data data is updated
@@ -510,7 +515,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Tdsndd_id:
+          Two_d_seismic_navigation_digital_data_id:
             type: integer
     Two_D_Seismic_Navigation_Digital_Data:
       type: object
@@ -556,8 +561,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token
