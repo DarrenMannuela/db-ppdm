@@ -14,7 +14,8 @@ def afe_filler():
                     "kkks_name": "LoremIpsum",
                     "working_area": "LoremIpsum",
                     "submission_type": "Lorem",
-                    "data_type": rf"{tag}"}
+                    "data_type": rf"{tag}"},
+                    "user_id": 1
                     }
     return afe_example
 
