@@ -47,6 +47,7 @@ paths:
                 submission_type: Lorem
                 data_type: Non Seismic And Seismic Non Conventional Data Stored In
                   Media
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -71,6 +72,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Non Seismic And Seismic Non Conventional Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Data_Stored_In_Media
@@ -109,6 +111,7 @@ paths:
                 submission_type: Lorem
                 data_type: Non Seismic And Seismic Non Conventional Data Stored In
                   Media
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -133,6 +136,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Non Seismic And Seismic Non Conventional Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Data_Stored_In_Media
@@ -166,6 +170,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Non Seismic And Seismic Non Conventional Data Stored In Media
+            user_id: 1
       responses:
         '200':
           description: one row in Non_Seismic_And_Seismic_Non_Conventional_Data_Stored_In_Media
@@ -209,7 +214,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Nsasncdsim_id: 1
+                Non_seismic_and_seismic_non_conventional_data_stored_in_media_id: 1
     post:
       security:
       - Authorization: []
@@ -230,7 +235,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Nsasncdsim_id: 1
+              Non_seismic_and_seismic_non_conventional_data_stored_in_media_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Data_Stored_In_Media
@@ -264,7 +269,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Nsasncdsim_id: 1
+                Non_seismic_and_seismic_non_conventional_data_stored_in_media_id: 1
   /Non-Seismic-And-Seismic-Non-Conventional-Data-Stored-In-Media-workspace/{id}:
     parameters:
     - in: path
@@ -294,7 +299,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Nsasncdsim_id: 1
+              Non_seismic_and_seismic_non_conventional_data_stored_in_media_id: 1
       responses:
         '200':
           description: Non_Seismic_And_Seismic_Non_Conventional_Data_Stored_In_Media
@@ -324,7 +329,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Nsasncdsim_id: 1
+              Non_seismic_and_seismic_non_conventional_data_stored_in_media_id: 1
       responses:
         '200':
           description: one row in Non_Seismic_And_Seismic_Non_Conventional_Data_Stored_In_Media
@@ -554,7 +559,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Nsasncdsim_id:
+          Non_seismic_and_seismic_non_conventional_data_stored_in_media_id:
             type: integer
     Non_Seismic_And_Seismic_Non_Conventional_Data_Stored_In_Media:
       type: object
@@ -600,8 +605,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

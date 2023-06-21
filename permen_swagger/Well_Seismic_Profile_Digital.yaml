@@ -43,6 +43,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Well Seismic Profile Digital
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Well Seismic Profile Digital
+            user_id: 1
       responses:
         '200':
           description: Well_Seismic_Profile_Digital data is added
@@ -98,6 +100,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Well Seismic Profile Digital
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -119,6 +122,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Well Seismic Profile Digital
+            user_id: 1
       responses:
         '200':
           description: Well_Seismic_Profile_Digital data is completely updated
@@ -147,6 +151,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Well Seismic Profile Digital
+            user_id: 1
       responses:
         '200':
           description: one row in Well_Seismic_Profile_Digital data is updated
@@ -184,7 +189,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Wspd_id: 1
+                Well_seismic_profile_digital_id: 1
     post:
       security:
       - Authorization: []
@@ -203,7 +208,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Wspd_id: 1
+              Well_seismic_profile_digital_id: 1
       responses:
         '200':
           description: Well_Seismic_Profile_Digital Workspace data is added
@@ -234,7 +239,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Wspd_id: 1
+                Well_seismic_profile_digital_id: 1
   /Well-Seismic-Profile-Digital-workspace/{id}:
     parameters:
     - in: path
@@ -260,7 +265,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Wspd_id: 1
+              Well_seismic_profile_digital_id: 1
       responses:
         '200':
           description: Well_Seismic_Profile_Digital Workspace data is completely updated
@@ -286,7 +291,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Wspd_id: 1
+              Well_seismic_profile_digital_id: 1
       responses:
         '200':
           description: one row in Well_Seismic_Profile_Digital data is updated
@@ -498,7 +503,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Wspd_id:
+          Well_seismic_profile_digital_id:
             type: integer
     Well_Seismic_Profile_Digital:
       type: object
@@ -558,8 +563,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

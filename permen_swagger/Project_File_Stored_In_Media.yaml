@@ -43,6 +43,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Project File Stored In Media
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Project File Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Project_File_Stored_In_Media data is added
@@ -98,6 +100,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Project File Stored In Media
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -119,6 +122,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Project File Stored In Media
+            user_id: 1
       responses:
         '200':
           description: Project_File_Stored_In_Media data is completely updated
@@ -147,6 +151,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Project File Stored In Media
+            user_id: 1
       responses:
         '200':
           description: one row in Project_File_Stored_In_Media data is updated
@@ -184,7 +189,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Pfsim_id: 1
+                Project_file_stored_in_media_id: 1
     post:
       security:
       - Authorization: []
@@ -203,7 +208,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Pfsim_id: 1
+              Project_file_stored_in_media_id: 1
       responses:
         '200':
           description: Project_File_Stored_In_Media Workspace data is added
@@ -234,7 +239,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Pfsim_id: 1
+                Project_file_stored_in_media_id: 1
   /Project-File-Stored-In-Media-workspace/{id}:
     parameters:
     - in: path
@@ -260,7 +265,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Pfsim_id: 1
+              Project_file_stored_in_media_id: 1
       responses:
         '200':
           description: Project_File_Stored_In_Media Workspace data is completely updated
@@ -286,7 +291,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Pfsim_id: 1
+              Project_file_stored_in_media_id: 1
       responses:
         '200':
           description: one row in Project_File_Stored_In_Media data is updated
@@ -491,7 +496,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Pfsim_id:
+          Project_file_stored_in_media_id:
             type: integer
     Project_File_Stored_In_Media:
       type: object
@@ -537,8 +542,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

@@ -46,6 +46,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Digital Non Seismic And Seismic Non Conventional Report
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -70,6 +71,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Non Seismic And Seismic Non Conventional Report
+            user_id: 1
       responses:
         '200':
           description: Digital_Non_Seismic_And_Seismic_Non_Conventional_Report data
@@ -107,6 +109,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Digital Non Seismic And Seismic Non Conventional Report
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -131,6 +134,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Non Seismic And Seismic Non Conventional Report
+            user_id: 1
       responses:
         '200':
           description: Digital_Non_Seismic_And_Seismic_Non_Conventional_Report data
@@ -164,6 +168,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Non Seismic And Seismic Non Conventional Report
+            user_id: 1
       responses:
         '200':
           description: one row in Digital_Non_Seismic_And_Seismic_Non_Conventional_Report
@@ -207,7 +212,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Dnsasncr_id: 1
+                Digital_non_seismic_and_seismic_non_conventional_report_id: 1
     post:
       security:
       - Authorization: []
@@ -228,7 +233,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dnsasncr_id: 1
+              Digital_non_seismic_and_seismic_non_conventional_report_id: 1
       responses:
         '200':
           description: Digital_Non_Seismic_And_Seismic_Non_Conventional_Report Workspace
@@ -262,7 +267,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Dnsasncr_id: 1
+                Digital_non_seismic_and_seismic_non_conventional_report_id: 1
   /Digital-Non-Seismic-And-Seismic-Non-Conventional-Report-workspace/{id}:
     parameters:
     - in: path
@@ -292,7 +297,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dnsasncr_id: 1
+              Digital_non_seismic_and_seismic_non_conventional_report_id: 1
       responses:
         '200':
           description: Digital_Non_Seismic_And_Seismic_Non_Conventional_Report Workspace
@@ -322,7 +327,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dnsasncr_id: 1
+              Digital_non_seismic_and_seismic_non_conventional_report_id: 1
       responses:
         '200':
           description: one row in Digital_Non_Seismic_And_Seismic_Non_Conventional_Report
@@ -552,7 +557,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Dnsasncr_id:
+          Digital_non_seismic_and_seismic_non_conventional_report_id:
             type: integer
     Digital_Non_Seismic_And_Seismic_Non_Conventional_Report:
       type: object
@@ -600,8 +605,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

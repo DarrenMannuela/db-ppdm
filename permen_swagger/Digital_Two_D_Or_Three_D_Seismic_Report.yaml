@@ -45,6 +45,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Digital Two D Or Three D Seismic Report
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -67,6 +68,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Two D Or Three D Seismic Report
+            user_id: 1
       responses:
         '200':
           description: Digital_Two_D_Or_Three_D_Seismic_Report data is added
@@ -102,6 +104,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Digital Two D Or Three D Seismic Report
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -124,6 +127,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Two D Or Three D Seismic Report
+            user_id: 1
       responses:
         '200':
           description: Digital_Two_D_Or_Three_D_Seismic_Report data is completely
@@ -155,6 +159,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Digital Two D Or Three D Seismic Report
+            user_id: 1
       responses:
         '200':
           description: one row in Digital_Two_D_Or_Three_D_Seismic_Report data is
@@ -195,7 +200,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Dtdotdsr_id: 1
+                Digital_two_d_or_three_d_seismic_report_id: 1
     post:
       security:
       - Authorization: []
@@ -215,7 +220,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dtdotdsr_id: 1
+              Digital_two_d_or_three_d_seismic_report_id: 1
       responses:
         '200':
           description: Digital_Two_D_Or_Three_D_Seismic_Report Workspace data is added
@@ -247,7 +252,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Dtdotdsr_id: 1
+                Digital_two_d_or_three_d_seismic_report_id: 1
   /Digital-Two-D-Or-Three-D-Seismic-Report-workspace/{id}:
     parameters:
     - in: path
@@ -275,7 +280,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dtdotdsr_id: 1
+              Digital_two_d_or_three_d_seismic_report_id: 1
       responses:
         '200':
           description: Digital_Two_D_Or_Three_D_Seismic_Report Workspace data is completely
@@ -303,7 +308,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Dtdotdsr_id: 1
+              Digital_two_d_or_three_d_seismic_report_id: 1
       responses:
         '200':
           description: one row in Digital_Two_D_Or_Three_D_Seismic_Report data is
@@ -521,7 +526,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Dtdotdsr_id:
+          Digital_two_d_or_three_d_seismic_report_id:
             type: integer
     Digital_Two_D_Or_Three_D_Seismic_Report:
       type: object
@@ -573,8 +578,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

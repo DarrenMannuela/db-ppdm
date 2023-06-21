@@ -43,6 +43,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Bibliography
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Bibliography
+            user_id: 1
       responses:
         '200':
           description: Bibliography data is added
@@ -97,6 +99,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Bibliography
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -118,6 +121,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Bibliography
+            user_id: 1
       responses:
         '200':
           description: Bibliography data is completely updated
@@ -146,6 +150,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Bibliography
+            user_id: 1
       responses:
         '200':
           description: one row in Bibliography data is updated
@@ -491,8 +496,9 @@ components:
         Data_store_name:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

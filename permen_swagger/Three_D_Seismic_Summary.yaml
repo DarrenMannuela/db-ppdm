@@ -43,6 +43,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Three D Seismic Summary
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Summary
+            user_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Summary data is added
@@ -97,6 +99,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Three D Seismic Summary
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -118,6 +121,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Summary
+            user_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Summary data is completely updated
@@ -146,6 +150,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Three D Seismic Summary
+            user_id: 1
       responses:
         '200':
           description: one row in Three_D_Seismic_Summary data is updated
@@ -182,7 +187,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdss_id: 1
+                Three_d_seismic_summary_id: 1
     post:
       security:
       - Authorization: []
@@ -200,7 +205,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdss_id: 1
+              Three_d_seismic_summary_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Summary Workspace data is added
@@ -231,7 +236,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Tdss_id: 1
+                Three_d_seismic_summary_id: 1
   /Three-D-Seismic-Summary-workspace/{id}:
     parameters:
     - in: path
@@ -257,7 +262,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdss_id: 1
+              Three_d_seismic_summary_id: 1
       responses:
         '200':
           description: Three_D_Seismic_Summary Workspace data is completely updated
@@ -283,7 +288,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Tdss_id: 1
+              Three_d_seismic_summary_id: 1
       responses:
         '200':
           description: one row in Three_D_Seismic_Summary data is updated
@@ -503,7 +508,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Tdss_id:
+          Three_d_seismic_summary_id:
             type: integer
     Three_D_Seismic_Summary:
       type: object
@@ -579,8 +584,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

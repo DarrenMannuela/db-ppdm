@@ -107,7 +107,7 @@ for file in views:
             tag += seperated[word]+" "
     
 
-    cur_table = {'components': {'schemas': {}, 'securitySchemes': {'Authorization': {'type': 'http', 'scheme': 'bearer', 'bearerFormat': 'JWT', 'description': 'Please enter the access token'}}}}
+    cur_table = {'components': {'schemas': {}, 'securitySchemes': {'OAuth2PasswordBearer': {'type': 'oauth2', "flows": {"password":{"scopes": {}, "tokenUrl": "v1/token"}}}}}}
 
     cur_table['components']["schemas"].update(afe_struct_filler())
 

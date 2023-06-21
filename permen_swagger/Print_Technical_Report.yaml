@@ -43,6 +43,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Print Technical Report
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Print Technical Report
+            user_id: 1
       responses:
         '200':
           description: Print_Technical_Report data is added
@@ -97,6 +99,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Print Technical Report
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -118,6 +121,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Print Technical Report
+            user_id: 1
       responses:
         '200':
           description: Print_Technical_Report data is completely updated
@@ -146,6 +150,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Print Technical Report
+            user_id: 1
       responses:
         '200':
           description: one row in Print_Technical_Report data is updated
@@ -182,7 +187,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Ptr_id: 1
+                Print_technical_report_id: 1
     post:
       security:
       - Authorization: []
@@ -200,7 +205,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Ptr_id: 1
+              Print_technical_report_id: 1
       responses:
         '200':
           description: Print_Technical_Report Workspace data is added
@@ -231,7 +236,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Ptr_id: 1
+                Print_technical_report_id: 1
   /Print-Technical-Report-workspace/{id}:
     parameters:
     - in: path
@@ -257,7 +262,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Ptr_id: 1
+              Print_technical_report_id: 1
       responses:
         '200':
           description: Print_Technical_Report Workspace data is completely updated
@@ -282,7 +287,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Ptr_id: 1
+              Print_technical_report_id: 1
       responses:
         '200':
           description: one row in Print_Technical_Report data is updated
@@ -485,7 +490,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Ptr_id:
+          Print_technical_report_id:
             type: integer
     Print_Technical_Report:
       type: object
@@ -529,8 +534,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

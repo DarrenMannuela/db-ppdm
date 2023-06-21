@@ -43,6 +43,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Well Logs
+              user_id: 1
     post:
       security:
       - Authorization: []
@@ -64,6 +65,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Well Logs
+            user_id: 1
       responses:
         '200':
           description: Well_Logs data is added
@@ -97,6 +99,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Well Logs
+              user_id: 1
     put:
       security:
       - Authorization: []
@@ -118,6 +121,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Well Logs
+            user_id: 1
       responses:
         '200':
           description: Well_Logs data is completely updated
@@ -146,6 +150,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Well Logs
+            user_id: 1
       responses:
         '200':
           description: one row in Well_Logs data is updated
@@ -182,7 +187,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Wl_id: 1
+                Well_logs_id: 1
     post:
       security:
       - Authorization: []
@@ -200,7 +205,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Wl_id: 1
+              Well_logs_id: 1
       responses:
         '200':
           description: Well_Logs Workspace data is added
@@ -230,7 +235,7 @@ paths:
               example:
                 Id: 1
                 Afe_number: 1
-                Wl_id: 1
+                Well_logs_id: 1
   /Well-Logs-workspace/{id}:
     parameters:
     - in: path
@@ -256,7 +261,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Wl_id: 1
+              Well_logs_id: 1
       responses:
         '200':
           description: Well_Logs Workspace data is completely updated
@@ -281,7 +286,7 @@ paths:
             example:
               Id: 1
               Afe_number: 1
-              Wl_id: 1
+              Well_logs_id: 1
       responses:
         '200':
           description: one row in Well_Logs data is updated
@@ -489,7 +494,7 @@ components:
             type: integer
           afe_number:
             type: integer
-          Wl_id:
+          Well_logs_id:
             type: integer
     Well_Logs:
       type: object
@@ -545,8 +550,9 @@ components:
         Checked_by_ba_id:
           type: string
   securitySchemes:
-    Authorization:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-      description: Please enter the access token
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token
