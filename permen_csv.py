@@ -148,19 +148,19 @@ for file in data_types:
 
     closer = "}"
 
-    abbreviation_list = struct_name.split("_")
+    # abbreviation_list = struct_name.split("_")
 
-    abbreviation = ""
+    # abbreviation = ""
 
-    for word in range(len(abbreviation_list)):
-        if len(abbreviation_list) == 1:
-            abbreviation += abbreviation_list[0]
-        else:
-            get_letter = abbreviation_list[word][0]
-            abbreviation += get_letter
+    # for word in range(len(abbreviation_list)):
+    #     if len(abbreviation_list) == 1:
+    #         abbreviation += abbreviation_list[0]
+    #     else:
+    #         get_letter = abbreviation_list[word][0]
+    #         abbreviation += get_letter
 
-    abbreviation = abbreviation.title()
-    abbreviation += "_id"
+    # abbreviation = abbreviation.title()
+    foreign_id = struct_name+"_id".lower()
 
     file_name_list = struct_name.split("_")
     file_name = ""
@@ -174,7 +174,7 @@ for file in data_types:
 
     workspace_field = ["Id", "Afe_number"]
 
-    workspace_field.append(abbreviation)
+    workspace_field.append(foreign_id)
     print(workspace_field)
 
 

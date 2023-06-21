@@ -4,5 +4,5 @@ type Workspace struct{
 
 Id       int  `json:"id" default:""`
 Afe_number       *int  `json:"afe_number" default:""`
-Wcs_id       *int  `json:"wcs_id" default:""`
+Well_core_sample_id       *int  `json:"well_core_sample_id" default:""`
 }
