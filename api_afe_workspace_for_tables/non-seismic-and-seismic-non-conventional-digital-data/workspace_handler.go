@@ -20,7 +20,7 @@ func GetWorkspace(c *fiber.Ctx) error {
 
 	for rows.Next() {
 		var workspace dto.Workspace
-		if err := rows.Scan(&workspace.Id, &workspace.Afe_number, &workspace.Non_seismic_and_seismic_non_conventional_digital_data_id); err != nil {
+		if err := rows.Scan(&workspace.Id, &workspace.Afe_number, &workspace.Print_well_report_id); err != nil {
 			return err // Exit if we get an error
 		}
 
@@ -54,7 +54,7 @@ func GetWorkspaceByAfe(c *fiber.Ctx) error {
 
 	for rows.Next() {
 		var curRow dto.Workspace
-		if err := rows.Scan(&curRow.Id, &curRow.Afe_number, &curRow.Non_seismic_and_seismic_non_conventional_digital_data_id); err != nil {
+		if err := rows.Scan(&curRow.Id, &curRow.Afe_number, &curRow.Print_well_report_id); err != nil {
 			return err // Exit if we get an error
 		}
 
@@ -106,14 +106,14 @@ func SetWorkspace(c *fiber.Ctx) error {
 		}
 	}()
 
-	var non_seismic_and_seismic_non_conventional_digital_data_id_exist string
-	err = tx.QueryRow("SELECT id FROM non_seismic_and_seismic_non_conventional_digital_data_table where id = :1", workspace.Non_seismic_and_seismic_non_conventional_digital_data_id).Scan(&non_seismic_and_seismic_non_conventional_digital_data_id_exist)
+	var Print_well_report_id_exist string
+	err = tx.QueryRow("SELECT id FROM non_seismic_and_seismic_non_conventional_digital_data_table where id = :1", workspace.Print_well_report_id).Scan(&Print_well_report_id_exist)
 	if err != nil {
 		tx.Rollback()
 		return err
 	}
 
-	_, err = tx.Exec(`INSERT INTO non_seismic_and_seismic_non_conventional_digital_data_table_workspace (afe_number, non_seismic_and_seismic_non_conventional_digital_data_id) VALUES (:2, :3)`, workspace.Afe_number, workspace.Non_seismic_and_seismic_non_conventional_digital_data_id)
+	_, err = tx.Exec(`INSERT INTO non_seismic_and_seismic_non_conventional_digital_data_table_workspace (afe_number, Print_well_report_id) VALUES (:2, :3)`, workspace.Afe_number, workspace.Print_well_report_id)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("NON_SEISMIC_AND_SEISMIC_NON_CONVENTIONAL_DIGITAL_DATA_TABLE_WORKSPACE")
@@ -143,8 +143,8 @@ func PutWorkspace(c *fiber.Ctx) error {
 		return c.Status(500).SendString(err.Error())
 	}
 
-	_, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table_workspace SET afe_number = :1, non_seismic_and_seismic_non_conventional_digital_data_id = :2 WHERE id = :3`,
-		workspace.Afe_number, workspace.Non_seismic_and_seismic_non_conventional_digital_data_id, id)
+	_, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table_workspace SET afe_number = :1, Print_well_report_id = :2 WHERE id = :3`,
+		workspace.Afe_number, workspace.Print_well_report_id, id)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("NON_SEISMIC_AND_SEISMIC_NON_CONVENTIONAL_DIGITAL_DATA_TABLE_WORKSPACE")
@@ -169,7 +169,7 @@ func DeleteWorkspace(c *fiber.Ctx) error {
 		return c.Status(500).SendString(err.Error())
 	}
 
-	_, err = tx.Exec(`DELETE FROM non_seismic_and_seismic_non_conventional_digital_data_table_workspace WHERE non_seismic_and_seismic_non_conventional_digital_data_id = :1`, id)
+	_, err = tx.Exec(`DELETE FROM non_seismic_and_seismic_non_conventional_digital_data_table_workspace WHERE Print_well_report_id = :1`, id)
 	if err != nil {
 		fmt.Println("DEL NON_SEISMIC_AND_SEISMIC_NON_CONVENTIONAL_DIGITAL_DATA_TABLE_WORKSPACE")
 		tx.Rollback()
@@ -219,10 +219,10 @@ func PatchWorkspace(c *fiber.Ctx) error {
 
 	}
 
-	if workspace.Non_seismic_and_seismic_non_conventional_digital_data_id != 0 {
+	if workspace.Print_well_report_id != 0 {
 
-		_, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table_workspace SET non_seismic_and_seismic_non_conventional_digital_data_id = :1 WHERE id = :2`,
-			workspace.Non_seismic_and_seismic_non_conventional_digital_data_id, id)
+		_, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table_workspace SET Print_well_report_id = :1 WHERE id = :2`,
+			workspace.Print_well_report_id, id)
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("NON_SEISMIC_AND_SEISMIC_NON_CONVENTIONAL_DIGITAL_DATA_WORKSPACE")

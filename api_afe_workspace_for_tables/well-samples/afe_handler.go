@@ -18,7 +18,7 @@ func GetAfe(c *fiber.Ctx) error {
 
 	for rows.Next() {
 		var afe dto.Afe
-		if err := rows.Scan(&afe.Afe_number, &afe.Workspace_name, &afe.Kkks_name, &afe.Working_area, &afe.Submission_type, &afe.Data_type); err != nil {
+		if err := rows.Scan(&afe.Afe_number, &afe.Workspace_name, &afe.Kkks_name, &afe.Working_area, &afe.Submission_type, &afe.Data_type, &afe.Email); err != nil {
 			return err
 		}
 
@@ -42,7 +42,7 @@ func GetAfeByNum(c *fiber.Ctx) error {
 
 	for rows.Next() {
 		var afe dto.Afe
-		if err := rows.Scan(&afe.Afe_number, &afe.Workspace_name, &afe.Kkks_name, &afe.Working_area, &afe.Submission_type, &afe.Data_type); err != nil {
+		if err := rows.Scan(&afe.Afe_number, &afe.Workspace_name, &afe.Kkks_name, &afe.Working_area, &afe.Submission_type, &afe.Data_type, &afe.Email); err != nil {
 			return err
 		}
 
@@ -83,7 +83,7 @@ func SetAfe(c *fiber.Ctx) error {
 
 		}
 	}
-	_, err = tx.Exec(`INSERT INTO well_samples_table_afe (afe_number, workspace_name, kkks_name, working_area, submission_type, data_type) VALUES (:1, :2, :3, :4, :5, :6)`, afe.Afe_number, afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type)
+	_, err = tx.Exec(`INSERT INTO well_samples_table_afe (afe_number, workspace_name, kkks_name, working_area, submission_type, data_type, Email) VALUES (:1, :2, :3, :4, :5, :6, :7)`, afe.Afe_number, afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("WELL_SAMPLES_TABLE_AFE")
@@ -131,8 +131,8 @@ func PutAfe(c *fiber.Ctx) error {
 			return err
 		}
 	}
-	_, err = tx.Exec(`UPDATE well_samples_table_afe SET workspace_name = :1, kkks_name = :2, working_area = :3, submission_type = :4, data_type = :5 WHERE afe_number = :6`,
-		afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afeNumber)
+	_, err = tx.Exec(`UPDATE well_samples_table_afe SET workspace_name = :1, kkks_name = :2, working_area = :3, submission_type = :4, data_type = :5, Email = :6 WHERE afe_number = :7`,
+		afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email, afeNumber)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("WELL_SAMPLES_TABLE_AFE")
@@ -293,6 +293,16 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 	if afe.Data_type != "" {
 
 		_, err = tx.Exec(`UPDATE well_samples_table_afe SET data_type = :1 WHERE afe_number = :2`, afe.Data_type, afeNumber)
+
+		if err != nil {
+			tx.Rollback()
+			fmt.Println("WELL_SAMPLES_TABLE_AFE")
+			return err
+		}
+	}
+	if afe.Email != "" {
+
+		_, err = tx.Exec(`UPDATE well_samples_table_afe SET Email = :1 WHERE afe_number = :2`, afe.Email, afeNumber)
 
 		if err != nil {
 			tx.Rollback()

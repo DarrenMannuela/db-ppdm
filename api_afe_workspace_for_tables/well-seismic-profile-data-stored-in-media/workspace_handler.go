@@ -20,7 +20,7 @@ func GetWorkspace(c *fiber.Ctx) error {
 
 	for rows.Next() {
 		var workspace dto.Workspace
-		if err := rows.Scan(&workspace.Id, &workspace.Afe_number, &workspace.Well_seismic_profile_data_stored_in_media_id); err != nil {
+		if err := rows.Scan(&workspace.Id, &workspace.Afe_number, &workspace.Print_well_report_id); err != nil {
 			return err // Exit if we get an error
 		}
 
@@ -54,7 +54,7 @@ func GetWorkspaceByAfe(c *fiber.Ctx) error {
 
 	for rows.Next() {
 		var curRow dto.Workspace
-		if err := rows.Scan(&curRow.Id, &curRow.Afe_number, &curRow.Well_seismic_profile_data_stored_in_media_id); err != nil {
+		if err := rows.Scan(&curRow.Id, &curRow.Afe_number, &curRow.Print_well_report_id); err != nil {
 			return err // Exit if we get an error
 		}
 
@@ -106,14 +106,14 @@ func SetWorkspace(c *fiber.Ctx) error {
 		}
 	}()
 
-	var well_seismic_profile_data_stored_in_media_id_exist string
-	err = tx.QueryRow("SELECT id FROM well_seismic_profile_data_stored_in_media_table where id = :1", workspace.Well_seismic_profile_data_stored_in_media_id).Scan(&well_seismic_profile_data_stored_in_media_id_exist)
+	var Print_well_report_id_exist string
+	err = tx.QueryRow("SELECT id FROM well_seismic_profile_data_stored_in_media_table where id = :1", workspace.Print_well_report_id).Scan(&Print_well_report_id_exist)
 	if err != nil {
 		tx.Rollback()
 		return err
 	}
 
-	_, err = tx.Exec(`INSERT INTO well_seismic_profile_data_stored_in_media_table_workspace (afe_number, well_seismic_profile_data_stored_in_media_id) VALUES (:2, :3)`, workspace.Afe_number, workspace.Well_seismic_profile_data_stored_in_media_id)
+	_, err = tx.Exec(`INSERT INTO well_seismic_profile_data_stored_in_media_table_workspace (afe_number, Print_well_report_id) VALUES (:2, :3)`, workspace.Afe_number, workspace.Print_well_report_id)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("WELL_SEISMIC_PROFILE_DATA_STORED_IN_MEDIA_TABLE_WORKSPACE")
@@ -143,8 +143,8 @@ func PutWorkspace(c *fiber.Ctx) error {
 		return c.Status(500).SendString(err.Error())
 	}
 
-	_, err = tx.Exec(`UPDATE well_seismic_profile_data_stored_in_media_table_workspace SET afe_number = :1, well_seismic_profile_data_stored_in_media_id = :2 WHERE id = :3`,
-		workspace.Afe_number, workspace.Well_seismic_profile_data_stored_in_media_id, id)
+	_, err = tx.Exec(`UPDATE well_seismic_profile_data_stored_in_media_table_workspace SET afe_number = :1, Print_well_report_id = :2 WHERE id = :3`,
+		workspace.Afe_number, workspace.Print_well_report_id, id)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("WELL_SEISMIC_PROFILE_DATA_STORED_IN_MEDIA_TABLE_WORKSPACE")
@@ -169,7 +169,7 @@ func DeleteWorkspace(c *fiber.Ctx) error {
 		return c.Status(500).SendString(err.Error())
 	}
 
-	_, err = tx.Exec(`DELETE FROM well_seismic_profile_data_stored_in_media_table_workspace WHERE well_seismic_profile_data_stored_in_media_id = :1`, id)
+	_, err = tx.Exec(`DELETE FROM well_seismic_profile_data_stored_in_media_table_workspace WHERE Print_well_report_id = :1`, id)
 	if err != nil {
 		fmt.Println("DEL WELL_SEISMIC_PROFILE_DATA_STORED_IN_MEDIA_TABLE_WORKSPACE")
 		tx.Rollback()
@@ -219,10 +219,10 @@ func PatchWorkspace(c *fiber.Ctx) error {
 
 	}
 
-	if workspace.Well_seismic_profile_data_stored_in_media_id != 0 {
+	if workspace.Print_well_report_id != 0 {
 
-		_, err = tx.Exec(`UPDATE well_seismic_profile_data_stored_in_media_table_workspace SET well_seismic_profile_data_stored_in_media_id = :1 WHERE id = :2`,
-			workspace.Well_seismic_profile_data_stored_in_media_id, id)
+		_, err = tx.Exec(`UPDATE well_seismic_profile_data_stored_in_media_table_workspace SET Print_well_report_id = :1 WHERE id = :2`,
+			workspace.Print_well_report_id, id)
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("WELL_SEISMIC_PROFILE_DATA_STORED_IN_MEDIA_WORKSPACE")
