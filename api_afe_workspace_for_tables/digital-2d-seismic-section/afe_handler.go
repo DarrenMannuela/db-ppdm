@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var digital_2d_seismic_sectionIds []string
+	var digital_2d_seismic_section_ids []string
 
 	for rows.Next() {
-		var digital_2d_seismic_sectionId string
-		if err := rows.Scan(&digital_2d_seismic_sectionId); err != nil {
+		var digital_2d_seismic_section_id string
+		if err := rows.Scan(&digital_2d_seismic_section_id); err != nil {
 			return err
 		}
 
-		digital_2d_seismic_sectionIds = append(digital_2d_seismic_sectionIds, digital_2d_seismic_sectionId)
+		digital_2d_seismic_section_ids = append(digital_2d_seismic_section_ids, digital_2d_seismic_section_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(digital_2d_seismic_sectionIds); i++ {
-		_, err = tx.Exec(`DELETE FROM digital_2d_seismic_section_table WHERE id = :1`, digital_2d_seismic_sectionIds[i])
+	for i := 0; i < len(digital_2d_seismic_section_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM digital_2d_seismic_section_table WHERE id = :1`, digital_2d_seismic_section_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("DIGITAL_2D_SEISMIC_SECTION_TABLE")

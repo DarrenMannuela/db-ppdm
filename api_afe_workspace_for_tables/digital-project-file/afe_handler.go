@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var digital_project_fileIds []string
+	var digital_project_file_ids []string
 
 	for rows.Next() {
-		var digital_project_fileId string
-		if err := rows.Scan(&digital_project_fileId); err != nil {
+		var digital_project_file_id string
+		if err := rows.Scan(&digital_project_file_id); err != nil {
 			return err
 		}
 
-		digital_project_fileIds = append(digital_project_fileIds, digital_project_fileId)
+		digital_project_file_ids = append(digital_project_file_ids, digital_project_file_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(digital_project_fileIds); i++ {
-		_, err = tx.Exec(`DELETE FROM digital_project_file_table WHERE id = :1`, digital_project_fileIds[i])
+	for i := 0; i < len(digital_project_file_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM digital_project_file_table WHERE id = :1`, digital_project_file_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("DIGITAL_PROJECT_FILE_TABLE")

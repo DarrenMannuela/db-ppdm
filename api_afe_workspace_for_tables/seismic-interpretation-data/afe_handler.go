@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var seismic_interpretation_dataIds []string
+	var seismic_interpretation_data_ids []string
 
 	for rows.Next() {
-		var seismic_interpretation_dataId string
-		if err := rows.Scan(&seismic_interpretation_dataId); err != nil {
+		var seismic_interpretation_data_id string
+		if err := rows.Scan(&seismic_interpretation_data_id); err != nil {
 			return err
 		}
 
-		seismic_interpretation_dataIds = append(seismic_interpretation_dataIds, seismic_interpretation_dataId)
+		seismic_interpretation_data_ids = append(seismic_interpretation_data_ids, seismic_interpretation_data_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(seismic_interpretation_dataIds); i++ {
-		_, err = tx.Exec(`DELETE FROM seismic_interpretation_data_table WHERE id = :1`, seismic_interpretation_dataIds[i])
+	for i := 0; i < len(seismic_interpretation_data_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM seismic_interpretation_data_table WHERE id = :1`, seismic_interpretation_data_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("SEISMIC_INTERPRETATION_DATA_TABLE")

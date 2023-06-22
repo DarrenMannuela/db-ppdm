@@ -9,7 +9,7 @@ import (
 )
 
 func GetAfe(c *fiber.Ctx) error {
-	rows, err := db.Query("SELECT * FROM 3d_seismic_field_data_stored_in_media_table_afe")
+	rows, err := db.Query("SELECT * FROM t3d_seismic_field_data_stored_in_media_table_afe")
 	if err != nil {
 		return c.Status(500).SendString(err.Error())
 	}
@@ -33,7 +33,7 @@ func GetAfe(c *fiber.Ctx) error {
 func GetAfeByNum(c *fiber.Ctx) error {
 	afeNumber := c.Params("afe")
 	fmt.Println(afeNumber)
-	rows, err := db.Query("SELECT * FROM 3d_seismic_field_data_stored_in_media_table_afe WHERE afe_number = :1", afeNumber)
+	rows, err := db.Query("SELECT * FROM t3d_seismic_field_data_stored_in_media_table_afe WHERE afe_number = :1", afeNumber)
 	if err != nil {
 		return c.Status(500).SendString(err.Error())
 	}
@@ -83,7 +83,7 @@ func SetAfe(c *fiber.Ctx) error {
 
 		}
 	}
-	_, err = tx.Exec(`INSERT INTO 3d_seismic_field_data_stored_in_media_table_afe (afe_number, workspace_name, kkks_name, working_area, submission_type, data_type, Email) VALUES (:1, :2, :3, :4, :5, :6, :7)`, afe.Afe_number, afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email)
+	_, err = tx.Exec(`INSERT INTO t3d_seismic_field_data_stored_in_media_table_afe (afe_number, workspace_name, kkks_name, working_area, submission_type, data_type, Email) VALUES (:1, :2, :3, :4, :5, :6, :7)`, afe.Afe_number, afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("3D_SEISMIC_FIELD_DATA_STORED_IN_MEDIA_TABLE_AFE")
@@ -131,7 +131,7 @@ func PutAfe(c *fiber.Ctx) error {
 			return err
 		}
 	}
-	_, err = tx.Exec(`UPDATE 3d_seismic_field_data_stored_in_media_table_afe SET workspace_name = :1, kkks_name = :2, working_area = :3, submission_type = :4, data_type = :5, Email = :6 WHERE afe_number = :7`,
+	_, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table_afe SET workspace_name = :1, kkks_name = :2, working_area = :3, submission_type = :4, data_type = :5, Email = :6 WHERE afe_number = :7`,
 		afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email, afeNumber)
 	if err != nil {
 		tx.Rollback()
@@ -159,34 +159,34 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return c.Status(500).SendString(err.Error())
 	}
 
-	rows, err := tx.Query(`SELECT 3d_seismic_field_data_stored_in_media_id FROM 3d_seismic_field_data_stored_in_media_table_workspace WHERE afe_number = :1`, afeNumber)
+	rows, err := tx.Query(`SELECT t3d_seismic_field_data_stored_in_media_id FROM t3d_seismic_field_data_stored_in_media_table_workspace WHERE afe_number = :1`, afeNumber)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("3D_SEISMIC_FIELD_DATA_STORED_IN_MEDIA_TABLE_WORKSPACE")
 		return err
 	}
 
-	var 3d_seismic_field_data_stored_in_mediaIds []string
+	var 3d_seismic_field_data_stored_in_media_ids []string
 
 	for rows.Next() {
-		var 3d_seismic_field_data_stored_in_mediaId string
-		if err := rows.Scan(&3d_seismic_field_data_stored_in_mediaId); err != nil {
+		var 3d_seismic_field_data_stored_in_media_id string
+		if err := rows.Scan(&3d_seismic_field_data_stored_in_media_id); err != nil {
 			return err
 		}
 
-		3d_seismic_field_data_stored_in_mediaIds = append(3d_seismic_field_data_stored_in_mediaIds, 3d_seismic_field_data_stored_in_mediaId)
+		3d_seismic_field_data_stored_in_media_ids = append(3d_seismic_field_data_stored_in_media_ids, 3d_seismic_field_data_stored_in_media_id)
 
 	}
 
-	_, err = tx.Exec(`DELETE FROM 3d_seismic_field_data_stored_in_media_table_workspace WHERE afe_number = :1`, afeNumber)
+	_, err = tx.Exec(`DELETE FROM t3d_seismic_field_data_stored_in_media_table_workspace WHERE afe_number = :1`, afeNumber)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("3D_SEISMIC_FIELD_DATA_STORED_IN_MEDIA_TABLE_WORKSPACE")
 		return err
 	}
 
-	for i := 0; i < len(3d_seismic_field_data_stored_in_mediaIds); i++ {
-		_, err = tx.Exec(`DELETE FROM 3d_seismic_field_data_stored_in_media_table WHERE id = :1`, 3d_seismic_field_data_stored_in_mediaIds[i])
+	for i := 0; i < len(3d_seismic_field_data_stored_in_media_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM t3d_seismic_field_data_stored_in_media_table WHERE id = :1`, 3d_seismic_field_data_stored_in_media_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("3D_SEISMIC_FIELD_DATA_STORED_IN_MEDIA_TABLE")
@@ -194,7 +194,7 @@ func DeleteAfe(c *fiber.Ctx) error {
 		}
 	}
 
-	delRows, err := tx.Exec(`DELETE FROM 3d_seismic_field_data_stored_in_media_table_afe WHERE afe_number = :1`, afeNumber)
+	delRows, err := tx.Exec(`DELETE FROM t3d_seismic_field_data_stored_in_media_table_afe WHERE afe_number = :1`, afeNumber)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("3D_SEISMIC_FIELD_DATA_STORED_IN_MEDIA_TABLE_AFE")
@@ -238,7 +238,7 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 
 	if afe.Workspace_name != nil {
 
-		_, err = tx.Exec(`UPDATE 3d_seismic_field_data_stored_in_media_table_afe SET workspace_name = :1 WHERE afe_number = :2`, afe.Workspace_name, afeNumber)
+		_, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table_afe SET workspace_name = :1 WHERE afe_number = :2`, afe.Workspace_name, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
@@ -248,7 +248,7 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 	}
 	if afe.Kkks_name != nil {
 
-		_, err = tx.Exec(`UPDATE 3d_seismic_field_data_stored_in_media_table_afe SET kkks_name = :1 WHERE afe_number = :2`, afe.Kkks_name, afeNumber)
+		_, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table_afe SET kkks_name = :1 WHERE afe_number = :2`, afe.Kkks_name, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
@@ -258,7 +258,7 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 	}
 	if afe.Working_area != nil {
 
-		_, err = tx.Exec(`UPDATE 3d_seismic_field_data_stored_in_media_table_afe SET working_area = :1 WHERE afe_number = :2`, afe.Working_area, afeNumber)
+		_, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table_afe SET working_area = :1 WHERE afe_number = :2`, afe.Working_area, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
@@ -282,7 +282,7 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 			}
 		}
 
-		_, err = tx.Exec(`UPDATE 3d_seismic_field_data_stored_in_media_table_afe SET submission_type = :1 WHERE afe_number = :2`, afe.Submission_type, afeNumber)
+		_, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table_afe SET submission_type = :1 WHERE afe_number = :2`, afe.Submission_type, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
@@ -292,7 +292,7 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 	}
 	if afe.Data_type != "" {
 
-		_, err = tx.Exec(`UPDATE 3d_seismic_field_data_stored_in_media_table_afe SET data_type = :1 WHERE afe_number = :2`, afe.Data_type, afeNumber)
+		_, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table_afe SET data_type = :1 WHERE afe_number = :2`, afe.Data_type, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
@@ -302,7 +302,7 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 	}
 	if afe.Email != "" {
 
-		_, err = tx.Exec(`UPDATE 3d_seismic_field_data_stored_in_media_table_afe SET Email = :1 WHERE afe_number = :2`, afe.Email, afeNumber)
+		_, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table_afe SET Email = :1 WHERE afe_number = :2`, afe.Email, afeNumber)
 
 		if err != nil {
 			tx.Rollback()

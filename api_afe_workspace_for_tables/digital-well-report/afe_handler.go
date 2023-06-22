@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var digital_well_reportIds []string
+	var digital_well_report_ids []string
 
 	for rows.Next() {
-		var digital_well_reportId string
-		if err := rows.Scan(&digital_well_reportId); err != nil {
+		var digital_well_report_id string
+		if err := rows.Scan(&digital_well_report_id); err != nil {
 			return err
 		}
 
-		digital_well_reportIds = append(digital_well_reportIds, digital_well_reportId)
+		digital_well_report_ids = append(digital_well_report_ids, digital_well_report_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(digital_well_reportIds); i++ {
-		_, err = tx.Exec(`DELETE FROM digital_well_report_table WHERE id = :1`, digital_well_reportIds[i])
+	for i := 0; i < len(digital_well_report_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM digital_well_report_table WHERE id = :1`, digital_well_report_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("DIGITAL_WELL_REPORT_TABLE")

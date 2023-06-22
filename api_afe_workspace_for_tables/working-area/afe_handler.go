@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var working_areaIds []string
+	var working_area_ids []string
 
 	for rows.Next() {
-		var working_areaId string
-		if err := rows.Scan(&working_areaId); err != nil {
+		var working_area_id string
+		if err := rows.Scan(&working_area_id); err != nil {
 			return err
 		}
 
-		working_areaIds = append(working_areaIds, working_areaId)
+		working_area_ids = append(working_area_ids, working_area_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(working_areaIds); i++ {
-		_, err = tx.Exec(`DELETE FROM working_area_table WHERE id = :1`, working_areaIds[i])
+	for i := 0; i < len(working_area_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM working_area_table WHERE id = :1`, working_area_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("WORKING_AREA_TABLE")

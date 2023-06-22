@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var digital_non_seismic_and_seismic_non_conventional_reportIds []string
+	var digital_non_seismic_and_seismic_non_conventional_report_ids []string
 
 	for rows.Next() {
-		var digital_non_seismic_and_seismic_non_conventional_reportId string
-		if err := rows.Scan(&digital_non_seismic_and_seismic_non_conventional_reportId); err != nil {
+		var digital_non_seismic_and_seismic_non_conventional_report_id string
+		if err := rows.Scan(&digital_non_seismic_and_seismic_non_conventional_report_id); err != nil {
 			return err
 		}
 
-		digital_non_seismic_and_seismic_non_conventional_reportIds = append(digital_non_seismic_and_seismic_non_conventional_reportIds, digital_non_seismic_and_seismic_non_conventional_reportId)
+		digital_non_seismic_and_seismic_non_conventional_report_ids = append(digital_non_seismic_and_seismic_non_conventional_report_ids, digital_non_seismic_and_seismic_non_conventional_report_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(digital_non_seismic_and_seismic_non_conventional_reportIds); i++ {
-		_, err = tx.Exec(`DELETE FROM digital_non_seismic_and_seismic_non_conventional_report_table WHERE id = :1`, digital_non_seismic_and_seismic_non_conventional_reportIds[i])
+	for i := 0; i < len(digital_non_seismic_and_seismic_non_conventional_report_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM digital_non_seismic_and_seismic_non_conventional_report_table WHERE id = :1`, digital_non_seismic_and_seismic_non_conventional_report_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("DIGITAL_NON_SEISMIC_AND_SEISMIC_NON_CONVENTIONAL_REPORT_TABLE")

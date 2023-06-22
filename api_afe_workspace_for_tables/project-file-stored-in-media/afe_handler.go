@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var project_file_stored_in_mediaIds []string
+	var project_file_stored_in_media_ids []string
 
 	for rows.Next() {
-		var project_file_stored_in_mediaId string
-		if err := rows.Scan(&project_file_stored_in_mediaId); err != nil {
+		var project_file_stored_in_media_id string
+		if err := rows.Scan(&project_file_stored_in_media_id); err != nil {
 			return err
 		}
 
-		project_file_stored_in_mediaIds = append(project_file_stored_in_mediaIds, project_file_stored_in_mediaId)
+		project_file_stored_in_media_ids = append(project_file_stored_in_media_ids, project_file_stored_in_media_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(project_file_stored_in_mediaIds); i++ {
-		_, err = tx.Exec(`DELETE FROM project_file_stored_in_media_table WHERE id = :1`, project_file_stored_in_mediaIds[i])
+	for i := 0; i < len(project_file_stored_in_media_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM project_file_stored_in_media_table WHERE id = :1`, project_file_stored_in_media_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("PROJECT_FILE_STORED_IN_MEDIA_TABLE")

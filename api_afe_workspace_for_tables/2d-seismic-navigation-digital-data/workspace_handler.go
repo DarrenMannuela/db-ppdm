@@ -11,7 +11,7 @@ import (
 )
 
 func GetWorkspace(c *fiber.Ctx) error {
-	rows, err := db.Query("SELECT * FROM 2d_seismic_navigation_digital_data_table_workspace")
+	rows, err := db.Query("SELECT * FROM t2d_seismic_navigation_digital_data_table_workspace")
 	if err != nil {
 		return c.Status(500).SendString(err.Error())
 	}
@@ -20,7 +20,7 @@ func GetWorkspace(c *fiber.Ctx) error {
 
 	for rows.Next() {
 		var workspace dto.Workspace
-		if err := rows.Scan(&workspace.Id, &workspace.Afe_number, &workspace.Print_well_report_id); err != nil {
+		if err := rows.Scan(&workspace.Id, &workspace.Afe_number, &workspace.T2d_seismic_navigation_digital_data_id); err != nil {
 			return err // Exit if we get an error
 		}
 
@@ -47,14 +47,14 @@ func GetWorkspaceByAfe(c *fiber.Ctx) error {
 		}
 	}()
 
-	rows, err := tx.Query("SELECT * FROM 2d_seismic_navigation_digital_data_table_workspace WHERE afe_number = :1", id)
+	rows, err := tx.Query("SELECT * FROM t2d_seismic_navigation_digital_data_table_workspace WHERE afe_number = :1", id)
 	if err != nil {
 		return err
 	}
 
 	for rows.Next() {
 		var curRow dto.Workspace
-		if err := rows.Scan(&curRow.Id, &curRow.Afe_number, &curRow.Print_well_report_id); err != nil {
+		if err := rows.Scan(&curRow.Id, &curRow.Afe_number, &curRow.T2d_seismic_navigation_digital_data_id); err != nil {
 			return err // Exit if we get an error
 		}
 
@@ -106,14 +106,14 @@ func SetWorkspace(c *fiber.Ctx) error {
 		}
 	}()
 
-	var Print_well_report_id_exist string
-	err = tx.QueryRow("SELECT id FROM 2d_seismic_navigation_digital_data_table where id = :1", workspace.Print_well_report_id).Scan(&Print_well_report_id_exist)
+	var T2d_seismic_navigation_digital_data_id_exist string
+	err = tx.QueryRow("SELECT id FROM t2d_seismic_navigation_digital_data_table where id = :1", workspace.T2d_seismic_navigation_digital_data_id).Scan(&T2d_seismic_navigation_digital_data_id_exist)
 	if err != nil {
 		tx.Rollback()
 		return err
 	}
 
-	_, err = tx.Exec(`INSERT INTO 2d_seismic_navigation_digital_data_table_workspace (afe_number, Print_well_report_id) VALUES (:2, :3)`, workspace.Afe_number, workspace.Print_well_report_id)
+	_, err = tx.Exec(`INSERT INTO t2d_seismic_navigation_digital_data_table_workspace (afe_number, t2d_seismic_navigation_digital_data_id) VALUES (:2, :3)`, workspace.Afe_number, workspace.T2d_seismic_navigation_digital_data_id)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("2D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_WORKSPACE")
@@ -143,8 +143,8 @@ func PutWorkspace(c *fiber.Ctx) error {
 		return c.Status(500).SendString(err.Error())
 	}
 
-	_, err = tx.Exec(`UPDATE 2d_seismic_navigation_digital_data_table_workspace SET afe_number = :1, Print_well_report_id = :2 WHERE id = :3`,
-		workspace.Afe_number, workspace.Print_well_report_id, id)
+	_, err = tx.Exec(`UPDATE t2d_seismic_navigation_digital_data_table_workspace SET afe_number = :1, t2d_seismic_navigation_digital_data_id = :2 WHERE id = :3`,
+		workspace.Afe_number, workspace.T2d_seismic_navigation_digital_data_id, id)
 	if err != nil {
 		tx.Rollback()
 		fmt.Println("2D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_WORKSPACE")
@@ -169,14 +169,14 @@ func DeleteWorkspace(c *fiber.Ctx) error {
 		return c.Status(500).SendString(err.Error())
 	}
 
-	_, err = tx.Exec(`DELETE FROM 2d_seismic_navigation_digital_data_table_workspace WHERE Print_well_report_id = :1`, id)
+	_, err = tx.Exec(`DELETE FROM t2d_seismic_navigation_digital_data_table_workspace WHERE t2d_seismic_navigation_digital_data_id = :1`, id)
 	if err != nil {
 		fmt.Println("DEL 2D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_WORKSPACE")
 		tx.Rollback()
 		return c.Status(500).SendString(err.Error())
 	}
 
-	_, err = tx.Exec(`DELETE FROM 2d_seismic_navigation_digital_data_table WHERE id = :1`, id)
+	_, err = tx.Exec(`DELETE FROM t2d_seismic_navigation_digital_data_table WHERE id = :1`, id)
 	if err != nil {
 		fmt.Println("2D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE")
 		tx.Rollback()
@@ -209,7 +209,7 @@ func PatchWorkspace(c *fiber.Ctx) error {
 
 	if workspace.Afe_number != nil {
 
-		_, err = tx.Exec(`UPDATE 2d_seismic_navigation_digital_data_table_workspace SET afe_number = :1 WHERE id = :2`,
+		_, err = tx.Exec(`UPDATE t2d_seismic_navigation_digital_data_table_workspace SET afe_number = :1 WHERE id = :2`,
 			workspace.Afe_number, id)
 		if err != nil {
 			tx.Rollback()
@@ -219,10 +219,10 @@ func PatchWorkspace(c *fiber.Ctx) error {
 
 	}
 
-	if workspace.Print_well_report_id != 0 {
+	if workspace.T2d_seismic_navigation_digital_data_id != 0 {
 
-		_, err = tx.Exec(`UPDATE 2d_seismic_navigation_digital_data_table_workspace SET Print_well_report_id = :1 WHERE id = :2`,
-			workspace.Print_well_report_id, id)
+		_, err = tx.Exec(`UPDATE t2d_seismic_navigation_digital_data_table_workspace SET t2d_seismic_navigation_digital_data_id = :1 WHERE id = :2`,
+			workspace.T2d_seismic_navigation_digital_data_id, id)
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("2D_SEISMIC_NAVIGATION_DIGITAL_DATA_WORKSPACE")

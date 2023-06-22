@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var outcrop_sampleIds []string
+	var outcrop_sample_ids []string
 
 	for rows.Next() {
-		var outcrop_sampleId string
-		if err := rows.Scan(&outcrop_sampleId); err != nil {
+		var outcrop_sample_id string
+		if err := rows.Scan(&outcrop_sample_id); err != nil {
 			return err
 		}
 
-		outcrop_sampleIds = append(outcrop_sampleIds, outcrop_sampleId)
+		outcrop_sample_ids = append(outcrop_sample_ids, outcrop_sample_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(outcrop_sampleIds); i++ {
-		_, err = tx.Exec(`DELETE FROM outcrop_sample_table WHERE id = :1`, outcrop_sampleIds[i])
+	for i := 0; i < len(outcrop_sample_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM outcrop_sample_table WHERE id = :1`, outcrop_sample_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("OUTCROP_SAMPLE_TABLE")

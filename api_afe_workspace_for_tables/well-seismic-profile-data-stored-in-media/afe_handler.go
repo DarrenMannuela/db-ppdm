@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var well_seismic_profile_data_stored_in_mediaIds []string
+	var well_seismic_profile_data_stored_in_media_ids []string
 
 	for rows.Next() {
-		var well_seismic_profile_data_stored_in_mediaId string
-		if err := rows.Scan(&well_seismic_profile_data_stored_in_mediaId); err != nil {
+		var well_seismic_profile_data_stored_in_media_id string
+		if err := rows.Scan(&well_seismic_profile_data_stored_in_media_id); err != nil {
 			return err
 		}
 
-		well_seismic_profile_data_stored_in_mediaIds = append(well_seismic_profile_data_stored_in_mediaIds, well_seismic_profile_data_stored_in_mediaId)
+		well_seismic_profile_data_stored_in_media_ids = append(well_seismic_profile_data_stored_in_media_ids, well_seismic_profile_data_stored_in_media_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(well_seismic_profile_data_stored_in_mediaIds); i++ {
-		_, err = tx.Exec(`DELETE FROM well_seismic_profile_data_stored_in_media_table WHERE id = :1`, well_seismic_profile_data_stored_in_mediaIds[i])
+	for i := 0; i < len(well_seismic_profile_data_stored_in_media_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM well_seismic_profile_data_stored_in_media_table WHERE id = :1`, well_seismic_profile_data_stored_in_media_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("WELL_SEISMIC_PROFILE_DATA_STORED_IN_MEDIA_TABLE")

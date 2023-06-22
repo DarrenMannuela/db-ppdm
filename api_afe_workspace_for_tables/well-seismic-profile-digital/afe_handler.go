@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var well_seismic_profile_digitalIds []string
+	var well_seismic_profile_digital_ids []string
 
 	for rows.Next() {
-		var well_seismic_profile_digitalId string
-		if err := rows.Scan(&well_seismic_profile_digitalId); err != nil {
+		var well_seismic_profile_digital_id string
+		if err := rows.Scan(&well_seismic_profile_digital_id); err != nil {
 			return err
 		}
 
-		well_seismic_profile_digitalIds = append(well_seismic_profile_digitalIds, well_seismic_profile_digitalId)
+		well_seismic_profile_digital_ids = append(well_seismic_profile_digital_ids, well_seismic_profile_digital_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(well_seismic_profile_digitalIds); i++ {
-		_, err = tx.Exec(`DELETE FROM well_seismic_profile_digital_table WHERE id = :1`, well_seismic_profile_digitalIds[i])
+	for i := 0; i < len(well_seismic_profile_digital_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM well_seismic_profile_digital_table WHERE id = :1`, well_seismic_profile_digital_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("WELL_SEISMIC_PROFILE_DIGITAL_TABLE")

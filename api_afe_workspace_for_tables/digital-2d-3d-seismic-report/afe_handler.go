@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var digital_2d_3d_seismic_reportIds []string
+	var digital_2d_3d_seismic_report_ids []string
 
 	for rows.Next() {
-		var digital_2d_3d_seismic_reportId string
-		if err := rows.Scan(&digital_2d_3d_seismic_reportId); err != nil {
+		var digital_2d_3d_seismic_report_id string
+		if err := rows.Scan(&digital_2d_3d_seismic_report_id); err != nil {
 			return err
 		}
 
-		digital_2d_3d_seismic_reportIds = append(digital_2d_3d_seismic_reportIds, digital_2d_3d_seismic_reportId)
+		digital_2d_3d_seismic_report_ids = append(digital_2d_3d_seismic_report_ids, digital_2d_3d_seismic_report_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(digital_2d_3d_seismic_reportIds); i++ {
-		_, err = tx.Exec(`DELETE FROM digital_2d_3d_seismic_report_table WHERE id = :1`, digital_2d_3d_seismic_reportIds[i])
+	for i := 0; i < len(digital_2d_3d_seismic_report_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM digital_2d_3d_seismic_report_table WHERE id = :1`, digital_2d_3d_seismic_report_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("DIGITAL_2D_3D_SEISMIC_REPORT_TABLE")

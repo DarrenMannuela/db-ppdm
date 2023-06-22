@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var digital_maps_and_technical_drawingIds []string
+	var digital_maps_and_technical_drawing_ids []string
 
 	for rows.Next() {
-		var digital_maps_and_technical_drawingId string
-		if err := rows.Scan(&digital_maps_and_technical_drawingId); err != nil {
+		var digital_maps_and_technical_drawing_id string
+		if err := rows.Scan(&digital_maps_and_technical_drawing_id); err != nil {
 			return err
 		}
 
-		digital_maps_and_technical_drawingIds = append(digital_maps_and_technical_drawingIds, digital_maps_and_technical_drawingId)
+		digital_maps_and_technical_drawing_ids = append(digital_maps_and_technical_drawing_ids, digital_maps_and_technical_drawing_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(digital_maps_and_technical_drawingIds); i++ {
-		_, err = tx.Exec(`DELETE FROM digital_maps_and_technical_drawing_table WHERE id = :1`, digital_maps_and_technical_drawingIds[i])
+	for i := 0; i < len(digital_maps_and_technical_drawing_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM digital_maps_and_technical_drawing_table WHERE id = :1`, digital_maps_and_technical_drawing_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("DIGITAL_MAPS_AND_TECHNICAL_DRAWING_TABLE")
