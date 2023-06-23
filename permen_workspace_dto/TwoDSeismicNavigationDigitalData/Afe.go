@@ -7,5 +7,5 @@ type Afe struct {
 	Working_area    *string `json:"working_area" default:""`
 	Submission_type *string `json:"submission_type" default:""`
 	Data_type       string  `json:"data_type" default:"Print Well Report"`
-	User_id         int     `json:"user_id" default:""`
+	User_id         string  `json:"user_id" default:"lorem.ipsum@gmail.com"`
 }

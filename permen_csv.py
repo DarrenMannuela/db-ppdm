@@ -215,6 +215,8 @@ for file in data_types:
 
     afe = "/Users/darrenmp/Documents/vscode/db-ppdm-copy/temp_dto/Afe.go"
     submission = "/Users/darrenmp/Documents/vscode/db-ppdm-copy/temp_dto/submission.go"
+    token = "/Users/darrenmp/Documents/vscode/db-ppdm-copy/temp_dto/Token.go"
+    credential = "/Users/darrenmp/Documents/vscode/db-ppdm-copy/temp_dto/Credential.go"
     dto = f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_dto/{file_name}.go"
     folder = f"permen_workspace_dto/{file_name}/"
 
@@ -223,6 +225,9 @@ for file in data_types:
     shutil.copy(afe, folder)
     shutil.copy(submission, folder)
     shutil.copy(dto, folder)
+    shutil.copy(token, folder)
+    shutil.copy(credential, folder)
+
 
 
 

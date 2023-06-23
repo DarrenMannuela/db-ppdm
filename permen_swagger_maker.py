@@ -1,6 +1,7 @@
 import os 
 import re
 import yaml
+import json
 
 
 folder = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_dto'
@@ -14,8 +15,8 @@ def afe_filler():
                     "kkks_name": "LoremIpsum",
                     "working_area": "LoremIpsum",
                     "submission_type": "Lorem",
-                    "data_type": rf"{tag}"},
-                    "user_id": 1
+                    "data_type": rf"{tag}",
+                    "email": "john.richardson@gtn.id"}
                     }
     return afe_example
 
@@ -58,6 +59,143 @@ def afe_struct_filler():
         }
       }}
     return afe_struct
+
+def token_struct_filler():
+    token = """
+       {
+        "Token": {
+            "title": "Token",
+            "required": [
+                "access_token",
+                "token_type",
+                "type",
+                "name",
+                "expiry_date",
+                "affiliation"
+            ],
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "title": "Access Token",
+                    "type": "string"
+                },
+                "token_type": {
+                    "title": "Token Type",
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/components/schemas/UserType"
+                },
+                "name": {
+                    "title": "Name",
+                    "type": "string"
+                },
+                "expiry_date": {
+                    "title": "Expiry Date",
+                    "type": "string"
+                },
+                "affiliation": {
+                    "title": "Affiliation",
+                    "type": "string"
+                }
+            }
+        },
+        "HTTPValidationError": {
+            "title": "HTTPValidationError",
+            "type": "object",
+            "properties": {
+                "detail": {
+                    "title": "Detail",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/ValidationError"
+                    }
+                }
+            }
+        },
+        "UserType": {
+            "title": "UserType",
+            "enum": [
+                "Administrator",
+                "Regular User",
+                "Premium User"
+            ],
+            "type": "string",
+            "description": "An enumeration."
+        },
+        "ValidationError": {
+            "title": "ValidationError",
+            "required": [
+                "loc",
+                "msg",
+                "type"
+            ],
+            "type": "object",
+            "properties": {
+                "loc": {
+                    "title": "Location",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ]
+                    }
+                },
+                "msg": {
+                    "title": "Message",
+                    "type": "string"
+                },
+                "type": {
+                    "title": "Error Type",
+                    "type": "string"
+                }
+            }
+        },
+        "Body_login_for_access_token_token_post": {
+            "title": "Body_login_for_access_token_token_post",
+            "required": [
+                "username",
+                "password"
+            ],
+            "type": "object",
+            "properties": {
+                "grant_type": {
+                    "title": "Grant Type",
+                    "pattern": "password",
+                    "type": "string"
+                },
+                "username": {
+                    "title": "Username",
+                    "type": "string"
+                },
+                "password": {
+                    "title": "Password",
+                    "type": "string"
+                },
+                "scope": {
+                    "title": "Scope",
+                    "type": "string",
+                    "default": ""
+                },
+                "client_id": {
+                    "title": "Client Id",
+                    "type": "string"
+                },
+                "client_secret": {
+                    "title": "Client Secret",
+                    "type": "string"
+                }
+            }
+        }
+    }
+    """
+    token_dict = json.loads(token)
+    return token_dict
 
 
 # Loop through files in the folder and get file names
@@ -110,6 +248,7 @@ for file in views:
     cur_table = {'components': {'schemas': {}, 'securitySchemes': {'OAuth2PasswordBearer': {'type': 'oauth2', "flows": {"password":{"scopes": {}, "tokenUrl": "v1/token"}}}}}}
 
     cur_table['components']["schemas"].update(afe_struct_filler())
+    cur_table['components']["schemas"].update(token_struct_filler())
 
     base = {'openapi': '3.0.0', 'info': {'description': rf'This is the swagger API for {title}', 'version': '1.0.0', 'title': rf'{title}', 'termsOfService': 'http://swagger.io/terms/', 
         'contact':{'email': 'darren.mannuela@gmail.com'}, 'license': {'name': 'Apache 2.0', 'url': 'http://www.apache.org/licenses/LICENSE-2.0.html'}},
@@ -121,7 +260,8 @@ for file in views:
         'tags':[{'name': 'Afe', 'description': rf'All endpoints related to get {title} AFE'}, 
                 {'name': 'Workspace', 'description': rf'All endpoints related to {title} Workspace'},
                 {'name': rf'{tag}', 'description': rf'All endpoints related to {title}'},
-                {'name': rf'{tag}'+" Dummy Data", 'description': rf'All endpoints related to {title}'}]}
+                {'name': rf'{tag}'+" Dummy Data", 'description': rf'All endpoints related to {title}'},
+                {'name': "User Mgmt", 'description': rf'All endpoints related to tokens'}]}
     
     endpoint_name = ""
     for word in range (len(seperated)):
@@ -142,7 +282,7 @@ for file in views:
                                                                         'responses': {'200': {'description': rf'{title} data is added', 'content': {'application/json': {'example': {'message': rf'The {title} AFE data was successfully added'}}}}}}},
                                                                                           
             rf'/{endpoint_name}'+"-afe/"+"{afe}":
-                {'parameters': [{'in': 'path', 'name': 'afe', 'required': True, 'description': rf'afe of {title} data to fetch', 'schema':{'type': 'interger'}}],
+                {'parameters': [{'in': 'path', 'name': 'afe', 'required': True, 'description': rf'afe of {title} data to fetch', 'schema':{'type': 'integer'}}],
                 'get':{'security': [{'Authorization':[]}], 'tags': ['Afe'], 'summary': rf'Get {title} AFE', 
                     'responses':{'200': {'description': rf'get {title} AFE data to be returned', 'content': {'application/json': {'example': [[]]}}}}},
                 'put': {'security': [{'Authorization':[]}], 'tags': ['Afe'], 'summary': rf'Update a new {title} AFE data', 'description': rf'Update a new {title} data', 
@@ -166,6 +306,17 @@ for file in views:
     afe_endpoint[rf'/{endpoint_name}'+"-afe/"+"{afe}"]['patch']['requestBody']['content']['application/json'].update(afe_filler())
 
     endpoint_holder['paths'].update(afe_endpoint)
+
+
+    token_endpoint = {'/token': 
+            {'post': {'security': [{'OAuth2PasswordBearer': []}], 'tags': ['User Mgmt'], 'summary': "Login For Access Token", 
+                    'operationId': 'login_for_access_token_token_post', 
+                    'requestBody': {'required': True, 'description': rf'Request body to create {title} AFE data', 
+                                        'content': {'application/x-www-form-urlencoded': {'schema': {"$ref": "#/components/schemas/Body_login_for_access_token_token_post"}, 
+                                                                        'example': []}}}, 
+                                                                        'responses': {'200': {'description': 'Successful Response', 'content': {'application/json': {"schema": {"$ref": "#/components/schemas/Token"}}}},
+                                                                                      '422': {'description': 'Validation Error', 'content': {'application/json': {"schema": {"$ref": "#/components/schemas/HTTPValidationError"}}}}}}}}
+    
 
 
     with open(workspace_file, "r+") as workspace:
@@ -208,14 +359,14 @@ for file in views:
                                                                         'example': []}}}, 
                                                                             'responses': {'200': {'description': rf'{title} Workspace data is added', 'content': {'application/json': {'example': {'message': rf'The {title} Workspace data was successfully added'}}}}}}},
             rf'/{endpoint_name}'+"-workspace/"+"{afe}}": 
-                {'parameters': [{'in': 'path', 'name': 'afe', 'required': True, 'description': rf'afe of {title} data to fetch', 'schema':{'type': 'interger'}}],
+                {'parameters': [{'in': 'path', 'name': 'afe', 'required': True, 'description': rf'afe of {title} data to fetch', 'schema':{'type': 'integer'}}],
                     'get':{'security': [{'Authorization':[]}], 'tags': ['Workspace'], 'summary': rf'Get {title} Workspace', 
                         'responses':{'200': {'description': rf'get {title} Workspace data to be returned', 'content': {'application/json': {'example': [[]]}}}}}},
         
         
                                                                                           
             rf'/{endpoint_name}'+"-workspace/"+"{id}":
-                {'parameters': [{'in': 'path', 'name': 'id', 'required': True, 'description': rf'id of {title} data to fetch', 'schema':{'type': 'interger'}}],
+                {'parameters': [{'in': 'path', 'name': 'id', 'required': True, 'description': rf'id of {title} data to fetch', 'schema':{'type': 'integer'}}],
                 'put': {'security': [{'Authorization':[]}], 'tags': ['Workspace'], 'summary': rf'Update a new {title} Workspace data', 'description': rf'Update a new {title} Workspace Workspace data', 
                             'requestBody': {'required': True, 'description': rf'Request body to update {title} data', 
                                             'content': {'application/json': {'schema': {"$ref": rf'#/components/schemas/{title}'}, 'example': []}}},
@@ -264,7 +415,7 @@ for file in views:
                                                                     'responses': {'200': {'description': rf'{title} data is added', 'content': {'application/json': {'example': {'message': rf'The {title} data was successfully added'}}}}}}},
                                                                                         
         rf'/{endpoint_name}/'+"{id}":
-            {'parameters': [{'in': 'path', 'name': 'id', 'required': True, 'description': rf'id of {title} data to fetch', 'schema':{'type': 'interger'}}],
+            {'parameters': [{'in': 'path', 'name': 'id', 'required': True, 'description': rf'id of {title} data to fetch', 'schema':{'type': 'integer'}}],
             'get':{'security': [{'Authorization':[]}], 'tags': [rf'{tag}'], 'summary': rf'Get {title}', 
                 'responses':{'200': {'description': rf'get {title} data to be returned', 'content': {'application/json': {'example': [[]]}}}}},
             'put': {'security': [{'Authorization':[]}], 'tags': [rf'{tag}'], 'summary': rf'Update a new {title} data', 'description': rf'Update a new {title} data', 
@@ -281,7 +432,7 @@ for file in views:
                         'responses':{'200': {'description': rf'{title} data is deleted', 'content': {'application/json': {'example': {'message': rf'The {title} data was successfully deleted'}}}}}}},
 
         rf'/{endpoint_name}/'+"{num}": 
-        {'parameters': [{'in': 'path', 'name': 'num', 'required': True, 'description': rf'number of dummy data to add', 'schema':{'type': 'interger'}}],
+        {'parameters': [{'in': 'path', 'name': 'num', 'required': True, 'description': rf'number of dummy data to add', 'schema':{'type': 'integer'}}],
             'get':{'security': [{'Authorization':[]}], 'tags': [rf'{tag}'+" Dummy Data"], 'summary': rf'Add dummy data to {title}', 
                 'responses':{'200': {'description': rf'add data to {title}', 'content': {'application/json': {}}}}}}}
        
@@ -302,6 +453,7 @@ for file in views:
     cur_table['components']["schemas"].update(cur_schema)
 
     endpoint_holder["paths"].update(endpoint)
+    endpoint_holder['paths'].update(token_endpoint)
     base.update(endpoint_holder)
     base.update(cur_table)
 
