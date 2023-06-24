@@ -23,6 +23,8 @@ tags:
   description: All endpoints related to Two_D_Seismic_Field_Digital_Data
 - name: Two D Seismic Field Digital Data Dummy Data
   description: All endpoints related to Two_D_Seismic_Field_Digital_Data
+- name: User Mgmt
+  description: All endpoints related to tokens
 paths:
   /Two-D-Seismic-Field-Digital-Data-afe:
     get:
@@ -43,7 +45,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Seismic Field Digital Data
-              user_id: 1
+                email: john.richardson@gtn.id
     post:
       security:
       - OAuth2PasswordBearer: []
@@ -65,7 +67,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Field Digital Data
-            user_id: 1
+              email: john.richardson@gtn.id
       responses:
         '200':
           description: Two_D_Seismic_Field_Digital_Data data is added
@@ -81,7 +83,7 @@ paths:
       required: true
       description: afe of Two_D_Seismic_Field_Digital_Data data to fetch
       schema:
-        type: interger
+        type: integer
     get:
       security:
       - Authorization: []
@@ -100,7 +102,7 @@ paths:
                 working_area: LoremIpsum
                 submission_type: Lorem
                 data_type: Two D Seismic Field Digital Data
-              user_id: 1
+                email: john.richardson@gtn.id
     put:
       security:
       - Authorization: []
@@ -122,7 +124,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Field Digital Data
-            user_id: 1
+              email: john.richardson@gtn.id
       responses:
         '200':
           description: Two_D_Seismic_Field_Digital_Data data is completely updated
@@ -152,7 +154,7 @@ paths:
               working_area: LoremIpsum
               submission_type: Lorem
               data_type: Two D Seismic Field Digital Data
-            user_id: 1
+              email: john.richardson@gtn.id
       responses:
         '200':
           description: one row in Two_D_Seismic_Field_Digital_Data data is updated
@@ -226,7 +228,7 @@ paths:
       required: true
       description: afe of Two_D_Seismic_Field_Digital_Data data to fetch
       schema:
-        type: interger
+        type: integer
     get:
       security:
       - Authorization: []
@@ -249,7 +251,7 @@ paths:
       required: true
       description: id of Two_D_Seismic_Field_Digital_Data data to fetch
       schema:
-        type: interger
+        type: integer
     put:
       security:
       - Authorization: []
@@ -390,7 +392,7 @@ paths:
       required: true
       description: id of Two_D_Seismic_Field_Digital_Data data to fetch
       schema:
-        type: interger
+        type: integer
     get:
       security:
       - Authorization: []
@@ -470,7 +472,7 @@ paths:
       required: true
       description: number of dummy data to add
       schema:
-        type: interger
+        type: integer
     get:
       security:
       - Authorization: []
@@ -482,6 +484,35 @@ paths:
           description: add data to Two_D_Seismic_Field_Digital_Data
           content:
             application/json: {}
+  /token:
+    post:
+      security:
+      - OAuth2PasswordBearer: []
+      tags:
+      - User Mgmt
+      summary: Login For Access Token
+      operationId: login_for_access_token_token_post
+      requestBody:
+        required: true
+        description: Request body to create Two_D_Seismic_Field_Digital_Data AFE data
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Body_login_for_access_token_token_post'
+            example: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Token'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
 components:
   schemas:
     afe:
@@ -501,6 +532,99 @@ components:
             type: string
           data_type:
             type: string
+    Token:
+      title: Token
+      required:
+      - access_token
+      - token_type
+      - type
+      - name
+      - expiry_date
+      - affiliation
+      type: object
+      properties:
+        access_token:
+          title: Access Token
+          type: string
+        token_type:
+          title: Token Type
+          type: string
+        type:
+          $ref: '#/components/schemas/UserType'
+        name:
+          title: Name
+          type: string
+        expiry_date:
+          title: Expiry Date
+          type: string
+        affiliation:
+          title: Affiliation
+          type: string
+    HTTPValidationError:
+      title: HTTPValidationError
+      type: object
+      properties:
+        detail:
+          title: Detail
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationError'
+    UserType:
+      title: UserType
+      enum:
+      - Administrator
+      - Regular User
+      - Premium User
+      type: string
+      description: An enumeration.
+    ValidationError:
+      title: ValidationError
+      required:
+      - loc
+      - msg
+      - type
+      type: object
+      properties:
+        loc:
+          title: Location
+          type: array
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+    Body_login_for_access_token_token_post:
+      title: Body_login_for_access_token_token_post
+      required:
+      - username
+      - password
+      type: object
+      properties:
+        grant_type:
+          title: Grant Type
+          pattern: password
+          type: string
+        username:
+          title: Username
+          type: string
+        password:
+          title: Password
+          type: string
+        scope:
+          title: Scope
+          type: string
+          default: ''
+        client_id:
+          title: Client Id
+          type: string
+        client_secret:
+          title: Client Secret
+          type: string
     Two_D_Seismic_Field_Digital_Data_workspace:
       type: array
       items:
