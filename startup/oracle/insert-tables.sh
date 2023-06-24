@@ -20,3 +20,5 @@ echo "@/home/oracle/sql_tables/users.sql" | sqlplus $ORACLE_CONN_STR
 echo "@/home/oracle/sql_tables/permen.sql" | sqlplus $ORACLE_CONN_STR
 echo "@/home/oracle/sql_tables/afe.sql" | sqlplus $ORACLE_CONN_STR
 echo "@/home/oracle/sql_tables/workspace.sql" | sqlplus $ORACLE_CONN_STR
+echo "Insert into ROLES (ROLE_NAME) values ('Admin');" | sqlplus $ORACLE_CONN_STR
+echo "Insert into USERS (FIRST_NAME,LAST_NAME,EMAIL,PASSWORD,DATE_JOINED,EXPIRED_DATE,ROLE_NAME) values ('John','Richardson','john.richardson@gtn.id','$2a$14$wDOPvFpU5cWyNnRu2QpZYu/ArkVhTQkLVsYyY9tJkktLo8ZrFGIMG',to_date('23-03-2023','DD-MM-RRRR'),to_date('23-03-2025','DD-MM-RRRR'),'Admin');" | sqlplus $ORACLE_CONN_STR
