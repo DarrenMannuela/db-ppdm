@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  description: This is the swagger API for Print_Well_Report
+  description: This is the swagger API for Print_well_report
   version: 1.0.0
-  title: Print_Well_Report
+  title: Print_well_report
   termsOfService: http://swagger.io/terms/
   contact:
     email: darren.mannuela@gmail.com
@@ -10,32 +10,32 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-- description: Print_Well_Report
+- description: Print_well_report
   url: http://localhost:8080/api/v1
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/DarrenMannuela/Print_Well_Report/1.0.0
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Print_well_report/1.0.0
 tags:
 - name: Afe
-  description: All endpoints related to get Print_Well_Report AFE
+  description: All endpoints related to get Print_well_report AFE
 - name: Workspace
-  description: All endpoints related to Print_Well_Report Workspace
-- name: Print Well Report
-  description: All endpoints related to Print_Well_Report
-- name: Print Well Report Dummy Data
-  description: All endpoints related to Print_Well_Report
+  description: All endpoints related to Print_well_report Workspace
+- name: Print_well_report
+  description: All endpoints related to Print_well_report
+- name: Print_well_report Dummy Data
+  description: All endpoints related to Print_well_report
 - name: User Mgmt
   description: All endpoints related to tokens
 paths:
-  /Print-Well-Report-afe:
+  /Print_well_report-afe:
     get:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Print_Well_Report AFE
+      summary: Get Print_well_report AFE
       responses:
         '200':
-          description: get Print_Well_Report AFE data to be returned
+          description: get Print_well_report AFE data to be returned
           content:
             application/json:
               example:
@@ -44,43 +44,43 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Print Well Report
+                data_type: Print_well_report
                 email: john.richardson@gtn.id
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
       - Afe
-      summary: Post a new Print_Well_Report AFE
-      description: Create a new Print_Well_Report AFE data
+      summary: Post a new Print_well_report AFE
+      description: Create a new Print_well_report AFE data
       requestBody:
         required: true
-        description: Request body to create Print_Well_Report AFE data
+        description: Request body to create Print_well_report AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Print Well Report
+              data_type: Print_well_report
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Print_Well_Report data is added
+          description: Print_well_report data is added
           content:
             application/json:
               example:
-                message: The Print_Well_Report AFE data was successfully added
-  /Print-Well-Report-afe/{afe}:
+                message: The Print_well_report AFE data was successfully added
+  /Print_well_report-afe/{afe}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Print_Well_Report data to fetch
+      description: afe of Print_well_report data to fetch
       schema:
         type: integer
     get:
@@ -88,10 +88,10 @@ paths:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Print_Well_Report AFE
+      summary: Get Print_well_report AFE
       responses:
         '200':
-          description: get Print_Well_Report AFE data to be returned
+          description: get Print_well_report AFE data to be returned
           content:
             application/json:
               example:
@@ -100,90 +100,90 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Print Well Report
+                data_type: Print_well_report
                 email: john.richardson@gtn.id
     put:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Print_Well_Report AFE data
-      description: Update a new Print_Well_Report data
+      summary: Update a new Print_well_report AFE data
+      description: Update a new Print_well_report data
       requestBody:
         required: true
-        description: Request body to update Print_Well_Report AFE data
+        description: Request body to update Print_well_report AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Print Well Report
+              data_type: Print_well_report
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Print_Well_Report data is completely updated
+          description: Print_well_report data is completely updated
           content:
             application/json:
               example:
-                message: The Print_Well_Report AFE data is completely updated
+                message: The Print_well_report AFE data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Print_Well_Report AFE data
-      description: Update a new Print_Well_Report data
+      summary: Update a new Print_well_report AFE data
+      description: Update a new Print_well_report data
       requestBody:
         required: true
-        description: Request body to update Print_Well_Report AFE data
+        description: Request body to update Print_well_report AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Print Well Report
+              data_type: Print_well_report
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: one row in Print_Well_Report data is updated
+          description: one row in Print_well_report data is updated
           content:
             application/json:
               example:
-                message: The one row in Print_Well_Report AFE data is updated
+                message: The one row in Print_well_report AFE data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Delete Print_Well_Report AFE data
-      description: Delete Print_Well_Report AFE data
+      summary: Delete Print_well_report AFE data
+      description: Delete Print_well_report AFE data
       responses:
         '200':
-          description: Print_Well_Report AFE data is deleted
+          description: Print_well_report AFE data is deleted
           content:
             application/json:
               example:
-                message: The Print_Well_Report AFE data was successfully deleted
-  /Print-Well-Report-workspace:
+                message: The Print_well_report AFE data was successfully deleted
+  /Print_well_report-workspace:
     get:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Print_Well_Report Workspace
+      summary: Get Print_well_report Workspace
       responses:
         '200':
-          description: get Print_Well_Report Workspace data to be returned
+          description: get Print_well_report Workspace data to be returned
           content:
             application/json:
               example:
@@ -195,32 +195,32 @@ paths:
       - OAuth2PasswordBearer: []
       tags:
       - Workspace
-      summary: Post a new Print_Well_Report Workspace
-      description: Create a new Print_Well_Report Workspace data
+      summary: Post a new Print_well_report Workspace
+      description: Create a new Print_well_report Workspace data
       requestBody:
         required: true
-        description: Request body to create Print_Well_Report Workspace data
+        description: Request body to create Print_well_report Workspace data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example:
               Id: 1
               Afe_number: 1
               Print_well_report_id: 1
       responses:
         '200':
-          description: Print_Well_Report Workspace data is added
+          description: Print_well_report Workspace data is added
           content:
             application/json:
               example:
-                message: The Print_Well_Report Workspace data was successfully added
-  /Print-Well-Report-workspace/{afe}}:
+                message: The Print_well_report Workspace data was successfully added
+  /Print_well_report-workspace/{afe}}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Print_Well_Report data to fetch
+      description: afe of Print_well_report data to fetch
       schema:
         type: integer
     get:
@@ -228,22 +228,22 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Print_Well_Report Workspace
+      summary: Get Print_well_report Workspace
       responses:
         '200':
-          description: get Print_Well_Report Workspace data to be returned
+          description: get Print_well_report Workspace data to be returned
           content:
             application/json:
               example:
                 Id: 1
                 Afe_number: 1
                 Print_well_report_id: 1
-  /Print-Well-Report-workspace/{id}:
+  /Print_well_report-workspace/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Print_Well_Report data to fetch
+      description: id of Print_well_report data to fetch
       schema:
         type: integer
     put:
@@ -251,86 +251,87 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Print_Well_Report Workspace data
-      description: Update a new Print_Well_Report Workspace Workspace data
+      summary: Update a new Print_well_report Workspace data
+      description: Update a new Print_well_report Workspace Workspace data
       requestBody:
         required: true
-        description: Request body to update Print_Well_Report data
+        description: Request body to update Print_well_report data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example:
               Id: 1
               Afe_number: 1
               Print_well_report_id: 1
       responses:
         '200':
-          description: Print_Well_Report Workspace data is completely updated
+          description: Print_well_report Workspace data is completely updated
           content:
             application/json:
               example:
-                message: The Print_Well_Report Workspace data is completely updated
+                message: The Print_well_report Workspace data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Print_Well_Report data
-      description: Update a new Print_Well_Report data
+      summary: Update a new Print_well_report data
+      description: Update a new Print_well_report data
       requestBody:
         required: true
-        description: Request body to update Print_Well_Report data
+        description: Request body to update Print_well_report data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example:
               Id: 1
               Afe_number: 1
               Print_well_report_id: 1
       responses:
         '200':
-          description: one row in Print_Well_Report data is updated
+          description: one row in Print_well_report data is updated
           content:
             application/json:
               example:
-                message: The one row in Print_Well_Report Workspace data is updated
+                message: The one row in Print_well_report Workspace data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Delete Print_Well_Report Workspace data
-      description: Delete Print_Well_Report data
+      summary: Delete Print_well_report Workspace data
+      description: Delete Print_well_report data
       responses:
         '200':
-          description: Print_Well_Report Workspace data is deleted
+          description: Print_well_report Workspace data is deleted
           content:
             application/json:
               example:
-                message: The Print_Well_Report Workspace data was successfully deleted
-  /Print-Well-Report:
+                message: The Print_well_report Workspace data was successfully deleted
+  /Print_well_report:
     get:
       security:
       - Authorization: []
       tags:
-      - Print Well Report
-      summary: Get Print_Well_Report
+      - Print_well_report
+      summary: Get Print_well_report
       responses:
         '200':
-          description: get Print_Well_Report data to be returned
+          description: get Print_well_report data to be returned
           content:
             application/json:
               example:
+                Id: 1
                 Ba_long_name: LoremIpsum
                 Ba_type: LoremIpsum
                 Area_id: LoremIpsum
                 Area_type: LoremIpsum
                 Field_name: LoremIpsum
                 Well_name: LoremIpsum
-                Uwi: LoremIpsum
-                Title: LoremIpsum
+                Uwi_: LoremIpsum
+                Title_: LoremIpsum
                 Creator_name: LoremIpsum
                 Create_date: LoremIpsum
                 Media_type: LoremIpsum
@@ -338,51 +339,51 @@ paths:
                 Item_category: LoremIpsum
                 Item_sub_category: LoremIpsum
                 Page_count: LoremIpsum
-                Remark: LoremIpsum
+                Remark_: LoremIpsum
                 Data_store_name: LoremIpsum
                 Data_store_type: LoremIpsum
-                Source: LoremIpsum
+                Source_: LoremIpsum
                 Qc_status: LoremIpsum
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
-      - Print Well Report
-      summary: Post a new Print_Well_Report
-      description: Create a new Print_Well_Report data
+      - Print_well_report
+      summary: Post a new Print_well_report
+      description: Create a new Print_well_report data
       requestBody:
         required: true
-        description: Request body to create Print_Well_Report data
+        description: Request body to create Print_well_report data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example: []
       responses:
         '200':
-          description: Print_Well_Report data is added
+          description: Print_well_report data is added
           content:
             application/json:
               example:
-                message: The Print_Well_Report data was successfully added
-  /Print-Well-Report/{id}:
+                message: The Print_well_report data was successfully added
+  /Print_well_report/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Print_Well_Report data to fetch
+      description: id of Print_well_report data to fetch
       schema:
         type: integer
     get:
       security:
       - Authorization: []
       tags:
-      - Print Well Report
-      summary: Get Print_Well_Report
+      - Print_well_report
+      summary: Get Print_well_report
       responses:
         '200':
-          description: get Print_Well_Report data to be returned
+          description: get Print_well_report data to be returned
           content:
             application/json:
               example:
@@ -391,61 +392,61 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Print Well Report
-      summary: Update a new Print_Well_Report data
-      description: Update a new Print_Well_Report data
+      - Print_well_report
+      summary: Update a new Print_well_report data
+      description: Update a new Print_well_report data
       requestBody:
         required: true
-        description: Request body to update Print_Well_Report data
+        description: Request body to update Print_well_report data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example: []
       responses:
         '200':
-          description: Print_Well_Report data is completely updated
+          description: Print_well_report data is completely updated
           content:
             application/json:
               example:
-                message: The Print_Well_Report data is completely updated
+                message: The Print_well_report data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
-      - Print Well Report
-      summary: Update a new Print_Well_Report data
-      description: Update a new Print_Well_Report data
+      - Print_well_report
+      summary: Update a new Print_well_report data
+      description: Update a new Print_well_report data
       requestBody:
         required: true
-        description: Request body to update Print_Well_Report data
+        description: Request body to update Print_well_report data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Print_Well_Report'
+              $ref: '#/components/schemas/Print_well_report'
             example: []
       responses:
         '200':
-          description: one row in Print_Well_Report data is updated
+          description: one row in Print_well_report data is updated
           content:
             application/json:
               example:
-                message: The one row in Print_Well_Report data is updated
+                message: The one row in Print_well_report data is updated
     delete:
       security:
       - Authorization: []
       tags:
-      - Print Well Report
-      summary: Delete Print_Well_Report data
-      description: Delete Print_Well_Report data
+      - Print_well_report
+      summary: Delete Print_well_report data
+      description: Delete Print_well_report data
       responses:
         '200':
-          description: Print_Well_Report data is deleted
+          description: Print_well_report data is deleted
           content:
             application/json:
               example:
-                message: The Print_Well_Report data was successfully deleted
-  /Print-Well-Report/{num}:
+                message: The Print_well_report data was successfully deleted
+  /Print_well_report/{num}:
     parameters:
     - in: path
       name: num
@@ -457,11 +458,11 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Print Well Report Dummy Data
-      summary: Add dummy data to Print_Well_Report
+      - Print_well_report Dummy Data
+      summary: Add dummy data to Print_well_report
       responses:
         '200':
-          description: add data to Print_Well_Report
+          description: add data to Print_well_report
           content:
             application/json: {}
   /token:
@@ -474,7 +475,7 @@ paths:
       operationId: login_for_access_token_token_post
       requestBody:
         required: true
-        description: Request body to create Print_Well_Report AFE data
+        description: Request body to create Print_well_report AFE data
         content:
           application/x-www-form-urlencoded:
             schema:
@@ -605,7 +606,7 @@ components:
         client_secret:
           title: Client Secret
           type: string
-    Print_Well_Report_workspace:
+    Print_well_report_workspace:
       type: array
       items:
         type: object
@@ -616,9 +617,11 @@ components:
             type: integer
           Print_well_report_id:
             type: integer
-    Print_Well_Report:
+    Print_well_report:
       type: object
       properties:
+        Id:
+          type: integer
         Ba_long_name:
           type: string
         Ba_type:
@@ -631,9 +634,9 @@ components:
           type: string
         Well_name:
           type: string
-        Uwi:
+        Uwi_:
           type: string
-        Title:
+        Title_:
           type: string
         Creator_name:
           type: string
@@ -649,13 +652,13 @@ components:
           type: string
         Page_count:
           type: string
-        Remark:
+        Remark_:
           type: string
         Data_store_name:
           type: string
         Data_store_type:
           type: string
-        Source:
+        Source_:
           type: string
         Qc_status:
           type: string

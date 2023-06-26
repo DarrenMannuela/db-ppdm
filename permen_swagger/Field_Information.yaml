@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  description: This is the swagger API for Field_Information
+  description: This is the swagger API for Field_information
   version: 1.0.0
-  title: Field_Information
+  title: Field_information
   termsOfService: http://swagger.io/terms/
   contact:
     email: darren.mannuela@gmail.com
@@ -10,32 +10,32 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-- description: Field_Information
+- description: Field_information
   url: http://localhost:8080/api/v1
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/DarrenMannuela/Field_Information/1.0.0
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Field_information/1.0.0
 tags:
 - name: Afe
-  description: All endpoints related to get Field_Information AFE
+  description: All endpoints related to get Field_information AFE
 - name: Workspace
-  description: All endpoints related to Field_Information Workspace
-- name: Field Information
-  description: All endpoints related to Field_Information
-- name: Field Information Dummy Data
-  description: All endpoints related to Field_Information
+  description: All endpoints related to Field_information Workspace
+- name: Field_information
+  description: All endpoints related to Field_information
+- name: Field_information Dummy Data
+  description: All endpoints related to Field_information
 - name: User Mgmt
   description: All endpoints related to tokens
 paths:
-  /Field-Information-afe:
+  /Field_information-afe:
     get:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Field_Information AFE
+      summary: Get Field_information AFE
       responses:
         '200':
-          description: get Field_Information AFE data to be returned
+          description: get Field_information AFE data to be returned
           content:
             application/json:
               example:
@@ -44,43 +44,43 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Field Information
+                data_type: Field_information
                 email: john.richardson@gtn.id
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
       - Afe
-      summary: Post a new Field_Information AFE
-      description: Create a new Field_Information AFE data
+      summary: Post a new Field_information AFE
+      description: Create a new Field_information AFE data
       requestBody:
         required: true
-        description: Request body to create Field_Information AFE data
+        description: Request body to create Field_information AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Field Information
+              data_type: Field_information
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Field_Information data is added
+          description: Field_information data is added
           content:
             application/json:
               example:
-                message: The Field_Information AFE data was successfully added
-  /Field-Information-afe/{afe}:
+                message: The Field_information AFE data was successfully added
+  /Field_information-afe/{afe}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Field_Information data to fetch
+      description: afe of Field_information data to fetch
       schema:
         type: integer
     get:
@@ -88,10 +88,10 @@ paths:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Field_Information AFE
+      summary: Get Field_information AFE
       responses:
         '200':
-          description: get Field_Information AFE data to be returned
+          description: get Field_information AFE data to be returned
           content:
             application/json:
               example:
@@ -100,90 +100,90 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Field Information
+                data_type: Field_information
                 email: john.richardson@gtn.id
     put:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Field_Information AFE data
-      description: Update a new Field_Information data
+      summary: Update a new Field_information AFE data
+      description: Update a new Field_information data
       requestBody:
         required: true
-        description: Request body to update Field_Information AFE data
+        description: Request body to update Field_information AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Field Information
+              data_type: Field_information
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Field_Information data is completely updated
+          description: Field_information data is completely updated
           content:
             application/json:
               example:
-                message: The Field_Information AFE data is completely updated
+                message: The Field_information AFE data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Field_Information AFE data
-      description: Update a new Field_Information data
+      summary: Update a new Field_information AFE data
+      description: Update a new Field_information data
       requestBody:
         required: true
-        description: Request body to update Field_Information AFE data
+        description: Request body to update Field_information AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Field Information
+              data_type: Field_information
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: one row in Field_Information data is updated
+          description: one row in Field_information data is updated
           content:
             application/json:
               example:
-                message: The one row in Field_Information AFE data is updated
+                message: The one row in Field_information AFE data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Delete Field_Information AFE data
-      description: Delete Field_Information AFE data
+      summary: Delete Field_information AFE data
+      description: Delete Field_information AFE data
       responses:
         '200':
-          description: Field_Information AFE data is deleted
+          description: Field_information AFE data is deleted
           content:
             application/json:
               example:
-                message: The Field_Information AFE data was successfully deleted
-  /Field-Information-workspace:
+                message: The Field_information AFE data was successfully deleted
+  /Field_information-workspace:
     get:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Field_Information Workspace
+      summary: Get Field_information Workspace
       responses:
         '200':
-          description: get Field_Information Workspace data to be returned
+          description: get Field_information Workspace data to be returned
           content:
             application/json:
               example:
@@ -195,32 +195,32 @@ paths:
       - OAuth2PasswordBearer: []
       tags:
       - Workspace
-      summary: Post a new Field_Information Workspace
-      description: Create a new Field_Information Workspace data
+      summary: Post a new Field_information Workspace
+      description: Create a new Field_information Workspace data
       requestBody:
         required: true
-        description: Request body to create Field_Information Workspace data
+        description: Request body to create Field_information Workspace data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example:
               Id: 1
               Afe_number: 1
               Field_information_id: 1
       responses:
         '200':
-          description: Field_Information Workspace data is added
+          description: Field_information Workspace data is added
           content:
             application/json:
               example:
-                message: The Field_Information Workspace data was successfully added
-  /Field-Information-workspace/{afe}}:
+                message: The Field_information Workspace data was successfully added
+  /Field_information-workspace/{afe}}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Field_Information data to fetch
+      description: afe of Field_information data to fetch
       schema:
         type: integer
     get:
@@ -228,22 +228,22 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Field_Information Workspace
+      summary: Get Field_information Workspace
       responses:
         '200':
-          description: get Field_Information Workspace data to be returned
+          description: get Field_information Workspace data to be returned
           content:
             application/json:
               example:
                 Id: 1
                 Afe_number: 1
                 Field_information_id: 1
-  /Field-Information-workspace/{id}:
+  /Field_information-workspace/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Field_Information data to fetch
+      description: id of Field_information data to fetch
       schema:
         type: integer
     put:
@@ -251,131 +251,132 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Field_Information Workspace data
-      description: Update a new Field_Information Workspace Workspace data
+      summary: Update a new Field_information Workspace data
+      description: Update a new Field_information Workspace Workspace data
       requestBody:
         required: true
-        description: Request body to update Field_Information data
+        description: Request body to update Field_information data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example:
               Id: 1
               Afe_number: 1
               Field_information_id: 1
       responses:
         '200':
-          description: Field_Information Workspace data is completely updated
+          description: Field_information Workspace data is completely updated
           content:
             application/json:
               example:
-                message: The Field_Information Workspace data is completely updated
+                message: The Field_information Workspace data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Field_Information data
-      description: Update a new Field_Information data
+      summary: Update a new Field_information data
+      description: Update a new Field_information data
       requestBody:
         required: true
-        description: Request body to update Field_Information data
+        description: Request body to update Field_information data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example:
               Id: 1
               Afe_number: 1
               Field_information_id: 1
       responses:
         '200':
-          description: one row in Field_Information data is updated
+          description: one row in Field_information data is updated
           content:
             application/json:
               example:
-                message: The one row in Field_Information Workspace data is updated
+                message: The one row in Field_information Workspace data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Delete Field_Information Workspace data
-      description: Delete Field_Information data
+      summary: Delete Field_information Workspace data
+      description: Delete Field_information data
       responses:
         '200':
-          description: Field_Information Workspace data is deleted
+          description: Field_information Workspace data is deleted
           content:
             application/json:
               example:
-                message: The Field_Information Workspace data was successfully deleted
-  /Field-Information:
+                message: The Field_information Workspace data was successfully deleted
+  /Field_information:
     get:
       security:
       - Authorization: []
       tags:
-      - Field Information
-      summary: Get Field_Information
+      - Field_information
+      summary: Get Field_information
       responses:
         '200':
-          description: get Field_Information data to be returned
+          description: get Field_information data to be returned
           content:
             application/json:
               example:
+                Id: 1
                 Area_id: LoremIpsum
                 Area_type: LoremIpsum
                 Field_name: LoremIpsum
                 Discovery_date: LoremIpsum
                 Field_type: LoremIpsum
                 Original_file_name: LoremIpsum
-                Password: LoremIpsum
-                Digital_size: LoremIpsum
+                Password_: LoremIpsum
+                Digital_size: 1
                 Digital_size_uom: LoremIpsum
                 Media_type: LoremIpsum
                 Data_store_name: LoremIpsum
-                Remark: LoremIpsum
+                Remark_: LoremIpsum
                 Qc_status: LoremIpsum
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
-      - Field Information
-      summary: Post a new Field_Information
-      description: Create a new Field_Information data
+      - Field_information
+      summary: Post a new Field_information
+      description: Create a new Field_information data
       requestBody:
         required: true
-        description: Request body to create Field_Information data
+        description: Request body to create Field_information data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example: []
       responses:
         '200':
-          description: Field_Information data is added
+          description: Field_information data is added
           content:
             application/json:
               example:
-                message: The Field_Information data was successfully added
-  /Field-Information/{id}:
+                message: The Field_information data was successfully added
+  /Field_information/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Field_Information data to fetch
+      description: id of Field_information data to fetch
       schema:
         type: integer
     get:
       security:
       - Authorization: []
       tags:
-      - Field Information
-      summary: Get Field_Information
+      - Field_information
+      summary: Get Field_information
       responses:
         '200':
-          description: get Field_Information data to be returned
+          description: get Field_information data to be returned
           content:
             application/json:
               example:
@@ -384,61 +385,61 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Field Information
-      summary: Update a new Field_Information data
-      description: Update a new Field_Information data
+      - Field_information
+      summary: Update a new Field_information data
+      description: Update a new Field_information data
       requestBody:
         required: true
-        description: Request body to update Field_Information data
+        description: Request body to update Field_information data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example: []
       responses:
         '200':
-          description: Field_Information data is completely updated
+          description: Field_information data is completely updated
           content:
             application/json:
               example:
-                message: The Field_Information data is completely updated
+                message: The Field_information data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
-      - Field Information
-      summary: Update a new Field_Information data
-      description: Update a new Field_Information data
+      - Field_information
+      summary: Update a new Field_information data
+      description: Update a new Field_information data
       requestBody:
         required: true
-        description: Request body to update Field_Information data
+        description: Request body to update Field_information data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Field_Information'
+              $ref: '#/components/schemas/Field_information'
             example: []
       responses:
         '200':
-          description: one row in Field_Information data is updated
+          description: one row in Field_information data is updated
           content:
             application/json:
               example:
-                message: The one row in Field_Information data is updated
+                message: The one row in Field_information data is updated
     delete:
       security:
       - Authorization: []
       tags:
-      - Field Information
-      summary: Delete Field_Information data
-      description: Delete Field_Information data
+      - Field_information
+      summary: Delete Field_information data
+      description: Delete Field_information data
       responses:
         '200':
-          description: Field_Information data is deleted
+          description: Field_information data is deleted
           content:
             application/json:
               example:
-                message: The Field_Information data was successfully deleted
-  /Field-Information/{num}:
+                message: The Field_information data was successfully deleted
+  /Field_information/{num}:
     parameters:
     - in: path
       name: num
@@ -450,11 +451,11 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Field Information Dummy Data
-      summary: Add dummy data to Field_Information
+      - Field_information Dummy Data
+      summary: Add dummy data to Field_information
       responses:
         '200':
-          description: add data to Field_Information
+          description: add data to Field_information
           content:
             application/json: {}
   /token:
@@ -467,7 +468,7 @@ paths:
       operationId: login_for_access_token_token_post
       requestBody:
         required: true
-        description: Request body to create Field_Information AFE data
+        description: Request body to create Field_information AFE data
         content:
           application/x-www-form-urlencoded:
             schema:
@@ -598,7 +599,7 @@ components:
         client_secret:
           title: Client Secret
           type: string
-    Field_Information_workspace:
+    Field_information_workspace:
       type: array
       items:
         type: object
@@ -609,9 +610,11 @@ components:
             type: integer
           Field_information_id:
             type: integer
-    Field_Information:
+    Field_information:
       type: object
       properties:
+        Id:
+          type: integer
         Area_id:
           type: string
         Area_type:
@@ -624,17 +627,17 @@ components:
           type: string
         Original_file_name:
           type: string
-        Password:
+        Password_:
           type: string
         Digital_size:
-          type: string
+          type: integer
         Digital_size_uom:
           type: string
         Media_type:
           type: string
         Data_store_name:
           type: string
-        Remark:
+        Remark_:
           type: string
         Qc_status:
           type: string

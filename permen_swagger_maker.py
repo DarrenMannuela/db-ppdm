@@ -4,7 +4,7 @@ import yaml
 import json
 
 
-folder = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_dto'
+folder = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_dto/no_gorm/'
 views = []
 
 
@@ -213,7 +213,7 @@ for filename in os.listdir(folder):
         views.append(file_name)
 
 
-views.remove(".DS_Store")
+# views.remove(".DS_Store")
 
 print(views)
 
@@ -225,14 +225,14 @@ for file in views:
 
 
     endpoint_holder = {'paths': {}}
-    cur_file = f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_dto/{file}"
+    cur_file = f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_dto/gorm/{file}"
 
 
     split_file = file.split(".")
     seperated = re.findall('[A-Z][^A-Z]*', split_file[0])
 
 
-    workspace_file = f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_workspace_dto/{split_file[0]}/workspace.go"
+    workspace_file = f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_workspace_dto/gorm/{split_file[0]}/workspace.go"
 
 
 
@@ -402,8 +402,25 @@ for file in views:
        
 
        cur_dto =  dto.read()
-       get_field = r"\s+([^\s]+)\s+\*string"
+       get_field = r"\s+([^\s]+)\s+(?:\*string|\*int|int)"
        fields = re.findall(get_field, cur_dto)
+
+       get_types = cur_dto.split("{")[1]
+       get_types = get_types.split("\n")
+
+       types = []
+
+       for type in get_types:
+           if type != "" or type != "}":
+               cur_type = type.split(" ")
+
+               while "" in cur_type:
+                   cur_type.remove("")
+
+               if len(cur_type) >= 3:
+                   types.append(cur_type[1])
+
+       print(types)
        endpoint = {rf'/{endpoint_name}': 
         {'get':{'security': [{'Authorization':[]}], 'tags': [rf'{tag}'], 'summary': rf'Get {title}', 
                 'responses':{'200': {'description': rf'get {title} data to be returned', 'content': {'application/json': {'example': [[]]}}}}}, 
@@ -443,10 +460,19 @@ for file in views:
            "properties": {}
        }}
        
-       for field in fields:
-           filler['example'][field] = "LoremIpsum"
-           cur_field = {field:{'type': "string"}}
-           cur_schema[title]['properties'].update(cur_field)
+       for field in range (len(fields)):
+            if types[field] == "*string":
+                filler['example'][fields[field]] = "LoremIpsum"
+                cur_field = {fields[field]:{'type': "string"}}
+                cur_schema[title]['properties'].update(cur_field)
+            if types[field] == "*int":
+                filler['example'][fields[field]] = 1
+                cur_field = {fields[field]:{'type': "integer"}}
+                cur_schema[title]['properties'].update(cur_field)
+            if types[field] == "int":
+                filler['example'][fields[field]] = 1
+                cur_field = {fields[field]:{'type': "integer"}}
+                cur_schema[title]['properties'].update(cur_field)
 
     endpoint[rf'/{endpoint_name}']['get']['responses']['200']['content']['application/json'].update(table_filler(filler))
 
@@ -457,7 +483,7 @@ for file in views:
     base.update(endpoint_holder)
     base.update(cur_table)
 
-    print(cur_table)
+    # print(cur_table)
 
 
 

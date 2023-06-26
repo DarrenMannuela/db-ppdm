@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  description: This is the swagger API for Seismic_Interpretation_Data
+  description: This is the swagger API for Seismic_interpretation_data
   version: 1.0.0
-  title: Seismic_Interpretation_Data
+  title: Seismic_interpretation_data
   termsOfService: http://swagger.io/terms/
   contact:
     email: darren.mannuela@gmail.com
@@ -10,32 +10,32 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-- description: Seismic_Interpretation_Data
+- description: Seismic_interpretation_data
   url: http://localhost:8080/api/v1
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/DarrenMannuela/Seismic_Interpretation_Data/1.0.0
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Seismic_interpretation_data/1.0.0
 tags:
 - name: Afe
-  description: All endpoints related to get Seismic_Interpretation_Data AFE
+  description: All endpoints related to get Seismic_interpretation_data AFE
 - name: Workspace
-  description: All endpoints related to Seismic_Interpretation_Data Workspace
-- name: Seismic Interpretation Data
-  description: All endpoints related to Seismic_Interpretation_Data
-- name: Seismic Interpretation Data Dummy Data
-  description: All endpoints related to Seismic_Interpretation_Data
+  description: All endpoints related to Seismic_interpretation_data Workspace
+- name: Seismic_interpretation_data
+  description: All endpoints related to Seismic_interpretation_data
+- name: Seismic_interpretation_data Dummy Data
+  description: All endpoints related to Seismic_interpretation_data
 - name: User Mgmt
   description: All endpoints related to tokens
 paths:
-  /Seismic-Interpretation-Data-afe:
+  /Seismic_interpretation_data-afe:
     get:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Seismic_Interpretation_Data AFE
+      summary: Get Seismic_interpretation_data AFE
       responses:
         '200':
-          description: get Seismic_Interpretation_Data AFE data to be returned
+          description: get Seismic_interpretation_data AFE data to be returned
           content:
             application/json:
               example:
@@ -44,44 +44,44 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Seismic Interpretation Data
+                data_type: Seismic_interpretation_data
                 email: john.richardson@gtn.id
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
       - Afe
-      summary: Post a new Seismic_Interpretation_Data AFE
-      description: Create a new Seismic_Interpretation_Data AFE data
+      summary: Post a new Seismic_interpretation_data AFE
+      description: Create a new Seismic_interpretation_data AFE data
       requestBody:
         required: true
-        description: Request body to create Seismic_Interpretation_Data AFE data
+        description: Request body to create Seismic_interpretation_data AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Seismic Interpretation Data
+              data_type: Seismic_interpretation_data
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Seismic_Interpretation_Data data is added
+          description: Seismic_interpretation_data data is added
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data AFE data was successfully
+                message: The Seismic_interpretation_data AFE data was successfully
                   added
-  /Seismic-Interpretation-Data-afe/{afe}:
+  /Seismic_interpretation_data-afe/{afe}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Seismic_Interpretation_Data data to fetch
+      description: afe of Seismic_interpretation_data data to fetch
       schema:
         type: integer
     get:
@@ -89,10 +89,10 @@ paths:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Seismic_Interpretation_Data AFE
+      summary: Get Seismic_interpretation_data AFE
       responses:
         '200':
-          description: get Seismic_Interpretation_Data AFE data to be returned
+          description: get Seismic_interpretation_data AFE data to be returned
           content:
             application/json:
               example:
@@ -101,91 +101,91 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Seismic Interpretation Data
+                data_type: Seismic_interpretation_data
                 email: john.richardson@gtn.id
     put:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Seismic_Interpretation_Data AFE data
-      description: Update a new Seismic_Interpretation_Data data
+      summary: Update a new Seismic_interpretation_data AFE data
+      description: Update a new Seismic_interpretation_data data
       requestBody:
         required: true
-        description: Request body to update Seismic_Interpretation_Data AFE data
+        description: Request body to update Seismic_interpretation_data AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Seismic Interpretation Data
+              data_type: Seismic_interpretation_data
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Seismic_Interpretation_Data data is completely updated
+          description: Seismic_interpretation_data data is completely updated
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data AFE data is completely updated
+                message: The Seismic_interpretation_data AFE data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Seismic_Interpretation_Data AFE data
-      description: Update a new Seismic_Interpretation_Data data
+      summary: Update a new Seismic_interpretation_data AFE data
+      description: Update a new Seismic_interpretation_data data
       requestBody:
         required: true
-        description: Request body to update Seismic_Interpretation_Data AFE data
+        description: Request body to update Seismic_interpretation_data AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Seismic Interpretation Data
+              data_type: Seismic_interpretation_data
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: one row in Seismic_Interpretation_Data data is updated
+          description: one row in Seismic_interpretation_data data is updated
           content:
             application/json:
               example:
-                message: The one row in Seismic_Interpretation_Data AFE data is updated
+                message: The one row in Seismic_interpretation_data AFE data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Delete Seismic_Interpretation_Data AFE data
-      description: Delete Seismic_Interpretation_Data AFE data
+      summary: Delete Seismic_interpretation_data AFE data
+      description: Delete Seismic_interpretation_data AFE data
       responses:
         '200':
-          description: Seismic_Interpretation_Data AFE data is deleted
+          description: Seismic_interpretation_data AFE data is deleted
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data AFE data was successfully
+                message: The Seismic_interpretation_data AFE data was successfully
                   deleted
-  /Seismic-Interpretation-Data-workspace:
+  /Seismic_interpretation_data-workspace:
     get:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Seismic_Interpretation_Data Workspace
+      summary: Get Seismic_interpretation_data Workspace
       responses:
         '200':
-          description: get Seismic_Interpretation_Data Workspace data to be returned
+          description: get Seismic_interpretation_data Workspace data to be returned
           content:
             application/json:
               example:
@@ -197,34 +197,34 @@ paths:
       - OAuth2PasswordBearer: []
       tags:
       - Workspace
-      summary: Post a new Seismic_Interpretation_Data Workspace
-      description: Create a new Seismic_Interpretation_Data Workspace data
+      summary: Post a new Seismic_interpretation_data Workspace
+      description: Create a new Seismic_interpretation_data Workspace data
       requestBody:
         required: true
-        description: Request body to create Seismic_Interpretation_Data Workspace
+        description: Request body to create Seismic_interpretation_data Workspace
           data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example:
               Id: 1
               Afe_number: 1
               Seismic_interpretation_data_id: 1
       responses:
         '200':
-          description: Seismic_Interpretation_Data Workspace data is added
+          description: Seismic_interpretation_data Workspace data is added
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data Workspace data was successfully
+                message: The Seismic_interpretation_data Workspace data was successfully
                   added
-  /Seismic-Interpretation-Data-workspace/{afe}}:
+  /Seismic_interpretation_data-workspace/{afe}}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Seismic_Interpretation_Data data to fetch
+      description: afe of Seismic_interpretation_data data to fetch
       schema:
         type: integer
     get:
@@ -232,22 +232,22 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Seismic_Interpretation_Data Workspace
+      summary: Get Seismic_interpretation_data Workspace
       responses:
         '200':
-          description: get Seismic_Interpretation_Data Workspace data to be returned
+          description: get Seismic_interpretation_data Workspace data to be returned
           content:
             application/json:
               example:
                 Id: 1
                 Afe_number: 1
                 Seismic_interpretation_data_id: 1
-  /Seismic-Interpretation-Data-workspace/{id}:
+  /Seismic_interpretation_data-workspace/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Seismic_Interpretation_Data data to fetch
+      description: id of Seismic_interpretation_data data to fetch
       schema:
         type: integer
     put:
@@ -255,88 +255,89 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Seismic_Interpretation_Data Workspace data
-      description: Update a new Seismic_Interpretation_Data Workspace Workspace data
+      summary: Update a new Seismic_interpretation_data Workspace data
+      description: Update a new Seismic_interpretation_data Workspace Workspace data
       requestBody:
         required: true
-        description: Request body to update Seismic_Interpretation_Data data
+        description: Request body to update Seismic_interpretation_data data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example:
               Id: 1
               Afe_number: 1
               Seismic_interpretation_data_id: 1
       responses:
         '200':
-          description: Seismic_Interpretation_Data Workspace data is completely updated
+          description: Seismic_interpretation_data Workspace data is completely updated
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data Workspace data is completely
+                message: The Seismic_interpretation_data Workspace data is completely
                   updated
     patch:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Seismic_Interpretation_Data data
-      description: Update a new Seismic_Interpretation_Data data
+      summary: Update a new Seismic_interpretation_data data
+      description: Update a new Seismic_interpretation_data data
       requestBody:
         required: true
-        description: Request body to update Seismic_Interpretation_Data data
+        description: Request body to update Seismic_interpretation_data data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example:
               Id: 1
               Afe_number: 1
               Seismic_interpretation_data_id: 1
       responses:
         '200':
-          description: one row in Seismic_Interpretation_Data data is updated
+          description: one row in Seismic_interpretation_data data is updated
           content:
             application/json:
               example:
-                message: The one row in Seismic_Interpretation_Data Workspace data
+                message: The one row in Seismic_interpretation_data Workspace data
                   is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Delete Seismic_Interpretation_Data Workspace data
-      description: Delete Seismic_Interpretation_Data data
+      summary: Delete Seismic_interpretation_data Workspace data
+      description: Delete Seismic_interpretation_data data
       responses:
         '200':
-          description: Seismic_Interpretation_Data Workspace data is deleted
+          description: Seismic_interpretation_data Workspace data is deleted
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data Workspace data was successfully
+                message: The Seismic_interpretation_data Workspace data was successfully
                   deleted
-  /Seismic-Interpretation-Data:
+  /Seismic_interpretation_data:
     get:
       security:
       - Authorization: []
       tags:
-      - Seismic Interpretation Data
-      summary: Get Seismic_Interpretation_Data
+      - Seismic_interpretation_data
+      summary: Get Seismic_interpretation_data
       responses:
         '200':
-          description: get Seismic_Interpretation_Data data to be returned
+          description: get Seismic_interpretation_data data to be returned
           content:
             application/json:
               example:
+                Id: 1
                 Ba_long_name: LoremIpsum
                 Ba_type: LoremIpsum
                 Area_id: LoremIpsum
                 Area_type: LoremIpsum
                 Field_name: LoremIpsum
                 Project_name: LoremIpsum
-                Interpreter: LoremIpsum
+                Interpreter_: LoremIpsum
                 Interp_date: LoremIpsum
                 Interp_objective: LoremIpsum
                 Interp_type: LoremIpsum
@@ -347,54 +348,56 @@ paths:
                 Media_type: LoremIpsum
                 Tape_number: LoremIpsum
                 Digital_format: LoremIpsum
-                Remark: LoremIpsum
+                Remark_: LoremIpsum
+                Ba_long_name_2: LoremIpsum
+                Ba_type_2: LoremIpsum
                 Data_store_name: LoremIpsum
                 Original_file_name: LoremIpsum
-                Password: LoremIpsum
-                Digital_size: LoremIpsum
+                Password_: LoremIpsum
+                Digital_size: 1
                 Digital_size_uom: LoremIpsum
-                Source: LoremIpsum
+                Source_: LoremIpsum
                 Qc_status: LoremIpsum
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
-      - Seismic Interpretation Data
-      summary: Post a new Seismic_Interpretation_Data
-      description: Create a new Seismic_Interpretation_Data data
+      - Seismic_interpretation_data
+      summary: Post a new Seismic_interpretation_data
+      description: Create a new Seismic_interpretation_data data
       requestBody:
         required: true
-        description: Request body to create Seismic_Interpretation_Data data
+        description: Request body to create Seismic_interpretation_data data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example: []
       responses:
         '200':
-          description: Seismic_Interpretation_Data data is added
+          description: Seismic_interpretation_data data is added
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data data was successfully added
-  /Seismic-Interpretation-Data/{id}:
+                message: The Seismic_interpretation_data data was successfully added
+  /Seismic_interpretation_data/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Seismic_Interpretation_Data data to fetch
+      description: id of Seismic_interpretation_data data to fetch
       schema:
         type: integer
     get:
       security:
       - Authorization: []
       tags:
-      - Seismic Interpretation Data
-      summary: Get Seismic_Interpretation_Data
+      - Seismic_interpretation_data
+      summary: Get Seismic_interpretation_data
       responses:
         '200':
-          description: get Seismic_Interpretation_Data data to be returned
+          description: get Seismic_interpretation_data data to be returned
           content:
             application/json:
               example:
@@ -403,61 +406,61 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Seismic Interpretation Data
-      summary: Update a new Seismic_Interpretation_Data data
-      description: Update a new Seismic_Interpretation_Data data
+      - Seismic_interpretation_data
+      summary: Update a new Seismic_interpretation_data data
+      description: Update a new Seismic_interpretation_data data
       requestBody:
         required: true
-        description: Request body to update Seismic_Interpretation_Data data
+        description: Request body to update Seismic_interpretation_data data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example: []
       responses:
         '200':
-          description: Seismic_Interpretation_Data data is completely updated
+          description: Seismic_interpretation_data data is completely updated
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data data is completely updated
+                message: The Seismic_interpretation_data data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
-      - Seismic Interpretation Data
-      summary: Update a new Seismic_Interpretation_Data data
-      description: Update a new Seismic_Interpretation_Data data
+      - Seismic_interpretation_data
+      summary: Update a new Seismic_interpretation_data data
+      description: Update a new Seismic_interpretation_data data
       requestBody:
         required: true
-        description: Request body to update Seismic_Interpretation_Data data
+        description: Request body to update Seismic_interpretation_data data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Seismic_Interpretation_Data'
+              $ref: '#/components/schemas/Seismic_interpretation_data'
             example: []
       responses:
         '200':
-          description: one row in Seismic_Interpretation_Data data is updated
+          description: one row in Seismic_interpretation_data data is updated
           content:
             application/json:
               example:
-                message: The one row in Seismic_Interpretation_Data data is updated
+                message: The one row in Seismic_interpretation_data data is updated
     delete:
       security:
       - Authorization: []
       tags:
-      - Seismic Interpretation Data
-      summary: Delete Seismic_Interpretation_Data data
-      description: Delete Seismic_Interpretation_Data data
+      - Seismic_interpretation_data
+      summary: Delete Seismic_interpretation_data data
+      description: Delete Seismic_interpretation_data data
       responses:
         '200':
-          description: Seismic_Interpretation_Data data is deleted
+          description: Seismic_interpretation_data data is deleted
           content:
             application/json:
               example:
-                message: The Seismic_Interpretation_Data data was successfully deleted
-  /Seismic-Interpretation-Data/{num}:
+                message: The Seismic_interpretation_data data was successfully deleted
+  /Seismic_interpretation_data/{num}:
     parameters:
     - in: path
       name: num
@@ -469,11 +472,11 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Seismic Interpretation Data Dummy Data
-      summary: Add dummy data to Seismic_Interpretation_Data
+      - Seismic_interpretation_data Dummy Data
+      summary: Add dummy data to Seismic_interpretation_data
       responses:
         '200':
-          description: add data to Seismic_Interpretation_Data
+          description: add data to Seismic_interpretation_data
           content:
             application/json: {}
   /token:
@@ -486,7 +489,7 @@ paths:
       operationId: login_for_access_token_token_post
       requestBody:
         required: true
-        description: Request body to create Seismic_Interpretation_Data AFE data
+        description: Request body to create Seismic_interpretation_data AFE data
         content:
           application/x-www-form-urlencoded:
             schema:
@@ -617,7 +620,7 @@ components:
         client_secret:
           title: Client Secret
           type: string
-    Seismic_Interpretation_Data_workspace:
+    Seismic_interpretation_data_workspace:
       type: array
       items:
         type: object
@@ -628,9 +631,11 @@ components:
             type: integer
           Seismic_interpretation_data_id:
             type: integer
-    Seismic_Interpretation_Data:
+    Seismic_interpretation_data:
       type: object
       properties:
+        Id:
+          type: integer
         Ba_long_name:
           type: string
         Ba_type:
@@ -643,7 +648,7 @@ components:
           type: string
         Project_name:
           type: string
-        Interpreter:
+        Interpreter_:
           type: string
         Interp_date:
           type: string
@@ -665,19 +670,23 @@ components:
           type: string
         Digital_format:
           type: string
-        Remark:
+        Remark_:
+          type: string
+        Ba_long_name_2:
+          type: string
+        Ba_type_2:
           type: string
         Data_store_name:
           type: string
         Original_file_name:
           type: string
-        Password:
+        Password_:
           type: string
         Digital_size:
-          type: string
+          type: integer
         Digital_size_uom:
           type: string
-        Source:
+        Source_:
           type: string
         Qc_status:
           type: string

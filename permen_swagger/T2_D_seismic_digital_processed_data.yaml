@@ -1,0 +1,724 @@
+openapi: 3.0.0
+info:
+  description: This is the swagger API for T2_D_seismic_digital_processed_data
+  version: 1.0.0
+  title: T2_D_seismic_digital_processed_data
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: darren.mannuela@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- description: T2_D_seismic_digital_processed_data
+  url: http://localhost:8080/api/v1
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/T2_D_seismic_digital_processed_data/1.0.0
+tags:
+- name: Afe
+  description: All endpoints related to get T2_D_seismic_digital_processed_data AFE
+- name: Workspace
+  description: All endpoints related to T2_D_seismic_digital_processed_data Workspace
+- name: T2 D_seismic_digital_processed_data
+  description: All endpoints related to T2_D_seismic_digital_processed_data
+- name: T2 D_seismic_digital_processed_data Dummy Data
+  description: All endpoints related to T2_D_seismic_digital_processed_data
+- name: User Mgmt
+  description: All endpoints related to tokens
+paths:
+  /T2-D_seismic_digital_processed_data-afe:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get T2_D_seismic_digital_processed_data AFE
+      responses:
+        '200':
+          description: get T2_D_seismic_digital_processed_data AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: T2 D_seismic_digital_processed_data
+                email: john.richardson@gtn.id
+    post:
+      security:
+      - OAuth2PasswordBearer: []
+      tags:
+      - Afe
+      summary: Post a new T2_D_seismic_digital_processed_data AFE
+      description: Create a new T2_D_seismic_digital_processed_data AFE data
+      requestBody:
+        required: true
+        description: Request body to create T2_D_seismic_digital_processed_data AFE
+          data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: T2 D_seismic_digital_processed_data
+              email: john.richardson@gtn.id
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data data is added
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data AFE data was successfully
+                  added
+  /T2-D_seismic_digital_processed_data-afe/{afe}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of T2_D_seismic_digital_processed_data data to fetch
+      schema:
+        type: integer
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Get T2_D_seismic_digital_processed_data AFE
+      responses:
+        '200':
+          description: get T2_D_seismic_digital_processed_data AFE data to be returned
+          content:
+            application/json:
+              example:
+                afe_number: 1
+                workspace_name: LoremIpsum
+                kkks_name: LoremIpsum
+                working_area: LoremIpsum
+                submission_type: Lorem
+                data_type: T2 D_seismic_digital_processed_data
+                email: john.richardson@gtn.id
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new T2_D_seismic_digital_processed_data AFE data
+      description: Update a new T2_D_seismic_digital_processed_data data
+      requestBody:
+        required: true
+        description: Request body to update T2_D_seismic_digital_processed_data AFE
+          data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: T2 D_seismic_digital_processed_data
+              email: john.richardson@gtn.id
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data data is completely updated
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data AFE data is completely
+                  updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Update a new T2_D_seismic_digital_processed_data AFE data
+      description: Update a new T2_D_seismic_digital_processed_data data
+      requestBody:
+        required: true
+        description: Request body to update T2_D_seismic_digital_processed_data AFE
+          data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example:
+              afe_number: 1
+              workspace_name: LoremIpsum
+              kkks_name: LoremIpsum
+              working_area: LoremIpsum
+              submission_type: Lorem
+              data_type: T2 D_seismic_digital_processed_data
+              email: john.richardson@gtn.id
+      responses:
+        '200':
+          description: one row in T2_D_seismic_digital_processed_data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in T2_D_seismic_digital_processed_data AFE data
+                  is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Afe
+      summary: Delete T2_D_seismic_digital_processed_data AFE data
+      description: Delete T2_D_seismic_digital_processed_data AFE data
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data AFE data is deleted
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data AFE data was successfully
+                  deleted
+  /T2-D_seismic_digital_processed_data-workspace:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get T2_D_seismic_digital_processed_data Workspace
+      responses:
+        '200':
+          description: get T2_D_seismic_digital_processed_data Workspace data to be
+            returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                T2D_seismic_digital_processed_data_id: 1
+    post:
+      security:
+      - OAuth2PasswordBearer: []
+      tags:
+      - Workspace
+      summary: Post a new T2_D_seismic_digital_processed_data Workspace
+      description: Create a new T2_D_seismic_digital_processed_data Workspace data
+      requestBody:
+        required: true
+        description: Request body to create T2_D_seismic_digital_processed_data Workspace
+          data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example:
+              Id: 1
+              Afe_number: 1
+              T2D_seismic_digital_processed_data_id: 1
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data Workspace data is added
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data Workspace data was
+                  successfully added
+  /T2-D_seismic_digital_processed_data-workspace/{afe}}:
+    parameters:
+    - in: path
+      name: afe
+      required: true
+      description: afe of T2_D_seismic_digital_processed_data data to fetch
+      schema:
+        type: integer
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Get T2_D_seismic_digital_processed_data Workspace
+      responses:
+        '200':
+          description: get T2_D_seismic_digital_processed_data Workspace data to be
+            returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Afe_number: 1
+                T2D_seismic_digital_processed_data_id: 1
+  /T2-D_seismic_digital_processed_data-workspace/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of T2_D_seismic_digital_processed_data data to fetch
+      schema:
+        type: integer
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new T2_D_seismic_digital_processed_data Workspace data
+      description: Update a new T2_D_seismic_digital_processed_data Workspace Workspace
+        data
+      requestBody:
+        required: true
+        description: Request body to update T2_D_seismic_digital_processed_data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example:
+              Id: 1
+              Afe_number: 1
+              T2D_seismic_digital_processed_data_id: 1
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data Workspace data is completely
+            updated
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data Workspace data is
+                  completely updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Update a new T2_D_seismic_digital_processed_data data
+      description: Update a new T2_D_seismic_digital_processed_data data
+      requestBody:
+        required: true
+        description: Request body to update T2_D_seismic_digital_processed_data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example:
+              Id: 1
+              Afe_number: 1
+              T2D_seismic_digital_processed_data_id: 1
+      responses:
+        '200':
+          description: one row in T2_D_seismic_digital_processed_data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in T2_D_seismic_digital_processed_data Workspace
+                  data is updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - Workspace
+      summary: Delete T2_D_seismic_digital_processed_data Workspace data
+      description: Delete T2_D_seismic_digital_processed_data data
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data Workspace data is deleted
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data Workspace data was
+                  successfully deleted
+  /T2-D_seismic_digital_processed_data:
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - T2 D_seismic_digital_processed_data
+      summary: Get T2_D_seismic_digital_processed_data
+      responses:
+        '200':
+          description: get T2_D_seismic_digital_processed_data data to be returned
+          content:
+            application/json:
+              example:
+                Id: 1
+                Ba_long_name: LoremIpsum
+                Ba_type: LoremIpsum
+                Area_id: LoremIpsum
+                Area_type: LoremIpsum
+                Acqtn_survey_name: LoremIpsum
+                Processing_company: LoremIpsum
+                Start_date: LoremIpsum
+                Rcrd_rec_length: LoremIpsum
+                Rcrd_rec_length_ouom: LoremIpsum
+                Rcrd_sample_rate: LoremIpsum
+                Rcrd_sample_rate_ouom: LoremIpsum
+                Line_name: LoremIpsum
+                Digital_format: LoremIpsum
+                Media_type: LoremIpsum
+                First_seis_point_id: LoremIpsum
+                Last_seis_point_id: LoremIpsum
+                Proc_set_type: LoremIpsum
+                Polarity_: LoremIpsum
+                Ba_long_name_2: LoremIpsum
+                Ba_type_2: LoremIpsum
+                Data_store_name: LoremIpsum
+                Original_file_name: LoremIpsum
+                Password_: LoremIpsum
+                Sw_application_id: LoremIpsum
+                Application_version: LoremIpsum
+                Digital_size: 1
+                Digital_size_uom: LoremIpsum
+                Remark_: LoremIpsum
+                Source_: LoremIpsum
+                Qc_status: LoremIpsum
+                Checked_by_ba_id: LoremIpsum
+    post:
+      security:
+      - OAuth2PasswordBearer: []
+      tags:
+      - T2 D_seismic_digital_processed_data
+      summary: Post a new T2_D_seismic_digital_processed_data
+      description: Create a new T2_D_seismic_digital_processed_data data
+      requestBody:
+        required: true
+        description: Request body to create T2_D_seismic_digital_processed_data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example: []
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data data is added
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data data was successfully
+                  added
+  /T2-D_seismic_digital_processed_data/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      description: id of T2_D_seismic_digital_processed_data data to fetch
+      schema:
+        type: integer
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - T2 D_seismic_digital_processed_data
+      summary: Get T2_D_seismic_digital_processed_data
+      responses:
+        '200':
+          description: get T2_D_seismic_digital_processed_data data to be returned
+          content:
+            application/json:
+              example:
+              - []
+    put:
+      security:
+      - Authorization: []
+      tags:
+      - T2 D_seismic_digital_processed_data
+      summary: Update a new T2_D_seismic_digital_processed_data data
+      description: Update a new T2_D_seismic_digital_processed_data data
+      requestBody:
+        required: true
+        description: Request body to update T2_D_seismic_digital_processed_data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example: []
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data data is completely updated
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data data is completely
+                  updated
+    patch:
+      security:
+      - Authorization: []
+      tags:
+      - T2 D_seismic_digital_processed_data
+      summary: Update a new T2_D_seismic_digital_processed_data data
+      description: Update a new T2_D_seismic_digital_processed_data data
+      requestBody:
+        required: true
+        description: Request body to update T2_D_seismic_digital_processed_data data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/T2_D_seismic_digital_processed_data'
+            example: []
+      responses:
+        '200':
+          description: one row in T2_D_seismic_digital_processed_data data is updated
+          content:
+            application/json:
+              example:
+                message: The one row in T2_D_seismic_digital_processed_data data is
+                  updated
+    delete:
+      security:
+      - Authorization: []
+      tags:
+      - T2 D_seismic_digital_processed_data
+      summary: Delete T2_D_seismic_digital_processed_data data
+      description: Delete T2_D_seismic_digital_processed_data data
+      responses:
+        '200':
+          description: T2_D_seismic_digital_processed_data data is deleted
+          content:
+            application/json:
+              example:
+                message: The T2_D_seismic_digital_processed_data data was successfully
+                  deleted
+  /T2-D_seismic_digital_processed_data/{num}:
+    parameters:
+    - in: path
+      name: num
+      required: true
+      description: number of dummy data to add
+      schema:
+        type: integer
+    get:
+      security:
+      - Authorization: []
+      tags:
+      - T2 D_seismic_digital_processed_data Dummy Data
+      summary: Add dummy data to T2_D_seismic_digital_processed_data
+      responses:
+        '200':
+          description: add data to T2_D_seismic_digital_processed_data
+          content:
+            application/json: {}
+  /token:
+    post:
+      security:
+      - OAuth2PasswordBearer: []
+      tags:
+      - User Mgmt
+      summary: Login For Access Token
+      operationId: login_for_access_token_token_post
+      requestBody:
+        required: true
+        description: Request body to create T2_D_seismic_digital_processed_data AFE
+          data
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Body_login_for_access_token_token_post'
+            example: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Token'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    afe:
+      type: array
+      items:
+        type: object
+        properties:
+          afe_number:
+            type: integer
+          workspace_name:
+            type: string
+          kkks_name:
+            type: string
+          working_area:
+            type: string
+          submission_type:
+            type: string
+          data_type:
+            type: string
+    Token:
+      title: Token
+      required:
+      - access_token
+      - token_type
+      - type
+      - name
+      - expiry_date
+      - affiliation
+      type: object
+      properties:
+        access_token:
+          title: Access Token
+          type: string
+        token_type:
+          title: Token Type
+          type: string
+        type:
+          $ref: '#/components/schemas/UserType'
+        name:
+          title: Name
+          type: string
+        expiry_date:
+          title: Expiry Date
+          type: string
+        affiliation:
+          title: Affiliation
+          type: string
+    HTTPValidationError:
+      title: HTTPValidationError
+      type: object
+      properties:
+        detail:
+          title: Detail
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationError'
+    UserType:
+      title: UserType
+      enum:
+      - Administrator
+      - Regular User
+      - Premium User
+      type: string
+      description: An enumeration.
+    ValidationError:
+      title: ValidationError
+      required:
+      - loc
+      - msg
+      - type
+      type: object
+      properties:
+        loc:
+          title: Location
+          type: array
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+    Body_login_for_access_token_token_post:
+      title: Body_login_for_access_token_token_post
+      required:
+      - username
+      - password
+      type: object
+      properties:
+        grant_type:
+          title: Grant Type
+          pattern: password
+          type: string
+        username:
+          title: Username
+          type: string
+        password:
+          title: Password
+          type: string
+        scope:
+          title: Scope
+          type: string
+          default: ''
+        client_id:
+          title: Client Id
+          type: string
+        client_secret:
+          title: Client Secret
+          type: string
+    T2_D_seismic_digital_processed_data_workspace:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          afe_number:
+            type: integer
+          T2D_seismic_digital_processed_data_id:
+            type: integer
+    T2_D_seismic_digital_processed_data:
+      type: object
+      properties:
+        Id:
+          type: integer
+        Ba_long_name:
+          type: string
+        Ba_type:
+          type: string
+        Area_id:
+          type: string
+        Area_type:
+          type: string
+        Acqtn_survey_name:
+          type: string
+        Processing_company:
+          type: string
+        Start_date:
+          type: string
+        Rcrd_rec_length:
+          type: string
+        Rcrd_rec_length_ouom:
+          type: string
+        Rcrd_sample_rate:
+          type: string
+        Rcrd_sample_rate_ouom:
+          type: string
+        Line_name:
+          type: string
+        Digital_format:
+          type: string
+        Media_type:
+          type: string
+        First_seis_point_id:
+          type: string
+        Last_seis_point_id:
+          type: string
+        Proc_set_type:
+          type: string
+        Polarity_:
+          type: string
+        Ba_long_name_2:
+          type: string
+        Ba_type_2:
+          type: string
+        Data_store_name:
+          type: string
+        Original_file_name:
+          type: string
+        Password_:
+          type: string
+        Sw_application_id:
+          type: string
+        Application_version:
+          type: string
+        Digital_size:
+          type: integer
+        Digital_size_uom:
+          type: string
+        Remark_:
+          type: string
+        Source_:
+          type: string
+        Qc_status:
+          type: string
+        Checked_by_ba_id:
+          type: string
+  securitySchemes:
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: v1/token

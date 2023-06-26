@@ -323,6 +323,7 @@ paths:
           content:
             application/json:
               example:
+                Id: 1
                 Project_name: LoremIpsum
                 Strat_name_set_id: LoremIpsum
                 Strat_status: LoremIpsum
@@ -335,7 +336,7 @@ paths:
                 Size_ouom: LoremIpsum
                 Strat_type: LoremIpsum
                 Fault_type: LoremIpsum
-                Source: LoremIpsum
+                Source_: LoremIpsum
                 Qc_status: LoremIpsum
                 Checked_by_ba_id: LoremIpsum
     post:
@@ -613,6 +614,8 @@ components:
     Basin:
       type: object
       properties:
+        Id:
+          type: integer
         Project_name:
           type: string
         Strat_name_set_id:
@@ -637,7 +640,7 @@ components:
           type: string
         Fault_type:
           type: string
-        Source:
+        Source_:
           type: string
         Qc_status:
           type: string
