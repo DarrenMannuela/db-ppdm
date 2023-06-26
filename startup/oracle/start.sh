@@ -1,4 +1,3 @@
-#!/bin/bash
 
 set -m
 ./start-db.sh &
