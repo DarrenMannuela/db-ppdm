@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  description: This is the swagger API for Digital_Project_File
+  description: This is the swagger API for Digital_project_file
   version: 1.0.0
-  title: Digital_Project_File
+  title: Digital_project_file
   termsOfService: http://swagger.io/terms/
   contact:
     email: darren.mannuela@gmail.com
@@ -10,32 +10,32 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-- description: Digital_Project_File
+- description: Digital_project_file
   url: http://localhost:8080/api/v1
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/DarrenMannuela/Digital_Project_File/1.0.0
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Digital_project_file/1.0.0
 tags:
 - name: Afe
-  description: All endpoints related to get Digital_Project_File AFE
+  description: All endpoints related to get Digital_project_file AFE
 - name: Workspace
-  description: All endpoints related to Digital_Project_File Workspace
-- name: Digital Project File
-  description: All endpoints related to Digital_Project_File
-- name: Digital Project File Dummy Data
-  description: All endpoints related to Digital_Project_File
+  description: All endpoints related to Digital_project_file Workspace
+- name: Digital_project_file
+  description: All endpoints related to Digital_project_file
+- name: Digital_project_file Dummy Data
+  description: All endpoints related to Digital_project_file
 - name: User Mgmt
   description: All endpoints related to tokens
 paths:
-  /Digital-Project-File-afe:
+  /Digital_project_file-afe:
     get:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Digital_Project_File AFE
+      summary: Get Digital_project_file AFE
       responses:
         '200':
-          description: get Digital_Project_File AFE data to be returned
+          description: get Digital_project_file AFE data to be returned
           content:
             application/json:
               example:
@@ -44,43 +44,43 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Digital Project File
+                data_type: Digital_project_file
                 email: john.richardson@gtn.id
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
       - Afe
-      summary: Post a new Digital_Project_File AFE
-      description: Create a new Digital_Project_File AFE data
+      summary: Post a new Digital_project_file AFE
+      description: Create a new Digital_project_file AFE data
       requestBody:
         required: true
-        description: Request body to create Digital_Project_File AFE data
+        description: Request body to create Digital_project_file AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Digital Project File
+              data_type: Digital_project_file
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Digital_Project_File data is added
+          description: Digital_project_file data is added
           content:
             application/json:
               example:
-                message: The Digital_Project_File AFE data was successfully added
-  /Digital-Project-File-afe/{afe}:
+                message: The Digital_project_file AFE data was successfully added
+  /Digital_project_file-afe/{afe}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Digital_Project_File data to fetch
+      description: afe of Digital_project_file data to fetch
       schema:
         type: integer
     get:
@@ -88,10 +88,10 @@ paths:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Digital_Project_File AFE
+      summary: Get Digital_project_file AFE
       responses:
         '200':
-          description: get Digital_Project_File AFE data to be returned
+          description: get Digital_project_file AFE data to be returned
           content:
             application/json:
               example:
@@ -100,90 +100,90 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Digital Project File
+                data_type: Digital_project_file
                 email: john.richardson@gtn.id
     put:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Digital_Project_File AFE data
-      description: Update a new Digital_Project_File data
+      summary: Update a new Digital_project_file AFE data
+      description: Update a new Digital_project_file data
       requestBody:
         required: true
-        description: Request body to update Digital_Project_File AFE data
+        description: Request body to update Digital_project_file AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Digital Project File
+              data_type: Digital_project_file
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Digital_Project_File data is completely updated
+          description: Digital_project_file data is completely updated
           content:
             application/json:
               example:
-                message: The Digital_Project_File AFE data is completely updated
+                message: The Digital_project_file AFE data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Digital_Project_File AFE data
-      description: Update a new Digital_Project_File data
+      summary: Update a new Digital_project_file AFE data
+      description: Update a new Digital_project_file data
       requestBody:
         required: true
-        description: Request body to update Digital_Project_File AFE data
+        description: Request body to update Digital_project_file AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Digital Project File
+              data_type: Digital_project_file
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: one row in Digital_Project_File data is updated
+          description: one row in Digital_project_file data is updated
           content:
             application/json:
               example:
-                message: The one row in Digital_Project_File AFE data is updated
+                message: The one row in Digital_project_file AFE data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Delete Digital_Project_File AFE data
-      description: Delete Digital_Project_File AFE data
+      summary: Delete Digital_project_file AFE data
+      description: Delete Digital_project_file AFE data
       responses:
         '200':
-          description: Digital_Project_File AFE data is deleted
+          description: Digital_project_file AFE data is deleted
           content:
             application/json:
               example:
-                message: The Digital_Project_File AFE data was successfully deleted
-  /Digital-Project-File-workspace:
+                message: The Digital_project_file AFE data was successfully deleted
+  /Digital_project_file-workspace:
     get:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Digital_Project_File Workspace
+      summary: Get Digital_project_file Workspace
       responses:
         '200':
-          description: get Digital_Project_File Workspace data to be returned
+          description: get Digital_project_file Workspace data to be returned
           content:
             application/json:
               example:
@@ -195,33 +195,33 @@ paths:
       - OAuth2PasswordBearer: []
       tags:
       - Workspace
-      summary: Post a new Digital_Project_File Workspace
-      description: Create a new Digital_Project_File Workspace data
+      summary: Post a new Digital_project_file Workspace
+      description: Create a new Digital_project_file Workspace data
       requestBody:
         required: true
-        description: Request body to create Digital_Project_File Workspace data
+        description: Request body to create Digital_project_file Workspace data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example:
               Id: 1
               Afe_number: 1
               Digital_project_file_id: 1
       responses:
         '200':
-          description: Digital_Project_File Workspace data is added
+          description: Digital_project_file Workspace data is added
           content:
             application/json:
               example:
-                message: The Digital_Project_File Workspace data was successfully
+                message: The Digital_project_file Workspace data was successfully
                   added
-  /Digital-Project-File-workspace/{afe}}:
+  /Digital_project_file-workspace/{afe}}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Digital_Project_File data to fetch
+      description: afe of Digital_project_file data to fetch
       schema:
         type: integer
     get:
@@ -229,22 +229,22 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Digital_Project_File Workspace
+      summary: Get Digital_project_file Workspace
       responses:
         '200':
-          description: get Digital_Project_File Workspace data to be returned
+          description: get Digital_project_file Workspace data to be returned
           content:
             application/json:
               example:
                 Id: 1
                 Afe_number: 1
                 Digital_project_file_id: 1
-  /Digital-Project-File-workspace/{id}:
+  /Digital_project_file-workspace/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Digital_Project_File data to fetch
+      description: id of Digital_project_file data to fetch
       schema:
         type: integer
     put:
@@ -252,79 +252,80 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Digital_Project_File Workspace data
-      description: Update a new Digital_Project_File Workspace Workspace data
+      summary: Update a new Digital_project_file Workspace data
+      description: Update a new Digital_project_file Workspace Workspace data
       requestBody:
         required: true
-        description: Request body to update Digital_Project_File data
+        description: Request body to update Digital_project_file data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example:
               Id: 1
               Afe_number: 1
               Digital_project_file_id: 1
       responses:
         '200':
-          description: Digital_Project_File Workspace data is completely updated
+          description: Digital_project_file Workspace data is completely updated
           content:
             application/json:
               example:
-                message: The Digital_Project_File Workspace data is completely updated
+                message: The Digital_project_file Workspace data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Digital_Project_File data
-      description: Update a new Digital_Project_File data
+      summary: Update a new Digital_project_file data
+      description: Update a new Digital_project_file data
       requestBody:
         required: true
-        description: Request body to update Digital_Project_File data
+        description: Request body to update Digital_project_file data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example:
               Id: 1
               Afe_number: 1
               Digital_project_file_id: 1
       responses:
         '200':
-          description: one row in Digital_Project_File data is updated
+          description: one row in Digital_project_file data is updated
           content:
             application/json:
               example:
-                message: The one row in Digital_Project_File Workspace data is updated
+                message: The one row in Digital_project_file Workspace data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Delete Digital_Project_File Workspace data
-      description: Delete Digital_Project_File data
+      summary: Delete Digital_project_file Workspace data
+      description: Delete Digital_project_file data
       responses:
         '200':
-          description: Digital_Project_File Workspace data is deleted
+          description: Digital_project_file Workspace data is deleted
           content:
             application/json:
               example:
-                message: The Digital_Project_File Workspace data was successfully
+                message: The Digital_project_file Workspace data was successfully
                   deleted
-  /Digital-Project-File:
+  /Digital_project_file:
     get:
       security:
       - Authorization: []
       tags:
-      - Digital Project File
-      summary: Get Digital_Project_File
+      - Digital_project_file
+      summary: Get Digital_project_file
       responses:
         '200':
-          description: get Digital_Project_File data to be returned
+          description: get Digital_project_file data to be returned
           content:
             application/json:
               example:
+                Id: 1
                 Ba_long_name: LoremIpsum
                 Ba_type: LoremIpsum
                 Area_id: LoremIpsum
@@ -335,57 +336,59 @@ paths:
                 Application_version: LoremIpsum
                 Item_category: LoremIpsum
                 Process_date: LoremIpsum
-                Interpreter: LoremIpsum
+                Interpreter_: LoremIpsum
                 Digital_format: LoremIpsum
                 Media_type: LoremIpsum
                 Original_file_name: LoremIpsum
-                Password: LoremIpsum
-                Digital_size: LoremIpsum
+                Password_: LoremIpsum
+                Digital_size: 1
                 Digital_size_uom: LoremIpsum
+                Ba_long_name_2: LoremIpsum
+                Ba_type_2: LoremIpsum
                 Data_store_name: LoremIpsum
-                Remark: LoremIpsum
-                Source: LoremIpsum
+                Remark_: LoremIpsum
+                Source_: LoremIpsum
                 Qc_status: LoremIpsum
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
-      - Digital Project File
-      summary: Post a new Digital_Project_File
-      description: Create a new Digital_Project_File data
+      - Digital_project_file
+      summary: Post a new Digital_project_file
+      description: Create a new Digital_project_file data
       requestBody:
         required: true
-        description: Request body to create Digital_Project_File data
+        description: Request body to create Digital_project_file data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example: []
       responses:
         '200':
-          description: Digital_Project_File data is added
+          description: Digital_project_file data is added
           content:
             application/json:
               example:
-                message: The Digital_Project_File data was successfully added
-  /Digital-Project-File/{id}:
+                message: The Digital_project_file data was successfully added
+  /Digital_project_file/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Digital_Project_File data to fetch
+      description: id of Digital_project_file data to fetch
       schema:
         type: integer
     get:
       security:
       - Authorization: []
       tags:
-      - Digital Project File
-      summary: Get Digital_Project_File
+      - Digital_project_file
+      summary: Get Digital_project_file
       responses:
         '200':
-          description: get Digital_Project_File data to be returned
+          description: get Digital_project_file data to be returned
           content:
             application/json:
               example:
@@ -394,61 +397,61 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Digital Project File
-      summary: Update a new Digital_Project_File data
-      description: Update a new Digital_Project_File data
+      - Digital_project_file
+      summary: Update a new Digital_project_file data
+      description: Update a new Digital_project_file data
       requestBody:
         required: true
-        description: Request body to update Digital_Project_File data
+        description: Request body to update Digital_project_file data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example: []
       responses:
         '200':
-          description: Digital_Project_File data is completely updated
+          description: Digital_project_file data is completely updated
           content:
             application/json:
               example:
-                message: The Digital_Project_File data is completely updated
+                message: The Digital_project_file data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
-      - Digital Project File
-      summary: Update a new Digital_Project_File data
-      description: Update a new Digital_Project_File data
+      - Digital_project_file
+      summary: Update a new Digital_project_file data
+      description: Update a new Digital_project_file data
       requestBody:
         required: true
-        description: Request body to update Digital_Project_File data
+        description: Request body to update Digital_project_file data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Digital_Project_File'
+              $ref: '#/components/schemas/Digital_project_file'
             example: []
       responses:
         '200':
-          description: one row in Digital_Project_File data is updated
+          description: one row in Digital_project_file data is updated
           content:
             application/json:
               example:
-                message: The one row in Digital_Project_File data is updated
+                message: The one row in Digital_project_file data is updated
     delete:
       security:
       - Authorization: []
       tags:
-      - Digital Project File
-      summary: Delete Digital_Project_File data
-      description: Delete Digital_Project_File data
+      - Digital_project_file
+      summary: Delete Digital_project_file data
+      description: Delete Digital_project_file data
       responses:
         '200':
-          description: Digital_Project_File data is deleted
+          description: Digital_project_file data is deleted
           content:
             application/json:
               example:
-                message: The Digital_Project_File data was successfully deleted
-  /Digital-Project-File/{num}:
+                message: The Digital_project_file data was successfully deleted
+  /Digital_project_file/{num}:
     parameters:
     - in: path
       name: num
@@ -460,11 +463,11 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Digital Project File Dummy Data
-      summary: Add dummy data to Digital_Project_File
+      - Digital_project_file Dummy Data
+      summary: Add dummy data to Digital_project_file
       responses:
         '200':
-          description: add data to Digital_Project_File
+          description: add data to Digital_project_file
           content:
             application/json: {}
   /token:
@@ -477,7 +480,7 @@ paths:
       operationId: login_for_access_token_token_post
       requestBody:
         required: true
-        description: Request body to create Digital_Project_File AFE data
+        description: Request body to create Digital_project_file AFE data
         content:
           application/x-www-form-urlencoded:
             schema:
@@ -608,7 +611,7 @@ components:
         client_secret:
           title: Client Secret
           type: string
-    Digital_Project_File_workspace:
+    Digital_project_file_workspace:
       type: array
       items:
         type: object
@@ -619,9 +622,11 @@ components:
             type: integer
           Digital_project_file_id:
             type: integer
-    Digital_Project_File:
+    Digital_project_file:
       type: object
       properties:
+        Id:
+          type: integer
         Ba_long_name:
           type: string
         Ba_type:
@@ -642,7 +647,7 @@ components:
           type: string
         Process_date:
           type: string
-        Interpreter:
+        Interpreter_:
           type: string
         Digital_format:
           type: string
@@ -650,17 +655,21 @@ components:
           type: string
         Original_file_name:
           type: string
-        Password:
+        Password_:
           type: string
         Digital_size:
-          type: string
+          type: integer
         Digital_size_uom:
+          type: string
+        Ba_long_name_2:
+          type: string
+        Ba_type_2:
           type: string
         Data_store_name:
           type: string
-        Remark:
+        Remark_:
           type: string
-        Source:
+        Source_:
           type: string
         Qc_status:
           type: string

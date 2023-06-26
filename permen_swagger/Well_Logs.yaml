@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  description: This is the swagger API for Well_Logs
+  description: This is the swagger API for Well_logs
   version: 1.0.0
-  title: Well_Logs
+  title: Well_logs
   termsOfService: http://swagger.io/terms/
   contact:
     email: darren.mannuela@gmail.com
@@ -10,32 +10,32 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-- description: Well_Logs
+- description: Well_logs
   url: http://localhost:8080/api/v1
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/DarrenMannuela/Well_Logs/1.0.0
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Well_logs/1.0.0
 tags:
 - name: Afe
-  description: All endpoints related to get Well_Logs AFE
+  description: All endpoints related to get Well_logs AFE
 - name: Workspace
-  description: All endpoints related to Well_Logs Workspace
-- name: Well Logs
-  description: All endpoints related to Well_Logs
-- name: Well Logs Dummy Data
-  description: All endpoints related to Well_Logs
+  description: All endpoints related to Well_logs Workspace
+- name: Well_logs
+  description: All endpoints related to Well_logs
+- name: Well_logs Dummy Data
+  description: All endpoints related to Well_logs
 - name: User Mgmt
   description: All endpoints related to tokens
 paths:
-  /Well-Logs-afe:
+  /Well_logs-afe:
     get:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Well_Logs AFE
+      summary: Get Well_logs AFE
       responses:
         '200':
-          description: get Well_Logs AFE data to be returned
+          description: get Well_logs AFE data to be returned
           content:
             application/json:
               example:
@@ -44,43 +44,43 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Well Logs
+                data_type: Well_logs
                 email: john.richardson@gtn.id
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
       - Afe
-      summary: Post a new Well_Logs AFE
-      description: Create a new Well_Logs AFE data
+      summary: Post a new Well_logs AFE
+      description: Create a new Well_logs AFE data
       requestBody:
         required: true
-        description: Request body to create Well_Logs AFE data
+        description: Request body to create Well_logs AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Well Logs
+              data_type: Well_logs
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Well_Logs data is added
+          description: Well_logs data is added
           content:
             application/json:
               example:
-                message: The Well_Logs AFE data was successfully added
-  /Well-Logs-afe/{afe}:
+                message: The Well_logs AFE data was successfully added
+  /Well_logs-afe/{afe}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Well_Logs data to fetch
+      description: afe of Well_logs data to fetch
       schema:
         type: integer
     get:
@@ -88,10 +88,10 @@ paths:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Well_Logs AFE
+      summary: Get Well_logs AFE
       responses:
         '200':
-          description: get Well_Logs AFE data to be returned
+          description: get Well_logs AFE data to be returned
           content:
             application/json:
               example:
@@ -100,90 +100,90 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Well Logs
+                data_type: Well_logs
                 email: john.richardson@gtn.id
     put:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Well_Logs AFE data
-      description: Update a new Well_Logs data
+      summary: Update a new Well_logs AFE data
+      description: Update a new Well_logs data
       requestBody:
         required: true
-        description: Request body to update Well_Logs AFE data
+        description: Request body to update Well_logs AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Well Logs
+              data_type: Well_logs
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Well_Logs data is completely updated
+          description: Well_logs data is completely updated
           content:
             application/json:
               example:
-                message: The Well_Logs AFE data is completely updated
+                message: The Well_logs AFE data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Well_Logs AFE data
-      description: Update a new Well_Logs data
+      summary: Update a new Well_logs AFE data
+      description: Update a new Well_logs data
       requestBody:
         required: true
-        description: Request body to update Well_Logs AFE data
+        description: Request body to update Well_logs AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Well Logs
+              data_type: Well_logs
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: one row in Well_Logs data is updated
+          description: one row in Well_logs data is updated
           content:
             application/json:
               example:
-                message: The one row in Well_Logs AFE data is updated
+                message: The one row in Well_logs AFE data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Delete Well_Logs AFE data
-      description: Delete Well_Logs AFE data
+      summary: Delete Well_logs AFE data
+      description: Delete Well_logs AFE data
       responses:
         '200':
-          description: Well_Logs AFE data is deleted
+          description: Well_logs AFE data is deleted
           content:
             application/json:
               example:
-                message: The Well_Logs AFE data was successfully deleted
-  /Well-Logs-workspace:
+                message: The Well_logs AFE data was successfully deleted
+  /Well_logs-workspace:
     get:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Well_Logs Workspace
+      summary: Get Well_logs Workspace
       responses:
         '200':
-          description: get Well_Logs Workspace data to be returned
+          description: get Well_logs Workspace data to be returned
           content:
             application/json:
               example:
@@ -195,32 +195,32 @@ paths:
       - OAuth2PasswordBearer: []
       tags:
       - Workspace
-      summary: Post a new Well_Logs Workspace
-      description: Create a new Well_Logs Workspace data
+      summary: Post a new Well_logs Workspace
+      description: Create a new Well_logs Workspace data
       requestBody:
         required: true
-        description: Request body to create Well_Logs Workspace data
+        description: Request body to create Well_logs Workspace data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example:
               Id: 1
               Afe_number: 1
               Well_logs_id: 1
       responses:
         '200':
-          description: Well_Logs Workspace data is added
+          description: Well_logs Workspace data is added
           content:
             application/json:
               example:
-                message: The Well_Logs Workspace data was successfully added
-  /Well-Logs-workspace/{afe}}:
+                message: The Well_logs Workspace data was successfully added
+  /Well_logs-workspace/{afe}}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Well_Logs data to fetch
+      description: afe of Well_logs data to fetch
       schema:
         type: integer
     get:
@@ -228,22 +228,22 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Well_Logs Workspace
+      summary: Get Well_logs Workspace
       responses:
         '200':
-          description: get Well_Logs Workspace data to be returned
+          description: get Well_logs Workspace data to be returned
           content:
             application/json:
               example:
                 Id: 1
                 Afe_number: 1
                 Well_logs_id: 1
-  /Well-Logs-workspace/{id}:
+  /Well_logs-workspace/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Well_Logs data to fetch
+      description: id of Well_logs data to fetch
       schema:
         type: integer
     put:
@@ -251,85 +251,86 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Well_Logs Workspace data
-      description: Update a new Well_Logs Workspace Workspace data
+      summary: Update a new Well_logs Workspace data
+      description: Update a new Well_logs Workspace Workspace data
       requestBody:
         required: true
-        description: Request body to update Well_Logs data
+        description: Request body to update Well_logs data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example:
               Id: 1
               Afe_number: 1
               Well_logs_id: 1
       responses:
         '200':
-          description: Well_Logs Workspace data is completely updated
+          description: Well_logs Workspace data is completely updated
           content:
             application/json:
               example:
-                message: The Well_Logs Workspace data is completely updated
+                message: The Well_logs Workspace data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Well_Logs data
-      description: Update a new Well_Logs data
+      summary: Update a new Well_logs data
+      description: Update a new Well_logs data
       requestBody:
         required: true
-        description: Request body to update Well_Logs data
+        description: Request body to update Well_logs data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example:
               Id: 1
               Afe_number: 1
               Well_logs_id: 1
       responses:
         '200':
-          description: one row in Well_Logs data is updated
+          description: one row in Well_logs data is updated
           content:
             application/json:
               example:
-                message: The one row in Well_Logs Workspace data is updated
+                message: The one row in Well_logs Workspace data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Delete Well_Logs Workspace data
-      description: Delete Well_Logs data
+      summary: Delete Well_logs Workspace data
+      description: Delete Well_logs data
       responses:
         '200':
-          description: Well_Logs Workspace data is deleted
+          description: Well_logs Workspace data is deleted
           content:
             application/json:
               example:
-                message: The Well_Logs Workspace data was successfully deleted
-  /Well-Logs:
+                message: The Well_logs Workspace data was successfully deleted
+  /Well_logs:
     get:
       security:
       - Authorization: []
       tags:
-      - Well Logs
-      summary: Get Well_Logs
+      - Well_logs
+      summary: Get Well_logs
       responses:
         '200':
-          description: get Well_Logs data to be returned
+          description: get Well_logs data to be returned
           content:
             application/json:
               example:
+                Id: 1
                 Ba_long_name: LoremIpsum
                 Ba_type: LoremIpsum
                 Area_id: LoremIpsum
                 Area_type: LoremIpsum
                 Field_name: LoremIpsum
                 Well_name: LoremIpsum
-                Uwi: LoremIpsum
+                Uwi_: LoremIpsum
                 Logging_company: LoremIpsum
                 Scale_ratio: LoremIpsum
                 Media_type: LoremIpsum
@@ -341,52 +342,54 @@ paths:
                 Top_depth_ouom: LoremIpsum
                 Base_depth: LoremIpsum
                 Base_depth_ouom: LoremIpsum
+                Ba_long_name_2: LoremIpsum
+                Ba_type_2: LoremIpsum
                 Data_store_name: LoremIpsum
                 Data_store_type: LoremIpsum
                 Location_id: LoremIpsum
-                Remark: LoremIpsum
-                Source: LoremIpsum
+                Remark_: LoremIpsum
+                Source_: LoremIpsum
                 Qc_status: LoremIpsum
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
-      - Well Logs
-      summary: Post a new Well_Logs
-      description: Create a new Well_Logs data
+      - Well_logs
+      summary: Post a new Well_logs
+      description: Create a new Well_logs data
       requestBody:
         required: true
-        description: Request body to create Well_Logs data
+        description: Request body to create Well_logs data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example: []
       responses:
         '200':
-          description: Well_Logs data is added
+          description: Well_logs data is added
           content:
             application/json:
               example:
-                message: The Well_Logs data was successfully added
-  /Well-Logs/{id}:
+                message: The Well_logs data was successfully added
+  /Well_logs/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Well_Logs data to fetch
+      description: id of Well_logs data to fetch
       schema:
         type: integer
     get:
       security:
       - Authorization: []
       tags:
-      - Well Logs
-      summary: Get Well_Logs
+      - Well_logs
+      summary: Get Well_logs
       responses:
         '200':
-          description: get Well_Logs data to be returned
+          description: get Well_logs data to be returned
           content:
             application/json:
               example:
@@ -395,61 +398,61 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Well Logs
-      summary: Update a new Well_Logs data
-      description: Update a new Well_Logs data
+      - Well_logs
+      summary: Update a new Well_logs data
+      description: Update a new Well_logs data
       requestBody:
         required: true
-        description: Request body to update Well_Logs data
+        description: Request body to update Well_logs data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example: []
       responses:
         '200':
-          description: Well_Logs data is completely updated
+          description: Well_logs data is completely updated
           content:
             application/json:
               example:
-                message: The Well_Logs data is completely updated
+                message: The Well_logs data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
-      - Well Logs
-      summary: Update a new Well_Logs data
-      description: Update a new Well_Logs data
+      - Well_logs
+      summary: Update a new Well_logs data
+      description: Update a new Well_logs data
       requestBody:
         required: true
-        description: Request body to update Well_Logs data
+        description: Request body to update Well_logs data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Well_Logs'
+              $ref: '#/components/schemas/Well_logs'
             example: []
       responses:
         '200':
-          description: one row in Well_Logs data is updated
+          description: one row in Well_logs data is updated
           content:
             application/json:
               example:
-                message: The one row in Well_Logs data is updated
+                message: The one row in Well_logs data is updated
     delete:
       security:
       - Authorization: []
       tags:
-      - Well Logs
-      summary: Delete Well_Logs data
-      description: Delete Well_Logs data
+      - Well_logs
+      summary: Delete Well_logs data
+      description: Delete Well_logs data
       responses:
         '200':
-          description: Well_Logs data is deleted
+          description: Well_logs data is deleted
           content:
             application/json:
               example:
-                message: The Well_Logs data was successfully deleted
-  /Well-Logs/{num}:
+                message: The Well_logs data was successfully deleted
+  /Well_logs/{num}:
     parameters:
     - in: path
       name: num
@@ -461,11 +464,11 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Well Logs Dummy Data
-      summary: Add dummy data to Well_Logs
+      - Well_logs Dummy Data
+      summary: Add dummy data to Well_logs
       responses:
         '200':
-          description: add data to Well_Logs
+          description: add data to Well_logs
           content:
             application/json: {}
   /token:
@@ -478,7 +481,7 @@ paths:
       operationId: login_for_access_token_token_post
       requestBody:
         required: true
-        description: Request body to create Well_Logs AFE data
+        description: Request body to create Well_logs AFE data
         content:
           application/x-www-form-urlencoded:
             schema:
@@ -609,7 +612,7 @@ components:
         client_secret:
           title: Client Secret
           type: string
-    Well_Logs_workspace:
+    Well_logs_workspace:
       type: array
       items:
         type: object
@@ -620,9 +623,11 @@ components:
             type: integer
           Well_logs_id:
             type: integer
-    Well_Logs:
+    Well_logs:
       type: object
       properties:
+        Id:
+          type: integer
         Ba_long_name:
           type: string
         Ba_type:
@@ -635,7 +640,7 @@ components:
           type: string
         Well_name:
           type: string
-        Uwi:
+        Uwi_:
           type: string
         Logging_company:
           type: string
@@ -659,15 +664,19 @@ components:
           type: string
         Base_depth_ouom:
           type: string
+        Ba_long_name_2:
+          type: string
+        Ba_type_2:
+          type: string
         Data_store_name:
           type: string
         Data_store_type:
           type: string
         Location_id:
           type: string
-        Remark:
+        Remark_:
           type: string
-        Source:
+        Source_:
           type: string
         Qc_status:
           type: string

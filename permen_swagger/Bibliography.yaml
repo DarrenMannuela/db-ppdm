@@ -323,9 +323,10 @@ paths:
           content:
             application/json:
               example:
-                Publisher: LoremIpsum
+                Id: 1
+                Publisher_: LoremIpsum
                 Document_title: LoremIpsum
-                Issue: LoremIpsum
+                Issue_: LoremIpsum
                 Author_id: LoremIpsum
                 Publication_date: LoremIpsum
                 Document_type: LoremIpsum
@@ -605,11 +606,13 @@ components:
     Bibliography:
       type: object
       properties:
-        Publisher:
+        Id:
+          type: integer
+        Publisher_:
           type: string
         Document_title:
           type: string
-        Issue:
+        Issue_:
           type: string
         Author_id:
           type: string

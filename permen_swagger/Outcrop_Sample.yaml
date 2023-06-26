@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  description: This is the swagger API for Outcrop_Sample
+  description: This is the swagger API for Outcrop_sample
   version: 1.0.0
-  title: Outcrop_Sample
+  title: Outcrop_sample
   termsOfService: http://swagger.io/terms/
   contact:
     email: darren.mannuela@gmail.com
@@ -10,32 +10,32 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-- description: Outcrop_Sample
+- description: Outcrop_sample
   url: http://localhost:8080/api/v1
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/DarrenMannuela/Outcrop_Sample/1.0.0
+  url: https://virtserver.swaggerhub.com/DarrenMannuela/Outcrop_sample/1.0.0
 tags:
 - name: Afe
-  description: All endpoints related to get Outcrop_Sample AFE
+  description: All endpoints related to get Outcrop_sample AFE
 - name: Workspace
-  description: All endpoints related to Outcrop_Sample Workspace
-- name: Outcrop Sample
-  description: All endpoints related to Outcrop_Sample
-- name: Outcrop Sample Dummy Data
-  description: All endpoints related to Outcrop_Sample
+  description: All endpoints related to Outcrop_sample Workspace
+- name: Outcrop_sample
+  description: All endpoints related to Outcrop_sample
+- name: Outcrop_sample Dummy Data
+  description: All endpoints related to Outcrop_sample
 - name: User Mgmt
   description: All endpoints related to tokens
 paths:
-  /Outcrop-Sample-afe:
+  /Outcrop_sample-afe:
     get:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Outcrop_Sample AFE
+      summary: Get Outcrop_sample AFE
       responses:
         '200':
-          description: get Outcrop_Sample AFE data to be returned
+          description: get Outcrop_sample AFE data to be returned
           content:
             application/json:
               example:
@@ -44,43 +44,43 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Outcrop Sample
+                data_type: Outcrop_sample
                 email: john.richardson@gtn.id
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
       - Afe
-      summary: Post a new Outcrop_Sample AFE
-      description: Create a new Outcrop_Sample AFE data
+      summary: Post a new Outcrop_sample AFE
+      description: Create a new Outcrop_sample AFE data
       requestBody:
         required: true
-        description: Request body to create Outcrop_Sample AFE data
+        description: Request body to create Outcrop_sample AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Outcrop Sample
+              data_type: Outcrop_sample
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Outcrop_Sample data is added
+          description: Outcrop_sample data is added
           content:
             application/json:
               example:
-                message: The Outcrop_Sample AFE data was successfully added
-  /Outcrop-Sample-afe/{afe}:
+                message: The Outcrop_sample AFE data was successfully added
+  /Outcrop_sample-afe/{afe}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Outcrop_Sample data to fetch
+      description: afe of Outcrop_sample data to fetch
       schema:
         type: integer
     get:
@@ -88,10 +88,10 @@ paths:
       - Authorization: []
       tags:
       - Afe
-      summary: Get Outcrop_Sample AFE
+      summary: Get Outcrop_sample AFE
       responses:
         '200':
-          description: get Outcrop_Sample AFE data to be returned
+          description: get Outcrop_sample AFE data to be returned
           content:
             application/json:
               example:
@@ -100,90 +100,90 @@ paths:
                 kkks_name: LoremIpsum
                 working_area: LoremIpsum
                 submission_type: Lorem
-                data_type: Outcrop Sample
+                data_type: Outcrop_sample
                 email: john.richardson@gtn.id
     put:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Outcrop_Sample AFE data
-      description: Update a new Outcrop_Sample data
+      summary: Update a new Outcrop_sample AFE data
+      description: Update a new Outcrop_sample data
       requestBody:
         required: true
-        description: Request body to update Outcrop_Sample AFE data
+        description: Request body to update Outcrop_sample AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Outcrop Sample
+              data_type: Outcrop_sample
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: Outcrop_Sample data is completely updated
+          description: Outcrop_sample data is completely updated
           content:
             application/json:
               example:
-                message: The Outcrop_Sample AFE data is completely updated
+                message: The Outcrop_sample AFE data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Update a new Outcrop_Sample AFE data
-      description: Update a new Outcrop_Sample data
+      summary: Update a new Outcrop_sample AFE data
+      description: Update a new Outcrop_sample data
       requestBody:
         required: true
-        description: Request body to update Outcrop_Sample AFE data
+        description: Request body to update Outcrop_sample AFE data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example:
               afe_number: 1
               workspace_name: LoremIpsum
               kkks_name: LoremIpsum
               working_area: LoremIpsum
               submission_type: Lorem
-              data_type: Outcrop Sample
+              data_type: Outcrop_sample
               email: john.richardson@gtn.id
       responses:
         '200':
-          description: one row in Outcrop_Sample data is updated
+          description: one row in Outcrop_sample data is updated
           content:
             application/json:
               example:
-                message: The one row in Outcrop_Sample AFE data is updated
+                message: The one row in Outcrop_sample AFE data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Afe
-      summary: Delete Outcrop_Sample AFE data
-      description: Delete Outcrop_Sample AFE data
+      summary: Delete Outcrop_sample AFE data
+      description: Delete Outcrop_sample AFE data
       responses:
         '200':
-          description: Outcrop_Sample AFE data is deleted
+          description: Outcrop_sample AFE data is deleted
           content:
             application/json:
               example:
-                message: The Outcrop_Sample AFE data was successfully deleted
-  /Outcrop-Sample-workspace:
+                message: The Outcrop_sample AFE data was successfully deleted
+  /Outcrop_sample-workspace:
     get:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Outcrop_Sample Workspace
+      summary: Get Outcrop_sample Workspace
       responses:
         '200':
-          description: get Outcrop_Sample Workspace data to be returned
+          description: get Outcrop_sample Workspace data to be returned
           content:
             application/json:
               example:
@@ -195,32 +195,32 @@ paths:
       - OAuth2PasswordBearer: []
       tags:
       - Workspace
-      summary: Post a new Outcrop_Sample Workspace
-      description: Create a new Outcrop_Sample Workspace data
+      summary: Post a new Outcrop_sample Workspace
+      description: Create a new Outcrop_sample Workspace data
       requestBody:
         required: true
-        description: Request body to create Outcrop_Sample Workspace data
+        description: Request body to create Outcrop_sample Workspace data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example:
               Id: 1
               Afe_number: 1
               Outcrop_sample_id: 1
       responses:
         '200':
-          description: Outcrop_Sample Workspace data is added
+          description: Outcrop_sample Workspace data is added
           content:
             application/json:
               example:
-                message: The Outcrop_Sample Workspace data was successfully added
-  /Outcrop-Sample-workspace/{afe}}:
+                message: The Outcrop_sample Workspace data was successfully added
+  /Outcrop_sample-workspace/{afe}}:
     parameters:
     - in: path
       name: afe
       required: true
-      description: afe of Outcrop_Sample data to fetch
+      description: afe of Outcrop_sample data to fetch
       schema:
         type: integer
     get:
@@ -228,22 +228,22 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Get Outcrop_Sample Workspace
+      summary: Get Outcrop_sample Workspace
       responses:
         '200':
-          description: get Outcrop_Sample Workspace data to be returned
+          description: get Outcrop_sample Workspace data to be returned
           content:
             application/json:
               example:
                 Id: 1
                 Afe_number: 1
                 Outcrop_sample_id: 1
-  /Outcrop-Sample-workspace/{id}:
+  /Outcrop_sample-workspace/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Outcrop_Sample data to fetch
+      description: id of Outcrop_sample data to fetch
       schema:
         type: integer
     put:
@@ -251,143 +251,146 @@ paths:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Outcrop_Sample Workspace data
-      description: Update a new Outcrop_Sample Workspace Workspace data
+      summary: Update a new Outcrop_sample Workspace data
+      description: Update a new Outcrop_sample Workspace Workspace data
       requestBody:
         required: true
-        description: Request body to update Outcrop_Sample data
+        description: Request body to update Outcrop_sample data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example:
               Id: 1
               Afe_number: 1
               Outcrop_sample_id: 1
       responses:
         '200':
-          description: Outcrop_Sample Workspace data is completely updated
+          description: Outcrop_sample Workspace data is completely updated
           content:
             application/json:
               example:
-                message: The Outcrop_Sample Workspace data is completely updated
+                message: The Outcrop_sample Workspace data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Update a new Outcrop_Sample data
-      description: Update a new Outcrop_Sample data
+      summary: Update a new Outcrop_sample data
+      description: Update a new Outcrop_sample data
       requestBody:
         required: true
-        description: Request body to update Outcrop_Sample data
+        description: Request body to update Outcrop_sample data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example:
               Id: 1
               Afe_number: 1
               Outcrop_sample_id: 1
       responses:
         '200':
-          description: one row in Outcrop_Sample data is updated
+          description: one row in Outcrop_sample data is updated
           content:
             application/json:
               example:
-                message: The one row in Outcrop_Sample Workspace data is updated
+                message: The one row in Outcrop_sample Workspace data is updated
     delete:
       security:
       - Authorization: []
       tags:
       - Workspace
-      summary: Delete Outcrop_Sample Workspace data
-      description: Delete Outcrop_Sample data
+      summary: Delete Outcrop_sample Workspace data
+      description: Delete Outcrop_sample data
       responses:
         '200':
-          description: Outcrop_Sample Workspace data is deleted
+          description: Outcrop_sample Workspace data is deleted
           content:
             application/json:
               example:
-                message: The Outcrop_Sample Workspace data was successfully deleted
-  /Outcrop-Sample:
+                message: The Outcrop_sample Workspace data was successfully deleted
+  /Outcrop_sample:
     get:
       security:
       - Authorization: []
       tags:
-      - Outcrop Sample
-      summary: Get Outcrop_Sample
+      - Outcrop_sample
+      summary: Get Outcrop_sample
       responses:
         '200':
-          description: get Outcrop_Sample data to be returned
+          description: get Outcrop_sample data to be returned
           content:
             application/json:
               example:
+                Id: 1
                 Ba_long_name: LoremIpsum
                 Ba_type: LoremIpsum
                 Area_id: LoremIpsum
                 Area_type: LoremIpsum
                 Project_name: LoremIpsum
                 Field_station_id: LoremIpsum
-                Longitude: LoremIpsum
-                Latitude: LoremIpsum
-                Easting: LoremIpsum
+                Longitude_: LoremIpsum
+                Latitude_: LoremIpsum
+                Easting_: LoremIpsum
                 Easting_ouom: LoremIpsum
-                Northing: LoremIpsum
+                Northing_: LoremIpsum
                 Northing_ouom: LoremIpsum
                 Utm_quadrant: LoremIpsum
                 Geodetic_datum_name: LoremIpsum
                 Sample_num: LoremIpsum
-                Sample_count: LoremIpsum
+                Sample_count: 1
                 Study_type: LoremIpsum
                 Collected_date: LoremIpsum
                 Pick_location: LoremIpsum
+                Ba_long_name_2: LoremIpsum
+                Ba_type_2: LoremIpsum
                 Data_store_name: LoremIpsum
                 Data_store_type: LoremIpsum
                 Location_id: LoremIpsum
-                Remark: LoremIpsum
-                Source: LoremIpsum
+                Remark_: LoremIpsum
+                Source_: LoremIpsum
                 Qc_status: LoremIpsum
                 Checked_by_ba_id: LoremIpsum
     post:
       security:
       - OAuth2PasswordBearer: []
       tags:
-      - Outcrop Sample
-      summary: Post a new Outcrop_Sample
-      description: Create a new Outcrop_Sample data
+      - Outcrop_sample
+      summary: Post a new Outcrop_sample
+      description: Create a new Outcrop_sample data
       requestBody:
         required: true
-        description: Request body to create Outcrop_Sample data
+        description: Request body to create Outcrop_sample data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example: []
       responses:
         '200':
-          description: Outcrop_Sample data is added
+          description: Outcrop_sample data is added
           content:
             application/json:
               example:
-                message: The Outcrop_Sample data was successfully added
-  /Outcrop-Sample/{id}:
+                message: The Outcrop_sample data was successfully added
+  /Outcrop_sample/{id}:
     parameters:
     - in: path
       name: id
       required: true
-      description: id of Outcrop_Sample data to fetch
+      description: id of Outcrop_sample data to fetch
       schema:
         type: integer
     get:
       security:
       - Authorization: []
       tags:
-      - Outcrop Sample
-      summary: Get Outcrop_Sample
+      - Outcrop_sample
+      summary: Get Outcrop_sample
       responses:
         '200':
-          description: get Outcrop_Sample data to be returned
+          description: get Outcrop_sample data to be returned
           content:
             application/json:
               example:
@@ -396,61 +399,61 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Outcrop Sample
-      summary: Update a new Outcrop_Sample data
-      description: Update a new Outcrop_Sample data
+      - Outcrop_sample
+      summary: Update a new Outcrop_sample data
+      description: Update a new Outcrop_sample data
       requestBody:
         required: true
-        description: Request body to update Outcrop_Sample data
+        description: Request body to update Outcrop_sample data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example: []
       responses:
         '200':
-          description: Outcrop_Sample data is completely updated
+          description: Outcrop_sample data is completely updated
           content:
             application/json:
               example:
-                message: The Outcrop_Sample data is completely updated
+                message: The Outcrop_sample data is completely updated
     patch:
       security:
       - Authorization: []
       tags:
-      - Outcrop Sample
-      summary: Update a new Outcrop_Sample data
-      description: Update a new Outcrop_Sample data
+      - Outcrop_sample
+      summary: Update a new Outcrop_sample data
+      description: Update a new Outcrop_sample data
       requestBody:
         required: true
-        description: Request body to update Outcrop_Sample data
+        description: Request body to update Outcrop_sample data
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Outcrop_Sample'
+              $ref: '#/components/schemas/Outcrop_sample'
             example: []
       responses:
         '200':
-          description: one row in Outcrop_Sample data is updated
+          description: one row in Outcrop_sample data is updated
           content:
             application/json:
               example:
-                message: The one row in Outcrop_Sample data is updated
+                message: The one row in Outcrop_sample data is updated
     delete:
       security:
       - Authorization: []
       tags:
-      - Outcrop Sample
-      summary: Delete Outcrop_Sample data
-      description: Delete Outcrop_Sample data
+      - Outcrop_sample
+      summary: Delete Outcrop_sample data
+      description: Delete Outcrop_sample data
       responses:
         '200':
-          description: Outcrop_Sample data is deleted
+          description: Outcrop_sample data is deleted
           content:
             application/json:
               example:
-                message: The Outcrop_Sample data was successfully deleted
-  /Outcrop-Sample/{num}:
+                message: The Outcrop_sample data was successfully deleted
+  /Outcrop_sample/{num}:
     parameters:
     - in: path
       name: num
@@ -462,11 +465,11 @@ paths:
       security:
       - Authorization: []
       tags:
-      - Outcrop Sample Dummy Data
-      summary: Add dummy data to Outcrop_Sample
+      - Outcrop_sample Dummy Data
+      summary: Add dummy data to Outcrop_sample
       responses:
         '200':
-          description: add data to Outcrop_Sample
+          description: add data to Outcrop_sample
           content:
             application/json: {}
   /token:
@@ -479,7 +482,7 @@ paths:
       operationId: login_for_access_token_token_post
       requestBody:
         required: true
-        description: Request body to create Outcrop_Sample AFE data
+        description: Request body to create Outcrop_sample AFE data
         content:
           application/x-www-form-urlencoded:
             schema:
@@ -610,7 +613,7 @@ components:
         client_secret:
           title: Client Secret
           type: string
-    Outcrop_Sample_workspace:
+    Outcrop_sample_workspace:
       type: array
       items:
         type: object
@@ -621,9 +624,11 @@ components:
             type: integer
           Outcrop_sample_id:
             type: integer
-    Outcrop_Sample:
+    Outcrop_sample:
       type: object
       properties:
+        Id:
+          type: integer
         Ba_long_name:
           type: string
         Ba_type:
@@ -636,15 +641,15 @@ components:
           type: string
         Field_station_id:
           type: string
-        Longitude:
+        Longitude_:
           type: string
-        Latitude:
+        Latitude_:
           type: string
-        Easting:
+        Easting_:
           type: string
         Easting_ouom:
           type: string
-        Northing:
+        Northing_:
           type: string
         Northing_ouom:
           type: string
@@ -655,12 +660,16 @@ components:
         Sample_num:
           type: string
         Sample_count:
-          type: string
+          type: integer
         Study_type:
           type: string
         Collected_date:
           type: string
         Pick_location:
+          type: string
+        Ba_long_name_2:
+          type: string
+        Ba_type_2:
           type: string
         Data_store_name:
           type: string
@@ -668,9 +677,9 @@ components:
           type: string
         Location_id:
           type: string
-        Remark:
+        Remark_:
           type: string
-        Source:
+        Source_:
           type: string
         Qc_status:
           type: string
