@@ -23,14 +23,14 @@ Proc_set_type   *string  `json:"proc_set_type" default:""`
 Media_type   *string  `json:"media_type" default:""`
 Tape_number   *string  `json:"tape_number" default:""`
 Digital_format   *string  `json:"digital_format" default:""`
-Polarity_   *string  `json:"polarity_" default:""`
+Polarity   *string  `json:"polarity" default:""`
 Ba_long_name_2   *string  `json:"ba_long_name_2" default:""`
 Ba_type_2   *string  `json:"ba_type_2" default:""`
 Data_store_name   *string  `json:"data_store_name" default:""`
 Data_store_type   *string  `json:"data_store_type" default:""`
 Location_id   *string  `json:"location_id" default:""`
-Remark_   *string  `json:"remark_" default:""`
-Source_   *string  `json:"source_" default:""`
+Remark   *string  `json:"remark" default:""`
+Source   *string  `json:"source" default:""`
 Qc_status   *string  `json:"qc_status" default:""`
 Checked_by_ba_id   *string  `json:"checked_by_ba_id" default:""`
 }

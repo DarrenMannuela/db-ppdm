@@ -18,13 +18,17 @@ def split_name(split_name: str):
     split_name_list = split_name.split("_")
 
     for word in range(len(split_name_list)):
-        if word == 0 :
-            struct_name += split_name_list[word].title()+"_"
+        if len(split_name_list) > 1:
+            if word == 0:
+                struct_name += split_name_list[word].title()+"_"
 
-        elif word != len(split_name_list)-1:
-            struct_name += split_name_list[word].lower()+"_"
+            elif word != len(split_name_list)-1:
+                struct_name += split_name_list[word].lower()+"_"
+            else:
+                struct_name += split_name_list[word].lower()
         else:
-            struct_name += split_name_list[word].lower()
+            struct_name += split_name_list[word].title()
+
     return struct_name
 
 

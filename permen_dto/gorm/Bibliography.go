@@ -3,9 +3,9 @@ package dto
 type Bibliography struct{
 
 Id      int  `json:"id" default:"" gorm:"primaryKey"`
-Publisher_   *string  `json:"publisher_" default:""`
+Publisher   *string  `json:"publisher" default:""`
 Document_title   *string  `json:"document_title" default:""`
-Issue_   *string  `json:"issue_" default:""`
+Issue   *string  `json:"issue" default:""`
 Author_id   *string  `json:"author_id" default:""`
 Publication_date   *string  `json:"publication_date" default:""`
 Document_type   *string  `json:"document_type" default:""`

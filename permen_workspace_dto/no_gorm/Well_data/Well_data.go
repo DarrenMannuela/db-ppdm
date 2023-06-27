@@ -10,7 +10,7 @@ Area_type   *string  `json:"area_type" default:""`
 Field_name   *string  `json:"field_name" default:""`
 Well_name   *string  `json:"well_name" default:""`
 Alias_long_name   *string  `json:"alias_long_name" default:""`
-Uwi_   *string  `json:"uwi_" default:""`
+Uwi   *string  `json:"uwi" default:""`
 Status_type   *string  `json:"status_type" default:""`
 Current_class   *string  `json:"current_class" default:""`
 Well_level_type   *string  `json:"well_level_type" default:""`
@@ -18,9 +18,9 @@ Profile_type   *string  `json:"profile_type" default:""`
 Projected_strat_unit_id   *string  `json:"projected_strat_unit_id" default:""`
 Surface_longitude   *int  `json:"surface_longitude" default:""`
 Surface_latitude   *int  `json:"surface_latitude" default:""`
-Easting_   *int  `json:"easting_" default:""`
+Easting   *int  `json:"easting" default:""`
 Easting_ouom   *string  `json:"easting_ouom" default:""`
-Northing_   *int  `json:"northing_" default:""`
+Northing   *int  `json:"northing" default:""`
 Northing_ouom   *string  `json:"northing_ouom" default:""`
 Utm_quadrant   *string  `json:"utm_quadrant" default:""`
 Projection_type   *string  `json:"projection_type" default:""`
@@ -56,8 +56,8 @@ Operator_ba_id   *string  `json:"operator_ba_id" default:""`
 Rig_name   *string  `json:"rig_name" default:""`
 Rig_type   *string  `json:"rig_type" default:""`
 Test_result_code   *string  `json:"test_result_code" default:""`
-Remark_   *string  `json:"remark_" default:""`
-Source_   *string  `json:"source_" default:""`
+Remark   *string  `json:"remark" default:""`
+Source   *string  `json:"source" default:""`
 Qc_status   *string  `json:"qc_status" default:""`
 Checked_by_ba_id   *string  `json:"checked_by_ba_id" default:""`
 Tubing_obs_no   *int  `json:"tubing_obs_no" default:""`

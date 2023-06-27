@@ -33,9 +33,9 @@ Rcrd_rec_length_ouom   *string  `json:"rcrd_rec_length_ouom" default:""`
 Rcrd_sample_rate   *int  `json:"rcrd_sample_rate" default:""`
 Rcrd_sample_rate_ouom   *string  `json:"rcrd_sample_rate_ouom" default:""`
 Alias_long_name   *string  `json:"alias_long_name" default:""`
-Environment_   *string  `json:"environment_" default:""`
-Remark_   *string  `json:"remark_" default:""`
-Source_   *string  `json:"source_" default:""`
+Environment   *string  `json:"environment" default:""`
+Remark   *string  `json:"remark" default:""`
+Source   *string  `json:"source" default:""`
 Qc_status   *string  `json:"qc_status" default:""`
 Checked_by_ba_id   *string  `json:"checked_by_ba_id" default:""`
 }

@@ -20,7 +20,7 @@ Vertical_scale   *string  `json:"vertical_scale" default:""`
 Vertical_scale_ouom   *string  `json:"vertical_scale_ouom" default:""`
 Horizontal_scale   *string  `json:"horizontal_scale" default:""`
 Horizontal_scale_ouom   *string  `json:"horizontal_scale_ouom" default:""`
-Polarity_   *string  `json:"polarity_" default:""`
+Polarity   *string  `json:"polarity" default:""`
 Ba_long_name_2   *string  `json:"ba_long_name_2" default:""`
 Ba_type_2   *string  `json:"ba_type_2" default:""`
 Data_store_name   *string  `json:"data_store_name" default:""`
@@ -28,8 +28,8 @@ Data_store_type   *string  `json:"data_store_type" default:""`
 Location_id   *string  `json:"location_id" default:""`
 Sw_application_id   *string  `json:"sw_application_id" default:""`
 Application_version   *string  `json:"application_version" default:""`
-Remark_   *string  `json:"remark_" default:""`
-Source_   *string  `json:"source_" default:""`
+Remark   *string  `json:"remark" default:""`
+Source   *string  `json:"source" default:""`
 Qc_status   *string  `json:"qc_status" default:""`
 Checked_by_ba_id   *string  `json:"checked_by_ba_id" default:""`
 }

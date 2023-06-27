@@ -14,9 +14,9 @@ Start_date   *string  `json:"start_date" default:""`
 Shot_by   *string  `json:"shot_by" default:""`
 Crew_long_name   *string  `json:"crew_long_name" default:""`
 Acqtn_direction   *string  `json:"acqtn_direction" default:""`
-Environment_   *string  `json:"environment_" default:""`
-Remark_   *string  `json:"remark_" default:""`
-Source_   *string  `json:"source_" default:""`
+Environment   *string  `json:"environment" default:""`
+Remark   *string  `json:"remark" default:""`
+Source   *string  `json:"source" default:""`
 Qc_status   *string  `json:"qc_status" default:""`
 Checked_by_ba_id   *string  `json:"checked_by_ba_id" default:""`
 }

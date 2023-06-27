@@ -240,7 +240,33 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
 }
 """
     
-    update_all = ""
+    update_all = f"""func Set{func_name}(c *fiber.Ctx) error"""+"{"+f"""
+    {check_validity}"""+f"""
+    var {abbreviation} dto.{struct_name}
+    setDefaults(&{abbreviation})
+
+    if err := c.BodyParser(&{abbreviation}); err != nill"""+"{"+"""
+        return err
+    }
+    """+f"""
+    {abbreviation}.Create_date = formatDateString(printWellReport.Create_date)
+    """+"""
+
+	tx, err := db.Begin()
+	if err != nil {
+		return err
+	}
+	defer func() {
+		if err != nil {
+			tx.Rollback()
+		}
+	}()
+
+    var generatedID int64    
+    """+f"""{make_insert_sql(table_name, get_description(table_name), get_num_bind(table_name), insert)}"""+"""
+    return c.SendStatus(fiber.StatusOK)
+}
+"""
 
     return header+get_all+set_all+get_by_id
 

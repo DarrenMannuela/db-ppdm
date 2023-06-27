@@ -15,7 +15,7 @@ Gross_size   *int  `json:"gross_size" default:""`
 Size_ouom   *string  `json:"size_ouom" default:""`
 Strat_type   *string  `json:"strat_type" default:""`
 Fault_type   *string  `json:"fault_type" default:""`
-Source_   *string  `json:"source_" default:""`
+Source   *string  `json:"source" default:""`
 Qc_status   *string  `json:"qc_status" default:""`
 Checked_by_ba_id   *string  `json:"checked_by_ba_id" default:""`
 }
