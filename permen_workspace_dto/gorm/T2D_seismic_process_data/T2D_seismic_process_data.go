@@ -10,9 +10,9 @@ Area_type   *string  `json:"area_type" default:""`
 Acqtn_survey_name   *string  `json:"acqtn_survey_name" default:""`
 Processing_company   *string  `json:"processing_company" default:""`
 Start_date   *string  `json:"start_date" default:""`
-Rcrd_rec_length   *string  `json:"rcrd_rec_length" default:""`
+Rcrd_rec_length   *int  `json:"rcrd_rec_length" default:""`
 Rcrd_rec_length_ouom   *string  `json:"rcrd_rec_length_ouom" default:""`
-Rcrd_sample_rate   *string  `json:"rcrd_sample_rate" default:""`
+Rcrd_sample_rate   *int  `json:"rcrd_sample_rate" default:""`
 Rcrd_sample_rate_ouom   *string  `json:"rcrd_sample_rate_ouom" default:""`
 Line_name   *string  `json:"line_name" default:""`
 First_seis_point_id   *string  `json:"first_seis_point_id" default:""`

@@ -16,9 +16,9 @@ Well_log_class_id   *string  `json:"well_log_class_id" default:""`
 Digital_format   *string  `json:"digital_format" default:""`
 Report_log_run   *string  `json:"report_log_run" default:""`
 Trip_date   *string  `json:"trip_date" default:""`
-Top_depth   *string  `json:"top_depth" default:""`
+Top_depth   *int  `json:"top_depth" default:""`
 Top_depth_ouom   *string  `json:"top_depth_ouom" default:""`
-Base_depth   *string  `json:"base_depth" default:""`
+Base_depth   *int  `json:"base_depth" default:""`
 Base_depth_ouom   *string  `json:"base_depth_ouom" default:""`
 Original_file_name   *string  `json:"original_file_name" default:""`
 Password_   *string  `json:"password_" default:""`

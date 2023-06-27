@@ -13,11 +13,11 @@ Uwi_   *string  `json:"uwi_" default:""`
 Core_type   *string  `json:"core_type" default:""`
 Sample_num   *string  `json:"sample_num" default:""`
 Sample_count   *int  `json:"sample_count" default:""`
-Top_depth   *string  `json:"top_depth" default:""`
+Top_depth   *int  `json:"top_depth" default:""`
 Top_depth_ouom   *string  `json:"top_depth_ouom" default:""`
-Base_depth   *string  `json:"base_depth" default:""`
+Base_depth   *int  `json:"base_depth" default:""`
 Base_depth_ouom   *string  `json:"base_depth_ouom" default:""`
-Portion_volume   *string  `json:"portion_volume" default:""`
+Portion_volume   *int  `json:"portion_volume" default:""`
 Portion_volume_ouom   *string  `json:"portion_volume_ouom" default:""`
 Study_type   *string  `json:"study_type" default:""`
 Ba_long_name_2   *string  `json:"ba_long_name_2" default:""`

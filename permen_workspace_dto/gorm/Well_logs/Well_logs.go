@@ -17,9 +17,9 @@ Well_log_class_id   *string  `json:"well_log_class_id" default:""`
 Log_title   *string  `json:"log_title" default:""`
 Report_log_run   *string  `json:"report_log_run" default:""`
 Trip_date   *string  `json:"trip_date" default:""`
-Top_depth   *string  `json:"top_depth" default:""`
+Top_depth   *int  `json:"top_depth" default:""`
 Top_depth_ouom   *string  `json:"top_depth_ouom" default:""`
-Base_depth   *string  `json:"base_depth" default:""`
+Base_depth   *int  `json:"base_depth" default:""`
 Base_depth_ouom   *string  `json:"base_depth_ouom" default:""`
 Ba_long_name_2   *string  `json:"ba_long_name_2" default:""`
 Ba_type_2   *string  `json:"ba_type_2" default:""`

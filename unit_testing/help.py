@@ -88,3 +88,5 @@ desc = get_description(table_name)
 attr = get_attr(table_name)
 
 print(f"_, err = tx.Exec(`INSERT INTO {table_name} ({desc[:-2]}) VALUES ({bind[:-2]})`, {attr[:-2]})"+"\nif err != nil {\n\ttx.Rollback()"+f"\n\tfmt.Println(\"{table_name.upper()}\")\n\treturn err"+"\n}")
+
+print(attr)

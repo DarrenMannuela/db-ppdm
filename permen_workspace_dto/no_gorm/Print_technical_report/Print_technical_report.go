@@ -10,7 +10,7 @@ Area_type   *string  `json:"area_type" default:""`
 Title_   *string  `json:"title_" default:""`
 Creator_name   *string  `json:"creator_name" default:""`
 Create_date   *string  `json:"create_date" default:""`
-Page_count   *string  `json:"page_count" default:""`
+Page_count   *int  `json:"page_count" default:""`
 Media_type   *string  `json:"media_type" default:""`
 Document_type   *string  `json:"document_type" default:""`
 Item_category   *string  `json:"item_category" default:""`

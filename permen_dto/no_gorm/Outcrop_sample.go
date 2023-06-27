@@ -9,11 +9,11 @@ Area_id   *string  `json:"area_id" default:""`
 Area_type   *string  `json:"area_type" default:""`
 Project_name   *string  `json:"project_name" default:""`
 Field_station_id   *string  `json:"field_station_id" default:""`
-Longitude_   *string  `json:"longitude_" default:""`
-Latitude_   *string  `json:"latitude_" default:""`
-Easting_   *string  `json:"easting_" default:""`
+Longitude_   *int  `json:"longitude_" default:""`
+Latitude_   *int  `json:"latitude_" default:""`
+Easting_   *int  `json:"easting_" default:""`
 Easting_ouom   *string  `json:"easting_ouom" default:""`
-Northing_   *string  `json:"northing_" default:""`
+Northing_   *int  `json:"northing_" default:""`
 Northing_ouom   *string  `json:"northing_ouom" default:""`
 Utm_quadrant   *string  `json:"utm_quadrant" default:""`
 Geodetic_datum_name   *string  `json:"geodetic_datum_name" default:""`

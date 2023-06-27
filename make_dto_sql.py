@@ -73,7 +73,8 @@ with open(file, "r") as file:
         print("Fields:")
         for field in fields:
             cur_field_list = field.split(" ")
-            print(split_name(cur_field_list[0]))
+            print(cur_field_list[0])
+            # print(split_name(cur_field_list[0]))
             if cur_field_list[1] not in check_data_types:
                 check_data_types.append(cur_field_list[1])
 
@@ -83,20 +84,30 @@ with open(file, "r") as file:
                 gorm_content += f'Id      int  `json:"id" default:"" gorm:"primaryKey"`\n'
             else:
                 if "VARCHAR" in cur_field_list[1]:
+                    print("I am varchar")
                     content += f'{split_name(cur_field_list[0])}   *string  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
                     gorm_content += f'{split_name(cur_field_list[0])}   *string  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
-                elif "FLOAT" in cur_field_list[1]:
+                if "FLOAT" in cur_field_list[1]:
+                    print("I am float")
                     content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
                     gorm_content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
-                elif "TIMESTAMP" in cur_field_list[1]:
+                if "TIMESTAMP" in cur_field_list[1]:
+                    print("I am time")
                     content += f'{split_name(cur_field_list[0])}   *string  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
                     gorm_content += f'{split_name(cur_field_list[0])}   *string  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
-                elif "NUMBER" in cur_field_list[1]:
-                    content += f'{split_name(cur_field_list[0])}   *string  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
-                    gorm_content += f'{split_name(cur_field_list[0])}   *string  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
-                elif "INT" in cur_field_list[1]:
+                if "NUMBER" in cur_field_list[1]:
+                    print("I am number")
                     content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
                     gorm_content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
+                if "INT" in cur_field_list[1]:
+                    print("I am int")
+                    content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
+                    gorm_content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
+                if "DECIMAL" in cur_field_list[1]:
+                    print("I am int")
+                    content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
+                    gorm_content += f'{split_name(cur_field_list[0])}   *int  `json:"{split_name(cur_field_list[0]).lower()}" default:""`\n'
+                
 
         # os.makedirs(f"permen_workspace_dto/gorm/{file_name}")
         # os.makedirs(f"permen_workspace_dto/no_gorm/{file_name}")
@@ -143,3 +154,4 @@ with open(file, "r") as file:
 
 
 print(opener+content+closer)
+print(check_data_types)
