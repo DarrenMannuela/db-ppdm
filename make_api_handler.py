@@ -325,7 +325,7 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
 	}()
 
     var generatedID int64    
-    """+f"""{make_insert_sql(table_name, insert_desc, get_num_bind(table_name), insert)}"""+"""
+    """+f"""{make_insert_sql(table_name, insert_desc, bind, insert)}"""+"""
     return c.SendStatus(fiber.StatusOK)
 }
 """
