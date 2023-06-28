@@ -475,6 +475,15 @@ testing = make_type_handler(test, 'printwellreport', "PrintWellReport", "Print_w
 
 # print(func_names[0])
 
+api_items.sort()
+items.sort()
+table_names.sort()
+folders_name_change.sort()
+func_names.sort()
+
+print(items)
+print(api_items)
+
 for file in range(len(items)):
     cur_api = make_type_handler(table_names[file], folders_name_change[file], func_names[file], items[file])
     with open(f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/api_afe_workspace_for_tables/{api_items[file]}/{items[file].lower()}_handler.go", "w") as file:
