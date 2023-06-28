@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 
-	dto "github.com/DarrenMannuela/svc-datatype-3dseismicnavigationdigitaldata/dto"
+	dto "github.com/DarrenMannuela/svc-datatype-bibliography/dto"
 	"github.com/gofiber/fiber/v2"
 )
 
 func GetAfe(c *fiber.Ctx) error {
-	rows, err := db.Query("SELECT * FROM t3d_seismic_navigation_digital_data_table_afe")
+	rows, err := db.Query("SELECT * FROM bibliography_table_afe")
 	if err != nil {
 		return c.Status(500).SendString(err.Error())
 	}
@@ -33,7 +33,7 @@ func GetAfe(c *fiber.Ctx) error {
 func GetAfeByNum(c *fiber.Ctx) error {
 	afeNumber := c.Params("afe")
 	fmt.Println(afeNumber)
-	rows, err := db.Query("SELECT * FROM t3d_seismic_navigation_digital_data_table_afe WHERE afe_number = :1", afeNumber)
+	rows, err := db.Query("SELECT * FROM bibliography_table_afe WHERE afe_number = :1", afeNumber)
 	if err != nil {
 		return c.Status(500).SendString(err.Error())
 	}
@@ -63,7 +63,7 @@ func SetAfe(c *fiber.Ctx) error {
 		return c.Status(400).SendString(err.Error())
 	}
 
-	afe.Data_type = "3D Seismic Navigation Digital Data"
+	afe.Data_type = "Bibliography"
 
 	tx, err := db.Begin()
 	if err != nil {
@@ -83,10 +83,10 @@ func SetAfe(c *fiber.Ctx) error {
 
 		}
 	}
-	_, err = tx.Exec(`INSERT INTO t3d_seismic_navigation_digital_data_table_afe (afe_number, workspace_name, kkks_name, working_area, submission_type, data_type, Email) VALUES (:1, :2, :3, :4, :5, :6, :7)`, afe.Afe_number, afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email)
+	_, err = tx.Exec(`INSERT INTO bibliography_table_afe (afe_number, workspace_name, kkks_name, working_area, submission_type, data_type, Email) VALUES (:1, :2, :3, :4, :5, :6, :7)`, afe.Afe_number, afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email)
 	if err != nil {
 		tx.Rollback()
-		fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+		fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 		return err
 	}
 
@@ -109,7 +109,7 @@ func PutAfe(c *fiber.Ctx) error {
 		return c.Status(400).SendString(err.Error())
 	}
 
-	afe.Data_type = "3D Seismic Navigation Digital Data"
+	afe.Data_type = "Bibliography"
 
 	tx, err := db.Begin()
 	if err != nil {
@@ -131,11 +131,11 @@ func PutAfe(c *fiber.Ctx) error {
 			return err
 		}
 	}
-	_, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table_afe SET workspace_name = :1, kkks_name = :2, working_area = :3, submission_type = :4, data_type = :5, Email = :6 WHERE afe_number = :7`,
+	_, err = tx.Exec(`UPDATE bibliography_table_afe SET workspace_name = :1, kkks_name = :2, working_area = :3, submission_type = :4, data_type = :5, Email = :6 WHERE afe_number = :7`,
 		afe.Workspace_name, afe.Kkks_name, afe.Working_area, afe.Submission_type, afe.Data_type, afe.Email, afeNumber)
 	if err != nil {
 		tx.Rollback()
-		fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+		fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 		return err
 	}
 
@@ -155,49 +155,49 @@ func DeleteAfe(c *fiber.Ctx) error {
 	tx, err := db.Begin()
 	if err != nil {
 		tx.Rollback()
-		fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+		fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 		return c.Status(500).SendString(err.Error())
 	}
 
-	rows, err := tx.Query(`SELECT t3d_seismic_navigation_digital_data_id FROM t3d_seismic_navigation_digital_data_table_workspace WHERE afe_number = :1`, afeNumber)
+	rows, err := tx.Query(`SELECT bibliography_id FROM bibliography_table_workspace WHERE afe_number = :1`, afeNumber)
 	if err != nil {
 		tx.Rollback()
-		fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_WORKSPACE")
+		fmt.Println("BIBLIOGRAPHY_TABLE_WORKSPACE")
 		return err
 	}
 
-	var t3d_seismic_navigation_digital_data_ids []string
+	var bibliography_ids []string
 
 	for rows.Next() {
-		var t3d_seismic_navigation_digital_data_id string
-		if err := rows.Scan(&t3d_seismic_navigation_digital_data_id); err != nil {
+		var bibliography_id string
+		if err := rows.Scan(&bibliography_id); err != nil {
 			return err
 		}
 
-		t3d_seismic_navigation_digital_data_ids = append(t3d_seismic_navigation_digital_data_ids, t3d_seismic_navigation_digital_data_id)
+		bibliography_ids = append(bibliography_ids, bibliography_id)
 
 	}
 
-	_, err = tx.Exec(`DELETE FROM t3d_seismic_navigation_digital_data_table_workspace WHERE afe_number = :1`, afeNumber)
+	_, err = tx.Exec(`DELETE FROM bibliography_table_workspace WHERE afe_number = :1`, afeNumber)
 	if err != nil {
 		tx.Rollback()
-		fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_WORKSPACE")
+		fmt.Println("BIBLIOGRAPHY_TABLE_WORKSPACE")
 		return err
 	}
 
-	for i := 0; i < len(t3d_seismic_navigation_digital_data_ids); i++ {
-		_, err = tx.Exec(`DELETE FROM t3d_seismic_navigation_digital_data_table WHERE id = :1`, t3d_seismic_navigation_digital_data_ids[i])
+	for i := 0; i < len(bibliography_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM bibliography_table WHERE id = :1`, bibliography_ids[i])
 		if err != nil {
 			tx.Rollback()
-			fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE")
+			fmt.Println("BIBLIOGRAPHY_TABLE")
 			return err
 		}
 	}
 
-	delRows, err := tx.Exec(`DELETE FROM t3d_seismic_navigation_digital_data_table_afe WHERE afe_number = :1`, afeNumber)
+	delRows, err := tx.Exec(`DELETE FROM bibliography_table_afe WHERE afe_number = :1`, afeNumber)
 	if err != nil {
 		tx.Rollback()
-		fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+		fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 		return err
 	}
 
@@ -238,31 +238,31 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 
 	if afe.Workspace_name != nil {
 
-		_, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table_afe SET workspace_name = :1 WHERE afe_number = :2`, afe.Workspace_name, afeNumber)
+		_, err = tx.Exec(`UPDATE bibliography_table_afe SET workspace_name = :1 WHERE afe_number = :2`, afe.Workspace_name, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
-			fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+			fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 			return err
 		}
 	}
 	if afe.Kkks_name != nil {
 
-		_, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table_afe SET kkks_name = :1 WHERE afe_number = :2`, afe.Kkks_name, afeNumber)
+		_, err = tx.Exec(`UPDATE bibliography_table_afe SET kkks_name = :1 WHERE afe_number = :2`, afe.Kkks_name, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
-			fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+			fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 			return err
 		}
 	}
 	if afe.Working_area != nil {
 
-		_, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table_afe SET working_area = :1 WHERE afe_number = :2`, afe.Working_area, afeNumber)
+		_, err = tx.Exec(`UPDATE bibliography_table_afe SET working_area = :1 WHERE afe_number = :2`, afe.Working_area, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
-			fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+			fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 			return err
 		}
 	}
@@ -282,31 +282,31 @@ func PatchWorkspaceAfe(c *fiber.Ctx) error {
 			}
 		}
 
-		_, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table_afe SET submission_type = :1 WHERE afe_number = :2`, afe.Submission_type, afeNumber)
+		_, err = tx.Exec(`UPDATE bibliography_table_afe SET submission_type = :1 WHERE afe_number = :2`, afe.Submission_type, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
-			fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+			fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 			return err
 		}
 	}
 	if afe.Data_type != "" {
 
-		_, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table_afe SET data_type = :1 WHERE afe_number = :2`, afe.Data_type, afeNumber)
+		_, err = tx.Exec(`UPDATE bibliography_table_afe SET data_type = :1 WHERE afe_number = :2`, afe.Data_type, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
-			fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+			fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 			return err
 		}
 	}
 	if afe.Email != "" {
 
-		_, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table_afe SET Email = :1 WHERE afe_number = :2`, afe.Email, afeNumber)
+		_, err = tx.Exec(`UPDATE bibliography_table_afe SET Email = :1 WHERE afe_number = :2`, afe.Email, afeNumber)
 
 		if err != nil {
 			tx.Rollback()
-			fmt.Println("3D_SEISMIC_NAVIGATION_DIGITAL_DATA_TABLE_AFE")
+			fmt.Println("BIBLIOGRAPHY_TABLE_AFE")
 			return err
 		}
 	}

@@ -166,15 +166,15 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	var 3d_seismic_process_data_stored_in_media_ids []string
+	var t3d_seismic_process_data_stored_in_media_ids []string
 
 	for rows.Next() {
-		var 3d_seismic_process_data_stored_in_media_id string
-		if err := rows.Scan(&3d_seismic_process_data_stored_in_media_id); err != nil {
+		var t3d_seismic_process_data_stored_in_media_id string
+		if err := rows.Scan(&t3d_seismic_process_data_stored_in_media_id); err != nil {
 			return err
 		}
 
-		3d_seismic_process_data_stored_in_media_ids = append(3d_seismic_process_data_stored_in_media_ids, 3d_seismic_process_data_stored_in_media_id)
+		t3d_seismic_process_data_stored_in_media_ids = append(t3d_seismic_process_data_stored_in_media_ids, t3d_seismic_process_data_stored_in_media_id)
 
 	}
 
@@ -185,8 +185,8 @@ func DeleteAfe(c *fiber.Ctx) error {
 		return err
 	}
 
-	for i := 0; i < len(3d_seismic_process_data_stored_in_media_ids); i++ {
-		_, err = tx.Exec(`DELETE FROM t3d_seismic_process_data_stored_in_media_table WHERE id = :1`, 3d_seismic_process_data_stored_in_media_ids[i])
+	for i := 0; i < len(t3d_seismic_process_data_stored_in_media_ids); i++ {
+		_, err = tx.Exec(`DELETE FROM t3d_seismic_process_data_stored_in_media_table WHERE id = :1`, t3d_seismic_process_data_stored_in_media_ids[i])
 		if err != nil {
 			tx.Rollback()
 			fmt.Println("3D_SEISMIC_PROCESS_DATA_STORED_IN_MEDIA_TABLE")
