@@ -230,7 +230,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
     
     if idExist != ""{
         if wlt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, wlt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET ba_long_name = :1 WHERE id = :2`, wlt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, wlt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET ba_type = :1 WHERE id = :2`, wlt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, wlt.Area_id, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET area_id = :1 WHERE id = :2`, wlt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, wlt.Area_type, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET area_type = :1 WHERE id = :2`, wlt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Field_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, wlt.Field_name, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET field_name = :1 WHERE id = :2`, wlt.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Well_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET well_name = :1 WHERE id = :2`, wlt.Well_name, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET well_name = :1 WHERE id = :2`, wlt.Well_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Uwi != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET uwi = :1 WHERE id = :2`, wlt.Uwi, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET uwi = :1 WHERE id = :2`, wlt.Uwi, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Logging_company != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET logging_company = :1 WHERE id = :2`, wlt.Logging_company, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET logging_company = :1 WHERE id = :2`, wlt.Logging_company, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Scale_ratio != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET scale_ratio = :1 WHERE id = :2`, wlt.Scale_ratio, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET scale_ratio = :1 WHERE id = :2`, wlt.Scale_ratio, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, wlt.Media_type, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET media_type = :1 WHERE id = :2`, wlt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Well_log_class_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET well_log_class_id = :1 WHERE id = :2`, wlt.Well_log_class_id, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET well_log_class_id = :1 WHERE id = :2`, wlt.Well_log_class_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Log_title != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET log_title = :1 WHERE id = :2`, wlt.Log_title, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET log_title = :1 WHERE id = :2`, wlt.Log_title, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Report_log_run != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET report_log_run = :1 WHERE id = :2`, wlt.Report_log_run, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET report_log_run = :1 WHERE id = :2`, wlt.Report_log_run, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Trip_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET trip_date = :1 WHERE id = :2`, wlt.Trip_date, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET trip_date = :1 WHERE id = :2`, wlt.Trip_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Top_depth != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET top_depth = :1 WHERE id = :2`, wlt.Top_depth, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET top_depth = :1 WHERE id = :2`, wlt.Top_depth, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Top_depth_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET top_depth_ouom = :1 WHERE id = :2`, wlt.Top_depth_ouom, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET top_depth_ouom = :1 WHERE id = :2`, wlt.Top_depth_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Base_depth != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET base_depth = :1 WHERE id = :2`, wlt.Base_depth, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET base_depth = :1 WHERE id = :2`, wlt.Base_depth, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Base_depth_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET base_depth_ouom = :1 WHERE id = :2`, wlt.Base_depth_ouom, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET base_depth_ouom = :1 WHERE id = :2`, wlt.Base_depth_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, wlt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET ba_long_name_2 = :1 WHERE id = :2`, wlt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, wlt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET ba_type_2 = :1 WHERE id = :2`, wlt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, wlt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET data_store_name = :1 WHERE id = :2`, wlt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, wlt.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET data_store_type = :1 WHERE id = :2`, wlt.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Location_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET location_id = :1 WHERE id = :2`, wlt.Location_id, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET location_id = :1 WHERE id = :2`, wlt.Location_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, wlt.Remark, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET remark = :1 WHERE id = :2`, wlt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, wlt.Source, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET source = :1 WHERE id = :2`, wlt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, wlt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET qc_status = :1 WHERE id = :2`, wlt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchWellLogs(c *fiber.Ctx) error{
         }
             
         if wlt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, wlt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE well_logs_table SET checked_by_ba_id = :1 WHERE id = :2`, wlt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

@@ -230,7 +230,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
     
     if idExist != ""{
         if fit.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, fit.Area_id, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET area_id = :1 WHERE id = :2`, fit.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, fit.Area_type, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET area_type = :1 WHERE id = :2`, fit.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Field_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, fit.Field_name, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET field_name = :1 WHERE id = :2`, fit.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Discovery_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET discovery_date = :1 WHERE id = :2`, fit.Discovery_date, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET discovery_date = :1 WHERE id = :2`, fit.Discovery_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Field_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_type = :1 WHERE id = :2`, fit.Field_type, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET field_type = :1 WHERE id = :2`, fit.Field_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, fit.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET original_file_name = :1 WHERE id = :2`, fit.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, fit.Password, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET password = :1 WHERE id = :2`, fit.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, fit.Digital_size, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET digital_size = :1 WHERE id = :2`, fit.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, fit.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET digital_size_uom = :1 WHERE id = :2`, fit.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, fit.Media_type, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET media_type = :1 WHERE id = :2`, fit.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, fit.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET data_store_name = :1 WHERE id = :2`, fit.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, fit.Remark, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET remark = :1 WHERE id = :2`, fit.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, fit.Qc_status, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET qc_status = :1 WHERE id = :2`, fit.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchFieldInformation(c *fiber.Ctx) error{
         }
             
         if fit.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, fit.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE field_information_table SET checked_by_ba_id = :1 WHERE id = :2`, fit.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

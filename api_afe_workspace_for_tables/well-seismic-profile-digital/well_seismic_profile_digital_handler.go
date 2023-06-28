@@ -230,7 +230,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
     
     if idExist != ""{
         if wspdt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, wspdt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET ba_long_name = :1 WHERE id = :2`, wspdt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, wspdt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET ba_type = :1 WHERE id = :2`, wspdt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, wspdt.Area_id, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET area_id = :1 WHERE id = :2`, wspdt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, wspdt.Area_type, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET area_type = :1 WHERE id = :2`, wspdt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Field_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, wspdt.Field_name, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET field_name = :1 WHERE id = :2`, wspdt.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Well_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET well_name = :1 WHERE id = :2`, wspdt.Well_name, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET well_name = :1 WHERE id = :2`, wspdt.Well_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Alias_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET alias_long_name = :1 WHERE id = :2`, wspdt.Alias_long_name, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET alias_long_name = :1 WHERE id = :2`, wspdt.Alias_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Uwi != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET uwi = :1 WHERE id = :2`, wspdt.Uwi, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET uwi = :1 WHERE id = :2`, wspdt.Uwi, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Trip_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET trip_date = :1 WHERE id = :2`, wspdt.Trip_date, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET trip_date = :1 WHERE id = :2`, wspdt.Trip_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Survey_company_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET survey_company_ba_id = :1 WHERE id = :2`, wspdt.Survey_company_ba_id, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET survey_company_ba_id = :1 WHERE id = :2`, wspdt.Survey_company_ba_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Top_depth != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET top_depth = :1 WHERE id = :2`, wspdt.Top_depth, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET top_depth = :1 WHERE id = :2`, wspdt.Top_depth, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Top_depth_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET top_depth_ouom = :1 WHERE id = :2`, wspdt.Top_depth_ouom, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET top_depth_ouom = :1 WHERE id = :2`, wspdt.Top_depth_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Base_depth != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET base_depth = :1 WHERE id = :2`, wspdt.Base_depth, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET base_depth = :1 WHERE id = :2`, wspdt.Base_depth, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Base_depth_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET base_depth_ouom = :1 WHERE id = :2`, wspdt.Base_depth_ouom, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET base_depth_ouom = :1 WHERE id = :2`, wspdt.Base_depth_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Checkshot_survey_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checkshot_survey_type = :1 WHERE id = :2`, wspdt.Checkshot_survey_type, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET checkshot_survey_type = :1 WHERE id = :2`, wspdt.Checkshot_survey_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Vsp_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET vsp_type = :1 WHERE id = :2`, wspdt.Vsp_type, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET vsp_type = :1 WHERE id = :2`, wspdt.Vsp_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, wspdt.Digital_format, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET digital_format = :1 WHERE id = :2`, wspdt.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, wspdt.Media_type, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET media_type = :1 WHERE id = :2`, wspdt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, wspdt.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET original_file_name = :1 WHERE id = :2`, wspdt.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, wspdt.Password, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET password = :1 WHERE id = :2`, wspdt.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, wspdt.Digital_size, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET digital_size = :1 WHERE id = :2`, wspdt.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, wspdt.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET digital_size_uom = :1 WHERE id = :2`, wspdt.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, wspdt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET ba_long_name_2 = :1 WHERE id = :2`, wspdt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, wspdt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET ba_type_2 = :1 WHERE id = :2`, wspdt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, wspdt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET data_store_name = :1 WHERE id = :2`, wspdt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, wspdt.Remark, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET remark = :1 WHERE id = :2`, wspdt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, wspdt.Source, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET source = :1 WHERE id = :2`, wspdt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -473,7 +473,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, wspdt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET qc_status = :1 WHERE id = :2`, wspdt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -482,7 +482,7 @@ func PatchWellSeismicProfileDigital(c *fiber.Ctx) error{
         }
             
         if wspdt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, wspdt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE well_seismic_profile_digital_table SET checked_by_ba_id = :1 WHERE id = :2`, wspdt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

@@ -230,7 +230,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
     
     if idExist != ""{
         if tsnddt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, tsnddt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET ba_long_name = :1 WHERE id = :2`, tsnddt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, tsnddt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET ba_type = :1 WHERE id = :2`, tsnddt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, tsnddt.Area_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET area_id = :1 WHERE id = :2`, tsnddt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, tsnddt.Area_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET area_type = :1 WHERE id = :2`, tsnddt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Acqtn_survey_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_survey_name = :1 WHERE id = :2`, tsnddt.Acqtn_survey_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET acqtn_survey_name = :1 WHERE id = :2`, tsnddt.Acqtn_survey_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Seis_dimension != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET seis_dimension = :1 WHERE id = :2`, tsnddt.Seis_dimension, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET seis_dimension = :1 WHERE id = :2`, tsnddt.Seis_dimension, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Shot_by != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET shot_by = :1 WHERE id = :2`, tsnddt.Shot_by, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET shot_by = :1 WHERE id = :2`, tsnddt.Shot_by, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Process_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET process_date = :1 WHERE id = :2`, tsnddt.Process_date, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET process_date = :1 WHERE id = :2`, tsnddt.Process_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, tsnddt.Digital_format, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET digital_format = :1 WHERE id = :2`, tsnddt.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, tsnddt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET data_store_name = :1 WHERE id = :2`, tsnddt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, tsnddt.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET original_file_name = :1 WHERE id = :2`, tsnddt.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, tsnddt.Password, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET password = :1 WHERE id = :2`, tsnddt.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, tsnddt.Digital_size, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET digital_size = :1 WHERE id = :2`, tsnddt.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, tsnddt.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET digital_size_uom = :1 WHERE id = :2`, tsnddt.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, tsnddt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET ba_long_name_2 = :1 WHERE id = :2`, tsnddt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, tsnddt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET ba_type_2 = :1 WHERE id = :2`, tsnddt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, tsnddt.Remark, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET remark = :1 WHERE id = :2`, tsnddt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, tsnddt.Source, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET source = :1 WHERE id = :2`, tsnddt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, tsnddt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET qc_status = :1 WHERE id = :2`, tsnddt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchT3DSeismicNavigationDigitalData(c *fiber.Ctx) error{
         }
             
         if tsnddt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, tsnddt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_navigation_digital_data_table SET checked_by_ba_id = :1 WHERE id = :2`, tsnddt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

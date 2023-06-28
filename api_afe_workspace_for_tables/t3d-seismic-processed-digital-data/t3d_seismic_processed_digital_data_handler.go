@@ -230,7 +230,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
     
     if idExist != ""{
         if tspddt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, tspddt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET ba_long_name = :1 WHERE id = :2`, tspddt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, tspddt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET ba_type = :1 WHERE id = :2`, tspddt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, tspddt.Area_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET area_id = :1 WHERE id = :2`, tspddt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, tspddt.Area_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET area_type = :1 WHERE id = :2`, tspddt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Acqtn_survey_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_survey_name = :1 WHERE id = :2`, tspddt.Acqtn_survey_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET acqtn_survey_name = :1 WHERE id = :2`, tspddt.Acqtn_survey_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Processing_company != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET processing_company = :1 WHERE id = :2`, tspddt.Processing_company, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET processing_company = :1 WHERE id = :2`, tspddt.Processing_company, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Start_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET start_date = :1 WHERE id = :2`, tspddt.Start_date, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET start_date = :1 WHERE id = :2`, tspddt.Start_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Rcrd_rec_length != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_rec_length = :1 WHERE id = :2`, tspddt.Rcrd_rec_length, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET rcrd_rec_length = :1 WHERE id = :2`, tspddt.Rcrd_rec_length, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Rcrd_rec_length_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_rec_length_ouom = :1 WHERE id = :2`, tspddt.Rcrd_rec_length_ouom, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET rcrd_rec_length_ouom = :1 WHERE id = :2`, tspddt.Rcrd_rec_length_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Rcrd_sample_rate != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_sample_rate = :1 WHERE id = :2`, tspddt.Rcrd_sample_rate, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET rcrd_sample_rate = :1 WHERE id = :2`, tspddt.Rcrd_sample_rate, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Rcrd_sample_rate_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_sample_rate_ouom = :1 WHERE id = :2`, tspddt.Rcrd_sample_rate_ouom, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET rcrd_sample_rate_ouom = :1 WHERE id = :2`, tspddt.Rcrd_sample_rate_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.First_nline_no != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET first_nline_no = :1 WHERE id = :2`, tspddt.First_nline_no, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET first_nline_no = :1 WHERE id = :2`, tspddt.First_nline_no, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Last_nline_no != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET last_nline_no = :1 WHERE id = :2`, tspddt.Last_nline_no, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET last_nline_no = :1 WHERE id = :2`, tspddt.Last_nline_no, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.First_xline_no != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET first_xline_no = :1 WHERE id = :2`, tspddt.First_xline_no, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET first_xline_no = :1 WHERE id = :2`, tspddt.First_xline_no, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Last_xline_no != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET last_xline_no = :1 WHERE id = :2`, tspddt.Last_xline_no, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET last_xline_no = :1 WHERE id = :2`, tspddt.Last_xline_no, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, tspddt.Digital_format, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET digital_format = :1 WHERE id = :2`, tspddt.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, tspddt.Media_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET media_type = :1 WHERE id = :2`, tspddt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Proc_set_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET proc_set_type = :1 WHERE id = :2`, tspddt.Proc_set_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET proc_set_type = :1 WHERE id = :2`, tspddt.Proc_set_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Polarity != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET polarity = :1 WHERE id = :2`, tspddt.Polarity, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET polarity = :1 WHERE id = :2`, tspddt.Polarity, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, tspddt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET ba_long_name_2 = :1 WHERE id = :2`, tspddt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, tspddt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET ba_type_2 = :1 WHERE id = :2`, tspddt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, tspddt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET data_store_name = :1 WHERE id = :2`, tspddt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, tspddt.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET original_file_name = :1 WHERE id = :2`, tspddt.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, tspddt.Password, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET password = :1 WHERE id = :2`, tspddt.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Sw_application_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sw_application_id = :1 WHERE id = :2`, tspddt.Sw_application_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET sw_application_id = :1 WHERE id = :2`, tspddt.Sw_application_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Application_version != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET application_version = :1 WHERE id = :2`, tspddt.Application_version, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET application_version = :1 WHERE id = :2`, tspddt.Application_version, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, tspddt.Digital_size, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET digital_size = :1 WHERE id = :2`, tspddt.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -473,7 +473,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, tspddt.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET digital_size_uom = :1 WHERE id = :2`, tspddt.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -482,7 +482,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, tspddt.Remark, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET remark = :1 WHERE id = :2`, tspddt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -491,7 +491,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, tspddt.Source, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET source = :1 WHERE id = :2`, tspddt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -500,7 +500,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, tspddt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET qc_status = :1 WHERE id = :2`, tspddt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -509,7 +509,7 @@ func PatchT3DSeismicProcessedDigitalData(c *fiber.Ctx) error{
         }
             
         if tspddt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, tspddt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_processed_digital_data_table SET checked_by_ba_id = :1 WHERE id = :2`, tspddt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

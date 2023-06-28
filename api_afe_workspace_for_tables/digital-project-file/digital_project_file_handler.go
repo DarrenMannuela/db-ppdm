@@ -230,7 +230,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
     
     if idExist != ""{
         if dpft.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, dpft.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET ba_long_name = :1 WHERE id = :2`, dpft.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, dpft.Ba_type, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET ba_type = :1 WHERE id = :2`, dpft.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, dpft.Area_id, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET area_id = :1 WHERE id = :2`, dpft.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, dpft.Area_type, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET area_type = :1 WHERE id = :2`, dpft.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Field_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, dpft.Field_name, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET field_name = :1 WHERE id = :2`, dpft.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Project_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET project_name = :1 WHERE id = :2`, dpft.Project_name, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET project_name = :1 WHERE id = :2`, dpft.Project_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Sw_application_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sw_application_id = :1 WHERE id = :2`, dpft.Sw_application_id, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET sw_application_id = :1 WHERE id = :2`, dpft.Sw_application_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Application_version != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET application_version = :1 WHERE id = :2`, dpft.Application_version, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET application_version = :1 WHERE id = :2`, dpft.Application_version, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Item_category != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET item_category = :1 WHERE id = :2`, dpft.Item_category, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET item_category = :1 WHERE id = :2`, dpft.Item_category, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Process_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET process_date = :1 WHERE id = :2`, dpft.Process_date, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET process_date = :1 WHERE id = :2`, dpft.Process_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Interpreter != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET interpreter = :1 WHERE id = :2`, dpft.Interpreter, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET interpreter = :1 WHERE id = :2`, dpft.Interpreter, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, dpft.Digital_format, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET digital_format = :1 WHERE id = :2`, dpft.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, dpft.Media_type, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET media_type = :1 WHERE id = :2`, dpft.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, dpft.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET original_file_name = :1 WHERE id = :2`, dpft.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, dpft.Password, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET password = :1 WHERE id = :2`, dpft.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, dpft.Digital_size, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET digital_size = :1 WHERE id = :2`, dpft.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, dpft.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET digital_size_uom = :1 WHERE id = :2`, dpft.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, dpft.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET ba_long_name_2 = :1 WHERE id = :2`, dpft.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, dpft.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET ba_type_2 = :1 WHERE id = :2`, dpft.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, dpft.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET data_store_name = :1 WHERE id = :2`, dpft.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, dpft.Remark, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET remark = :1 WHERE id = :2`, dpft.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, dpft.Source, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET source = :1 WHERE id = :2`, dpft.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, dpft.Qc_status, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET qc_status = :1 WHERE id = :2`, dpft.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchDigitalProjectFile(c *fiber.Ctx) error{
         }
             
         if dpft.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, dpft.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE digital_project_file_table SET checked_by_ba_id = :1 WHERE id = :2`, dpft.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

@@ -222,7 +222,7 @@ def make_get_by_afe(table_name: str):
     }"""
     return get
 
-def make_patch_sql(insert_attr: str):
+def make_patch_sql(insert_attr: str, table_name: str):
     insert_attr_list = insert_attr.split(",")
 
     patch = ""
@@ -443,7 +443,7 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
     """+f"""
     {make_get_by_afe(workspace)}
     """+"""
-    if idExist != ""{"""+f"""{make_patch_sql(insert)}"""+"""
+    if idExist != ""{"""+f"""{make_patch_sql(insert, table_name)}"""+"""
     }
     err = tx.Commit()
 	if err != nil {

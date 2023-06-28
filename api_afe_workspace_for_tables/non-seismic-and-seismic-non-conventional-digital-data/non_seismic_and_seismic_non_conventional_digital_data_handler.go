@@ -230,7 +230,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
     
     if idExist != ""{
         if nsasncddt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, nsasncddt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET ba_long_name = :1 WHERE id = :2`, nsasncddt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, nsasncddt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET ba_type = :1 WHERE id = :2`, nsasncddt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, nsasncddt.Area_id, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET area_id = :1 WHERE id = :2`, nsasncddt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, nsasncddt.Area_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET area_type = :1 WHERE id = :2`, nsasncddt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Acqtn_survey_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_survey_name = :1 WHERE id = :2`, nsasncddt.Acqtn_survey_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET acqtn_survey_name = :1 WHERE id = :2`, nsasncddt.Acqtn_survey_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Processing_company != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET processing_company = :1 WHERE id = :2`, nsasncddt.Processing_company, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET processing_company = :1 WHERE id = :2`, nsasncddt.Processing_company, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Start_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET start_date = :1 WHERE id = :2`, nsasncddt.Start_date, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET start_date = :1 WHERE id = :2`, nsasncddt.Start_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Seis_station_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET seis_station_type = :1 WHERE id = :2`, nsasncddt.Seis_station_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET seis_station_type = :1 WHERE id = :2`, nsasncddt.Seis_station_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Create_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET create_date = :1 WHERE id = :2`, nsasncddt.Create_date, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET create_date = :1 WHERE id = :2`, nsasncddt.Create_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Proc_set_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET proc_set_type = :1 WHERE id = :2`, nsasncddt.Proc_set_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET proc_set_type = :1 WHERE id = :2`, nsasncddt.Proc_set_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, nsasncddt.Media_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET media_type = :1 WHERE id = :2`, nsasncddt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Tape_number != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET tape_number = :1 WHERE id = :2`, nsasncddt.Tape_number, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET tape_number = :1 WHERE id = :2`, nsasncddt.Tape_number, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, nsasncddt.Digital_format, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET digital_format = :1 WHERE id = :2`, nsasncddt.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, nsasncddt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET ba_long_name_2 = :1 WHERE id = :2`, nsasncddt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, nsasncddt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET ba_type_2 = :1 WHERE id = :2`, nsasncddt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, nsasncddt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET data_store_name = :1 WHERE id = :2`, nsasncddt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, nsasncddt.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET original_file_name = :1 WHERE id = :2`, nsasncddt.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, nsasncddt.Password, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET password = :1 WHERE id = :2`, nsasncddt.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, nsasncddt.Digital_size, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET digital_size = :1 WHERE id = :2`, nsasncddt.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, nsasncddt.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET digital_size_uom = :1 WHERE id = :2`, nsasncddt.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, nsasncddt.Remark, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET remark = :1 WHERE id = :2`, nsasncddt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, nsasncddt.Source, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET source = :1 WHERE id = :2`, nsasncddt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, nsasncddt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET qc_status = :1 WHERE id = :2`, nsasncddt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchNonSeismicAndSeismicNonConventionalDigitalData(c *fiber.Ctx) error{
         }
             
         if nsasncddt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, nsasncddt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_digital_data_table SET checked_by_ba_id = :1 WHERE id = :2`, nsasncddt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

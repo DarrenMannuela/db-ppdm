@@ -230,7 +230,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
     
     if idExist != ""{
         if ost.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, ost.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET ba_long_name = :1 WHERE id = :2`, ost.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, ost.Ba_type, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET ba_type = :1 WHERE id = :2`, ost.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, ost.Area_id, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET area_id = :1 WHERE id = :2`, ost.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, ost.Area_type, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET area_type = :1 WHERE id = :2`, ost.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Project_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET project_name = :1 WHERE id = :2`, ost.Project_name, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET project_name = :1 WHERE id = :2`, ost.Project_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Field_station_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_station_id = :1 WHERE id = :2`, ost.Field_station_id, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET field_station_id = :1 WHERE id = :2`, ost.Field_station_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Longitude != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET longitude = :1 WHERE id = :2`, ost.Longitude, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET longitude = :1 WHERE id = :2`, ost.Longitude, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Latitude != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET latitude = :1 WHERE id = :2`, ost.Latitude, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET latitude = :1 WHERE id = :2`, ost.Latitude, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Easting != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET easting = :1 WHERE id = :2`, ost.Easting, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET easting = :1 WHERE id = :2`, ost.Easting, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Easting_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET easting_ouom = :1 WHERE id = :2`, ost.Easting_ouom, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET easting_ouom = :1 WHERE id = :2`, ost.Easting_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Northing != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET northing = :1 WHERE id = :2`, ost.Northing, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET northing = :1 WHERE id = :2`, ost.Northing, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Northing_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET northing_ouom = :1 WHERE id = :2`, ost.Northing_ouom, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET northing_ouom = :1 WHERE id = :2`, ost.Northing_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Utm_quadrant != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET utm_quadrant = :1 WHERE id = :2`, ost.Utm_quadrant, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET utm_quadrant = :1 WHERE id = :2`, ost.Utm_quadrant, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Geodetic_datum_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET geodetic_datum_name = :1 WHERE id = :2`, ost.Geodetic_datum_name, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET geodetic_datum_name = :1 WHERE id = :2`, ost.Geodetic_datum_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Sample_num != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sample_num = :1 WHERE id = :2`, ost.Sample_num, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET sample_num = :1 WHERE id = :2`, ost.Sample_num, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Sample_count != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sample_count = :1 WHERE id = :2`, ost.Sample_count, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET sample_count = :1 WHERE id = :2`, ost.Sample_count, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Study_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET study_type = :1 WHERE id = :2`, ost.Study_type, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET study_type = :1 WHERE id = :2`, ost.Study_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Collected_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET collected_date = :1 WHERE id = :2`, ost.Collected_date, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET collected_date = :1 WHERE id = :2`, ost.Collected_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Pick_location != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET pick_location = :1 WHERE id = :2`, ost.Pick_location, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET pick_location = :1 WHERE id = :2`, ost.Pick_location, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, ost.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET ba_long_name_2 = :1 WHERE id = :2`, ost.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, ost.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET ba_type_2 = :1 WHERE id = :2`, ost.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, ost.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET data_store_name = :1 WHERE id = :2`, ost.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, ost.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET data_store_type = :1 WHERE id = :2`, ost.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Location_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET location_id = :1 WHERE id = :2`, ost.Location_id, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET location_id = :1 WHERE id = :2`, ost.Location_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, ost.Remark, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET remark = :1 WHERE id = :2`, ost.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, ost.Source, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET source = :1 WHERE id = :2`, ost.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, ost.Qc_status, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET qc_status = :1 WHERE id = :2`, ost.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -473,7 +473,7 @@ func PatchOutcropSample(c *fiber.Ctx) error{
         }
             
         if ost.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, ost.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE outcrop_sample_table SET checked_by_ba_id = :1 WHERE id = :2`, ost.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

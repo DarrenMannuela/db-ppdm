@@ -230,7 +230,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
     
     if idExist != ""{
         if pmatdt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, pmatdt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET ba_long_name = :1 WHERE id = :2`, pmatdt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, pmatdt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET ba_type = :1 WHERE id = :2`, pmatdt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, pmatdt.Area_id, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET area_id = :1 WHERE id = :2`, pmatdt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, pmatdt.Area_type, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET area_type = :1 WHERE id = :2`, pmatdt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Title != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET title = :1 WHERE id = :2`, pmatdt.Title, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET title = :1 WHERE id = :2`, pmatdt.Title, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Creator_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET creator_name = :1 WHERE id = :2`, pmatdt.Creator_name, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET creator_name = :1 WHERE id = :2`, pmatdt.Creator_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Create_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET create_date = :1 WHERE id = :2`, pmatdt.Create_date, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET create_date = :1 WHERE id = :2`, pmatdt.Create_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Map_scale != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET map_scale = :1 WHERE id = :2`, pmatdt.Map_scale, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET map_scale = :1 WHERE id = :2`, pmatdt.Map_scale, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Projection_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET projection_type = :1 WHERE id = :2`, pmatdt.Projection_type, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET projection_type = :1 WHERE id = :2`, pmatdt.Projection_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Geodetic_datum_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET geodetic_datum_name = :1 WHERE id = :2`, pmatdt.Geodetic_datum_name, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET geodetic_datum_name = :1 WHERE id = :2`, pmatdt.Geodetic_datum_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, pmatdt.Media_type, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET media_type = :1 WHERE id = :2`, pmatdt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Document_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET document_type = :1 WHERE id = :2`, pmatdt.Document_type, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET document_type = :1 WHERE id = :2`, pmatdt.Document_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Item_category != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET item_category = :1 WHERE id = :2`, pmatdt.Item_category, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET item_category = :1 WHERE id = :2`, pmatdt.Item_category, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, pmatdt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET ba_long_name_2 = :1 WHERE id = :2`, pmatdt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, pmatdt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET ba_type_2 = :1 WHERE id = :2`, pmatdt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, pmatdt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET data_store_name = :1 WHERE id = :2`, pmatdt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, pmatdt.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET data_store_type = :1 WHERE id = :2`, pmatdt.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Location_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET location_id = :1 WHERE id = :2`, pmatdt.Location_id, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET location_id = :1 WHERE id = :2`, pmatdt.Location_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, pmatdt.Remark, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET remark = :1 WHERE id = :2`, pmatdt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, pmatdt.Source, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET source = :1 WHERE id = :2`, pmatdt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, pmatdt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET qc_status = :1 WHERE id = :2`, pmatdt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchPrintMapsAndTechnicalDrawing(c *fiber.Ctx) error{
         }
             
         if pmatdt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, pmatdt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE print_maps_and_technical_drawing_table SET checked_by_ba_id = :1 WHERE id = :2`, pmatdt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

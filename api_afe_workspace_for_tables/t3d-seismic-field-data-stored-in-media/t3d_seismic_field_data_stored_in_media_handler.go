@@ -230,7 +230,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
     
     if idExist != ""{
         if tsfdsimt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, tsfdsimt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET ba_long_name = :1 WHERE id = :2`, tsfdsimt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, tsfdsimt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET ba_type = :1 WHERE id = :2`, tsfdsimt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, tsfdsimt.Area_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET area_id = :1 WHERE id = :2`, tsfdsimt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, tsfdsimt.Area_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET area_type = :1 WHERE id = :2`, tsfdsimt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Acqtn_survey_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_survey_name = :1 WHERE id = :2`, tsfdsimt.Acqtn_survey_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET acqtn_survey_name = :1 WHERE id = :2`, tsfdsimt.Acqtn_survey_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Start_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET start_date = :1 WHERE id = :2`, tsfdsimt.Start_date, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET start_date = :1 WHERE id = :2`, tsfdsimt.Start_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Shot_by != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET shot_by = :1 WHERE id = :2`, tsfdsimt.Shot_by, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET shot_by = :1 WHERE id = :2`, tsfdsimt.Shot_by, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Rcrd_rec_length != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_rec_length = :1 WHERE id = :2`, tsfdsimt.Rcrd_rec_length, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET rcrd_rec_length = :1 WHERE id = :2`, tsfdsimt.Rcrd_rec_length, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Rcrd_rec_length_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_rec_length_ouom = :1 WHERE id = :2`, tsfdsimt.Rcrd_rec_length_ouom, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET rcrd_rec_length_ouom = :1 WHERE id = :2`, tsfdsimt.Rcrd_rec_length_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Rcrd_sample_rate != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_sample_rate = :1 WHERE id = :2`, tsfdsimt.Rcrd_sample_rate, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET rcrd_sample_rate = :1 WHERE id = :2`, tsfdsimt.Rcrd_sample_rate, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Rcrd_sample_rate_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_sample_rate_ouom = :1 WHERE id = :2`, tsfdsimt.Rcrd_sample_rate_ouom, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET rcrd_sample_rate_ouom = :1 WHERE id = :2`, tsfdsimt.Rcrd_sample_rate_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.First_seis_point_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET first_seis_point_id = :1 WHERE id = :2`, tsfdsimt.First_seis_point_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET first_seis_point_id = :1 WHERE id = :2`, tsfdsimt.First_seis_point_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Last_seis_point_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET last_seis_point_id = :1 WHERE id = :2`, tsfdsimt.Last_seis_point_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET last_seis_point_id = :1 WHERE id = :2`, tsfdsimt.Last_seis_point_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Create_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET create_date = :1 WHERE id = :2`, tsfdsimt.Create_date, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET create_date = :1 WHERE id = :2`, tsfdsimt.Create_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Proc_set_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET proc_set_type = :1 WHERE id = :2`, tsfdsimt.Proc_set_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET proc_set_type = :1 WHERE id = :2`, tsfdsimt.Proc_set_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, tsfdsimt.Media_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET media_type = :1 WHERE id = :2`, tsfdsimt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Field_file_number != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_file_number = :1 WHERE id = :2`, tsfdsimt.Field_file_number, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET field_file_number = :1 WHERE id = :2`, tsfdsimt.Field_file_number, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Tape_number != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET tape_number = :1 WHERE id = :2`, tsfdsimt.Tape_number, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET tape_number = :1 WHERE id = :2`, tsfdsimt.Tape_number, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Rcrd_format_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_format_type = :1 WHERE id = :2`, tsfdsimt.Rcrd_format_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET rcrd_format_type = :1 WHERE id = :2`, tsfdsimt.Rcrd_format_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, tsfdsimt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET ba_long_name_2 = :1 WHERE id = :2`, tsfdsimt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, tsfdsimt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET ba_type_2 = :1 WHERE id = :2`, tsfdsimt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, tsfdsimt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET data_store_name = :1 WHERE id = :2`, tsfdsimt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, tsfdsimt.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET data_store_type = :1 WHERE id = :2`, tsfdsimt.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Location_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET location_id = :1 WHERE id = :2`, tsfdsimt.Location_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET location_id = :1 WHERE id = :2`, tsfdsimt.Location_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, tsfdsimt.Remark, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET remark = :1 WHERE id = :2`, tsfdsimt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, tsfdsimt.Source, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET source = :1 WHERE id = :2`, tsfdsimt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, tsfdsimt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET qc_status = :1 WHERE id = :2`, tsfdsimt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -473,7 +473,7 @@ func PatchT3DSeismicFieldDataStoredInMedia(c *fiber.Ctx) error{
         }
             
         if tsfdsimt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, tsfdsimt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE t3d_seismic_field_data_stored_in_media_table SET checked_by_ba_id = :1 WHERE id = :2`, tsfdsimt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

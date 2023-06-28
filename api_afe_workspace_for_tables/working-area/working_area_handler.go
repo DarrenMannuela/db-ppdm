@@ -230,7 +230,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
     
     if idExist != ""{
         if wat.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, wat.Area_id, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET area_id = :1 WHERE id = :2`, wat.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, wat.Area_type, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET area_type = :1 WHERE id = :2`, wat.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, wat.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET ba_long_name = :1 WHERE id = :2`, wat.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, wat.Ba_type, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET ba_type = :1 WHERE id = :2`, wat.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Effective_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET effective_date = :1 WHERE id = :2`, wat.Effective_date, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET effective_date = :1 WHERE id = :2`, wat.Effective_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Term_exiry_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET term_exiry_date = :1 WHERE id = :2`, wat.Term_exiry_date, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET term_exiry_date = :1 WHERE id = :2`, wat.Term_exiry_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Contract_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET contract_type = :1 WHERE id = :2`, wat.Contract_type, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET contract_type = :1 WHERE id = :2`, wat.Contract_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.R_granted_right_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET r_granted_right_type = :1 WHERE id = :2`, wat.R_granted_right_type, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET r_granted_right_type = :1 WHERE id = :2`, wat.R_granted_right_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Gross_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET gross_size = :1 WHERE id = :2`, wat.Gross_size, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET gross_size = :1 WHERE id = :2`, wat.Gross_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Gross_size_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET gross_size_ouom = :1 WHERE id = :2`, wat.Gross_size_ouom, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET gross_size_ouom = :1 WHERE id = :2`, wat.Gross_size_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Land_right_category != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET land_right_category = :1 WHERE id = :2`, wat.Land_right_category, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET land_right_category = :1 WHERE id = :2`, wat.Land_right_category, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Producing_ind != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET producing_ind = :1 WHERE id = :2`, wat.Producing_ind, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET producing_ind = :1 WHERE id = :2`, wat.Producing_ind, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, wat.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET original_file_name = :1 WHERE id = :2`, wat.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, wat.Password, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET password = :1 WHERE id = :2`, wat.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, wat.Digital_size, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET digital_size = :1 WHERE id = :2`, wat.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, wat.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET digital_size_uom = :1 WHERE id = :2`, wat.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, wat.Media_type, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET media_type = :1 WHERE id = :2`, wat.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, wat.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET data_store_name = :1 WHERE id = :2`, wat.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, wat.Source, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET source = :1 WHERE id = :2`, wat.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, wat.Qc_status, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET qc_status = :1 WHERE id = :2`, wat.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchWorkingArea(c *fiber.Ctx) error{
         }
             
         if wat.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, wat.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE working_area_table SET checked_by_ba_id = :1 WHERE id = :2`, wat.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

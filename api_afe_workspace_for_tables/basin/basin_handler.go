@@ -230,7 +230,7 @@ func PatchBasin(c *fiber.Ctx) error{
     
     if idExist != ""{
         if bt.Project_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET project_name = :1 WHERE id = :2`, bt.Project_name, id)
+             _, err = tx.Exec(`UPDATE basin_table SET project_name = :1 WHERE id = :2`, bt.Project_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Strat_name_set_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET strat_name_set_id = :1 WHERE id = :2`, bt.Strat_name_set_id, id)
+             _, err = tx.Exec(`UPDATE basin_table SET strat_name_set_id = :1 WHERE id = :2`, bt.Strat_name_set_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Strat_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET strat_status = :1 WHERE id = :2`, bt.Strat_status, id)
+             _, err = tx.Exec(`UPDATE basin_table SET strat_status = :1 WHERE id = :2`, bt.Strat_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Product_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET product_type = :1 WHERE id = :2`, bt.Product_type, id)
+             _, err = tx.Exec(`UPDATE basin_table SET product_type = :1 WHERE id = :2`, bt.Product_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Reserve_class_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET reserve_class_id = :1 WHERE id = :2`, bt.Reserve_class_id, id)
+             _, err = tx.Exec(`UPDATE basin_table SET reserve_class_id = :1 WHERE id = :2`, bt.Reserve_class_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Open_balance != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET open_balance = :1 WHERE id = :2`, bt.Open_balance, id)
+             _, err = tx.Exec(`UPDATE basin_table SET open_balance = :1 WHERE id = :2`, bt.Open_balance, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Open_balance_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET open_balance_ouom = :1 WHERE id = :2`, bt.Open_balance_ouom, id)
+             _, err = tx.Exec(`UPDATE basin_table SET open_balance_ouom = :1 WHERE id = :2`, bt.Open_balance_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Size_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET size_type = :1 WHERE id = :2`, bt.Size_type, id)
+             _, err = tx.Exec(`UPDATE basin_table SET size_type = :1 WHERE id = :2`, bt.Size_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Gross_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET gross_size = :1 WHERE id = :2`, bt.Gross_size, id)
+             _, err = tx.Exec(`UPDATE basin_table SET gross_size = :1 WHERE id = :2`, bt.Gross_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Size_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET size_ouom = :1 WHERE id = :2`, bt.Size_ouom, id)
+             _, err = tx.Exec(`UPDATE basin_table SET size_ouom = :1 WHERE id = :2`, bt.Size_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Strat_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET strat_type = :1 WHERE id = :2`, bt.Strat_type, id)
+             _, err = tx.Exec(`UPDATE basin_table SET strat_type = :1 WHERE id = :2`, bt.Strat_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Fault_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET fault_type = :1 WHERE id = :2`, bt.Fault_type, id)
+             _, err = tx.Exec(`UPDATE basin_table SET fault_type = :1 WHERE id = :2`, bt.Fault_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, bt.Source, id)
+             _, err = tx.Exec(`UPDATE basin_table SET source = :1 WHERE id = :2`, bt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, bt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE basin_table SET qc_status = :1 WHERE id = :2`, bt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchBasin(c *fiber.Ctx) error{
         }
             
         if bt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, bt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE basin_table SET checked_by_ba_id = :1 WHERE id = :2`, bt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

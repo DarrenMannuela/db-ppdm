@@ -230,7 +230,7 @@ func PatchBibliography(c *fiber.Ctx) error{
     
     if idExist != ""{
         if bt.Publisher != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET publisher = :1 WHERE id = :2`, bt.Publisher, id)
+             _, err = tx.Exec(`UPDATE bibliography_table SET publisher = :1 WHERE id = :2`, bt.Publisher, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchBibliography(c *fiber.Ctx) error{
         }
             
         if bt.Document_title != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET document_title = :1 WHERE id = :2`, bt.Document_title, id)
+             _, err = tx.Exec(`UPDATE bibliography_table SET document_title = :1 WHERE id = :2`, bt.Document_title, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchBibliography(c *fiber.Ctx) error{
         }
             
         if bt.Issue != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET issue = :1 WHERE id = :2`, bt.Issue, id)
+             _, err = tx.Exec(`UPDATE bibliography_table SET issue = :1 WHERE id = :2`, bt.Issue, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchBibliography(c *fiber.Ctx) error{
         }
             
         if bt.Author_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET author_id = :1 WHERE id = :2`, bt.Author_id, id)
+             _, err = tx.Exec(`UPDATE bibliography_table SET author_id = :1 WHERE id = :2`, bt.Author_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchBibliography(c *fiber.Ctx) error{
         }
             
         if bt.Publication_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET publication_date = :1 WHERE id = :2`, bt.Publication_date, id)
+             _, err = tx.Exec(`UPDATE bibliography_table SET publication_date = :1 WHERE id = :2`, bt.Publication_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchBibliography(c *fiber.Ctx) error{
         }
             
         if bt.Document_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET document_type = :1 WHERE id = :2`, bt.Document_type, id)
+             _, err = tx.Exec(`UPDATE bibliography_table SET document_type = :1 WHERE id = :2`, bt.Document_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchBibliography(c *fiber.Ctx) error{
         }
             
         if bt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, bt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE bibliography_table SET data_store_name = :1 WHERE id = :2`, bt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()

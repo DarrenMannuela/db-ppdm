@@ -230,7 +230,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
     
     if idExist != ""{
         if sidt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, sidt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET ba_long_name = :1 WHERE id = :2`, sidt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, sidt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET ba_type = :1 WHERE id = :2`, sidt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, sidt.Area_id, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET area_id = :1 WHERE id = :2`, sidt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, sidt.Area_type, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET area_type = :1 WHERE id = :2`, sidt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Field_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, sidt.Field_name, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET field_name = :1 WHERE id = :2`, sidt.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Project_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET project_name = :1 WHERE id = :2`, sidt.Project_name, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET project_name = :1 WHERE id = :2`, sidt.Project_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Interpreter != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET interpreter = :1 WHERE id = :2`, sidt.Interpreter, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET interpreter = :1 WHERE id = :2`, sidt.Interpreter, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Interp_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET interp_date = :1 WHERE id = :2`, sidt.Interp_date, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET interp_date = :1 WHERE id = :2`, sidt.Interp_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Interp_objective != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET interp_objective = :1 WHERE id = :2`, sidt.Interp_objective, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET interp_objective = :1 WHERE id = :2`, sidt.Interp_objective, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Interp_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET interp_type = :1 WHERE id = :2`, sidt.Interp_type, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET interp_type = :1 WHERE id = :2`, sidt.Interp_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Pick_method != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET pick_method = :1 WHERE id = :2`, sidt.Pick_method, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET pick_method = :1 WHERE id = :2`, sidt.Pick_method, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Sw_application_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sw_application_id = :1 WHERE id = :2`, sidt.Sw_application_id, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET sw_application_id = :1 WHERE id = :2`, sidt.Sw_application_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Application_version != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET application_version = :1 WHERE id = :2`, sidt.Application_version, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET application_version = :1 WHERE id = :2`, sidt.Application_version, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Trace_position != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET trace_position = :1 WHERE id = :2`, sidt.Trace_position, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET trace_position = :1 WHERE id = :2`, sidt.Trace_position, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, sidt.Media_type, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET media_type = :1 WHERE id = :2`, sidt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Tape_number != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET tape_number = :1 WHERE id = :2`, sidt.Tape_number, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET tape_number = :1 WHERE id = :2`, sidt.Tape_number, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, sidt.Digital_format, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET digital_format = :1 WHERE id = :2`, sidt.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, sidt.Remark, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET remark = :1 WHERE id = :2`, sidt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, sidt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET ba_long_name_2 = :1 WHERE id = :2`, sidt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, sidt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET ba_type_2 = :1 WHERE id = :2`, sidt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, sidt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET data_store_name = :1 WHERE id = :2`, sidt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, sidt.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET original_file_name = :1 WHERE id = :2`, sidt.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, sidt.Password, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET password = :1 WHERE id = :2`, sidt.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, sidt.Digital_size, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET digital_size = :1 WHERE id = :2`, sidt.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, sidt.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET digital_size_uom = :1 WHERE id = :2`, sidt.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, sidt.Source, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET source = :1 WHERE id = :2`, sidt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, sidt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET qc_status = :1 WHERE id = :2`, sidt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -473,7 +473,7 @@ func PatchSeismicInterpretationData(c *fiber.Ctx) error{
         }
             
         if sidt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, sidt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE seismic_interpretation_data_table SET checked_by_ba_id = :1 WHERE id = :2`, sidt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

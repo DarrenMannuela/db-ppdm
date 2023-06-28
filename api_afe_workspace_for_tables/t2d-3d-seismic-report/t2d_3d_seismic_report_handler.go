@@ -230,7 +230,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
     
     if idExist != ""{
         if t3srt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, t3srt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET ba_long_name = :1 WHERE id = :2`, t3srt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, t3srt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET ba_type = :1 WHERE id = :2`, t3srt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, t3srt.Area_id, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET area_id = :1 WHERE id = :2`, t3srt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, t3srt.Area_type, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET area_type = :1 WHERE id = :2`, t3srt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Acqtn_survey_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_survey_name = :1 WHERE id = :2`, t3srt.Acqtn_survey_name, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET acqtn_survey_name = :1 WHERE id = :2`, t3srt.Acqtn_survey_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Start_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET start_date = :1 WHERE id = :2`, t3srt.Start_date, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET start_date = :1 WHERE id = :2`, t3srt.Start_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Seis_dimension != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET seis_dimension = :1 WHERE id = :2`, t3srt.Seis_dimension, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET seis_dimension = :1 WHERE id = :2`, t3srt.Seis_dimension, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Line_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET line_name = :1 WHERE id = :2`, t3srt.Line_name, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET line_name = :1 WHERE id = :2`, t3srt.Line_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Title != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET title = :1 WHERE id = :2`, t3srt.Title, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET title = :1 WHERE id = :2`, t3srt.Title, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Creator_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET creator_name = :1 WHERE id = :2`, t3srt.Creator_name, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET creator_name = :1 WHERE id = :2`, t3srt.Creator_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Create_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET create_date = :1 WHERE id = :2`, t3srt.Create_date, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET create_date = :1 WHERE id = :2`, t3srt.Create_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Item_category != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET item_category = :1 WHERE id = :2`, t3srt.Item_category, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET item_category = :1 WHERE id = :2`, t3srt.Item_category, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, t3srt.Media_type, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET media_type = :1 WHERE id = :2`, t3srt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, t3srt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET ba_long_name_2 = :1 WHERE id = :2`, t3srt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, t3srt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET ba_type_2 = :1 WHERE id = :2`, t3srt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, t3srt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET data_store_name = :1 WHERE id = :2`, t3srt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, t3srt.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET data_store_type = :1 WHERE id = :2`, t3srt.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Location_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET location_id = :1 WHERE id = :2`, t3srt.Location_id, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET location_id = :1 WHERE id = :2`, t3srt.Location_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, t3srt.Remark, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET remark = :1 WHERE id = :2`, t3srt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, t3srt.Source, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET source = :1 WHERE id = :2`, t3srt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, t3srt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET qc_status = :1 WHERE id = :2`, t3srt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchT2D3DSeismicReport(c *fiber.Ctx) error{
         }
             
         if t3srt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, t3srt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE t2d_3d_seismic_report_table SET checked_by_ba_id = :1 WHERE id = :2`, t3srt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

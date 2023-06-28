@@ -230,7 +230,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
     
     if idExist != ""{
         if wcst.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, wcst.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET ba_long_name = :1 WHERE id = :2`, wcst.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, wcst.Ba_type, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET ba_type = :1 WHERE id = :2`, wcst.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, wcst.Area_id, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET area_id = :1 WHERE id = :2`, wcst.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, wcst.Area_type, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET area_type = :1 WHERE id = :2`, wcst.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Field_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, wcst.Field_name, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET field_name = :1 WHERE id = :2`, wcst.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Well_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET well_name = :1 WHERE id = :2`, wcst.Well_name, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET well_name = :1 WHERE id = :2`, wcst.Well_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Uwi != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET uwi = :1 WHERE id = :2`, wcst.Uwi, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET uwi = :1 WHERE id = :2`, wcst.Uwi, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Core_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET core_type = :1 WHERE id = :2`, wcst.Core_type, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET core_type = :1 WHERE id = :2`, wcst.Core_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Sample_num != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sample_num = :1 WHERE id = :2`, wcst.Sample_num, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET sample_num = :1 WHERE id = :2`, wcst.Sample_num, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Sample_count != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sample_count = :1 WHERE id = :2`, wcst.Sample_count, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET sample_count = :1 WHERE id = :2`, wcst.Sample_count, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Top_depth != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET top_depth = :1 WHERE id = :2`, wcst.Top_depth, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET top_depth = :1 WHERE id = :2`, wcst.Top_depth, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Top_depth_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET top_depth_ouom = :1 WHERE id = :2`, wcst.Top_depth_ouom, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET top_depth_ouom = :1 WHERE id = :2`, wcst.Top_depth_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Base_depth != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET base_depth = :1 WHERE id = :2`, wcst.Base_depth, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET base_depth = :1 WHERE id = :2`, wcst.Base_depth, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Base_depth_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET base_depth_ouom = :1 WHERE id = :2`, wcst.Base_depth_ouom, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET base_depth_ouom = :1 WHERE id = :2`, wcst.Base_depth_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Portion_volume != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET portion_volume = :1 WHERE id = :2`, wcst.Portion_volume, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET portion_volume = :1 WHERE id = :2`, wcst.Portion_volume, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Portion_volume_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET portion_volume_ouom = :1 WHERE id = :2`, wcst.Portion_volume_ouom, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET portion_volume_ouom = :1 WHERE id = :2`, wcst.Portion_volume_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Study_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET study_type = :1 WHERE id = :2`, wcst.Study_type, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET study_type = :1 WHERE id = :2`, wcst.Study_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, wcst.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET ba_long_name_2 = :1 WHERE id = :2`, wcst.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, wcst.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET ba_type_2 = :1 WHERE id = :2`, wcst.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, wcst.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET data_store_name = :1 WHERE id = :2`, wcst.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, wcst.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET data_store_type = :1 WHERE id = :2`, wcst.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Location_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET location_id = :1 WHERE id = :2`, wcst.Location_id, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET location_id = :1 WHERE id = :2`, wcst.Location_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, wcst.Remark, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET remark = :1 WHERE id = :2`, wcst.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, wcst.Source, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET source = :1 WHERE id = :2`, wcst.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, wcst.Qc_status, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET qc_status = :1 WHERE id = :2`, wcst.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchWellCoreSample(c *fiber.Ctx) error{
         }
             
         if wcst.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, wcst.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE well_core_sample_table SET checked_by_ba_id = :1 WHERE id = :2`, wcst.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

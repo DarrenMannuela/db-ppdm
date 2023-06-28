@@ -230,7 +230,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
     
     if idExist != ""{
         if d2sst.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, d2sst.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET ba_long_name = :1 WHERE id = :2`, d2sst.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, d2sst.Ba_type, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET ba_type = :1 WHERE id = :2`, d2sst.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, d2sst.Area_id, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET area_id = :1 WHERE id = :2`, d2sst.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, d2sst.Area_type, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET area_type = :1 WHERE id = :2`, d2sst.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Acqtn_survey_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_survey_name = :1 WHERE id = :2`, d2sst.Acqtn_survey_name, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET acqtn_survey_name = :1 WHERE id = :2`, d2sst.Acqtn_survey_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Processing_company != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET processing_company = :1 WHERE id = :2`, d2sst.Processing_company, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET processing_company = :1 WHERE id = :2`, d2sst.Processing_company, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Start_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET start_date = :1 WHERE id = :2`, d2sst.Start_date, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET start_date = :1 WHERE id = :2`, d2sst.Start_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Line_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET line_name = :1 WHERE id = :2`, d2sst.Line_name, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET line_name = :1 WHERE id = :2`, d2sst.Line_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.First_seis_point_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET first_seis_point_id = :1 WHERE id = :2`, d2sst.First_seis_point_id, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET first_seis_point_id = :1 WHERE id = :2`, d2sst.First_seis_point_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Last_seis_point_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET last_seis_point_id = :1 WHERE id = :2`, d2sst.Last_seis_point_id, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET last_seis_point_id = :1 WHERE id = :2`, d2sst.Last_seis_point_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Create_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET create_date = :1 WHERE id = :2`, d2sst.Create_date, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET create_date = :1 WHERE id = :2`, d2sst.Create_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Proc_set_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET proc_set_type = :1 WHERE id = :2`, d2sst.Proc_set_type, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET proc_set_type = :1 WHERE id = :2`, d2sst.Proc_set_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, d2sst.Digital_format, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET digital_format = :1 WHERE id = :2`, d2sst.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, d2sst.Media_type, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET media_type = :1 WHERE id = :2`, d2sst.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Vertical_scale != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET vertical_scale = :1 WHERE id = :2`, d2sst.Vertical_scale, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET vertical_scale = :1 WHERE id = :2`, d2sst.Vertical_scale, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Vertical_scale_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET vertical_scale_ouom = :1 WHERE id = :2`, d2sst.Vertical_scale_ouom, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET vertical_scale_ouom = :1 WHERE id = :2`, d2sst.Vertical_scale_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Horizontal_scale != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET horizontal_scale = :1 WHERE id = :2`, d2sst.Horizontal_scale, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET horizontal_scale = :1 WHERE id = :2`, d2sst.Horizontal_scale, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Horizontal_scale_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET horizontal_scale_ouom = :1 WHERE id = :2`, d2sst.Horizontal_scale_ouom, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET horizontal_scale_ouom = :1 WHERE id = :2`, d2sst.Horizontal_scale_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Polarity != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET polarity = :1 WHERE id = :2`, d2sst.Polarity, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET polarity = :1 WHERE id = :2`, d2sst.Polarity, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, d2sst.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET ba_long_name_2 = :1 WHERE id = :2`, d2sst.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, d2sst.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET ba_type_2 = :1 WHERE id = :2`, d2sst.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, d2sst.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET data_store_name = :1 WHERE id = :2`, d2sst.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Original_file_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET original_file_name = :1 WHERE id = :2`, d2sst.Original_file_name, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET original_file_name = :1 WHERE id = :2`, d2sst.Original_file_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Password != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET password = :1 WHERE id = :2`, d2sst.Password, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET password = :1 WHERE id = :2`, d2sst.Password, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Sw_application_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sw_application_id = :1 WHERE id = :2`, d2sst.Sw_application_id, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET sw_application_id = :1 WHERE id = :2`, d2sst.Sw_application_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Application_version != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET application_version = :1 WHERE id = :2`, d2sst.Application_version, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET application_version = :1 WHERE id = :2`, d2sst.Application_version, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Digital_size != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size = :1 WHERE id = :2`, d2sst.Digital_size, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET digital_size = :1 WHERE id = :2`, d2sst.Digital_size, id)
         
             if err != nil {
                 tx.Rollback()
@@ -473,7 +473,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Digital_size_uom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_size_uom = :1 WHERE id = :2`, d2sst.Digital_size_uom, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET digital_size_uom = :1 WHERE id = :2`, d2sst.Digital_size_uom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -482,7 +482,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, d2sst.Remark, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET remark = :1 WHERE id = :2`, d2sst.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -491,7 +491,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, d2sst.Source, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET source = :1 WHERE id = :2`, d2sst.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -500,7 +500,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, d2sst.Qc_status, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET qc_status = :1 WHERE id = :2`, d2sst.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -509,7 +509,7 @@ func PatchDigital2DSeismicSection(c *fiber.Ctx) error{
         }
             
         if d2sst.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, d2sst.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE digital_2d_seismic_section_table SET checked_by_ba_id = :1 WHERE id = :2`, d2sst.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

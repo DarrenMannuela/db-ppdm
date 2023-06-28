@@ -230,7 +230,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
     
     if idExist != ""{
         if pfsimt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, pfsimt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET ba_long_name = :1 WHERE id = :2`, pfsimt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, pfsimt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET ba_type = :1 WHERE id = :2`, pfsimt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, pfsimt.Area_id, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET area_id = :1 WHERE id = :2`, pfsimt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, pfsimt.Area_type, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET area_type = :1 WHERE id = :2`, pfsimt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Field_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, pfsimt.Field_name, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET field_name = :1 WHERE id = :2`, pfsimt.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Project_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET project_name = :1 WHERE id = :2`, pfsimt.Project_name, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET project_name = :1 WHERE id = :2`, pfsimt.Project_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Sw_application_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET sw_application_id = :1 WHERE id = :2`, pfsimt.Sw_application_id, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET sw_application_id = :1 WHERE id = :2`, pfsimt.Sw_application_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Application_version != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET application_version = :1 WHERE id = :2`, pfsimt.Application_version, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET application_version = :1 WHERE id = :2`, pfsimt.Application_version, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Item_category != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET item_category = :1 WHERE id = :2`, pfsimt.Item_category, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET item_category = :1 WHERE id = :2`, pfsimt.Item_category, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Process_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET process_date = :1 WHERE id = :2`, pfsimt.Process_date, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET process_date = :1 WHERE id = :2`, pfsimt.Process_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Interpreter != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET interpreter = :1 WHERE id = :2`, pfsimt.Interpreter, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET interpreter = :1 WHERE id = :2`, pfsimt.Interpreter, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Digital_format != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET digital_format = :1 WHERE id = :2`, pfsimt.Digital_format, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET digital_format = :1 WHERE id = :2`, pfsimt.Digital_format, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, pfsimt.Media_type, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET media_type = :1 WHERE id = :2`, pfsimt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Ba_long_name_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name_2 = :1 WHERE id = :2`, pfsimt.Ba_long_name_2, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET ba_long_name_2 = :1 WHERE id = :2`, pfsimt.Ba_long_name_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Ba_type_2 != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type_2 = :1 WHERE id = :2`, pfsimt.Ba_type_2, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET ba_type_2 = :1 WHERE id = :2`, pfsimt.Ba_type_2, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, pfsimt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET data_store_name = :1 WHERE id = :2`, pfsimt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, pfsimt.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET data_store_type = :1 WHERE id = :2`, pfsimt.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Location_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET location_id = :1 WHERE id = :2`, pfsimt.Location_id, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET location_id = :1 WHERE id = :2`, pfsimt.Location_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, pfsimt.Remark, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET remark = :1 WHERE id = :2`, pfsimt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, pfsimt.Source, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET source = :1 WHERE id = :2`, pfsimt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, pfsimt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET qc_status = :1 WHERE id = :2`, pfsimt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchProjectFileStoredInMedia(c *fiber.Ctx) error{
         }
             
         if pfsimt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, pfsimt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE project_file_stored_in_media_table SET checked_by_ba_id = :1 WHERE id = :2`, pfsimt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

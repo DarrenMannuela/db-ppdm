@@ -230,7 +230,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
     
     if idExist != ""{
         if tsst.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, tsst.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET ba_long_name = :1 WHERE id = :2`, tsst.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, tsst.Ba_type, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET ba_type = :1 WHERE id = :2`, tsst.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Area_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, tsst.Area_id, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET area_id = :1 WHERE id = :2`, tsst.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Area_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, tsst.Area_type, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET area_type = :1 WHERE id = :2`, tsst.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Acqtn_survey_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_survey_name = :1 WHERE id = :2`, tsst.Acqtn_survey_name, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET acqtn_survey_name = :1 WHERE id = :2`, tsst.Acqtn_survey_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Seis_dimension != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET seis_dimension = :1 WHERE id = :2`, tsst.Seis_dimension, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET seis_dimension = :1 WHERE id = :2`, tsst.Seis_dimension, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Start_date != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET start_date = :1 WHERE id = :2`, tsst.Start_date, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET start_date = :1 WHERE id = :2`, tsst.Start_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Shot_by != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET shot_by = :1 WHERE id = :2`, tsst.Shot_by, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET shot_by = :1 WHERE id = :2`, tsst.Shot_by, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Crew_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET crew_long_name = :1 WHERE id = :2`, tsst.Crew_long_name, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET crew_long_name = :1 WHERE id = :2`, tsst.Crew_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Acqtn_shotpt_interval != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_shotpt_interval = :1 WHERE id = :2`, tsst.Acqtn_shotpt_interval, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET acqtn_shotpt_interval = :1 WHERE id = :2`, tsst.Acqtn_shotpt_interval, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Acqtn_shotpt_interval_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_shotpt_interval_ouom = :1 WHERE id = :2`, tsst.Acqtn_shotpt_interval_ouom, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET acqtn_shotpt_interval_ouom = :1 WHERE id = :2`, tsst.Acqtn_shotpt_interval_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Rcvr_spacing != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcvr_spacing = :1 WHERE id = :2`, tsst.Rcvr_spacing, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET rcvr_spacing = :1 WHERE id = :2`, tsst.Rcvr_spacing, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Rcvr_spacing_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcvr_spacing_ouom = :1 WHERE id = :2`, tsst.Rcvr_spacing_ouom, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET rcvr_spacing_ouom = :1 WHERE id = :2`, tsst.Rcvr_spacing_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Energy_type != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET energy_type = :1 WHERE id = :2`, tsst.Energy_type, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET energy_type = :1 WHERE id = :2`, tsst.Energy_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Fold_coverage != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET fold_coverage = :1 WHERE id = :2`, tsst.Fold_coverage, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET fold_coverage = :1 WHERE id = :2`, tsst.Fold_coverage, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Rcrd_channel_count != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_channel_count = :1 WHERE id = :2`, tsst.Rcrd_channel_count, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET rcrd_channel_count = :1 WHERE id = :2`, tsst.Rcrd_channel_count, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Rcrd_rec_length != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_rec_length = :1 WHERE id = :2`, tsst.Rcrd_rec_length, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET rcrd_rec_length = :1 WHERE id = :2`, tsst.Rcrd_rec_length, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Rcrd_rec_length_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_rec_length_ouom = :1 WHERE id = :2`, tsst.Rcrd_rec_length_ouom, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET rcrd_rec_length_ouom = :1 WHERE id = :2`, tsst.Rcrd_rec_length_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Rcrd_sample_rate != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_sample_rate = :1 WHERE id = :2`, tsst.Rcrd_sample_rate, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET rcrd_sample_rate = :1 WHERE id = :2`, tsst.Rcrd_sample_rate, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Rcrd_sample_rate_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET rcrd_sample_rate_ouom = :1 WHERE id = :2`, tsst.Rcrd_sample_rate_ouom, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET rcrd_sample_rate_ouom = :1 WHERE id = :2`, tsst.Rcrd_sample_rate_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Line_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET line_name = :1 WHERE id = :2`, tsst.Line_name, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET line_name = :1 WHERE id = :2`, tsst.Line_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -419,7 +419,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.First_seis_point_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET first_seis_point_id = :1 WHERE id = :2`, tsst.First_seis_point_id, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET first_seis_point_id = :1 WHERE id = :2`, tsst.First_seis_point_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -428,7 +428,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Last_seis_point_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET last_seis_point_id = :1 WHERE id = :2`, tsst.Last_seis_point_id, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET last_seis_point_id = :1 WHERE id = :2`, tsst.Last_seis_point_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -437,7 +437,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Acqtn_direction != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET acqtn_direction = :1 WHERE id = :2`, tsst.Acqtn_direction, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET acqtn_direction = :1 WHERE id = :2`, tsst.Acqtn_direction, id)
         
             if err != nil {
                 tx.Rollback()
@@ -446,7 +446,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Line_length != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET line_length = :1 WHERE id = :2`, tsst.Line_length, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET line_length = :1 WHERE id = :2`, tsst.Line_length, id)
         
             if err != nil {
                 tx.Rollback()
@@ -455,7 +455,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Line_length_ouom != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET line_length_ouom = :1 WHERE id = :2`, tsst.Line_length_ouom, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET line_length_ouom = :1 WHERE id = :2`, tsst.Line_length_ouom, id)
         
             if err != nil {
                 tx.Rollback()
@@ -464,7 +464,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Alias_long_name != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET alias_long_name = :1 WHERE id = :2`, tsst.Alias_long_name, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET alias_long_name = :1 WHERE id = :2`, tsst.Alias_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -473,7 +473,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Environment != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET environment = :1 WHERE id = :2`, tsst.Environment, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET environment = :1 WHERE id = :2`, tsst.Environment, id)
         
             if err != nil {
                 tx.Rollback()
@@ -482,7 +482,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Remark != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, tsst.Remark, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET remark = :1 WHERE id = :2`, tsst.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -491,7 +491,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Source != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, tsst.Source, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET source = :1 WHERE id = :2`, tsst.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -500,7 +500,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, tsst.Qc_status, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET qc_status = :1 WHERE id = :2`, tsst.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -509,7 +509,7 @@ func PatchT2DSeismicSummary(c *fiber.Ctx) error{
         }
             
         if tsst.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, tsst.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE t2d_seismic_summary_table SET checked_by_ba_id = :1 WHERE id = :2`, tsst.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()
