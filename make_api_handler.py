@@ -11,19 +11,25 @@ from conn import connection
 
 # Specify the directory path
 directory = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/permen_workspace_dto/gorm'
+api_directory = '/Users/darrenmp/Documents/vscode/db-ppdm-copy/api_afe_workspace_for_tables/'
 
 # Get a list of all items (files and folders) in the directory
 items = os.listdir(directory)
+api_items = os.listdir(api_directory)
 
-# Filter out the files and keep only the folder names
-folders = [item for item in items if os.path.isdir(os.path.join(directory, item))]
+# # Filter out the files and keep only the folder names
+# folders = [item for item in items if os.path.isdir(os.path.join(directory, item))]
+# api_folders = [item for item in items if os.path.isdir(os.path.join(api_directory, item))]
+
+items.remove("Print_well_report")
 
 folders_name_change = []
 table_names = []
 func_names = []
+api = []
 
 # Print the folder names
-for folder in folders:
+for folder in items:
     cur_name = ""
     func_name = ""
     table_name = ""
@@ -37,6 +43,7 @@ for folder in folders:
     table_names.append(table_name)
     folders_name_change.append(cur_name)
     func_names.append(func_name)
+
 
 
 def fill_bind(n):
@@ -451,23 +458,24 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
 test = "print_well_report_table"
 desc = insert_description(test)
 bind = get_num_bind(test)
-attr =insert_attr(test)
+attr = insert_attr(test)
 
 
 testing = make_type_handler(test, 'printwellreport', "PrintWellReport", "Print_well_report")
 
-make_update_sql(test, desc, bind, attr)
+
+print(items[0])
+
+print(table_names[0])
+
+print(folders_name_change[0])
+
+print(func_names[0])
+
+for file in range(len(items)):
+    cur_api = make_type_handler(table_names[file], folders_name_change[file], func_name[file], items[file])
 
 
-print(folders)
-
-print(table_names)
-
-print(folders_name_change)
-
-print(func_names)
-
-# for file in range(len(folders)):
 
 
 
