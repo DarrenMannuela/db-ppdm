@@ -230,7 +230,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
     
     if idExist != ""{
         if pwrt.Ba_long_name != nil{
-             _, err = tx.Exec(`UPDATE  SET ba_long_name = :1 WHERE id = :2`, pwrt.Ba_long_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_long_name = :1 WHERE id = :2`, pwrt.Ba_long_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -239,7 +239,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Ba_type != nil{
-             _, err = tx.Exec(`UPDATE  SET ba_type = :1 WHERE id = :2`, pwrt.Ba_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET ba_type = :1 WHERE id = :2`, pwrt.Ba_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -248,7 +248,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Area_id != nil{
-             _, err = tx.Exec(`UPDATE  SET area_id = :1 WHERE id = :2`, pwrt.Area_id, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_id = :1 WHERE id = :2`, pwrt.Area_id, id)
         
             if err != nil {
                 tx.Rollback()
@@ -257,7 +257,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Area_type != nil{
-             _, err = tx.Exec(`UPDATE  SET area_type = :1 WHERE id = :2`, pwrt.Area_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET area_type = :1 WHERE id = :2`, pwrt.Area_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -266,7 +266,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Field_name != nil{
-             _, err = tx.Exec(`UPDATE  SET field_name = :1 WHERE id = :2`, pwrt.Field_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET field_name = :1 WHERE id = :2`, pwrt.Field_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -275,7 +275,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Well_name != nil{
-             _, err = tx.Exec(`UPDATE  SET well_name = :1 WHERE id = :2`, pwrt.Well_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET well_name = :1 WHERE id = :2`, pwrt.Well_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -284,7 +284,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Uwi != nil{
-             _, err = tx.Exec(`UPDATE  SET uwi = :1 WHERE id = :2`, pwrt.Uwi, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET uwi = :1 WHERE id = :2`, pwrt.Uwi, id)
         
             if err != nil {
                 tx.Rollback()
@@ -293,7 +293,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Title != nil{
-             _, err = tx.Exec(`UPDATE  SET title = :1 WHERE id = :2`, pwrt.Title, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET title = :1 WHERE id = :2`, pwrt.Title, id)
         
             if err != nil {
                 tx.Rollback()
@@ -302,7 +302,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Creator_name != nil{
-             _, err = tx.Exec(`UPDATE  SET creator_name = :1 WHERE id = :2`, pwrt.Creator_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET creator_name = :1 WHERE id = :2`, pwrt.Creator_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -311,7 +311,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Create_date != nil{
-             _, err = tx.Exec(`UPDATE  SET create_date = :1 WHERE id = :2`, pwrt.Create_date, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET create_date = :1 WHERE id = :2`, pwrt.Create_date, id)
         
             if err != nil {
                 tx.Rollback()
@@ -320,7 +320,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Media_type != nil{
-             _, err = tx.Exec(`UPDATE  SET media_type = :1 WHERE id = :2`, pwrt.Media_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET media_type = :1 WHERE id = :2`, pwrt.Media_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -329,7 +329,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Document_type != nil{
-             _, err = tx.Exec(`UPDATE  SET document_type = :1 WHERE id = :2`, pwrt.Document_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET document_type = :1 WHERE id = :2`, pwrt.Document_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -338,7 +338,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Item_category != nil{
-             _, err = tx.Exec(`UPDATE  SET item_category = :1 WHERE id = :2`, pwrt.Item_category, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET item_category = :1 WHERE id = :2`, pwrt.Item_category, id)
         
             if err != nil {
                 tx.Rollback()
@@ -347,7 +347,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Item_sub_category != nil{
-             _, err = tx.Exec(`UPDATE  SET item_sub_category = :1 WHERE id = :2`, pwrt.Item_sub_category, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET item_sub_category = :1 WHERE id = :2`, pwrt.Item_sub_category, id)
         
             if err != nil {
                 tx.Rollback()
@@ -356,7 +356,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Page_count != nil{
-             _, err = tx.Exec(`UPDATE  SET page_count = :1 WHERE id = :2`, pwrt.Page_count, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET page_count = :1 WHERE id = :2`, pwrt.Page_count, id)
         
             if err != nil {
                 tx.Rollback()
@@ -365,7 +365,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Remark != nil{
-             _, err = tx.Exec(`UPDATE  SET remark = :1 WHERE id = :2`, pwrt.Remark, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET remark = :1 WHERE id = :2`, pwrt.Remark, id)
         
             if err != nil {
                 tx.Rollback()
@@ -374,7 +374,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Data_store_name != nil{
-             _, err = tx.Exec(`UPDATE  SET data_store_name = :1 WHERE id = :2`, pwrt.Data_store_name, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_name = :1 WHERE id = :2`, pwrt.Data_store_name, id)
         
             if err != nil {
                 tx.Rollback()
@@ -383,7 +383,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Data_store_type != nil{
-             _, err = tx.Exec(`UPDATE  SET data_store_type = :1 WHERE id = :2`, pwrt.Data_store_type, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET data_store_type = :1 WHERE id = :2`, pwrt.Data_store_type, id)
         
             if err != nil {
                 tx.Rollback()
@@ -392,7 +392,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Source != nil{
-             _, err = tx.Exec(`UPDATE  SET source = :1 WHERE id = :2`, pwrt.Source, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET source = :1 WHERE id = :2`, pwrt.Source, id)
         
             if err != nil {
                 tx.Rollback()
@@ -401,7 +401,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Qc_status != nil{
-             _, err = tx.Exec(`UPDATE  SET qc_status = :1 WHERE id = :2`, pwrt.Qc_status, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET qc_status = :1 WHERE id = :2`, pwrt.Qc_status, id)
         
             if err != nil {
                 tx.Rollback()
@@ -410,7 +410,7 @@ func PatchPrintWellReport(c *fiber.Ctx) error{
         }
             
         if pwrt.Checked_by_ba_id != nil{
-             _, err = tx.Exec(`UPDATE  SET checked_by_ba_id = :1 WHERE id = :2`, pwrt.Checked_by_ba_id, id)
+             _, err = tx.Exec(`UPDATE non_seismic_and_seismic_non_conventional_report_table SET checked_by_ba_id = :1 WHERE id = :2`, pwrt.Checked_by_ba_id, id)
         
             if err != nil {
                 tx.Rollback()

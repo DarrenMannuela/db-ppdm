@@ -32,6 +32,9 @@ for folder in folders:
     for word in cur_folder_list:
         cur_name += word.lower()
         func_name += word.title()
+        table_name += word.lower()+"_"
+    table_name += "table"
+    table_names.append(table_name)
     folders_name_change.append(cur_name)
     func_names.append(func_name)
 
@@ -456,6 +459,19 @@ testing = make_type_handler(test, 'printwellreport', "PrintWellReport", "Print_w
 make_update_sql(test, desc, bind, attr)
 
 
+print(folders)
+
+print(table_names)
+
+print(folders_name_change)
+
+print(func_names)
+
+# for file in range(len(folders)):
+
+
 
 with open(f"test.go", 'w') as file:
     file.write(testing)
+
+
