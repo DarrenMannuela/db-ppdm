@@ -187,6 +187,7 @@ def make_insert_sql(table_name: str, desc: str, bind: str, attr: str):
 
 def make_update_sql(table_name: str, desc: str, bind: str, attr: str):
     combine = ""
+    print(table_name)
 
     bind_list = bind.split(',')
     desc_list = desc.split(',')
@@ -262,6 +263,8 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
 
     insert_desc = insert_description(table_name)
 
+    bind = get_num_bind(table_name)
+
     check_validity = """validity, err := utils.CheckValidity(c)
     if err != nil {
         return c.Status(validity).SendString(err.Error())
@@ -304,7 +307,7 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
     var {abbreviation} dto.{struct_name}
     setDefaults(&{abbreviation})
 
-    if err := c.BodyParser(&{abbreviation}); err != nill"""+"{"+"""
+    if err := c.BodyParser(&{abbreviation}); err != nil"""+"{"+"""
         return err
     }
     """+f"""
@@ -355,7 +358,7 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
     var {abbreviation} dto.{struct_name}
     setDefaults(&{abbreviation})
 
-    if err := c.BodyParser(&{abbreviation}); err != nill"""+"{"+"""
+    if err := c.BodyParser(&{abbreviation}); err != nil"""+"{"+"""
         return err
     }
     """+f"""
@@ -424,7 +427,7 @@ def make_type_handler(table_name: str, import_name: str, func_name: str, struct_
     var {abbreviation} dto.{struct_name}
     setDefaults(&{abbreviation})
 
-    if err := c.BodyParser(&{abbreviation}); err != nill"""+"{"+"""
+    if err := c.BodyParser(&{abbreviation}); err != nil"""+"{"+"""
         return err
     }
     """ + """
@@ -464,22 +467,23 @@ attr = insert_attr(test)
 testing = make_type_handler(test, 'printwellreport', "PrintWellReport", "Print_well_report")
 
 
-print(items[0])
+# print(items[0])
 
-print(table_names[0])
+# print(table_names[0])
 
-print(folders_name_change[0])
+# print(folders_name_change[0])
 
-print(func_names[0])
+# print(func_names[0])
 
 for file in range(len(items)):
-    cur_api = make_type_handler(table_names[file], folders_name_change[file], func_name[file], items[file])
+    cur_api = make_type_handler(table_names[file], folders_name_change[file], func_names[file], items[file])
+    with open(f"/Users/darrenmp/Documents/vscode/db-ppdm-copy/api_afe_workspace_for_tables/{api_items[file]}/{items[file].lower()}_handler.go", "w") as file:
+        file.write(cur_api)
 
 
 
 
-
-with open(f"test.go", 'w') as file:
-    file.write(testing)
+# with open(f"test.go", 'w') as file:
+#     file.write(testing)
 
 
